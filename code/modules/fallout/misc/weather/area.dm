@@ -1,0 +1,13 @@
+/area/Entered(atom/movable/Obj,atom/OldLoc)
+	. = ..()
+	if(istype(Obj,/mob))
+		if(SSweather.active.len)
+			for(var/datum/weather_controller/W in SSweather.active)
+				W.on_mob_enter(Obj, src)
+
+/area/Exited(atom/movable/Obj, atom/newloc)
+	. = ..()
+	if(istype(Obj,/mob))
+		if(SSweather.active.len)
+			for(var/datum/weather_controller/W in SSweather.active)
+				W.on_mob_exit(Obj, src)
