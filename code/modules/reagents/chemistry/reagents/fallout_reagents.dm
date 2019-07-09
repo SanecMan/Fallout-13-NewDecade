@@ -187,3 +187,11 @@ datum/reagent/supstimpackium_oxy/on_mob_life(mob/living/M)
 	M.adjustToxLoss(12*REM, 0)  //fix it after RadRebalance
 	..()
 	. = 1
+
+/datum/reagent/consumable/blood/cum
+	name = "Cum"
+	id = "cum"
+	color = "#FFFFFF" // rgb: 255, 255, 255
+	metabolization_rate = 1.5
+	description = "warm salty-biterness with an edge of sweet"
+	water_factor = 3 * REAGENTS_METABOLISM

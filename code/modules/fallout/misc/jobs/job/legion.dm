@@ -52,6 +52,7 @@
 
 /datum/outfit/job/leglegate
 	name = "Legate"
+	id = /obj/item/card/id/legveteran
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionlegate
 	gloves = /obj/item/clothing/gloves/f13/legionlegate
@@ -111,6 +112,7 @@
 
 /datum/outfit/job/legcenturion
 	name = "Centurion"
+	id = /obj/item/card/id/legcenturion
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -170,6 +172,7 @@
 
 /datum/outfit/job/legvex
 	name = "Vexillarius"
+	id = /obj/item/card/id/legrecruit
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -229,6 +232,7 @@
 
 /datum/outfit/job/legdecan
 	name = "Decanus"
+	id = /obj/item/card/id/legrecruit
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -287,6 +291,7 @@
 
 /datum/outfit/job/prime
 	name = "Prime"
+	id = /obj/item/card/id/legprime
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/leather
