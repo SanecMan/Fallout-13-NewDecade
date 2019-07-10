@@ -673,6 +673,20 @@
 	can_adjust = 0
 	self_weight = 5
 
+/obj/item/clothing/under/f13/reconenclave
+	name = "enclave recon armor"
+	desc = "Intended to serve as the under-armor of the X01 power armor, the recon armor is a vacuum-sealed asbestos jumpsuit covering the entire body.<br>Attached to it is the interface and mounts for the power armor.<br>Its purpose is twofold - it allows the user to actually operate the armor and protect soft tissue from moving parts inside the suit and heat."
+	icon_state = "reconenclave"
+	item_state = "rig_suit"
+	item_color = "reconenclave"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HEAD
+	flags_inv = HIDEHAIR|HIDEFACIALHAIR
+	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
+	can_adjust = 0
+	self_weight = 5
+
 //Fluff
 
 /obj/item/clothing/under/f13/cyberpunk

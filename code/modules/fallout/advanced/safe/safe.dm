@@ -63,6 +63,12 @@
 	if(amount >= 10000)
 		. += "<a class='button' href='byond://?src=\ref[src];withdraw=10000'>Снять 10 000</a>"
 
+	if(amount >= 5000)
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=10000'>Снять 5000</a>"
+
+	if(amount >= 1000)
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=10000'>Снять 1000</a>"
+
 	if(amount > 0)
 		. += "<a class='button' href='byond://?src=\ref[src];withdraw=[amount]'>Снять все</a>"
 
