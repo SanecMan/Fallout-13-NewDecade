@@ -847,10 +847,6 @@
 	barricade_hitsound = "sound/weapons/Genhit.ogg"
 	barricade_type = "sandbag"
 	can_wire = TRUE
-	proj_pass_rate = 20
-	pass_flags = LETPASSTHROW
-	material = SAND
-	climbable = TRUE
 
 /obj/structure/barricade_m/sandbags/New(loc, direction)
 	if(direction)
