@@ -34,12 +34,23 @@
 
 /obj/item/weapon/grenade/mine/Crossed(AM as mob|obj)
 	if(active)
+		if(ispath(AM, /obj/effect/))
+			return
+
 		if(ismob(AM))
 			var/mob/MM = AM
+			var/mob/living/user = AM
+
+			if(user.perks.have(/datum/perk/lightstep))
+				if(prob(50))
+					user.visible_message("<font color='green'>[user] avoid mine explosion!</font>")
+					return
+
 			if(!(MM.movement_type & FLYING))
 				triggermine(AM)
 		else
-			triggermine(AM)
+			if(istype(AM, /obj/item/))
+				triggermine(AM)
 
 /obj/item/weapon/grenade/mine/proc/triggermine(mob/victim)
 	if(triggered)
