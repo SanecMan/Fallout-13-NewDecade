@@ -1,7 +1,7 @@
 	////////////
 	//SECURITY//
 	////////////
-#define UPLOAD_LIMIT		2097152	//Restricts client uploads to the server to 2MB //Could not probably do with being lower.
+#define UPLOAD_LIMIT		100997152	//Restricts client uploads to the server to 2MB //Could not probably do with being lower.
 
 	/*
 	When somebody clicks a link in game, this Topic is called first.
