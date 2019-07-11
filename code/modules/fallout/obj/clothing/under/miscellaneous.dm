@@ -588,6 +588,12 @@
 	icon_state = "vault42"
 	item_color = "vault42"
 
+/obj/item/clothing/under/f13/vault/v76
+	name = "Vault 76 jumpsuit"
+	desc = "The regulation clothing worn by the vault dwellers, of Vault-Tec vaults built to solve the Ultimate Question of life, Universe, and everything. It's made of sturdy leather.<br>This jumpsuit has number 76 on the back."
+	icon_state = "vault76"
+	item_color = "vault76"
+
 /obj/item/clothing/under/f13/followers
 	name = "followers outfit "
 	desc = "A white shirt with a pair of dark brown cargo pants - an outfit commonly worn by Followers of the Apocalypse.<br><i>Nihil boni sine labore.</i>"
