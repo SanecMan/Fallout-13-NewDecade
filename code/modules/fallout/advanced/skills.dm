@@ -15,19 +15,19 @@
 
 /datum/skills
 	var
-		small_guns = 4
-		big_guns = 4
-		barter = 4
-		energy_weapons = 4
-		explosives = 4
-		lockpick = 4
-		medicine = 4
-		melee_weapons = 4
-		repair = 4
-		science = 4
-		sneak = 4
-		speech = 4
-		unarmed = 4
+		small_guns = 3
+		big_guns = 3
+		barter = 3
+		energy_weapons = 3
+		explosives = 3
+		lockpick = 3
+		medicine = 3
+		melee_weapons = 3
+		repair = 3
+		science = 3
+		sneak = 3
+		speech = 3
+		unarmed = 3
 	//(1-10)
 	var/datum/browser/popup
 
