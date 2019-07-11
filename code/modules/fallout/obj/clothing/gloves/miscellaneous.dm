@@ -45,6 +45,20 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
+/obj/item/clothing/gloves/f13/sstgloves
+	name = "M.I gloves"
+	desc = "A pair of sturdy, black leather gloves.<br>Destined to strangle foes, break necks, and pull the trigger."
+	icon_state = "sstgloves"
+	item_state = "military"
+	item_color = null
+	transfer_prints = TRUE
+	strip_delay = 20
+	put_on_delay = 40
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+
 /obj/item/clothing/gloves/f13/ncr
 	name = "trooper gloves"
 	desc = "Large leather gloves commonly worn by NCR servicemen."

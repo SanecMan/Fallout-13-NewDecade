@@ -124,7 +124,7 @@
 	name = "Rifle .308"
 	desc = "A pre-War bolt-action hunting rifle."
 	icon_state = "rifle"
-	item_state = "rifle"
+	item_state = "rifle308s"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=3;materials=2;prewar=3"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/m308
@@ -141,7 +141,7 @@
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 	icon_state = "rifle-scope"
-	item_state = "rifle"
+	item_state = "rifle308scope"
 	can_suppress = 1
 	zoomable = TRUE
 	zoom_amt = 12
@@ -256,6 +256,7 @@
 	name = "Chinese assault rifle"
 	desc = "The Type 93 Chinese assault rifle was designed and manufactured by a Chinese industrial conglomerate for the People's Liberation Army during the Resource Wars, for the purpose of equipping the Chinese infiltrators and American fifth-columnists. To this end, it was chambered for the abundant 5.56mm round and utilizes a 20-round magazine. Thousands of these weapons were smuggled into the US for use by Chinese operatives and sympathizers on the East Coast, and many remain functional even two hundred years after the Great War. These rifles are also proven to be ready for manufacturing in post-War conditions."
 	icon_state = "chinese"
+	item_state = "chinese"
 	fire_sound = 'sound/f13weapons/chinese.ogg'
 	burst_size = 2
 	price = 400
@@ -282,3 +283,64 @@
 	scopetype = /obj/screen/fullscreen/scope/long
 	price = 10000
 	big_gun = 1
+
+/obj/item/weapon/gun/ballistic/revolver/sequoia
+	name = "Ranger Sequoia"
+	icon_state = "liquidsequoia"
+	desc = "The Ranger Sequoia is a popular model of double action revolver in the wasteland, albeit with expensive decorations compared to other guns. This one appears quite different from the standard model in the fact that it's stainless steel rather than blued, and may have a twin judging by the strange serial number."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	item_state = "sequoia"
+	origin_tech = "combat=2;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/m44
+	can_suppress = 0
+	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
+	burst_size = 1
+	casing_ejector = 0
+	zoomable = FALSE
+	w_class = WEIGHT_CLASS_NORMAL
+	self_weight = 0.85
+	recoil = 2
+	price = 3500
+	small_gun = 1
+
+/obj/item/weapon/gun/ballistic/automatic/fnfal
+	name = "FN FAL"
+	icon_state = "fnfal"
+	item_state = "fnfal"
+	desc = "The FN FAL is a battle rifle designed by Belgian small arms designers Dieudonne Saive and Ernest Vervier and manufactured by FN Herstal. During the Cold War the FAL was adopted by many countries of the North Atlantic Treaty Organization (NATO), with the notable exception of the United States. It is one of the most widely used rifles in history, having been used by more than 90 countries. This particular model sports wooden furniture and an aftermarket conversion that allows it to fire more readily available .308 Winchester ammunition, which is very similar in size to the 7.62?51mm NATO it was originally chambered in."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	origin_tech = "combat=3;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/F13/m223
+	can_suppress = 0
+	casing_ejector = 1
+	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = SLOT_BACK
+	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	recoil = 2
+	wielded_icon = "fnfal-wielded"
+	burst_size = 2
+
+/obj/item/weapon/gun/ballistic/automatic/sst
+	icon = 'icons/SST/Morita.dmi'
+
+/obj/item/weapon/gun/ballistic/automatic/sst/morita
+	name = "Morita MK2"
+	desc = "BEST weapon in war between humans and bugs."
+	icon_state = "Morita_STANAG"
+	item_state = "Morita"
+	can_suppress = 0
+	casing_ejector = 1
+	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = SLOT_BACK
+	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	recoil = 2
+	burst_size = 2
+	mag_type = /obj/item/ammo_box/magazine/F13/sst_stanag

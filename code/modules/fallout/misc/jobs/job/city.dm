@@ -117,7 +117,7 @@
 
 /datum/outfit/job/sheriff
 	name = "Sheriff"
-	id = /obj/item/card/id/sheriff
+	id = /obj/item/card/id/f13/sheriff
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/f13/cowboy
 	suit = /obj/item/clothing/suit/f13/sheriff

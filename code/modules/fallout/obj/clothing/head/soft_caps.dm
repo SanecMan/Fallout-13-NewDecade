@@ -10,6 +10,11 @@
 	icon_state = "baseballsoft"
 	item_color = "baseball"
 
+/obj/item/clothing/head/soft/f13/sstberet
+	name = "officer beret"
+	desc = "A standard-issue M.I officer's beret."
+	icon_state = "sstberet"
+	item_color = "sstberet"
 
 /obj/item/clothing/head/soft/f13/enclave
 	name = "officer hat"

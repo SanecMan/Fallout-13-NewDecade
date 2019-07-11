@@ -624,6 +624,17 @@
 	can_adjust = 0
 	self_weight = 3
 
+/obj/item/clothing/under/f13/sstform
+	name = "M.I. BDU"
+	desc = "A standard Mobile Infantry uniform.<br>The outer layer is made of a sturdy material designed to withstand the harsh conditions of the battlefield."
+	icon_state = "sstform"
+	item_state = "bl_suit"
+	item_color = "sstform"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 0, bio = 10, rad = 10, fire = 0, acid = 0)
+	can_adjust = 0
+	self_weight = 3
+
 /obj/item/clothing/under/f13/ncr_officer
 	name = "officer uniform"
 	desc = "A standard NCR officer uniform.<br>Embroided New California Republic flag patches adorn both sleeves."

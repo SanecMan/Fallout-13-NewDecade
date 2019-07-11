@@ -50,7 +50,7 @@
 
 /datum/outfit/job/general
 	name = "general"
-	id = /obj/item/card/id/ncrgeneral
+	id = /obj/item/card/id/f13/ncrgeneral
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/general
 	shoes = /obj/item/clothing/shoes/laceup
@@ -116,7 +116,7 @@
 
 /datum/outfit/job/ncr_sergeant
 	name = "Sergeant NCR"
-	id = /obj/item/card/id/ncrsergeant
+	id = /obj/item/card/id/f13/ncrsergeant
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/ncr_officer
 	r_pocket = /obj/item/clothing/tie/medal/silver/ncrSGT
@@ -178,7 +178,7 @@
 
 /datum/outfit/job/vranger
 	name = "Veteran Ranger"
-	id = /obj/item/card/id/ncrranger
+	id = /obj/item/card/id/f13/ncrranger
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/mechanic
 	shoes = /obj/item/clothing/shoes/f13/military/light
@@ -237,7 +237,7 @@
 
 /datum/outfit/job/trooper
 	name = "Trooper"
-	id = /obj/item/card/id/ncrtrooper
+	id = /obj/item/card/id/f13/ncrtrooper
 	gloves = /obj/item/clothing/gloves/f13/ncr
 	uniform = /obj/item/clothing/under/f13/ncr
 	r_pocket = /obj/item/clothing/tie/medal/silver/ncrTPR

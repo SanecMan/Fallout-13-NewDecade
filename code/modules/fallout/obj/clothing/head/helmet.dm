@@ -3,6 +3,18 @@
 /obj/item/clothing/head/helmet/f13
 	icon = 'icons/fallout/clothing/hats.dmi'
 
+/obj/item/clothing/head/helmet/f13/ssthelmet
+	name = "M.I combat helmet"
+	desc = "A pre-War ballistic assembly, designed to provide moderate protection in combat.<br>Overtime the model became significantly less effective, and was replaced with reinforced combat helmet mark I."
+	icon_state = "ssthelmet"
+	item_state = "marine"
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 30, acid = 30)
+	flags_inv = HIDEEARS|HIDEHAIR
+	put_on_delay = 20
+	strip_delay = 30
+	resistance_flags = FIRE_PROOF
+	self_weight = 1
+
 /obj/item/clothing/head/helmet/f13/broken
 	name = "broken power helmet"
 	desc = "This power armor helmet is so decrepit and battle-worn that it has ceased its primary function of protecting the wearer from harm.<br>It can still provide some very basic protection."

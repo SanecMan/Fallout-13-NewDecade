@@ -4,6 +4,17 @@
 	icon = 'icons/fallout/clothing/suits.dmi'
 	self_weight = 7.5
 
+/obj/item/clothing/suit/armor/f13/sstarmor
+	name = "M.I ARMOR"
+	desc = "ITS A GOOD DAY TO DIE HUH?"
+	icon_state = "sstarmor"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 40, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 10, acid = 0)
+	put_on_delay = 60
+	strip_delay = 60
+	resistance_flags = FIRE_PROOF
+	self_weight = 4
+
 /obj/item/clothing/suit/armor/f13/cyberpunk
 	name = "armored trenchcoat"
 	desc = "A trenchcoat augmented with a special alloy for some protection and style."
