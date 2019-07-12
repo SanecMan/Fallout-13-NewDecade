@@ -96,7 +96,7 @@
 	command = "pinkypromise"
 	description = "Пинки-клятва!"
 	require_user_hands = 1
-	simple_message = "USER says,'Руку на сердце, без лишних фраз! Пирожок мне прямо в глаз!'"
+	simple_message = "USER says, ''Руку на сердце, без лишних фраз! Пирожок мне прямо в глаз!''"
 	needs_physical_contact = 1
 
 /datum/interaction/bird

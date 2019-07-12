@@ -175,3 +175,9 @@
 	item_state = "welding"
 	tint = 1
 	armor = list(melee = 40, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 30, acid = 0)
+
+/obj/item/clothing/head/f13/fluff/waffenss
+	name = "Waffen SS cap"
+	desc = "Let's send jews to oven."
+	icon_state = "waffen"
+	item_state = "fedora"

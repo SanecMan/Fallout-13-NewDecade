@@ -1207,3 +1207,25 @@
 	body_parts_covered = CHEST|GROIN|LEGS
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
+
+/obj/item/clothing/under/f13/fluff/waffenss
+	name = "Waffen SS form"
+	desc = "Scheisse, das uniformei ist gut!."
+	icon_state = "waffen"
+	item_state = "bl_suit"
+	item_color = "waffen"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 1
+	self_weight = 3
+
+/obj/item/clothing/under/f13/fluff/m35
+	name = "M35 form"
+	desc = "Scheisse, das uniformei ist gut!."
+	icon_state = "m35"
+	item_state = "bl_suit"
+	item_color = "m35"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	can_adjust = 1
+	self_weight = 3

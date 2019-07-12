@@ -22,9 +22,9 @@
 
 /datum/interaction/lewd/kiss/display_interaction(var/mob/user, var/mob/target)
 	if (user.lust >= 3)
-		user.visible_message("<span class='warning'>\[user] делает глубокий и продолжительный поцелуй с [target].</span>")
+		user.visible_message("<span class='warning'>[user] делает глубокий и продолжительный поцелуй с [target].</span>")
 	else
-		user.visible_message("<span class='warning'>\[user] целует [target] по-французки.</span>")
+		user.visible_message("<span class='warning'>[user] целует [target] по-французки.</span>")
 
 /datum/interaction/lewd/oral
 	command = "suckvag"

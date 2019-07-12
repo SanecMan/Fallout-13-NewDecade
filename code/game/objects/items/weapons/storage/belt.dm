@@ -288,6 +288,18 @@
 	icon_state = "grenadebeltold"
 	item_state = "security"
 
+/obj/item/weapon/storage/belt/military/german
+	name = "army belt"
+	desc = "A belt used by old german military forces."
+	icon_state = "wehr"
+	item_state = "security"
+
+/obj/item/weapon/storage/belt/military/sst
+	name = "M.I belt"
+	desc = "M.I belt, for M.I needs."
+	icon_state = "sstbelt"
+	item_state = "security"
+
 /obj/item/weapon/storage/belt/military/army/enclave
 	name = "enclave belt"
 	desc = "A belt used by enclave military forces."

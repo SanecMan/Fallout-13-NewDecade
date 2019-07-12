@@ -235,7 +235,7 @@
 	weapon = null
 
 /datum/job/gunrunner
-	title = "Gun runner"
+	title = "Gun Runner"
 	desc = "Make weapons. Sell weapons. Trading save the Wasteland!"
 	flag = MERCENARY
 	department_flag = MEDSCI
@@ -255,20 +255,13 @@
 	/obj/item/clothing/shoes/f13/tan,
 	/obj/item/clothing/gloves/f13/leather,
 	/obj/item/clothing/gloves/f13/military,
-	/obj/item/clothing/under/f13/mercadv,
-	/obj/item/clothing/under/f13/female/mercadv,
-	/obj/item/clothing/under/f13/female/merccharm,
-	/obj/item/clothing/under/f13/doctor,
-	/obj/item/clothing/under/f13/female/doctor,
-	/obj/item/clothing/under/f13/bodyguard,
+	/obj/item/clothing/under/f13/merchant,
 	/obj/item/clothing/suit/f13/duster,
 	/obj/item/clothing/suit/armor/f13/kit,
 	/obj/item/clothing/suit/armor/f13/leatherarmor,
 	/obj/item/clothing/suit/armor/f13/metalarmor,
 	/obj/item/clothing/suit/armor/f13/bmetalarmor,
-	/obj/item/clothing/head/soft/f13/utility/navy,
 	/obj/item/clothing/head/helmet/f13/tribal,
-	/obj/item/clothing/head/helmet/f13/eyebot,
 	/obj/item/clothing/head/helmet/f13/marine,
 	/obj/item/clothing/glasses/eyepatch,
 	/obj/item/clothing/glasses/sunglasses,
