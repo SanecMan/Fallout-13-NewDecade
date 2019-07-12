@@ -453,7 +453,7 @@ var/bomb_set
 		if(ticker.mode.name == "nuclear emergency")
 			ticker.mode:nukes_left --
 		else
-			to_chat(world, "<B>Denwer was destoyed by the nuclear blast!</B>")
+			to_chat(world, "<B>Texas was destoyed by the nuclear blast!</B>")
 		ticker.mode.station_was_nuked = (off_station<2)	//offstation==1 is a draw. the station becomes irradiated and needs to be evacuated.
 														//kinda shit but I couldn't  get permission to do what I wanted to do.
 		if(!ticker.mode.check_finished())//If the mode does not deal with the nuke going off so just reboot because everyone is stuck as is
@@ -543,8 +543,8 @@ This is here to make the tiles around the station mininuke change when it's arme
 	else
 		to_chat(get(src, /mob), "<span class='danger'>You can't help but feel that you just lost something back there...</span>")
 		var/turf/targetturf = relocate()
-		message_admins("[src] has been moved out of bounds in \
-			[ADMIN_COORDJMP(diskturf)]. Moving it to \
+		message_admins("[src] кто-то спиздил диск \
+			[ADMIN_COORDJMP(diskturf)]. “елепортирую сюда \
 			[ADMIN_COORDJMP(targetturf)].")
 		log_game("[src] has been moved out of bounds in [COORD(diskturf)]. \
 			Moving it to [COORD(targetturf)].")
