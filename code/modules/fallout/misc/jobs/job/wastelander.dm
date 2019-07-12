@@ -223,17 +223,6 @@
 	uniform = /obj/item/clothing/under/f13/tribalshaman
 	shoes = /obj/item/clothing/shoes/f13/rag
 
-/datum/outfit/job/gunrunner
-	name = "Gun runner"
-	backpack = null
-	satchel = null
-	uniform = /obj/item/clothing/under/f13/merchant
-	shoes = /obj/item/clothing/shoes/f13/military
-	suit = null
-	head = null
-	belt = null
-	weapon = null
-
 /datum/job/gunrunner
 	title = "Gun Runner"
 	desc = "Make weapons. Sell weapons. Trading save the Wasteland!"
@@ -282,3 +271,14 @@
 	/obj/item/clothing/under/f13/female/brahmin,
 	/obj/item/clothing/suit/f13/mantle_liz
 	)
+
+/datum/outfit/job/gunrunner
+	name = "Gun runner"
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/merchant
+	shoes = /obj/item/clothing/shoes/f13/military
+	suit = null
+	head = null
+	belt = null
+	weapon = null
