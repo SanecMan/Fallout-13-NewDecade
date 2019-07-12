@@ -324,13 +324,10 @@
 	wielded_icon = "fnfal-wielded"
 	burst_size = 2
 
-/obj/item/weapon/gun/ballistic/automatic/sst
-	icon = 'icons/SST/Morita.dmi'
-
 /obj/item/weapon/gun/ballistic/automatic/sst/morita
 	name = "Morita MK2"
 	desc = "BEST weapon in war between humans and bugs."
-	icon_state = "Morita_STANAG"
+	icon_state = "Morita"
 	item_state = "Morita"
 	can_suppress = 0
 	casing_ejector = 1

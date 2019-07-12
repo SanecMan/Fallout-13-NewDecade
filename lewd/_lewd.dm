@@ -7,19 +7,19 @@
 /mob/list_interaction_attributes()
 	var/dat = ..()
 	if(refactory_period)
-		dat += "<br>...are sexually exhausted for the time being."
+		dat += "<br>...сексуально исчерпан."
 	if(is_nude())
-		dat += "<br>...are naked."
+		dat += "<br>...голый."
 		if(has_vagina())
-			dat += "<br>...have breasts."
+			dat += "<br>...имеет грудь."
 		if(has_penis())
-			dat += "<br>...have a penis."
+			dat += "<br>...имеет пенис."
 		if(has_vagina())
-			dat += "<br>...have a vagina."
+			dat += "<br>...имеет вагину."
 		if(has_anus())
-			dat += "<br>...have an anus."
+			dat += "<br>...имеет анус."
 	else
-		dat += "<br>...are clothed."
+		dat += "<br>...в одежде."
 	return dat
 
 /mob/living/Life()
@@ -32,7 +32,7 @@
 /datum/interaction/lewd
 	command = "assslap"
 	description = "Slap their ass."
-	simple_message = "USER slaps TARGET right on the ass!"
+	simple_message = "USER шлепнул TARGET по заднице!"
 	simple_style = "danger"
 	interaction_sound = 'honk/sound/interactions/slap.ogg'
 	needs_physical_contact = 1
@@ -61,19 +61,19 @@
 /datum/interaction/lewd/evaluate_user(var/mob/user, var/silent=1)
 	if(..(user, silent))
 		if(user_not_tired && user.refactory_period)
-			user << "<span class='warning'>You're still exhausted from the last time.</span>"
+			user << "<span class='warning'>Вы всё еще устали после прошлого раза.</span>"
 			return 0
 		if(require_user_naked && !user.is_nude())
-			if(!silent) user << "<span class = 'warning'>Your clothes are in the way.</span>"
+			if(!silent) user << "<span class = 'warning'>Вам мешает одежда.</span>"
 			return 0
 		if(require_user_penis && !user.has_penis())
-			if(!silent) user << "<span class = 'warning'>You don't have a penis.</span>"
+			if(!silent) user << "<span class = 'warning'>У вас нет члена.</span>"
 			return 0
 		if(require_user_anus && !user.has_anus())
-			if(!silent) user << "<span class = 'warning'>You don't have an anus.</span>"
+			if(!silent) user << "<span class = 'warning'>У вас нет ануса.</span>"
 			return 0
 		if(require_user_vagina && !user.has_vagina())
-			if(!silent) user << "<span class = 'warning'>You don't have a vagina.</span>"
+			if(!silent) user << "<span class = 'warning'>У вас нет вагины.</span>"
 			return 0
 		return 1
 	return 0
@@ -81,19 +81,19 @@
 /datum/interaction/lewd/evaluate_target(var/mob/user, var/mob/target, var/silent=1)
 	if(..(user, target, silent))
 		if(target_not_tired && target.refactory_period)
-			user << "<span class='warning'>They're still exhausted from the last time.</span>"
+			user << "<span class='warning'>.</span>"
 			return 0
 		if(require_target_naked && !target.is_nude())
-			if(!silent) user << "<span class = 'warning'>Their clothes are in the way.</span>"
+			if(!silent) user << "<span class = 'warning'>TARGET мешает одежда.</span>"
 			return 0
 		if(require_target_penis && !target.has_penis())
-			if(!silent) user << "<span class = 'warning'>They don't have a penis.</span>"
+			if(!silent) user << "<span class = 'warning'>У TARGET нет пениса.</span>"
 			return 0
 		if(require_target_anus && !target.has_anus())
-			if(!silent) user << "<span class = 'warning'>They don't have an anus.</span>"
+			if(!silent) user << "<span class = 'warning'>У TARGET нет ануса.</span>"
 			return 0
 		if(require_target_vagina && !target.has_vagina())
-			if(!silent) user << "<span class = 'warning'>They don't have a vagina.</span>"
+			if(!silent) user << "<span class = 'warning'>У TARGET нет вагины.</span>"
 			return 0
 		return 1
 	return 0
@@ -104,7 +104,7 @@
 	return ..()
 
 /datum/interaction/lewd/get_action_link_for(var/mob/user, var/mob/target)
-	return "<font color='#FF0000'><b>LEWD:</b></font> [..()]"
+	return "<font color='#FF0000'><b>ERP:</b></font> [..()]"
 	if(user.stat == DEAD) return
 
 #define CUM_TARGET_MOUTH "mouth"

@@ -154,7 +154,7 @@
 /obj/item/ammo_box/magazine/F13/sst_stanag
 	name = "STANAG (5.56mm)"
 	icon = 'icons/SST/Morita.dmi'
-	icon_state = "STANAG_31"
+	icon_state = "stanagmag"
 	ammo_type = /obj/item/ammo_casing/F13/a556
 	caliber = "a556"
 	max_ammo = 36

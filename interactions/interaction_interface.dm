@@ -23,7 +23,7 @@
 	visible_message("Through!")
 
 /mob/verb/interact_with()
-	set name = "Interact With"
+	set name = "Interact"
 	set desc = "Perform an interaction with someone."
 	set category = "IC"
 	set src in view()

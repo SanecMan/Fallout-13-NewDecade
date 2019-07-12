@@ -191,7 +191,8 @@
 	/obj/item/weapon/katana/chinese = 1)
 
 /obj/effect/spawner/lootdrop/food
-	color = "#FF0000"
+	color = "#2DF31A"
+	icon_state = "food"
 	loot = list(
 	// TRASH
 	/obj/item/trash/f13/bubblegum = 90,

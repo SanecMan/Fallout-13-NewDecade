@@ -15,7 +15,7 @@
 		moan--
 	lastmoan = moan
 
-	visible_message("<font color=purple> <B>\The [src]</B> [pick("moans", "moans in pleasure",)].</font>")
+	visible_message("<font color=purple> <B>\The [src]</B> [pick("мычит", "мычит в наслаждении",)].</font>")
 	playsound(get_turf(src), "honk/sound/interactions/moan_[gender == FEMALE ? "f" : "m"][moan].ogg", 70, 1, 0)//, pitch = get_age_pitch())
 
 /mob/proc/cum(var/mob/partner, var/target_orifice)
@@ -32,38 +32,38 @@
 		switch(target_orifice)
 			if(CUM_TARGET_MOUTH)
 				if(partner.has_mouth() && partner.mouth_is_free())
-					message = "cums right in \the [partner]'s mouth."
-					//partner.reagents.add_reagent("cum", 10)
+					message = pick("кончил прямо в рот [partner].","спустил на язычок [partner].","брызгает спермой в рот [partner].","заполняет рот [partner] семенем.","обильно кончил в рот [partner], так, что стекает изо рта.","выпускает в ротик [partner] порцию густого молочка")
+					partner.reagents.add_reagent("cum", 10)
 				else
-					message = "cums on \the [partner]'s face."
+					message = "кончил на лицо [partner]."
 			if(CUM_TARGET_THROAT)
 				if(partner.has_mouth() && partner.mouth_is_free())
-					message = "shoves deep into \the [partner]'s throat and cums."
-					//partner.reagents.add_reagent("cum", 10)
+					message = "засунул свой член как можно глубже в глотку [partner] и кончил."
+					partner.reagents.add_reagent("cum", 15)
 				else
-					message = "cums on \the [partner]'s face."
+					message = "кончил на лицо [partner]."
 			if(CUM_TARGET_VAGINA)
 				if(partner.is_nude() && partner.has_vagina())
-					message = "cums in \the [partner]'s pussy."
+					message = "кончил во влагалище [partner]."
 					//partner.reagents.add_reagent("cum", 10)
 				else
-					message = "cums on \the [partner]'s belly."
+					message = "кончил на животик[partner]."
 			if(CUM_TARGET_ANUS)
 				if(partner.is_nude() && partner.has_anus())
-					message = "cums in \the [partner]'s asshole."
+					message = "кончил в задницу [partner]."
 					//partner.reagents.add_reagent("cum", 10)
 				else
-					message = "cums on \the [partner]'s backside."
+					message = "кончил на спинку [partner]."
 			if(CUM_TARGET_HAND)
 				if(partner.has_hand())
-					message = "cums in \the [partner]'s hand."
+					message = "кончил в руку [partner]'s."
 				else
-					message = "cums on \the [partner]."
+					message = "кончил на [partner]."
 			if(CUM_TARGET_BREASTS)
 				if(partner.is_nude() && partner.has_vagina())
-					message = "cums onto \the [partner]'s breasts."
+					message = "кончил на грудь [partner]."
 				else
-					message = "cums on \the [partner]'s chest and neck."
+					message = "кончил на шею и грудь [partner]."
 			if(NUTS_TO_FACE)
 				if(partner.has_mouth() && partner.mouth_is_free())
 					message = "vigorously ruts their hairy nutsack into \the [partner]'s mouth before shooting their thick, sticky jizz all over their eyes and hair."
@@ -73,13 +73,13 @@
 				else
 					message = "reaches their peak, locking their legs around \the [partner]'s head extra hard as they cum straight onto the head stuck between their thighs"
 			else
-				message = "cums on the floor!"
+				message = "спустил на пол!"
 
 		lust = 5
 		lust_tolerance += 50
 
 	else
-		message = pick("cums violently!", "twists in orgasm.")
+		message = pick("прикрывает глаза и мелко дрожит", "дёргается в оргазме.","замирает, закатив глаза","содрагается, а затем резко расслабляется","извивается в приступе оргазма")
 		lust -= pick(10, 15, 20, 25)
 
 	if(gender == MALE)
@@ -148,21 +148,19 @@
 
 	if(is_fucking(partner, CUM_TARGET_MOUTH))
 		if(has_vagina())
-			message = "grinds their pussy into \the [partner]'s face."
+			message = "елозит своей вагиной по лицу [partner]."
 		else if(has_penis())
-			message = "roughly fucks \the [partner]'s mouth."
-		else
-			message = "grinds against \the [partner]\s face."
+			message = pick("грубо трахает [partner] в рот.","сильно прижимает голову [partner] к себе.")
 	else
 		if(has_vagina())
-			message = "forces \the [partner]'s face into their pussy."
+			message = "пихает [partner] лицом в свою вагину."
 		else if(has_penis())
 			if(is_fucking(partner, CUM_TARGET_THROAT))
-				message = "retracts their dick from \the [partner]'s throat"
+				message = "достал свой член из глотки [partner]"
 			else
-				message = "shoves their dick deep into \the [partner]'s mouth"
+				message = "просовывает свой член еще глубже в рот [partner]"
 		else
-			message = "shoves their crotch into \the [partner]'s face."
+			message = "елозит промежностью по лицу [partner]."
 		set_is_fucking(partner , CUM_TARGET_MOUTH)
 
 	playsound(loc, "honk/sound/interactions/oral[rand(1, 2)].ogg", 70, 1, -1)
@@ -181,10 +179,10 @@
 			partner.emote("chokes on \The [src]")
 			partner.losebreath = 5
 	else if(is_fucking(partner, CUM_TARGET_MOUTH))
-		message = "thrusts deeper into \the [partner]'s mouth and down their throat."
+		message = "суёт член глубже, заходя уже в глотку [partner]."
 
 	else
-		message = "forces their dick deep down \the [partner]'s throat"
+		message = "силой запихивает свой член в глотку [partner]"
 		set_is_fucking(partner , CUM_TARGET_THROAT)
 
 	playsound(loc, "honk/sound/interactions/oral[rand(1, 2)].ogg", 70, 1, -1)
@@ -197,9 +195,9 @@
 	var/message
 	var/lust_increase = 10
 	if(is_fucking(partner, CUM_TARGET_ANUS))
-		message = "fucks \the [partner]'s ass."
+		message = pick("трахает [partner] в задницу.","нежно потрахивает [partner] в очко","всаживает член в анальное кольцо [partner] по самые яйца.")
 	else
-		message = "works their cock into \the [partner]'s asshole."
+		message = "безжалостно прорывает анальное отверстие [partner]."
 		set_is_fucking(partner, CUM_TARGET_ANUS)
 
 	playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
@@ -214,9 +212,9 @@
 	var/lust_increase = 10
 
 	if(is_fucking(partner, CUM_TARGET_VAGINA))
-		message = "pounds \the [partner]'s pussy."
+		message = "проникает в вагину [partner]."
 	else
-		message = "slides their cock into \the [partner]'s pussy."
+		message = "резким движением погружается внутрь [partner]"
 		set_is_fucking(partner, CUM_TARGET_VAGINA)
 
 	playsound(loc, "honk/sound/interactions/champ[rand(1, 2)].ogg", 50, 1, -1)
@@ -230,9 +228,9 @@
 	var/message
 	var/lust_increase = 10
 	if(partner.is_fucking(src, CUM_TARGET_VAGINA))
-		message = "rides \the [partner]'s dick."
+		message = "скачет на члене [partner]."
 	else
-		message = "slides their pussy onto \the [partner]'s cock."
+		message = "насаживает свою вагину на член [partner]."
 		partner.set_is_fucking(src, CUM_TARGET_VAGINA)
 	playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
 	visible_message("<b>\The [src]</b> [message]")
@@ -245,9 +243,9 @@
 	var/message
 	var/lust_increase = 10
 	if(partner.is_fucking(src, CUM_TARGET_ANUS))
-		message = "rides \the [partner]'s dick."
+		message = "скачет на члене [partner]."
 	else
-		message = "lowers their ass onto \the [partner]'s cock."
+		message = "опускает свой зад на член [partner]."
 		partner.set_is_fucking(src, CUM_TARGET_ANUS)
 	playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
 	visible_message("<b>\The [src]</b> [message]")
@@ -271,7 +269,7 @@
 	do_fucking_animation(get_dir(src, partner))
 
 /mob/proc/do_rimjob(var/mob/partner)
-	visible_message("<b>\The [src]<b> licks \the [partner]'s asshole.</span>")
+	visible_message("<b>[src]<b> вылизывает дырочку [partner].</span>")
 	playsound(loc, "honk/sound/interactions/champ_fingering.ogg", 50, 1, -1)
 	partner.handle_post_sex(10, null, src)
 	partner.dir = get_dir(src, partner)
@@ -282,9 +280,9 @@
 	var/lust_increase = 10
 
 	if(partner.is_fucking(src, CUM_TARGET_HAND))
-		message = "[pick(list("jerks \the [partner] off.", "works \the [partner]'s shaft.", "wanks \the [partner]'s cock hard."))]"
+		message = "[pick(list("дрочит [partner].", "работает рукой с головкой члена [partner].", "надрачивает член [partner] быстрее."))]"
 	else
-		message = "wraps their hand around \the [partner]'s cock."
+		message = "нежно обхватывает член [partner] рукой."
 		partner.set_is_fucking(src, CUM_TARGET_HAND)
 
 	playsound(src, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
@@ -298,9 +296,9 @@
 	var/lust_increase = 10
 
 	if(is_fucking(partner, CUM_TARGET_BREASTS))
-		message = "[pick(list("fucks \the [partner]'s' breasts.", "grinds their cock between \the [partner]'s boobs.", "thrusts into \the [partner]'s tits."))]"
+		message = "[pick(list("трахает [partner] между грудей.", "сношает [partner] между сисек."))]"
 	else
-		message = "pushes \the [partner]'s breasts together and presses his dick between them."
+		message = "взял груди [partner] и надрачивает ими свой член."
 		set_is_fucking(partner , CUM_TARGET_BREASTS)
 
 
@@ -368,10 +366,10 @@
 
 		if(src.get_item_by_slot(slot_shoes) != null) {
 
-			message = "[pick(list("plants their [get_shoes()] ontop of [partner]'s face.", "rests their [get_shoes()] on [partner]'s face and presses down hard.", "harshly places their [get_shoes()] atop [partner]'s face."))]</span>"
+			message = "[pick(list("поставил [get_shoes()] подошвой на лицо [partner].", "опускает свои [get_shoes()] на лицо [partner] и надавливает ими.", "грубо давит [get_shoes()] на лицо [partner]."))]</span>"
 		} else {
 
-			message = "[pick(list("plants their barefeet ontop of [partner]'s face.", "rests their massive feet on [partner]'s face, smothering them.", "positions their barefeet atop [partner]'s face."))]</span>"
+			message = "[pick(list("ставит свои оголённые ноги на лицо [partner].", "опускает свои массивные ступни на лицо [partner], и мнёт ими его.", "выставляет ноги на лицо [partner]."))]</span>"
 		}
 		set_is_fucking(partner , GRINDING_FACE_WITH_FEET)
 	}
