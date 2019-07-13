@@ -233,7 +233,7 @@
 		var/mob/living/carbon/human/user = usr
 
 		if(getSpentPoints() != SKILLS_POINTS)
-			to_chat(usr, "<span class='warning'>You must spent all points!</span>")
+			to_chat(usr, "<span class='warning'>Вы должны распределить очки!</span>")
 			return
 
 		user.skills = src
