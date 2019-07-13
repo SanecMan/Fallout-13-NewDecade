@@ -132,7 +132,7 @@
 	icon_state = "gclip"
 	max_ammo = 8
 	multiple_sprites = 1
-
+/*
 /obj/item/ammo_box/magazine/F13/gaussmag
 	name = "gauss magazine"
 	ammo_type = /obj/item/ammo_casing/penetrator
@@ -140,7 +140,7 @@
 	icon_state = "gaussmag"
 	max_ammo = 8
 	multiple_sprites = 2
-
+*/
 
 //crc
 /obj/item/ammo_box/magazine/F13/m556

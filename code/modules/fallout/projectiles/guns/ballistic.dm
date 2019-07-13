@@ -95,7 +95,7 @@
 			magazine = null
 			playsound(user, 'sound/weapons/garandclip.ogg', 100, 1)
 
-
+/*
 /obj/item/weapon/gun/ballistic/automatic/gauss
 	name = "M72 Gauss EM rifle"
 	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed."
@@ -118,6 +118,8 @@
 	recoil = 2
 	small_gun = 1
 //crc
+*/
+
 
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle
