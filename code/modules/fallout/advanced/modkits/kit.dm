@@ -40,7 +40,7 @@
 		I:fire_delay *= 0.5
 
 	if(istype(src, /obj/item/kit/bayonet))
-		I:force *= 1
+		I:force *= 2
 
 	if(istype(src, /obj/item/kit/scope))
 		W.zoomable = TRUE
