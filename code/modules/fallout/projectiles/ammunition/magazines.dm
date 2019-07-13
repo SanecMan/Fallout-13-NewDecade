@@ -157,7 +157,6 @@
 	ammo_type = /obj/item/ammo_casing/F13/a556
 	caliber = "a556"
 	max_ammo = 36
-	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/F13/m556/heap
 	name = "rifle magazine (5.56mm) (+Heap!)"
