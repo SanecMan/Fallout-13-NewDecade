@@ -295,7 +295,7 @@
 	name = "army belt"
 	desc = "A belt used by old german military forces."
 	icon_state = "wehr"
-	item_state = "security"
+	item_state = "wehr"
 
 /obj/item/weapon/storage/belt/military/sst
 	name = "M.I belt"
