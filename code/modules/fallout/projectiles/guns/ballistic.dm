@@ -124,7 +124,7 @@
 	name = "Rifle .308"
 	desc = "A pre-War bolt-action hunting rifle."
 	icon_state = "rifle"
-	item_state = "rifle308s"
+	item_state = "rifle"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=3;materials=2;prewar=3"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/m308
@@ -327,8 +327,8 @@
 /obj/item/weapon/gun/ballistic/automatic/sst/morita
 	name = "Morita MK2"
 	desc = "BEST weapon in war between humans and bugs."
-	icon_state = "Morita"
-	item_state = "Morita"
+	icon_state = "morita"
+	item_state = "morita"
 	can_suppress = 0
 	casing_ejector = 1
 	weapon_weight = WEAPON_MEDIUM

@@ -1,6 +1,7 @@
 //Fallout 13 gloves directory
 
 /obj/item/clothing/gloves/f13
+	icon_state = "leather"
 	icon = 'icons/fallout/clothing/gloves.dmi'
 	self_weight = 0.1
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
@@ -49,8 +50,8 @@
 	name = "M.I gloves"
 	desc = "A pair of sturdy, black leather gloves.<br>Destined to strangle foes, break necks, and pull the trigger."
 	icon_state = "sstgloves"
-	item_state = "military"
-	item_color = null
+	item_state = "sstgloves"
+	item_color = "sstgloves"
 	transfer_prints = TRUE
 	strip_delay = 20
 	put_on_delay = 40
