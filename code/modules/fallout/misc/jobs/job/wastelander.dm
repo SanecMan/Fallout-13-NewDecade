@@ -226,7 +226,7 @@
 /datum/job/gunrunner
 	title = "Gun Runner"
 	desc = "Make weapons. Sell weapons. Trading save the Wasteland!"
-	flag = MERCENARY
+	flag = GUNRUNNER
 	department_flag = MEDSCI
 	faction = "none"
 	status = "none"
@@ -250,7 +250,6 @@
 	/obj/item/clothing/suit/armor/f13/leatherarmor,
 	/obj/item/clothing/suit/armor/f13/metalarmor,
 	/obj/item/clothing/suit/armor/f13/bmetalarmor,
-	/obj/item/clothing/head/helmet/f13/tribal,
 	/obj/item/clothing/head/helmet/f13/marine,
 	/obj/item/clothing/glasses/eyepatch,
 	/obj/item/clothing/glasses/sunglasses,
@@ -282,3 +281,4 @@
 	head = null
 	belt = null
 	weapon = null
+	glasses = /obj/item/clothing/glasses/f13/biker

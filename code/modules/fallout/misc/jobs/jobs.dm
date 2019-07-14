@@ -18,6 +18,7 @@ var/const/RAIDER        	=(1<<12)
 var/const/MAYOR				=(1<<13)
 var/const/ARROYV			=(1<<14)
 var/const/ARROYE			=(1<<15)
+var/const/GUNRUNNER			=(1<<16)
 //This jobs using medsci flag, cause me too lazy.
 
 var/const/COLONEL			=(1<<1)
