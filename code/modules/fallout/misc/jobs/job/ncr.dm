@@ -188,7 +188,7 @@
 	weapon = /obj/item/weapon/gun/ballistic/revolver/magnum
 	belt_contents = list(/obj/item/weapon/restraints/handcuffs = 1,
 		/obj/item/weapon/reagent_containers/f13stimpack = 1,
-		/obj/item/ammo_box/F13/m44/heap = 1,
+		/obj/item/ammo_box/F13/m44 = 2,
 		/obj/item/device/radio = 1)
 
 
