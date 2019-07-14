@@ -1,3 +1,5 @@
+///меня часто просят выпилить это говно, но потом просят вернуть, в пизду, боьше не трону
+
 /mob/var/sexual_potency =  15
 /mob/var/lust_tolerance = 100
 /mob/var/lust = 0
