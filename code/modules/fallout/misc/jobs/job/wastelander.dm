@@ -243,17 +243,17 @@
 	required_items = list(
 	/obj/item/clothing/shoes/f13/tan,
 	/obj/item/clothing/gloves/f13/leather,
-	/obj/item/clothing/gloves/f13/military,
 	/obj/item/clothing/under/f13/merchant,
+	/obj/item/clothing/under/f13/caravaneer,
+	/obj/item/clothing/under/f13/trader,
 	/obj/item/clothing/suit/f13/duster,
 	/obj/item/clothing/suit/armor/f13/kit,
 	/obj/item/clothing/suit/armor/f13/leatherarmor,
 	/obj/item/clothing/suit/armor/f13/metalarmor,
-	/obj/item/clothing/suit/armor/f13/bmetalarmor,
 	/obj/item/clothing/head/helmet/f13/marine,
 	/obj/item/clothing/glasses/eyepatch,
 	/obj/item/clothing/glasses/sunglasses,
-	/obj/item/weapon/kitchen/knife/combat,
+	/obj/item/weapon/gun/ballistic/automatic/pistol/n99,
 	/obj/item/weapon/lighter/detonator
 	)
 
