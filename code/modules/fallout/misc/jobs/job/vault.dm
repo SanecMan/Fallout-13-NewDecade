@@ -43,6 +43,9 @@
 	access = list()
 	minimal_access = list()
 
+/datum/job/overseer/get_access()
+	return get_all_accesses()
+
 /datum/outfit/job/overseer
 	name = "Overseer"
 
