@@ -251,7 +251,7 @@
 	name = "rifle .308 magazine"
 	ammo_type = /obj/item/ammo_casing/F13/m308
 	caliber = "308mm"
-	max_ammo = 7
+	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/cylinder/m44
 	name = "magnum revolver cylinder"
