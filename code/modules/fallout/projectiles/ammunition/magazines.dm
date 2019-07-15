@@ -151,13 +151,16 @@
 	max_ammo = 20
 	multiple_sprites = 2
 
+/obj/item/ammo_box/magazine/F13/m556/fnfal //ﬂ  Œ—“€À‹Õ€… œ»ƒŒ–¿— €€€//
+	name = "rifle magazine (7.62mm)"
+
 /obj/item/ammo_box/magazine/F13/m556/chinese
 	name = "rifle magazine (5.56mm)"
 	icon_state = "5.56mchina"
 	ammo_type = /obj/item/ammo_casing/F13/a556
 	caliber = "a556"
 	max_ammo = 24
-	multiple_sprites = 2
+	multiple_sprites = 1
 
 /obj/item/ammo_box/magazine/F13/sst_stanag
 	name = "STANAG (5.56mm)"

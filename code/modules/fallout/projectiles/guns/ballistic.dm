@@ -267,7 +267,7 @@
 	name = "FN FAL"
 	icon_state = "fnfal"
 	desc = "The FN FAL is a battle rifle designed by Belgian small arms designers Dieudonne Saive and Ernest Vervier and manufactured by FN Herstal. During the Cold War the FAL was adopted by many countries of the North Atlantic Treaty Organization (NATO), with the notable exception of the United States. It is one of the most widely used rifles in history, having been used by more than 90 countries. This particular model sports wooden furniture and an aftermarket conversion that allows it to fire more readily available .308 Winchester ammunition, which is very similar in size to the 7.62?51mm NATO it was originally chambered in."
-	mag_type = /obj/item/ammo_box/magazine/F13/m556
+	mag_type = /obj/item/ammo_box/magazine/F13/m556/fnfal
 	origin_tech = "combat=4;materials=2;prewar=4"
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 	burst_size = 2

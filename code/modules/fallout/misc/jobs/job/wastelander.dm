@@ -151,7 +151,7 @@
 		/obj/item/device/radio = 1, \
 		/obj/item/device/flashlight/torch/flare/green = 1)
 
-//Tribeman
+/*/Tribeman
 
 /datum/job/arroyov
 	title = "Arroyo villager"
@@ -222,6 +222,10 @@
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/tribalshaman
 	shoes = /obj/item/clothing/shoes/f13/rag
+*/
+
+///Gun runners///
+
 
 /datum/job/gunrunner
 	title = "Gun Runner"

@@ -1,7 +1,7 @@
 //Fallout 13 New California Republic faction directory
 
 /datum/job/general
-	title = "general"
+	title = "NCR General"
 	desc = "The fate of civilization rests on your shoulders.<br>You were chosen to write history anew.<br>Make a two-headed bear proud."
 	flag = GENERAL
 	department_head = list("NCR Command HQ")
@@ -193,7 +193,7 @@
 
 
 /datum/job/trooper
-	title = "Trooper"
+	title = "NCR Trooper"
 	desc = "I am a soldier and I'm marching on, I am a warrior and this is my song!"
 	flag = TROOPER
 	department_head = list("general", "ncr_sergeant")
