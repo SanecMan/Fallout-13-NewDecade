@@ -273,7 +273,7 @@
 	burst_size = 2
 	price = 1000
 	scopetype = /obj/screen/fullscreen/scope/medium
-	zoomable = TRUE
+	zoomable = FALSE
 	zoom_amt = 7
 	small_gun = 1
 

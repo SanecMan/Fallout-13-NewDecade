@@ -160,7 +160,6 @@
 	ammo_type = /obj/item/ammo_casing/F13/a556
 	caliber = "a556"
 	max_ammo = 24
-	multiple_sprites = 1
 
 /obj/item/ammo_box/magazine/F13/sst_stanag
 	name = "STANAG (5.56mm)"
