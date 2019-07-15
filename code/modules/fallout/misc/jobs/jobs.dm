@@ -51,6 +51,8 @@ var/const/AFOLLOWER			=(1<<0)
 var/const/FOB				=(1<<9)
 var/const/VAULT_OVERSEER	=(1<<0)
 var/const/VAULT_RESIDENT	=(1<<1)
+var/const/VAULT_SECURITY	=(1<<5)
+var/const/VAULT_SCIENCIST	=(1<<5)
 
 var/const/COC				=(1<<12)
 var/const/CHILDOFCATHEDRAL	=(1<<0)

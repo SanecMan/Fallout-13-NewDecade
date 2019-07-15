@@ -1,4 +1,4 @@
-//Followers of the Apocalypse or simple FOB
+//VAULT//
 
 /datum/job/overseer
 	title = "Overseer"
@@ -58,7 +58,7 @@
 	department_head = list("Overseer")
 	department_flag = FOB
 	faction = "vault"
-	status = "dweller"
+	status = "resident"
 	total_positions = 20
 	spawn_positions = 20
 	supervisors = "overseer"
@@ -93,8 +93,7 @@
 
 /datum/outfit/job/dweller
 	name = "Dweller"
-
-	uniform = /obj/item/clothing/under/f13/vault/v13
+	uniform = /obj/item/clothing/under/f13/vault/v113
 	id = /obj/item/weapon/card/id
 	r_pocket = /obj/item/device/pda
 	shoes = /obj/item/clothing/shoes/sneakers/brown
@@ -103,7 +102,7 @@
 
 /datum/job/vltsec
 	title = "Vault Security"
-	flag = VAULT_RESIDENT/*ASSISTANT*/
+	flag = VAULT_SECURITY/*shitcurity*/
 	department_head = list("Head of Security")
 	department_flag = FOB
 	faction = "vault"
@@ -139,7 +138,7 @@
 
 /datum/outfit/job/vltsec
 	name = "vault security"
-	uniform = /obj/item/clothing/under/f13/vault/v13
+	uniform = /obj/item/clothing/under/f13/vault/v113
 	id = /obj/item/weapon/card/id
 	belt = /obj/item/device/pda/security
 	shoes = /obj/item/clothing/shoes/sneakers/brown
@@ -164,7 +163,7 @@
 
 /datum/job/vltsci
 	title = "Vault Sciencist"
-	flag = VAULT_RESIDENT/*ASSISTANT*/
+	flag = VAULT_SCIENCIST/*science*/
 	department_head = list("Overseer")
 	department_flag = FOB
 	faction = "vault"
@@ -176,7 +175,10 @@
 
 	allowed_packs = list("starter", "cigarettes")
 
-	required_items = list()
+	required_items = list(
+	/obj/item/clothing/under/f13/vault/v113,
+	/obj/item/clothing/suit/toggle/labcoat/f13/followers,
+	)
 	denied_items = list(
 	/obj/item/clothing/shoes/f13/rag,
 	/obj/item/clothing/head/f13/headscarf,
