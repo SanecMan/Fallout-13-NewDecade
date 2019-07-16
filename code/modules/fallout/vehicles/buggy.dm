@@ -77,3 +77,11 @@
 /obj/vehicle/fuel/motorcycle/buggy/interceptor
 	icon_state = "interceptor"
 	names = list("Interceptor")
+
+/obj/vehicle/fuel/motorcycle/buggy/tank
+	name = "CVR(T)"
+	icon = 'icons/fallout/vehicles/CVR.dmi'
+	desc = "FUCKING TANK!"
+	fuel = 1000
+	max_fuel = 1000
+	self_weight = 2000

@@ -80,9 +80,9 @@
 	desc = "Designed to quickly reload revolvers."
 	icon_state = "b38"
 	ammo_type = /obj/item/ammo_casing/F13/m44
-	max_ammo = 7
+	max_ammo = 6
 	multiple_sprites = 1
-	self_weight = 0.2
+	self_weight = 0.3
 
 /obj/item/ammo_box/F13/m44/heap
 	name = "speed loader (.44) (+Heap!)"
@@ -150,6 +150,16 @@
 	caliber = "a556"
 	max_ammo = 20
 	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/F13/m556/fnfal //ﬂ  Œ—“€À‹Õ€… œ»ƒŒ–¿— €€€//
+	name = "rifle magazine (7.62mm)"
+
+/obj/item/ammo_box/magazine/F13/m556/chinese
+	name = "rifle magazine (5.56mm)"
+	icon_state = "5.56mchina"
+	ammo_type = /obj/item/ammo_casing/F13/a556
+	caliber = "a556"
+	max_ammo = 24
 
 /obj/item/ammo_box/magazine/F13/sst_stanag
 	name = "STANAG (5.56mm)"

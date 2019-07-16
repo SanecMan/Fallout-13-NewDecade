@@ -53,6 +53,7 @@
 				/obj/item/stack/sheet/plasteel = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 400
+	default = 1
 	category = CAT_WEAPON
 	XP = 75
 
@@ -101,6 +102,7 @@
 				/obj/item/stack/sheet/mineral/wood = 2)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 400
+	default = 1
 	category = CAT_WEAPON
 	XP = 40
 

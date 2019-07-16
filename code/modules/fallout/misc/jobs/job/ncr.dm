@@ -1,7 +1,7 @@
 //Fallout 13 New California Republic faction directory
 
 /datum/job/general
-	title = "general"
+	title = "NCR General"
 	desc = "The fate of civilization rests on your shoulders.<br>You were chosen to write history anew.<br>Make a two-headed bear proud."
 	flag = GENERAL
 	department_head = list("NCR Command HQ")
@@ -187,12 +187,12 @@
 	weapon = /obj/item/weapon/gun/ballistic/revolver/magnum
 	belt_contents = list(/obj/item/weapon/restraints/handcuffs = 1,
 		/obj/item/weapon/reagent_containers/f13stimpack = 1,
-		/obj/item/ammo_box/F13/m44/heap = 1,
+		/obj/item/ammo_box/F13/m44 = 2,
 		/obj/item/device/radio = 1)
 
 
 /datum/job/trooper
-	title = "Trooper"
+	title = "NCR Trooper"
 	desc = "I am a soldier and I'm marching on, I am a warrior and this is my song!"
 	flag = TROOPER
 	department_head = list("general", "ncr_sergeant")

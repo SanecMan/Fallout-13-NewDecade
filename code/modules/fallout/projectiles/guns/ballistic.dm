@@ -259,9 +259,39 @@
 	desc = "The Type 93 Chinese assault rifle was designed and manufactured by a Chinese industrial conglomerate for the People's Liberation Army during the Resource Wars, for the purpose of equipping the Chinese infiltrators and American fifth-columnists. To this end, it was chambered for the abundant 5.56mm round and utilizes a 20-round magazine. Thousands of these weapons were smuggled into the US for use by Chinese operatives and sympathizers on the East Coast, and many remain functional even two hundred years after the Great War. These rifles are also proven to be ready for manufacturing in post-War conditions."
 	icon_state = "chinese"
 	item_state = "chinese"
+	mag_type = /obj/item/ammo_box/magazine/F13/m556/chinese
 	fire_sound = 'sound/f13weapons/chinese.ogg'
 	burst_size = 2
 	price = 400
+	small_gun = 1
+
+/obj/item/weapon/gun/ballistic/automatic/assault_rifle/fnfal
+	name = "FN FAL"
+	icon_state = "fnfal"
+	desc = "The FN FAL is a battle rifle designed by Belgian small arms designers Dieudonne Saive and Ernest Vervier and manufactured by FN Herstal. During the Cold War the FAL was adopted by many countries of the North Atlantic Treaty Organization (NATO), with the notable exception of the United States. It is one of the most widely used rifles in history, having been used by more than 90 countries. This particular model sports wooden furniture and an aftermarket conversion that allows it to fire more readily available .308 Winchester ammunition, which is very similar in size to the 7.62?51mm NATO it was originally chambered in."
+	mag_type = /obj/item/ammo_box/magazine/F13/m556/fnfal
+	origin_tech = "combat=4;materials=2;prewar=4"
+	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
+	burst_size = 2
+	price = 1000
+	scopetype = /obj/screen/fullscreen/scope/medium
+	zoomable = FALSE
+	zoom_amt = 7
+	small_gun = 1
+
+/obj/item/weapon/gun/ballistic/automatic/assault_rifle/morita
+	name = "Morita MK2"
+	desc = "BEST weapon in war between humans and bugs."
+	icon_state = "morita"
+	item_state = "morita"
+	mag_type = /obj/item/ammo_box/magazine/F13/sst_stanag
+	origin_tech = "combat=4;materials=2;prewar=4"
+	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
+	burst_size = 2
+	price = 3000
+	scopetype = /obj/screen/fullscreen/scope/medium
+	zoomable = TRUE
+	zoom_amt = 7
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/automatic/bozar
@@ -305,33 +335,4 @@
 	recoil = 2
 	scopetype = /obj/screen/fullscreen/scope/short
 	price = 2500
-	small_gun = 1
-
-/obj/item/weapon/gun/ballistic/automatic/fnfal
-	name = "FN FAL"
-	icon_state = "fnfal"
-	item_state = "fnfal"
-	desc = "The FN FAL is a battle rifle designed by Belgian small arms designers Dieudonne Saive and Ernest Vervier and manufactured by FN Herstal. During the Cold War the FAL was adopted by many countries of the North Atlantic Treaty Organization (NATO), with the notable exception of the United States. It is one of the most widely used rifles in history, having been used by more than 90 countries. This particular model sports wooden furniture and an aftermarket conversion that allows it to fire more readily available .308 Winchester ammunition, which is very similar in size to the 7.62?51mm NATO it was originally chambered in."
-	mag_type = /obj/item/ammo_box/magazine/F13/m223
-	origin_tech = "combat=4;materials=2;prewar=4"
-	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
-	burst_size = 2
-	price = 1000
-	scopetype = /obj/screen/fullscreen/scope/medium
-	zoomable = TRUE
-	zoom_amt = 7
-	small_gun = 1
-
-/obj/item/weapon/gun/ballistic/automatic/morita
-	name = "Morita MK2"
-	desc = "BEST weapon in war between humans and bugs."
-	icon_state = "morita"
-	item_state = "morita"
-	origin_tech = "combat=4;materials=2;prewar=4"
-	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
-	burst_size = 1
-	price = 1000
-	scopetype = /obj/screen/fullscreen/scope/medium
-	zoomable = TRUE
-	zoom_amt = 7
 	small_gun = 1
