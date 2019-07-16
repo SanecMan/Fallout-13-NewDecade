@@ -119,7 +119,7 @@
 
 //Bullets library: .308
 /obj/item/projectile/bullet/F13/c308mmBullet
-	damage = 36
+	damage = 46
 
 /obj/item/projectile/bullet/F13/c308mmBullet/toxic
 	damage = 34
