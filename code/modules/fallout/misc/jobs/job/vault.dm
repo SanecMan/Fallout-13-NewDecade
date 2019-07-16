@@ -52,7 +52,7 @@
 	id = /obj/item/weapon/card/id/gold
 	glasses = /obj/item/clothing/glasses/sunglasses
 	r_pocket = /obj/item/device/pda/captain
-	uniform = /obj/item/clothing/under/f13/vault/v13
+	uniform = /obj/item/clothing/under/f13/vault/v113
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 
 /datum/job/dweller
@@ -144,7 +144,7 @@
 	uniform = /obj/item/clothing/under/f13/vault/v113
 	id = /obj/item/weapon/card/id
 	belt = /obj/item/device/pda/security
-	shoes = /obj/item/clothing/shoes/sneakers/brown
+	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/helmet/riot
 	suit = /obj/item/clothing/suit/armor/vest/alt
@@ -155,15 +155,6 @@
 
 ///science///
 
-/datum/outfit/job/vltsci
-	name = "Scientist VLT"
-	jobtype = /datum/job/scientist
-
-	belt = /obj/item/device/pda/toxins
-	uniform = /obj/item/clothing/under/f13/vault/v13
-	shoes = /obj/item/clothing/shoes/sneakers/brown
-	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
-
 /datum/job/vltsci
 	title = "Vault Sciencist"
 	flag = VAULT_SCIENCIST/*science*/
@@ -171,6 +162,52 @@
 	department_flag = FOB
 	faction = "vault"
 	status = "sciencist"
+	total_positions = 4
+	spawn_positions = 4
+	supervisors = "overseer"
+	selection_color = "#005A20"
+
+	allowed_packs = list("starter", "cigarettes")
+
+	required_items = list(
+	/obj/item/clothing/under/f13/vault/v113,
+	/obj/item/clothing/suit/toggle/labcoat/f13/followers
+	)
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
+	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom, access_tech_storage, access_genetics)
+	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom)
+	outfit = /datum/outfit/job/vltsci
+
+/datum/outfit/job/vltsci
+	name = "Scientist VLT"
+	belt = /obj/item/device/pda/toxins
+	uniform = /obj/item/clothing/under/f13/vault/v113
+	shoes = /obj/item/clothing/shoes/laceup
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
+
+/datum/job/vlteng
+	title = "Vault Engineer"
+	flag = VAULT_ENGINEER/*engineers*/
+	department_head = list("Overseer")
+	department_flag = FOB
+	faction = "vault"
+	status = "engineer"
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "overseer"
@@ -199,6 +236,15 @@
 	/obj/item/clothing/suit/f13/mantle_liz
 	)
 
-	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom, access_tech_storage, access_genetics)
-	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom)
-	outfit = /datum/outfit/job/vltsci
+	access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_tcomsat)
+	minimal_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_tcomsat)
+	outfit = /datum/outfit/job/vlteng
+
+/datum/outfit/job/vlteng
+	name = "Engineer VLT"
+	satchel = /obj/item/weapon/storage/backpack/satchel/eng
+	head = /obj/item/clothing/head/hardhat/dblue
+	r_pocket = /obj/item/device/pda/engineering
+	belt = /obj/item/weapon/storage/belt/utility/full
+	uniform = /obj/item/clothing/under/f13/vault/v113
+	shoes = /obj/item/clothing/shoes/workboots
