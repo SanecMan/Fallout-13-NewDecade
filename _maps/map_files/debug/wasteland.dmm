@@ -243,7 +243,7 @@
 "eI" = (/obj/structure/decoration/sign{desc = "The door to the right, leads to the Firing Range area simulation."; icon_state = "vault_guns"; name = "guns area sign"; pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
 "eJ" = (/obj/structure/decoration/sign{desc = "The door to the right, leads to the Race Track area simulation."; icon_state = "vault_track"; name = "track area sign"; pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
 "eK" = (/obj/structure/decoration/sign{pixel_y = 29},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
-"eL" = (/obj/effect/landmark{name = "JoinLate"},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
+"eL" = (/obj/effect/landmark/vr_spawn,/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
 "eM" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
 "eN" = (/turf/open/floor/f13{icon_state = "whitedir"},/area/f13/secret)
 "eO" = (/obj/structure/decoration/sign{pixel_y = -35},/turf/open/floor/f13{icon_state = "white"},/area/f13/secret)
@@ -566,7 +566,7 @@ aaabababababababababababababababababababababaadududududududududududAdudududududu
 aaaaaaaaaaaaaaaaaaaaezabezaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeAdAeAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaezadezaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaezaeezaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaezezezezezezezezezezeBezezezezezezezezezezezezezezezezezezezezezeBezezezezezezezezezezezezezezezezezezezezezeBezezezezezezezezezezezezezezezezezezezezezeBezezezezezezezezezezezezezezezezezezezezezaa
 aaeCeCeDeCeCeCeEeCeFeCeGeCeEeCeCeCeHeCeCeCeEeCeCeCeDeCeCeCeEeCeIeCeGeCeEeCeCeCeHeCeCeCeEeCeCeCeDeCeCeCeEeCeJeCeGeCeEeCeCeCeHeCeCeCeEeCeCeDeCeCeCeCeEeCeKeCeGeCeEeCeCeCeHeCeCeCeEeCeCeCeDeCeCeCeEeCeCeCaa
-aaeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeLeLeLeLeLeLeLeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCaa
+aaeCeLeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCeCaa
 aaeCeCeMeCeCeCeCeCeCeCeNeCeOeCeCeCeMeCeCeCeCeCeCeCeMeCeCeCeCeCeCeCeNeCePeCeCeCeMeCeCeCeCeCeCeCeMeCeCeCeCeCeCeCeNeCeQeCeCeCeMeCeCeCeCeCeCeCeMeCeCeCeCeCeCeCeNeCeReCeCeCeMeCeCeCeCeCeCeCeMeCeCeCeCeCeCeCaa
 aaezezezezezezezezezezeBezezezezezezezezezezezezezezezezezezezezezeBezezezezezezezezezezezezezezezezezezezezezeBezezezezezezezezezezezezezezezezezezezezezeBezezezezezezezezezezezezezezezezezezezezezaa
 aaaaaaaaaaaaaaaaaaaaezadezaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaezeSezaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaezeTezaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaezgPezaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

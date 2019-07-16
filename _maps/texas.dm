@@ -6,6 +6,7 @@
 
 		#include "map_files\TexasWasteland\texas_wasteland.dmm"
 		#include "map_files\TexasWasteland\z2.dmm"
+		#include "map_files\debug\wasteland.dmm"
 		///#include "map_files\TexasWasteland\navarro.dmm"
 		///#include "map_files\TexasWasteland\fartexas.dmm"
         ///#include "map_files\TexasWasteland\z3.dmm"
