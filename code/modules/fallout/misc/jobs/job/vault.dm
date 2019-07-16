@@ -199,6 +199,7 @@
 	belt = /obj/item/device/pda/toxins
 	uniform = /obj/item/clothing/under/f13/vault/v113
 	shoes = /obj/item/clothing/shoes/laceup
+	id = /obj/item/weapon/card/id
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 
 /datum/job/vlteng
@@ -245,6 +246,7 @@
 	satchel = /obj/item/weapon/storage/backpack/satchel/eng
 	head = /obj/item/clothing/head/hardhat/dblue
 	r_pocket = /obj/item/device/pda/engineering
+	id = /obj/item/weapon/card/id
 	belt = /obj/item/weapon/storage/belt/utility/full
 	uniform = /obj/item/clothing/under/f13/vault/v113
 	shoes = /obj/item/clothing/shoes/workboots
