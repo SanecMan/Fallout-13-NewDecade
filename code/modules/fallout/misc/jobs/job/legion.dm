@@ -318,6 +318,3 @@
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
 	/obj/item/weapon/storage/wallet=1,/obj/item/stack/medical/healingpowder=2)
-
-//belt_contents = list(/obj/item/stack/medical/healingpowder = 2,
-	 /obj/item/ammo_box/F13/m308 = 1)
