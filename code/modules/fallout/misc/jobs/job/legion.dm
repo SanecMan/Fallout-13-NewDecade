@@ -52,14 +52,13 @@
 
 /datum/outfit/job/leglegate
 	name = "Legate"
-	id = /obj/item/card/id/f13/legveteran
+	id = /obj/item/card/id/legveteran
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionlegate
 	gloves = /obj/item/clothing/gloves/f13/legionlegate
 	suit = /obj/item/clothing/suit/armor/f13/leglegate
-	belt = obj/item/weapon/storage/belt/mining/primitive
-	belt_contents = list(/obj/item/stack/medical/healingpowder = 2,
-		/obj/item/ammo_box/magazine/F13/m308 = 3)
+	belt = /obj/item/weapon/storage/belt/mining/primitive
+	belt_contents = list(/obj/item/stack/medical/healingpowder = 2, /obj/item/ammo_box/magazine/F13/m308 = 3)
 	head = /obj/item/clothing/head/helmet/f13/leglegate
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	weapon = /obj/item/weapon/gun/ballistic/automatic/rifle
@@ -115,14 +114,13 @@
 
 /datum/outfit/job/legcenturion
 	name = "Centurion"
-	id = /obj/item/card/id/f13/legcenturion
+	id = /obj/item/card/id/legcenturion
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legcenturion
-	belt = obj/item/weapon/storage/belt/mining/primitive
-	belt_contents = list(/obj/item/stack/medical/healingpowder = 2,
-		/obj/item/ammo_box/F13/m308 = 1)
+	belt = /obj/item/weapon/storage/belt/mining/primitive
+	belt_contents = list(/obj/item/stack/medical/healingpowder = 2, /obj/item/ammo_box/F13/m308 = 1)
 	head = /obj/item/clothing/head/helmet/f13/legcenturion
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
@@ -178,14 +176,13 @@
 
 /datum/outfit/job/legvex
 	name = "Vexillarius"
-	id = /obj/item/card/id/f13/legrecruit
+	id = /obj/item/card/id/legrecruit
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legvexil
-	belt = obj/item/weapon/storage/belt/mining/primitive
-	belt_contents = list(/obj/item/stack/medical/healingpowder = 2,
-		/obj/item/ammo_box/F13/m308 = 1)
+	belt = /obj/item/weapon/storage/belt/mining/primitive
+	belt_contents = list(/obj/item/stack/medical/healingpowder = 2, /obj/item/ammo_box/F13/m308 = 1)
 	head = /obj/item/clothing/head/helmet/f13/legvexil
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
@@ -241,14 +238,13 @@
 
 /datum/outfit/job/legdecan
 	name = "Decanus"
-	id = /obj/item/card/id/f13/legrecruit
+	id = /obj/item/card/id/legrecruit
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
-	belt = obj/item/weapon/storage/belt/mining/primitive
-	belt_contents = list(/obj/item/stack/medical/healingpowder = 2,
-		/obj/item/ammo_box/F13/m308 = 1)
+	belt = /obj/item/weapon/storage/belt/mining/primitive
+	belt_contents = list(/obj/item/stack/medical/healingpowder = 2, /obj/item/ammo_box/F13/m308 = 1)
 	head = /obj/item/clothing/head/helmet/f13/legdecan
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	mask = /obj/item/clothing/mask/bandana/f13/legdecan
@@ -303,21 +299,21 @@
 
 /datum/outfit/job/prime
 	name = "Prime"
-	id = /obj/item/card/id/f13/legprime
+	id = /obj/item/card/id/legprime
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/leather
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	head = /obj/item/clothing/head/helmet/f13/legrecruit
-	belt = obj/item/weapon/storage/belt/mining/primitive
-	belt_contents = list(/obj/item/stack/medical/healingpowder = 2,
-		/obj/item/ammo_box/F13/m308 = 1)
+	belt = /obj/item/weapon/storage/belt/mining/primitive
+	belt_contents = list(/obj/item/stack/medical/healingpowder = 2, /obj/item/ammo_box/F13/m308 = 1)
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	mask = /obj/item/clothing/mask/bandana/f13/legrecruit
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
+<<<<<<< HEAD
 	/obj/item/weapon/storage/wallet=1,/obj/item/stack/medical/healingpowder=2)
-
-//belt_contents = list(/obj/item/stack/medical/healingpowder = 2,
-	 /obj/item/ammo_box/F13/m308 = 1)
+=======
+	/obj/item/weapon/storage/wallet=1,/obj/item/stack/medical/healingpowder=2)
+>>>>>>> 7595b602d0601433fdc62f03a43c312295ca21ba
