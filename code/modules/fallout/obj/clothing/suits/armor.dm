@@ -528,28 +528,28 @@
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	armor = list(melee = 80, bullet = 70, laser = 40, energy = 30, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
+	armor = list(melee = 95, bullet = 70, laser = 40, energy = 30, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
 	desc = "A mass-produced pinnacle of pre-War engineering.<br>Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	armor = list(melee = 80, bullet = 80, laser = 40, energy = 40, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
+	armor = list(melee = 98, bullet = 80, laser = 40, energy = 40, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60
 	name = "T-60 power armor"
 	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b power armor as the pinnacle of powered armor technology in the U.S. military arsenal.<br>Incorporating design elements from the earlier T-45, the T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs."
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
-	armor = list(melee = 80, bullet = 80, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
+	armor = list(melee = 99, bullet = 80, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "advanced power armor mark I"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "mk1"
 	item_state = "mk1"
-	armor = list(melee = 70, bullet = 70, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 30)
+	armor = list(melee = 100, bullet = 70, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 30)
 	self_weight = 40
 
 /obj/item/clothing/suit/armor/f13/power_armor/tesla
@@ -558,7 +558,7 @@
 	icon_state = "mk1-tesla"
 	item_state = "mk1-tesla"
 	self_weight = 40
-	armor = list(melee = 50, bullet = 50, laser = 60, energy = 60, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
+	armor = list(melee = 50, bullet = 50, laser = 80, energy = 80, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
 
 /obj/item/clothing/suit/armor/f13/power_armor/superadvanced
 	name = "advanced power armor mark II"
@@ -566,7 +566,7 @@
 	icon_state = "mk2"
 	item_state = "mk2"
 	self_weight = 30
-	armor = list(melee = 80, bullet = 80, laser = 60, energy = 60, bomb = 80, bio = 100, rad = 100, fire = 100, acid = 50)
+	armor = list(melee = 100, bullet = 95, laser = 60, energy = 60, bomb = 80, bio = 100, rad = 100, fire = 100, acid = 50)
 
 	//armor = list(melee = 80, bullet = 80, laser = 50, energy = 50, bomb = 80, bio = 100, rad = 100, fire = 100, acid = 30)
 

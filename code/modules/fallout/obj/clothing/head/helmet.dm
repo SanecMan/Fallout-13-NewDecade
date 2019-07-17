@@ -601,7 +601,7 @@
 	can_toggle = 1
 	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
 	actions_types = list(/datum/action/item_action/toggle)
-	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 30)
+	armor = list(melee = 98, bullet = 60, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 30)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -644,7 +644,7 @@
 	strip_delay = 100
 	self_weight = 5
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	armor = list(melee = 80, bullet = 70, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
+	armor = list(melee = 95, bullet = 70, laser = 50, energy = 50, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 60)
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
@@ -680,7 +680,7 @@
 	strip_delay = 100
 	self_weight = 5
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	armor = list(melee = 80, bullet = 60, laser = 40, energy = 30, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
+	armor = list(melee = 100, bullet = 60, laser = 40, energy = 30, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
