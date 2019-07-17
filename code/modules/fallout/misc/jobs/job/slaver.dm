@@ -67,21 +67,21 @@
 
 //Basic Raider
 
-/datum/job/raider
-	title = "Raider"
+/datum/job/slaver
+	title = "Slaver"
 	desc = "A bloodthirsty savage.<br>You have broken every rule but the most important one - the Gang Leader is your supreme commander, the powerful Godfather of all bandits, the only one you trust with your life."
 	flag = RAIDER
 	department_head = list("gangleader")
 	department_flag = WASTELAND
-	faction = "raiders"
-	status = "raider"
+	faction = "slaver"
+	status = "slaver"
 	total_positions = -1
 	spawn_positions = -1 //does not matter for late join
 	supervisors = "the Gang Leader"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
-	outfit = /datum/outfit/job/raider
+	outfit = /datum/outfit/job/slaver
 
 	allowed_packs = list("starter", "cigarettes", "follower", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
@@ -110,7 +110,7 @@
 	/obj/item/clothing/under/f13/worn
 	)
 
-/datum/outfit/job/raider
+/datum/outfit/job/slaver
 	name = "Raider"
 	backpack = null
 	satchel = null
