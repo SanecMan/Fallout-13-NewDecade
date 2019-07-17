@@ -89,8 +89,8 @@
 		/datum/job/legate,
 		/datum/job/elder,
 		/datum/job/colonel,
-		/datum/job/overseer,
-		/datum/job/preacher
+		/datum/job/overseer
+		//datum/job/preacher
 		)
 	price = -1
 
