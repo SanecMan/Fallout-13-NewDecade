@@ -73,7 +73,7 @@
 	flag = RAIDER
 	department_head = list("gangleader")
 	department_flag = WASTELAND
-	faction = "slaver"
+	faction = "raider"
 	status = "slaver"
 	total_positions = -1
 	spawn_positions = -1 //does not matter for late join

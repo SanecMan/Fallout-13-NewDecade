@@ -1291,7 +1291,6 @@
 #include "code\modules\fallout\misc\jobs\faction\faction.dm"
 #include "code\modules\fallout\misc\jobs\job\brotherhood.dm"
 #include "code\modules\fallout\misc\jobs\job\city.dm"
-#include "code\modules\fallout\misc\jobs\job\coc.dm"
 #include "code\modules\fallout\misc\jobs\job\enclave.dm"
 #include "code\modules\fallout\misc\jobs\job\foa.dm"
 #include "code\modules\fallout\misc\jobs\job\fob.dm"

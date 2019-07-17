@@ -223,13 +223,13 @@ mob/proc/set_faction(var/faction)
 	karma = 10
 
 /datum/f13_faction/raider
-	name = "Raiders"
+	name = "Slavers"
 	color = "#804B00"
 	id = "raiders"
 	head_status = "gangleader"
 	preview_image = 'html/factions/raider.png'
-	full_name = "Raider Gang"
-	description = "<b>Alignment: Chaotic Evil</b><br>Raiders - Any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland, and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
+	full_name = "Slaver Gang"
+	description = "<b>Alignment: Chaotic Evil</b><br>Slavers - Any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland, and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
 	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/raiders
 	karma = -10
@@ -294,7 +294,7 @@ mob/proc/set_faction(var/faction)
 3. јборигены, мутанты, и прочие - биомусор оставленный нам, от прошлого. Ќе стоит тратить на него ваши силы, но не дайте им стать в силе равными вам!<br>\
 4. » последнее, ваша ѕј и плазмавинтовка - все еще на балансе анклава, утрата экипировки грозит вам пожизненным сроком службы, и еще повезет если солдатом, а не лаборантом.<br>"
 
-/datum/f13_faction/ahs
+/*datum/f13_faction/ahs
 	name = "Hubologists"
 	color = "#005A20"
 	id = "ahs"
@@ -303,7 +303,7 @@ mob/proc/set_faction(var/faction)
 	preview_image = 'html/factions/ahs.png'
 	head_status = "ahs8"
 	area = /area/f13/ahs
-	verbs = list(/mob/proc/begin_head_voting)
+	verbs = list(/mob/proc/begin_head_voting) */
 
 /datum/f13_faction/ncr
 	name = "NCR"
@@ -383,7 +383,7 @@ mob/proc/set_faction(var/faction)
 
 //	craft_recipes = list(/datum/table_recipe/den_encryption_key)
 
-/datum/f13_faction/coc
+/*/datum/f13_faction/coc
 	name = "The Children of the Cathedral"
 	color = "#204200"
 	id = "coc"
@@ -393,4 +393,4 @@ mob/proc/set_faction(var/faction)
 	head_status = "preacher"
 	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/ahs
-	karma = -10
+	karma = -10 */
