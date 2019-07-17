@@ -478,7 +478,7 @@
 /obj/item/clothing/suit/armor/f13/power_armor
 	put_on_delay = 100
 	strip_delay = 200
-	self_weight = 50
+	self_weight = 75
 	max_integrity = 10000
 	w_class = WEIGHT_CLASS_HUGE
 	flags = STOPSPRESSUREDMAGE
