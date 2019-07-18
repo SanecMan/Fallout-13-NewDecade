@@ -665,13 +665,13 @@
 	id = "fnfal"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 25000)
-	build_path = /obj/item/ammo_box/magazine/F13/m556/fnfal
+	build_path = /obj/item/ammo_box/magazine/F13/fnfal
 	category = list("hacked", "Security")
 
 /datum/design/chinese
-	name = "rifle magazine (5.56mm)"
+	name = "rifle magazine for chinese rifle (5.56mm)"
 	id = "chinese"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 20000)
-	build_path = /obj/item/ammo_box/magazine/F13/m556/chinese
+	build_path = /obj/item/ammo_box/magazine/F13/chinese
 	category = list("hacked", "Security")

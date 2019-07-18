@@ -32,5 +32,4 @@
 	/obj/item/weapon/reagent_containers/pill/patch/radaway,
 	/obj/item/kit/random,
 	/obj/item/crafting/weapon_repair_kit
-
 	)
