@@ -79,9 +79,11 @@
 	names = list("Interceptor")
 
 /obj/vehicle/fuel/motorcycle/buggy/tank
-	name = "CVR(T)"
+	names = list("Коробочка 2", "CVR-T", "U.N.I.T CVR", "Igniter", "Heat", "Est Probitie", "Pollywog")
 	icon = 'icons/fallout/vehicles/CVR.dmi'
+	icon_state = "CVR(T)-WFLV_207"
 	desc = "FUCKING TANK!"
+	layer = 5
 	fuel = 1000
 	max_fuel = 1000
 	self_weight = 2000

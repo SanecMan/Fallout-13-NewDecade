@@ -286,7 +286,10 @@
 	item_state = "morita"
 	mag_type = /obj/item/ammo_box/magazine/F13/sst_stanag
 	origin_tech = "combat=4;materials=2;prewar=4"
-	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
+	fire_sound = 'sound/f13weapons/gunshot/m16.ogg'
+	mag_load_sound = 'sound/f13weapons/gunporn/m16_magin.ogg'
+	mag_unload_sound = 'sound/f13weapons/gunporn/m16_magout.ogg'
+	chamber_sound = 'sound/f13weapons/gunporn/m16_chargeback.ogg'
 	burst_size = 2
 	price = 3000
 	scopetype = /obj/screen/fullscreen/scope/medium

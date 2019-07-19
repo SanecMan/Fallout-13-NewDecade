@@ -75,8 +75,8 @@
 	department_flag = WASTELAND
 	faction = "raider"
 	status = "slaver"
-	total_positions = -1
-	spawn_positions = -1 //does not matter for late join
+	total_positions = 10
+	spawn_positions = 4 //does not matter for late join
 	supervisors = "the Gang Leader"
 	selection_color = "#ece19d"
 	access = list()
