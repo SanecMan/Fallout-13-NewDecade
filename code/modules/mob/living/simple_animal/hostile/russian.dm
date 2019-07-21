@@ -23,8 +23,9 @@
 	unsuitable_atmos_damage = 15
 	faction = list("chinese")
 	status_flags = CANPUSH
-	del_on_death = 1
-
+	del_on_death = 0
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
+				/obj/item/weapon/gun/ballistic/automatic/assault_rifle/chinese)
 
 /mob/living/simple_animal/hostile/russian/ranged
 	icon_state = "russianranged"
@@ -32,14 +33,14 @@
 	icon_dead = "russianranged_d"
 	ranged = 1
 	retreat_distance = 5
-	minimum_distance = 5
-	projectilesound = 'sound/weapons/Gunshot.ogg'
+	minimum_distance = 3
+	projectilesound = 'sound/f13weapons/chinese.ogg'
 	casingtype = /obj/item/ammo_casing/n762
 
 
 /mob/living/simple_animal/hostile/russian/ranged/mosin
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged,
-				/obj/item/weapon/gun/ballistic/shotgun/boltaction)
+				/obj/item/weapon/gun/ballistic/automatic/assault_rifle/chinese)
 	casingtype = /obj/item/ammo_casing/a762
 
 /mob/living/simple_animal/hostile/russian/ranged/trooper
