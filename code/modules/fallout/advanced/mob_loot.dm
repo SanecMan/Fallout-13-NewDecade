@@ -49,26 +49,10 @@
 	)
 
 	var/list/unusual = list (
-		/obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum = 5,
+		/obj/item/trash/f13/rotten = 25,
 		/obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum/large = 5,
 		/obj/item/weapon/reagent_containers/food/snacks/f13/cram = 6,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/cram/large = 3,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/yumyum = 4,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/fancylads = 3,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/sugarbombs = 3,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/crisps = 3,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/steak = 3,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/specialapples = 3,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/dandyapples = 4,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/blamco = 3,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/blamco/large = 4,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/mechanic = 4,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/instamash = 3,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/porknbeans = 3,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/borscht = 5,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/dog = 7,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/mre = 2,
-		/obj/item/weapon/reagent_containers/food/snacks/f13/galette = 3
+		/obj/item/trash/f13/mre = 24
 	)
 
 	var/list/rare = list (
