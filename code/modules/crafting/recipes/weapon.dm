@@ -150,9 +150,14 @@
 	result = /obj/item/weapon/gun/energy/plasma/glock
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 	/obj/item/stack/sheet/metal = 2,
-	/obj/item/stack/sheet/glass = 1, /obj/item/crafting/diode = 1,
-	/obj/item/crafting/transistor = 3, /obj/item/crafting/capacitor = 5,
-	/obj/item/crafting/resistor = 1, /obj/item/crafting/board = 1, /obj/item/stack/cable_coil = 7,
+	/obj/item/crafting/weapon_parts = 2,
+	/obj/item/stack/sheet/glass = 1,
+	/obj/item/crafting/diode = 1,
+	/obj/item/crafting/transistor = 3,
+	/obj/item/crafting/capacitor = 5,
+	/obj/item/crafting/resistor = 1,
+	/obj/item/crafting/board = 1,
+	/obj/item/stack/cable_coil = 7,
 	/obj/item/weapon/stock_parts/cell = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 800
@@ -163,11 +168,16 @@
 	name = "Plasma pistol"
 	result = /obj/item/weapon/gun/energy/plasma/pistol
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
-	/obj/item/weaponcrafting/stock = 1, /obj/item/stack/sheet/metal = 3,
+	/obj/item/weaponcrafting/stock = 1,
+	/obj/item/stack/sheet/metal = 3,
+	/obj/item/crafting/weapon_parts = 2,
 	/obj/item/crafting/diode = 1,
-	/obj/item/crafting/transistor = 3, /obj/item/crafting/capacitor = 5,
-	/obj/item/crafting/resistor = 1, /obj/item/crafting/board = 1,
-	/obj/item/stack/cable_coil = 6, /obj/item/weapon/stock_parts/cell = 1)
+	/obj/item/crafting/transistor = 3,
+	/obj/item/crafting/capacitor = 5,
+	/obj/item/crafting/resistor = 1,
+	/obj/item/crafting/board = 1,
+	/obj/item/stack/cable_coil = 6,
+	/obj/item/weapon/stock_parts/cell = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 750
 	category = CAT_WEAPON
@@ -178,10 +188,15 @@
 	result = /obj/item/weapon/gun/energy/plasma/tri
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 	/obj/item/weaponcrafting/stock = 1,
-	/obj/item/stack/sheet/plasteel = 6, /obj/item/crafting/diode = 3,
-	/obj/item/crafting/transistor = 7, /obj/item/crafting/capacitor = 15,
-	/obj/item/crafting/resistor = 3, /obj/item/crafting/board = 1,
-	/obj/item/stack/cable_coil = 15, /obj/item/weapon/stock_parts/cell = 1)
+	/obj/item/crafting/weapon_parts = 3,
+	/obj/item/stack/sheet/plasteel = 6,
+	/obj/item/crafting/diode = 3,
+	/obj/item/crafting/transistor = 7,
+	/obj/item/crafting/capacitor = 15,
+	/obj/item/crafting/resistor = 3,
+	/obj/item/crafting/board = 1,
+	/obj/item/stack/cable_coil = 15,
+	/obj/item/weapon/stock_parts/cell = 1)
 	time = 900
 	category = CAT_WEAPON
 	XP = 400
@@ -191,10 +206,15 @@
 	result = /obj/item/weapon/gun/energy/plasma/turbo
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 			/obj/item/weaponcrafting/stock = 1,
-			/obj/item/stack/sheet/plasteel = 12, /obj/item/crafting/diode = 6,
-			/obj/item/crafting/transistor = 14, /obj/item/crafting/capacitor = 20,
-			/obj/item/crafting/resistor = 5, /obj/item/crafting/board = 2,
-			/obj/item/stack/cable_coil = 30, /obj/item/weapon/stock_parts/cell = 1)
+			/obj/item/crafting/weapon_parts = 4,
+			/obj/item/stack/sheet/plasteel = 12,
+			/obj/item/crafting/diode = 6,
+			/obj/item/crafting/transistor = 14,
+			/obj/item/crafting/capacitor = 20,
+			/obj/item/crafting/resistor = 5,
+			/obj/item/crafting/board = 2,
+			/obj/item/stack/cable_coil = 30,
+			/obj/item/weapon/stock_parts/cell = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 1200
 	category = CAT_WEAPON
@@ -206,10 +226,15 @@
 	name = "Laser Pistol"
 	result = /obj/item/weapon/gun/energy/laser/pistol
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
-			/obj/item/stack/sheet/metal = 3, /obj/item/crafting/diode = 1,
-			/obj/item/crafting/transistor = 1, /obj/item/crafting/capacitor = 2,
-			/obj/item/crafting/resistor = 1, /obj/item/crafting/board = 1,
-			/obj/item/crafting/bulb = 1, /obj/item/stack/cable_coil = 2,
+			/obj/item/stack/sheet/metal = 3,
+			/obj/item/crafting/weapon_parts = 1,
+			/obj/item/crafting/diode = 1,
+			/obj/item/crafting/transistor = 1,
+			/obj/item/crafting/capacitor = 2,
+			/obj/item/crafting/resistor = 1,
+			/obj/item/crafting/board = 1,
+			/obj/item/crafting/bulb = 1,
+			/obj/item/stack/cable_coil = 2,
 			/obj/item/weapon/stock_parts/cell = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 800
@@ -220,11 +245,17 @@
 	name = "Laser Rifle AER9"
 	result = /obj/item/weapon/gun/energy/laser/rifle
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
-			/obj/item/weaponcrafting/stock = 1, /obj/item/stack/sheet/metal = 3,
-			/obj/item/stack/sheet/plasteel = 3, /obj/item/crafting/diode = 1,
-			/obj/item/crafting/transistor = 2, /obj/item/crafting/capacitor = 3,
-			/obj/item/crafting/resistor = 2, /obj/item/crafting/board = 1,
-			/obj/item/crafting/bulb = 1, /obj/item/stack/cable_coil = 6,
+			/obj/item/weaponcrafting/stock = 1,
+			/obj/item/crafting/weapon_parts = 2,
+			/obj/item/stack/sheet/metal = 3,
+			/obj/item/stack/sheet/plasteel = 3,
+			/obj/item/crafting/diode = 1,
+			/obj/item/crafting/transistor = 2,
+			/obj/item/crafting/capacitor = 3,
+			/obj/item/crafting/resistor = 2,
+			/obj/item/crafting/board = 1,
+			/obj/item/crafting/bulb = 1,
+			/obj/item/stack/cable_coil = 6,
 			/obj/item/weapon/stock_parts/cell = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 800
@@ -235,11 +266,17 @@
 	name = "Laser Rifle AER13"
 	result = /obj/item/weapon/gun/energy/laser/rifle/aer13
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
-			/obj/item/weaponcrafting/stock = 1, /obj/item/stack/sheet/metal = 1,
-			/obj/item/stack/sheet/plasteel = 5, /obj/item/crafting/diode = 3,
-			/obj/item/crafting/transistor = 5, /obj/item/crafting/capacitor = 4,
-			/obj/item/crafting/resistor = 4, /obj/item/crafting/board = 1,
-			/obj/item/crafting/bulb = 1, /obj/item/stack/cable_coil = 13,
+			/obj/item/weaponcrafting/stock = 1,
+			/obj/item/crafting/weapon_parts = 2,
+			/obj/item/stack/sheet/metal = 1,
+			/obj/item/stack/sheet/plasteel = 5,
+			/obj/item/crafting/diode = 3,
+			/obj/item/crafting/transistor = 5,
+			/obj/item/crafting/capacitor = 4,
+			/obj/item/crafting/resistor = 4,
+			/obj/item/crafting/board = 1,
+			/obj/item/crafting/bulb = 1,
+			/obj/item/stack/cable_coil = 13,
 			/obj/item/weapon/stock_parts/cell = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 800
@@ -250,11 +287,17 @@
 	name = "Tribeam"
 	result = /obj/item/weapon/gun/energy/laser/rifle/tri
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
-			/obj/item/weaponcrafting/stock = 1, /obj/item/stack/sheet/metal = 1,
-			/obj/item/stack/sheet/plasteel = 5, /obj/item/crafting/diode = 5,
-			/obj/item/crafting/transistor = 5, /obj/item/crafting/capacitor = 12,
-			/obj/item/crafting/resistor = 6, /obj/item/crafting/board = 3,
-			/obj/item/crafting/bulb = 3, /obj/item/stack/cable_coil = 20,
+			/obj/item/weaponcrafting/stock = 1,
+			/obj/item/crafting/weapon_parts = 3,
+			/obj/item/stack/sheet/metal = 1,
+			/obj/item/stack/sheet/plasteel = 5,
+			/obj/item/crafting/diode = 5,
+			/obj/item/crafting/transistor = 5,
+			/obj/item/crafting/capacitor = 12,
+			/obj/item/crafting/resistor = 6,
+			/obj/item/crafting/board = 3,
+			/obj/item/crafting/bulb = 3,
+			/obj/item/stack/cable_coil = 20,
 			/obj/item/weapon/stock_parts/cell = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 800
@@ -265,11 +308,17 @@
 	name = "RCW"
 	result = /obj/item/weapon/gun/energy/laser/rcw
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
-			/obj/item/weaponcrafting/stock = 1, /obj/item/stack/sheet/metal = 3,
-			/obj/item/stack/sheet/plasteel = 3, /obj/item/crafting/diode = 5,
-			/obj/item/crafting/transistor = 5, /obj/item/crafting/capacitor = 5,
-			/obj/item/crafting/resistor = 12, /obj/item/crafting/board = 1,
-			/obj/item/crafting/bulb = 1, /obj/item/stack/cable_coil = 15,
+			/obj/item/weaponcrafting/stock = 1,
+			/obj/item/crafting/weapon_parts = 3,
+			/obj/item/stack/sheet/metal = 3,
+			/obj/item/stack/sheet/plasteel = 3,
+			/obj/item/crafting/diode = 5,
+			/obj/item/crafting/transistor = 5,
+			/obj/item/crafting/capacitor = 5,
+			/obj/item/crafting/resistor = 12,
+			/obj/item/crafting/board = 1,
+			/obj/item/crafting/bulb = 1,
+			/obj/item/stack/cable_coil = 15,
 			/obj/item/weapon/stock_parts/cell = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 800

@@ -240,3 +240,14 @@
 	desc = "It can be used to repair weapons."
 	icon_state = "weapon_repair_set"
 	price = 1000
+
+//пора сделать жизнь оружейников сложнее//
+
+/obj/item/crafting/weapon_parts
+	name = "Weapon Parts"
+	desc = "You need this if you want craft weapon."
+	icon_state = "weapon_parts_1"
+
+/obj/item/crafting/weapon_parts/initialize()
+	..()
+	icon_state = "weapon_parts_[rand(1,2,3)]"

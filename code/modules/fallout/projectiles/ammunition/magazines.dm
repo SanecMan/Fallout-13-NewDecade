@@ -154,7 +154,7 @@
 /obj/item/ammo_box/magazine/F13/fnfal //ﬂ  Œ—“€À‹Õ€… œ»ƒŒ–¿— €€€//
 	name = "rifle magazine (7.62mm)"
 	icon_state = "falmag"
-	ammo_type = /obj/item/ammo_casing/F13/a556
+	ammo_type = /obj/item/ammo_casing/F13/a556/heap
 	caliber = "a556"
 	max_ammo = 20
 
