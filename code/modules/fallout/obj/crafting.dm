@@ -250,4 +250,4 @@
 
 /obj/item/crafting/weapon_parts/initialize()
 	..()
-	icon_state = "weapon_parts_[rand(1,2,3)]"
+	icon_state = "weapon_parts_[rand(1,3)]"
