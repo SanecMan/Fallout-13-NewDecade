@@ -38,6 +38,7 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 3,
+				/obj/item/crafting/weapon_parts = 5,
 				/obj/item/stack/sheet/plasteel = 5)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 1000
@@ -50,6 +51,7 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 2,
+				/obj/item/crafting/weapon_parts = 1,
 				/obj/item/stack/sheet/plasteel = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 500
@@ -62,6 +64,7 @@
 	result = /obj/item/weapon/gun/ballistic/automatic/rifle
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
+				/obj/item/crafting/weapon_parts = 2,
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/mineral/wood = 3)
 	tools = list(/obj/item/weapon/screwdriver)
@@ -75,6 +78,7 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 2,
+				/obj/item/crafting/weapon_parts = 1,
 				/obj/item/stack/sheet/plasteel = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 500
@@ -87,6 +91,7 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 3,
+				/obj/item/crafting/weapon_parts = 1,
 				/obj/item/stack/sheet/mineral/wood = 3)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 500
@@ -110,6 +115,7 @@
 	name = "Assault Rifle 5.56mm"
 	result = /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
+				/obj/item/crafting/weapon_parts = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/plasteel = 2)
@@ -122,6 +128,7 @@
 	name = "trail carbine"
 	result = /obj/item/weapon/gun/ballistic/shotgun/trail
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
+				/obj/item/crafting/weapon_parts = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 3)
 	tools = list(/obj/item/weapon/screwdriver)
@@ -135,10 +142,16 @@
 	name = "plasma rifle"
 	result = /obj/item/weapon/gun/energy/plasma
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
-			/obj/item/weaponcrafting/stock = 1, /obj/item/stack/sheet/metal = 3,
-			/obj/item/stack/sheet/plasteel = 3, /obj/item/crafting/diode = 1,
-			/obj/item/crafting/transistor = 5, /obj/item/crafting/capacitor = 9,
-			/obj/item/crafting/resistor = 1, /obj/item/crafting/board = 1, /obj/item/stack/cable_coil = 9,
+			/obj/item/weaponcrafting/stock = 1,
+			/obj/item/crafting/weapon_parts = 2,
+			/obj/item/stack/sheet/metal = 3,
+			/obj/item/stack/sheet/plasteel = 3,
+			/obj/item/crafting/diode = 1,
+			/obj/item/crafting/transistor = 5,
+			/obj/item/crafting/capacitor = 9,
+			/obj/item/crafting/resistor = 1,
+			/obj/item/crafting/board = 1,
+			/obj/item/stack/cable_coil = 9,
 			/obj/item/weapon/stock_parts/cell = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 850
