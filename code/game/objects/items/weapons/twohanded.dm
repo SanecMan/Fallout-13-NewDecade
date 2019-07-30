@@ -734,3 +734,18 @@
 				owner.visible_message("<span class='danger'>[owner] parries [attack_text] with [src]!</span>")
 				return 1
 	return 0
+
+/obj/item/weapon/twohanded/fireaxe/eastblade
+	name = "blade of the East"
+	desc = "A great Blade of the East. With that weapon you can dismembering NCR rangers for whole battle. Ave Caesar!"
+	icon_state = "eastblade0"
+	force_unwielded = 60
+	force_wielded = 80
+	block_chance = 50
+	throwforce = 40
+	armour_penetration = 90
+	hitsound = "eastbladeslice"
+	self_weight = 20
+
+/obj/item/weapon/twohanded/fireaxe/eastblade/update_icon()
+	icon_state = "eastblade[wielded]"
