@@ -30,6 +30,17 @@
 	default = 1
 	XP = 40
 
+//WEAPON PARTS
+
+/datum/crafting_recipe/weaponparts
+	name = "Weapon Parts"
+	result = /obj/item/crafting/weapon_parts
+	reqs = list(/obj/item/weapon/gun = 1)
+	time = 100
+	category = CAT_WEAPON
+	default = 1
+	XP = 20
+
 //BALLISTIC
 
 /datum/crafting_recipe/bozar
