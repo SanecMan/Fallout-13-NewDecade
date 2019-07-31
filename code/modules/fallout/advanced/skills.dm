@@ -15,19 +15,19 @@
 
 /datum/skills
 	var
-		small_guns = 3
-		big_guns = 3
-		barter = 3
-		energy_weapons = 3
-		explosives = 3
-		lockpick = 3
-		medicine = 3
-		melee_weapons = 3
-		repair = 3
-		science = 3
-		sneak = 3
-		speech = 3
-		unarmed = 3
+		small_guns = 1
+		big_guns = 1
+		barter = 1
+		energy_weapons = 1
+		explosives = 1
+		lockpick = 1
+		medicine = 1
+		melee_weapons = 1
+		repair = 1
+		science = 1
+		sneak = 1
+		speech = 1
+		unarmed = 1
 	//(1-10)
 	var/datum/browser/popup
 
@@ -210,7 +210,7 @@
 			//html += "<img src='icons/special/[type].png' style='width: 32px; height: 32px;'> <br>"
 			html += getPointDescription(type)
 			var/current = getPoint(type, TRUE)
-			var/left = max(0, SKILLS_POINTS - getSpentPoints())
+			var/left = max(26, SKILLS_POINTS - getSpentPoints())
 
 			html += "<br>Сейчас/Current: [current] (осталось/left [left])<br>"
 
