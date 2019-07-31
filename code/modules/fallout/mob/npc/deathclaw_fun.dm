@@ -126,8 +126,6 @@
 /mob/living/simple_animal/hostile/deathclaw/funclaw/proc/tearSlot(mob/living/M, slot)
 	var/obj/item/W = M.get_item_by_slot(slot)
 	if(W)
-	//	M.dropItemToGround(W)
-//		M.usr.drop_item_v(W)
 		M.drop_item_v(W)
 		playsound(loc, "sound/items/poster_ripped.ogg", 70, 1, -1)
 		visible_message("<span class='danger'>\The [src]</b> tears off \the [M]'s clothes!</span>", \
