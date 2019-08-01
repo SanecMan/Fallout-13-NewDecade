@@ -15,12 +15,9 @@
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
 #include "_maps\oregon.dm"
-<<<<<<< HEAD
-=======
 #include "_maps\map_files\TexasWasteland\texas_wasteland.dmm"
 #include "_maps\map_files\TexasWasteland\z2.dmm"
 #include "_maps\RandomZLevels\centcomAway.dmm"
->>>>>>> 0ec3206d971bbcc954114adac22f66e8aa4f5b8e
 #include "code\_compile_options.dm"
 #include "code\world.dm"
 #include "code\__DATASTRUCTURES\heap.dm"
@@ -1413,6 +1410,7 @@
 #include "code\modules\fallout\obj\structures\fridge.dm"
 #include "code\modules\fallout\obj\structures\kebabtown.dm"
 #include "code\modules\fallout\obj\structures\obstacle.dm"
+#include "code\modules\fallout\obj\structures\pole.dm"
 #include "code\modules\fallout\obj\structures\radiotower.dm"
 #include "code\modules\fallout\obj\structures\randomgarbage.dm"
 #include "code\modules\fallout\obj\structures\simple_door.dm"
