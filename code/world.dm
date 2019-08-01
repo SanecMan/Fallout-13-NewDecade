@@ -326,7 +326,7 @@ var/inerror = 0
 	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
-	s += "<img src='http://i.imgur.com/UrVghOE.gif'><br>"
+	s += "<img src='https://i.imgur.com/lkW0ozf.png'><br>"
 
 	var/list/features = list()
 
