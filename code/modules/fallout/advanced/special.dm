@@ -21,13 +21,13 @@
 	specialTarget.ui("list")
 
 /datum/special
-	var/strength = 1
-	var/perception = 1
-	var/endurance = 1
-	var/charisma = 1
-	var/intelligence = 1
-	var/agility = 1
-	var/luck = 1
+	var/strength = 4
+	var/perception = 4
+	var/endurance = 4
+	var/charisma = 4
+	var/intelligence = 4
+	var/agility = 4
+	var/luck = 4
 	var/datum/browser/popup
 
 	var/mob/living/carbon/human/owner
@@ -172,7 +172,7 @@
 			//html += "<img src='icons/special/[type].png' style='width: 32px; height: 32px;'> <br>"
 			html += getPointDescription(type)
 			var/current = getPoint(type, TRUE)
-			var/left = max(21, SPECIAL_POINTS - getSpentPoints())
+			var/left = max(0, SPECIAL_POINTS - getSpentPoints())
 
 			html += "<br>Сейчас/Current: [current] (осталось/left [left])<br>"
 
