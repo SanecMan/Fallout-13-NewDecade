@@ -30,6 +30,17 @@
 	default = 1
 	XP = 40
 
+//WEAPON PARTS
+
+/datum/crafting_recipe/weaponparts
+	name = "Weapon Parts"
+	result = /obj/item/crafting/weapon_parts
+	reqs = list(/obj/item/weapon/gun = 1)
+	time = 100
+	category = CAT_WEAPON
+	default = 1
+	XP = 20
+
 //BALLISTIC
 
 /datum/crafting_recipe/bozar
@@ -40,7 +51,7 @@
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/crafting/weapon_parts = 5,
 				/obj/item/stack/sheet/plasteel = 5)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 1000
 	category = CAT_WEAPON
 	XP = 200
@@ -53,7 +64,7 @@
 				/obj/item/stack/sheet/metal = 2,
 				/obj/item/crafting/weapon_parts = 1,
 				/obj/item/stack/sheet/plasteel = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	default = 1
 	category = CAT_WEAPON
@@ -67,7 +78,7 @@
 				/obj/item/crafting/weapon_parts = 2,
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/mineral/wood = 3)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	category = CAT_WEAPON
 	XP = 120
@@ -80,7 +91,7 @@
 				/obj/item/stack/sheet/metal = 2,
 				/obj/item/crafting/weapon_parts = 1,
 				/obj/item/stack/sheet/plasteel = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	category = CAT_WEAPON
 	XP = 100
@@ -93,7 +104,7 @@
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/crafting/weapon_parts = 1,
 				/obj/item/stack/sheet/mineral/wood = 3)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	category = CAT_WEAPON
 	XP = 110
@@ -119,7 +130,7 @@
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/plasteel = 2)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	category = CAT_WEAPON
 	XP = 140
@@ -131,7 +142,7 @@
 				/obj/item/crafting/weapon_parts = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 3)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	category = CAT_WEAPON
 	XP = 120
@@ -153,7 +164,7 @@
 			/obj/item/crafting/board = 1,
 			/obj/item/stack/cable_coil = 9,
 			/obj/item/weapon/stock_parts/cell = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 850
 	category = CAT_WEAPON
 	XP = 250
@@ -172,7 +183,7 @@
 	/obj/item/crafting/board = 1,
 	/obj/item/stack/cable_coil = 7,
 	/obj/item/weapon/stock_parts/cell = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
 	XP = 175
@@ -191,7 +202,7 @@
 	/obj/item/crafting/board = 1,
 	/obj/item/stack/cable_coil = 6,
 	/obj/item/weapon/stock_parts/cell = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 750
 	category = CAT_WEAPON
 	XP = 140
@@ -209,7 +220,7 @@
 	/obj/item/crafting/resistor = 3,
 	/obj/item/crafting/board = 1,
 	/obj/item/stack/cable_coil = 15,
-	/obj/item/weapon/stock_parts/cell = 1)
+	/obj/item/weapon/stock_parts/cell = 1, /obj/item/bench/laser)
 	time = 900
 	category = CAT_WEAPON
 	XP = 400
@@ -228,7 +239,7 @@
 			/obj/item/crafting/board = 2,
 			/obj/item/stack/cable_coil = 30,
 			/obj/item/weapon/stock_parts/cell = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 1200
 	category = CAT_WEAPON
 	XP = 500
@@ -249,7 +260,7 @@
 			/obj/item/crafting/bulb = 1,
 			/obj/item/stack/cable_coil = 2,
 			/obj/item/weapon/stock_parts/cell = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
 	XP = 150
@@ -270,7 +281,7 @@
 			/obj/item/crafting/bulb = 1,
 			/obj/item/stack/cable_coil = 6,
 			/obj/item/weapon/stock_parts/cell = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
 	XP = 200
@@ -291,7 +302,7 @@
 			/obj/item/crafting/bulb = 1,
 			/obj/item/stack/cable_coil = 13,
 			/obj/item/weapon/stock_parts/cell = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
 	XP = 250
@@ -312,7 +323,7 @@
 			/obj/item/crafting/bulb = 3,
 			/obj/item/stack/cable_coil = 20,
 			/obj/item/weapon/stock_parts/cell = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
 	XP = 300
@@ -333,7 +344,7 @@
 			/obj/item/crafting/bulb = 1,
 			/obj/item/stack/cable_coil = 15,
 			/obj/item/weapon/stock_parts/cell = 1)
-	tools = list(/obj/item/weapon/screwdriver)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
 	XP = 400
