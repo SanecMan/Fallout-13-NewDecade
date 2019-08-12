@@ -337,3 +337,32 @@
 	time = 800
 	category = CAT_WEAPON
 	XP = 400
+
+//WEAPON PARTS
+
+/datum/crafting_recipe/weaponparts/ballistic
+	name = "Ballistic Weapon Parts"
+	reqs = list(/obj/item/weapon/gun/ballistic/automatic = 1)
+	time = 50
+	category = CAT_WEAPON
+	default = 1
+	XP = 20
+	result = /obj/item/crafting/weapon_parts/ballistic
+
+/datum/crafting_recipe/weaponparts/energy
+	name = "Energy Weapon Parts"
+	reqs = list(/obj/item/weapon/gun/energy/laser = 1)
+	time = 100
+	category = CAT_WEAPON
+	default = 1
+	XP = 20
+	result = /obj/item/crafting/weapon_parts/energy
+
+/datum/crafting_recipe/weaponparts/plasma
+	name = "Plasma Weapon Parts"
+	reqs = list(/obj/item/weapon/gun/energy/plasma = 1)
+	time = 200
+	category = CAT_WEAPON
+	default = 1
+	XP = 20
+	result = /obj/item/crafting/weapon_parts/plasma

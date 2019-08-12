@@ -672,7 +672,7 @@
 	id = "fnfal"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 35000, MAT_GLASS = 5000)
-	build_path = /obj/item/crafting/weapon_parts
+	build_path = /obj/item/crafting/weapon_parts/ballistic
 	category = list("hacked", "Security")
 
 /datum/design/chinese
