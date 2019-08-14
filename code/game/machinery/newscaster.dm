@@ -268,7 +268,6 @@ var/list/obj/machinery/newscaster/allCasters = list()
 		switch(screen)
 			if(0)
 				dat += "Welcome to Newscasting Unit #[unit_no].<BR> Interface & News networks Operational."
-				dat += "<BR><FONT SIZE=1>Property of Nanotrasen Inc</FONT>"
 				if(news_network.wanted_issue.active)
 					dat+= "<HR><A href='?src=\ref[src];view_wanted=1'>Read Wanted Issue</A>"
 				dat+= "<HR><BR><A href='?src=\ref[src];create_channel=1'>Create Feed Channel</A>"
