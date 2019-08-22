@@ -68,7 +68,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	update_icon()
 
 /obj/item/device/pda/proc/update_label()
-	name = "PDA-[owner] ([ownjob])" //Name generalisation
+	name = "PipBoy-[owner] ([ownjob])" //Name generalisation
 
 /obj/item/device/pda/GetAccess()
 	if(id)
@@ -114,7 +114,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		hidden_uplink.interact(user)
 		return
 
-	var/dat = "<html><head><title>Personal Data Assistant</title></head><body bgcolor=\"#808000\"><style>a, a:link, a:visited, a:active, a:hover { color: #000000; }img {border-style:none;}</style>"
+	var/dat = "<html><head><title>Personal Data Assistant</title></head><body bgcolor=\"#808000\"><style>a, a:link, a:visited, a:active, a:hover { color: #000000; }img {border-style:none;} background-image: url('pipboy.png');</style>"
 
 	dat += "<a href='byond://?src=\ref[src];choice=Refresh'><img src=pda_refresh.png> Refresh</a>"
 
