@@ -151,7 +151,7 @@
 	max_ammo = 20
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/F13/fnfal //ß ÊÎÑÒÛËÜÍÛÉ ÏÈÄÎĞÀÑ ÛÛÛ//
+/obj/item/ammo_box/magazine/F13/fnfal //ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½//
 	name = "rifle magazine (7.62mm)"
 	icon_state = "falmag"
 	ammo_type = /obj/item/ammo_casing/F13/a556/heap
@@ -271,8 +271,10 @@
 /obj/item/ammo_box/magazine/internal/cylinder/m44
 	name = "magnum revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/F13/m44
+	icon_state = "357OLD"
 	caliber = "44mm"
 	max_ammo = 6
+	multiple_sprites = 1
 
 /obj/item/ammo_box/magazine/internal/shot/pipe
 	name = "pipe gun magazine"
