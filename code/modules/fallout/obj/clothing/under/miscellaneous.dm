@@ -234,6 +234,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/deadmoney
+	icon = 'icons/obj/clothing/uniforms.dmi'
 	name = "Utility jumpsuit"
 	desc = "A working class jumpsuit that appears rather plain in every aspect, apart from the unsettling red X painted across it's back with an unknown substance."
 	icon_state = "deadmoney"
@@ -249,7 +250,7 @@
 	item_state = "casinoarmor"
 	item_color = "casinoarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 20, bullet = 40, laser = 25,energy = 25, bomb = 15, bio = 100, rad = 100, fire = 30, acid = 15)
+	armor = list(melee = 20, bullet = 40, laser = 25,energy = 25, bomb = 15, bio = 100, rad = 0, fire = 30, acid = 15)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/assassinarmor
@@ -260,7 +261,7 @@
 	item_state = "assassinarmor"
 	item_color = "assassinarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 20, bullet = 30, laser = 60,energy = 50, bomb = 35, bio = 100, rad = 100, fire = 30, acid = 15)
+	armor = list(melee = 20, bullet = 30, laser = 60,energy = 50, bomb = 35, bio = 100, rad = 50, fire = 30, acid = 15)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/patriotsuit

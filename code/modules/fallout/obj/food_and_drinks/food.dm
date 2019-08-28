@@ -65,6 +65,7 @@
 	name = "ERROR"
 	desc = "Badmins spawn shit!"
 	icon = 'icons/fallout/objects/food&drinks/food.dmi'
+	price = 80
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum
 	name = "Bubblegum"

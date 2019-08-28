@@ -82,7 +82,7 @@
 
 /obj/item/weapon/folder/documents
 	name = "folder- 'TOP SECRET'"
-	desc = "A folder stamped \"Top Secret\""
+	desc = "A folder stamped \"Top Secret - Property of Nanotrasen Corporation. Unauthorized distribution is punishable by death.\""
 
 /obj/item/weapon/folder/documents/New()
 	..()

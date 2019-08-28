@@ -239,7 +239,7 @@
 	name = "Weapon repair kit"
 	desc = "It can be used to repair weapons."
 	icon_state = "weapon_repair_set"
-	price = 1000
+	price = 500
 
 
 //пора сделать жизнь оружейников сложнее//

@@ -71,6 +71,7 @@
 	var/range_heavy = 1
 	var/range_light = 2
 	var/range_flash = 3
+	price = 350
 
 /obj/item/weapon/grenade/mine/explosive/mineEffect(mob/victim)
 	explosion(loc, range_devastation, range_heavy, range_light, range_flash)
