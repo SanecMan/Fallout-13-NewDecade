@@ -42,6 +42,11 @@
 		M.adjust_fire_stacks(1)
 		M.IgniteMob()
 
+/obj/item/projectile/bullet/F13/spear
+	damage = 40
+	icon_state = "spear"
+	icon = 'icons/fallout/objects/guns/projectiles.dmi'
+
 //Bullets library: 10mm
 /obj/item/projectile/bullet/F13/c10mmBullet
 	damage = 16

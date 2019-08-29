@@ -162,7 +162,7 @@
 	icon_state = "cosmicknife"
 	item_state = "cosmicknife"
 	desc = "Made from a ''space age'' Saturnite alloy in the Big Mountain Research and Development Center, cosmic knives were advertised to be super-sharp, all-purpose kitchen knives that would not chip or dull. They proved to be too sharp for their own good, with a majority of them winding up on backorder for casinos in Texas years later."
-	force = 50
+	force = 40
 	throwforce = 35
 	embed_chance = 100
 	armour_penetration = 100
@@ -175,7 +175,7 @@
 	icon_state = "heatcosmicknife"
 	item_state = "heatcosmicknife"
 	desc = "Made from a ''space age'' Saturnite alloy in the Big Mountain Research and Development Center, cosmic knives were advertised to be super-sharp, all-purpose kitchen knives that would not chip or dull. They proved to be too sharp for their own good, with a majority of them winding up on backorder for casinos in Texas years later. This one heat"
-	force = 75
+	force = 60
 	throwforce = 55
 	embed_chance = 100
 	armour_penetration = 150

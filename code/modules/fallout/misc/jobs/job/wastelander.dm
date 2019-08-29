@@ -1,5 +1,5 @@
 //Fallout 13 Neutral faction aka Wastelanders roles
-
+/*
 /datum/job/settler
 	title = "Settler"
 	flag = SETTLER
@@ -150,7 +150,7 @@
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1, \
 		/obj/item/device/radio = 1, \
 		/obj/item/device/flashlight/torch/flare/green = 1)
-
+*/
 /*/Tribeman
 
 /datum/job/arroyov
@@ -226,7 +226,7 @@
 
 ///Gun runners///
 
-
+/*
 /datum/job/gunrunner
 	title = "Gun Runner"
 	desc = "Make weapons. Sell weapons. Trading save the Wasteland!"
@@ -286,3 +286,55 @@
 	belt = null
 	weapon = null
 	glasses = /obj/item/clothing/glasses/f13/biker
+*/
+//Sierra Madre
+/datum/job/sierramadre
+	title = "Sierra Madre Explorer"
+	desc = "Rob a casino or die trying"
+	flag = GUNRUNNER
+	department_flag = MEDSCI
+	faction = "none"
+	status = "none"
+	total_positions = 50
+	spawn_positions = 50
+	supervisors = "nobody"
+	selection_color = "#ece19d"
+	access = list()
+	minimal_access = list()
+	outfit = /datum/outfit/job/sierramadre
+
+	allowed_packs = list("cigarettes")
+
+	required_items = list(
+	/obj/item/clothing/shoes/f13/tan,
+	/obj/item/clothing/gloves/f13/leather,
+	/obj/item/clothing/glasses/eyepatch,
+	/obj/item/clothing/glasses/sunglasses
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
+/datum/outfit/job/sierramadre
+	name = "Sierra Madre Explorer"
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/deadmoney
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	suit = null
+	head = null
+	belt = null
+	weapon = null
+	neck = /obj/item/device/slave_collar
+	glasses = null

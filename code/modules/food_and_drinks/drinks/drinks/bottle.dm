@@ -225,6 +225,7 @@
 	desc = "A faint aura of unease and asspainery surrounds the bottle."
 	icon_state = "winebottle"
 	list_reagents = list("wine" = 100)
+	price = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe
 	name = "Extra-Strong Absinthe"
@@ -297,7 +298,7 @@
 	desc = "Bottle of Grappa."
 	icon_state = "grappabottle"
 	list_reagents = list("grappa" = 100)
-
+	price = 60
 //////////////////////////JUICES AND STUFF ///////////////////////
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice

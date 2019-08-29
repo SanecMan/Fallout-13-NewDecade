@@ -194,24 +194,38 @@
 	victim.status_flags &= ~GOTTAGOREALLYFAST
 	to_chat(victim, "<span class='notice'>You slow down.</span>")
 
-obj/effect/mine/ghoul
+/obj/effect/mine/ghoul
 	name = " Feral ghoul"
 	desc = " Have you ever seen a living ghoul before? "
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "angry_ghoul_d"
 
 
-obj/effect/mine/ghoul/mineEffect(mob/living/carbon/victim)  /// эффект " мины "
+/obj/effect/mine/ghoul/mineEffect(mob/living/carbon/victim)  /// эффект " мины "
 	to_chat(victim, "<span class='userdanger'>Ghoul suddenly rises up and tries to bite you!</span>") /// текстовый графон, ееее!
 	new/mob/living/simple_animal/hostile/ghoul
 	qdel()   ///гуль встал и ПОБЕЖАЛ, поэтому сама " мина " удаляется
-obj/effect/mine/Gghoul
+
+/obj/effect/mine/Gghoul
 	name = " Glowing feral ghoul "
 	desc = " Have you ever seen a living ghoul before? "
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "retro_glowghoul_d"
 
-obj/effect/mine/Gghoul/mineEffect(mob/living/carbon/victim)
+/obj/effect/mine/Gghoul/mineEffect(mob/living/carbon/victim)
 	to_chat(victim, "<span class='userdanger'>Ghoul suddenly rises up and tries to bite you!</span>")
 	new/mob/living/simple_animal/hostile/ghoul/glowing
+	qdel()
+
+
+/obj/effect/mine/ghost_man
+	name = "Ghost Man"
+	desc = "Have you ever seen a living Ghost Man before? "
+	icon = 'icons/fallout/mobs/animal.dmi'
+	icon_state = "ghost_man_d"
+
+/obj/effect/mine/ghost_man/mineEffect(mob/living/carbon/victim)
+	to_chat(victim, "<span class='userdanger'>Ghost Man suddenly rises up and tries to bite you!</span>")
+	var/mob/living/simple_animal/hostile/ghost_man = new/mob/living/simple_animal/hostile/ghost_man(get_turf(victim))
+	ghost_man.update_icons()
 	qdel()

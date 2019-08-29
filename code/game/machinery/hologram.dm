@@ -45,8 +45,8 @@ var/list/holopads = list()
 	use_power = 1
 	idle_power_usage = 5
 	active_power_usage = 100
-	obj_integrity = 300
-	max_integrity = 300
+	obj_integrity = 2000000000
+	max_integrity = 2000000000
 	armor = list(melee = 50, bullet = 20, laser = 20, energy = 20, bomb = 0, bio = 0, rad = 0, fire = 50, acid = 0)
 	var/list/masters = list()//List of AIs that use the holopad
 	var/last_request = 0 //to prevent request spam. ~Carn
