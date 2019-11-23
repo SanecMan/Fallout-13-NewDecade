@@ -1,5 +1,5 @@
 //Fallout 13 Neutral faction aka Wastelanders roles
-/*
+
 /datum/job/settler
 	title = "Settler"
 	flag = SETTLER
@@ -150,8 +150,8 @@
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1, \
 		/obj/item/device/radio = 1, \
 		/obj/item/device/flashlight/torch/flare/green = 1)
-*/
-/*/Tribeman
+
+///Tribeman///
 
 /datum/job/arroyov
 	title = "Arroyo villager"
@@ -222,11 +222,9 @@
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/tribalshaman
 	shoes = /obj/item/clothing/shoes/f13/rag
-*/
 
 ///Gun runners///
 
-/*
 /datum/job/gunrunner
 	title = "Gun Runner"
 	desc = "Make weapons. Sell weapons. Trading save the Wasteland!"
@@ -286,7 +284,7 @@
 	belt = null
 	weapon = null
 	glasses = /obj/item/clothing/glasses/f13/biker
-*/
+/*
 //Sierra Madre
 /datum/job/sierramadre
 	title = "Sierra Madre Explorer"
@@ -338,3 +336,4 @@
 	weapon = null
 	neck = /obj/item/device/slave_collar
 	glasses = null
+*/
