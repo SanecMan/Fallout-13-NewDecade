@@ -204,7 +204,7 @@
 			for(var/datum/job/j in SSjob.occupations)
 				if(j.flag == jobFlagUniq)
 					if(j.status != "raider")
-						to_chat(usr, "<span class='warning'>Hey! You are in the labor and can play only as Raider!</span>")
+						to_chat(usr, "<span class='warning'>Hey! You are in the labor and can play only as prisoner!</span>")
 						return
 
 		for(var/datum/job/j in SSjob.occupations)
