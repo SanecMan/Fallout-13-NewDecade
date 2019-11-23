@@ -48,10 +48,10 @@ var/global/BSACooldown = 0
 
 	body += "<b>Mob type</b> = [M.type]<br><br>"
 
-	body += "<A href='?_src_=holder;boot2=\ref[M]'>Kick</A> | "
-	body += "<A href='?_src_=holder;newban=\ref[M]'>Ban</A> | "
+	body += "<A href='?_src_=holder;boot2=\ref[M]'>Кикнуть</A> | "
+	body += "<A href='?_src_=holder;newban=\ref[M]'>Бан блять</A> | "
 	body += "<A href='?_src_=holder;jobban2=\ref[M]'>Jobban</A> | "
-	body += "<A href='?_src_=holder;labor=\ref[M]'>Send to labor camp!</A> | "
+	body += "<A href='?_src_=holder;labor=\ref[M]'>Сделать это животное рейдером!</A> | "
 	body += "<A href='?_src_=holder;appearanceban=\ref[M]'>Identity Ban</A> | "
 	if(jobban_isbanned(M, "OOC"))
 		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'><font color=red>OOCBan</font></A> | "
@@ -103,19 +103,19 @@ var/global/BSACooldown = 0
 			if(ishuman(M))
 				body += "<B>Human</B> | "
 			else
-				body += "<A href='?_src_=holder;humanone=\ref[M]'>Humanize</A> | "
+				body += "<A href='?_src_=holder;humanone=\ref[M]'>Хуманизировать</A> | "
 
 			//Monkey
 			if(ismonkey(M))
 				body += "<B>Monkeyized</B> | "
 			else
-				body += "<A href='?_src_=holder;monkeyone=\ref[M]'>Monkeyize</A> | "
+				body += "<A href='?_src_=holder;monkeyone=\ref[M]'>Мартышкизировать</A> | "
 
 			//Corgi
 			if(iscorgi(M))
 				body += "<B>Corgized</B> | "
 			else
-				body += "<A href='?_src_=holder;corgione=\ref[M]'>Corgize</A> | "
+				body += "<A href='?_src_=holder;corgione=\ref[M]'>Коргизировать</A> | "
 
 			//AI / Cyborg
 			if(isAI(M))
@@ -393,7 +393,7 @@ var/global/BSACooldown = 0
 		return
 
 	var/dat = {"
-		<center><B>Game Panel</B></center><hr>\n
+		<center><B>Щитспавн панель</B></center><hr>\n
 		<A href='?src=\ref[src];c_mode=1'>Change Game Mode</A><br>
 		"}
 	if(master_mode == "secret")
@@ -828,9 +828,9 @@ var/global/BSACooldown = 0
 		var/string
 		if(logout && config && config.announce_admin_logout)
 			string = pick(
-				"Admin logout: [key_name(src)]")
+				"Педаль вышла: [key_name(src)]")
 		else if(!logout && config && config.announce_admin_login && (prefs.toggles & ANNOUNCE_LOGIN))
 			string = pick(
-				"Admin login: [key_name(src)]")
+				"Педаль зашла: [key_name(src)]")
 		if(string)
 			message_admins("[string]")
