@@ -607,9 +607,9 @@
 			//if(H.dna.species)
 			//	if(H.dna.species.type == /datum/species/ghoul)
 			H.faction -= "raider"
-			H.faction -= "city"
-			H.faction -= "none"
-			H.faction -= "followers"
+		//	H.faction -= "city"
+		//	H.faction -= "none"
+		//	H.faction -= "followers"
 
 	..()
 
