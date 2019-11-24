@@ -52,3 +52,8 @@
 	name = "Compliance Regulator"
 	desc = "The Compliance Regulator is an electroshock weapon and a unique version of the standard laser pistol, in that not only does it fire a blue beam instead of the normal red, but dealing a Critical Hit upon an enemy will paralyze them for 10 seconds."
 	icon_state = "compliance_regulator"
+
+/obj/item/weapon/gun/energy/disabler/fluff/angelofmercy
+	name = "Angel of Mercy"
+	desc = "Ётот прекрасный шокер некогда принадлежал таинственному работорговцу из пустошей. Ћегенды гласят, что с его помощью было поймано около тысячи рабов. ¬ его деталях можно разглядеть следы крови, которые спустя многие года работают в качестве смазки."
+	icon_state = "compliance_regulatorfluff"
