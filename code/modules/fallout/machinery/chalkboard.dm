@@ -5,7 +5,7 @@
 
 /obj/structure/chalkboard
 	name = "chalkboard"
-	desc = "A classic chalkboard for various activities involving writing and drawing.<br>Don't eat the chalk."
+	desc = "Классическая доска для рисования всяких штук и научных диограмм.<br>Пожалуйста, не ешьте мел."
 	icon = 'icons/fallout/machines/64x32.dmi'
 	icon_state = "board_clean"
 	flags = FPRINT
@@ -16,19 +16,19 @@
 
 /obj/structure/chalkboard/verb/honk()
 	set src in oview(1)
-	set name = "Draw"
-	set desc = "Messing around is fun."
+	set name = "Рисовать"
+	set desc = "Рисовашки это весело."
 	set category = "Object"
 
 	if (usr.stat != 0)
 		return
 
 	if(!ishuman(usr))
-		usr << "\red You want, but you don't. You try, but you can't."
+		usr << "\red Ты хочешь, но не можешь. Ты пытаешься, но нет."
 		return
 
 	if(content)
-		usr << "\blue The board is full! Clean it to write again."
+		usr << "\blue Доска вся изрисована, помойте чтобы использовать вновь."
 		return
 
 	add_fingerprint(usr)
@@ -51,8 +51,8 @@
 
 /obj/structure/chalkboard/verb/wrtite()
 	set src in oview(1)
-	set name = "Write"
-	set desc = "Don't stare, just write."
+	set name = "Писать"
+	set desc = "Не пялься, пиши давай."
 	set category = "Object"
 
 	if (usr.stat != 0)
@@ -60,18 +60,18 @@
 
 
 	if(!ishuman(usr))
-		usr << "\red You want, but you don't. You try, but you can't."
+		usr << "\red Ты хочешь, но не можешь. Ты пытаешься, но нет."
 		return
 
 	if(content)
-		usr << "\blue The board is full! Clean it to write again."
+		usr << "\blue Доска вся изрисована, помойте чтобы использовать вновь."
 		return
 
 	//part wrom paper/write
-	var/t =  input("What do you want to write here? 20 lines or 2000 symbols max.", "Write", null, null) as message
+	var/t =  input("Что ты хочешь написать тут? максимум 2000 символов.", "Написать", null, null) as message
 
 	if(length(t) > 2048)
-		usr << "\blue Your message does not fit in the board!"
+		usr << "\blue Твоя писанина не влезла на доску!"
 		return
 
 	//t = checkhtml(t)
@@ -83,7 +83,7 @@
 	if(!t)
 		return
 	if(count_occurrences(t, "<BR>") > 20)
-		usr << "\blue You can't write it all on the board!"
+		usr << "\blue Вы не можете уместить всё на доске!"
 		return
 
 	content = t

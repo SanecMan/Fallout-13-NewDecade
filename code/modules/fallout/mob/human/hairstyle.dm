@@ -6,11 +6,11 @@
 	icon = 'icons/fallout/mobs/hairstyle.dmi'	  // default icon for all hairstyles
 
 /datum/sprite_accessory/hair/bald
-	name = "Bald" // try to capatilize the names please~
+	name = "Лысый" // try to capatilize the names please~
 	icon_state = "hair_bald" // you do not need to define _s sub-state, game automatically does this for you
 
 /datum/sprite_accessory/hair/balding
-	name = "Balding Hair"
+	name = "Лысеющая прическа"
 	icon_state = "hair_balding"
 
 /datum/sprite_accessory/hair/reversemohawk
@@ -22,7 +22,7 @@
 	icon_state = "hair_mohawk"
 
 /datum/sprite_accessory/hair/skinhead
-	name = "Skinhead"
+	name = "Скинхэд"
 	icon_state = "hair_skinhead"
 
 /datum/sprite_accessory/hair/buzz
@@ -30,15 +30,15 @@
 	icon_state = "hair_buzzcut"
 
 /datum/sprite_accessory/hair/punk
-	name = "Punk"
+	name = "Панк"
 	icon_state = "hair_punk"
 
 /datum/sprite_accessory/hair/crew
-	name = "Crewcut"
+	name = "Крюкат"
 	icon_state = "hair_crewcut"
 
 /datum/sprite_accessory/hair/sargeant
-	name = "Flat Top"
+	name = "Флэт Топ"
 	icon_state = "hair_sargeant"
 
 /datum/sprite_accessory/hair/fag
@@ -50,15 +50,15 @@
 	icon_state = "hair_cut"
 
 /datum/sprite_accessory/hair/short
-	name = "Short Hair"
+	name = "Короткие волосы"
 	icon_state = "hair_short"
 
 /datum/sprite_accessory/hair/shorthair2
-	name = "Short Hair 2"
+	name = "Короткие волосы 2"
 	icon_state = "hair_short2"
 
 /datum/sprite_accessory/hair/shorthair3
-	name = "Short Hair 3"
+	name = "Короткие волосы 3"
 	icon_state = "hair_short3"
 
 /datum/sprite_accessory/hair/shoulderlong
@@ -66,11 +66,11 @@
 	icon_state = "hair_shoulderlength"
 
 /datum/sprite_accessory/hair/long
-	name = "Long Hair"
+	name = "Длинные волосы"
 	icon_state = "hair_long"
 
 /datum/sprite_accessory/hair/longer
-	name = "Longer Hair"
+	name = "Более длинные волосы"
 	icon_state = "hair_longer"
 
 /datum/sprite_accessory/hair/verylong
@@ -78,23 +78,23 @@
 	icon_state = "hair_verylong"
 
 /datum/sprite_accessory/hair/longest
-	name = "Longest Hair"
+	name = "Длиннейшие волосы"
 	icon_state = "hair_longest"
 
 /datum/sprite_accessory/hair/undercut
-	name = "Undercut"
+	name = "Андеркат"
 	icon_state = "hair_undercut"
 
 /datum/sprite_accessory/hair/over_eye
-	name = "Over Eye"
+	name = "Эмо"
 	icon_state = "hair_shortovereye"
 
 /datum/sprite_accessory/hair/long_over_eye
-	name = "Long Over Eye"
+	name = "Длинный эмо"
 	icon_state = "hair_longovereye"
 
 /datum/sprite_accessory/hair/very_long_over_eye
-	name = "Very Long Over Eye"
+	name = "Очень длинный эмо"
 	icon_state = "hair_verylongovereye"
 
 /datum/sprite_accessory/hair/longfringe
@@ -270,23 +270,23 @@
 	icon_state = "hair_bigafro"
 
 /datum/sprite_accessory/hair/emo
-	name = "Emo"
+	name = "Эмо 2"
 	icon_state = "hair_emo"
 
 /datum/sprite_accessory/hair/emoright
-	name = "Emo Right Side"
+	name = "Эмо с зачесом вправо"
 	icon_state = "hair_emoright"
 
 /datum/sprite_accessory/hair/longemo
-	name = "Emo Long"
+	name = "Длинный эмо 2"
 	icon_state = "hair_emolong"
 
 /datum/sprite_accessory/hair/feather
-	name = "Feather"
+	name = "Пёрышко"
 	icon_state = "hair_feather"
 
 /datum/sprite_accessory/hair/jensen
-	name = "Jensen Hair"
+	name = "Прическа Дженсона"
 	icon_state = "hair_jensen"
 
 /datum/sprite_accessory/hair/gelled
@@ -306,7 +306,7 @@
 	icon_state = "hair_spiky2"
 
 /datum/sprite_accessory/hair/hedgehog
-	name = "Hedgehog Hair"
+	name = "Прическа ёжик"
 	icon_state = "hair_hedgehog"
 
 /datum/sprite_accessory/hair/protagonist

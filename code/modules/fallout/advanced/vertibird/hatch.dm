@@ -10,15 +10,15 @@
 		return
 
 	if(istype(I, /obj/vertibird_exit_door))
-		to_chat(usr, "Nice try!")
+		to_chat(usr, "Хорошая попытка.")
 		return
 
 	if(vertibird:locked)
-		to_chat(usr, "It's locked!")
+		to_chat(usr, "Заперто!")
 		return
 
 	if(vertibird:inFly)
-		to_chat(usr, "WE ARE IN THE AIR PRIVATE!")
+		to_chat(usr, "ВЫ НЕ МОЖЕТЕ ВЫЙТИ ПОКА В ПОЛЕТЕ!")
 		return
 
 	I.forceMove(vertibird:ejectTurf())

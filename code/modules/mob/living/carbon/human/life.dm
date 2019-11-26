@@ -79,7 +79,7 @@
 	if (getBrainLoss() >= 60 && stat != DEAD)
 		if (prob(3))
 			if(prob(25))
-				emote("drool")
+				emote("пускает слюни")
 			else
 				say(pick_list_replacements(BRAIN_DAMAGE_FILE, "brain_damage"))
 
@@ -315,7 +315,7 @@
 		for(var/obj/item/I in BP.embedded_objects)
 			if(prob(I.embedded_pain_chance))
 				BP.receive_damage(I.w_class*I.embedded_pain_multiplier)
-				to_chat(src, "<span class='userdanger'>\the [I] embedded in your [BP.name] hurts!</span>")
+				to_chat(src, "<span class='userdanger'> [I] застряло в [BP.name] больно!</span>")
 
 			if(prob(I.embedded_fall_chance))
 				BP.receive_damage(I.w_class*I.embedded_fall_pain_multiplier)

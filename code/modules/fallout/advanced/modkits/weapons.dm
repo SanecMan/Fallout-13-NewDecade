@@ -1,37 +1,37 @@
 /obj/item/kit/damage
 	name = "WMK Damage"
-	desc = "Increasing weapon damage by 33%"
+	desc = "Улучшает урон оружия на 33%"
 	icon_state = "wmk_d"
 	prefix = "deadly"
 
 /obj/item/kit/recoil
 	name = "WMK Recoil"
-	desc = "Removes weapon recoil."
+	desc = "Убирает отдачу у оружия."
 	prefix = "calibrated"
 
 /obj/item/kit/burst
 	name = "WMK Burst"
-	desc = "Weapon shooting 2 rounds burst."
+	desc = "Теперь оружие будет делать два выстрела за раз."
 	prefix = "rapid"
 
 /obj/item/kit/delay
 	name = "WMK Speed"
-	desc = "Weapon shooting 100% faster."
+	desc = "Оружие стреляет на 100% быстрее."
 	prefix = "fast"
 
 /obj/item/kit/bayonet
 	name = "WMK Bayonet"
-	desc = "Increasing meelee damage by 500%."
+	desc = "Улучшает урон от ближнего боя на 500%."
 	sufix = "with bayonet"
 
 /obj/item/kit/condition
 	name = "WMK Durability"
-	desc = "Increasing weapon durability by 33%."
+	desc = "Улучшает прочность оружия на 33%."
 	icon_state = "wmk_d"
 	prefix = "hardened"
 
 /obj/item/kit/scope
 	name = "WMK Scope"
-	desc = "What it can be used for? :thinking:"
+	desc = "Бля внатуре, для чего же это? :thinking:"
 	icon_state = "wmk_s"
 	prefix = "sniper"

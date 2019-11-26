@@ -34,7 +34,7 @@
 	var/obj/item/stack/caps/target/caps = new(amount)
 	caps.loc = loc
 
-	to_chat(usr, "You get your [amount] caps.")
+	to_chat(usr, "Вы забрали [amount] крышек.")
 	playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 
 /obj/structure/safe_caps/attackby(obj/item/I, mob/living/carbon/human/user, parameters)

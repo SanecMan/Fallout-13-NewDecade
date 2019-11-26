@@ -6,7 +6,7 @@
 	var/t_has = p_have()
 	var/t_is = p_are()
 
-	var/msg = "<span class='info'>*---------*\nThis is [bicon(src)] \a <EM>[src]</EM>!\n"
+	var/msg = "<span class='info'>*---------*\nЭто [bicon(src)] \a <EM>[src]</EM>!\n"
 
 	if (handcuffed)
 		msg += "<span class='warning'>[t_He] [t_is] [bicon(src.handcuffed)] handcuffed!</span>\n"

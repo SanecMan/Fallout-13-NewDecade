@@ -12,7 +12,7 @@
  * Pens
  */
 /obj/item/weapon/pen
-	desc = "It's a normal black ink pen."
+	desc = "Обычная черная ручка."
 	name = "pen"
 	icon = 'icons/fallout/objects/bureaucracy.dmi'
 	icon_state = "pen"
@@ -85,9 +85,9 @@
 
 	if(!force)
 		if(M.can_inject(user, 1))
-			to_chat(user, "<span class='warning'>You stab [M] with the pen.</span>")
+			to_chat(user, "<span class='warning'>Вы укололи [M] ручкой.</span>")
 			if(!stealth)
-				to_chat(M, "<span class='danger'>You feel a tiny prick!</span>")
+				to_chat(M, "<span class='danger'>Вы ощущаете небольной укол!</span>")
 			. = 1
 
 		add_logs(user, M, "stabbed", src)
@@ -167,7 +167,7 @@
 
 /obj/item/weapon/pen/pencil
 	name = "pencil"
-	desc = "The cheapest and ridiculously simple, yet rather effective writing tool."
+	desc = "Дешевое и компактное средство для писания. Но не эффективное."
 	icon_state = "pencil-y"
 	colour = "grey"
 

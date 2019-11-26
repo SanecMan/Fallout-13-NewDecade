@@ -47,7 +47,7 @@ var/const/SLIDE_ICE = 8
 	if(movement_type & FLYING)
 		return 0
 	if(!(lube&SLIDE_ICE))
-		add_logs(src,, "slipped",, "on [O ? O.name : "floor"]")
+		add_logs(src,, "подскользнулся",, "на [O ? O.name : "floor"]")
 	return loc.handle_slip(src, s_amount, w_amount, O, lube)
 
 

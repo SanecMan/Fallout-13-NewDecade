@@ -29,7 +29,7 @@
 	var/nojumpsuit = 0	// this is sorta... weird. it basically lets you equip stuff that usually needs jumpsuits without one, like belts and pockets and ids
 	var/blacklisted = 0 //Flag to exclude from green slime core species.
 	var/dangerous_existence = null //A flag for transformation spells that tells them "hey if you turn a person into one of these without preperation, they'll probably die!"
-	var/say_mod = "says"	// affects the speech message
+	var/say_mod = "говорит"	// affects the speech message
 	var/list/default_features = list() // Default mutant bodyparts for this species. Don't forget to set one for every mutant bodypart you allow this species to have.
 	var/list/mutant_bodyparts = list() 	// Parts of the body that are diferent enough from the standard human model that they cause clipping with some equipment
 	var/list/mutant_organs = list(/obj/item/organ/tongue)		//Internal organs that are unique to this race.
@@ -53,7 +53,7 @@
 	// species flags. these can be found in flags.dm
 	var/list/species_traits = list()
 
-	var/attack_verb = "punch"	// punch-specific attack verb
+	var/attack_verb = "бьет"	// punch-specific attack verb
 	var/sound/attack_sound = 'sound/weapons/punch1.ogg'
 	var/sound/miss_sound = 'sound/weapons/punchmiss.ogg'
 
@@ -867,26 +867,25 @@
 				if(!H.weakened)
 					H.emote("collapse")
 				H.Weaken(10)
-				to_chat(H, "<span class='danger'>You feel weak.</span>")
+				to_chat(H, "<span class='danger'>Вы ощущаете слабость.</span>")
 			switch(H.radiation)
 				if(50 to 75)
 					if(prob(5))
 						if(!H.weakened)
-							H.emote("collapse")
+							H.emote("падает")
 						H.Weaken(3)
-						to_chat(H, "<span class='danger'>You feel weak.</span>")
+						to_chat(H, "<span class='danger'>Вы ощущаете слабость.</span>")
 
 					if(prob(15))
 						if(!( H.hair_style == "Shaved") || !(H.hair_style == "Bald") || (HAIR in species_traits))
-							to_chat(H, "<span class='danger'>Your hair starts to \
-								fall out in clumps...<span>")
+							to_chat(H, "<span class='danger'>Ваши волосы начали выпадать <span>")
 							addtimer(CALLBACK(src, .proc/go_bald, H), 50)
 
 				if(75 to 100)
 					if(prob(1))
-						to_chat(H, "<span class='danger'>You mutate!</span>")
+						to_chat(H, "<span class='danger'>Вы мутируете!</span>")
 						H.randmutb()
-						H.emote("gasp")
+						H.emote("задыхается")
 						H.domutcheck()
 		return 0
 	else if ((RADREGEN in species_traits))
@@ -894,7 +893,7 @@
 			H.adjustBruteLoss(-5)
 			H.adjustFireLoss(-5)
 			H.adjustToxLoss(-5)
-			to_chat(H, "<span class='green'>Your wounds slowly regenerates.</span>")
+			to_chat(H, "<span class='green'>Твои раны медленно регенирируют.</span>")
 
 	H.radiation = 0
 	return 1

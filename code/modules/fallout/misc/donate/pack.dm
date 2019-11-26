@@ -2,7 +2,7 @@
 
 /datum/content_pack
 	var
-		name = "What?"
+		name = "Чего блять?"
 		id = "shit"
 		desc = "Something is wrong! Maybe you already have this content pack?"
 		list/items = list()
@@ -35,9 +35,9 @@
 
 
 /datum/content_pack/starter
-	name = "Starter"
+	name = "Фоллаут 13: Набор новичка"
 	id = "starter"
-	desc = "<b>Available to: All factions!</b><br>Everyone has these vital items, for free!<br><i>Note: All roles have listed weapons and items that go to pocket slots. Although, some roles have certain clothing items disabled by default to preserve the general role stylistics. Settler role has it all.</i>"
+	desc = "<b>Доступен для: Всех фракций!</b><br>Любой может иметь эти ВАЖНЫЕ вещи, абсолютно бесплатно!<br><i>Важно: Чтобы взять оружие из этого набора, посмотрите слот карманов. Так-же, некоторые виды одежды могут быть недоступны, ввиду дресс-кода фракций. Роль обывателя(settler) имеет доступ ко всему что тут перечисленно.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/rag,
 		// Hats
@@ -95,15 +95,13 @@
 	price = -1
 
 	on_set(client/client)
-		client.add_race("glowing ghoul", /datum/species/ghoul/glowing)
-		client.add_race("supermutant", /datum/species/supermutant)
 		client.add_race("ghoul", /datum/species/ghoul)
 		client.add_race("human", /datum/species/human)
 
 /datum/content_pack/cigarettes
-	name = "Cigarettes"
+	name = "Сигареты"
 	id = "cigarettes"
-	desc = "<b>Available to: All factions!</b><br><i>Note: World Health Organization discourages you from smoking. Inhaling any kind of smoke is bad for your health!</i>"
+	desc = "<b>Доступно для: Всех фракций!</b><br><i>Важно: Всемирная Организация Здравоохранения предупреждает - курение вредит здоровью. Вдыхание табачного дыма плохо сказывается на вашем здоровье!</i>"
 	items = list(
 		/obj/item/weapon/storage/fancy/rollingpapers,
 		/obj/item/weapon/storage/fancy/cigarettes/cigpack_myron,
@@ -118,9 +116,9 @@
 	price = 5000
 
 /datum/content_pack/team_fortress
-	name = "Hat simulator"
+	name = "Набор шапок"
 	id = "team_fortress"
-	desc = "<b>Available to: Neutral, City and Raider factions only!</b><br>Experience power of Fallout 13 with our accurately developed hat simulation system.<br>This set includes five additional hats!"
+	desc = "<b>Доступно для: Нейтралов, Горожан и рейдеров!</b><br>Получите уникальнейший опыт игры в Фоллаут 13 с нашим новым набором шапок.<br>В этот набор входит целых пять (вау) дополнительных шапок!"
 	items = list(
 		/obj/item/clothing/head/soft/f13/baseball,
 		/obj/item/clothing/head/soft/f13/utility,
@@ -132,9 +130,9 @@
 	price = 5000
 
 /datum/content_pack/wardrobe
-	name = "High fashion"
+	name = "Высшая Мода"
 	id = "wardrobe"
-	desc = "<b>Available to: Neutral and City factions only!</b><br>Got tired of your character looking like a homeless junkie?<br>This pack was created specially for you - wasteland fashion collection of year 2255 !<br>This set inludes a pair of worn but sturdy work boots, and seven additional outfits that provide considerable diversity in character creation.<br><i>Note: A dark red wasteland wanderer jacket can be zipped up as well.</i>"
+	desc = "<b>Доступно для: Нейтралов и Горожан!</b><br>Устали от того что ваш персонаж выглядит как какой-то бомж?<br>Этот набор разработан специально для вас! Новая мода пустоши 2255 года!<br>Данный набор содержит две пары обуви и целых семь замечательных костюмов.<br><i>Важно: Вы можете застегивать dark red wasteland wanderer jacket.</i>"
 	items = list(
 		/obj/item/clothing/shoes/f13/explorer,
 		// Uniforms
@@ -154,9 +152,9 @@
 	price = 5000
 
 /datum/content_pack/vault13
-	name = "Vault 13"
+	name = "Убежище 13"
 	id = "vault13"
-	desc = "<b>Available to: Neutral, City and Raider factions only!</b><br>Vault 13 has opened long time ago, now you can try and pretend your relatives actually lived there, or explain that you got frozen in time somehow - that's why items you got, look so pristine.</i>"
+	desc = "<b>Доступно для: Нейтралов, Горожан и рейдеров!</b><br>Убежище 13 открылось очеь давно, но вы все еще можете примерить на себя их комбинезоны, ну или просто притворяться выходцем из убежища и ловить пули.</i>"
 	items = list(
 		/obj/item/clothing/under/f13/vault/v13,
 		/obj/item/weapon/reagent_containers/food/drinks/flask/vault13,
@@ -165,9 +163,9 @@
 	price = 7500
 
 /datum/content_pack/bard
-	name = "Musical instruments"
+	name = "Музыкальные инструменты"
 	id = "bard"
-	desc = "<b>Available to: All factions!</b><br>Russian General says, :<br><i>\"I do not like rock-and-roll music. This is too loud! I like folk music, soft, nice music, huh? Polka, waltz, anything!\"</i><br><b>Six String Samurai (1998)</b>"
+	desc = "<b>Доступны для: Всех фракций!</b><br>Russian General says, :<br><i>\"Я не люблю рок-н-ролл. Он слишком громкий! Мне нравится Фолк, мягкая, и приятная музыка. Полька, вальс, да что угодно!\"</i><br><b>Six String Samurai (1998)</b>"
 	items = list(
 		/obj/item/device/harmonica,
 		/obj/item/device/instrument/guitar
@@ -184,9 +182,9 @@
 	price = 10000
 
 /datum/content_pack/followers
-	name = "Followers set"
+	name = "Набор Последователей"
 	id = "follower"
-	desc = "<b>Available to: All factions!</b> : If all doctors on the wasteland are dead, then who is he?"
+	desc = "<b>Доступно для: Всех фракций!</b> :Если все доктора на пустоши умрут, то кто вас будет лечить?"
 	items = list(
 		/obj/item/clothing/suit/toggle/labcoat/f13/followers,
 		/obj/item/clothing/under/f13/doctor,
@@ -201,9 +199,9 @@
 	price = 5000
 
 /datum/content_pack/trooper_armor
-	name = "Batallion themed NCR armor"
+	name = "Набор брони НКР"
 	id = "trooper_armor"
-	desc = "<b>Available to: NCR Trooper and NCR Sergeant roles only!</b><br>Form a strike squad with your friends, wearing the matching NCR armor sets!<br>This set includes six additional trooper armor skins:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	desc = "<b>Доступно для: НКР!</b><br>Сформируйте собственный отряд со совими друзьями, с этим набором вы даже не нарушите устав НКР!<br>Этот набор включает в себя шесть дополнительных покрасок для брони:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
 	items = list(
 		/obj/item/clothing/suit/armor/f13/ncr/patriot,
 		/obj/item/clothing/suit/armor/f13/ncr/commie,
@@ -230,9 +228,9 @@
 */
 
 /datum/content_pack/khan
-	name = "Great Khan"
+	name = "Великие Ханы"
 	id = "khan"
-	desc = "<b>Available to: Neutral and Raider factions only!</b><br>The glory of the Great Khans will be restored with this themed outfit set!<br>Or you can use this tribal spear to effectively defend yourself against a wildlife, at the start of the game.<br><i>Note: Great Khan jacket can be zipped up as well.</i>"
+	desc = "<b>Доступно для: Нейтралы и Рейдеры!</b><br>Величие Великих Ханов будет восстановлено с этим замечательным набором!<br>Или посмотрите на это копью, с помощью которого вы можете насмерть затыкать таракана.<br><i>Важно: Вы можете застегивать Great Khan jacket .</i>"
 	items = list(
 		/obj/item/clothing/head/helmet/f13/khan,
 		/obj/item/clothing/suit/toggle/labcoat/f13/khan,
@@ -244,9 +242,9 @@
 	price = 5000
 
 /datum/content_pack/punk
-	name = "Punk"
+	name = "Панк"
 	id = "punk"
-	desc = "<b>Available to: Neutral and Raider factions only!</b><br>If the game doesn't feel metal enough for you, this set of items may fix it.<br><i>Note: Punk lives!</i><br>"
+	desc = "<b>Доступно для: Нейтралы и Рейдеры!</b><br>Если вам кажется что в игре недостаточно металла, этот набор всё исправит.<br><i>ГОРШОК МЁРТВ!</i><br>"
 	items = list(
 		/obj/item/clothing/shoes/f13/military/diesel,
 		/obj/item/clothing/shoes/f13/military/female/diesel,
@@ -257,9 +255,9 @@
 	price = 7500
 
 /datum/content_pack/off
-	name = "OFF"
+	name = "Набор Бейсболиста"
 	id = "off"
-	desc = "<b>Available to: Neutral and Raider factions only!</b><br>Carefully selected items from OFF game.<br><i>Note: Purification in progress...</i><br>"
+	desc = "<b>Доступно для: Нейтралы и Рейдеры!</b><br>Чательно восстановленные мухобои и форма грозных бойцов - Бейсболистов."
 	items = list(
 		/obj/item/clothing/head/soft/black,
 		/obj/item/clothing/under/f13/batter,
@@ -270,9 +268,9 @@
 	price = 2500
 
 /datum/content_pack/madmax
-	name = "Mad Max"
+	name = "Безумный Макс"
 	id = "madmax"
-	desc = "<b>Available to: Neutral and Raider factions only!</b><br>Carefully selected items from an entire Mad Max movie franchise.<br><i>Note: Steering wheel is used just like a car key.<br>The content pack may be expanded in future with new items you will get for free if you already had this pack.</i>"
+	desc = "<b>Доступно для: Нейтралы и Рейдеры!</b><br>Чательно отобранные предметы из вселенной Безумного Макса.<br><i>Важно: Steering wheel используется как ключи от машин.<br>В память о БартеНиксоне.</i>"
 	items = list(
 		/obj/item/clothing/suit/f13/mfp,
 		/obj/item/clothing/suit/f13/mfp/raider,
@@ -284,9 +282,9 @@
 	price = 10000
 
 /datum/content_pack/glowing_ghoul
-	name = "Player race: Glowing Ghoul"
+	name = "Игровая раса: Светящийся Гуль"
 	id = "glowing_ghoul"
-	desc = "<b>Available to: All factions except for the Enclave!</b><br>The following pack gives you ability to create a glowing ghoul character on round start!"
+	desc = "<b>Доступно для: Кого угодно, кроме анклавовцев!</b><br>Данный набор, позволяет вам создать светящегося гуля!"
 	price = 10000
 
 	on_set(client/client)

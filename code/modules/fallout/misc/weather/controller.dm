@@ -1,5 +1,5 @@
 /datum/weather_controller
-	var/name = "weather controller"
+	var/name = "Контроль погоды"
 	var/id = "weather_id"
 	var/desc = "Controlling weather mechanic."
 

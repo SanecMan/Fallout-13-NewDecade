@@ -15,14 +15,14 @@ var/sound/admin_sound
 
 	switch(alert("Are you sure?\nSong: [S]\nNow you can also play this sound using \"Play Server Sound\".", "Confirmation request" ,"Play", "FORCE", "Cancel")) //Use the Force, Luke.
 		if("Play")
-			log_admin("[key_name(src)] played sound [S]")
-			message_admins("[key_name_admin(src)] played sound [S]", 1)
+			log_admin("[key_name(src)] проиграл [S]")
+			message_admins("[key_name_admin(src)] проиграл [S]", 1)
 			for(var/mob/M in player_list)
 				if(M.client.prefs.toggles & SOUND_MIDI)
 					M << admin_sound
 		if("FORCE") //I have a very bad feeling about this.
-			log_admin("[key_name(src)] played sound [S] FORCED")
-			message_admins("[key_name_admin(src)] played sound [S] FORCED", 1)
+			log_admin("[key_name(src)] проиграл [S] НАСИЛЬНО")
+			message_admins("[key_name_admin(src)] проиграл [S] НАСИЛЬНО", 1)
 			for(var/mob/M in player_list)
 				M << admin_sound
 
@@ -65,7 +65,7 @@ var/sound/admin_sound
 
 /client/proc/set_round_end_sound(S as sound)
 	set category = "Fun"
-	set name = "Set Round End Sound"
+	set name = "Set round end sound"
 	if(!check_rights(R_SOUNDS))
 		return
 
@@ -75,17 +75,17 @@ var/sound/admin_sound
 		return
 
 	log_admin("[key_name(src)] set the round end sound to [S]")
-	message_admins("[key_name_admin(src)] set the round end sound to [S]")
+	message_admins("[key_name_admin(src)] сменил звук конца раунда на [S]")
 	feedback_add_details("admin_verb","SRES") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/stop_sounds()
 	set category = "Debug"
-	set name = "Stop All Playing Sounds"
+	set name = "Stop all sound"
 	if(!src.holder)
 		return
 
 	log_admin("[key_name(src)] stopped all currently playing sounds.")
-	message_admins("[key_name_admin(src)] stopped all currently playing sounds.")
+	message_admins("[key_name_admin(src)] остановил проигрывание всех звуков.")
 	for(var/mob/M in player_list)
 		if(M.client)
 			to_chat(M, sound(null))

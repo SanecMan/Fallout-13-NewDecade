@@ -1,6 +1,6 @@
 /obj/item/kit
 	name = "Modification Kit"
-	desc = "This one is useless."
+	desc = "Бесполезен."
 	icon = 'icons/fallout/advanced/modkits.dmi'
 	icon_state = "wmk"
 	var/type_deserved = /obj/item/weapon/gun

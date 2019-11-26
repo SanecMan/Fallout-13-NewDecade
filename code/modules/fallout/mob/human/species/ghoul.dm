@@ -1,7 +1,7 @@
 //Fallout 13 playable ghouls directory
 
 /datum/species/ghoul
-	name = "Ghoul"
+	name = "Гуль"
 	id = "ghoul"
 	limbs_id = "ghoul"
 	say_mod = "growls"
@@ -34,7 +34,7 @@
 		b.max_damage = initial(b.max_damage)
 
 /datum/species/ghoul/glowing
-	name = "Glowing Ghoul"
+	name = "Светящийся гуль"
 	id = "glowing ghoul"
 	limbs_id = "glowghoul"
 	say_mod = "grouls"

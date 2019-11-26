@@ -1,7 +1,7 @@
 #define SANDSTORM_CHANNEL 16
 
 /datum/weather_controller/sandstorm
-	name = "sandstorm"
+	name = "песчанная_буря"
 	id = "sandstorm"
 	desc = "Sandstorm."
 

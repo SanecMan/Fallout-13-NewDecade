@@ -70,7 +70,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				else
 					jobs_data += "<a class=\"l70 unavailable_job\">[j.title]</a>"
 	if(!jobs_data)
-		jobs_data = "No available roles"
+		jobs_data = "Нет доступных ролей"
 	CHECK_TICK
 
 //Outfit data. Showing name of weared items. Taking item objects from pool (They already created and pooled at update_preview_icon())
@@ -184,7 +184,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	CHECK_TICK
 
 	var/html = {"<center>
-	<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>Character Settings</a> <a href='?_src_=prefs;preference=tab;tab=1' >Game Preferences</a> <a href='?_src_=prefs;preference=tab;tab=2' >Skills</a> <a href='?_src_=prefs;preference=tab;tab=3' >Special</a>
+	<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>Настройки Персонажа</a> <a href='?_src_=prefs;preference=tab;tab=1' >Настройки Игры</a> <a href='?_src_=prefs;preference=tab;tab=2' >Навыки</a> <a href='?_src_=prefs;preference=tab;tab=3' >S.P.E.C.I.A.L</a>
 	</center>
 	<HR>
 	<center>
@@ -195,16 +195,16 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		<table width='100%'>
 			<tr>
 				<td width='75%' valign='top'>
-					<a href='?_src_=prefs;preference=name;task=random'>&#9762; Random Name</a>
-					<a href='?_src_=prefs;preference=name'>Always Random Name: [data["r_name"]]</a>
+					<a href='?_src_=prefs;preference=name;task=random'>&#9762; Случайное имя</a>
+					<a href='?_src_=prefs;preference=name'>Пост. случайное имя: [data["r_name"]]</a>
 					<br>
-					<b>Name:</b>
+					<b>Имя:</b>
 					<a href='?_src_=prefs;preference=name;task=input'>[data["name"]]</a>
 					<br>
-					<b>Gender:</b>
+					<b>Пол:</b>
 					<a href='?_src_=prefs;preference=gender'>[data["gender"]]</a>
 					<br>
-					<b>Age:</b>
+					<b>Возраст:</b>
 					<a href='?_src_=prefs;preference=age;task=input'>[data["age"]]</a>
 					<br>
 				</td>
@@ -219,18 +219,18 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		<table>
 			<tr>
 				<td>
-					<a href='?_src_=prefs;preference=all;task=random'>&#9762; Random Body</a>
+					<a href='?_src_=prefs;preference=all;task=random'>&#9762; Случайное тело</a>
 				</td>
 				<td>
-					<a href='?_src_=prefs;preference=all'>Always Random Body: [data["r_body"]]</a><br>
+					<a href='?_src_=prefs;preference=all'>Пост. случайное тело: [data["r_body"]]</a><br>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<b>Species:</b>
+					<b>Раса:</b>
 				</td>
 				<td>
-					<b>Skin Tone</b>
+					<b>Цвет кожи</b>
 				</td>
 			</tr>
 			<tr>
@@ -245,7 +245,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	</div>
 	<div class="third_block">
 		<div class="third_block_39">
-			<h3>Choose your faction</h3><br>
+			<h3>Выберите фракцию</h3><br>
 			<div class="a_block">
 				[data["factions_data"]]
 			</div>
@@ -292,7 +292,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 			</div>
 		</div><!--1 пїЅпїЅпїЅпїЅ 39-->
 		<div class="third_block_39 job">
-		<h3>Choose your role</h3><br>
+		<h3>Выберите свою роль</h3><br>
 			<div class="job_p">
 				[data["jobs_data"]]
 			</div>
@@ -302,13 +302,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 			<div class="middle_text">
 				<div class="left_mid">
 					<div class="mid_item">
-						<h3>Gloves</h3>
+						<h3> Перчатки </h3>
 						<a href='?_src_=prefs;preference=chooise;task=equip;item=gloves' [data["d_gloves"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["gloves"], data["d_gloves"])]\"" : "" ]>[CutText(data["gloves"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=gloves'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=gloves'>&gt;</a>
 					</div>
 					<div class="mid_item">
-						<h3>Pocket 1</h3>
+						<h3> Карман 1 </h3>
 						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_1' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["r_pocket"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_1'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=pocket_1'>&gt;</a>
@@ -316,13 +316,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				</div>
 				<div class="right_mid">
 					<div class="mid_item">
-						<h3>Weapon</h3>
+						<h3>Оружие </h3>
 						<a href='?_src_=prefs;preference=chooise;task=equip;item=weapon' [data["d_weapon"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["weapon"], data["d_weapon"])]\"" : "" ]>[CutText(data["weapon"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=weapon'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=weapon'>&gt;</a>
 					</div>
 					<div class="mid_item">
-						<h3>Pocket 2</h3>
+						<h3> Карман 2</h3>
 						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_2' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["l_pocket"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_2'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=pocket_2'>&gt;</a>
@@ -335,7 +335,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 					<table>
 					<tr>
 						<td valign='top' width='21%'>
-							<h3>Hair Style</h3>
+							<h3>Прическа</h3>
 							<a href='?_src_=prefs;preference=hair_style;task=input'>[data["hair_style"]]</a><br>
 							<a href='?_src_=prefs;preference=previous_hair_style;task=input'>&lt;</a>
 							<a href='?_src_=prefs;preference=next_hair_style;task=input'>&gt;</a><br>
@@ -347,7 +347,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				<table>
 					<tr>
 						<td valign='top' width='21%'>
-							<h3>Facial Hair Style</h3>
+							<h3>Лицо</h3>
 							<a href='?_src_=prefs;preference=facial_hair_style;task=input'>[data["f_hair_style"]]</a><br>
 							<a href='?_src_=prefs;preference=previous_facehair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_facehair_style;task=input'>&gt;</a><br><span style='border: 1px solid #161616; background-color: [data["f_hair_color"]];'>&nbsp;&nbsp;&nbsp;</span>
 							<a href='?_src_=prefs;preference=facial;task=input'>Change</a><br>
@@ -357,7 +357,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				<table>
 					<tr>
 						<td valign='top' width='21%'>
-							<h3>Eye Color</h3>
+							<h3>Цвет глаз</h3>
 							<span style='border: 1px solid #161616; background-color: [data["eye_color"]];'>&nbsp;&nbsp;&nbsp;</span>
 							<a href='?_src_=prefs;preference=eyes;task=input'>Change</a><br>
 						</td>
@@ -367,11 +367,11 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				<div class="clearBoth g" ></div>
 				<hr><center>
 				<a href='?_src_=prefs;preference=load'>Undo</a>
-				<a href='?_src_=prefs;preference=save'>&#128190; Save Setup</a>
-				<a href='?_src_=prefs;preference=reset_all'>&#9762; Reset Setup</a>
+				<a href='?_src_=prefs;preference=save'>&#128190; Сохранить настройки</a>
+				<a href='?_src_=prefs;preference=reset_all'>&#9762; Сбросить настройки</a>
 				</center>"}
 	CHECK_TICK
-	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 750)
+	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Настройки персонажа</div>", 640, 750)
 	popup.set_content(html)
 	popup.open(0)
 	return 1

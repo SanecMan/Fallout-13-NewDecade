@@ -135,10 +135,10 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 	var/deaf_type
 	if(speaker != src)
 		if(!radio_freq) //These checks have to be seperate, else people talking on the radio will make "You can't hear yourself!" appear when hearing people over the radio while deaf.
-			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] something but you cannot hear them."
+			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] что-то, но вы не слышите."
 			deaf_type = 1
 	else
-		deaf_message = "<span class='notice'>You can't hear yourself!</span>"
+		deaf_message = "<span class='notice'>Вы не слышите самого себя!</span>"
 		deaf_type = 2 // Since you should be able to hear yourself without looking
 	if(!(message_langs & languages_understood) || force_compose) //force_compose is so AIs don't end up without their hrefs.
 		message = compose_message(speaker, message_langs, raw_message, radio_freq, spans)
@@ -313,7 +313,7 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 /mob/living/say_quote(input, list/spans)
 	var/tempinput = attach_spans(input, spans)
 	if (stuttering)
-		return "stammers, \"[tempinput]\""
+		return "заикаетсЯ, \"[tempinput]\""
 	if (getBrainLoss() >= 60)
-		return "gibbers, \"[tempinput]\""
+		return "мямлит, \"[tempinput]\""
 	return ..()

@@ -48,12 +48,12 @@
 		C = whom
 	if(!C)
 		if(holder)
-			to_chat(src, "<font color='red'>Error: Admin-PM: Client not found.</font>")
+			to_chat(src, "<font color='red'>Ошибка: Admin-PM: Игрок вышел.</font>")
 		return
-	message_admins("[key_name_admin(src)] has started replying to [key_name(C, 0, 0)]'s admin help.")
-	var/msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
+	message_admins("[key_name_admin(src)] начал отвечать на вопрос игрока [key_name(C, 0, 0)].")
+	var/msg = input(src,"Message:", "Приватное сообщение для [key_name(C, 0, 0)]") as text|null
 	if (!msg)
-		message_admins("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 0)]'s admin help.")
+		message_admins("[key_name_admin(src)] отменил свой ответ для запроса [key_name(C, 0, 0)]")
 		return
 	cmd_admin_pm(whom, msg)
 
@@ -91,14 +91,14 @@
 	else
 		if(!C)
 			if(holder)
-				to_chat(src, "<font color='red'>Error: Admin-PM: Client not found.</font>")
+				to_chat(src, "<font color='red'>Ошибка: Admin-PM: Игрок вышел.</font>")
 			else
 				adminhelp(msg)	//admin we are replying to left. adminhelp instead
 			return
 
 		//get message text, limit it's length.and clean/escape html
 		if(!msg)
-			msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
+			msg = input(src,"Message:", "Приватное сообщение для [key_name(C, 0, 0)]") as text|null
 
 			if(!msg)
 				return
@@ -109,7 +109,7 @@
 
 			if(!C)
 				if(holder)
-					to_chat(src, "<font color='red'>Error: Admin-PM: Client not found.</font>")
+					to_chat(src, "<font color='red'>Ошибка: Admin-PM: Игрок вышел.</font>")
 				else
 					adminhelp(msg)	//admin we are replying to has vanished, adminhelp instead
 				return
@@ -213,9 +213,9 @@
 	log_admin("IRC PM: [sender] -> [key_name(C)] : [msg]")
 	msg = emoji_parse(msg)
 
-	to_chat(C, "<font color='red' size='4'><b>-- Administrator private message --</b></font>")
+	to_chat(C, "<font color='red' size='4'><b>-- Сообщение от администратора --</b></font>")
 	to_chat(C, "<font color='red'>Admin PM from-<b><a href='?priv_msg=[stealthkey]'>[adminname]</A></b>: [msg]</font>")
-	to_chat(C, "<font color='red'><i>Click on the administrator's name to reply.</i></font>")
+	to_chat(C, "<font color='red'><i>Нажмите на имя администратора чтобы ответить.</i></font>")
 	window_flash(C)
 	//always play non-admin recipients the adminhelp sound
 	to_chat(C, 'sound/effects/adminhelp.ogg')

@@ -151,10 +151,10 @@ var/list/preferences_datums = list()
 		CHECK_TICK
 	var/dat = "<center>"
 
-	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Character Settings</a> "
-	dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Game Preferences</a> "
-	dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>Skills</a> "
-	dat += "<a href='?_src_=prefs;preference=tab;tab=3' [current_tab == 3 ? "class='linkOn'" : ""]>Special</a>"
+	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Настройки Персонажа</a> "
+	dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Настройки Игры</a> "
+	dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>Навыки</a> "
+	dat += "<a href='?_src_=prefs;preference=tab;tab=3' [current_tab == 3 ? "class='linkOn'" : ""]>S.P.E.C.I.A.L</a>"
 
 	if(!path)
 		dat += "<div class='notice'>Please create an account to save your preferences</div>"
@@ -245,22 +245,22 @@ var/list/preferences_datums = list()
 			dat += "</td></tr></table>"
 		if(2)
 			if(skill_type == "")
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=small_guns'>Small Guns</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Big Guns</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Barter</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Energy Weapon</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=small_guns'>Маленькие Пушки</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Большие Пушки</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Бартер</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Энергооружие</a> <br>"
 				dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Explosives</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Lockpick</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>Medicine</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=melee_weapons'>Melee Weapons</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=repair'>Repair</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=sneak'>Sneak</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=speech'>Speech</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=unarmed'>Unarmed</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=science'>Science</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Взлом</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>Медицина</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=melee_weapons'>Ближний бой</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=repair'>Ремонт</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=sneak'>Скрытность</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=speech'>Красноречие</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=unarmed'>Без оружия</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=science'>Наука</a> <br>"
 				dat += "<br><a href='?_src_=prefs;preference=skills;removeall=1'>Сбросить всё</a> <br>"
 			else
-				dat += "<br><a href='?_src_=prefs;preference=skills;back=1'>Назад/Back</a> <br>"
+				dat += "<br><a href='?_src_=prefs;preference=skills;back=1'>Назад</a> <br>"
 				dat += "<center>"
 				usr.browse_rsc_icon("icons/special/special.dmi", "skills_[skill_type]")
 				dat += "<img src='skills_[skill_type].png' class='center'> <br>"
@@ -269,22 +269,22 @@ var/list/preferences_datums = list()
 				var/current = SKILLS.getPoint(skill_type, TRUE)
 				var/left = max(0, SKILLS_POINTS - SKILLS.getSpentPoints())
 
-				dat += "<br>Current: [current] (left [left])<br>"
+				dat += "<br>Сейчас: [current] (осталось [left])<br>"
 
 				for (var/i = 1, i < 11, i++)
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=[skill_type];num=[i]'>[i]</a>"
 		if(3)
 			if(skill_type == "")
-				dat += "<a href='?_src_=prefs;preference=specials;special=s'>Сила/Strength</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=p'>Восприятие/Perception</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=e'>Выносливость/Endurance</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=c'>Харизма/Charisma</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=i'>Интеллект/Intelligence</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=a'>Ловкость/Agility</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=l'>Удача/Luck</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=s'>Сила</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=p'>Восприятие</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=e'>Выносливость</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=c'>Харизма</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=i'>Интеллект</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=a'>Ловкость</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=l'>Удача</a> <br>"
 				dat += "<br><a href='?_src_=prefs;preference=specials;removeall=1'>Сбросить всё</a> <br>"
 			else
-				dat += "<br><a href='?_src_=prefs;preference=specials;back=1'>Назад/Back</a> <br>"
+				dat += "<br><a href='?_src_=prefs;preference=specials;back=1'>Назад</a> <br>"
 				dat += "<center>"
 				usr.browse_rsc_icon("icons/special/special.dmi", "special_[skill_type]")
 				dat += "<img src='special_[skill_type].png' class='center'> <br>"
@@ -300,13 +300,13 @@ var/list/preferences_datums = list()
 	dat += "<hr><center>"
 
 	if(!IsGuestKey(user.key))
-		dat += "<a href='?_src_=prefs;preference=load'>Undo</a> "
-		dat += "<a href='?_src_=prefs;preference=save'>Save Setup</a> "
+		dat += "<a href='?_src_=prefs;preference=load'>Отмена</a> "
+		dat += "<a href='?_src_=prefs;preference=save'>Сохранить натсройки</a> "
 
-	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
+	dat += "<a href='?_src_=prefs;preference=reset_all'>Сбросить настройки</a>"
 	dat += "</center>"
 
-	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 750)
+	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Настройки Персонажа</div>", 640, 750)
 	popup.set_content(dat)
 	popup.open(0)
 
@@ -634,9 +634,9 @@ var/list/preferences_datums = list()
 		if(href_list["buy"])
 			var/datum/content_pack/pack = SScontent.get_pack(href_list["buy"])
 			if(pack.id in parent.content_packs)
-				to_chat(user, "<span class='warning'>You already have [pack.name]!</span>")
+				to_chat(user, "<span class='warning'>У вас уже есть [pack.name]!</span>")
 			else if(parent.donate_money < pack.price)
-				to_chat(user, "<span class='warning'>Not enough money!</span>")
+				to_chat(user, "<span class='warning'>Недостаточно денег!</span>")
 			else if(SScontent.buy_pack(parent.ckey, pack.id, pack.price))
 				to_chat(user, "You get \"[pack.name]\".")
 				parent.update_content_data(TRUE)
