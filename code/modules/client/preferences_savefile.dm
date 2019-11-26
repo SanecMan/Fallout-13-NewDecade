@@ -308,6 +308,38 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["religion_name"]		>> custom_names["religion"]
 	S["deity_name"]			>> custom_names["deity"]
 
+	//SKILLLSSSSSs by awwware
+	S["s_small_guns"]		>> SKILLS.small_guns
+	S["s_big_guns"]			>> SKILLS.big_guns
+	S["s_barter"]			>> SKILLS.barter
+	S["s_energy_weapons"]	>> SKILLS.energy_weapons
+	S["s_explosives"]		>> SKILLS.explosives
+	S["s_lockpick"]			>> SKILLS.lockpick
+	S["s_medicine"]			>> SKILLS.medicine
+	S["s_melee_weapons"]	>> SKILLS.melee_weapons
+	S["s_repair"]			>> SKILLS.repair
+	S["s_science"]			>> SKILLS.science
+	S["s_sneak"]			>> SKILLS.sneak
+	S["s_speech"]			>> SKILLS.speech
+	S["s_unarmed"]			>> SKILLS.unarmed
+
+	S["s_strength"]			>> SPEC.strength
+	S["s_perception"]		>> SPEC.perception
+	S["s_endurance"]		>> SPEC.endurance
+	S["s_charisma"]			>> SPEC.charisma
+	S["s_intelligence"]		>> SPEC.intelligence
+	S["s_agility"]			>> SPEC.agility
+	S["s_luck"]				>> SPEC.luck
+
+	/*
+		var/perception = 1
+	var/endurance = 1
+	var/charisma = 1
+	var/intelligence = 1
+	var/agility = 1
+	var/luck = 1
+	*/
+
 	//Jobs
 	S["joblessrole"]		>> joblessrole
 	S["job_civilian_high"]	>> job_civilian_high
@@ -366,6 +398,30 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["spines"] 	= sanitize_inlist(features["spines"], spines_list)
 	features["body_markings"] 	= sanitize_inlist(features["body_markings"], body_markings_list)
 	features["feature_lizard_legs"]	= sanitize_inlist(features["legs"], legs_list, "Normal Legs")
+
+	//SKILLLSSSSSs by awwware
+	SKILLS.small_guns =	sanitize_integer(SKILLS.small_guns, 1, 10, 1)
+	SKILLS.big_guns = sanitize_integer(SKILLS.big_guns, 1, 10, 1)
+	SKILLS.barter = sanitize_integer(SKILLS.barter, 1, 10, 1)
+	SKILLS.energy_weapons = sanitize_integer(SKILLS.energy_weapons, 1, 10, 1)
+	SKILLS.explosives = sanitize_integer(SKILLS.explosives, 1, 10, 1)
+	SKILLS.lockpick = sanitize_integer(SKILLS.lockpick, 1, 10, 1)
+	SKILLS.medicine = sanitize_integer(SKILLS.medicine, 1, 10, 1)
+	SKILLS.melee_weapons = sanitize_integer(SKILLS.melee_weapons, 1, 10, 1)
+	SKILLS.repair = sanitize_integer(SKILLS.repair, 1, 10, 1)
+	SKILLS.science = sanitize_integer(SKILLS.science, 1, 10, 1)
+	SKILLS.sneak = sanitize_integer(SKILLS.sneak, 1, 10, 1)
+	SKILLS.speech = sanitize_integer(SKILLS.speech, 1, 10, 1)
+	SKILLS.unarmed = sanitize_integer(SKILLS.unarmed, 1, 10, 1)
+
+
+	SPEC.strength = sanitize_integer(SPEC.strength, 1, 10, 1)
+	SPEC.perception = sanitize_integer(SPEC.perception, 1, 10, 1)
+	SPEC.endurance = sanitize_integer(SPEC.endurance, 1, 10, 1)
+	SPEC.charisma = sanitize_integer(SPEC.charisma, 1, 10, 1)
+	SPEC.intelligence = sanitize_integer(SPEC.intelligence, 1, 10, 1)
+	SPEC.agility = sanitize_integer(SPEC.agility, 1, 10, 1)
+	SPEC.luck = sanitize_integer(SPEC.luck, 1, 10, 1)
 
 	joblessrole	= sanitize_integer(joblessrole, 1, 3, initial(joblessrole))
 	job_civilian_high = sanitize_integer(job_civilian_high, 0, 65535, initial(job_civilian_high))
@@ -428,6 +484,29 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["cyborg_name"] << custom_names["cyborg"]
 	S["religion_name"] << custom_names["religion"]
 	S["deity_name"] << custom_names["deity"]
+
+	//SKILLLSSSSSs by awwware
+	S["s_small_guns"]		<< SKILLS.small_guns
+	S["s_big_guns"]			<< SKILLS.big_guns
+	S["s_barter"]			<< SKILLS.barter
+	S["s_energy_weapons"]	<< SKILLS.energy_weapons
+	S["s_explosives"]		<< SKILLS.explosives
+	S["s_lockpick"]			<< SKILLS.lockpick
+	S["s_medicine"]			<< SKILLS.medicine
+	S["s_melee_weapons"]	<< SKILLS.melee_weapons
+	S["s_repair"]			<< SKILLS.repair
+	S["s_science"]			<< SKILLS.science
+	S["s_sneak"]			<< SKILLS.sneak
+	S["s_speech"]			<< SKILLS.speech
+	S["s_unarmed"]			<< SKILLS.unarmed
+
+	S["s_strength"]			<< SPEC.strength
+	S["s_perception"]		<< SPEC.perception
+	S["s_endurance"]		<< SPEC.endurance
+	S["s_charisma"]			<< SPEC.charisma
+	S["s_intelligence"]		<< SPEC.intelligence
+	S["s_agility"]			<< SPEC.agility
+	S["s_luck"]				<< SPEC.luck
 
 	//Jobs
 	S["joblessrole"] << joblessrole

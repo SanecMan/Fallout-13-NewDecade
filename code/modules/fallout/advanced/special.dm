@@ -1,25 +1,3 @@
-#define SPECIAL_POINTS 28
-
-// WEIGHT = contents_weight/(RATIO_WEIGHT + (special.getPoint("s") * 15))
-// DAMAGE = 1 - (special.getPoint("e") * 0.025)
-// PRICE  = Itm.price * (0.50 + (usr.special.getPoint("c") * 0.03) )
-// DELAY = fire_delay / (usr.special.getPoint("a") * 0.2)
-// MISS = missProb = 2 * special.getPoint("l")
-// METABO = 1.3 - (0,068 * H.special.getPoint("i"))
-
-/mob/living
-	var/datum/special/specialTarget
-
-/mob/living/proc/SPECIALshow()
-	set name = "S.P.E.C.I.A.L."
-	set category = "Advanced"
-
-	if(!specialTarget)
-		specialTarget = new /datum/special()
-		specialTarget.owner = src
-
-	specialTarget.ui("list")
-
 /datum/special
 	var/strength = 1
 	var/perception = 1
@@ -28,12 +6,7 @@
 	var/intelligence = 1
 	var/agility = 1
 	var/luck = 1
-	var/datum/browser/popup
-
 	var/mob/living/carbon/human/owner
-
-/datum/special/New()
-	popup = new(usr, "vending", "S.P.E.C.I.A.L.")
 
 /datum/special/proc/reagent(type)
 	if(!owner)
@@ -147,81 +120,3 @@
 			description = "Влияет на шанс попадания по Вам, качество вещей в мобах. Fate. Karma. An extremely high or low Luck will affect the character - somehow. Events and situations will be changed by how lucky (or unlucky) your character is. (Modifies: Evasion, looting from mobs.)"
 
 	return description
-
-/datum/special/proc/ui(type)
-	if(popup)
-		popup.close()
-
-	var/html
-
-	switch(type)
-		if("list")
-			html += "<a href='byond://?src=\ref[src];special=s'>Сила/Strength</a> <br>"
-			html += "<a href='byond://?src=\ref[src];special=p'>Восприятие/Perception</a> <br>"
-			html += "<a href='byond://?src=\ref[src];special=e'>Выносливость/Endurance</a> <br>"
-			html += "<a href='byond://?src=\ref[src];special=c'>Харизма/Charisma</a> <br>"
-			html += "<a href='byond://?src=\ref[src];special=i'>Интеллект/Intelligence</a> <br>"
-			html += "<a href='byond://?src=\ref[src];special=a'>Ловкость/Agility</a> <br>"
-			html += "<a href='byond://?src=\ref[src];special=l'>Удача/Luck</a> <br>"
-			html += "<br><a href='byond://?src=\ref[src];apply=1'>Принять/Apply</a> <br>"
-		else
-			//usr.browse_rsc_icon("icons/special/[type].png", "special_[type]")
-			//usr.browse_rsc("icons/special/[type].png", "special_[type]")
-			usr.browse_rsc_icon("icons/special/special.dmi", "special_[type]")
-			html += "<img src='special_[type].png' class='center'> <br>"
-			//html += "<img src='icons/special/[type].png' style='width: 32px; height: 32px;'> <br>"
-			html += getPointDescription(type)
-			var/current = getPoint(type, TRUE)
-			var/left = max(0, SPECIAL_POINTS - getSpentPoints())
-
-			html += "<br>Сейчас/Current: [current] (осталось/left [left])<br>"
-
-			if((current > 1))
-				html += "<a href='byond://?src=\ref[src];dec=[type]'>Понизить/Reduce</a>"
-
-			if((left > 0) & (current < 10))
-				html += "<a href='byond://?src=\ref[src];inc=[type]'>Повысить/Increace</a>"
-
-			html += "<br><a href='byond://?src=\ref[src];back=1'>Назад/Back</a> <br>"
-
-	popup.set_content(html)
-	popup.open()
-
-/datum/special/Topic(href, href_list)
-	if(..())
-		return
-
-	if(href_list["apply"])
-		var/mob/living/carbon/human/user = usr
-
-		if(getSpentPoints() != SPECIAL_POINTS)
-			to_chat(usr, "<span class='warning'>You must spent all points!</span>")
-			return
-
-		user.special = src
-
-		popup.close()
-
-		user.verbs -= /mob/living/proc/SPECIALshow
-		//qdel(src)
-
-	if(href_list["special"])
-		var/type = href_list["special"]
-		ui(type)
-
-	if(href_list["back"])
-		ui("list")
-
-	if(href_list["inc"])
-		var/type = href_list["inc"]
-		var/newPoints = getPoint(type, TRUE) + 1
-		if(newPoints <= 10)
-			setPoint(type, newPoints)
-		ui(type)
-
-	if(href_list["dec"])
-		var/type = href_list["dec"]
-		var/newPoints = getPoint(type, TRUE) - 1
-		if(newPoints > 0)
-			setPoint(type, newPoints)
-		ui(type)

@@ -1,5 +1,4 @@
 
-
 var/list/preferences_datums = list()
 
 
@@ -26,6 +25,9 @@ var/list/preferences_datums = list()
 										//If it's 0, that's good, if it's anything but 0, the owner of this prefs file's antag choices were,
 										//autocorrected this round, not that you'd need to check that.
 
+	//Skills AWWARE
+	var/datum/special/SPEC = new /datum/special()
+	var/datum/skills/SKILLS = new /datum/skills()
 
 	var/UI_style = "Fallout"
 	var/hotkeys = FALSE
@@ -138,7 +140,7 @@ var/list/preferences_datums = list()
 	return
 
 
-/datum/preferences/proc/ShowChoices(mob/user)
+/datum/preferences/proc/ShowChoices(mob/user, var/skill_type = "")
 	if(!user || !user.client)
 		return
 	if(update_preview)
@@ -150,7 +152,9 @@ var/list/preferences_datums = list()
 	var/dat = "<center>"
 
 	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Character Settings</a> "
-	dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Game Preferences</a>"
+	dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Game Preferences</a> "
+	dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>Skills</a> "
+	dat += "<a href='?_src_=prefs;preference=tab;tab=3' [current_tab == 3 ? "class='linkOn'" : ""]>Special</a>"
 
 	if(!path)
 		dat += "<div class='notice'>Please create an account to save your preferences</div>"
@@ -237,31 +241,62 @@ var/list/preferences_datums = list()
 				dat += "<b>Preferred Map:</b> <a href='?_src_=prefs;preference=preferred_map;task=input'>[p_map]</a><br>"
 
 			dat += "<b>FPS:</b> <a href='?_src_=prefs;preference=clientfps;task=input'>[clientfps]</a><br>"
-/*
-			dat += "<h2>Special Role Settings</h2>"
 
-			if(jobban_isbanned(user, "Syndicate"))
-				dat += "<font color=red><b>You are banned from antagonist roles.</b></font>"
-				src.be_special = list()
-
-
-			for (var/i in special_roles)
-				if(jobban_isbanned(user, i))
-					dat += "<b>Be [capitalize(i)]:</b> <a href='?_src_=prefs;jobbancheck=[i]'>BANNED</a><br>"
-				else
-					var/days_remaining = null
-					if(config.use_age_restriction_for_jobs && ispath(special_roles[i])) //If it's a game mode antag, check if the player meets the minimum age
-						var/mode_path = special_roles[i]
-						var/datum/game_mode/temp_mode = new mode_path
-						days_remaining = temp_mode.get_remaining_days(user.client)
-
-					if(days_remaining)
-						dat += "<b>Be [capitalize(i)]:</b> <font color=red> \[IN [days_remaining] DAYS]</font><br>"
-					else
-						dat += "<b>Be [capitalize(i)]:</b> <a href='?_src_=prefs;preference=be_special;be_special_type=[i]'>[(i in be_special) ? "Yes" : "No"]</a><br>"
-*/
 			dat += "</td></tr></table>"
+		if(2)
+			if(skill_type == "")
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=small_guns'>Small Guns</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Big Guns</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Barter</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Energy Weapon</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Explosives</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Lockpick</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>Medicine</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=melee_weapons'>Melee Weapons</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=repair'>Repair</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=sneak'>Sneak</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=speech'>Speech</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=unarmed'>Unarmed</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=science'>Science</a> <br>"
+				dat += "<br><a href='?_src_=prefs;preference=skills;removeall=1'>Сбросить всё</a> <br>"
+			else
+				dat += "<br><a href='?_src_=prefs;preference=skills;back=1'>Назад/Back</a> <br>"
+				dat += "<center>"
+				usr.browse_rsc_icon("icons/special/special.dmi", "skills_[skill_type]")
+				dat += "<img src='skills_[skill_type].png' class='center'> <br>"
+				dat += "</center>"
+				dat += SKILLS.getPointDescription(skill_type)
+				var/current = SKILLS.getPoint(skill_type, TRUE)
+				var/left = max(0, SKILLS_POINTS - SKILLS.getSpentPoints())
 
+				dat += "<br>Current: [current] (left [left])<br>"
+
+				for (var/i = 1, i < 11, i++)
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=[skill_type];num=[i]'>[i]</a>"
+		if(3)
+			if(skill_type == "")
+				dat += "<a href='?_src_=prefs;preference=specials;special=s'>Сила/Strength</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=p'>Восприятие/Perception</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=e'>Выносливость/Endurance</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=c'>Харизма/Charisma</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=i'>Интеллект/Intelligence</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=a'>Ловкость/Agility</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=specials;special=l'>Удача/Luck</a> <br>"
+				dat += "<br><a href='?_src_=prefs;preference=specials;removeall=1'>Сбросить всё</a> <br>"
+			else
+				dat += "<br><a href='?_src_=prefs;preference=specials;back=1'>Назад/Back</a> <br>"
+				dat += "<center>"
+				usr.browse_rsc_icon("icons/special/special.dmi", "special_[skill_type]")
+				dat += "<img src='special_[skill_type].png' class='center'> <br>"
+				dat += "</center>"
+				dat += SPEC.getPointDescription(skill_type)
+				var/current = SPEC.getPoint(skill_type, TRUE)
+				var/left = max(0, SPECIAL_POINTS - SPEC.getSpentPoints())
+
+				dat += "<br>Current: [current] (left [left])<br>"
+
+				for (var/w = 1, w < 11, w++)
+					dat += "<a href='?_src_=prefs;preference=specials;special=[skill_type];num=[w]'>[w]</a>"
 	dat += "<hr><center>"
 
 	if(!IsGuestKey(user.key))
@@ -290,7 +325,6 @@ var/list/preferences_datums = list()
 	if(SSjob.occupations.len <= 0)
 		HTML += "The job ticker is not yet finished creating jobs, please try again later"
 		HTML += "<center><a href='?_src_=prefs;preference=job;task=close'>Done</a></center><br>" // Easier to press up here.
-
 	else
 		HTML += "<b>Choose occupation chances</b><br>"
 		HTML += "<div align='center'>Left-click to raise an occupation preference, right-click to lower it.<br></div>"
@@ -611,6 +645,51 @@ var/list/preferences_datums = list()
 		if(href_list["pack"])
 			selected_pack = href_list["pack"]
 		ShowContentPacks(user)
+		return 1
+
+
+	if(href_list["preference"] == "skills")
+		var/sType = href_list["skill_type"]
+		if(href_list["num"])
+			var/num = text2num(href_list["num"])
+			var/currPoint = SKILLS.getPoint(sType)
+			var/left = max(0, SKILLS_POINTS - SKILLS.getSpentPoints())
+			if(num != currPoint && left - num >= 0 || currPoint >= num && currPoint != num)
+				SKILLS.setPoint(sType, num)
+		if(href_list["removeall"])
+			SKILLS.small_guns = 1
+			SKILLS.big_guns = 1
+			SKILLS.barter = 1
+			SKILLS.energy_weapons = 1
+			SKILLS.explosives = 1
+			SKILLS.lockpick = 1
+			SKILLS.medicine = 1
+			SKILLS.melee_weapons = 1
+			SKILLS.repair = 1
+			SKILLS.science = 1
+			SKILLS.sneak = 1
+			SKILLS.speech = 1
+			SKILLS.unarmed = 1
+		ShowChoices(user, sType)
+		return 1
+
+	if(href_list["preference"] == "specials")
+		var/sType = href_list["special"]
+		if(href_list["num"])
+			var/num = text2num(href_list["num"])
+			var/currPoint = SPEC.getPoint(sType)
+			var/left = max(0, SPECIAL_POINTS - SPEC.getSpentPoints())
+			if(num != currPoint && left - num >= 0 || currPoint >= num && currPoint != num)
+				SPEC.setPoint(sType, num)
+		if(href_list["removeall"])
+			SPEC.strength = 1
+			SPEC.perception = 1
+			SPEC.endurance = 1
+			SPEC.charisma = 1
+			SPEC.intelligence = 1
+			SPEC.agility = 1
+			SPEC.luck = 1
+		ShowChoices(user, sType)
 		return 1
 
 	switch(href_list["task"])
@@ -1021,16 +1100,6 @@ var/list/preferences_datums = list()
 				if("allow_midround_antag")
 					toggles ^= MIDROUND_ANTAG
 
-//				if("parallaxup")
-//					parallax = Wrap(parallax + 1, PARALLAX_INSANE, PARALLAX_DISABLE + 1)
-//					if (parent && parent.mob && parent.mob.hud_used)
-//						parent.mob.hud_used.update_parallax_pref()
-
-//				if("parallaxdown")
-//					parallax = Wrap(parallax - 1, PARALLAX_INSANE, PARALLAX_DISABLE + 1)
-//					if (parent && parent.mob && parent.mob.hud_used)
-//						parent.mob.hud_used.update_parallax_pref()
-
 				if("save")
 					save_preferences()
 					save_character()
@@ -1069,6 +1138,14 @@ var/list/preferences_datums = list()
 	character.eye_color = eye_color
 	character.hair_color = hair_color
 	character.facial_hair_color = facial_hair_color
+
+	//SKILLS AWWARE
+	//character.skills = SKILLS
+	//SKILLS.owner = character
+	character.skills = SKILLS
+
+	//SPEC.owner = character
+	character.special = SPEC
 
 	character.skin_tone = skin_tone
 	character.hair_style = hair_style

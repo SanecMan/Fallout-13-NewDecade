@@ -1,18 +1,3 @@
-#define SKILLS_POINTS 39
-
-/mob/living
-	var/datum/skills/skillsTarget
-
-/mob/living/proc/SKILLSshow()
-	set name = "SKILLS"
-	set category = "Advanced"
-
-	if(!skillsTarget)
-		skillsTarget = new /datum/skills()
-		skillsTarget.owner = src
-
-	skillsTarget.ui("list")
-
 /datum/skills
 	var
 		small_guns = 1
@@ -29,12 +14,9 @@
 		speech = 1
 		unarmed = 1
 	//(1-10)
-	var/datum/browser/popup
+	//var/datum/browser/popup
 
 	var/mob/living/carbon/human/owner
-
-/datum/skills/New()
-	popup = new(usr, "vending", "SKILLS")
 
 /datum/skills/proc/reagent(type)
 	if(!owner)
@@ -44,41 +26,7 @@
 
 /datum/skills/proc/getMeleeMod()
 	return (getPoint("unarmed") * 1.5)
-/*
-/datum/special/proc/getWeight(var/mob/living/carbon/human/user)
-	if(!user)
-		return 0
 
-	. = 0
-
-	if(user.perks.have(/datum/perk/strongback))
-		. += 20
-
-	if(istype(user.wear_suit, /obj/item/clothing/suit/armor/f13/power_armor))
-		. += 10 + getPoint("s") * 5 + 20
-
-	. += 10 + getPoint("s") * 5
-
-	return .
-
-/datum/skills/proc/getPointBonus(type)
-	. = 0
-	switch(type)
-		if("s")
-			. = (reagent("jet") ? 10 : 0) + (reagent("psyho") ? 4 : 0)
-		if("p")
-			. = 0
-		if("e")
-			. = (reagent("psyho") ? 4 : 0)
-		if("c")
-			. = 0
-		if("i")
-			. = (reagent("mentats") ? 10 : 0)
-		if("a")
-			. = (reagent("turbo") ? 10 : 0)
-		if("l")
-			. = 0
-*/
 /datum/skills/proc/getPoint(type, base = FALSE)
 	switch(type)
 		if("small_guns")
@@ -110,14 +58,8 @@
 		else
 			. = 26
 
-	/*if(!base)
-		. += getPointBonus(type)*/
-
 /datum/skills/proc/getSpentPoints()
-	var/i = small_guns + big_guns + barter + energy_weapons
-	i += explosives + lockpick + medicine + melee_weapons
-	i += repair + sneak + speech + unarmed + science
-	return i
+	return small_guns + big_guns + barter + energy_weapons +  explosives + lockpick + medicine + melee_weapons + repair + sneak + speech + unarmed + science
 
 /datum/skills/proc/setPoint(type, value)
 	switch(type)
@@ -180,6 +122,7 @@
 			description = "Covers a variety of high-technology skills, such as computers, biology, physics, and geology."
 	return description
 
+/*
 /datum/skills/proc/ui(type)
 	if(popup)
 		popup.close()
@@ -203,24 +146,21 @@
 			html += "<a href='byond://?src=\ref[src];skills=science'>science</a> <br>"
 			html += "<br><a href='byond://?src=\ref[src];apply=1'>Apply</a> <br>"
 		else
-			//usr.browse_rsc_icon("icons/special/[type].png", "special_[type]")
-			//usr.browse_rsc("icons/special/[type].png", "special_[type]")
 			usr.browse_rsc_icon("icons/special/special.dmi", "skills_[type]")
 			html += "<img src='skills_[type].png' class='center'> <br>"
-			//html += "<img src='icons/special/[type].png' style='width: 32px; height: 32px;'> <br>"
 			html += getPointDescription(type)
 			var/current = getPoint(type, TRUE)
 			var/left = max(0, SKILLS_POINTS - getSpentPoints())
 
-			html += "<br>Сейчас/Current: [current] (осталось/left [left])<br>"
+			html += "<br>пїЅпїЅпїЅпїЅпїЅпїЅ/Current: [current] (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/left [left])<br>"
 
 			if((current > 1))
-				html += "<a href='byond://?src=\ref[src];dec=[type]'>Понизить/Reduce</a>"
+				html += "<a href='byond://?src=\ref[src];dec=[type]'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/Reduce</a>"
 
 			if((left > 0) & (current < 10))
-				html += "<a href='byond://?src=\ref[src];inc=[type]'>Повысить/Increace</a>"
+				html += "<a href='byond://?src=\ref[src];inc=[type]'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/Increace</a>"
 
-			html += "<br><a href='byond://?src=\ref[src];back=1'>Назад/Back</a> <br>"
+			html += "<br><a href='byond://?src=\ref[src];back=1'>пїЅпїЅпїЅпїЅпїЅ/Back</a> <br>"
 
 	popup.set_content(html)
 	popup.open()
@@ -233,15 +173,12 @@
 		var/mob/living/carbon/human/user = usr
 
 		if(getSpentPoints() != SKILLS_POINTS)
-			to_chat(usr, "<span class='warning'>Вы должны распределить очки!</span>")
+			to_chat(usr, "<span class='warning'>пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ!</span>")
 			return
 
 		user.skills = src
 
 		popup.close()
-
-		user.verbs -= /mob/living/proc/SKILLSshow
-		//qdel(src)
 
 	if(href_list["skills"])
 		var/type = href_list["skills"]
@@ -263,3 +200,4 @@
 		if(newPoints > 0)
 			setPoint(type, newPoints)
 		ui(type)
+*/

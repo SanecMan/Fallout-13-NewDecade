@@ -11,6 +11,9 @@
 	if(!special)
 		special = new /datum/special()
 		special.owner = src
+	if(!skills)
+		skills = new /datum/skills()
+		skills.owner = src
 
 	..()
 

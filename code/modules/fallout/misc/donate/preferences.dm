@@ -184,7 +184,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	CHECK_TICK
 
 	var/html = {"<center>
-	<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>Character Settings</a> <a href='?_src_=prefs;preference=tab;tab=1' >Game Preferences</a>
+	<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>Character Settings</a> <a href='?_src_=prefs;preference=tab;tab=1' >Game Preferences</a> <a href='?_src_=prefs;preference=tab;tab=2' >Skills</a> <a href='?_src_=prefs;preference=tab;tab=3' >Special</a>
 	</center>
 	<HR>
 	<center>
@@ -290,7 +290,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 					<a href='?_src_=prefs;preference=next;task=equip;item=shoes'>&gt;</a>
 				</div>
 			</div>
-		</div><!--1 блок 39-->
+		</div><!--1 пїЅпїЅпїЅпїЅ 39-->
 		<div class="third_block_39 job">
 		<h3>Choose your role</h3><br>
 			<div class="job_p">

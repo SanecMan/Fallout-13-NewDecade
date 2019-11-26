@@ -1364,6 +1364,7 @@
 #include "code\modules\fallout\mob\npc\wolf.dm"
 #include "code\modules\fallout\mob\npc\commanded\_commanded.dm"
 #include "code\modules\fallout\mob\npc\commanded\bear.dm"
+#include "code\modules\fallout\mob\npc\commanded\bruhmin.dm"
 #include "code\modules\fallout\mob\npc\commanded\commanded.dm"
 #include "code\modules\fallout\mob\npc\commanded\commands_helper.dm"
 #include "code\modules\fallout\mob\npc\commanded\dog.dm"

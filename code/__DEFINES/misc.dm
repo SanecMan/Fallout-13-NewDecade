@@ -143,6 +143,9 @@
 #define STAGE_FIVE 9
 #define STAGE_SIX 11 //From supermatter shard
 
+#define SKILLS_POINTS 39
+#define SPECIAL_POINTS 28
+
 //zlevel defines, can be overridden for different maps in the appropriate _maps file.
 #define ZLEVEL_STATION 1
 #define ZLEVEL_CENTCOM 3//2
