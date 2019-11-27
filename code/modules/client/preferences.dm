@@ -293,7 +293,7 @@ var/list/preferences_datums = list()
 				var/current = SPEC.getPoint(skill_type, TRUE)
 				var/left = max(0, SPECIAL_POINTS - SPEC.getSpentPoints())
 
-				dat += "<br>Current: [current] (left [left])<br>"
+				dat += "<br>Сейчас: [current] (осталось [left -1])<br>"
 
 				for (var/w = 1, w < 11, w++)
 					dat += "<a href='?_src_=prefs;preference=specials;special=[skill_type];num=[w]'>[w]</a>"

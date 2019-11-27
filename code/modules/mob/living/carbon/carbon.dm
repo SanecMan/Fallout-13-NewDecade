@@ -1,6 +1,9 @@
 /mob/living/carbon
 	blood_volume = BLOOD_VOLUME_NORMAL
-
+	verb_say = "говорит"
+	verb_ask = "спрашивает"
+	verb_exclaim = "восклицает"
+	verb_yell = "ноет"
 	var/datum/special/special
 	var/datum/skills/skills
 

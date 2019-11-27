@@ -770,11 +770,11 @@
 		H.metabolism_efficiency = 1
 	else if(H.nutrition > NUTRITION_LEVEL_FED && H.satiety > 80)
 		if(H.metabolism_efficiency != 1.25 && (H.dna && H.dna.species && !(NOHUNGER in H.dna.species.species_traits)))
-			to_chat(H, "<span class='notice'>You feel vigorous.</span>")
+			to_chat(H, "<span class='notice'>Вы чувствуете себя сытым.</span>")
 			H.metabolism_efficiency = 1.25
 	else if(H.nutrition < NUTRITION_LEVEL_STARVING + 50)
 		if(H.metabolism_efficiency != 0.8)
-			to_chat(H, "<span class='notice'>You feel sluggish.</span>")
+			to_chat(H, "<span class='notice'>Вы чувствуете что хотите есть.</span>")
 		H.metabolism_efficiency = 0.8
 	else
 		if(H.metabolism_efficiency == 1.25)

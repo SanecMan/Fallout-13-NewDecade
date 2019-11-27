@@ -83,7 +83,7 @@
 /client/p_are(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = "является"
+	. = "" //is
 	if(temp_gender == PLURAL || temp_gender == NEUTER)
 		. = "are"
 
@@ -160,7 +160,7 @@
 /mob/p_are(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = "является"
+	. = "" //is
 	if(temp_gender == PLURAL)
 		. = "are"
 
