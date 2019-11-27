@@ -74,7 +74,7 @@ mob/proc/set_status(var/status)
 
 	src.status = S.id
 	var/text
-	text += "<span class='notice'>Now you are <span style='color: [S.color];'>[S.name]</span>.</span>"
+	text += "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>"
 	if(S.welcome_text)
 		text += "<br>[S.welcome_text]"
 	to_chat(src, text)
@@ -90,11 +90,11 @@ mob/proc/set_status(var/status)
 	set category = "Faction"
 	if(status == "none")
 		return
-	if(alert("Are you sure you want to leave?",,"Yes","No")=="No")
+	if(alert("Вы уверены что хотите покинуть фракцию?",,"Yes","No")=="No")
 		return
 
 	if(jobban_isbanned(src, "labor"))
-		to_chat(usr, "<span class='warning'>You are on corrections!</span>")
+		to_chat(usr, "<span class='warning'>Вы в бане!</span>")
 		return
 
 	set_status("none")
@@ -107,20 +107,20 @@ mob/proc/set_status(var/status)
 		return
 	if(M.status == status)
 		return
-	if(alert(M, "[src] invites you to be [status].",,"Yes","No")=="No")
-		to_chat(src, "<span class='warning'>[M.name] refused the offer to join a faction.</span>")
+	if(alert(M, "[src] приглашает вас быть [status].",,"Yes","No")=="No")
+		to_chat(src, "<span class='warning'>[M.name] отказался вступать во фракцию.</span>")
 		return
 	else
-		to_chat(src, "<span class='notice'>[M.name] accepted the offer to join a faction.</span>")
+		to_chat(src, "<span class='notice'>[M.name] принял запрос на вступление во фракцию.</span>")
 	var/datum/status/S = get_status_datum(status)
 	if(S && S.change_faction && M.social_faction != src.social_faction)
 		M.set_faction(src.social_faction)
 		var/datum/f13_faction/F = get_faction_datum(src.social_faction)
-		to_chat(M, "<span class='notice'>You have joined the <span style='color: [F.color];'>[F.name]</span> faction.</span>")
+		to_chat(M, "<span class='notice'>Вы присоеденились к <span style='color: [F.color];'>[F.name]</span> faction.</span>")
 		if(F.welcome_text)
 			to_chat(M, "<br>[F.welcome_text]")
 	M.set_status(status)
-	to_chat(M, "<span class='notice'>Now you are <span style='color: [S.color];'>[S.name]</span>.</span>")
+	to_chat(M, "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>")
 	if(S.welcome_text)
 		to_chat(M, "<br>[S.welcome_text]")
 

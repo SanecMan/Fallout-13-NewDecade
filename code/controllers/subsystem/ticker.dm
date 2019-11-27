@@ -77,8 +77,8 @@ var/datum/subsystem/ticker/ticker
 	switch(current_state)
 		if(GAME_STATE_STARTUP)
 			timeLeft = config.lobby_countdown * 10
-			to_chat(world, "<span class='boldnotice'>Welcome to [station_name()]!</span>")
-			to_chat(world, "Please set up your character and select \"Ready\". The game will start in [config.lobby_countdown] seconds.")
+			to_chat(world, "<span class='boldnotice'>Добро пожаловать на Пустоши!</span>")
+			to_chat(world, "Пожалуйста, настройте своего персонажа и нажмите \"Готов\". Игра начнется через [config.lobby_countdown] секунд.")
 			current_state = GAME_STATE_PREGAME
 			for(var/client/C in clients)
 				window_flash(C) //let them know lobby has opened up.
@@ -149,7 +149,7 @@ var/datum/subsystem/ticker/ticker
 	else
 		mode = config.pick_mode(master_mode)
 		if(!mode.can_start())
-			to_chat(world, "<B>Unable to start [mode.name].</B> Not enough players, [mode.required_players] players and [mode.required_enemies] eligible antagonists needed. Reverting to pre-game lobby.")
+			to_chat(world, "<B>Не вышло запустить [mode.name].</B> Недостаточно игроков, [mode.required_players] players and [mode.required_enemies] eligible antagonists needed. Reverting to pre-game lobby.")
 			qdel(mode)
 			mode = null
 			SSjob.ResetOccupations()
@@ -175,8 +175,8 @@ var/datum/subsystem/ticker/ticker
 		for (var/datum/game_mode/M in runnable_modes)
 			modes += M.name
 		modes = sortList(modes)
-		to_chat(world, "<b>The gamemode is: secret!\
-		Possibilities:</B> [english_list(modes)]")
+		to_chat(world, "<b>Игровой режим: секретно!\
+		Возможно:</B> [english_list(modes)]")
 	else
 		mode.announce()
 
@@ -195,7 +195,7 @@ var/datum/subsystem/ticker/ticker
 
 	Master.RoundStart()
 
-	to_chat(world, "<B><FONT color='#3c4438'>The following events shall be remembered under the code name of:<br><FONT color='#77ca00'>[station_name()]</FONT><br><FONT color='#3c4438'>Best of luck with your survival!</FONT></B>")
+	to_chat(world, "<B><FONT color='#3c4438'>Все последующие события будут записаны под кодовым именем:<br><FONT color='#77ca00'>[station_name()]</FONT><br><FONT color='#3c4438'>Удачи вам в вашем выживании!</FONT></B>")
 	to_chat(world, sound('sound/f13music/game_start.ogg'))
 
 	if(SSevent.holidays)
@@ -356,7 +356,7 @@ var/datum/subsystem/ticker/ticker
 
 /datum/subsystem/ticker/proc/declare_completion()
 
-	to_chat(world, "<BR><BR><BR><FONT size=3><B>The round has ended.</B></FONT>")
+	to_chat(world, "<BR><BR><BR><FONT size=3><B>Раунд завершен.</B></FONT>")
 
 	SSobjectives.on_roundend()
 

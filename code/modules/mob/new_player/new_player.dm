@@ -25,19 +25,19 @@
 
 /mob/new_player/proc/new_player_panel()
 
-	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
+	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Настройка персонажа</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+			output += "<p>\[ <b>Готов</b> | <a href='byond://?src=\ref[src];ready=0'>Не готов</a> \]</p>"
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Not Ready</b> \]</p>"
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Готов</a> | <b>Не готов</b> \]</p>"
 
 	else
 		//output += "<p><a href='byond://?src=\ref[src];manifest=1'>View Manifest</A></p>"
-		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Присоедениться!</A></p>"
 
-	output += "<p><a href='byond://?src=\ref[src];show_content=1'>Spend Caps!</a></p>"
+	output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить Контент!</a></p>"
 /*
 	output += "<p><a href='byond://?src=\ref[src];contribute=1'>Contribute</a></p>"
 */
@@ -70,7 +70,7 @@
 	output += "</center>"
 
 	//src << browse(output,"window=playersetup;size=210x240;can_close=0")
-	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>New Player Options</div>", 220, 265)
+	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Настройки нового персонажа</div>", 220, 265)
 	popup.set_window_options("can_close=0")
 	popup.set_content(output)
 	popup.open(0)
@@ -423,14 +423,14 @@
 	var/mins = (mills % 36000) / 600
 	var/hours = mills / 36000
 
-	var/dat = "<div class='notice'>Round Duration: [round(hours)]h [round(mins)]m</div>"
+	var/dat = "<div class='notice'>Длительность раунда: [round(hours)]ч [round(mins)]м</div>"
 
 	var/available_job_count = 0
 	for(var/datum/job/job in SSjob.occupations)
 		if(job && IsJobAvailable(job.title))
 			available_job_count++;
 
-	dat += "<div class='clearBoth'>Choose from the following open positions:</div><br>"
+	dat += "<div class='clearBoth'>Выберите одну из доступных ролей:</div><br>"
 	dat += "<div class='jobs'><div class='jobsColumn'>"
 	var/job_count = 0
 	for(var/datum/job/job in SSjob.occupations)
@@ -453,7 +453,7 @@
 	//src << browse(dat, "window=latechoices;size=300x640;can_close=1")
 
 	// Added the new browser window method
-	var/datum/browser/popup = new(src, "latechoices", "Choose Profession", 440, 500)
+	var/datum/browser/popup = new(src, "latechoices", "Выберите роль", 440, 500)
 	popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 	popup.set_content(dat)
 	popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc

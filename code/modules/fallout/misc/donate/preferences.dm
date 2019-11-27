@@ -149,7 +149,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	"r_name" = "[be_random_name ? "Yes" : "No"]",
 	"name" = "[real_name]",
 
-	"gender" = "[gender == MALE ? "&#9794;Male" : "&#9792;Female"]",
+	"gender" = "[gender == MALE ? "&#9794;Мужчина" : "&#9792;Женщина"]",
 	"age" = "[age]",
 	"r_body" = "[be_random_body ? "Yes" : "No"]",
 	"species" = "[pref_species ? pref_species.name : "Human"]",
@@ -158,15 +158,15 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	"f_id" = "[choiced_faction.id]",
 	"f_name" = "[choiced_faction.full_name]",
 	"f_desc" = "[choiced_faction.description]",
-	"head" = "[e_head ? e_head : "Empty"]",
-	"suit" = "[e_suit ? e_suit : "Empty"]",
-	"uniform" = "[e_uniform ? e_uniform : "Empty"]",
-	"shoes" = "[e_shoes ? e_shoes : "Empty"]",
+	"head" = "[e_head ? e_head : "Пусто"]",
+	"suit" = "[e_suit ? e_suit : "Пусто"]",
+	"uniform" = "[e_uniform ? e_uniform : "Пусто"]",
+	"shoes" = "[e_shoes ? e_shoes : "Пусто"]",
 	"jobs_data" = "[jobs_data]",
-	"gloves" = "[e_gloves ? e_gloves : "Empty"]",
-	"l_pocket" = "[e_l_pocket ? e_l_pocket : "Empty"]",
-	"weapon" = "[e_weapon ? e_weapon : "Empty"]",
-	"r_pocket" = "[e_r_pocket ? e_r_pocket : "Empty"]",
+	"gloves" = "[e_gloves ? e_gloves : "Пусто"]",
+	"l_pocket" = "[e_l_pocket ? e_l_pocket : "Пусто"]",
+	"weapon" = "[e_weapon ? e_weapon : "Пусто"]",
+	"r_pocket" = "[e_r_pocket ? e_r_pocket : "Пусто"]",
 	"hair_style" = "[hair_style]",
 	"hair_color" = "#[hair_color]",
 	"f_hair_style" = "[facial_hair_style]",
@@ -191,7 +191,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	[data["saves_data"]]
 	</center>
 	<div class="first_block">
-		<h2>Identity</h2>
+		<h2>Личность</h2>
 		<table width='100%'>
 			<tr>
 				<td width='75%' valign='top'>
@@ -266,25 +266,25 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 			</div>
 			<div class="right_block_frame">
 				<div class="right_block_frame_item">
-					<h3>Headgear</h3>
+					<h3>Голова</h3>
 					<a href='?_src_=prefs;preference=chooise;task=equip;item=head;' [data["d_head"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["head"], data["d_head"] )]\"" : "" ]>[CutText(data["head"], MAX_ITEM_LENGTH)]</a><br>
 					<a href='?_src_=prefs;preference=previous;task=equip;item=head'>&lt;</a>
 					<a href='?_src_=prefs;preference=next;task=equip;item=head'>&gt;</a>
 				</div>
 				<div class="right_block_frame_item">
-					<h3>Armor</h3>
+					<h3>Броня</h3>
 					<a href='?_src_=prefs;preference=chooise;task=equip;item=armor' [data["d_suit"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["suit"], data["d_suit"])]\"" : "" ]>[CutText(data["suit"], MAX_ITEM_LENGTH)]</a><br>
 					<a href='?_src_=prefs;preference=previous;task=equip;item=armor'>&lt;</a>
 					<a href='?_src_=prefs;preference=next;task=equip;item=armor'>&gt;</a>
 				</div>
 				<div class="right_block_frame_item">
-					<h3>Uniform</h3>
+					<h3>Одежда</h3>
 					<a href='?_src_=prefs;preference=chooise;task=equip;item=uniform' [data["d_uniform"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["uniform"], data["d_uniform"])]\"" : "" ]>[CutText(data["uniform"], MAX_ITEM_LENGTH)]</a><br>
 					<a href='?_src_=prefs;preference=previous;task=equip;item=uniform'>&lt;</a>
 					<a href='?_src_=prefs;preference=next;task=equip;item=uniform'>&gt;</a>
 				</div>
 				<div class="right_block_frame_item">
-					<h3>Shoes</h3>
+					<h3>Обувь</h3>
 					<a href='?_src_=prefs;preference=chooise;task=equip;item=shoes' [data["d_shoes"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["shoes"], data["d_shoes"])]\"" : "" ]>[CutText(data["shoes"], MAX_ITEM_LENGTH)]</a><br>
 					<a href='?_src_=prefs;preference=previous;task=equip;item=shoes'>&lt;</a>
 					<a href='?_src_=prefs;preference=next;task=equip;item=shoes'>&gt;</a>
@@ -340,7 +340,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 							<a href='?_src_=prefs;preference=previous_hair_style;task=input'>&lt;</a>
 							<a href='?_src_=prefs;preference=next_hair_style;task=input'>&gt;</a><br>
 							<span style='border:1px solid #161616; background-color: [data["hair_color"]];'>&nbsp;&nbsp;&nbsp;</span>
-							<a href='?_src_=prefs;preference=hair;task=input'>Change</a><br>
+							<a href='?_src_=prefs;preference=hair;task=input'>Изменить</a><br>
 						</td>
 					</tr>
 				</table>
@@ -350,7 +350,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 							<h3>Лицо</h3>
 							<a href='?_src_=prefs;preference=facial_hair_style;task=input'>[data["f_hair_style"]]</a><br>
 							<a href='?_src_=prefs;preference=previous_facehair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_facehair_style;task=input'>&gt;</a><br><span style='border: 1px solid #161616; background-color: [data["f_hair_color"]];'>&nbsp;&nbsp;&nbsp;</span>
-							<a href='?_src_=prefs;preference=facial;task=input'>Change</a><br>
+							<a href='?_src_=prefs;preference=facial;task=input'>Изменить</a><br>
 						</td>
 					</tr>
 				</table>
@@ -359,14 +359,14 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 						<td valign='top' width='21%'>
 							<h3>Цвет глаз</h3>
 							<span style='border: 1px solid #161616; background-color: [data["eye_color"]];'>&nbsp;&nbsp;&nbsp;</span>
-							<a href='?_src_=prefs;preference=eyes;task=input'>Change</a><br>
+							<a href='?_src_=prefs;preference=eyes;task=input'>Изменить</a><br>
 						</td>
 					</tr>
 				</table>
 				</div>
 				<div class="clearBoth g" ></div>
 				<hr><center>
-				<a href='?_src_=prefs;preference=load'>Undo</a>
+				<a href='?_src_=prefs;preference=load'>Отмена</a>
 				<a href='?_src_=prefs;preference=save'>&#128190; Сохранить настройки</a>
 				<a href='?_src_=prefs;preference=reset_all'>&#9762; Сбросить настройки</a>
 				</center>"}
