@@ -247,7 +247,7 @@ Pipelines + Other Objects -> Pipe network
 		if(target_move.can_crawl_through())
 			if(is_type_in_list(target_move, ventcrawl_machinery))
 				user.forceMove(target_move.loc) //handle entering and so on.
-				user.visible_message("<span class='notice'>You hear something squeezing through the ducts...</span>","<span class='notice'>You climb out the ventilation system.")
+				user.visible_message("<span class='notice'>Вы слышите как что-то ползает в вентиляции...</span>","<span class='notice'>Вы выбрались из вентиляции.")
 			else
 				var/list/pipenetdiff = returnPipenets() ^ target_move.returnPipenets()
 				if(pipenetdiff.len)
@@ -260,7 +260,7 @@ Pipelines + Other Objects -> Pipe network
 	else
 		if((direction & initialize_directions) || is_type_in_list(src, ventcrawl_machinery) && can_crawl_through()) //if we move in a way the pipe can connect, but doesn't - or we're in a vent
 			user.forceMove(src.loc)
-			user.visible_message("<span class='notice'>You hear something squeezing through the ducts...</span>","<span class='notice'>You climb out the ventilation system.")
+			user.visible_message("<span class='notice'>Вы слышите как что-то ползает в вентиляции...</span>","<span class='notice'>Вы выбрались из вентиляции.")
 	user.canmove = 0
 	spawn(1)
 		user.canmove = 1

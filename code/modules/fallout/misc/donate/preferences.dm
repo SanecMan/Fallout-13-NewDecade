@@ -39,7 +39,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 			var/datum/f13_faction/faction = parent.allowed_factions[i]
 			factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>"
 	if(!factions_data)
-		factions_data = "<center>No available factions</center>"
+		factions_data = "<center>Нет доступных фракций</center>"
 
 
 // Roles data. Showing all jobs of selected faction and showing priorities.

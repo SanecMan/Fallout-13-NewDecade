@@ -81,13 +81,13 @@
 	if(do_mob(user, user, adjusted_climb_time))
 		if(src.loc) //Checking if structure has been destroyed
 			if(do_climb(user))
-				user.visible_message("<span class='warning'>[user] climbs onto [src].</span>", \
-									"<span class='notice'>You climb onto [src].</span>")
+				user.visible_message("<span class='warning'>[user] забирается на [src].</span>", \
+									"<span class='notice'>Вы забрались на [src].</span>")
 				add_logs(user, src, "climbed onto")
 				user.Stun(climb_stun)
 				. = 1
 			else
-				to_chat(user, "<span class='warning'>You fail to climb onto [src].</span>")
+				to_chat(user, "<span class='warning'>Вы не смогли забраться на [src].</span>")
 	structureclimber = null
 
 /obj/structure/examine(mob/user)

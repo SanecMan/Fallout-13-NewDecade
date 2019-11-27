@@ -131,25 +131,25 @@ mob/proc/set_status(var/status)
 //***Status***
 
 /datum/status/recruit
-	name = "Recruit"
+	name = "Рекруты"
 	id = "recruit"
 	change_faction = 1
 
 /datum/status/prime
-	name = "Prime"
+	name = "Прайм"
 	id = "prime"
 	change_faction = 1
 	color = "#A6423B"
 
 /datum/status/decanus
-	name = "Decanus"
+	name = "Декан"
 	id = "decanus"
 	change_faction = 1
 	can_invite_to = list("recruit", "prime")
 	color = "#A6423B"
 
 /datum/status/vexillarius
-	name = "Vexillarius"
+	name = "Вексиларий"
 	id = "vexillarius"
 	change_faction = 1
 	can_invite_to = list("recruit", "prime", "decanus")
@@ -157,7 +157,7 @@ mob/proc/set_status(var/status)
 	color = "#983C36"
 
 /datum/status/centurion
-	name = "Centurion"
+	name = "Центурион"
 	id = "centurion"
 	change_faction = 1
 	can_invite_to = list("recruit", "prime", "decanus", "vexillarius")
@@ -165,7 +165,7 @@ mob/proc/set_status(var/status)
 	color = "#8D3731"
 
 /datum/status/legate
-	name = "Legate"
+	name = "Легат"
 	id = "legate"
 	change_faction = 1
 	can_invite_to = list("recruit", "prime", "decanus", "vexillarius", "centurion")
@@ -174,44 +174,44 @@ mob/proc/set_status(var/status)
 	color = "#7A302A"
 
 /datum/status/vranger
-	name = "Veteran Ranger"
+	name = "Рейнджер Ветеран"
 	id = "vranger"
 	change_faction = 1
 	color = "#020070"
 
 /datum/status/ncr_general
-	name = "General"
+	name = "Генерал"
 	id = "ncr_general"
 	change_faction = 1
 	can_invite_to = list("recruit", "trooper", "ncr_sergeant")
 	color = "#02005C"
 
 /datum/status/ncr_sergeant
-	name = "Sergeant"
+	name = "Сержант"
 	id = "ncr_sergeant"
 	change_faction = 1
 	color = "#02005C"
 
 /datum/status/trooper
-	name = "Trooper"
+	name = "Пехотинец"
 	id = "trooper"
 	change_faction = 1
 	color = "#02005C"
 
 /datum/status/elite_trooper
-	name = "Elite Trooper"
+	name = "Элитный Пехотинец"
 	id = "etrooper"
 	change_faction = 1
 	color = "#02005C"
 
 /datum/status/raider
-	name = "Raider"
+	name = "Рейдер"
 	id = "raider"
 	purge_faction = "raiders"
 	color = "#FF0000"
 
 /datum/status/gangleader
-	name = "Gang Leader"
+	name = "Лидер Банды"
 	id = "gangleader"
 	purge_faction = "raiders"
 	can_invite_to = list("raider")
@@ -221,31 +221,31 @@ mob/proc/set_status(var/status)
 	/datum/table_recipe/raider_supafly_helmet, /datum/table_recipe/raider_yankee_helmet)
 
 /datum/status/neutral
-	name = "Neutral"
+	name = "Нейтрал"
 	id = "none"
 	purge_faction = "none"
 
 /datum/status/member
-	name = "Member"
+	name = "Член"
 	id = "member"
 	change_faction = 1
 
 /datum/status/sheriff
-	name = "Sheriff"
+	name = "Шериф"
 	id = "sheriff"
 	can_invite_to = list("member")
 	purge_faction = "city"
 	color = "#704200"
 
 /datum/status/mayor
-	name = "Mayor"
+	name = "Мэр"
 	id = "mayor"
 	can_invite_to = list("member", "sheriff")
 	purge_faction = "city"
 	color = "#704200"
 
 /datum/status/overseer
-	name = "Overseer"
+	name = "Смотритель"
 	id = "overseer"
 	can_invite_to = list("member")
 	purge_faction = "vault"
@@ -275,14 +275,14 @@ mob/proc/set_status(var/status)
 //Vault
 
 /datum/status/overseer
-	name = "Overseer"
+	name = "Смотритель"
 	id = "overseer"
 	can_invite_to = list("dweller")
 	purge_faction = "vault"
 	color = "#005A20"
 
 /datum/status/dweller
-	name = "Vault Dweller"
+	name = "Выходец из Убежища"
 	id = "dweller"
 	purge_faction = "vault"
 	color = "#005A20"
@@ -290,26 +290,26 @@ mob/proc/set_status(var/status)
 //Enclave
 
 /datum/status/colonel
-	name = "Colonel"
+	name = "Полковник"
 	id = "colonel"
 	can_invite_to = list("enclave_sergeant", "private", "volunteer")
 	purge_faction = "enclave"
 	color = "#000"
 
 /datum/status/enclave_sergeant
-	name = "Sergeant"
+	name = "Сержает"
 	id = "enclave_sergeant"
 	purge_faction = "enclave"
 	color = "#000"
 
 /datum/status/private
-	name = "Private"
+	name = "Рядовой"
 	id = "private"
 	purge_faction = "enclave"
 	color = "#000"
 
 /datum/status/volunteer
-	name = "Volunteer"
+	name = "Волонтёр"
 	id = "volunteer"
 	purge_faction = "enclave"
 	color = "#000"
@@ -317,53 +317,53 @@ mob/proc/set_status(var/status)
 //Brotherhood
 
 /datum/status/elder
-	name = "Elder"
+	name = "Старейшина"
 	id = "elder"
 	can_invite_to = list("paladin", "knight", "scriber", "initiate")
 	purge_faction = "bs"
 	color = "#13306d"
 
 /datum/status/paladin
-	name = "Paladin"
+	name = "Паладин"
 	id = "paladin"
 	purge_faction = "bs"
 	color = "#13306d"
 
 /datum/status/knight
-	name = "Knight"
+	name = "Рыцарь"
 	id = "knight"
 	purge_faction = "bs"
 	color = "#13306d"
 
 /datum/status/scriber
-	name = "Scriber"
+	name = "Писец"
 	id = "scriber"
 	purge_faction = "bs"
 	color = "#13306d"
 
 /datum/status/initiate
-	name = "Initiate"
+	name = "Послушник"
 	id = "initiate"
 	purge_faction = "bs"
 	color = "#13306d"
 
 // FOA
 /datum/status/follower
-	name = "Follower"
+	name = "Последователь"
 	id = "follower"
 	purge_faction = "followers"
 	color = "#000"
 
 // FOB
 /datum/status/overseer
-	name = "Overseer"
+	name = "Смотритель"
 	id = "overseer"
 	can_invite_to = list("dweller")
 	purge_faction = "vault"
 	color = "#005A20"
 
 /datum/status/dweller
-	name = "Vault Dweller"
+	name = "Выходец из убежища"
 	id = "dweller"
 	purge_faction = "vault"
 	color = "#005A20"
@@ -383,7 +383,7 @@ mob/proc/set_status(var/status)
 	color = "#005A20"
 
 /datum/status/supermutant
-	name = "Supermutant"
+	name = "Супермутант"
 	id = "supermutant"
 	purge_faction = "coc"
 	color = "#005A20"

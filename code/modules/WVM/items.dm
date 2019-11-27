@@ -22,7 +22,7 @@ obj/item/weapon/key/vending/attackby(obj/item/weapon/P, mob/living/carbon/human/
 // -- Lock --
 obj/item/weapon/lock_part
 	name = "Vending Machine Lock"
-	desc = "Выглядит как замок для торгового автомата. Если его раскрутить отверткой, то можно запомнить в нем ваш ключ."
+	desc = "Выглядит как замок для торгового автомата. Если его раскрутить отверткой, то можно настроить его под ваш ключ."
 	icon = 'icons/WVM/lock_icon.dmi'
 	icon_state = "lock"
 

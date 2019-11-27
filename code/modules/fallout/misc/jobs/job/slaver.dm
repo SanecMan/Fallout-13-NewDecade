@@ -9,7 +9,7 @@
 	status = "gangleader"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "nobody"
+	supervisors = "никому"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()

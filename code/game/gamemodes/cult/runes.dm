@@ -817,7 +817,7 @@ var/list/wall_runes = list()
 		log_game("Summon Cultist rune failed - no target")
 		return
 	if(cultist_to_summon.stat == DEAD)
-		to_chat(user, "<span class='cultitalic'>[cultist_to_summon] has died!</span>")
+		to_chat(user, "<span class='cultitalic'>[cultist_to_summon] умер!</span>")
 		fail_invoke()
 		log_game("Summon Cultist rune failed - target died")
 		return

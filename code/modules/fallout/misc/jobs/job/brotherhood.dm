@@ -10,7 +10,7 @@
 	status = "elder"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Brotherhood of Steel command HQ"
+	supervisors = "центральному штабу Братства Стали"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1
@@ -76,7 +76,7 @@
 	status = "paladin"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Elder"
+	supervisors = "Старейшине"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
@@ -139,7 +139,7 @@
 	status = "knight"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "Elder, Paladin"
+	supervisors = "Старейшине и Паладинам"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 
@@ -199,7 +199,7 @@
 	status = "scriber"
 	total_positions = 7
 	spawn_positions = 7
-	supervisors = "Elder"
+	supervisors = "Старейшине"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 

@@ -9,7 +9,7 @@
 	status = "mayor"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "nobody"
+	supervisors = "никому"
 	selection_color = "#804B00"
 	access = list()
 	minimal_access = list()
@@ -79,7 +79,7 @@
 	status = "sheriff"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Mayor"
+	supervisors = "Мэру"
 	selection_color = "#804B00"
 	access = list()
 	minimal_access = list()
@@ -137,7 +137,7 @@
 	status = "member"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "none"
+	supervisors = "никому"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()

@@ -155,8 +155,8 @@
 			if(C.m_intent == MOVE_INTENT_WALK && (lube&NO_SLIP_WHEN_WALKING))
 				return 0
 		if(!(lube&SLIDE_ICE))
-			to_chat(C, "<span class='notice'>You slipped[ O ? " on the [O.name]" : ""]!</span>")
-			C.attack_log += "\[[time_stamp()]\] <font color='orange'>Slipped[O ? " on the [O.name]" : ""][(lube&SLIDE)? " (LUBE)" : ""]!</font>"
+			to_chat(C, "<span class='notice'>вы подскользнулись[ O ? " на [O.name]" : ""]!</span>")
+			C.attack_log += "\[[time_stamp()]\] <font color='orange'>ѕодскользнулся[O ? " на [O.name]" : ""][(lube&SLIDE)? " (LUBE)" : ""]!</font>"
 		if(!(lube&SLIDE_ICE))
 			playsound(C.loc, 'sound/misc/slip.ogg', 50, 1, -3)
 

@@ -387,7 +387,7 @@
 			log_game("Void torch failed - no target")
 			return
 		if(cultist_to_receive.stat == DEAD)
-			to_chat(user, "<span class='cultitalic'>[cultist_to_receive] has died!</span>")
+			to_chat(user, "<span class='cultitalic'>[cultist_to_receive] умер!</span>")
 			log_game("Void torch failed  - target died")
 			return
 		if(!iscultist(cultist_to_receive))

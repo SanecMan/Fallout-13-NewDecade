@@ -474,6 +474,14 @@
 		mind.active = 0					//we wish to transfer the key manually
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
+///FLUFF THINGS///
+
+	if(ckey == "DrNuke")
+		new /obj/item/weapon/gun/energy/disabler/fluff/angelofmercy(loc)
+
+///END OF FLUFF SPAWN
+
+
 	new_character.name = real_name
 	new_character.key = key		//Manually transfer the key to log them in
 	new_character.stopLobbySound()
