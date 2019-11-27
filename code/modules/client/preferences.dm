@@ -301,7 +301,7 @@ var/list/preferences_datums = list()
 
 	if(!IsGuestKey(user.key))
 		dat += "<a href='?_src_=prefs;preference=load'>Отмена</a> "
-		dat += "<a href='?_src_=prefs;preference=save'>Сохранить натсройки</a> "
+		dat += "<a href='?_src_=prefs;preference=save'>Сохранить настройки</a> "
 
 	dat += "<a href='?_src_=prefs;preference=reset_all'>Сбросить настройки</a>"
 	dat += "</center>"
