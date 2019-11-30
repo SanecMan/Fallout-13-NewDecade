@@ -269,7 +269,7 @@ var/list/preferences_datums = list()
 				var/current = SKILLS.getPoint(skill_type, TRUE)
 				var/left = max(0, SKILLS_POINTS - SKILLS.getSpentPoints())
 
-				dat += "<br>Сейчас: [current] (осталось [left])<br>"
+				dat += "<br>Сейчас: [current] (осталось [left -1])<br>"
 
 				for (var/i = 1, i < 11, i++)
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=[skill_type];num=[i]'>[i]</a>"
