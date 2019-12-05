@@ -26,7 +26,7 @@
 
 /obj/item/weapon/reagent_containers/f13stimpack/attack(mob/living/M, mob/user)
 	if(!reagents.total_volume)
-		to_chat(user, "<span class='warning'>[src] is empty!</span>")
+		to_chat(user, "<span class='warning'>[src] пуст!</span>")
 		return
 	if(!iscarbon(M))
 		return
@@ -35,8 +35,8 @@
 		return
 
 	if(reagents.total_volume && (ignore_flags || M.can_inject(user, 1))) // Ignore flag should be checked first or there will be an error message.
-		to_chat(M, "<span class='warning'>You feel a tiny prick!</span>")
-		to_chat(user, "<span class='notice'>You inject [M] with [src].</span>")
+		to_chat(M, "<span class='warning'>Вы чувствуете небольшой укол!</span>")
+		to_chat(user, "<span class='notice'>Вы ввели [M] что-то из [src].</span>")
 
 		var/fraction = min(amount_per_transfer_from_this/reagents.total_volume, 1)
 		reagents.reaction(M, INJECT, fraction)
@@ -110,7 +110,7 @@
 	//mentats pills
 /obj/item/weapon/reagent_containers/pill/mentats
 	name = "Mentats"
-	desc = "Helps you, if you stupid. Possible..."
+	desc = "Поможет вам. Если вы тупой. Наверно..."
 	icon_state = "pill10"
 	list_reagents = list("mentats" = 20)
 	roundstart = 0

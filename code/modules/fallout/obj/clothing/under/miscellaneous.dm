@@ -1235,7 +1235,7 @@
 /obj/item/clothing/under/f13/fluff/azov
 	name = "Azov uniform"
 	desc = "Batallion Azov uniform. Slava Ukraine."
-	icon_state = "ukform"
+	icon_state = "camogreen"
 	item_state = "bl_suit"
 	item_color = "ukform"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS

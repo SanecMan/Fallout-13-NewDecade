@@ -1,5 +1,5 @@
 /obj/item/device/radio/intercom
-	name = "station intercom"
+	name = "intercom"
 	desc = "Talk through this."
 	icon_state = "intercom"
 	anchored = 1
@@ -455,3 +455,7 @@
 
 /obj/item/device/radio/large_radio/add_blood(list/blood_dna)
 	return 0
+
+/obj/item/device/radio/intercom/old_mic
+	name = "Old Mic"
+	icon_state = "radio_mic2"
