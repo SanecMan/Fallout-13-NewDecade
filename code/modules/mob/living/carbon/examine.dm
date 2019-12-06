@@ -2,20 +2,20 @@
 	var/t_He = p_they(TRUE)
 	var/t_His = p_their(TRUE)
 	var/t_his = p_their()
-	var/t_him = p_them()
+//	var/t_him = p_them()
 	var/t_has = p_have()
 	var/t_is = p_are()
 
 	var/msg = "<span class='info'>*---------*\nЭто [bicon(src)] \a <EM>[src]</EM>!\n"
 
 	if (handcuffed)
-		msg += "<span class='warning'>[t_He] [t_is] [bicon(src.handcuffed)] handcuffed!</span>\n"
+		msg += "<span class='warning'>[t_He] [bicon(src.handcuffed)] в наручниках!</span>\n"
 	if (head)
-		msg += "[t_He] [t_is] wearing [bicon(src.head)] \a [src.head] on [t_his] head. \n"
+		msg += "[t_He] носит [bicon(src.head)]  [src.head] на [t_his] голове. \n"
 	if (wear_mask)
-		msg += "[t_He] [t_is] wearing [bicon(src.wear_mask)] \a [src.wear_mask] on [t_his] face.\n"
+		msg += "[t_He] носит [bicon(src.wear_mask)]  [src.wear_mask] на [t_his] лице.\n"
 	if (wear_neck)
-		msg += "[t_He] [t_is] wearing [bicon(src.wear_neck)] \a [src.wear_neck] around [t_his] neck.\n"
+		msg += "[t_He] носит [bicon(src.wear_neck)]  [src.wear_neck] вокруг [t_his] шеи.\n"
 
 	for(var/obj/item/I in held_items)
 		if(!(I.flags & ABSTRACT))
@@ -37,24 +37,24 @@
 	var/list/missing = get_missing_limbs()
 	for(var/t in missing)
 		if(t=="head")
-			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] is missing!</B></span>\n"
+			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] отсутствует!</B></span>\n"
 			continue
-		msg += "<span class='warning'><B>[t_His] [parse_zone(t)] is missing!</B></span>\n"
+		msg += "<span class='warning'><B>[t_His] [parse_zone(t)] отсутствует!</B></span>\n"
 
 	msg += "<span class='warning'>"
 	var/temp = getBruteLoss()
 	if(temp)
 		if (temp < 30)
-			msg += "[t_He] [t_has] minor bruising.\n"
+			msg += "[t_He] имеет небольшие раны.\n"
 		else
-			msg += "<B>[t_He] [t_has] severe bruising!</B>\n"
+			msg += "<B>[t_He] имеет огромные раны!</B>\n"
 
 	temp = getFireLoss()
 	if(temp)
 		if (temp < 30)
-			msg += "[t_He] [t_has] minor burns.\n"
+			msg += "[t_He] имеет небольшие ожоги.\n"
 		else
-			msg += "<B>[t_He] [t_has] severe burns!</B>\n"
+			msg += "<B>[t_He] имеет обширные ожоги!</B>\n"
 
 	temp = getCloneLoss()
 	if(temp)
@@ -78,7 +78,7 @@
 
 	if(!appears_dead)
 		if(stat == UNCONSCIOUS)
-			msg += "[t_He] [t_is]n't responding to anything around [t_him] and seems to be asleep.\n"
+			msg += "[t_He] похоже, не реагирует на что-либо, похоже, спит.\n"
 
 		if(digitalcamo)
 			msg += "[t_He] [t_is] moving [t_his] body in an unnatural and blatantly unsimian manner.\n"
