@@ -54,9 +54,9 @@ obj/dugpit/New(lnk)
 				if(M == usr)
 					to_chat(usr, "<span class='notice'>Вы положили [W] в яму.</span>")
 				else if(in_range(M, usr)) //If someone is standing close enough, they can tell what it is...
-					M.show_message("<span class='notice'>[usr] ложит [W] в яму.</span>", 1)
+					M.show_message("<span class='notice'>[usr] кладёт [W] в яму.</span>", 1)
 				else if(W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...
-					M.show_message("<span class='notice'>[usr] ложит [W] в яму.</span>", 1)
+					M.show_message("<span class='notice'>[usr] кладёт [W] в яму.</span>", 1)
 		pitcontents += W
 		W.forceMove(mypit)
 		storedindex = storedindex+1

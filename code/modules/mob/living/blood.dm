@@ -10,7 +10,7 @@
 		spawn(amount)
 			bleedsuppress = 0
 			if(stat != DEAD && bleed_rate)
-				to_chat(src, "<span class='warning'>The blood soaks through your bandage.</span>")
+				to_chat(src, "<span class='warning'>Кровь протекает через ваши бинты.</span>")
 
 
 /mob/living/carbon/monkey/handle_blood()
