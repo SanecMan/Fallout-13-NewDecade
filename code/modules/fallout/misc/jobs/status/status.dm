@@ -226,7 +226,7 @@ mob/proc/set_status(var/status)
 	purge_faction = "none"
 
 /datum/status/member
-	name = "Член"
+	name = "Житель"
 	id = "member"
 	change_faction = 1
 
@@ -297,7 +297,7 @@ mob/proc/set_status(var/status)
 	color = "#000"
 
 /datum/status/enclave_sergeant
-	name = "Сержает"
+	name = "Сержант"
 	id = "enclave_sergeant"
 	purge_faction = "enclave"
 	color = "#000"
