@@ -86,7 +86,7 @@
 		/datum/job/gangleader,
 		/datum/job/mayor,
 		/datum/job/general,
-		/datum/job/legate,
+	//	/datum/job/legate,
 		/datum/job/elder,
 		/datum/job/colonel,
 		/datum/job/overseer
