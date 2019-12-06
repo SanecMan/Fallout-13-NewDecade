@@ -67,7 +67,7 @@
 
 //Basic Raider
 
-/datum/job/slaver
+/datum/job/raider
 	title = "Slaver"
 	desc = "A bloodthirsty savage.<br>You have broken every rule but the most important one - the Gang Leader is your supreme commander, the powerful Godfather of all bandits, the only one you trust with your life."
 	flag = RAIDER
