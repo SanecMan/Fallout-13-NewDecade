@@ -29,8 +29,8 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("Yep!", "I want to eat!", "Overseer is asshole!", "What about nuka cola?")
-	speak_emote = "says,"
+	speak = list("Агась!", "Я хочу кушац!", "Смотритель мудень!", "Будешь ядерку?")
+	speak_emote = "говорит,"
 	speak_chance = 1
 	XP = 10
 
@@ -65,7 +65,7 @@
 /mob/living/simple_animal/hostile/vault/dweller/Aggro()
 	..()
 	summon_backup(15)
-	say("HELP!!")
+	say("ПОМОГИТЕ!!")
 
 /mob/living/simple_animal/hostile/vault/dweller/dweller1
 	icon_state = "vault_dweller1"
@@ -150,7 +150,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "punches"
+	attacktext = "бьет"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave)
@@ -160,8 +160,8 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("Yep!", "Where is your powerarmor!", "Moron!", "Idiot!")
-	speak_emote = "says,"
+	speak = list("Агась!", "Где ваша силовая броня!", "ДЕБИЛ!", "И-ДИ-ОТ!")
+	speak_emote = "говорит,"
 	speak_chance = 1
 	XP = 15
 
@@ -197,7 +197,7 @@
 /mob/living/simple_animal/hostile/enclave/scientist/Aggro()
 	..()
 	summon_backup(15)
-	say("HELP!!")
+	say("ПОМОГИТЕ!!")
 
 /mob/living/simple_animal/hostile/enclave/soldier
 	name = "Enclave Soldier"
@@ -233,7 +233,7 @@
 
 /mob/living/simple_animal/hostile/bs
 	name = "BS"
-	desc = "Just an BS"
+	desc = "Вы уверены, будь у вас Тостер, он бы догнал и трахнул вас, чтобы заполучить его."
 	icon_state = "bs_knight"
 	icon_living = "bs_knight"
 	icon_dead = "bs_knight"
@@ -252,7 +252,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "punches"
+	attacktext = "бьет"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/bs)
@@ -359,7 +359,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "punches"
+	attacktext = "бьет"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
@@ -472,7 +472,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "punches"
+	attacktext = "бьет"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/legion)
@@ -628,7 +628,7 @@
 /mob/living/simple_animal/hostile/raider/Aggro()
 	..()
 	summon_backup(15)
-	say("RAIDERS, ATTACK!!")
+	say("УМРИ, УМРИ, УМРИ!!!")
 
 /mob/living/simple_animal/hostile/raider/firefighter
 	icon_state = "firefighter_raider"

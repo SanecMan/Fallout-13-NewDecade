@@ -10,7 +10,7 @@
 	var/icon_living = ""
 	var/icon_dead = "" //icon when the animal is dead. Don't use animated icons for this.
 	var/icon_gib = null	//We only try to show a gibbing animation if this exists.
-	var/respawn_time_of_mob = 9000
+	var/respawn_time_of_mob = 900000000
 
 	var/list/speak = list()
 	var/list/speak_emote = list()//	Emotes while speaking IE: Ian [emote], [text] -- Ian barks, "WOOF!". Spoken text is generated from the speak variable.
