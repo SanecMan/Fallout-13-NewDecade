@@ -71,15 +71,15 @@
 
 
 /datum/surgery_step/proc/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	user.visible_message("[user] begins to perform surgery on [target].", "<span class='notice'>You begin to perform surgery on [target]...</span>")
+	user.visible_message("[user] собирается выполнить операцию на [target].", "<span class='notice'>Вы начинаете операцию на [target]...</span>")
 
 
 /datum/surgery_step/proc/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	user.visible_message("[user] succeeds!", "<span class='notice'>You succeed.</span>")
+	user.visible_message("[user] succeeds!", "<span class='notice'>Успешно.</span>")
 	return 1
 
 /datum/surgery_step/proc/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	user.visible_message("<span class='warning'>[user] screws up!</span>", "<span class='warning'>You screw up!</span>")
+	user.visible_message("<span class='warning'>[user] screws up!</span>", "<span class='warning'>Вы проебали!</span>")
 	return 0
 
 /datum/surgery_step/proc/tool_check(mob/user, obj/item/tool)
