@@ -108,7 +108,7 @@
 	health = 200
 	retreat_distance = 5
 	minimum_distance = 5
-	loot = list(/obj/effect/mob_spawn/human/corpse/vault/security, /obj/item/weapon/gun/energy/laser/pistol/wattz1000)
+	loot = list(/obj/effect/mob_spawn/human/corpse/vault/security)
 	self_weight = 50
 	healable = 1
 	ranged = 1
@@ -210,7 +210,7 @@
 	health = 500
 	retreat_distance = 5
 	minimum_distance = 5
-	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier, /obj/item/weapon/gun/energy/plasma/turbo)
+	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	self_weight = 80
 	healable = 1
 	ranged = 1
@@ -297,7 +297,7 @@
 	icon_gib = "bs_knight"
 	retreat_distance = 5
 	minimum_distance = 5
-	loot = list(/obj/effect/mob_spawn/human/corpse/bs, /obj/item/weapon/gun/energy/laser/pistol)
+	loot = list(/obj/effect/mob_spawn/human/corpse/bs)
 	self_weight = 40
 	healable = 1
 	ranged = 1
@@ -315,7 +315,7 @@
 	icon_gib = "bs_paladin"
 	retreat_distance = 5
 	minimum_distance = 5
-	loot = list(/obj/effect/mob_spawn/human/corpse/bs/paladin, /obj/item/weapon/gun/energy/laser/rifle/aer13)
+	loot = list(/obj/effect/mob_spawn/human/corpse/bs/paladin)
 	self_weight = 40
 	maxHealth = 600
 	health = 600
@@ -408,7 +408,7 @@
 	icon_gib = "ncr_trooper"
 	retreat_distance = 5
 	minimum_distance = 5
-	loot = list(/obj/effect/mob_spawn/human/corpse/ncr, /obj/item/weapon/gun/ballistic/automatic/garand, /obj/item/ammo_box/magazine/F13/g308)
+	loot = list(/obj/effect/mob_spawn/human/corpse/ncr, /obj/item/ammo_box/magazine/F13/g308)
 	self_weight = 35
 	healable = 1
 	ranged = 1
@@ -639,7 +639,7 @@
 	minimum_distance = 2
 	melee_damage_lower = 50
 	melee_damage_upper = 50
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider, /obj/item/weapon/twohanded/fireaxe, /obj/item/weapon/reagent_containers/pill/patch/jet)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider, /obj/item/weapon/reagent_containers/pill/patch/jet)
 	self_weight = 25
 	healable = 1
 	ranged = 0
@@ -653,7 +653,7 @@
 	minimum_distance = 2
 	melee_damage_lower = 40
 	melee_damage_upper = 40
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/tribal, /obj/item/weapon/twohanded/tribal_spear, /obj/item/weapon/reagent_containers/pill/patch/jet)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider/tribal, /obj/item/weapon/reagent_containers/pill/patch/jet)
 	self_weight = 22
 	healable = 1
 	ranged = 0
@@ -681,7 +681,7 @@
 	melee_damage_upper = 40
 	maxHealth = 200
 	health = 200
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/baseball, /obj/item/weapon/melee/baseball_bat, /obj/item/weapon/reagent_containers/pill/patch/jet)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider/baseball, /obj/item/weapon/reagent_containers/pill/patch/jet)
 	self_weight = 30
 	healable = 1
 	ranged = 0
@@ -708,7 +708,7 @@
 	melee_damage_upper = 20
 	maxHealth = 200
 	health = 200
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/biker, /obj/item/weapon/gun/ballistic/revolver/magnum, /obj/item/weapon/reagent_containers/pill/patch/jet)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider/biker, /obj/item/weapon/reagent_containers/pill/patch/jet)
 	self_weight = 30
 	healable = 1
 	ranged = 1

@@ -24,8 +24,7 @@
 	faction = list("chinese")
 	status_flags = CANPUSH
 	del_on_death = 0
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian,
-				/obj/item/weapon/gun/ballistic/automatic/assault_rifle/chinese)
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian)
 
 /mob/living/simple_animal/hostile/russian/ranged
 	icon_state = "russianranged"
@@ -39,8 +38,7 @@
 
 
 /mob/living/simple_animal/hostile/russian/ranged/mosin
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged,
-				/obj/item/weapon/gun/ballistic/automatic/assault_rifle/chinese)
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged)
 	casingtype = /obj/item/ammo_casing/a762
 
 /mob/living/simple_animal/hostile/russian/ranged/trooper
@@ -49,8 +47,7 @@
 	maxHealth = 150
 	health = 150
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,
-				/obj/item/weapon/gun/ballistic/shotgun/lethal)
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper)
 
 /mob/living/simple_animal/hostile/russian/ranged/officer
 	name = "Russian Officer"
