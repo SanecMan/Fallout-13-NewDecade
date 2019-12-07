@@ -152,7 +152,7 @@
 		/obj/item/device/flashlight/torch/flare/green = 1)
 
 ///Tribeman///
-
+/*
 /datum/job/arroyov
 	title = "Arroyo villager"
 	desc = "They are descendants of Vault 13 dwellers. They are simple villagers who do their daily jobs in Arroyo."
@@ -222,7 +222,7 @@
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/tribalshaman
 	shoes = /obj/item/clothing/shoes/f13/rag
-
+*/
 ///Gun runners///
 
 /datum/job/gunrunner
@@ -274,7 +274,7 @@
 	)
 
 /datum/outfit/job/gunrunner
-	name = "Gun runner"
+	name = "Gun Runner"
 	backpack = null
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/merchant
