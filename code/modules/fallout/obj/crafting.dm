@@ -244,6 +244,8 @@
 
 //пора сделать жизнь оружейников сложнее//
 
+/obj/item/crafting/weapon_parts
+	icon = 'icons/fallout/objects/crafting.dmi'
 
 /obj/item/crafting/weapon_parts/ballistic
 	name = "Ballistic Weapon Parts"
