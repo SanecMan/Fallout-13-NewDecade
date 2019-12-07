@@ -147,23 +147,23 @@
 /mob/living/simple_animal/pet/cat/Life()
 	if(!stat && !buckled && !client)
 		if(prob(1))
-			emote("me", 1, pick("stretches out for a belly rub.", "wags its tail.", "lies down."))
+			emote("me", 1, pick("чешет пузико.", "машет хвостиком.", "ложится."))
 			icon_state = "[icon_living]_rest"
 			resting = 1
 			update_canmove()
 		else if (prob(1))
-			emote("me", 1, pick("sits down.", "crouches on its hind legs.", "looks alert."))
+			emote("me", 1, pick("садится.", "ложится на лапки.", "выглядит настороженно."))
 			icon_state = "[icon_living]_sit"
 			resting = 1
 			update_canmove()
 		else if (prob(1))
 			if (resting)
-				emote("me", 1, pick("gets up and meows.", "walks around.", "stops resting."))
+				emote("me", 1, pick("встает и мяукает.", "ходит на месте.", "перестает отдыхать."))
 				icon_state = "[icon_living]"
 				resting = 0
 				update_canmove()
 			else
-				emote("me", 1, pick("grooms its fur.", "twitches its whiskers.", "shakes out its coat."))
+				emote("me", 1, pick("вылизывает шерстку.", "машет усиками.", "встряхнулся."))
 
 	//MICE!
 	if((src.loc) && isturf(src.loc))

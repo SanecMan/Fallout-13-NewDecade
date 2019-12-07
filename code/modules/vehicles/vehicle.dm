@@ -147,7 +147,7 @@
 	src.verbs -= /obj/vehicle/proc/StopEngine
 
 	if(usr)
-		usr.visible_message("[usr] stop engine of [src].", "You stop engine.")
+		usr.visible_message("[usr] выключает двигатель [src].", "Вы выключили двигатель.")
 
 	engine_on = FALSE
 
@@ -155,22 +155,22 @@
 
 /obj/vehicle/proc/start_engine()
 	if(!riding_datum)
-		usr.visible_message("<span class = 'notice'>Sit on [src] to do this.</span>")
+		usr.visible_message("<span class = 'notice'>Сядьте в [src] чтобы делать это.</span>")
 		return
 
 	if(!key)
-		usr.visible_message("<span class = 'notice'>There is no key.</span>")
+		usr.visible_message("<span class = 'notice'>Тут нет ключа.</span>")
 		return
 
 	if(!istype(key, riding_datum.keytype))
-		usr.visible_message("<span class = 'notice'>Wrong key.</span>")
+		usr.visible_message("<span class = 'notice'>Не тот ключ.</span>")
 		return
 
 	src.verbs += /obj/vehicle/proc/StopEngine
 	src.verbs -= /obj/vehicle/proc/StartEngine
 
 	if(usr)
-		usr.visible_message("[usr] start engine of [src].", "You start engine.")
+		usr.visible_message("[usr] запускает двигатель [src].", "Вы запустили двигатель.")
 
 	engine_on = TRUE
 	if(engine_on_sound)
@@ -186,14 +186,14 @@
 	..()
 	if(!(resistance_flags & INDESTRUCTIBLE))
 		if(resistance_flags & ON_FIRE)
-			to_chat(user, "<span class='warning'>It's on fire!</span>")
+			to_chat(user, "<span class='warning'>В огне!</span>")
 		var/healthpercent = (obj_integrity/max_integrity) * 100
 		switch(healthpercent)
 			if(100 to INFINITY)
-				to_chat(user, "It seems pristine and undamaged.")
+				to_chat(user, "Выглядит не поврежденным.")
 			if(50 to 100)
-				to_chat(user, "It looks slightly damaged.")
+				to_chat(user, "Выглядит немного поврежденным.")
 			if(25 to 50)
-				to_chat(user, "It appears heavily damaged.")
+				to_chat(user, "Выглядит тяжело поврежденным.")
 			if(0 to 25)
-				to_chat(user, "<span class='warning'>It's falling apart!</span>")
+				to_chat(user, "<span class='warning'>Разваливается на части!</span>")

@@ -9,7 +9,7 @@
 	XP = 20
 
 /datum/crafting_recipe/stimpak
-	name = "Stimpak"
+	name = "Стимулятор"
 	result = /obj/item/weapon/reagent_containers/f13stimpack
 	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/glow = 2,
 				/obj/item/weapon/reagent_containers/food/snacks/grown/shroom = 1,
@@ -35,7 +35,7 @@
 */
 
 /datum/crafting_recipe/radaway
-	name = "Radaway"
+	name = "Антирадин"
 	result = /obj/item/weapon/reagent_containers/pill/patch/radaway
 	reqs = list(/obj/item/crafting/abraxo = 2,
 				/datum/reagent/water = 10,
@@ -47,7 +47,7 @@
 
 
 /datum/crafting_recipe/turbo
-	name = "Turbo"
+	name = "Турбо"
 	result = /obj/item/weapon/reagent_containers/pill/patch/turbo
 	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/jet = 1,
 				/obj/item/crafting/duct_tape = 1,
@@ -61,7 +61,7 @@
 	XP = 50
 
 /datum/crafting_recipe/fev
-	name = "FEV"
+	name = "ВРЭ"
 	result = /obj/item/stack/medical/fev
 	reqs = list(/obj/item/weapon/reagent_containers/blood/empty = 1,
 				/datum/reagent/water/fev = 10)

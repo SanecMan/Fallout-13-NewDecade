@@ -8,17 +8,17 @@
 		if(penetrated_text)
 			to_chat(src, "<span class='userdanger'>[penetrated_text]</span>")
 		else
-			to_chat(src, "<span class='userdanger'>Your armor was penetrated!</span>")
+			to_chat(src, "<span class='userdanger'>Ваша броня пробита!</span>")
 	else if(armor >= 100)
 		if(absorb_text)
 			to_chat(src, "<span class='userdanger'>[absorb_text]</span>")
 		else
-			to_chat(src, "<span class='userdanger'>Your armor absorbs the blow!</span>")
+			to_chat(src, "<span class='userdanger'>Ваша броня поглотила урон!</span>")
 	else if(armor > 0)
 		if(soften_text)
 			to_chat(src, "<span class='userdanger'>[soften_text]</span>")
 		else
-			to_chat(src, "<span class='userdanger'>Your armor softens the blow!</span>")
+			to_chat(src, "<span class='userdanger'>Ваша броня смягчила урон!</span>")
 	return armor
 
 

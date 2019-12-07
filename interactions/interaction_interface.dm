@@ -33,10 +33,10 @@
 
 /mob/living/carbon/human/try_interaction(var/mob/partner)
 
-	var/dat = "<B><HR><FONT size=3>Interacting with \the [partner]...</FONT></B><HR>"
+	var/dat = "<B><HR><FONT size=3>Взаимодействие с [partner]...</FONT></B><HR>"
 
-	dat += "You...<br>[list_interaction_attributes()]<hr>"
-	dat += "They...<br>[partner.list_interaction_attributes()]<hr>"
+	dat += "Вы:<br>[list_interaction_attributes()]<hr>"
+	dat += "Партнер:<br>[partner.list_interaction_attributes()]<hr>"
 
 	make_interactions()
 	for(var/interaction_key in interactions)
@@ -50,10 +50,10 @@
 
 /mob/living/simple_animal/hostile/deathclaw/try_interaction(var/mob/partner)
 
-	var/dat = "<B><HR><FONT size=3>Interacting with \the [partner]...</FONT></B><HR>"
+	var/dat = "<B><HR><FONT size=3>Взаимодействие с [partner]...</FONT></B><HR>"
 
-	dat += "You...<br>[list_interaction_attributes()]<hr>"
-	dat += "They...<br>[partner.list_interaction_attributes()]<hr>"
+	dat += "Вы:<br>[list_interaction_attributes()]<hr>"
+	dat += "Партнер:<br>[partner.list_interaction_attributes()]<hr>"
 
 	make_interactions()
 	for(var/interaction_key in interactions)
