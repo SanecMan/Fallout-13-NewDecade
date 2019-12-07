@@ -168,14 +168,14 @@ var/list/preferences_datums = list()
 			return ShowCharacterSetup(user)
 
 		if (1) // Game Preferences
-			dat += "<center><h2>General Settings</h2></center>"
+			dat += "<center><h2>Основные Настройки</h2></center>"
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
-			dat += "<b>UI Style:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
-			dat += "<b>Keybindings:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "Hotkeys" : "Default"]</a><br>"
-			dat += "<b>tgui Style:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
+			dat += "<b>Стиль УИ:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
+			dat += "<b>Настройки клавиш:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "Hotkeys" : "Default"]</a><br>"
+			dat += "<b>Стиль ТГУИ:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
 			dat += "<b>tgui Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
-			dat += "<b>Play admin midis:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Yes" : "No"]</a><br>"
-			dat += "<b>Play lobby music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Проигрывать Админсккие Миди:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Проигрывать Музыку в Лобби:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Yes" : "No"]</a><br>"
 			dat += "<b>Ghost ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "All Speech" : "Nearest Creatures"]</a><br>"
 			dat += "<b>Ghost sight:</b> <a href='?_src_=prefs;preference=ghost_sight'>[(chat_toggles & CHAT_GHOSTSIGHT) ? "All Emotes" : "Nearest Creatures"]</a><br>"
 			dat += "<b>Ghost whispers:</b> <a href='?_src_=prefs;preference=ghost_whispers'>[(chat_toggles & CHAT_GHOSTWHISPER) ? "All Speech" : "Nearest Creatures"]</a><br>"
@@ -249,7 +249,7 @@ var/list/preferences_datums = list()
 				dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Большие Пушки</a> <br>"
 				dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Бартер</a> <br>"
 				dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Энергооружие</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Explosives</a> <br>"
+				dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Взрывчатка</a> <br>"
 				dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Взлом</a> <br>"
 				dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>Медицина</a> <br>"
 				dat += "<a href='?_src_=prefs;preference=skills;skill_type=melee_weapons'>Ближний бой</a> <br>"
@@ -324,7 +324,7 @@ var/list/preferences_datums = list()
 	var/HTML = "<center>"
 	if(SSjob.occupations.len <= 0)
 		HTML += "The job ticker is not yet finished creating jobs, please try again later"
-		HTML += "<center><a href='?_src_=prefs;preference=job;task=close'>Done</a></center><br>" // Easier to press up here.
+		HTML += "<center><a href='?_src_=prefs;preference=job;task=close'>Готово</a></center><br>" // Easier to press up here.
 	else
 		HTML += "<b>Choose occupation chances</b><br>"
 		HTML += "<div align='center'>Left-click to raise an occupation preference, right-click to lower it.<br></div>"
