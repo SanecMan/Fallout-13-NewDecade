@@ -218,7 +218,7 @@
 		return 0
 	if(!..())
 		return 0
-	visible_message("<b>[src]</b> points to [A]")
+	visible_message("<b>[src]</b> указывает на [A]")
 	return 1
 
 /mob/living/verb/die()

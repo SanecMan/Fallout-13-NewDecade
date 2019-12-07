@@ -79,7 +79,7 @@
 /datum/emote/living/deathgasp
 	key = "deathgasp"
 	key_third_person = "deathgasps"
-	message = "seizes up and falls limp, their eyes dead and lifeless..."
+	message = "глаза застыли в ужасе, конечности содрогнулись в последний раз..."
 	message_robot = "shudders violently for a moment before falling still, its eyes slowly darkening."
 	message_AI = "lets out a flurry of sparks, its screen flickering as its systems slowly halt."
 	message_alien = "lets out a waning guttural screech, green blood bubbling from its maw..."
@@ -95,7 +95,7 @@
 /datum/emote/living/drool
 	key = "drool"
 	key_third_person = "drools"
-	message = "drools."
+	message = "пускает слюни."
 
 /datum/emote/living/faint
 	key = "faint"
@@ -110,7 +110,7 @@
 /datum/emote/living/flap
 	key = "flap"
 	key_third_person = "flaps"
-	message = "flaps their wings."
+	message = "машет крыль€ми."
 	var/wing_time = 20
 
 /datum/emote/living/flap/run_emote(mob/user, params)
@@ -129,7 +129,7 @@
 /datum/emote/living/flap/aflap
 	key = "aflap"
 	key_third_person = "aflaps"
-	message = "flaps their wings ANGRILY!"
+	message = "ќ„≈Ќ№-ќ„≈Ќ№-ќ„≈Ќ№ агрессивно машет крыль€ми!"
 	wing_time = 10
 
 /datum/emote/living/flip
@@ -145,7 +145,7 @@
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"
-	message = "frowns."
+	message = "пугаетс€."
 
 /datum/emote/living/gag
 	key = "gag"
@@ -219,7 +219,7 @@
 	key = "nod"
 	key_third_person = "nods"
 	message = "кивает."
-	message_param = "nods at %t."
+	message_param = "кивает %t."
 
 /datum/emote/living/point
 	key = "point"
@@ -238,7 +238,7 @@
 	key = "scream"
 	key_third_person = "screams"
 	message = "кричит."
-	message_mime = "acts out a scream!"
+	message_mime = "изображает крик!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/scowl
@@ -334,7 +334,7 @@
 /datum/emote/living/tremble
 	key = "tremble"
 	key_third_person = "trembles"
-	message = "trembles in fear!"
+	message = "тр€сетс€ в страхе!"
 
 /datum/emote/living/twitch
 	key = "twitch"
@@ -353,7 +353,7 @@
 /datum/emote/living/whimper
 	key = "whimper"
 	key_third_person = "whimpers"
-	message = "whimpers."
+	message = "хнычит."
 	message_mime = "appears hurt."
 
 /datum/emote/living/wsmile
