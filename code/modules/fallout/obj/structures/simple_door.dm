@@ -246,19 +246,19 @@
 /obj/structure/simple_door/house
 	icon_state = "house"
 	door_type = "house"
-	can_disasemble = 1
+	can_disasemble = 0
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/interior
 	icon_state = "interior"
 	door_type = "interior"
-	can_disasemble = 1
+	can_disasemble = 0
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/room
 	icon_state = "room"
 	door_type = "room"
-	can_disasemble = 1
+	can_disasemble = 0
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/dirtyglass
@@ -312,7 +312,7 @@
 	icon_state = "store"
 	door_type = "store"
 	opaque = 0
-	can_disasemble = 1
+	can_disasemble = 0
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/metal/barred
