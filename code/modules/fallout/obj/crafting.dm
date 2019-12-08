@@ -246,21 +246,22 @@
 
 /obj/item/crafting/weapon_parts
 	icon = 'icons/fallout/objects/crafting.dmi'
+	icon_state = "ballistic_weapon_parts_1"
 
 /obj/item/crafting/weapon_parts/ballistic
 	name = "Ballistic Weapon Parts"
 	desc = "You need this if you want craft ballistic weapon."
-	//icon = 'icons/fallout/objects/crafting.dmi'
-	icon_state = "b_weapon_parts_1"
+	icon = 'icons/fallout/objects/crafting.dmi'
+	icon_state = "ballistic_weapon_parts_1"
 
 /obj/item/crafting/weapon_parts/ballistic/initialize()
 	..()
-	icon_state = "b_weapon_parts_[rand(1,3)]"
+	icon_state = "ballistic_weapon_parts_[rand(1,3)]"
 
 /obj/item/crafting/weapon_parts/energy
 	name = "Energy Weapon Parts"
 	desc = "You need this if you want craft energy weapon."
-	//icon = 'icons/fallout/objects/crafting.dmi'
+	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "e_weapon_parts_1"
 
 /obj/item/crafting/weapon_parts/energy/initialize()
@@ -270,7 +271,7 @@
 /obj/item/crafting/weapon_parts/plasma
 	name = "Plasma Weapon Parts"
 	desc = "You need this if you want craft plasma weapon."
-	//icon = 'icons/fallout/objects/crafting.dmi'
+	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "p_weapon_parts_1"
 
 /obj/item/crafting/weapon_parts/plasma/initialize()
