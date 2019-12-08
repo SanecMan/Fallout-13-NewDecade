@@ -170,16 +170,21 @@
 		/obj/item/device/harmonica,
 		/obj/item/device/instrument/guitar
 		)
-	price = 10000
+	price = 1000
 
 /datum/content_pack/doom
 	name = "Doom"
 	id = "doom"
 	desc = "<b>Available to: Neutral and Raider factions only!</b><br>Carefully selected items from Doom game.<br><i>Note: Union Aerospace Corporation welcomes you aboard a shuttle leaving Earth on the way to Mars. Please fasten your seatbelts and have a safe flight!</i>"
 	items = list(
-		/obj/item/clothing/gloves/f13/doom
+		/obj/item/clothing/head/helmet/f13/doom,
+		/obj/item/clothing/suit/armor/f13/doom,
+		/obj/item/clothing/under/pants/f13/doom,
+		/obj/item/clothing/gloves/f13/doom,
+		/obj/item/clothing/shoes/f13/doom,
+		/obj/item/weapon/mounted_chainsaw
 		)
-	price = 10000
+	price = 100000
 
 /datum/content_pack/followers
 	name = "Набор Последователей"
@@ -239,7 +244,7 @@
 		/obj/item/weapon/twohanded/tribal_spear,
 		/obj/item/weapon/restraints/legcuffs/bola/tribal
 		)
-	price = 5000
+	price = 8000
 
 /datum/content_pack/punk
 	name = "Панк"
@@ -280,6 +285,20 @@
 		/obj/item/key/buggy/wheel
 		)
 	price = 10000
+
+/datum/content_pack/trooper_armor
+	name = "Броня подразделений НКР"
+	id = "trooper_armor"
+	desc = "<b>Доступно для: Только для Соладат НКР и Сержанта!</b><br>Сформируйте ударный отряд вместе со своими друзьями, нося этот стильный сет брони!<br>В сет входят шесть покрасок для брони:<br>White star insignia<br>Red star insignia<br>Holy cross insignia<br>Hear symbol insignia<br>Radiation symbol insignia<br>White skull insignia"
+	items = list(
+		/obj/item/clothing/suit/armor/f13/ncr/patriot,
+		/obj/item/clothing/suit/armor/f13/ncr/commie,
+		/obj/item/clothing/suit/armor/f13/ncr/preacher,
+		/obj/item/clothing/suit/armor/f13/ncr/lover,
+		/obj/item/clothing/suit/armor/f13/ncr/stalker,
+		/obj/item/clothing/suit/armor/f13/ncr/punisher
+		)
+	price = 8000
 
 /datum/content_pack/glowing_ghoul
 	name = "Игровая раса: Светящийся Гуль"

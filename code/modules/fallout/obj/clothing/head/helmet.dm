@@ -766,3 +766,15 @@
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
 	self_weight = 1
+
+/obj/item/clothing/head/helmet/f13/doom
+	name = "marine helmet"
+	desc = "A helmet made of an unknown alloy.<br>You feel like this helmet would allow you to survive through Hell on Mars... er, Earth."
+	icon_state = "doom"
+	item_state = "doom"
+	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100, acid = 100)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	put_on_delay = 30
+	strip_delay = 10
+	resistance_flags = UNACIDABLE
+	self_weight = 2

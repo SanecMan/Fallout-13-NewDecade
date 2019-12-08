@@ -617,3 +617,15 @@
 	desc = "A set of plate armor with tabard for the user's high-visibility during combat."
 	icon_state = "knight_tabard"
 	item_state = "knight_tabard"
+
+/obj/item/clothing/suit/armor/f13/doom
+	name = "green chestplate"
+	desc = "An odd green chestplate.<br>It's lightweight and strangely comfortable."
+	icon_state = "praetor"
+	item_state = "g_suit"
+	body_parts_covered = CHEST
+	armor = list(melee = 60, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100, acid = 100)
+	resistance_flags = UNACIDABLE
+	put_on_delay = 30
+	strip_delay = 10
+	self_weight = 10
