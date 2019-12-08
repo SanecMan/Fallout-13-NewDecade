@@ -4,7 +4,7 @@
 	set hidden = 1
 	if(!canSuicide())
 		return
-	var/confirm = alert("Are you sure you want to commit suicide?", "Confirm Suicide", "Yes", "No")
+	var/confirm = alert("Вы хотите совершить самоубийство?", "Подтвердите", "Yes", "No")
 	if(!canSuicide())
 		return
 	if(confirm == "Yes")
@@ -43,10 +43,10 @@
 				death(0)
 				return
 
-		var/suicide_message = pick("[src] is attempting to bite [p_their()] tongue off! It looks like [p_theyre()] trying to commit suicide.", \
-							"[src] is jamming [p_their()] thumbs into [p_their()] eye sockets! It looks like [p_theyre()] trying to commit suicide.", \
-							"[src] is twisting [p_their()] own neck! It looks like [p_theyre()] trying to commit suicide.", \
-							"[src] is holding [p_their()] breath! It looks like [p_theyre()] trying to commit suicide.")
+		var/suicide_message = pick("[src] пытается откусить [p_their()] язык! Похоже что [p_theyre()] хочет совершить самоубийство.", \
+							"[src] is jamming [p_their()] thumbs into [p_their()] eye sockets! Похоже что [p_theyre()] хочет совершить самоубийство.", \
+							"[src] пытается свернуть [p_their()] собственную шею! Похоже что [p_theyre()] хочет совершить самоубийство.", \
+							"[src] задерживает [p_their()] дыхание! Похоже что [p_theyre()] хочет совершить самоубийство.")
 
 		visible_message("<span class='danger'>[suicide_message]</span>", "<span class='userdanger'>[suicide_message]</span>")
 
@@ -57,7 +57,7 @@
 	set hidden = 1
 	if(!canSuicide())
 		return
-	var/confirm = alert("Are you sure you want to commit suicide?", "Confirm Suicide", "Yes", "No")
+	var/confirm = alert("Вы хотите совершить самоубийство?", "Подтвердите", "Yes", "No")
 	if(!canSuicide())
 		return
 	if(confirm == "Yes")
@@ -70,7 +70,7 @@
 	set hidden = 1
 	if(!canSuicide())
 		return
-	var/confirm = alert("Are you sure you want to commit suicide?", "Confirm Suicide", "Yes", "No")
+	var/confirm = alert("Вы хотите совершить самоубийство?", "Подтвердите", "Yes", "No")
 	if(!canSuicide())
 		return
 	if(confirm == "Yes")
@@ -84,7 +84,7 @@
 	set hidden = 1
 	if(!canSuicide())
 		return
-	var/confirm = alert("Are you sure you want to commit suicide?", "Confirm Suicide", "Yes", "No")
+	var/confirm = alert("Вы хотите совершить самоубийство?", "Подтвердите", "Yes", "No")
 	if(!canSuicide())
 		return
 	if(confirm == "Yes")
@@ -99,7 +99,7 @@
 	set hidden = 1
 	if(!canSuicide())
 		return
-	var/confirm = alert("Are you sure you want to commit suicide?", "Confirm Suicide", "Yes", "No")
+	var/confirm = alert("Вы хотите совершить самоубийство?", "Подтвердите", "Yes", "No")
 	if(!canSuicide())
 		return
 	if(confirm == "Yes")
@@ -143,7 +143,7 @@
 	set hidden = 1
 	if(!canSuicide())
 		return
-	var/confirm = alert("Are you sure you want to commit suicide?", "Confirm Suicide", "Yes", "No")
+	var/confirm = alert("Вы хотите совершить самоубийство?", "Подтвердите", "Yes", "No")
 	if(!canSuicide())
 		return
 	if(confirm == "Yes")

@@ -1,17 +1,17 @@
 //pronoun procs, for getting pronouns without using the text macros that only work in certain positions
 //datums don't have gender, but most of their subtypes do!
 /datum/proc/p_they(capitalized, temp_gender)
-	. = "Оно"
+	. = "оно"
 	if(capitalized)
 		. = capitalize(.)
 
 /datum/proc/p_their(capitalized, temp_gender)
-	. = "Это"
+	. = "это"
 	if(capitalized)
 		. = capitalize(.)
 
 /datum/proc/p_them(capitalized, temp_gender)
-	. = "Оно"
+	. = "оно"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -40,24 +40,24 @@
 /client/p_they(capitalized, temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = "Они"
+	. = "они"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "Она"
+			. = "она"
 		if(MALE)
-			. = "Он"
+			. = "он"
 	if(capitalized)
 		. = capitalize(.)
 
 /client/p_their(capitalized, temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = "Их"
+	. = "их"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "Её"
+			. = "свой"
 		if(MALE)
-			. = "Его"
+			. = "свой"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -67,9 +67,9 @@
 	. = "их"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "Её"
+			. = "её"
 		if(MALE)
-			. = "Его"
+			. = "его"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -114,11 +114,11 @@
 	. = "it"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "Она"
+			. = "она"
 		if(MALE)
-			. = "Он"
+			. = "он"
 		if(PLURAL)
-			. = "Они"
+			. = "они"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -128,11 +128,11 @@
 	. = "это"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "Её"
+			. = "её"
 		if(MALE)
-			. = "Его"
+			. = "его"
 		if(PLURAL)
-			. = "Их"
+			. = "ех"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -142,11 +142,11 @@
 	. = "it"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "Её"
+			. = "её"
 		if(MALE)
-			. = "Его"
+			. = "его"
 		if(PLURAL)
-			. = "Их"
+			. = "их"
 	if(capitalized)
 		. = capitalize(.)
 
