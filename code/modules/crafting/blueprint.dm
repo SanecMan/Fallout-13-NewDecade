@@ -12,7 +12,7 @@
 	name = "Crafting Bench"
 	desc = "just bench"
 	icon = 'icons/fallout/objects/items.dmi'
-	icon_state = "bebch"
+	icon_state = "bench_1"
 	density = 1
 	anchored = 1
 	var/recipe
