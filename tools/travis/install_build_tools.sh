@@ -2,7 +2,7 @@
 set -e
 
 if [ "$BUILD_TOOLS" = true ]; then
-      rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $NODE_VERSION
+	  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
       npm install -g gulp-cli
       pip install --user PyYaml -q
       pip install --user beautifulsoup4 -q
