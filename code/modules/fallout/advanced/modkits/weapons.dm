@@ -1,37 +1,37 @@
 /obj/item/kit/damage
 	name = "WMK Damage"
-	desc = "Улучшает урон оружия на 33%"
+	desc = "РЈР»СѓС‡С€Р°РµС‚ СѓСЂРѕРЅ РѕСЂСѓР¶РёСЏ РЅР° 33%"
 	icon_state = "wmk_d"
 	prefix = "deadly"
 
 /obj/item/kit/recoil
 	name = "WMK Recoil"
-	desc = "Убирает отдачу у оружия."
+	desc = "РЈР±РёСЂР°РµС‚ РѕС‚РґР°С‡Сѓ Сѓ РѕСЂСѓР¶РёСЏ."
 	prefix = "calibrated"
 
 /obj/item/kit/burst
 	name = "WMK Burst"
-	desc = "Теперь оружие будет делать два выстрела за раз."
+	desc = "РўРµРїРµСЂСЊ РѕСЂСѓР¶РёРµ Р±СѓРґРµС‚ РґРµР»Р°С‚СЊ РґРІР° РІС‹СЃС‚СЂРµР»Р° Р·Р° СЂР°Р·."
 	prefix = "rapid"
 
 /obj/item/kit/delay
 	name = "WMK Speed"
-	desc = "Оружие стреляет на 100% быстрее."
+	desc = "РћСЂСѓР¶РёРµ СЃС‚СЂРµР»СЏРµС‚ РЅР° 100% Р±С‹СЃС‚СЂРµРµ."
 	prefix = "fast"
 
 /obj/item/kit/bayonet
 	name = "WMK Bayonet"
-	desc = "Улучшает урон от ближнего боя на 500%."
+	desc = "РЈР»СѓС‡С€Р°РµС‚ СѓСЂРѕРЅ РѕС‚ Р±Р»РёР¶РЅРµРіРѕ Р±РѕСЏ РЅР° 500%."
 	sufix = "with bayonet"
 
 /obj/item/kit/condition
 	name = "WMK Durability"
-	desc = "Улучшает прочность оружия на 33%."
+	desc = "РЈР»СѓС‡С€Р°РµС‚ РїСЂРѕС‡РЅРѕСЃС‚СЊ РѕСЂСѓР¶РёСЏ РЅР° 33%."
 	icon_state = "wmk_d"
 	prefix = "hardened"
 
 /obj/item/kit/scope
 	name = "WMK Scope"
-	desc = "Бля внатуре, для чего же это? :thinking:"
+	desc = "Р‘Р»СЏ РІРЅР°С‚СѓСЂРµ, РґР»СЏ С‡РµРіРѕ Р¶Рµ СЌС‚Рѕ? :thinking:"
 	icon_state = "wmk_s"
 	prefix = "sniper"

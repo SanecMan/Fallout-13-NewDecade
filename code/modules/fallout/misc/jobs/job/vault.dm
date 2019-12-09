@@ -64,7 +64,7 @@
 	status = "resident"
 	total_positions = 20
 	spawn_positions = 20
-	supervisors = "смотрителю"
+	supervisors = "СЃРјРѕС‚СЂРёС‚РµР»СЋ"
 	selection_color = "#005A20"
 
 	allowed_packs = list("starter", "cigarettes")
@@ -112,7 +112,7 @@
 	status = "security"
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "смотрителю"
+	supervisors = "СЃРјРѕС‚СЂРёС‚РµР»СЋ"
 	selection_color = "#005A20"
 
 	allowed_packs = list("starter", "cigarettes")
@@ -164,7 +164,7 @@
 	status = "sciencist"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "смотрителю"
+	supervisors = "СЃРјРѕС‚СЂРёС‚РµР»СЋ"
 	selection_color = "#005A20"
 
 	allowed_packs = list("starter", "cigarettes")
@@ -211,7 +211,7 @@
 	status = "engineer"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "смотрителю"
+	supervisors = "СЃРјРѕС‚СЂРёС‚РµР»СЋ"
 	selection_color = "#005A20"
 
 	allowed_packs = list("starter", "cigarettes")

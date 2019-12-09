@@ -22,7 +22,7 @@
 	if(new_dir)
 		reflect_turf = get_step(reflect_turf, new_dir)
 	else
-		visible_message("<span class='notice'>[src] πΰνεν [P]!</span>")
+		visible_message("<span class='notice'>[src] Ρ€Π°Π½ΠµΠ½ [P]!</span>")
 		new_dir = 0
 		return ..() //Hits as normal, explodes or emps or whatever
 

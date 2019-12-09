@@ -29,7 +29,7 @@
 		if(M in stomach_contents)
 			stomach_contents.Remove(M)
 		M.forceMove(loc)
-		visible_message("<span class='danger'>[M] выпал из [src]!</span>")
+		visible_message("<span class='danger'>[M] РІС‹РїР°Р» РёР· [src]!</span>")
 	..()
 
 /mob/living/carbon/spill_organs(no_brain, no_organs, no_bodyparts)

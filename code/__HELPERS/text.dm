@@ -27,10 +27,10 @@
 
 proc/html_encode_ru(var/t)
 
-	var/index = findtext(t, "ÿ")
+	var/index = findtext(t, "Ñ")
 	while(index)
 		t = copytext(t, 1, index) + "____255;" + copytext(t, index+1)
-		index = findtext(t, "ÿ")
+		index = findtext(t, "Ñ")
 
 	t = html_encode(t)
 	t = replacetext(t, "____255;", "&#1103;")
@@ -88,7 +88,7 @@ proc/html_encode_ru(var/t)
 			if(62,60,92,47)
 				return			//rejects the text if it contains these bad characters: <, >, \ or /
 			if(127 to 255)
-				return			//rejects weird letters like ï¿½
+				return			//rejects weird letters like Ğ¿Ñ—Ğ…
 			if(0 to 31)
 				return			//more weird stuff
 			if(32)
@@ -445,11 +445,11 @@ var/list/binary = list("0","1")
 	return text
 
 /proc/uppertext_uni(text as text)
-	var/rep = "ß"
-	var/index = findtext(text, "ÿ")
+	var/rep = "Ğ¯"
+	var/index = findtext(text, "Ñ")
 	while(index)
 		text = copytext(text, 1, index) + rep + copytext(text, index + 1)
-		index = findtext(text, "ÿ")
+		index = findtext(text, "Ñ")
 	var/t = ""
 	for(var/i = 1, i <= length(text), i++)
 		var/a = text2ascii(text, i)
@@ -461,11 +461,11 @@ var/list/binary = list("0","1")
 	return t
 
 /proc/lowertext_uni(text as text)
-	var/rep = "ÿ"
-	var/index = findtext(text, "ß")
+	var/rep = "Ñ"
+	var/index = findtext(text, "Ğ¯")
 	while(index)
 		text = copytext(text, 1, index) + rep + copytext(text, index + 1)
-		index = findtext(text, "ß")
+		index = findtext(text, "Ğ¯")
 	var/t = ""
 	for(var/i = 1, i <= length(text), i++)
 		var/a = text2ascii(text, i)

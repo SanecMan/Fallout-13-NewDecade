@@ -1326,17 +1326,17 @@ proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 /proc/weightclass2text(var/w_class)
 	switch(w_class)
 		if(WEIGHT_CLASS_TINY)
-			. = "небольшой"
+			. = "РЅРµР±РѕР»СЊС€РѕР№"
 		if(WEIGHT_CLASS_SMALL)
-			. = "маленький"
+			. = "РјР°Р»РµРЅСЊРєРёР№"
 		if(WEIGHT_CLASS_NORMAL)
-			. = "обычный"
+			. = "РѕР±С‹С‡РЅС‹Р№"
 		if(WEIGHT_CLASS_BULKY)
-			. = "громоздкий"
+			. = "РіСЂРѕРјРѕР·РґРєРёР№"
 		if(WEIGHT_CLASS_HUGE)
-			. = "большой"
+			. = "Р±РѕР»СЊС€РѕР№"
 		if(WEIGHT_CLASS_GIGANTIC)
-			. = "огромный"
+			. = "РѕРіСЂРѕРјРЅС‹Р№"
 		else
 			. = ""
 

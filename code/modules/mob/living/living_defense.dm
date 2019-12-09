@@ -8,17 +8,17 @@
 		if(penetrated_text)
 			to_chat(src, "<span class='userdanger'>[penetrated_text]</span>")
 		else
-			to_chat(src, "<span class='userdanger'>Ваша броня пробита!</span>")
+			to_chat(src, "<span class='userdanger'>Р’Р°С€Р° Р±СЂРѕРЅСЏ РїСЂРѕР±РёС‚Р°!</span>")
 	else if(armor >= 100)
 		if(absorb_text)
 			to_chat(src, "<span class='userdanger'>[absorb_text]</span>")
 		else
-			to_chat(src, "<span class='userdanger'>Ваша броня поглотила урон!</span>")
+			to_chat(src, "<span class='userdanger'>Р’Р°С€Р° Р±СЂРѕРЅСЏ РїРѕРіР»РѕС‚РёР»Р° СѓСЂРѕРЅ!</span>")
 	else if(armor > 0)
 		if(soften_text)
 			to_chat(src, "<span class='userdanger'>[soften_text]</span>")
 		else
-			to_chat(src, "<span class='userdanger'>Ваша броня смягчила урон!</span>")
+			to_chat(src, "<span class='userdanger'>Р’Р°С€Р° Р±СЂРѕРЅСЏ СЃРјСЏРіС‡РёР»Р° СѓСЂРѕРЅ!</span>")
 	return armor
 
 
@@ -96,8 +96,8 @@
 		if(!I.throwforce)// Otherwise, if the item's throwforce is 0...
 			playsound(loc, 'sound/weapons/throwtap.ogg', 1, volume, -1)//...play throwtap.ogg.
 		if(!blocked)
-			visible_message("<span class='danger'>[src] ранен [I].</span>", \
-							"<span class='userdanger'>[src] ранен с [I].</span>")
+			visible_message("<span class='danger'>[src] СЂР°РЅРµРЅ [I].</span>", \
+							"<span class='userdanger'>[src] СЂР°РЅРµРЅ СЃ [I].</span>")
 			var/armor = run_armor_check(zone, "melee", "Your armor has protected your [parse_zone(zone)].", "Your armor has softened hit to your [parse_zone(zone)].",I.armour_penetration)
 
 			//crc

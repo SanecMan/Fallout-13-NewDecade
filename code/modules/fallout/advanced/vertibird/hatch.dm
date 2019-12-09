@@ -10,15 +10,15 @@
 		return
 
 	if(istype(I, /obj/vertibird_exit_door))
-		to_chat(usr, "Õîğîøàÿ ïîïûòêà.")
+		to_chat(usr, "Ğ¥Ğ¾Ñ€Ğ¾ÑˆĞ°Ñ Ğ¿Ğ¾Ğ¿Ñ‹Ñ‚ĞºĞ°.")
 		return
 
 	if(vertibird:locked)
-		to_chat(usr, "Çàïåğòî!")
+		to_chat(usr, "Ğ—Ğ°Ğ¿ĞµÑ€Ñ‚Ğ¾!")
 		return
 
 	if(vertibird:inFly)
-		to_chat(usr, "ÂÛ ÍÅ ÌÎÆÅÒÅ ÂÛÉÒÈ ÏÎÊÀ Â ÏÎËÅÒÅ!")
+		to_chat(usr, "Ğ’Ğ« ĞĞ• ĞœĞĞ–Ğ•Ğ¢Ğ• Ğ’Ğ«Ğ™Ğ¢Ğ˜ ĞŸĞĞšĞ Ğ’ ĞŸĞĞ›Ğ•Ğ¢Ğ•!")
 		return
 
 	I.forceMove(vertibird:ejectTurf())

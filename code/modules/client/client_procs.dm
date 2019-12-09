@@ -175,7 +175,7 @@ var/next_external_rsc = 0
 	connection_timeofday = world.timeofday
 
 	if (byond_version < config.client_error_version)		//Out of date client.
-		to_chat(src, "<span class='danger'><b>Обновите ваш BYOND:</b></span>")
+		to_chat(src, "<span class='danger'><b>РћР±РЅРѕРІРёС‚Рµ РІР°С€ BYOND:</b></span>")
 		to_chat(src, config.client_error_message)
 		to_chat(src, "Your version: [byond_version]")
 		to_chat(src, "Required version: [config.client_error_version] or later")
@@ -255,7 +255,7 @@ var/next_external_rsc = 0
 	screen += void
 
 	if(prefs.lastchangelog != changelog_hash) //bolds the changelog button on the interface so we know there are updates.
-		to_chat(src, "<span class='info'>Вы не прочли список обновлений.</span>")
+		to_chat(src, "<span class='info'>Р’С‹ РЅРµ РїСЂРѕС‡Р»Рё СЃРїРёСЃРѕРє РѕР±РЅРѕРІР»РµРЅРёР№.</span>")
 		if(config.aggressive_changelog)
 			changelog()
 		else

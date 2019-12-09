@@ -36,13 +36,13 @@
 
 	if(fullness > THIRST_LEVEL_FULL)
 		if(M == user)
-			to_chat(M, "<span class='notice'>Вы не хотите пить.</span>")
+			to_chat(M, "<span class='notice'>Р’С‹ РЅРµ С…РѕС‚РёС‚Рµ РїРёС‚СЊ.</span>")
 		else
-			to_chat(user, "<span class='notice'>[M] не может больше пить.</span>")
+			to_chat(user, "<span class='notice'>[M] РЅРµ РјРѕР¶РµС‚ Р±РѕР»СЊС€Рµ РїРёС‚СЊ.</span>")
 		return 0
 
 	if(M == user)
-		to_chat(M, "<span class='notice'>Вы отхлебнули из [src].</span>")
+		to_chat(M, "<span class='notice'>Р’С‹ РѕС‚С…Р»РµР±РЅСѓР»Рё РёР· [src].</span>")
 
 	else
 		M.visible_message("<span class='danger'>[user] attempts to feed the contents of [src] to [M].</span>", "<span class='userdanger'>[user] attempts to feed the contents of [src] to [M].</span>")
@@ -63,11 +63,11 @@
 	if(istype(target, /obj/structure/reagent_dispensers)) //A dispenser. Transfer FROM it TO us.
 
 		if(!target.reagents.total_volume)
-			to_chat(user, "<span class='warning'>[target] пуст.</span>")
+			to_chat(user, "<span class='warning'>[target] РїСѓСЃС‚.</span>")
 			return
 
 		if(reagents.total_volume >= reagents.maximum_volume)
-			to_chat(user, "<span class='warning'>[src] полон.</span>")
+			to_chat(user, "<span class='warning'>[src] РїРѕР»РѕРЅ.</span>")
 			return
 
 		var/trans = target.reagents.trans_to(src, amount_per_transfer_from_this)
@@ -75,11 +75,11 @@
 
 	else if(target.is_open_container()) //Something like a glass. Player probably wants to transfer TO it.
 		if(!reagents.total_volume)
-			to_chat(user, "<span class='warning'>[src] пуст.</span>")
+			to_chat(user, "<span class='warning'>[src] РїСѓСЃС‚.</span>")
 			return
 
 		if(target.reagents.total_volume >= target.reagents.maximum_volume)
-			to_chat(user, "<span class='warning'>[target] полон.</span>")
+			to_chat(user, "<span class='warning'>[target] РїРѕР»РѕРЅ.</span>")
 			return
 		var/refill = reagents.get_master_reagent_id()
 		var/trans = src.reagents.trans_to(target, amount_per_transfer_from_this)
@@ -95,7 +95,7 @@
 		var/added_heat = (I.is_hot() / 100) //ishot returns a temperature
 		if(reagents)
 			reagents.chem_temp += added_heat
-			to_chat(user, "<span class='notice'>Вы нагрели [src] с помощью [I].</span>")
+			to_chat(user, "<span class='notice'>Р’С‹ РЅР°РіСЂРµР»Рё [src] СЃ РїРѕРјРѕС‰СЊСЋ [I].</span>")
 			reagents.handle_reactions()
 	..()
 

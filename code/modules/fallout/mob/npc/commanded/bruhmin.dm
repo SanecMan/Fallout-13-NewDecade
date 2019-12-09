@@ -31,7 +31,7 @@
 	self_weight = 150
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 6, /obj/item/stack/sheet/animalhide/generic=2)
 
-	attacktext = "бодает"
+	attacktext = "Р±РѕРґР°РµС‚"
 	melee_damage_lower = 15
 	melee_damage_upper = 45
 	attack_sound = 'sound/weapons/bite.ogg'

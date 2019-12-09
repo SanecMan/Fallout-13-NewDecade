@@ -1,7 +1,7 @@
 #define SANDSTORM_CHANNEL 16
 
 /datum/weather_controller/sandstorm
-	name = "οερχΰννΰÿ_ασπÿ"
+	name = "ΠΏΠµΡΡ‡Π°Π½Π½Π°Ρ_Π±ΡƒΡ€Ρ"
 	id = "sandstorm"
 	desc = "Sandstorm."
 

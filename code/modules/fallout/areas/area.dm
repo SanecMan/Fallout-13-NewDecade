@@ -21,7 +21,7 @@
 //Ambigen sound tips for ambientsounds: 1 - 2 : outside the ruined buildings, 3 - 9 : inside the wasteland buildings, 10 - 14 : vaults and bunkers specific, 15-19 : caves
 
 /area/f13/wasteland
-	name = "Пустоши"
+	name = "РџСѓСЃС‚РѕС€Рё"
 	icon_state = "wasteland"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -76,7 +76,7 @@
 	name = "Hologram 15"
 
 /area/f13/forest
-	name = "Лес"
+	name = "Р›РµСЃ"
 	icon_state = "forest"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -90,7 +90,7 @@
 	grow_chance = 75
 
 /area/f13/ruins
-	name = "Руины"
+	name = "Р СѓРёРЅС‹"
 	icon_state = "ruins"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -104,7 +104,7 @@
 	grow_chance = 5
 
 /area/f13/shack
-	name = "Лавка"
+	name = "Р›Р°РІРєР°"
 	icon_state = "shack"
 	ambience = list('sound/f13ambience/shack.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -115,7 +115,7 @@
 	grow_chance = 5
 
 /area/f13/building
-	name = "Строение"
+	name = "РЎС‚СЂРѕРµРЅРёРµ"
 	icon_state = "building"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -127,7 +127,7 @@
 	roof = TRUE
 
 /area/f13/powerstation
-	name = "Электростанция"
+	name = "Р­Р»РµРєС‚СЂРѕСЃС‚Р°РЅС†РёСЏ"
 	icon_state = "powerstation"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -139,7 +139,7 @@
 	roof = TRUE
 
 /area/f13/fabric
-	name = "Фабрика"
+	name = "Р¤Р°Р±СЂРёРєР°"
 	icon_state = "fabric"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -151,7 +151,7 @@
 	roof = TRUE
 
 /area/f13/police
-	name = "Полиция"
+	name = "РџРѕР»РёС†РёСЏ"
 	icon_state = "police"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -163,7 +163,7 @@
 	roof = TRUE
 
 /area/f13/farm
-	name = "Ферма"
+	name = "Р¤РµСЂРјР°"
 	icon_state = "farm"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -177,7 +177,7 @@
 	grow_chance = 50
 
 /area/f13/tribe
-	name = "Племя"
+	name = "РџР»РµРјСЏ"
 	icon_state = "tribe"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -191,7 +191,7 @@
 	grow_chance = 5
 
 /area/f13/village
-	name = "Деревня"
+	name = "Р”РµСЂРµРІРЅСЏ"
 	icon_state = "village"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -205,7 +205,7 @@
 	grow_chance = 5
 
 /area/f13/outpost
-	name = "Блокпост"
+	name = "Р‘Р»РѕРєРїРѕСЃС‚"
 	icon_state = "outpost"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -219,7 +219,7 @@
 	grow_chance = 5
 
 /area/f13/hub
-	name = "Хаб"
+	name = "РҐР°Р±"
 	icon_state = "hub"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -233,7 +233,7 @@
 	grow_chance = 5
 
 /area/f13/city
-	name = "Город"
+	name = "Р“РѕСЂРѕРґ"
 	icon_state = "city"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -247,7 +247,7 @@
 	grow_chance = 5
 
 /area/f13/citycaves
-	name = "Городские пещеры"
+	name = "Р“РѕСЂРѕРґСЃРєРёРµ РїРµС‰РµСЂС‹"
 	icon_state = "citycaves"
 	ambience = list('sound/f13ambience/cave.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -257,7 +257,7 @@
 	grow_chance = 25
 
 /area/f13/chapel
-	name = "Капелла"
+	name = "РљР°РїРµР»Р»Р°"
 	icon_state = "chapel"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -268,7 +268,7 @@
 	roof = TRUE
 
 /area/f13/bar
-	name = "Бар"
+	name = "Р‘Р°СЂ"
 	icon_state = "bar"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -278,7 +278,7 @@
 	roof = TRUE
 
 /area/f13/casino
-	name = "Казино"
+	name = "РљР°Р·РёРЅРѕ"
 	icon_state = "casino"
 	ambience = list('sound/f13ambience/warehouse.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -290,7 +290,7 @@
 	roof = TRUE
 
 /area/f13/clinic
-	name = "Клиника"
+	name = "РљР»РёРЅРёРєР°"
 	icon_state = "clinic"
 	ambience = list('sound/f13ambience/warehouse.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -302,7 +302,7 @@
 	roof = TRUE
 
 /area/f13/city_north
-	name = "Север города"
+	name = "РЎРµРІРµСЂ РіРѕСЂРѕРґР°"
 	icon_state = "city_north"
 	ambience = list('sound/f13ambience/warehouse.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -314,7 +314,7 @@
 	roof = TRUE
 
 /area/f13/office
-	name = "Офисы"
+	name = "РћС„РёСЃС‹"
 	icon_state = "office"
 	ambience = list('sound/f13ambience/warehouse.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -326,7 +326,7 @@
 	roof = TRUE
 
 /area/f13/city_center
-	name = "Центр Города"
+	name = "Р¦РµРЅС‚СЂ Р“РѕСЂРѕРґР°"
 	icon_state = "city_center"
 	ambience = list('sound/f13ambience/warehouse.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -338,7 +338,7 @@
 	roof = TRUE
 
 /area/f13/city_south
-	name = "Юг города"
+	name = "Р®Рі РіРѕСЂРѕРґР°"
 	icon_state = "city_south"
 	ambience = list('sound/f13ambience/warehouse.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -350,7 +350,7 @@
 	roof = TRUE
 
 /area/f13/store
-	name = "Магазин"
+	name = "РњР°РіР°Р·РёРЅ"
 	icon_state = "store"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_explore_01.ogg', 'sound/f13music/fo3_explore_02.ogg', 'sound/f13music/fo3_explore_03.ogg', 'sound/f13music/fo3_explore_04.ogg', 'sound/f13music/fo3_explore_05.ogg', 'sound/f13music/fo3_explore_06.ogg', 'sound/f13music/fo3_explore_07.ogg')
@@ -362,7 +362,7 @@
 	roof = TRUE
 
 /area/f13/bunker
-	name = "Бункер"
+	name = "Р‘СѓРЅРєРµСЂ"
 	icon_state = "bunker"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -373,7 +373,7 @@
 	grow_chance = 5
 
 /area/f13/tunnel
-	name = "Туннель"
+	name = "РўСѓРЅРЅРµР»СЊ"
 	icon_state = "tunnel"
 	ambience = list('sound/f13ambience/cave.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -384,7 +384,7 @@
 	grow_chance = 25
 
 /area/f13/sewer
-	name = "Канализация"
+	name = "РљР°РЅР°Р»РёР·Р°С†РёСЏ"
 	icon_state = "sewer"
 	ambience = list('sound/f13ambience/sewer.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -394,7 +394,7 @@
 	grow_chance = 50
 
 /area/f13/caves
-	name = "Пещеры"
+	name = "РџРµС‰РµСЂС‹"
 	icon_state = "caves"
 	ambience = list('sound/f13ambience/cave.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -404,7 +404,7 @@
 	grow_chance = 75
 
 /area/f13/subway
-	name = "Метро"
+	name = "РњРµС‚СЂРѕ"
 	icon_state = "subway"
 	ambience = list('sound/f13ambience/cave.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -414,7 +414,7 @@
 	grow_chance = 25
 
 /area/f13/secret
-	name = "Секретная локация"
+	name = "РЎРµРєСЂРµС‚РЅР°СЏ Р»РѕРєР°С†РёСЏ"
 	icon_state = "secret"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -425,7 +425,7 @@
 	grow_chance = 0
 
 /area/f13/radiation
-	name = "Радиация"
+	name = "Р Р°РґРёР°С†РёСЏ"
 	icon_state = "radiation"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -437,7 +437,7 @@
 //Faction related areas
 
 /area/f13/raiders
-	name = "Рейдеры"
+	name = "Р РµР№РґРµСЂС‹"
 	icon_state = "raiders"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo3_dungeon_01.ogg', 'sound/f13music/fo3_dungeon_02.ogg', 'sound/f13music/fo3_dungeon_03.ogg', 'sound/f13music/fo3_dungeon_04.ogg', 'sound/f13music/fo3_dungeon_05.ogg')
@@ -451,7 +451,7 @@
 	grow_chance = 5
 
 /area/f13/vault
-	name = "Убежище"
+	name = "РЈР±РµР¶РёС‰Рµ"
 	icon_state = "vaulttec"
 	ambience = list('sound/f13ambience/vaulttec_vault.ogg')
 	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/misc/null.ogg')
@@ -462,7 +462,7 @@
 	grow_chance = 5
 
 /area/f13/brotherhood
-	name = "Братство Стали"//Brother Hood
+	name = "Р‘СЂР°С‚СЃС‚РІРѕ РЎС‚Р°Р»Рё"//Brother Hood
 	icon_state = "brotherhood"
 	ambience = list('sound/f13ambience/enclave_vault.ogg')
 	ambientmusic = list('sound/f13music/fo3_base_01.ogg', 'sound/f13music/fo3_base_02.ogg', 'sound/f13music/fo3_base_03.ogg', 'sound/f13music/fo3_base_04.ogg')
@@ -474,7 +474,7 @@
 	grow_chance = 5
 
 /area/f13/enclave
-	name = "Анклав"
+	name = "РђРЅРєР»Р°РІ"
 	icon_state = "enclave"
 	ambience = list('sound/f13ambience/enclave_vault.ogg')
 	ambientmusic = list('sound/f13music/fo3_base_01.ogg', 'sound/f13music/fo3_base_02.ogg', 'sound/f13music/fo3_base_03.ogg', 'sound/f13music/fo3_base_04.ogg')
@@ -497,7 +497,7 @@
 	grow_chance = 5
 
 /area/f13/ncr
-	name = "НКР"
+	name = "РќРљР "
 	icon_state = "ncr"
 	ambience = list('sound/f13ambience/warehouse.ogg')
 	ambientmusic = list('sound/f13music/fo3_base_01.ogg', 'sound/f13music/fo3_base_02.ogg', 'sound/f13music/fo3_base_03.ogg', 'sound/f13music/fo3_base_04.ogg')
@@ -509,7 +509,7 @@
 	grow_chance = 5
 
 /area/f13/legion
-	name = "Легион"
+	name = "Р›РµРіРёРѕРЅ"
 	icon_state = "legion"
 	ambience = list('sound/f13ambience/building.ogg')
 	ambientmusic = list('sound/f13music/fo3_base_01.ogg', 'sound/f13music/fo3_base_02.ogg', 'sound/f13music/fo3_base_03.ogg', 'sound/f13music/fo3_base_04.ogg')
@@ -521,7 +521,7 @@
 	grow_chance = 5
 
 /area/f13/followers
-	name = "Последователи Апокалипсиса"
+	name = "РџРѕСЃР»РµРґРѕРІР°С‚РµР»Рё РђРїРѕРєР°Р»РёРїСЃРёСЃР°"
 	icon_state = "followers"
 	ambience = list('sound/f13ambience/warehouse.ogg')
 	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')

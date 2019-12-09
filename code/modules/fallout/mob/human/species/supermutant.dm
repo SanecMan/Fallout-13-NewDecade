@@ -55,8 +55,8 @@
 	return
 */
 /datum/perk/radresist_mutants
-	name = "Рад-сопротивление/Rad Resistance мутантов"
-	description = "Рад-сопротивление позволяет вам — вот неожиданность — сопротивляться радиации. Эта способность добавляет 2500 % к сопротивляемости радиации. You are better able to avoid radiation, and the bad effects radiation causes. This Perk will improve your Radiation Resistance by 2500%."
+	name = "Р Р°Рґ-СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёРµ/Rad Resistance РјСѓС‚Р°РЅС‚РѕРІ"
+	description = "Р Р°Рґ-СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёРµ РїРѕР·РІРѕР»СЏРµС‚ РІР°Рј вЂ” РІРѕС‚ РЅРµРѕР¶РёРґР°РЅРЅРѕСЃС‚СЊ вЂ” СЃРѕРїСЂРѕС‚РёРІР»СЏС‚СЊСЃСЏ СЂР°РґРёР°С†РёРё. Р­С‚Р° СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ РґРѕР±Р°РІР»СЏРµС‚ 2500 % Рє СЃРѕРїСЂРѕС‚РёРІР»СЏРµРјРѕСЃС‚Рё СЂР°РґРёР°С†РёРё. You are better able to avoid radiation, and the bad effects radiation causes. This Perk will improve your Radiation Resistance by 2500%."
 	icon_state = "perk_radresist"
 
 

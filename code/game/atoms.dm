@@ -198,9 +198,9 @@
 			f_name = "some "
 		else
 			f_name = "a "
-		f_name += "<span class='danger'>в крови</span> [name]!"
+		f_name += "<span class='danger'>РІ РєСЂРѕРІРё</span> [name]!"
 
-	to_chat(user, "[bicon(src)] Это [f_name]")
+	to_chat(user, "[bicon(src)] Р­С‚Рѕ [f_name]")
 
 	if(desc)
 		to_chat(user, desc)

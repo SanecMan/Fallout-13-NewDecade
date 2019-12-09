@@ -201,10 +201,10 @@
 	icon_state = "angry_ghoul_d"
 
 
-/obj/effect/mine/ghoul/mineEffect(mob/living/carbon/victim)  /// эффект " мины "
-	to_chat(victim, "<span class='userdanger'>Ghoul suddenly rises up and tries to bite you!</span>") /// текстовый графон, ееее!
+/obj/effect/mine/ghoul/mineEffect(mob/living/carbon/victim)  /// СЌС„С„РµРєС‚ " РјРёРЅС‹ "
+	to_chat(victim, "<span class='userdanger'>Ghoul suddenly rises up and tries to bite you!</span>") /// С‚РµРєСЃС‚РѕРІС‹Р№ РіСЂР°С„РѕРЅ, РµРµРµРµ!
 	new/mob/living/simple_animal/hostile/ghoul
-	qdel()   ///гуль встал и ПОБЕЖАЛ, поэтому сама " мина " удаляется
+	qdel()   ///РіСѓР»СЊ РІСЃС‚Р°Р» Рё РџРћР‘Р•Р–РђР›, РїРѕСЌС‚РѕРјСѓ СЃР°РјР° " РјРёРЅР° " СѓРґР°Р»СЏРµС‚СЃСЏ
 
 /obj/effect/mine/Gghoul
 	name = " Glowing feral ghoul "

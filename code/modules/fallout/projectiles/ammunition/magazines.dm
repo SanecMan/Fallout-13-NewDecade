@@ -152,7 +152,7 @@
 	multiple_sprites = 2
 	price = 250
 
-/obj/item/ammo_box/magazine/F13/fnfal //ß ÊÎÑÒÛËÜÍÛÉ ÏÈÄÎĞÀÑ ÛÛÛ//
+/obj/item/ammo_box/magazine/F13/fnfal //Ğ¯ ĞšĞĞ¡Ğ¢Ğ«Ğ›Ğ¬ĞĞ«Ğ™ ĞŸĞ˜Ğ”ĞĞ ĞĞ¡ Ğ«Ğ«Ğ«//
 	name = "rifle magazine (7.62mm)"
 	icon_state = "falmag"
 	ammo_type = /obj/item/ammo_casing/F13/a556/heap

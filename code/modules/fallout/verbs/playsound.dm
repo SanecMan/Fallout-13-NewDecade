@@ -15,14 +15,14 @@ var/sound/admin_sound
 
 	switch(alert("Are you sure?\nSong: [S]\nNow you can also play this sound using \"Play Server Sound\".", "Confirmation request" ,"Play", "FORCE", "Cancel")) //Use the Force, Luke.
 		if("Play")
-			log_admin("[key_name(src)] проиграл [S]")
-			message_admins("[key_name_admin(src)] проиграл [S]", 1)
+			log_admin("[key_name(src)] РїСЂРѕРёРіСЂР°Р» [S]")
+			message_admins("[key_name_admin(src)] РїСЂРѕРёРіСЂР°Р» [S]", 1)
 			for(var/mob/M in player_list)
 				if(M.client.prefs.toggles & SOUND_MIDI)
 					M << admin_sound
 		if("FORCE") //I have a very bad feeling about this.
-			log_admin("[key_name(src)] проиграл [S] НАСИЛЬНО")
-			message_admins("[key_name_admin(src)] проиграл [S] НАСИЛЬНО", 1)
+			log_admin("[key_name(src)] РїСЂРѕРёРіСЂР°Р» [S] РќРђРЎРР›Р¬РќРћ")
+			message_admins("[key_name_admin(src)] РїСЂРѕРёРіСЂР°Р» [S] РќРђРЎРР›Р¬РќРћ", 1)
 			for(var/mob/M in player_list)
 				M << admin_sound
 
@@ -75,7 +75,7 @@ var/sound/admin_sound
 		return
 
 	log_admin("[key_name(src)] set the round end sound to [S]")
-	message_admins("[key_name_admin(src)] сменил звук конца раунда на [S]")
+	message_admins("[key_name_admin(src)] СЃРјРµРЅРёР» Р·РІСѓРє РєРѕРЅС†Р° СЂР°СѓРЅРґР° РЅР° [S]")
 	feedback_add_details("admin_verb","SRES") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/stop_sounds()
@@ -85,7 +85,7 @@ var/sound/admin_sound
 		return
 
 	log_admin("[key_name(src)] stopped all currently playing sounds.")
-	message_admins("[key_name_admin(src)] остановил проигрывание всех звуков.")
+	message_admins("[key_name_admin(src)] РѕСЃС‚Р°РЅРѕРІРёР» РїСЂРѕРёРіСЂС‹РІР°РЅРёРµ РІСЃРµС… Р·РІСѓРєРѕРІ.")
 	for(var/mob/M in player_list)
 		if(M.client)
 			to_chat(M, sound(null))
