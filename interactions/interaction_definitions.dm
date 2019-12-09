@@ -1,42 +1,42 @@
 /datum/interaction/bow
 	command = "bow"
-	description = "Поклониться."
+	description = "РџРѕРєР»РѕРЅРёС‚СЊСЃСЏ."
 	max_distance = 25
-	simple_message = "USER кланяется TARGET."
+	simple_message = "USER РєР»Р°РЅСЏРµС‚СЃСЏ TARGET."
 
 /datum/interaction/smile
 	command = "smile"
-	description = "Улыбнуться."
-	simple_message = "USER улыбается глядя на TARGET."
+	description = "РЈР»С‹Р±РЅСѓС‚СЊСЃСЏ."
+	simple_message = "USER СѓР»С‹Р±Р°РµС‚СЃСЏ РіР»СЏРґСЏ РЅР° TARGET."
 	require_user_mouth = 1
 	max_distance = 25
 
 /datum/interaction/wave
 	command = "wave"
-	description = "Помахать."
-	simple_message = "USER машет TARGET."
+	description = "РџРѕРјР°С…Р°С‚СЊ."
+	simple_message = "USER РјР°С€РµС‚ TARGET."
 	require_user_hands = 1
 	max_distance = 25
 
 /datum/interaction/handshake
 	command = "handshake"
-	description = "Поздороваться."
+	description = "РџРѕР·РґРѕСЂРѕРІР°С‚СЊСЃСЏ."
 	simple_message = "USER shakes the hand of TARGET."
 	require_user_hands = 1
 	needs_physical_contact = 1
 
 /datum/interaction/pat
 	command = "pat"
-	description = "Похлопать по плечу."
-	simple_message = "USER хлопает TARGET по плечу."
+	description = "РџРѕС…Р»РѕРїР°С‚СЊ РїРѕ РїР»РµС‡Сѓ."
+	simple_message = "USER С…Р»РѕРїР°РµС‚ TARGET РїРѕ РїР»РµС‡Сѓ."
 	require_user_hands = 1
 	needs_physical_contact = 1
 
 /datum/interaction/kiss
 	command = "kiss"
-	description = "Поцеловать."
+	description = "РџРѕС†РµР»РѕРІР°С‚СЊ."
 	require_user_mouth = 1
-	simple_message = "USER целует TARGET."
+	simple_message = "USER С†РµР»СѓРµС‚ TARGET."
 	write_log_user = "kissed"
 	write_log_target = "was kissed by"
 	needs_physical_contact = 1
@@ -44,80 +44,80 @@
 datum/interaction/kiss/evaluate_user(var/mob/user, var/silent=1)
 	if(..())
 		if(!user.has_lips())
-			if(!silent) user << "<span class='warning'>У вас нет губ!</span>"
+			if(!silent) user << "<span class='warning'>РЈ РІР°СЃ РЅРµС‚ РіСѓР±!</span>"
 			return 0
 		return 1
 	return 0
 
 /datum/interaction/hug
 	command = "hug"
-	description = "Обнять."
+	description = "РћР±РЅСЏС‚СЊ."
 	require_user_mouth = 1
-	simple_message = "USER обнимает TARGET."
+	simple_message = "USER РѕР±РЅРёРјР°РµС‚ TARGET."
 	interaction_sound = 'honk/sound/interactions/hug.ogg'
 	needs_physical_contact = 1
 
 /datum/interaction/cheer
 	command = "cheer"
-	description = "Подбодрить."
+	description = "РџРѕРґР±РѕРґСЂРёС‚СЊ."
 	require_user_mouth = 1
-	simple_message = "USER подбадривает TARGET!"
+	simple_message = "USER РїРѕРґР±Р°РґСЂРёРІР°РµС‚ TARGET!"
 
 /datum/interaction/highfive
 	command = "highfive"
-	description = "Дать пять."
+	description = "Р”Р°С‚СЊ РїСЏС‚СЊ."
 	require_user_mouth = 1
-	simple_message = "USER даёт пятюню TARGET!"
+	simple_message = "USER РґР°С‘С‚ РїСЏС‚СЋРЅСЋ TARGET!"
 	interaction_sound = 'honk/sound/interactions/slap.ogg'
 	needs_physical_contact = 1
 
 /datum/interaction/headpat
 	command = "headpat"
-	description = "Похлопать по голове."
+	description = "РџРѕС…Р»РѕРїР°С‚СЊ РїРѕ РіРѕР»РѕРІРµ."
 	require_user_hands = 1
-	simple_message = "USER хлопает TARGET по голове!"
+	simple_message = "USER С…Р»РѕРїР°РµС‚ TARGET РїРѕ РіРѕР»РѕРІРµ!"
 	needs_physical_contact = 1
 
 /datum/interaction/salute
 	command = "salute"
-	description = "Отдать честь!"
+	description = "РћС‚РґР°С‚СЊ С‡РµСЃС‚СЊ!"
 	require_user_hands = 1
-	simple_message = "USER салютует TARGET!"
+	simple_message = "USER СЃР°Р»СЋС‚СѓРµС‚ TARGET!"
 	max_distance = 25
 
 /datum/interaction/fistbump
 	command = "fistbump"
-	description = "Брофист!"
+	description = "Р‘СЂРѕС„РёСЃС‚!"
 	require_user_hands = 1
-	simple_message = "USER сделал брофист с TARGET! О да!"
+	simple_message = "USER СЃРґРµР»Р°Р» Р±СЂРѕС„РёСЃС‚ СЃ TARGET! Рћ РґР°!"
 	needs_physical_contact = 1
 
 /datum/interaction/pinkypromise
 	command = "pinkypromise"
-	description = "Пинки-клятва!"
+	description = "РџРёРЅРєРё-РєР»СЏС‚РІР°!"
 	require_user_hands = 1
-	simple_message = "<b>USER</b> says, ''Руку на сердце, без лишних фраз! Пирожок мне прямо в глаз!''"
+	simple_message = "<b>USER</b> says, ''Р СѓРєСѓ РЅР° СЃРµСЂРґС†Рµ, Р±РµР· Р»РёС€РЅРёС… С„СЂР°Р·! РџРёСЂРѕР¶РѕРє РјРЅРµ РїСЂСЏРјРѕ РІ РіР»Р°Р·!''"
 	needs_physical_contact = 1
 
 /datum/interaction/bird
 	command = "bird"
-	description = "Показать средний палец!"
+	description = "РџРѕРєР°Р·Р°С‚СЊ СЃСЂРµРґРЅРёР№ РїР°Р»РµС†!"
 	require_user_hands = 1
-	simple_message = "USER показывает средний палец TARGET!"
+	simple_message = "USER РїРѕРєР°Р·С‹РІР°РµС‚ СЃСЂРµРґРЅРёР№ РїР°Р»РµС† TARGET!"
 	max_distance = 25
 
 /datum/interaction/holdhand
 	command = "holdhand"
-	description = "Подержать за руку."
+	description = "РџРѕРґРµСЂР¶Р°С‚СЊ Р·Р° СЂСѓРєСѓ."
 	require_user_hands = 1
-	simple_message = "USER держит TARGET за руку."
+	simple_message = "USER РґРµСЂР¶РёС‚ TARGET Р·Р° СЂСѓРєСѓ."
 	max_distance = 25
 	needs_physical_contact = 1
 	max_distance = 25
 
 /*/datum/interaction/rockpaperscissors
 	command = "handplay"
-	description = "Камень-ножницы-Бумага!"
+	description = "РљР°РјРµРЅСЊ-РЅРѕР¶РЅРёС†С‹-Р‘СѓРјР°РіР°!"
 	require_user_hands = 1
-	simple_message = pick("USER поиграл в Камень-Ножницы-Бумага с TARGET, выпал Камень!","USER поиграл в Камень-Ножницы-Бумага с TARGET, выпала бумага!", "USER поиграл в Камень-Ножницы-Бумага с TARGET, выпали Ножницы!")
+	simple_message = pick("USER РїРѕРёРіСЂР°Р» РІ РљР°РјРµРЅСЊ-РќРѕР¶РЅРёС†С‹-Р‘СѓРјР°РіР° СЃ TARGET, РІС‹РїР°Р» РљР°РјРµРЅСЊ!","USER РїРѕРёРіСЂР°Р» РІ РљР°РјРµРЅСЊ-РќРѕР¶РЅРёС†С‹-Р‘СѓРјР°РіР° СЃ TARGET, РІС‹РїР°Р»Р° Р±СѓРјР°РіР°!", "USER РїРѕРёРіСЂР°Р» РІ РљР°РјРµРЅСЊ-РќРѕР¶РЅРёС†С‹-Р‘СѓРјР°РіР° СЃ TARGET, РІС‹РїР°Р»Рё РќРѕР¶РЅРёС†С‹!")
 	needs_physical_contact = 1 */

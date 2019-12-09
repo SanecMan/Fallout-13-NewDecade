@@ -19,4 +19,4 @@
 	if(getSeconds() == 0)
 		switch(getMinutes())
 			if(0)
-				textGlobal("Заходите в наш дискорд! https://discord.gg/tfRyu2B")
+				textGlobal("Р—Р°С…РѕРґРёС‚Рµ РІ РЅР°С€ РґРёСЃРєРѕСЂРґ! https://discord.gg/tfRyu2B")

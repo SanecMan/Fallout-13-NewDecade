@@ -55,7 +55,7 @@
 
 /obj/item/organ/cyberimp/arm/gun/emp_act(severity)
 	if(prob(15/severity) && owner)
-		to_chat(owner, "<span class='warning'>[src] ğàíåí İÌÈ!</span>")
+		to_chat(owner, "<span class='warning'>[src] Ñ€Ğ°Ğ½ĞµĞ½ Ğ­ĞœĞ˜!</span>")
 		// give the owner an idea about why his implant is glitching
 		Retract()
 	..()

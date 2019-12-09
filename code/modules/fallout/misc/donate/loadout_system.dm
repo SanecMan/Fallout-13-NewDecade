@@ -48,10 +48,10 @@ client
 		buy_content_pack(pack_id)
 			var/datum/content_pack/pack = SScontent.get_pack(pack_id)
 			if(donate_money < pack.price)
-				to_chat(src, "Вы не можете себе этого позволить. Недостаточно крышек.")
+				to_chat(src, "Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ СЃРµР±Рµ СЌС‚РѕРіРѕ РїРѕР·РІРѕР»РёС‚СЊ. РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РєСЂС‹С€РµРє.")
 				return 0
 			if(!SScontent.buy_pack(ckey(ckey), pack_id, pack.price))
-				to_chat(src, "Я не знаю что могло пойти не так...")
+				to_chat(src, "РЇ РЅРµ Р·РЅР°СЋ С‡С‚Рѕ РјРѕРіР»Рѕ РїРѕР№С‚Рё РЅРµ С‚Р°Рє...")
 				return 0
 			donate_money -= pack.price
 			add_pack(pack_id, TRUE)

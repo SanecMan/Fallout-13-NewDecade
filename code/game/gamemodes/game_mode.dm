@@ -46,7 +46,7 @@
 
 
 /datum/game_mode/proc/announce() //Shows the gamemode's name and a fast description.
-	to_chat(world, "<b>Игровой режим: <span class='[announce_span]'>[name]</span>!</b>")
+	to_chat(world, "<b>РРіСЂРѕРІРѕР№ СЂРµР¶РёРј: <span class='[announce_span]'>[name]</span>!</b>")
 	to_chat(world, "<b>[announce_text]</b>")
 
 
@@ -430,7 +430,7 @@
 //Reports player logouts//
 //////////////////////////
 /proc/display_roundstart_logout_report()
-	var/msg = "<span class='boldnotice'>Отчет о вышедших из игры\n\n</span>"
+	var/msg = "<span class='boldnotice'>РћС‚С‡РµС‚ Рѕ РІС‹С€РµРґС€РёС… РёР· РёРіСЂС‹\n\n</span>"
 	for(var/mob/living/L in mob_list)
 
 		if(L.ckey)
@@ -440,22 +440,22 @@
 					found = 1
 					break
 			if(!found)
-				msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (<font color='#ffcc00'><b>Отключился</b></font>)\n"
+				msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (<font color='#ffcc00'><b>РћС‚РєР»СЋС‡РёР»СЃСЏ</b></font>)\n"
 
 
 		if(L.ckey && L.client)
 			if(L.client.inactivity >= (ROUNDSTART_LOGOUT_REPORT_TIME / 2))	//Connected, but inactive (alt+tabbed or something)
-				msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (<font color='#ffcc00'><b>Подключен, бездействует</b></font>)\n"
+				msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (<font color='#ffcc00'><b>РџРѕРґРєР»СЋС‡РµРЅ, Р±РµР·РґРµР№СЃС‚РІСѓРµС‚</b></font>)\n"
 				continue //AFK client
 			if(L.stat)
 				if(L.suiciding)	//Suicider
-					msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (<span class='boldannounce'>Роскомнадзор</span>)\n"
+					msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (<span class='boldannounce'>Р РѕСЃРєРѕРјРЅР°РґР·РѕСЂ</span>)\n"
 					continue //Disconnected client
 				if(L.stat == UNCONSCIOUS)
-					msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (Умирает)\n"
+					msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (РЈРјРёСЂР°РµС‚)\n"
 					continue //Unconscious
 				if(L.stat == DEAD)
-					msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (Мертв)\n"
+					msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (РњРµСЂС‚РІ)\n"
 					continue //Dead
 
 			continue //Happy connected client
@@ -463,16 +463,16 @@
 			if(D.mind && D.mind.current == L)
 				if(L.stat == DEAD)
 					if(L.suiciding)	//Suicider
-						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (<span class='boldannounce'>Роскомнадзор</span>)\n"
+						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (<span class='boldannounce'>Р РѕСЃРєРѕРјРЅР°РґР·РѕСЂ</span>)\n"
 						continue //Disconnected client
 					else
-						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (Умер)\n"
+						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (РЈРјРµСЂ)\n"
 						continue //Dead mob, ghost abandoned
 				else
 					if(D.can_reenter_corpse)
 						continue //Adminghost, or cult/wizard ghost
 					else
-						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (<span class='boldannounce'>Гостанулся</span>)\n"
+						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (<span class='boldannounce'>Р“РѕСЃС‚Р°РЅСѓР»СЃСЏ</span>)\n"
 						continue //Ghosted while alive
 
 
@@ -485,15 +485,15 @@
 	var/text = "<br><b>[ply.key]</b> was <b>[ply.name]</b> the <b>[ply.assigned_role]</b> and"
 	if(ply.current)
 		if(ply.current.stat == DEAD)
-			text += " <span class='boldannounce'>умер</span>"
+			text += " <span class='boldannounce'>СѓРјРµСЂ</span>"
 		else
-			text += " <span class='greenannounce'>выжил</span>"
+			text += " <span class='greenannounce'>РІС‹Р¶РёР»</span>"
 		if(fleecheck && ply.current.z > ZLEVEL_STATION)
 			text += " while <span class='boldannounce'>fleeing the station</span>"
 		if(ply.current.real_name != ply.name)
 			text += " as <b>[ply.current.real_name]</b>"
 	else
-		text += " <span class='boldannounce'>умудрился потерять тело</span>"
+		text += " <span class='boldannounce'>СѓРјСѓРґСЂРёР»СЃСЏ РїРѕС‚РµСЂСЏС‚СЊ С‚РµР»Рѕ</span>"
 	return text
 
 /datum/game_mode/proc/printobjectives(datum/mind/ply)
@@ -501,9 +501,9 @@
 	var/count = 1
 	for(var/datum/objective/objective in ply.objectives)
 		if(objective.check_completion())
-			text += "<br><b>Задание #[count]</b>: [objective.explanation_text] <span class='greenannounce'>Успех!</span>"
+			text += "<br><b>Р—Р°РґР°РЅРёРµ #[count]</b>: [objective.explanation_text] <span class='greenannounce'>РЈСЃРїРµС…!</span>"
 		else
-			text += "<br><b>Задание #[count]</b>: [objective.explanation_text] <span class='boldannounce'>Неудача.</span>"
+			text += "<br><b>Р—Р°РґР°РЅРёРµ #[count]</b>: [objective.explanation_text] <span class='boldannounce'>РќРµСѓРґР°С‡Р°.</span>"
 		count++
 	return text
 

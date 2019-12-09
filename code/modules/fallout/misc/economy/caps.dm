@@ -2,7 +2,7 @@
 
 /obj/item/stack/caps
 	name = "caps"
-	desc = "Пост-Апокалиптические деньги. <br>ALT + Click чтобы разделить."
+	desc = "РџРѕСЃС‚-РђРїРѕРєР°Р»РёРїС‚РёС‡РµСЃРєРёРµ РґРµРЅСЊРіРё. <br>ALT + Click С‡С‚РѕР±С‹ СЂР°Р·РґРµР»РёС‚СЊ."
 	singular_name = "cap"
 	icon = 'icons/fallout/objects/bottlecaps.dmi'
 	icon_state = "1"

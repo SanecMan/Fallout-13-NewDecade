@@ -470,7 +470,7 @@
 		return
 	if(user != occupant) //While not "realistic", this piece is player friendly.
 		user.forceMove(get_turf(src))
-		to_chat(user, "<span class='notice'>Вы выкорабкались из [src].</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РІС‹РєРѕСЂР°Р±РєР°Р»РёСЃСЊ РёР· [src].</span>")
 		return 0
 	if(connected_port)
 		if(world.time - last_message > 20)

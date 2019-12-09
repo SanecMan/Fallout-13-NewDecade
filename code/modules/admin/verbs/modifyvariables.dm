@@ -288,11 +288,11 @@ var/list/VVpixelmovement = list("step_x", "step_y", "bound_height", "bound_width
 		//	the type with the base type removed from the begaining
 		var/fancytype = types[D.type]
 		if (findtext(fancytype, types[type]))
-			fancytype = copytext(fancytype, lentext(types[type])+1)
-		var/shorttype = copytext("[D.type]", lentext("[type]")+1)
-		if (lentext(shorttype) > lentext(fancytype))
+			fancytype = copytext(fancytype, length_char(types[type])+1)
+		var/shorttype = copytext("[D.type]", length_char("[type]")+1)
+		if (length_char(shorttype) > length_char(fancytype))
 			shorttype = fancytype
-		if (!lentext(shorttype))
+		if (!length_char(shorttype))
 			shorttype = "/"
 
 		.["[D]([shorttype])\ref[D]#[i]"] = D

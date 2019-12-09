@@ -200,9 +200,9 @@ var/last_irc_status = 0
 	else
 		delay = config.round_end_countdown * 10
 	if(ticker.delay_end)
-		to_chat(world, "<span class='boldannounce'>Администратор приостановил конец раунда.</span>")
+		to_chat(world, "<span class='boldannounce'>РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ РїСЂРёРѕСЃС‚Р°РЅРѕРІРёР» РєРѕРЅРµС† СЂР°СѓРЅРґР°.</span>")
 		return
-	to_chat(world, "<span class='boldannounce'>Перезапуск мира через [delay/10] [delay > 10 ? "seconds" : "second"]. [reason]</span>")
+	to_chat(world, "<span class='boldannounce'>РџРµСЂРµР·Р°РїСѓСЃРє РјРёСЂР° С‡РµСЂРµР· [delay/10] [delay > 10 ? "seconds" : "second"]. [reason]</span>")
 	var/round_end_sound_sent = FALSE
 	if(ticker.round_end_sound)
 		round_end_sound_sent = TRUE
@@ -226,7 +226,7 @@ var/last_irc_status = 0
 				Reboot("Map change timed out", time = 10)
 		return
 	feedback_set_details("[feedback_c]","[feedback_r]")
-	log_game("<span class='boldannounce'>Перезагрузка мира. [reason]</span>")
+	log_game("<span class='boldannounce'>РџРµСЂРµР·Р°РіСЂСѓР·РєР° РјРёСЂР°. [reason]</span>")
 	kick_clients_in_lobby("<span class='boldannounce'>The round came to an end with you in the lobby.</span>", 1) //second parameter ensures only afk clients are kicked
 #ifdef dellogging
 	var/log = file("data/logs/del.log")

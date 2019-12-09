@@ -39,23 +39,46 @@ var/list/department_radio_keys = list(
 	  ":Y" = "Centcom",		"#Y" = "Centcom",		".Y" = "Centcom",
 	  ":X" = "cords",		"#X" = "cords",			".X" = "cords",
 
-	  //kinda localization -- rastaf0
-	  //same keys as above, but on russian keyboard layout. This file uses cp1251 as encoding.
-	  ":ê" = "right hand",	"#ê" = "right hand",	".ê" = "right hand",
-	  ":ä" = "left hand",	"#ä" = "left hand",		".ä" = "left hand",
-	  ":ø" = "intercom",	"#ø" = "intercom",		".ø" = "intercom",
-	  ":ð" = "department",	"#ð" = "department",	".ð" = "department",
-	  ":ñ" = "Command",		"#ñ" = "Command",		".ñ" = "Command",
-	  ":ò" = "Science",		"#ò" = "Science",		".ò" = "Science",
-	  ":ü" = "Medical",		"#ü" = "Medical",		".ü" = "Medical",
-	  ":ó" = "Engineering",	"#ó" = "Engineering",	".ó" = "Engineering",
-	  ":û" = "Security",	"#û" = "Security",		".û" = "Security",
-	  ":ö" = "whisper",		"#ö" = "whisper",		".ö" = "whisper",
-	  ":è" = "binary",		"#è" = "binary",		".è" = "binary",
-	  ":ô" = "alientalk",	"#ô" = "alientalk",		".ô" = "alientalk",
-	  ":å" = "Syndicate",	"#å" = "Syndicate",		".å" = "Syndicate",
-	  ":é" = "Supply",		"#é" = "Supply",		".é" = "Supply",
-	  ":ï" = "changeling",	"#ï" = "changeling",	".ï" = "changeling"
+	  //Russian code - WolfETD
+	  ":к" = "right hand",	"#к" = "right hand",	".к" = "right hand",
+	  ":д" = "left hand",	"#д" = "left hand",		".д" = "left hand",
+	  ":ш" = "intercom",	"#ш" = "intercom",		".ш" = "intercom",
+	  ":р" = "department",	"#р" = "department",	".р" = "department",
+	  ":с" = "Command",		"#с" = "Command",		".с" = "Command",
+	  ":т" = "Science",		"#т" = "Science",		".т" = "Science",
+	  ":ь" = "Medical",		"#ь" = "Medical",		".ь" = "Medical",
+	  ":у" = "Engineering", "#у" = "Engineering",	".у" = "Engineering",
+	  ":ы" = "Security",	"#ы" = "Security",		".ы" = "Security",
+	  ":ц" = "whisper",		"#ц" = "whisper",		".ц" = "whisper",
+	  ":и" = "binary",		"#и" = "binary",		".и" = "binary",
+	  ":ф" = "alientalk",	"#ф" = "alientalk",		".ф" = "alientalk",
+	  ":е" = "Syndicate",	"#е" = "Syndicate",		".е" = "Syndicate",
+	  ":г" = "Supply",		"#г" = "Supply",		".г" = "Supply",
+	  ":м" = "Service",		"#м" = "Service",		".м" = "Service",
+	  ":щ" = "AI Private",	"#щ" = "AI Private",	".щ" = "AI Private",
+	  ":п" = "changeling",	"#п" = "changeling",	".п" = "changeling",
+	  ":н" = "Centcom",		"#н" = "Centcom",		".н" = "Centcom",
+	  ":ч" = "cords",		"#ч" = "cords",			".ч" = "cords",
+
+	  ":К" = "right hand",	"#К" = "right hand",	".К" = "right hand",
+	  ":Д" = "left hand",	"#Д" = "left hand",		".Д" = "left hand",
+	  ":Ш" = "intercom",	"#Ш" = "intercom",		".Ш" = "intercom",
+	  ":Р" = "department",	"#Р" = "department",	".Р" = "department",
+	  ":С" = "Command",		"#С" = "Command",		".С" = "Command",
+	  ":Т" = "Science",		"#Т" = "Science",		".Т" = "Science",
+	  ":Ь" = "Medical",		"#Ь" = "Medical",		".Ь" = "Medical",
+	  ":У" = "Engineering",	"#У" = "Engineering",	".У" = "Engineering",
+	  ":Ы" = "Security",	"#Ы" = "Security",		".Ы" = "Security",
+	  ":Ц" = "whisper",		"#Ц" = "whisper",		".Ц" = "whisper",
+	  ":И" = "binary",		"#И" = "binary",		".И" = "binary",
+	  ":Ф" = "alientalk",	"#Ф" = "alientalk",		".Ф" = "alientalk",
+	  ":Е" = "Syndicate",	"#Е" = "Syndicate",		".Е" = "Syndicate",
+	  ":Г" = "Supply",		"#Г" = "Supply",		".Г" = "Supply",
+	  ":М" = "Service",		"#М" = "Service",		".М" = "Service",
+	  ":Щ" = "AI Private",	"#Щ" = "AI Private",	".Щ" = "AI Private",
+	  ":П" = "changeling",	"#П" = "changeling",	".П" = "changeling",
+	  ":Н" = "Centcom",		"#Н" = "Centcom",		".Н" = "Centcom",
+	  ":Ч" = "cords",		"#Ч" = "cords",			".Ч" = "cords",
 )
 
 var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
@@ -135,10 +158,10 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 	var/deaf_type
 	if(speaker != src)
 		if(!radio_freq) //These checks have to be seperate, else people talking on the radio will make "You can't hear yourself!" appear when hearing people over the radio while deaf.
-			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] ���-��, �� �� �� �������."
+			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] что-то, но вы не слышите."
 			deaf_type = 1
 	else
-		deaf_message = "<span class='notice'>�� �� ������� ������ ����!</span>"
+		deaf_message = "<span class='notice'>Вы не слышите самого себя!</span>"
 		deaf_type = 2 // Since you should be able to hear yourself without looking
 	if(!(message_langs & languages_understood) || force_compose) //force_compose is so AIs don't end up without their hrefs.
 		message = compose_message(speaker, message_langs, raw_message, radio_freq, spans)
@@ -313,7 +336,7 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 /mob/living/say_quote(input, list/spans)
 	var/tempinput = attach_spans(input, spans)
 	if (stuttering)
-		return "���������, \"[tempinput]\""
+		return "заикаетсЯ, \"[tempinput]\""
 	if (getBrainLoss() >= 60)
-		return "������, \"[tempinput]\""
+		return "мямлит, \"[tempinput]\""
 	return ..()

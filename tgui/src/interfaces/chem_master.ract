@@ -59,17 +59,17 @@
 			
 			<br/>
 			<br/>
-			<ui-button action='createPill' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Pill (max 50µ)</ui-button>
+			<ui-button action='createPill' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Pill (max 50Вµ)</ui-button>
 			<br/>
 			<ui-button action='createPill' params='{"many": 1}' state='{{data.bufferContents ? null : "disabled"}}' >Create Multiple Pills</ui-button>
 			<br/>
 			<br/>
-			<ui-button action='createPatch' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Patch (max 40µ)</ui-button>
+			<ui-button action='createPatch' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Patch (max 40Вµ)</ui-button>
 			<br/>
 			<ui-button action='createPatch' params='{"many": 1}' state='{{data.bufferContents ? null : "disabled"}}' >Create Multiple Patches</ui-button>
 			<br/>
 			<br/>
-			<ui-button action='createBottle' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Bottle (max 30µ)</ui-button>
+			<ui-button action='createBottle' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Bottle (max 30Вµ)</ui-button>
 			<br/>
 			<ui-button action='createBottle' params='{"many": 1}' state='{{data.bufferContents ? null : "disabled"}}' >Dispense Buffer to Bottles</ui-button>
 			
@@ -77,10 +77,10 @@
 
 	{{else}}
 		<ui-display title='Condiments bottles and packs' >
-			<ui-button action='createPill' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Pack (max 10µ)</ui-button>
+			<ui-button action='createPill' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Pack (max 10Вµ)</ui-button>
 			<br/>
 			<br/>
-			<ui-button action='createBottle' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Bottle (max 50µ)</ui-button>
+			<ui-button action='createBottle' params='{"many": 0}' state='{{data.bufferContents ? null : "disabled"}}' >Create Bottle (max 50Вµ)</ui-button>
 		</ui-display>
 	{{/if}}
 {{elseif data.screen == "analyze"}}
@@ -95,7 +95,7 @@
 		<span class='content'>{{data.analyzeVars.state}}</span>
 		<br/>
 		<span class='highlight'>Metabolization Rate: </span>
-		<span class='content'>{{data.analyzeVars.metaRate}}µ/minute</span>
+		<span class='content'>{{data.analyzeVars.metaRate}}Вµ/minute</span>
 		<br/>
 		<span class='highlight'>Overdose Threshold: </span>
 		<span class='content'>{{data.analyzeVars.overD}}</span>

@@ -2,7 +2,7 @@
 	set name = "Who"
 	set category = "OOC"
 
-	var/msg = "<b>Текущие игроки:</b>\n"
+	var/msg = "<b>РўРµРєСѓС‰РёРµ РёРіСЂРѕРєРё:</b>\n"
 
 	var/list/Lines = list()
 
@@ -16,23 +16,23 @@
 				if(C.holder && C.holder.fakekey)
 					entry += " <i>(as [C.holder.fakekey])</i>"
 				if (isnewplayer(C.mob))
-					entry += " - <font color='darkgray'><b>В лобби</b></font>"
+					entry += " - <font color='darkgray'><b>Р’ Р»РѕР±Р±Рё</b></font>"
 				else
-					entry += " - Играет за [C.mob.real_name]"
+					entry += " - РРіСЂР°РµС‚ Р·Р° [C.mob.real_name]"
 					switch(C.mob.stat)
 						if(UNCONSCIOUS)
-							entry += " - <font color='darkgray'><b>Без сознания</b></font>"
+							entry += " - <font color='darkgray'><b>Р‘РµР· СЃРѕР·РЅР°РЅРёСЏ</b></font>"
 						if(DEAD)
 							if(isobserver(C.mob))
 								var/mob/dead/observer/O = C.mob
 								if(O.started_as_observer)
-									entry += " - <font color='gray'>Наблюдает</font>"
+									entry += " - <font color='gray'>РќР°Р±Р»СЋРґР°РµС‚</font>"
 								else
-									entry += " - <font color='black'><b>МЕРТВ</b></font>"
+									entry += " - <font color='black'><b>РњР•Р РўР’</b></font>"
 							else
-								entry += " - <font color='black'><b>МЕРТВ</b></font>"
+								entry += " - <font color='black'><b>РњР•Р РўР’</b></font>"
 					if(is_special_character(C.mob))
-						entry += " - <b><font color='red'>Антагонист</font></b>"
+						entry += " - <b><font color='red'>РђРЅС‚Р°РіРѕРЅРёСЃС‚</font></b>"
 				entry += " (<A HREF='?_src_=holder;adminmoreinfo=\ref[C.mob]'>?</A>)"
 				entry += " ([round(C.avgping, 1)]ms)"
 				Lines += entry
@@ -53,14 +53,14 @@
 	for(var/line in sortList(Lines))
 		msg += "[line]\n"
 
-	msg += "<b>Всего игроков: [length(Lines)]</b>"
+	msg += "<b>Р’СЃРµРіРѕ РёРіСЂРѕРєРѕРІ: [length(Lines)]</b>"
 	to_chat(src, msg)
 
 /client/verb/adminwho()
 	set category = "Admin"
 	set name = "Adminwho"
 
-	var/msg = "<b>Текущие админы:</b>\n"
+	var/msg = "<b>РўРµРєСѓС‰РёРµ Р°РґРјРёРЅС‹:</b>\n"
 	if(holder)
 		for(var/client/C in admins)
 			msg += "\t[C] is a [C.holder.rank]"
@@ -71,9 +71,9 @@
 			if(isobserver(C.mob))
 				msg += " - Observing"
 			else if(isnewplayer(C.mob))
-				msg += " - В лобби"
+				msg += " - Р’ Р»РѕР±Р±Рё"
 			else
-				msg += " - В игре"
+				msg += " - Р’ РёРіСЂРµ"
 
 			if(C.is_afk())
 				msg += " (AFK)"

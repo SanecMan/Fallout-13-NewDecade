@@ -21,8 +21,8 @@
 		to_chat(src, "Nowhere to jump to!")
 		return
 	usr.forceMove(T)
-	log_admin("[key_name(usr)] телепортировался в [A]")
-	message_admins("[key_name_admin(usr)] телепортировался в [A]")
+	log_admin("[key_name(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р»СЃСЏ РІ [A]")
+	message_admins("[key_name_admin(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р»СЃСЏ РІ [A]")
 	feedback_add_details("admin_verb","JA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/jumptoturf(turf/T in world)
@@ -33,7 +33,7 @@
 		return
 
 	log_admin("[key_name(usr)] jumped to [T.x],[T.y],[T.z] in [T.loc]")
-	message_admins("[key_name_admin(usr)] телепортировался в [T.x],[T.y],[T.z],  [T.loc]")
+	message_admins("[key_name_admin(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р»СЃСЏ РІ [T.x],[T.y],[T.z],  [T.loc]")
 	usr.forceMove(T)
 	feedback_add_details("admin_verb","JT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
@@ -47,7 +47,7 @@
 		return
 
 	log_admin("[key_name(usr)] jumped to [key_name(M)]")
-	message_admins("[key_name_admin(usr)] телепортировался к [key_name_admin(M)]")
+	message_admins("[key_name_admin(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р»СЃСЏ Рє [key_name_admin(M)]")
 	if(src.mob)
 		var/mob/A = src.mob
 		var/turf/T = get_turf(M)
@@ -71,7 +71,7 @@
 		A.y = ty
 		A.z = tz
 		feedback_add_details("admin_verb","JC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	message_admins("[key_name_admin(usr)] телепортировался по координатам [tx], [ty], [tz]")
+	message_admins("[key_name_admin(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р»СЃСЏ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј [tx], [ty], [tz]")
 
 /client/proc/jumptokey()
 	set category = "Admin"
@@ -84,13 +84,13 @@
 	var/list/keys = list()
 	for(var/mob/M in player_list)
 		keys += M.client
-	var/selection = input("Выберите игрока!", "Admin Jumping", null, null) as null|anything in sortKey(keys)
+	var/selection = input("Р’С‹Р±РµСЂРёС‚Рµ РёРіСЂРѕРєР°!", "Admin Jumping", null, null) as null|anything in sortKey(keys)
 	if(!selection)
 		to_chat(src, "No keys found.")
 		return
 	var/mob/M = selection:mob
-	log_admin("[key_name(usr)] телепортировался к [key_name(M)]")
-	message_admins("[key_name_admin(usr)] телепортировался к [key_name_admin(M)]")
+	log_admin("[key_name(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р»СЃСЏ Рє [key_name(M)]")
+	message_admins("[key_name_admin(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р»СЃСЏ Рє [key_name_admin(M)]")
 
 	usr.forceMove(M.loc)
 
@@ -105,7 +105,7 @@
 		return
 
 	log_admin("[key_name(usr)] teleported [key_name(M)]")
-	message_admins("[key_name_admin(usr)] телепортировал [key_name_admin(M)]")
+	message_admins("[key_name_admin(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р» [key_name_admin(M)]")
 	M.forceMove(get_turf(usr))
 	feedback_add_details("admin_verb","GM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -145,8 +145,8 @@
 	if(A && istype(A))
 		if(M.forceMove(safepick(get_area_turfs(A))))
 
-			log_admin("[key_name(usr)] телепортировал [key_name(M)] to [A]")
-			message_admins("[key_name_admin(usr)] телепортировал [key_name_admin(M)] to [A]")
+			log_admin("[key_name(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р» [key_name(M)] to [A]")
+			message_admins("[key_name_admin(usr)] С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°Р» [key_name_admin(M)] to [A]")
 		else
 			to_chat(src, "Failed to move mob to a valid location.")
 		feedback_add_details("admin_verb","SMOB") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

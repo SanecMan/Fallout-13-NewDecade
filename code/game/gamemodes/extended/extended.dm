@@ -4,7 +4,7 @@
 	required_players = 0
 
 	announce_span = "notice"
-	announce_text = "Веселитесь и хорошо проведите время!"
+	announce_text = "Р’РµСЃРµР»РёС‚РµСЃСЊ Рё С…РѕСЂРѕС€Рѕ РїСЂРѕРІРµРґРёС‚Рµ РІСЂРµРјСЏ!"
 
 /datum/game_mode/extended/pre_setup()
 	return 1

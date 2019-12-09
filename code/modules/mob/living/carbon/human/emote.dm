@@ -4,7 +4,7 @@
 /datum/emote/living/carbon/human/cry
 	key = "cry"
 	key_third_person = "cries"
-	message = "плачет."
+	message = "РїР»Р°С‡РµС‚."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/human/dap
@@ -34,7 +34,7 @@
 /datum/emote/living/carbon/human/hug
 	key = "hug"
 	key_third_person = "hugs"
-	message = "обнимает самого себя."
+	message = "РѕР±РЅРёРјР°РµС‚ СЃР°РјРѕРіРѕ СЃРµР±СЏ."
 	message_param = "hugs %t."
 	restraint_check = TRUE
 	emote_type = EMOTE_AUDIBLE
