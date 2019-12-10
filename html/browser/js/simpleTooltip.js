@@ -1,26 +1,26 @@
-ToolTip.offsetX=20; //СЃРјРµС‰РµРЅРёСЏ РїРѕРґСЃРєР°Р·РєРё РѕС‚ РєСѓСЂСЃРѕСЂР°
+ToolTip.offsetX=20; //смещения подсказки от курсора
 ToolTip.offsetY=10; //
 function ToolTip(obj, text) {
-  if(!obj||obj.nodeType!=1) throw "Illigal argument exception"; //РѕР±СЊРµРєС‚ Рє РєРѕРјСѓ РїСЂРёРІСЏР·С‹РІР°РµРј РїРѕРґСЃРєР°Р·РєСѓ
-  //-- Р Р°Р·РјРµС‚РєР° РїРѕРґСЃРєР°Р·РєРё ---
+  if(!obj||obj.nodeType!=1) throw "Illigal argument exception"; //обьект к кому привязываем подсказку
+  //-- Разметка подсказки ---
   var tip=document.createElement("DIV");
   tip.className="tool_tip";
   tip.innerHTML=text;
   tip.style.left =" 0px";
   tip.style.top = "0px";
   document.body.appendChild(tip);
-  //-- СЃРѕР±С‹С‚РёСЏ --
+  //-- события --
   obj.onmouseout=function (ev) {
       tip.style.visibility="hidden";
   };
-  obj.onmousemove=function(ev) { //РµСЃР»Рё РЅРµ РЅСѓР¶РЅРѕ С‡С‚Рѕ Р±С‹ РїРѕРґСЃРєР°СЃР·РєР° Р±РµРіР°Р»Р°, С‚Рѕ onmouseover
+  obj.onmousemove=function(ev) { //если не нужно что бы подскасзка бегала, то onmouseover
       tip.style.visibility="visible";
       if(window.event) ev=window.event;
-if(tip.offsetWidth+ev.clientX+10>document.body.clientWidth) //РµСЃР»Рё РїРѕРґСЃРєР°Р·РєР° РІС‹С…РѕРґРёС‚ Р·Р° РІРёРґРёРјСѓСЋ 
-        ToolTip.offsetX=-tip.offsetWidth; //РѕР±Р»Р°С‚СЊ, С‚Рѕ РїРѕРІРѕСЂР°С‡РёРІР°РµРј РµС‘
+if(tip.offsetWidth+ev.clientX+10>document.body.clientWidth) //если подсказка выходит за видимую 
+        ToolTip.offsetX=-tip.offsetWidth; //облать, то поворачиваем её
 else
         ToolTip.offsetX=20;
-if(tip.offsetHeight+ev.clientY+15>document.body.clientHeight)// С‚РѕР¶Рµ СЃР°РјРѕРµ, РЅРѕ РїРѕ РІРµСЂС‚РёРєР°Р»Рё
+if(tip.offsetHeight+ev.clientY+15>document.body.clientHeight)// тоже самое, но по вертикали
        ToolTip.offsetY=-tip.offsetHeight;
 else
       ToolTip.offsetY=10;
@@ -28,8 +28,8 @@ else
       tip.style.top=ev.clientY + document.documentElement.scrollTop + ToolTip.offsetY + "px";
   };
 }
-//РїРµСЂРµР±РµСЂРµРј Р·Р°РґР°РЅРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹, РґР°РґРёРј РїРѕРґРєР°Р·РєСѓ С‚РµРј Сѓ РєРѕРіРѕ РµСЃС‚СЊ Р°С‚С‚СЂРёР±СѓС‚ tooltip
-//Р’ Р°СЂРіСѓРјРµРЅС‚Р°С… РїРµСЂРµРґР°РµРј РёРјРµРЅР° СЂР°СЃСЃРјР°С‚СЂРёРІР°РµРјС‹С… С‚РµРіРѕРІ, * РІСЃРµ С‚РµРіРё
+//переберем заданные элементы, дадим подказку тем у кого есть аттрибут tooltip
+//В аргументах передаем имена рассматриваемых тегов, * все теги
 function initToolTips() {
 //   return;
     var tags, tooltext;

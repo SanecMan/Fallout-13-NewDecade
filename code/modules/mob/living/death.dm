@@ -51,7 +51,7 @@
 	var/turf/T = get_turf(src)
 	if(mind && mind.name && mind.active && (T.z != ZLEVEL_CENTCOM))
 		var/area/A = get_area(T)
-		var/rendered = "<span class='deadsay'><b>[mind.name]</b> СѓРјРµСЂ РІ Р»РѕРєР°С†РёРё <b>[A.name]</b>.</span>"
+		var/rendered = "<span class='deadsay'><b>[mind.name]</b> умер в локации <b>[A.name]</b>.</span>"
 		deadchat_broadcast(rendered, follow_target = src, message_type=DEADCHAT_DEATHRATTLE)
 	if(mind)
 		mind.store_memory("Time of death: [tod]", 0)

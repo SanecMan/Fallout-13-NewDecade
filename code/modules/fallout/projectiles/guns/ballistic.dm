@@ -204,7 +204,7 @@
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
-	name = "Battle Rifle –ê–†15"
+	name = "Battle Rifle ¿–15"
 	desc = "Also known as a Service Rifle by NCR troops, the Battle Rifle is a semi-automatic medium power rifle which takes the common 5.56mm cartridge and has a magazine capacity of 20 rounds."
 	icon_state = "assault-rifle"
 	item_state = "assault"

@@ -10,7 +10,7 @@
 	status = "colonel"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "С†РµРЅС‚СЂР°Р»СЊРЅРѕРјСѓ С€С‚Р°Р±Сѓ РђРЅРєР»Р°РІР°"
+	supervisors = "центральному штабу Анклава"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 31
 	whitelist_on = 1
@@ -73,7 +73,7 @@
 	status = "enclave_sergeant"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "РџРѕР»РєРѕРІРЅРёРєСѓ"
+	supervisors = "Полковнику"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 24
 
@@ -139,7 +139,7 @@
 	status = "private"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "РџРѕР»РєРѕРІРЅРёРєСѓ"
+	supervisors = "Полковнику"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 19
 

@@ -147,23 +147,23 @@
 /mob/living/simple_animal/pet/cat/Life()
 	if(!stat && !buckled && !client)
 		if(prob(1))
-			emote("me", 1, pick("С‡РµС€РµС‚ РїСѓР·РёРєРѕ.", "РјР°С€РµС‚ С…РІРѕСЃС‚РёРєРѕРј.", "Р»РѕР¶РёС‚СЃСЏ."))
+			emote("me", 1, pick("чешет пузико.", "машет хвостиком.", "ложится."))
 			icon_state = "[icon_living]_rest"
 			resting = 1
 			update_canmove()
 		else if (prob(1))
-			emote("me", 1, pick("СЃР°РґРёС‚СЃСЏ.", "Р»РѕР¶РёС‚СЃСЏ РЅР° Р»Р°РїРєРё.", "РІС‹РіР»СЏРґРёС‚ РЅР°СЃС‚РѕСЂРѕР¶РµРЅРЅРѕ."))
+			emote("me", 1, pick("садится.", "ложится на лапки.", "выглядит настороженно."))
 			icon_state = "[icon_living]_sit"
 			resting = 1
 			update_canmove()
 		else if (prob(1))
 			if (resting)
-				emote("me", 1, pick("РІСЃС‚Р°РµС‚ Рё РјСЏСѓРєР°РµС‚.", "С…РѕРґРёС‚ РЅР° РјРµСЃС‚Рµ.", "РїРµСЂРµСЃС‚Р°РµС‚ РѕС‚РґС‹С…Р°С‚СЊ."))
+				emote("me", 1, pick("встает и мяукает.", "ходит на месте.", "перестает отдыхать."))
 				icon_state = "[icon_living]"
 				resting = 0
 				update_canmove()
 			else
-				emote("me", 1, pick("РІС‹Р»РёР·С‹РІР°РµС‚ С€РµСЂСЃС‚РєСѓ.", "РјР°С€РµС‚ СѓСЃРёРєР°РјРё.", "РІСЃС‚СЂСЏС…РЅСѓР»СЃСЏ."))
+				emote("me", 1, pick("вылизывает шерстку.", "машет усиками.", "встряхнулся."))
 
 	//MICE!
 	if((src.loc) && isturf(src.loc))

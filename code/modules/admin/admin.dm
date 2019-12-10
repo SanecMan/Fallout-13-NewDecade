@@ -48,10 +48,10 @@ var/global/BSACooldown = 0
 
 	body += "<b>Mob type</b> = [M.type]<br><br>"
 
-	body += "<A href='?_src_=holder;boot2=\ref[M]'>РљРёРєРЅСѓС‚СЊ</A> | "
-	body += "<A href='?_src_=holder;newban=\ref[M]'>Р‘Р°РЅ Р±Р»СЏС‚СЊ</A> | "
+	body += "<A href='?_src_=holder;boot2=\ref[M]'>Кикнуть</A> | "
+	body += "<A href='?_src_=holder;newban=\ref[M]'>Бан блять</A> | "
 	body += "<A href='?_src_=holder;jobban2=\ref[M]'>Jobban</A> | "
-	body += "<A href='?_src_=holder;labor=\ref[M]'>РЎРґРµР»Р°С‚СЊ СЌС‚Рѕ Р¶РёРІРѕС‚РЅРѕРµ СЂРµР№РґРµСЂРѕРј!</A> | "
+	body += "<A href='?_src_=holder;labor=\ref[M]'>Сделать это животное рейдером!</A> | "
 	body += "<A href='?_src_=holder;appearanceban=\ref[M]'>Identity Ban</A> | "
 	if(jobban_isbanned(M, "OOC"))
 		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'><font color=red>OOCBan</font></A> | "
@@ -70,8 +70,8 @@ var/global/BSACooldown = 0
 		else
 			body += "<A href='?_src_=holder;watchadd=\ref[M.ckey]'>Add to Watchlist</A> "
 
-		body += "| <A href='?_src_=holder;sendtoprison=\ref[M]'>РўСЋСЂСЊРјР°</A> | "
-		body += "\ <A href='?_src_=holder;sendbacktolobby=\ref[M]'>РћС‚РїСЂР°РІРёС‚СЊ РІ Р»РѕР±Р±Рё</A> | "
+		body += "| <A href='?_src_=holder;sendtoprison=\ref[M]'>Тюрьма</A> | "
+		body += "\ <A href='?_src_=holder;sendbacktolobby=\ref[M]'>Отправить в лобби</A> | "
 		var/muted = M.client.prefs.muted
 		body += "<br><b>Mute: </b> "
 		body += "\[<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_IC]'><font color='[(muted & MUTE_IC)?"red":"blue"]'>IC</font></a> | "
@@ -96,26 +96,26 @@ var/global/BSACooldown = 0
 	if (M.client)
 		if(!isnewplayer(M))
 			body += "<br><br>"
-			body += "<b>РўР РђРќРЎС„РѕСЂРјР°С†РёСЏ:</b>"
+			body += "<b>ТРАНСформация:</b>"
 			body += "<br>"
 
 			//Human
 			if(ishuman(M))
 				body += "<B>Human</B> | "
 			else
-				body += "<A href='?_src_=holder;humanone=\ref[M]'>РҐСѓРјР°РЅРёР·РёСЂРѕРІР°С‚СЊ</A> | "
+				body += "<A href='?_src_=holder;humanone=\ref[M]'>Хуманизировать</A> | "
 
 			//Monkey
 			if(ismonkey(M))
 				body += "<B>Monkeyized</B> | "
 			else
-				body += "<A href='?_src_=holder;monkeyone=\ref[M]'>РњР°СЂС‚С‹С€РєРёР·РёСЂРѕРІР°С‚СЊ</A> | "
+				body += "<A href='?_src_=holder;monkeyone=\ref[M]'>Мартышкизировать</A> | "
 
 			//Corgi
 			if(iscorgi(M))
 				body += "<B>Corgized</B> | "
 			else
-				body += "<A href='?_src_=holder;corgione=\ref[M]'>РљРѕСЂРіРёР·РёСЂРѕРІР°С‚СЊ</A> | "
+				body += "<A href='?_src_=holder;corgione=\ref[M]'>Коргизировать</A> | "
 
 			//AI / Cyborg
 			if(isAI(M))
@@ -136,22 +136,22 @@ var/global/BSACooldown = 0
 			body += "<br><br>"
 			body += "<b>Rudimentary transformation:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font><br>"
 			body += "<A href='?_src_=holder;simplemake=observer;mob=\ref[M]'>Observer</A> | "
-			body += "\[ Alien: <A href='?_src_=holder;simplemake=drone;mob=\ref[M]'>Р”СЂРѕРЅ</A>, "
-			body += "<A href='?_src_=holder;simplemake=hunter;mob=\ref[M]'>РћС…РѕС‚РЅРёРє</A>, "
+			body += "\[ Alien: <A href='?_src_=holder;simplemake=drone;mob=\ref[M]'>Дрон</A>, "
+			body += "<A href='?_src_=holder;simplemake=hunter;mob=\ref[M]'>Охотник</A>, "
 			body += "<A href='?_src_=holder;simplemake=sentinel;mob=\ref[M]'>Sentinel</A>, "
 			body += "<A href='?_src_=holder;simplemake=praetorian;mob=\ref[M]'>Praetorian</A>, "
-			body += "<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>РљРѕСЂРѕР»РµРІР°</A>, "
-			body += "<A href='?_src_=holder;simplemake=larva;mob=\ref[M]'>Р›СЏРІСЂР°</A> \] "
-			body += "<A href='?_src_=holder;simplemake=human;mob=\ref[M]'>Р§РµР»РѕРІРµРє</A> "
-			body += "\[ slime: <A href='?_src_=holder;simplemake=slime;mob=\ref[M]'>Р РµР±РµРЅРѕРє</A>, "
-			body += "<A href='?_src_=holder;simplemake=adultslime;mob=\ref[M]'>Р’Р·СЂРѕСЃР»С‹Р№</A> \] "
-			body += "<A href='?_src_=holder;simplemake=monkey;mob=\ref[M]'>РњР°СЂС‚С‹С€РєР°</A> | "
-			body += "<A href='?_src_=holder;simplemake=robot;mob=\ref[M]'>РљРёР±РѕСЂРі</A> | "
-			body += "<A href='?_src_=holder;simplemake=cat;mob=\ref[M]'>РљРѕС‚</A> | "
+			body += "<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>Королева</A>, "
+			body += "<A href='?_src_=holder;simplemake=larva;mob=\ref[M]'>Лявра</A> \] "
+			body += "<A href='?_src_=holder;simplemake=human;mob=\ref[M]'>Человек</A> "
+			body += "\[ slime: <A href='?_src_=holder;simplemake=slime;mob=\ref[M]'>Ребенок</A>, "
+			body += "<A href='?_src_=holder;simplemake=adultslime;mob=\ref[M]'>Взрослый</A> \] "
+			body += "<A href='?_src_=holder;simplemake=monkey;mob=\ref[M]'>Мартышка</A> | "
+			body += "<A href='?_src_=holder;simplemake=robot;mob=\ref[M]'>Киборг</A> | "
+			body += "<A href='?_src_=holder;simplemake=cat;mob=\ref[M]'>Кот</A> | "
 			body += "<A href='?_src_=holder;simplemake=runtime;mob=\ref[M]'>Runtime</A> | "
-			body += "<A href='?_src_=holder;simplemake=corgi;mob=\ref[M]'>РљРѕСЂРіРё</A> | "
-			body += "<A href='?_src_=holder;simplemake=ian;mob=\ref[M]'>Р™Р°РЅ</A> | "
-			body += "<A href='?_src_=holder;simplemake=crab;mob=\ref[M]'>РљСЂР°Р±</A> | "
+			body += "<A href='?_src_=holder;simplemake=corgi;mob=\ref[M]'>Корги</A> | "
+			body += "<A href='?_src_=holder;simplemake=ian;mob=\ref[M]'>Йан</A> | "
+			body += "<A href='?_src_=holder;simplemake=crab;mob=\ref[M]'>Краб</A> | "
 			body += "<A href='?_src_=holder;simplemake=coffee;mob=\ref[M]'>Coffee</A> | "
 			//body += "<A href='?_src_=holder;simplemake=parrot;mob=\ref[M]'>Parrot</A> | "
 			//body += "<A href='?_src_=holder;simplemake=polyparrot;mob=\ref[M]'>Poly</A> | "
@@ -243,21 +243,21 @@ var/global/BSACooldown = 0
 		if(6)
 			dat+="<B><FONT COLOR='maroon'>ERROR: Could not submit Feed story to Network.</B></FONT><HR><BR>"
 			if(src.admincaster_feed_channel.channel_name=="")
-				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid receiving channel name.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>В•Invalid receiving channel name.</FONT><BR>"
 			if(src.admincaster_feed_message.returnBody(-1) == "" || src.admincaster_feed_message.returnBody(-1) == "\[REDACTED\]")
-				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid message body.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>В•Invalid message body.</FONT><BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[3]'>Return</A><BR>"
 		if(7)
 			dat+="<B><FONT COLOR='maroon'>ERROR: Could not submit Feed Channel to Network.</B></FONT><HR><BR>"
 			if(src.admincaster_feed_channel.channel_name =="" || src.admincaster_feed_channel.channel_name == "\[REDACTED\]")
-				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid channel name.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>В•Invalid channel name.</FONT><BR>"
 			var/check = 0
 			for(var/datum/newscaster/feed_channel/FC in news_network.network_channels)
 				if(FC.channel_name == src.admincaster_feed_channel.channel_name)
 					check = 1
 					break
 			if(check)
-				dat+="<FONT COLOR='maroon'>Р’вЂўChannel name already in use.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>В•Channel name already in use.</FONT><BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[2]'>Return</A><BR>"
 		if(9)
 			dat+="<B>[admincaster_feed_channel.channel_name]: </B><FONT SIZE=1>\[created by: <FONT COLOR='maroon'>[admincaster_feed_channel.returnAuthor(-1)]</FONT>\]</FONT><HR>"
@@ -358,9 +358,9 @@ var/global/BSACooldown = 0
 		if(16)
 			dat+="<B><FONT COLOR='maroon'>ERROR: Wanted Issue rejected by Network.</B></FONT><HR><BR>"
 			if(src.admincaster_wanted_message.criminal =="" || src.admincaster_wanted_message.criminal == "\[REDACTED\]")
-				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid name for person wanted.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>В•Invalid name for person wanted.</FONT><BR>"
 			if(src.admincaster_wanted_message.body == "" || src.admincaster_wanted_message.body == "\[REDACTED\]")
-				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid description.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>В•Invalid description.</FONT><BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[0]'>Return</A><BR>"
 		if(17)
 			dat+="<B>Wanted Issue successfully deleted from Circulation</B><BR>"
@@ -393,7 +393,7 @@ var/global/BSACooldown = 0
 		return
 
 	var/dat = {"
-		<center><B>Р©РёС‚СЃРїР°РІРЅ РїР°РЅРµР»СЊ</B></center><hr>\n
+		<center><B>Щитспавн панель</B></center><hr>\n
 		<A href='?src=\ref[src];c_mode=1'>Change Game Mode</A><br>
 		"}
 	if(master_mode == "secret")
@@ -490,7 +490,7 @@ var/global/BSACooldown = 0
 	set name="Toggle OOC"
 	toggle_ooc()
 	log_admin("[key_name(usr)] toggled OOC.")
-	message_admins("[key_name_admin(usr)] РїРµСЂРµРєР»СЋС‡РёР» OOC.")
+	message_admins("[key_name_admin(usr)] переключил OOC.")
 	feedback_add_details("admin_verb","TOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleoocdead()
@@ -828,9 +828,9 @@ var/global/BSACooldown = 0
 		var/string
 		if(logout && config && config.announce_admin_logout)
 			string = pick(
-				"РџРµРґР°Р»СЊ РІС‹С€Р»Р°: [key_name(src)]")
+				"Педаль вышла: [key_name(src)]")
 		else if(!logout && config && config.announce_admin_login && (prefs.toggles & ANNOUNCE_LOGIN))
 			string = pick(
-				"РџРµРґР°Р»СЊ Р·Р°С€Р»Р°: [key_name(src)]")
+				"Педаль зашла: [key_name(src)]")
 		if(string)
 			message_admins("[string]")

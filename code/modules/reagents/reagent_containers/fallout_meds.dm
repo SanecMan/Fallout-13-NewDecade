@@ -1,6 +1,6 @@
 //Fallout 13 syringes by Gargule
 /obj/item/weapon/reagent_containers/f13stimpack //(Gargule)
-	name = "РЎС‚РёРјСѓР»СЏС‚РѕСЂ"
+	name = "Стимулятор"
 	desc = "A stimpak, or stimulation delivery package, is a type of hand-held medication used for healing the body. This item consists of a syringe for containing and delivering the medication and a gauge for measuring the status of the stimpak's contents. When the medicine is injected, it provides immediate healing of the body's minor wounds."
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	icon_state = "stim"
@@ -26,7 +26,7 @@
 
 /obj/item/weapon/reagent_containers/f13stimpack/attack(mob/living/M, mob/user)
 	if(!reagents.total_volume)
-		to_chat(user, "<span class='warning'>[src] РїСѓСЃС‚!</span>")
+		to_chat(user, "<span class='warning'>[src] пуст!</span>")
 		return
 	if(!iscarbon(M))
 		return
@@ -35,8 +35,8 @@
 		return
 
 	if(reagents.total_volume && (ignore_flags || M.can_inject(user, 1))) // Ignore flag should be checked first or there will be an error message.
-		to_chat(M, "<span class='warning'>Р’С‹ С‡СѓРІСЃС‚РІСѓРµС‚Рµ РЅРµР±РѕР»СЊС€РѕР№ СѓРєРѕР»!</span>")
-		to_chat(user, "<span class='notice'>Р’С‹ РІРІРµР»Рё [M] С‡С‚Рѕ-С‚Рѕ РёР· [src].</span>")
+		to_chat(M, "<span class='warning'>Вы чувствуете небольшой укол!</span>")
+		to_chat(user, "<span class='notice'>Вы ввели [M] что-то из [src].</span>")
 
 		var/fraction = min(amount_per_transfer_from_this/reagents.total_volume, 1)
 		reagents.reaction(M, INJECT, fraction)
@@ -83,7 +83,7 @@
 
 
 /obj/item/weapon/reagent_containers/f13stimpack/super
-	name = "РЎСѓРїРµСЂ-РЎС‚РёРјСѓР»СЏС‚РѕСЂ"
+	name = "Супер-Стимулятор"
 	desc = "The super version of the Stimpak has an additional vial containing more powerful drugs than the basic model, as well as a leather belt to strap the needle to the injured limb."
 	icon_state = "superstim"
 	volume = 12
@@ -95,7 +95,7 @@
 //Mentats
 
 /obj/item/weapon/storage/pill_bottle/mentats
-	name = "РњРµРЅС‚Р°С‚С‹"
+	name = "Ментаты"
 	desc = "Old, torn box with some pills in it."
 	icon = 'icons/fallout/objects/medicine/chemical.dmi'
 	icon_state = "mentats"
@@ -109,8 +109,8 @@
 
 	//mentats pills
 /obj/item/weapon/reagent_containers/pill/mentats
-	name = "РњРµРЅС‚Р°С‚С‹"
-	desc = "РџРѕРјРѕР¶РµС‚ РІР°Рј. Р•СЃР»Рё РІС‹ С‚СѓРїРѕР№. РќР°РІРµСЂРЅРѕ..."
+	name = "Ментаты"
+	desc = "Поможет вам. Если вы тупой. Наверно..."
 	icon_state = "pill10"
 	list_reagents = list("mentats" = 20)
 	roundstart = 0
@@ -138,7 +138,7 @@
 
 //magic_powder
 /obj/item/stack/medical/fev
-	name = "Р’Р Р­"
+	name = "ВРЭ"
 	singular_name = "FEV"
 	desc = "FEV nears completion. Test on lab animals are at a near 100% success rate. Size and muscle density increase approximately 60%, and the potential intelligence increase by 200%. Effects upon human subjects remain unknown; although they are theoretically promising. The military, wishing to continue further testing, builds a large facility at the Mariposa military installation in central California. At this new facility, testing of the FEV virus continues on volunteer subjects from the military."
 	icon = 'icons/fallout/objects/medicine/bloodpack.dmi'

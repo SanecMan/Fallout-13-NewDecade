@@ -48,10 +48,10 @@
 	register_asset("[ckey(name)].js", file)
 
 /datum/browser/proc/set_content(ncontent)
-	content = replacetext(ncontent, "Ñ", "&#1103;")
+	content = replacetext(ncontent, "ÿ", "&#1103;")
 
 /datum/browser/proc/add_content(ncontent)
-	content += replacetext(ncontent, "Ñ", "&#1103;")
+	content += replacetext(ncontent, "ÿ", "&#1103;")
 
 /datum/browser/proc/get_header()
 	var/file

@@ -92,13 +92,13 @@
 					if(!playing || shouldStopPlaying(user))//If the instrument is playing, or special case
 						playing = 0
 						return
-					if(length_char(note) == 0)
+					if(lentext(note) == 0)
 						continue
 //					to_chat(world, "Parse: [copytext(note,1,2)]")
 					var/cur_note = text2ascii(note) - 96
 					if(cur_note < 1 || cur_note > 7)
 						continue
-					for(var/i=2 to length_char(note))
+					for(var/i=2 to lentext(note))
 						var/ni = copytext(note,i,i+1)
 						if(!text2num(ni))
 							if(ni == "#" || ni == "b" || ni == "n")
@@ -196,11 +196,11 @@
 			if(!in_range(instrumentObj, usr))
 				return
 
-			if(length_char(t) >= 3072)
+			if(lentext(t) >= 3072)
 				var/cont = input(usr, "Your message is too long! Would you like to continue editing it?", "", "yes") in list("yes", "no")
 				if(cont == "no")
 					break
-		while(length_char(t) > 3072)
+		while(lentext(t) > 3072)
 
 		//split into lines
 		spawn()
@@ -215,7 +215,7 @@
 				lines.Cut(51)
 			var/linenum = 1
 			for(var/l in lines)
-				if(length_char(l) > 50)
+				if(lentext(l) > 50)
 					to_chat(usr, "Line [linenum] too long!")
 					lines.Remove(l)
 				else
@@ -251,7 +251,7 @@
 			return
 		if(lines.len > 50)
 			return
-		if(length_char(newline) > 50)
+		if(lentext(newline) > 50)
 			newline = copytext(newline, 1, 50)
 		lines.Add(newline)
 
@@ -266,7 +266,7 @@
 		var/content = html_encode_ru(input("Enter your line: ", instrumentObj.name, lines[num]) as text|null)
 		if(!content || !in_range(instrumentObj, usr))
 			return
-		if(length_char(content) > 50)
+		if(lentext(content) > 50)
 			content = copytext(content, 1, 50)
 		if(num > lines.len || num < 1)
 			return

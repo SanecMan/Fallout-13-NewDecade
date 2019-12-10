@@ -24,7 +24,7 @@
 /datum/surgery_step/add_limb/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	var/obj/item/bodypart/aug = tool
 	if(aug.status != BODYPART_ROBOTIC)
-		to_chat(user, "<span class='warning'>СЌС‚Рѕ РЅРµ Р°СѓРіРјРµРЅС‚Р°С†РёСЏ, РґСѓСЂР°С€РєР°!</span>")
+		to_chat(user, "<span class='warning'>это не аугментация, дурашка!</span>")
 		return -1
 	if(aug.body_zone != target_zone)
 		to_chat(user, "<span class='warning'>[tool] isn't the right type for [parse_zone(target_zone)].</span>")

@@ -39,7 +39,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 			var/datum/f13_faction/faction = parent.allowed_factions[i]
 			factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>"
 	if(!factions_data)
-		factions_data = "<center>РќРµС‚ РґРѕСЃС‚СѓРїРЅС‹С… С„СЂР°РєС†РёР№</center>"
+		factions_data = "<center>Нет доступных фракций</center>"
 
 
 // Roles data. Showing all jobs of selected faction and showing priorities.
@@ -70,7 +70,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				else
 					jobs_data += "<a class=\"l70 unavailable_job\">[j.title]</a>"
 	if(!jobs_data)
-		jobs_data = "РќРµС‚ РґРѕСЃС‚СѓРїРЅС‹С… СЂРѕР»РµР№"
+		jobs_data = "Нет доступных ролей"
 	CHECK_TICK
 
 //Outfit data. Showing name of weared items. Taking item objects from pool (They already created and pooled at update_preview_icon())
@@ -149,7 +149,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	"r_name" = "[be_random_name ? "Yes" : "No"]",
 	"name" = "[real_name]",
 
-	"gender" = "[gender == MALE ? "&#9794;РњСѓР¶С‡РёРЅР°" : "&#9792;Р–РµРЅС‰РёРЅР°"]",
+	"gender" = "[gender == MALE ? "&#9794;Мужчина" : "&#9792;Женщина"]",
 	"age" = "[age]",
 	"r_body" = "[be_random_body ? "Yes" : "No"]",
 	"species" = "[pref_species ? pref_species.name : "Human"]",
@@ -158,15 +158,15 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	"f_id" = "[choiced_faction.id]",
 	"f_name" = "[choiced_faction.full_name]",
 	"f_desc" = "[choiced_faction.description]",
-	"head" = "[e_head ? e_head : "РџСѓСЃС‚Рѕ"]",
-	"suit" = "[e_suit ? e_suit : "РџСѓСЃС‚Рѕ"]",
-	"uniform" = "[e_uniform ? e_uniform : "РџСѓСЃС‚Рѕ"]",
-	"shoes" = "[e_shoes ? e_shoes : "РџСѓСЃС‚Рѕ"]",
+	"head" = "[e_head ? e_head : "Пусто"]",
+	"suit" = "[e_suit ? e_suit : "Пусто"]",
+	"uniform" = "[e_uniform ? e_uniform : "Пусто"]",
+	"shoes" = "[e_shoes ? e_shoes : "Пусто"]",
 	"jobs_data" = "[jobs_data]",
-	"gloves" = "[e_gloves ? e_gloves : "РџСѓСЃС‚Рѕ"]",
-	"l_pocket" = "[e_l_pocket ? e_l_pocket : "РџСѓСЃС‚Рѕ"]",
-	"weapon" = "[e_weapon ? e_weapon : "РџСѓСЃС‚Рѕ"]",
-	"r_pocket" = "[e_r_pocket ? e_r_pocket : "РџСѓСЃС‚Рѕ"]",
+	"gloves" = "[e_gloves ? e_gloves : "Пусто"]",
+	"l_pocket" = "[e_l_pocket ? e_l_pocket : "Пусто"]",
+	"weapon" = "[e_weapon ? e_weapon : "Пусто"]",
+	"r_pocket" = "[e_r_pocket ? e_r_pocket : "Пусто"]",
 	"hair_style" = "[hair_style]",
 	"hair_color" = "#[hair_color]",
 	"f_hair_style" = "[facial_hair_style]",
@@ -184,27 +184,27 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	CHECK_TICK
 
 	var/html = {"<center>
-	<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>РќР°СЃС‚СЂРѕР№РєРё РџРµСЂСЃРѕРЅР°Р¶Р°</a> <a href='?_src_=prefs;preference=tab;tab=1' >РќР°СЃС‚СЂРѕР№РєРё РРіСЂС‹</a> <a href='?_src_=prefs;preference=tab;tab=2' >РќР°РІС‹РєРё</a> <a href='?_src_=prefs;preference=tab;tab=3' >S.P.E.C.I.A.L</a>
+	<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>Настройки Персонажа</a> <a href='?_src_=prefs;preference=tab;tab=1' >Настройки Игры</a> <a href='?_src_=prefs;preference=tab;tab=2' >Навыки</a> <a href='?_src_=prefs;preference=tab;tab=3' >S.P.E.C.I.A.L</a>
 	</center>
 	<HR>
 	<center>
 	[data["saves_data"]]
 	</center>
 	<div class="first_block">
-		<h2>Р›РёС‡РЅРѕСЃС‚СЊ</h2>
+		<h2>Личность</h2>
 		<table width='100%'>
 			<tr>
 				<td width='75%' valign='top'>
-					<a href='?_src_=prefs;preference=name;task=random'>&#9762; РЎР»СѓС‡Р°Р№РЅРѕРµ РёРјСЏ</a>
-					<a href='?_src_=prefs;preference=name'>РџРѕСЃС‚. СЃР»СѓС‡Р°Р№РЅРѕРµ РёРјСЏ: [data["r_name"]]</a>
+					<a href='?_src_=prefs;preference=name;task=random'>&#9762; Случайное имя</a>
+					<a href='?_src_=prefs;preference=name'>Пост. случайное имя: [data["r_name"]]</a>
 					<br>
-					<b>РРјСЏ:</b>
+					<b>Имя:</b>
 					<a href='?_src_=prefs;preference=name;task=input'>[data["name"]]</a>
 					<br>
-					<b>РџРѕР»:</b>
+					<b>Пол:</b>
 					<a href='?_src_=prefs;preference=gender'>[data["gender"]]</a>
 					<br>
-					<b>Р’РѕР·СЂР°СЃС‚:</b>
+					<b>Возраст:</b>
 					<a href='?_src_=prefs;preference=age;task=input'>[data["age"]]</a>
 					<br>
 				</td>
@@ -219,18 +219,18 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		<table>
 			<tr>
 				<td>
-					<a href='?_src_=prefs;preference=all;task=random'>&#9762; РЎР»СѓС‡Р°Р№РЅРѕРµ С‚РµР»Рѕ</a>
+					<a href='?_src_=prefs;preference=all;task=random'>&#9762; Случайное тело</a>
 				</td>
 				<td>
-					<a href='?_src_=prefs;preference=all'>РџРѕСЃС‚. СЃР»СѓС‡Р°Р№РЅРѕРµ С‚РµР»Рѕ: [data["r_body"]]</a><br>
+					<a href='?_src_=prefs;preference=all'>Пост. случайное тело: [data["r_body"]]</a><br>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<b>Р Р°СЃР°:</b>
+					<b>Раса:</b>
 				</td>
 				<td>
-					<b>Р¦РІРµС‚ РєРѕР¶Рё</b>
+					<b>Цвет кожи</b>
 				</td>
 			</tr>
 			<tr>
@@ -245,7 +245,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	</div>
 	<div class="third_block">
 		<div class="third_block_39">
-			<h3>Р’С‹Р±РµСЂРёС‚Рµ С„СЂР°РєС†РёСЋ</h3><br>
+			<h3>Выберите фракцию</h3><br>
 			<div class="a_block">
 				[data["factions_data"]]
 			</div>
@@ -266,33 +266,33 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 			</div>
 			<div class="right_block_frame">
 				<div class="right_block_frame_item">
-					<h3>Р“РѕР»РѕРІР°</h3>
+					<h3>Голова</h3>
 					<a href='?_src_=prefs;preference=chooise;task=equip;item=head;' [data["d_head"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["head"], data["d_head"] )]\"" : "" ]>[CutText(data["head"], MAX_ITEM_LENGTH)]</a><br>
 					<a href='?_src_=prefs;preference=previous;task=equip;item=head'>&lt;</a>
 					<a href='?_src_=prefs;preference=next;task=equip;item=head'>&gt;</a>
 				</div>
 				<div class="right_block_frame_item">
-					<h3>Р‘СЂРѕРЅСЏ</h3>
+					<h3>Броня</h3>
 					<a href='?_src_=prefs;preference=chooise;task=equip;item=armor' [data["d_suit"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["suit"], data["d_suit"])]\"" : "" ]>[CutText(data["suit"], MAX_ITEM_LENGTH)]</a><br>
 					<a href='?_src_=prefs;preference=previous;task=equip;item=armor'>&lt;</a>
 					<a href='?_src_=prefs;preference=next;task=equip;item=armor'>&gt;</a>
 				</div>
 				<div class="right_block_frame_item">
-					<h3>РћРґРµР¶РґР°</h3>
+					<h3>Одежда</h3>
 					<a href='?_src_=prefs;preference=chooise;task=equip;item=uniform' [data["d_uniform"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["uniform"], data["d_uniform"])]\"" : "" ]>[CutText(data["uniform"], MAX_ITEM_LENGTH)]</a><br>
 					<a href='?_src_=prefs;preference=previous;task=equip;item=uniform'>&lt;</a>
 					<a href='?_src_=prefs;preference=next;task=equip;item=uniform'>&gt;</a>
 				</div>
 				<div class="right_block_frame_item">
-					<h3>РћР±СѓРІСЊ</h3>
+					<h3>Обувь</h3>
 					<a href='?_src_=prefs;preference=chooise;task=equip;item=shoes' [data["d_shoes"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["shoes"], data["d_shoes"])]\"" : "" ]>[CutText(data["shoes"], MAX_ITEM_LENGTH)]</a><br>
 					<a href='?_src_=prefs;preference=previous;task=equip;item=shoes'>&lt;</a>
 					<a href='?_src_=prefs;preference=next;task=equip;item=shoes'>&gt;</a>
 				</div>
 			</div>
-		</div><!--1 РїС—Р…РїС—Р…РїС—Р…РїС—Р… 39-->
+		</div><!--1 пїЅпїЅпїЅпїЅ 39-->
 		<div class="third_block_39 job">
-		<h3>Р’С‹Р±РµСЂРёС‚Рµ СЃРІРѕСЋ СЂРѕР»СЊ</h3><br>
+		<h3>Выберите свою роль</h3><br>
 			<div class="job_p">
 				[data["jobs_data"]]
 			</div>
@@ -302,13 +302,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 			<div class="middle_text">
 				<div class="left_mid">
 					<div class="mid_item">
-						<h3> РџРµСЂС‡Р°С‚РєРё </h3>
+						<h3> Перчатки </h3>
 						<a href='?_src_=prefs;preference=chooise;task=equip;item=gloves' [data["d_gloves"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["gloves"], data["d_gloves"])]\"" : "" ]>[CutText(data["gloves"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=gloves'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=gloves'>&gt;</a>
 					</div>
 					<div class="mid_item">
-						<h3> РљР°СЂРјР°РЅ 1 </h3>
+						<h3> Карман 1 </h3>
 						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_1' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["r_pocket"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_1'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=pocket_1'>&gt;</a>
@@ -316,13 +316,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				</div>
 				<div class="right_mid">
 					<div class="mid_item">
-						<h3>РћСЂСѓР¶РёРµ </h3>
+						<h3>Оружие </h3>
 						<a href='?_src_=prefs;preference=chooise;task=equip;item=weapon' [data["d_weapon"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["weapon"], data["d_weapon"])]\"" : "" ]>[CutText(data["weapon"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=weapon'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=weapon'>&gt;</a>
 					</div>
 					<div class="mid_item">
-						<h3> РљР°СЂРјР°РЅ 2</h3>
+						<h3> Карман 2</h3>
 						<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_2' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["l_pocket"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_2'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=pocket_2'>&gt;</a>
@@ -335,43 +335,43 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 					<table>
 					<tr>
 						<td valign='top' width='21%'>
-							<h3>РџСЂРёС‡РµСЃРєР°</h3>
+							<h3>Прическа</h3>
 							<a href='?_src_=prefs;preference=hair_style;task=input'>[data["hair_style"]]</a><br>
 							<a href='?_src_=prefs;preference=previous_hair_style;task=input'>&lt;</a>
 							<a href='?_src_=prefs;preference=next_hair_style;task=input'>&gt;</a><br>
 							<span style='border:1px solid #161616; background-color: [data["hair_color"]];'>&nbsp;&nbsp;&nbsp;</span>
-							<a href='?_src_=prefs;preference=hair;task=input'>РР·РјРµРЅРёС‚СЊ</a><br>
+							<a href='?_src_=prefs;preference=hair;task=input'>Изменить</a><br>
 						</td>
 					</tr>
 				</table>
 				<table>
 					<tr>
 						<td valign='top' width='21%'>
-							<h3>Р›РёС†Рѕ</h3>
+							<h3>Лицо</h3>
 							<a href='?_src_=prefs;preference=facial_hair_style;task=input'>[data["f_hair_style"]]</a><br>
 							<a href='?_src_=prefs;preference=previous_facehair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_facehair_style;task=input'>&gt;</a><br><span style='border: 1px solid #161616; background-color: [data["f_hair_color"]];'>&nbsp;&nbsp;&nbsp;</span>
-							<a href='?_src_=prefs;preference=facial;task=input'>РР·РјРµРЅРёС‚СЊ</a><br>
+							<a href='?_src_=prefs;preference=facial;task=input'>Изменить</a><br>
 						</td>
 					</tr>
 				</table>
 				<table>
 					<tr>
 						<td valign='top' width='21%'>
-							<h3>Р¦РІРµС‚ РіР»Р°Р·</h3>
+							<h3>Цвет глаз</h3>
 							<span style='border: 1px solid #161616; background-color: [data["eye_color"]];'>&nbsp;&nbsp;&nbsp;</span>
-							<a href='?_src_=prefs;preference=eyes;task=input'>РР·РјРµРЅРёС‚СЊ</a><br>
+							<a href='?_src_=prefs;preference=eyes;task=input'>Изменить</a><br>
 						</td>
 					</tr>
 				</table>
 				</div>
 				<div class="clearBoth g" ></div>
 				<hr><center>
-				<a href='?_src_=prefs;preference=load'>РћС‚РјРµРЅР°</a>
-				<a href='?_src_=prefs;preference=save'>&#128190; РЎРѕС…СЂР°РЅРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё</a>
-				<a href='?_src_=prefs;preference=reset_all'>&#9762; РЎР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё</a>
+				<a href='?_src_=prefs;preference=load'>Отмена</a>
+				<a href='?_src_=prefs;preference=save'>&#128190; Сохранить настройки</a>
+				<a href='?_src_=prefs;preference=reset_all'>&#9762; Сбросить настройки</a>
 				</center>"}
 	CHECK_TICK
-	var/datum/browser/popup = new(user, "preferences", "<div align='center'>РќР°СЃС‚СЂРѕР№РєРё РїРµСЂСЃРѕРЅР°Р¶Р°</div>", 640, 750)
+	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Настройки персонажа</div>", 640, 750)
 	popup.set_content(html)
 	popup.open(0)
 	return 1

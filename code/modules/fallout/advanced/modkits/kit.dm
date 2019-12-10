@@ -1,6 +1,6 @@
 /obj/item/kit
 	name = "Modification Kit"
-	desc = "Р‘РµСЃРїРѕР»РµР·РµРЅ."
+	desc = "Бесполезен."
 	icon = 'icons/fallout/advanced/modkits.dmi'
 	icon_state = "wmk"
 	var/type_deserved = /obj/item/weapon/gun
@@ -9,11 +9,11 @@
 
 /obj/item/kit/proc/install(var/obj/item/I)
 	if(type in I:modifications)
-		to_chat(usr, "РћСЂСѓР¶РёРµ СѓР¶Рµ РёРјРµРµС‚ РґР°РЅРЅС‹Р№ С‚РёРї РјРѕРґРёС„РёРєР°С†РёРё.")
+		to_chat(usr, "Оружие уже имеет данный тип модификации.")
 		return
 
 	if(!istype(I, type_deserved))
-		to_chat(usr, "Р§С‚Рѕ С‚С‹ С‚РІРѕСЂРёС€СЊ?")
+		to_chat(usr, "Что ты творишь?")
 		return
 
 	if(!do_mob(usr, usr, 20))
@@ -64,6 +64,6 @@
 	if(sufix)
 		I.name = "[I.name] [sufix]"
 
-	to_chat(usr, "<font color='blue'>Р’С‹ СѓСЃС‚Р°РЅРѕРІРёР»Рё [name] РЅР° [I.name].</font>")
+	to_chat(usr, "<font color='blue'>Вы установили [name] на [I.name].</font>")
 
 	qdel(src)

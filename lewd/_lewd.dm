@@ -1,4 +1,4 @@
-///РјРµРЅСЏ С‡Р°СЃС‚Рѕ РїСЂРѕСЃСЏС‚ РІС‹РїРёР»РёС‚СЊ СЌС‚Рѕ РіРѕРІРЅРѕ, РЅРѕ РїРѕС‚РѕРј РїСЂРѕСЃСЏС‚ РІРµСЂРЅСѓС‚СЊ, РІ РїРёР·РґСѓ, Р±РѕСЊС€Рµ РЅРµ С‚СЂРѕРЅСѓ
+///меня часто просят выпилить это говно, но потом просят вернуть, в пизду, боьше не трону
 
 /mob/var/sexual_potency =  15
 /mob/var/lust_tolerance = 100
@@ -9,19 +9,19 @@
 /mob/list_interaction_attributes()
 	var/dat = ..()
 	if(refactory_period)
-		dat += "<br>...СЃРµРєСЃСѓР°Р»СЊРЅРѕ РёСЃС‡РµСЂРїР°РЅ."
+		dat += "<br>...сексуально исчерпан."
 	if(is_nude())
-		dat += "<br>...РіРѕР»С‹Р№."
+		dat += "<br>...голый."
 		if(has_vagina())
-			dat += "<br>...РёРјРµРµС‚ РіСЂСѓРґСЊ."
+			dat += "<br>...имеет грудь."
 		if(has_penis())
-			dat += "<br>...РёРјРµРµС‚ РїРµРЅРёСЃ."
+			dat += "<br>...имеет пенис."
 		if(has_vagina())
-			dat += "<br>...РёРјРµРµС‚ РІР°РіРёРЅСѓ."
+			dat += "<br>...имеет вагину."
 		if(has_anus())
-			dat += "<br>...РёРјРµРµС‚ Р°РЅСѓСЃ."
+			dat += "<br>...имеет анус."
 	else
-		dat += "<br>...РІ РѕРґРµР¶РґРµ."
+		dat += "<br>...в одежде."
 	return dat
 
 /mob/living/Life()
@@ -34,7 +34,7 @@
 /datum/interaction/lewd
 	command = "assslap"
 	description = "Slap their ass."
-	simple_message = "USER С€Р»РµРїРЅСѓР» TARGET РїРѕ Р·Р°РґРЅРёС†Рµ!"
+	simple_message = "USER шлепнул TARGET по заднице!"
 	simple_style = "danger"
 	interaction_sound = 'honk/sound/interactions/slap.ogg'
 	needs_physical_contact = 1
@@ -63,19 +63,19 @@
 /datum/interaction/lewd/evaluate_user(var/mob/user, var/silent=1)
 	if(..(user, silent))
 		if(user_not_tired && user.refactory_period)
-			user << "<span class='warning'>Р’С‹ РІСЃС‘ РµС‰Рµ СѓСЃС‚Р°Р»Рё РїРѕСЃР»Рµ РїСЂРѕС€Р»РѕРіРѕ СЂР°Р·Р°.</span>"
+			user << "<span class='warning'>Вы всё еще устали после прошлого раза.</span>"
 			return 0
 		if(require_user_naked && !user.is_nude())
-			if(!silent) user << "<span class = 'warning'>Р’Р°Рј РјРµС€Р°РµС‚ РѕРґРµР¶РґР°.</span>"
+			if(!silent) user << "<span class = 'warning'>Вам мешает одежда.</span>"
 			return 0
 		if(require_user_penis && !user.has_penis())
-			if(!silent) user << "<span class = 'warning'>РЈ РІР°СЃ РЅРµС‚ С‡Р»РµРЅР°.</span>"
+			if(!silent) user << "<span class = 'warning'>У вас нет члена.</span>"
 			return 0
 		if(require_user_anus && !user.has_anus())
-			if(!silent) user << "<span class = 'warning'>РЈ РІР°СЃ РЅРµС‚ Р°РЅСѓСЃР°.</span>"
+			if(!silent) user << "<span class = 'warning'>У вас нет ануса.</span>"
 			return 0
 		if(require_user_vagina && !user.has_vagina())
-			if(!silent) user << "<span class = 'warning'>РЈ РІР°СЃ РЅРµС‚ РІР°РіРёРЅС‹.</span>"
+			if(!silent) user << "<span class = 'warning'>У вас нет вагины.</span>"
 			return 0
 		return 1
 	return 0
@@ -86,16 +86,16 @@
 			user << "<span class='warning'>.</span>"
 			return 0
 		if(require_target_naked && !target.is_nude())
-			if(!silent) user << "<span class = 'warning'>TARGET РјРµС€Р°РµС‚ РѕРґРµР¶РґР°.</span>"
+			if(!silent) user << "<span class = 'warning'>TARGET мешает одежда.</span>"
 			return 0
 		if(require_target_penis && !target.has_penis())
-			if(!silent) user << "<span class = 'warning'>РЈ TARGET РЅРµС‚ РїРµРЅРёСЃР°.</span>"
+			if(!silent) user << "<span class = 'warning'>У TARGET нет пениса.</span>"
 			return 0
 		if(require_target_anus && !target.has_anus())
-			if(!silent) user << "<span class = 'warning'>РЈ TARGET РЅРµС‚ Р°РЅСѓСЃР°.</span>"
+			if(!silent) user << "<span class = 'warning'>У TARGET нет ануса.</span>"
 			return 0
 		if(require_target_vagina && !target.has_vagina())
-			if(!silent) user << "<span class = 'warning'>РЈ TARGET РЅРµС‚ РІР°РіРёРЅС‹.</span>"
+			if(!silent) user << "<span class = 'warning'>У TARGET нет вагины.</span>"
 			return 0
 		return 1
 	return 0

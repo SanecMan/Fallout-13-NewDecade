@@ -18,9 +18,9 @@
 	layer = BELOW_OBJ_LAYER
 	anchored = 1
 	density = 1
-	verb_say = "Р±РёРї"
-	verb_ask = "Р±РёРї"
-	verb_exclaim = "Р±РёРї"
+	verb_say = "бип"
+	verb_ask = "бип"
+	verb_exclaim = "бип"
 	obj_integrity = 300
 	max_integrity = 300
 	integrity_failure = 100

@@ -189,7 +189,7 @@
 	var/old_ex_level = explosion_level
 	var/old_ex_id = explosion_id
 
-	Destroy()	//вќ„
+	Destroy()	//❄
 	var/turf/W = new path(src)
 
 	W.proximity_checkers = old_checkers

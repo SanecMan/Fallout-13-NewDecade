@@ -481,11 +481,9 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	var/y = min(world.maxy, max(1, A.y + dy))
 	return locate(x,y,A.z)
 
-/*
 /proc/arctan(x)
 	var/y=arcsin(x/sqrt(1+x*x))
 	return y
-*/
 
 /atom/proc/GetAllContents()
 	var/list/processing_list = list(src)
@@ -1328,17 +1326,17 @@ proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 /proc/weightclass2text(var/w_class)
 	switch(w_class)
 		if(WEIGHT_CLASS_TINY)
-			. = "РЅРµР±РѕР»СЊС€РѕР№"
+			. = "небольшой"
 		if(WEIGHT_CLASS_SMALL)
-			. = "РјР°Р»РµРЅСЊРєРёР№"
+			. = "маленький"
 		if(WEIGHT_CLASS_NORMAL)
-			. = "РѕР±С‹С‡РЅС‹Р№"
+			. = "обычный"
 		if(WEIGHT_CLASS_BULKY)
-			. = "РіСЂРѕРјРѕР·РґРєРёР№"
+			. = "громоздкий"
 		if(WEIGHT_CLASS_HUGE)
-			. = "Р±РѕР»СЊС€РѕР№"
+			. = "большой"
 		if(WEIGHT_CLASS_GIGANTIC)
-			. = "РѕРіСЂРѕРјРЅС‹Р№"
+			. = "огромный"
 		else
 			. = ""
 

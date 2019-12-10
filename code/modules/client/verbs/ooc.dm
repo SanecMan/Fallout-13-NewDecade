@@ -26,18 +26,18 @@
 			return
 
 	if(!(prefs.chat_toggles & CHAT_OOC))
-		to_chat(src, "<span class='danger'>РЈ РІР°СЃ РјСѓС‚ РЅР° РћРћРЎ.</span>")
+		to_chat(src, "<span class='danger'>У вас мут на ООС.</span>")
 		return
 
 	if(!holder)
 		if(!ooc_allowed)
-			to_chat(src, "<span class='danger'>OOC Р·Р°РјСѓС‡РµРЅ.</span>")
+			to_chat(src, "<span class='danger'>OOC замучен.</span>")
 			return
 		if(!dooc_allowed && (mob.stat == DEAD))
 			to_chat(usr, "<span class='danger'>OOC for dead mobs has been turned off.</span>")
 			return
 		if(prefs.muted & MUTE_OOC)
-			to_chat(src, "<span class='danger'>Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ РїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ OOC (РјСѓС‚).</span>")
+			to_chat(src, "<span class='danger'>Вы не можете пользоваться OOC (мут).</span>")
 			return
 		if(src.mob)
 			if(jobban_isbanned(src.mob, "OOC"))

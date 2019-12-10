@@ -546,8 +546,8 @@
 			D.Jitter(2)
 			D.apply_damage(5, BRUTE)
 	else
-		D.visible_message("<span class='danger'>[A] РїРѕРїС‹С‚Р°Р»СЃСЏ РѕРїСЂРѕРєРёРЅСѓС‚СЊ [D]!</span>", \
-							"<span class='userdanger'>[A] РїРѕРїС‹С‚Р°Р»СЃСЏ РѕРїСЂРѕРєРёРЅСѓС‚СЊ [D]!</span>")
+		D.visible_message("<span class='danger'>[A] попытался опрокинуть [D]!</span>", \
+							"<span class='userdanger'>[A] попытался опрокинуть [D]!</span>")
 		playsound(D, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 	add_logs(A, D, "disarmed with CQC")
 	if(restraining && A.pulling == D)

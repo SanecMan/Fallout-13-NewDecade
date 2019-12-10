@@ -533,10 +533,10 @@
 /obj/item/toy/talking/strength/generate_messages()
 	var/list/messages = list()
 	messages = list(
-	"Р–РёР·РЅСЊ вЂ” РґРµСЂСЊРјРѕ, РЅРѕ СЃРјРµСЂС‚СЊ РµС‰С‘ С…СѓР¶Рµ. Р–Р°Р»СЊ, РјС‹ РЅРµ РјРѕР¶РµРј РІРµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРѕС€Р»РѕРµ Рё РѕС‚РјРµРЅРёС‚СЊ СЃРІРѕС‘ СЂРѕР¶РґРµРЅРёРµ. Life is shit, but death is even worse. Sorry, we can not go back in time and cancel our birth.",
-	"РљР°Рє С‚СѓС‚ Р»СЋРґРµР№ СѓР±РёРІР°С‚СЊ? РњРЅРµ РЅСѓР¶РЅС‹ С‚СЂСѓРїС‹. How do people kill? I need corpses.",
-	"Рљ С‚РѕРјСѓ Р¶Рµ СЏ С…РѕС‡Сѓ СѓР±РµРґРёС‚СЊСЃСЏ, С‡С‚Рѕ Сѓ РјРµРЅСЏ С‚СЂСѓРїС‹ РЅРµ РІСЃС‚Р°СЋС‚. Besides, I want to make sure that my corpses do not stand up.",
-	"Р§С‚Рѕ СЏ РҐРћР§РЈ? РћС‚РєСЂРѕРІРµРЅРЅРѕ РіРѕРІРѕСЂСЏ, РЅРµ Р·РЅР°СЋ. Р‘РѕР»СЊС€СѓСЋ С‡Р°СЃС‚СЊ РІСЂРµРјРµРЅРё СЏ РёРіРЅРѕСЂРёСЂСѓСЋ РјРѕСЋ РјРёСЃСЃРёСЋ Рё Р·Р°С…РѕР¶Сѓ РІ С‡СѓР¶РёРµ РґРѕРјР°, РіРґРµ РЅР°С‡РёРЅР°СЋ С€Р°СЂРёС‚СЊ РїРѕ РїРѕР»РєР°РјвЂ¦ РѕРѕРѕ, РєР°Рє СЂР°Р· С‚Р°РєРёРј, С‡С‚Рѕ Сѓ С‚РµР±СЏ Р·Р° СЃРїРёРЅРѕР№! What I want? Frankly, I do not know. Most of the time I ignore my mission and go into other people's houses, where I start to fumble around the shelves ... ooo, just the one behind your back!")
+	"Жизнь — дерьмо, но смерть ещё хуже. Жаль, мы не можем вернуться в прошлое и отменить своё рождение. Life is shit, but death is even worse. Sorry, we can not go back in time and cancel our birth.",
+	"Как тут людей убивать? Мне нужны трупы. How do people kill? I need corpses.",
+	"К тому же я хочу убедиться, что у меня трупы не встают. Besides, I want to make sure that my corpses do not stand up.",
+	"Что я ХОЧУ? Откровенно говоря, не знаю. Большую часть времени я игнорирую мою миссию и захожу в чужие дома, где начинаю шарить по полкам… ооо, как раз таким, что у тебя за спиной! What I want? Frankly, I do not know. Most of the time I ignore my mission and go into other people's houses, where I start to fumble around the shelves ... ooo, just the one behind your back!")
 	return messages
 
 /obj/item/toy/talking/perception
@@ -556,10 +556,10 @@
 /obj/item/toy/talking/perception/generate_messages()
 	var/list/messages = list()
 	messages = list(
-	"РљРѕРіРґР°-РЅРёР±СѓРґСЊ - Р° СЌС‚РѕС‚ РґРµРЅСЊ РјРѕР¶РµС‚ Рё РЅРµ РЅР°СЃС‚СѓРїРёС‚СЊ - СЏ РЅР°РїРѕРјРЅСЋ С‚РµР±Рµ, С‡С‚Рѕ РґРѕР»Рі РїР»Р°С‚РµР¶РѕРј РєСЂР°СЃРµРЅ. Р”Рѕ С‚РµС… РїРѕСЂ РїСЂРёРјРё СЌС‚Рё РѕС‡РєРё РєР°Рє РґР°СЂ РїРѕ СЃР»СѓС‡Р°СЋ РґРЅСЏ СЃРІР°РґСЊР±С‹ РјРѕРµР№ РґРѕС‡РµСЂРё. Someday - and this day may not come - I will remind you that the debt is red by the payment. Until then, take these glasses as a gift on the occasion of my daughter's wedding day.",
-	"вЂ” Р Р°РґСЃРєРѕСЂРїРёРѕРЅС‹? Р§С‚Рѕ РІ РЅРёС… С‚Р°РєРѕРіРѕ СЂР°РґРѕСЃС‚РЅРѕРіРѕ? вЂ” Р­С‚Рѕ СЃРѕРєСЂР°С‰РµРЅРёРµ. РћР·РЅР°С‡Р°РµС‚ вЂћР РђР”РРђР¦РРЇвЂњ, РїСЂРёРґСѓСЂРѕРє. Radskorpions? What is so joyful about them? - This is a reduction. Means RADIATION, moron.",
-	"Р’СЃРµРј РІ СЌС‚РѕРј РіРѕСЂРѕРґРµ РЅСѓР¶РЅР° С…РѕСЂРѕС€Р°СЏ РєР»РёР·РјР°. Everyone in this city needs a good enema.",
-	"РњРѕСЏ СЃС‚РµСЂРµС‡СЊ РјСѓРјСѓРєРё РѕС‚ Р»СЋРґРё-Р¶СѓРєРё. My watch over the mummies from the beetles.")
+	"Когда-нибудь - а этот день может и не наступить - я напомню тебе, что долг платежом красен. До тех пор прими эти очки как дар по случаю дня свадьбы моей дочери. Someday - and this day may not come - I will remind you that the debt is red by the payment. Until then, take these glasses as a gift on the occasion of my daughter's wedding day.",
+	"— Радскорпионы? Что в них такого радостного? — Это сокращение. Означает „РАДИАЦИЯ“, придурок. Radskorpions? What is so joyful about them? - This is a reduction. Means RADIATION, moron.",
+	"Всем в этом городе нужна хорошая клизма. Everyone in this city needs a good enema.",
+	"Моя стеречь мумуки от люди-жуки. My watch over the mummies from the beetles.")
 	return messages
 
 /obj/item/toy/talking/endurance
@@ -579,10 +579,10 @@
 /obj/item/toy/talking/endurance/generate_messages()
 	var/list/messages = list()
 	messages = list(
-	"Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ СѓСЃРїРµС€РЅРѕРіРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ РР·Р±СЂР°РЅРЅС‹Рј СЃРІРѕРµР№ РјРёСЃСЃРёРё вЂ” 15%. The probability of a successful completion of the mission is 15%.",
-	"Рђ С‡С‚Рѕ Р·Р° РґРµР»Рѕ СЃ РІР·СЂС‹РІР°СЋС‰РёРјРёСЃСЏ Р±СЂР°РјРёРЅР°РјРё СЃ СЃР°РјРѕРЅР°РІРµРґРµРЅРёРµРј? And what's the matter with exploding self-taught brahmins?",
-	"РЇ РѕС‚С‹РјРµР» Р‘РѕР»СЊС€РѕРіРѕ РҐРµСЃСѓСЃР° Рё С…РѕС‡Сѓ РІР°Рј РєРѕРµ-С‡С‚Рѕ РїРѕРєР°Р·Р°С‚СЊ. I fucked Big Jesus and I want to show you something.",
-	"Р—Р°С‰РёС‚РёРј РР·Р±СЂР°РЅРЅРѕРіРѕ РѕС‚ РёРґРёРѕС‚РёР·РјР° СЃРїР°РјРµСЂРѕРІ! Let's protect the favorite from the idiocy of spammers!")
+	"Вероятность успешного завершения Избранным своей миссии — 15%. The probability of a successful completion of the mission is 15%.",
+	"А что за дело с взрывающимися браминами с самонаведением? And what's the matter with exploding self-taught brahmins?",
+	"Я отымел Большого Хесуса и хочу вам кое-что показать. I fucked Big Jesus and I want to show you something.",
+	"Защитим Избранного от идиотизма спамеров! Let's protect the favorite from the idiocy of spammers!")
 	return messages
 
 /obj/item/toy/talking/charisma
@@ -602,10 +602,10 @@
 /obj/item/toy/talking/charisma/generate_messages()
 	var/list/messages = list()
 	messages = list(
-	"РЇ РѕСЃРѕР·РЅР°СЋ, С‡С‚Рѕ СЏ РІСЃРµРіРѕ Р»РёС€СЊ РЅРµРёРіСЂРѕРІРѕР№ РїРµСЂСЃРѕРЅР°Р¶, РЅРѕ СЏ РіР»СѓР±РѕРєРѕ РѕСЃРєРѕСЂР±Р»РµРЅР° С‚РµРј, РєР°Рє РІ РќСЊСЋ-Р РёРЅРѕ РёР·РѕР±СЂР°Р¶РµРЅС‹ Р¶РµРЅС‰РёРЅС‹. I realize that I'm just a non-player character, but I'm deeply offended by how the women in New Reno are portrayed.",
-	"Р­С‚Рѕ РєР°Рє Р¶Рµ РЅР°РґРѕ Р±РѕСЏС‚СЊСЃСЏ РЎРџРР”Р°, С‡С‚РѕР±С‹ Р·Р°Р»РµР·С‚СЊ РІ СЌС‚Сѓ С…СЂРµРЅРѕРІРёРЅСѓвЂ¦ It's like you need to be afraid of AIDS to get into this mess ...",
-	"Р’РѕР№РЅР° РЅРёРєРѕРіРґР° РЅРµ РјРµРЅСЏРµС‚СЃСЏ? РРґРё РЅР° С…РµСЂ! РўС‹ РјРµРЅСЏ РЅРµ Р·РЅР°РµС€СЊ! War never changes? Go on dick! You do not know me!",
-	"РЇ РјРѕРіСѓ РёР·РјРµРЅРёС‚СЊСЃСЏ. РҐРѕС‚СЊ Р±С‹ РѕРЅРё РїРµСЂРµСЃС‚Р°Р»Рё С‚Р°Рє РіРѕРІРѕСЂРёС‚СЊ. I can change. If only they stopped talking like that.")
+	"Я осознаю, что я всего лишь неигровой персонаж, но я глубоко оскорблена тем, как в Нью-Рино изображены женщины. I realize that I'm just a non-player character, but I'm deeply offended by how the women in New Reno are portrayed.",
+	"Это как же надо бояться СПИДа, чтобы залезть в эту хреновину… It's like you need to be afraid of AIDS to get into this mess ...",
+	"Война никогда не меняется? Иди на хер! Ты меня не знаешь! War never changes? Go on dick! You do not know me!",
+	"Я могу измениться. Хоть бы они перестали так говорить. I can change. If only they stopped talking like that.")
 	return messages
 
 /obj/item/toy/talking/intelligence
@@ -625,10 +625,10 @@
 /obj/item/toy/talking/intelligence/generate_messages()
 	var/list/messages = list()
 	messages = list(
-	"РњРёРЅР·РґСЂР°РІ РЅР° РїРѕР»РЅРѕРј СЃРµСЂСЊС‘Р·Рµ РїСЂРµРґСѓРїСЂРµР¶РґР°РµС‚: РЅРµ РєРѕСЂРјРёС‚Рµ СЏРѕ-РіР°РµРІ! Р’РѕС‚, СЃРѕР±СЃС‚РІРµРЅРЅРѕ, Рё РІСЃС‘. The Ministry of Health seriously warns: do not feed yao-gay! Here, in fact, that's all.",
-	"Р•С‰С‘ СЂР°Р· С‚Р°Рє СЃРґРµР»Р°РµС€СЊ вЂ” Рё СЏ С‚РµР±Рµ С‚Р°Рє РЅРѕРіСѓ РІ Р·Р°РґРЅРёС†Сѓ Р·Р°СЃСѓРЅСѓ, С‡С‚Рѕ С€РЅСѓСЂРєР°РјРё РєР°С€Р»СЏС‚СЊ Р±СѓРґРµС€СЊ! Once again, you will do so - and I'll shove your leg into your ass, that you'll cough with laces!",
-	"РЇ РєР°Рє-С‚Рѕ Р±С‹Р» РІ РєСЂРµРјР°С‚РѕСЂРёРё, РіРґРµ Р¶РµСЂС‚РІР°Рј РѕР¶РѕРіРѕРІ РґР°РІР°Р»Рё СЃРєРёРґРєРё. I once was in a crematorium, where the victims of burns were given discounts.",
-	"Р•СЃР»Рё С‚С‹ РґСѓРјР°РµС€СЊ, С‡С‚Рѕ СѓРјРЅС‹Рј Р»СЋРґСЏРј СЃС‚РѕРёС‚ СѓС‡РёС‚СЊСЃСЏ Р»РѕРїРѕС‚Р°С‚СЊ, РєР°Рє РѕС‚СЃС‚Р°Р»С‹Рј РґРёРєР°СЂСЏРј, С‚Рѕ С‚С‹ Р»РёР±Рѕ РџРѕСЃР»РµРґРѕРІР°С‚РµР»СЊ РђРїРѕРєР°Р»РёРїСЃРёСЃР°вЂ¦ Р»РёР±Рѕ С‚СѓРїРёС†Р°. If you think that intelligent people should learn to bawl like backward savages, then you are either a follower of the Apocalypse ... or a dumbass.")
+	"Минздрав на полном серьёзе предупреждает: не кормите яо-гаев! Вот, собственно, и всё. The Ministry of Health seriously warns: do not feed yao-gay! Here, in fact, that's all.",
+	"Ещё раз так сделаешь — и я тебе так ногу в задницу засуну, что шнурками кашлять будешь! Once again, you will do so - and I'll shove your leg into your ass, that you'll cough with laces!",
+	"Я как-то был в крематории, где жертвам ожогов давали скидки. I once was in a crematorium, where the victims of burns were given discounts.",
+	"Если ты думаешь, что умным людям стоит учиться лопотать, как отсталым дикарям, то ты либо Последователь Апокалипсиса… либо тупица. If you think that intelligent people should learn to bawl like backward savages, then you are either a follower of the Apocalypse ... or a dumbass.")
 	return messages
 
 /obj/item/toy/talking/agility
@@ -648,10 +648,10 @@
 /obj/item/toy/talking/agility/generate_messages()
 	var/list/messages = list()
 	messages = list(
-	"Р—РЅР°РµС€СЊ, РєРѕРіРґР°-С‚Рѕ Сѓ РјРµРЅСЏ Р±С‹Р»Рё С‚С‹СЃСЏС‡Рё СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ. РњР°Р»Рѕ РєС‚Рѕ РѕРїСЂР°РІРґР°Р» РјРѕРё РѕР¶РёРґР°РЅРёСЏ, Рё РµС‰С‘ РјРµРЅСЊС€Рµ С‚РµС…, РєС‚Рѕ РїСЂРµРІР·РѕС€РµР» РёС…. You know, I once had thousands of employees. Few people lived up to my expectations, and fewer than those who surpassed them.",
-	"РўСѓС‚ РІ вЂћРўРѕРїСЃвЂњ РѕРЅРё Рё РІРїСЂР°РІРґСѓ Р·Р°Р±РѕС‚СЏС‚СЃСЏ Рѕ СЃРѕС…СЂР°РЅРµРЅРёРё РІР°С€РёС… Р»РёС‡РЅС‹С… С‚Р°Р№РЅ. РљРѕ РјРЅРµ РІ РЅРѕРјРµСЂ РґР°Р¶Рµ СѓР±РѕСЂС‰РёС†Р° РЅРµ Р·Р°С…РѕРґРёС‚! Here in Tops they really care about preserving your personal secrets. To me in the room, even the cleaning lady does not go!",
-	"РўС‹ С‚РѕР»СЊРєРѕ РїРѕСЃРјРѕС‚СЂРё РЅР° СЃРµР±СЏ: СЃСЂР°Р·Сѓ РІРёРґРЅРѕ вЂ” С‚РµР±Рµ РѕС‚РєСЂС‹С‚С‹ РІСЃРµ РґРѕСЂРѕРіРёвЂ¦ РЅР° РєР»Р°РґР±РёС‰Рµ. Just look at yourself: you can see at once - you have all the roads open ... in the cemetery.",
-	"Р’СЃРµ РіРѕРІРѕСЂСЏС‚ вЂ” С‡РѕРєРЅСѓС‚С‹Р№. Рђ С‚С‹ РєСѓРїРё РІРµС‚СЂРѕ-Р±СЂР°РјРёРЅР°. Everyone says - crazy. And you buy a wind-brahmin.")
+	"Знаешь, когда-то у меня были тысячи сотрудников. Мало кто оправдал мои ожидания, и ещё меньше тех, кто превзошел их. You know, I once had thousands of employees. Few people lived up to my expectations, and fewer than those who surpassed them.",
+	"Тут в „Топс“ они и вправду заботятся о сохранении ваших личных тайн. Ко мне в номер даже уборщица не заходит! Here in Tops they really care about preserving your personal secrets. To me in the room, even the cleaning lady does not go!",
+	"Ты только посмотри на себя: сразу видно — тебе открыты все дороги… на кладбище. Just look at yourself: you can see at once - you have all the roads open ... in the cemetery.",
+	"Все говорят — чокнутый. А ты купи ветро-брамина. Everyone says - crazy. And you buy a wind-brahmin.")
 	return messages
 
 /obj/item/toy/talking/luck
@@ -671,10 +671,10 @@
 /obj/item/toy/talking/luck/generate_messages()
 	var/list/messages = list()
 	messages = list(
-	"РЇ РЎР›Р«РЁРЈ, РљРђРљ РќР•РџРћР”РђР›РЃРљРЈ Р РђРЎРўРЈРў РўР’РћР РџР•РќРРЎР«.I HEAR HOW YOU HAVE YOUR PEASANTS GROWING UP.",
-	"Рђ-С…Р°С…! РЇ СЃРЅРѕРІР° РЅР° РїРѕСЃС‚Сѓ! Р”СЂРѕР¶Рё Рё С‚СЂРµРїРµС‰Рё, РІСЃРµР»РµРЅРЅР°СЏ РїРµСЂРµРґ РјРѕРµР№ СѓР¶Р°СЃРЅРѕР№ РёРЅРґСѓРєС†РёРѕРЅРЅРѕР№ РєР°С‚СѓС€РєРѕР№! A-hah! I'm back on duty! Shivers and tremble, the universe in front of my awful induction coil!",
-	"Р Р°РЅСЊС€Рµ, С‡С‚РѕР±С‹ Р¦РµР·Р°СЂСЊ РІР»РѕР¶РёР» С‚РµР±Рµ РІ СЂСѓРєРё РѕСЂСѓР¶РёРµ, С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ РёРјРµС‚СЊ РѕСЂСѓР¶РёРµ РјРµР¶РґСѓ РЅРѕРі. Before, that Caesar put weapons into your hands, you had to have a weapon between your legs.",
-	"РўС‹ РЅРµ РїСЂРµРґСЃС‚Р°РІР»СЏРµС€СЊ, СЃРєРѕР»СЊРєРѕ Р»СЋРґРµР№ РїРѕРІРµСЂРёР»Рё РјРЅРµ, РєРѕРіРґР° СЏ СЃРєР°Р·Р°Р» РёРј, С‡С‚Рѕ СЏ РѕС‡РµРЅСЊ Р±РѕР»СЊРЅРѕР№ РіСѓР»СЊ. You do not know how many people believed me when I told them that I was a very sick ghoul.")
+	"Я СЛЫШУ, КАК НЕПОДАЛЁКУ РАСТУТ ТВОИ ПЕНИСЫ.I HEAR HOW YOU HAVE YOUR PEASANTS GROWING UP.",
+	"А-хах! Я снова на посту! Дрожи и трепещи, вселенная перед моей ужасной индукционной катушкой! A-hah! I'm back on duty! Shivers and tremble, the universe in front of my awful induction coil!",
+	"Раньше, чтобы Цезарь вложил тебе в руки оружие, требовалось иметь оружие между ног. Before, that Caesar put weapons into your hands, you had to have a weapon between your legs.",
+	"Ты не представляешь, сколько людей поверили мне, когда я сказал им, что я очень больной гуль. You do not know how many people believed me when I told them that I was a very sick ghoul.")
 	return messages
 
 /obj/item/toy/talking/codex_gigas

@@ -1,4 +1,4 @@
-namespace midi2piano
+﻿namespace midi2piano
 {
     partial class Form1
     {

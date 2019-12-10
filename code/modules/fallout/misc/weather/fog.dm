@@ -1,5 +1,5 @@
 /datum/weather_controller/fog
-	name = "С‚СѓРјР°РЅ"
+	name = "туман"
 	id = "fog"
 	desc = "Simple fog."
 

@@ -1,19 +1,19 @@
-var/list/translit_symbols = list("Р°" = "a", "Р±" = "b", "РІ" = "v", "Рі" = "g", "Рґ" = "d", "Рµ" = "e", "С‘" = "yo", "Р¶"= "j", "Р·" = "z", "Рё" = "i", \
- "Р№" = "y", "Рє" = "k", "Р»" = "l", "Рј" = "m", "РЅ" = "n", "Рѕ" = "o", "Рї" = "p", "СЂ" = "r", "СЃ" = "c", "С‚" = "t", "Сѓ" = "y", \
- "С„" = "f", "С…" = "h", "С†" = "tc", "С‡" = "ch", "С€" = "sh", "С‰" = "sh", "С‹" = "i", "СЌ" = "e", "СЋ" = "yu", "СЏ" = "ya", \
- "СЊ" = "", "СЉ" = "")
-var/static/list/phrases_storage = list("attack" = "assault,sic,strike,rush,charge,bit,target,open,fuck,С„Р°СЃ,РјРѕС‡Рё,РІР°Р»Рё,РєСѓСЃ,С†Р°Рї,Р±РµР№,Р°С‚Р°Рє,РµР±Р°С€,С€С‚СѓСЂРј,СѓРµР±,С…РѕРї", "follow" = "come,to me,after,with,escort,convoy,chase,РїРёР·РґСѓР№,РёРґРё,СЃСЋРґР°,РєРѕ РјРЅРµ,Рє РЅРѕРіРµ,СЂСЏРґРѕРј,Р·Р° РјРЅРѕР№,РїСЂРѕРІ,РєРѕРЅРІ,СЃР»РµРґ,РІРїРµСЂРµРґ", \
-"stop" = "quit,leave,drop,freeze,pause,cease,layoff,С…РІР°С‚РёС‚,СЃС‚РѕРї,РѕСЃС‚Р°РЅРѕРІРёСЃСЊ,С…Р°СЂРµ,РїРµСЂРµСЃС‚Р°РЅСЊ,РїСЂРµРєСЂР°С‚,С„Сѓ,РЅРµС‚,РЅРµР»СЊР·СЏ,Р±СЂРѕСЃ,РІРѕР»СЊРЅРѕ,СЃРІРѕР±РѕРґ", "stay" = "wait,hold,still,idle,СЃС‚РѕСЏС‚СЊ,СЃС‚РѕР№,РјРµСЃС‚,РЅРµ РґРІРёРіР°Р№СЃСЏ", \
-"randy" = "rand,СЂСЌРЅРґ,СЂРµРЅРґ", "bear" = "grizzly,РјРёС€,РјРµРґРІРµРґ,РєРѕСЃРѕР»Р°Рї", "brahmin" = "cow,Р±СЂР°РјРёРЅ,РєРѕСЂРѕРІ,РјСѓ", \
-"me" = "my,mine,РјРµРЅСЏ,РјРЅРѕР№,СЏ,РјРЅРµ", "anybody" = "every,each,all,РІСЃРµ,РєР°Р¶Рґ", "dance" = "С‚Р°РЅС†,РїР»СЏС€Рё", "defend" = "guard,protect,secur,enforce,watch,Р·Р°С‰РёС‰,Р·Р°С‰РёС‚,Р±РµСЂРµРі,С…СЂР°РЅ,СЃС‚РѕСЂРѕР¶", \
-"none" = "neutral,wasteland,settler,farm,РЅРµР№С‚СЂР°Р»,РїСѓСЃС‚РѕС€,РїРѕСЃРµР»РµРЅ,РґРµСЂРµРІ,С„РµСЂРј,Р±РѕРјР¶", "city" = "citiz,mayor,sherif,РіРѕСЂРѕРґ,РјРµСЂ,РјСЌСЂ,С€РµСЂРёС„,С€СЌСЂРёС„", "raiders" = "bandit,criminal,raid,gang,psych,insane,maniac,sadist,СЂРµР№Рґ,С…СѓР»РёРі,Р±Р°РЅРґ,РїР°С…Р°РЅ,РїСЃРёС…,С€РёР·,РјР°РЅРё,СЃР°РґРёСЃС‚,СЃРѕРґРѕРј", "vault" = "bunker,СѓР±РµР¶РёС‰,Р±СѓРЅРєРµСЂ", "bs" = "bro,steel,knight,paladin,elder,Р±СЂР°С‚,СЃС‚Р°Р»,СЂС‹С†Р°СЂ,РїР°Р»Р°РґРёРЅ,СЃС‚Р°СЂРµР№С€РёРЅ", "enclave" = "usa,СЃС€Р°,Р°РЅРєР»Р°РІ", "ahs" = "hubolog,adept,С…Р°Р±РѕР»РѕРі,Р°РґРµРїС‚", "ncr" = "california,republic,РЅРєСЂ,РєР°Р»РёС„РѕСЂРЅРё,СЂРµСЃРїСѓР±Р»РёРє", "legion" = "caesar,Р»РµРіРёРѕРЅ,С†РµР·Р°СЂСЊ", "followers" = "follower,apocalypse,СЃР»РµРґРѕРІР°С‚Рµ,Р°РїРѕРєР°Р»РёРїСЃРёСЃ", "acolytes" = "acolyt,atom,ghoul,Р°РєРѕР»РёС‚,Р°С‚РѕРј,РіСѓР»", \
-"enemy" = "foe,bad,bully,evil,danger,threat,monster,asshole,fag,traitor,villain,dick,douche,prick,spy,agent,РІСЂР°Рі,С‡СѓР¶,РїР»РѕС…,Р·Р»Рѕ,РѕРїР°СЃ,СѓРіСЂ,РїСЂРµРґ,С€РїРё,РІСЂР°Р¶,СЃРІРѕР»РѕС‡,РјСѓРґ,РїРёРґРѕСЂ", \
-"friend" = "buddy,master,good,kind,ally,partner,РґСЂСѓРі,РґСЂСѓР·,РґРѕР±СЂ,РїРѕРІРµР»,С…РѕР·,С…РѕСЂ,СЃРѕСЋР·,РїР°СЂ", "pull" = "grab,bring,get,drag,fetch,take,haul,tow,deliver,rescue,save,help,Р°РїРѕСЂС‚,С‚Р°С‰Рё,РЅРµСЃРё,РЅРµСЃС‚,С…РІР°С‚,РІРѕР·СЊРјРё,РІР·СЏ,Р·Р°Р»РѕР¶Рё,СЃРїР°СЃ,Р±СѓРєСЃ", \
-"doge" = "dog,pup,hound,mongrel,pooch,bowwow,РїСЃРёРЅ,РїС‘СЃ,СЃРѕР±Р°Рє,РєРѕР±РµР»,С‰РµРЅ,РїСЃР°,С€Р°РІРє,РІРѕР»Рє", \
-"smeagol" = "gollum,hobbit,СЃРјРµРіРѕР»,Р»С‹СЃС‹Р№,РіРѕР»,РіРѕСЂ,СѓСЂРѕРґ,С…РѕР±РёС‚,РїСѓС‡РµРіР»Р°Р·", \
-"brutus" = "Р±СЂСѓС‚", \
-"democratie" = "РґРµРјРѕРєСЂР°С‚РёСЏ", \
-"stalin" = "СЃС‚Р°Р»РёРЅ")
+var/list/translit_symbols = list("а" = "a", "б" = "b", "в" = "v", "г" = "g", "д" = "d", "е" = "e", "ё" = "yo", "ж"= "j", "з" = "z", "и" = "i", \
+ "й" = "y", "к" = "k", "л" = "l", "м" = "m", "н" = "n", "о" = "o", "п" = "p", "р" = "r", "с" = "c", "т" = "t", "у" = "y", \
+ "ф" = "f", "х" = "h", "ц" = "tc", "ч" = "ch", "ш" = "sh", "щ" = "sh", "ы" = "i", "э" = "e", "ю" = "yu", "я" = "ya", \
+ "ь" = "", "ъ" = "")
+var/static/list/phrases_storage = list("attack" = "assault,sic,strike,rush,charge,bit,target,open,fuck,фас,мочи,вали,кус,цап,бей,атак,ебаш,штурм,уеб,хоп", "follow" = "come,to me,after,with,escort,convoy,chase,пиздуй,иди,сюда,ко мне,к ноге,рядом,за мной,пров,конв,след,вперед", \
+"stop" = "quit,leave,drop,freeze,pause,cease,layoff,хватит,стоп,остановись,харе,перестань,прекрат,фу,нет,нельзя,брос,вольно,свобод", "stay" = "wait,hold,still,idle,стоять,стой,мест,не двигайся", \
+"randy" = "rand,рэнд,ренд", "bear" = "grizzly,миш,медвед,косолап", "brahmin" = "cow,брамин,коров,му", \
+"me" = "my,mine,меня,мной,я,мне", "anybody" = "every,each,all,все,кажд", "dance" = "танц,пляши", "defend" = "guard,protect,secur,enforce,watch,защищ,защит,берег,хран,сторож", \
+"none" = "neutral,wasteland,settler,farm,нейтрал,пустош,поселен,дерев,ферм,бомж", "city" = "citiz,mayor,sherif,город,мер,мэр,шериф,шэриф", "raiders" = "bandit,criminal,raid,gang,psych,insane,maniac,sadist,рейд,хулиг,банд,пахан,псих,шиз,мани,садист,содом", "vault" = "bunker,убежищ,бункер", "bs" = "bro,steel,knight,paladin,elder,брат,стал,рыцар,паладин,старейшин", "enclave" = "usa,сша,анклав", "ahs" = "hubolog,adept,хаболог,адепт", "ncr" = "california,republic,нкр,калифорни,республик", "legion" = "caesar,легион,цезарь", "followers" = "follower,apocalypse,следовате,апокалипсис", "acolytes" = "acolyt,atom,ghoul,аколит,атом,гул", \
+"enemy" = "foe,bad,bully,evil,danger,threat,monster,asshole,fag,traitor,villain,dick,douche,prick,spy,agent,враг,чуж,плох,зло,опас,угр,пред,шпи,враж,сволоч,муд,пидор", \
+"friend" = "buddy,master,good,kind,ally,partner,друг,друз,добр,повел,хоз,хор,союз,пар", "pull" = "grab,bring,get,drag,fetch,take,haul,tow,deliver,rescue,save,help,апорт,тащи,неси,нест,хват,возьми,взя,заложи,спас,букс", \
+"doge" = "dog,pup,hound,mongrel,pooch,bowwow,псин,пёс,собак,кобел,щен,пса,шавк,волк", \
+"smeagol" = "gollum,hobbit,смегол,лысый,гол,гор,урод,хобит,пучеглаз", \
+"brutus" = "брут", \
+"democratie" = "демократия", \
+"stalin" = "сталин")
 
 
 proc/translit(text)

@@ -98,9 +98,9 @@
 
 /obj/structure/ladder/proc/show_fluff_message(up,mob/user)
 	if(up)
-		user.visible_message("[user] Р·Р°Р±РёСЂР°РµС‚СЃСЏ РїРѕ [src].","<span class='notice'>Р’С‹ РїРѕРґРЅСЏР»РёСЃСЊ РїРѕ [src].</span>")
+		user.visible_message("[user] забирается по [src].","<span class='notice'>Вы поднялись по [src].</span>")
 	else
-		user.visible_message("[user] СЃРїСѓСЃРєР°РµС‚СЃСЏ РїРѕ [src].","<span class='notice'>Р’С‹ СЃРїСѓСЃС‚РёР»РёСЃСЊ РїРѕ [src].</span>")
+		user.visible_message("[user] спускается по [src].","<span class='notice'>Вы спустились по [src].</span>")
 
 /obj/structure/ladder/proc/can_use(mob/user)
 	return 1
