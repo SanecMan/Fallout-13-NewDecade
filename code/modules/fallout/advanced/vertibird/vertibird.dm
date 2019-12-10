@@ -33,10 +33,10 @@
 /obj/vertibird/proc/toggleLock(var/mob/user)
 	if(locked)
 		locked = FALSE
-		to_chat(user, "Р’С‹ РѕС‚РєСЂС‹Р»Рё РІРёРЅС‚РѕРєСЂС‹Р».")
+		to_chat(user, "Вы открыли винтокрыл.")
 	else
 		locked = TRUE
-		to_chat(user, "Р’С‹ Р·Р°РєСЂС‹Р»Рё РІРёРЅС‚РѕРєСЂС‹Р».")
+		to_chat(user, "Вы закрыли винтокрыл.")
 
 /obj/vertibird/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/key/vertibird))
@@ -44,13 +44,13 @@
 
 /obj/vertibird/MouseDrop_T(obj/O, mob/user)
 	if(locked)
-		to_chat(usr, "Р—Р°РєСЂС‹С‚Рѕ.")
+		to_chat(usr, "Закрыто.")
 		return
 
 	moveIn(O)
 
 /obj/vertibird/proc/getIn(mob/U)
-	src.visible_message("[U] Р·Р°С…РѕРґРёС‚ РІ РІРёРЅС‚РѕРєСЂС‹Р».")
+	src.visible_message("[U] заходит в винтокрыл.")
 	U.forceMove(vertibirdEnterZone)
 
 /obj/vertibird/proc/moveIn(obj/O)

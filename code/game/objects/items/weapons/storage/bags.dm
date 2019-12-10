@@ -41,7 +41,7 @@
 	cant_hold = list(/obj/item/weapon/disk/nuclear)
 
 /obj/item/weapon/storage/bag/trash/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] РЅР°РґРµРІР°РµС‚ [src] РЅР° РіРѕР»РѕРІСѓ [user.p_their()]  Рё РЅР°С‡РёРЅР°РµС‚ РґСѓС€РёС‚СЊ. РЈР¶Р°СЃРЅРѕ!</span>")
+	user.visible_message("<span class='suicide'>[user] надевает [src] на голову [user.p_their()]  и начинает душить. Ужасно!</span>")
 	playsound(loc, 'sound/items/eatfood.ogg', 50, 1, -1)
 	return (TOXLOSS)
 

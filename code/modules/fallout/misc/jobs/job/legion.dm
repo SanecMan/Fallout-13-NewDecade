@@ -10,7 +10,7 @@
 	status = "legate"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Р¦РµР·Р°СЂСЋ"
+	supervisors = "Цезарю"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -76,7 +76,7 @@
 	status = "centurion"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Р›РµРіР°С‚Сѓ"
+	supervisors = "Легату"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE

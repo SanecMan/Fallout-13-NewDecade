@@ -52,11 +52,11 @@ obj/dugpit/New(lnk)
 		if(!istype(W, /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow))
 			for(var/mob/M in viewers(usr, null))
 				if(M == usr)
-					to_chat(usr, "<span class='notice'>Р’С‹ РїРѕР»РѕР¶РёР»Рё [W] РІ СЏРјСѓ.</span>")
+					to_chat(usr, "<span class='notice'>Вы положили [W] в яму.</span>")
 				else if(in_range(M, usr)) //If someone is standing close enough, they can tell what it is...
-					M.show_message("<span class='notice'>[usr] РєР»Р°РґС‘С‚ [W] РІ СЏРјСѓ.</span>", 1)
+					M.show_message("<span class='notice'>[usr] кладёт [W] в яму.</span>", 1)
 				else if(W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...
-					M.show_message("<span class='notice'>[usr] РєР»Р°РґС‘С‚ [W] РІ СЏРјСѓ.</span>", 1)
+					M.show_message("<span class='notice'>[usr] кладёт [W] в яму.</span>", 1)
 		pitcontents += W
 		W.forceMove(mypit)
 		storedindex = storedindex+1
@@ -65,7 +65,7 @@ obj/dugpit/New(lnk)
 	. = ..()
 	if (!. && dug)
 		if (storedindex==0)
-			to_chat(usr, "<span class='danger'>Р’ СЏРјРµ РЅРёС‡РµРіРѕ РЅРµС‚!</span>")
+			to_chat(usr, "<span class='danger'>В яме ничего нет!</span>")
 			return
 		else
 			var/obj/item/I = pitcontents[storedindex]
@@ -74,7 +74,7 @@ obj/dugpit/New(lnk)
 			pitcontents-=I
 
 /turf/open/indestructible/ground/desert/proc/finishBury(mob/user)
-	to_chat(user, "<span class='notice'>Р’С‹ Р·Р°РєРѕРїР°Р»Рё СЏРјСѓ.</span>")
+	to_chat(user, "<span class='notice'>Вы закопали яму.</span>")
 	dug = 0
 	//icon_plating = "[environment_type]"
 	icon_state = "wasteland[rand(1,31)]"
@@ -114,30 +114,30 @@ obj/dugpit/New(lnk)
 					break
 			playsound(src, 'sound/effects/shovel_dig.ogg', 50, 1)
 			if (gravebody!=null)
-				to_chat(user, "<span class='notice'>Р’С‹ РЅР°С‡Р°Р»Рё Р·Р°РєРёРґС‹РІР°С‚СЊ С‚РµР»Рѕ РІ СЏРјРµ Р·РµРјР»РµР№...</span>")
+				to_chat(user, "<span class='notice'>Вы начали закидывать тело в яме землей...</span>")
 				if (do_after(user, digging_speed*3, target=gravebody))
 					if(istype(src, /turf/open/indestructible/ground/desert))
 						finishBury(user)
 						finishBody()
 			else if (gravecoffin != null)
-				to_chat(user, "<span class='notice'>Р’С‹ РЅР°С‡Р°Р»Рё Р·Р°РєР°РїС‹РІР°С‚СЊ РіСЂРѕР±...</span>")
+				to_chat(user, "<span class='notice'>Вы начали закапывать гроб...</span>")
 				if (do_after(user, digging_speed*1.5, target=gravebody))
 					if(istype(src, /turf/open/indestructible/ground/desert))
 						finishBury(user)
 						finishCoffin()
 			else
-				to_chat(user, "<span class='notice'>Р’С‹ РЅР°С‡Р°Р»Рё Р·Р°РєРёРґС‹РІР°С‚СЊ РґС‹СЂСѓ Р·РµРјР»РµР№...</span>")
+				to_chat(user, "<span class='notice'>Вы начали закидывать дыру землей...</span>")
 				if(do_after(user, digging_speed, target = src))
 					if(istype(src, /turf/open/indestructible/ground/desert))
 						finishBury(user)
 
 
 		else
-			to_chat(user, "<span class='notice'>Р’С‹ РЅР°С‡Р°Р»Рё РєРѕРїР°С‚СЊ...</span>")
+			to_chat(user, "<span class='notice'>Вы начали копать...</span>")
 			playsound(src, 'sound/effects/shovel_dig.ogg', 50, 1) //FUCK YO RUSTLE I GOT'S THE DIGS SOUND HERE
 			if(do_after(user, digging_speed, target = src))
 				if(istype(src, /turf/open/indestructible/ground/desert))
-					to_chat(user, "<span class='notice'>Р’С‹ РІС‹РєРѕРїР°Р»Рё РґС‹СЂСѓ.</span>")
+					to_chat(user, "<span class='notice'>Вы выкопали дыру.</span>")
 					gets_dug(user)
 					new /obj/item/weapon/ore/glass(src)
 					//new /obj/item/weapon/ore/glass(src)
@@ -167,11 +167,11 @@ obj/dugpit/New(lnk)
 	slowdown = 0
 	if (gravebody!=null)
 		if (user!=null)
-			to_chat(user, "<span class='danger'>Р’С‹ РѕР±РЅР°СЂСѓР¶РёР»Рё С‚РµР»Рѕ РІ СЏРјРµ!</span>")
+			to_chat(user, "<span class='danger'>Вы обнаружили тело в яме!</span>")
 		gravebody.forceMove(mypit.loc)
 	if (gravecoffin!=null)
 		if (user!=null)
-			to_chat(user, "<span class='notice'>Р’С‹ РІС‹РєРѕРїР°Р»Рё РіСЂРѕР± РёР· СЏРјС‹.</span>")
+			to_chat(user, "<span class='notice'>Вы выкопали гроб из ямы.</span>")
 		gravecoffin.forceMove(mypit.loc)
 	gravebody = null
 	gravecoffin = null

@@ -242,7 +242,7 @@
 	price = 500
 
 
-//РїРѕСЂР° СЃРґРµР»Р°С‚СЊ Р¶РёР·РЅСЊ РѕСЂСѓР¶РµР№РЅРёРєРѕРІ СЃР»РѕР¶РЅРµРµ//
+//пора сделать жизнь оружейников сложнее//
 
 /obj/item/crafting/weapon_parts
 	icon = 'icons/fallout/objects/crafting.dmi'

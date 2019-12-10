@@ -61,8 +61,8 @@
 		icon_state += "-open"
 
 /obj/machinery/sleeper/container_resist(mob/living/user)
-	visible_message("<span class='notice'>[occupant] РІС‹РїР°РґР°РµС‚ РёР· [src]!</span>",
-		"<span class='notice'>Р’С‹ РІС‹Р±СЂР°Р»РёСЃСЊ РёР· [src]!</span>")
+	visible_message("<span class='notice'>[occupant] выпадает из [src]!</span>",
+		"<span class='notice'>Вы выбрались из [src]!</span>")
 	open_machine()
 
 /obj/machinery/sleeper/relaymove(mob/user)

@@ -34,7 +34,7 @@
 	var/obj/item/stack/caps/target/caps = new(amount)
 	caps.loc = loc
 
-	to_chat(usr, "Р’С‹ Р·Р°Р±СЂР°Р»Рё [amount] РєСЂС‹С€РµРє.")
+	to_chat(usr, "Вы забрали [amount] крышек.")
 	playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 
 /obj/structure/safe_caps/attackby(obj/item/I, mob/living/carbon/human/user, parameters)
@@ -53,51 +53,51 @@
 	. += "body {text-align: center; background-color: #212121;} body, .uiTitle, a {color: #8bc34a;} .header {color: #ffc107;} .percent {color: #e51c23;} a {background-color: #145d14;} a:hover {color: #212121; background-color: #8bc34a;}"
 	. += "</style>"
 
-	. += "<span class='header'>Р’ СЌС‚РѕРј РјРµРЅСЋ Р’С‹ РјРѕР¶РµС‚Рµ СЃРѕС…СЂР°РЅСЏС‚СЊ Р’Р°С€Рё РєСЂС‹С€РєРё РјРµР¶РґСѓ СЂР°СѓРЅРґР°РјРё.</span>"
-	. += "<span class='description'>Р’РІРѕРґСЏ СЃРІРѕРё РєСЂС‹С€РєРё РІ СЃРµР№С„, Р’С‹ РѕС‚РґР°РµС‚Рµ <span class='percent'>33%</span> РІ РєР°С‡РµСЃС‚РІРµ РєРѕРјРёСЃСЃРёРё.</span>"
-	. += "<span class='description'>Р§С‚РѕР±С‹ РїРѕР»РѕР¶РёС‚СЊ РєСЂС‹С€РєРё - РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РєР»РёРєРЅСѓС‚СЊ РёРјРё РЅР° СЃРµР№С„.</span>"
-	. += "<span class='content'>РќР° Р’Р°С€РµРј СЃС‡РµС‚Сѓ <span class='caps'>[capsGet()]</span> РєСЂС‹С€РµРє.</span>"
+	. += "<span class='header'>В этом меню Вы можете сохранять Ваши крышки между раундами.</span>"
+	. += "<span class='description'>Вводя свои крышки в сейф, Вы отдаете <span class='percent'>33%</span> в качестве комиссии.</span>"
+	. += "<span class='description'>Чтобы положить крышки - достаточно кликнуть ими на сейф.</span>"
+	. += "<span class='content'>На Вашем счету <span class='caps'>[capsGet()]</span> крышек.</span>"
 
 	var/amount = capsGet()
 
 	if(amount >= 10000)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=10000'>РЎРЅСЏС‚СЊ 10 000</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=10000'>Снять 10 000</a>"
 
 	if(amount >= 5000)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=5000'>РЎРЅСЏС‚СЊ 5000</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=5000'>Снять 5000</a>"
 
 	if(amount >= 3000)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>РЎРЅСЏС‚СЊ 3000</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>Снять 3000</a>"
 
 	if(amount >= 2000)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>РЎРЅСЏС‚СЊ 2000</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>Снять 2000</a>"
 
 	if(amount >= 1000)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>РЎРЅСЏС‚СЊ 1000</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>Снять 1000</a>"
 
 	if(amount >= 500)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=500'>РЎРЅСЏС‚СЊ 500</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=500'>Снять 500</a>"
 
 	if(amount >= 400)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>РЎРЅСЏС‚СЊ 400</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>Снять 400</a>"
 
 	if(amount >= 300)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>РЎРЅСЏС‚СЊ 300</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>Снять 300</a>"
 
 	if(amount >= 200)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>РЎРЅСЏС‚СЊ 200</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>Снять 200</a>"
 
 	if(amount >= 100)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>РЎРЅСЏС‚СЊ 100</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=1000'>Снять 100</a>"
 
 	if(amount >= 50)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=50'>РЎРЅСЏС‚СЊ 50</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=50'>Снять 50</a>"
 
 	if(amount >= 10)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=10'>РЎРЅСЏС‚СЊ 10</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=10'>Снять 10</a>"
 
 	if(amount > 0)
-		. += "<a class='button' href='byond://?src=\ref[src];withdraw=[amount]'>РЎРЅСЏС‚СЊ РІСЃРµ</a>"
+		. += "<a class='button' href='byond://?src=\ref[src];withdraw=[amount]'>Снять все</a>"
 
 	return .
 

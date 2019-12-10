@@ -3,7 +3,7 @@
 // -- Key --
 obj/item/weapon/key/vending
 	name = "Vending Machine Key"
-	desc = "РљР»СЋС‡ РѕС‚ С‚РѕСЂРіРѕРІРѕРіРѕ Р°РІС‚РѕРјР°С‚Р°. Р’С‹ РїРѕРЅРёРјР°РµС‚Рµ, С‡С‚Рѕ РјРѕР¶РµС‚Рµ СЃ РїРѕРјРѕС‰СЊСЋ СЂСѓС‡РєРё РЅР°РїРёСЃР°С‚СЊ РЅР° РєР»СЋС‡Рµ РєР°РєСѓСЋ РЅРёР±СѓРґСЊ РіР°РґРѕСЃС‚СЊ."
+	desc = "Ключ от торгового автомата. Вы понимаете, что можете с помощью ручки написать на ключе какую нибудь гадость."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
 	icon_state = "key-door"
 	var/id = 0
@@ -15,14 +15,14 @@ obj/item/weapon/key/vending/proc/set_name(newname)
 
 obj/item/weapon/key/vending/attackby(obj/item/weapon/P, mob/living/carbon/human/user, params)
 	if(istype(P, /obj/item/weapon/pen) || istype(P, /obj/item/toy/crayon))
-		var/newkeyname = input(usr, "РќР°РґРїРёСЃСЊ РЅР° РєР»СЋС‡Рµ", "РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ", name) as null|text
+		var/newkeyname = input(usr, "Надпись на ключе", "Новое название", name) as null|text
 		set_name(newkeyname)
-		to_chat(usr, "РќР° РєР»СЋС‡Рµ С‚РµРїРµСЂСЊ РЅР°РїРёСЃР°РЅРѕ - " + name)
+		to_chat(usr, "На ключе теперь написано - " + name)
 
 // -- Lock --
 obj/item/weapon/lock_part
 	name = "Vending Machine Lock"
-	desc = "Р’С‹РіР»СЏРґРёС‚ РєР°Рє Р·Р°РјРѕРє РґР»СЏ С‚РѕСЂРіРѕРІРѕРіРѕ Р°РІС‚РѕРјР°С‚Р°. Р•СЃР»Рё РµРіРѕ СЂР°СЃРєСЂСѓС‚РёС‚СЊ РѕС‚РІРµСЂС‚РєРѕР№, С‚Рѕ РјРѕР¶РЅРѕ РЅР°СЃС‚СЂРѕРёС‚СЊ РµРіРѕ РїРѕРґ РІР°С€ РєР»СЋС‡."
+	desc = "Выглядит как замок для торгового автомата. Если его раскрутить отверткой, то можно настроить его под ваш ключ."
 	icon = 'icons/WVM/lock_icon.dmi'
 	icon_state = "lock"
 

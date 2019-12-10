@@ -213,7 +213,7 @@ var/list/image/ghost_images_simple = list() //this is a list of all ghost images
 	var/r_val
 	var/b_val
 	var/g_val
-	var/color_format = length_char(input_color)
+	var/color_format = lentext(input_color)
 	if(color_format == 3)
 		r_val = hex2num(copytext(input_color, 1, 2))*16
 		g_val = hex2num(copytext(input_color, 2, 3))*16
@@ -593,7 +593,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/dead/observer/pointed(atom/A as mob|obj|turf in view())
 	if(!..())
 		return 0
-	usr.visible_message("<span class='deadsay'><b>[src]</b> СѓРєР°Р·С‹РІР°РµС‚ РЅР° [A].</span>")
+	usr.visible_message("<span class='deadsay'><b>[src]</b> указывает на [A].</span>")
 	return 1
 
 /mob/dead/observer/verb/view_manifest()

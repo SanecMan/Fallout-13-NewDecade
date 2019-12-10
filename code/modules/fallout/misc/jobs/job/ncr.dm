@@ -10,7 +10,7 @@
 	status = "ncr_general"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "С†РµРЅС‚СЂР°Р»СЊРЅРѕРјСѓ С€С‚Р°Р±Сѓ РќРљР "
+	supervisors = "центральному штабу НКР"
 	selection_color = "#9d9fec"
 	minimal_player_age = 36
 	whitelist_on = 1
@@ -77,7 +77,7 @@
 	status = "ncr_sergeant"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "РіРµРЅРµСЂР°Р»Сѓ"
+	supervisors = "генералу"
 	selection_color = "#9d9fec"
 	minimal_player_age = 31
 
@@ -141,7 +141,7 @@
 	status = "vranger"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "С†РµРЅС‚СЂР°Р»СЊРЅРѕРјСѓ С€С‚Р°Р±Сѓ РќРљР "
+	supervisors = "центральному штабу НКР"
 	selection_color = "#9d9fec"
 	minimal_player_age = 25
 
@@ -201,7 +201,7 @@
 	status = "trooper"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "РіРµРЅРµСЂР°Р»Сѓ"
+	supervisors = "генералу"
 	selection_color = "#9d9fec"
 	minimal_player_age = 16
 

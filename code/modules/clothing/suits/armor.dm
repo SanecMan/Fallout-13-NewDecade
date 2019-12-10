@@ -260,7 +260,7 @@
 		E.GiveTarget(owner) //so it starts running right away
 		E.Goto(owner, E.move_to_delay, E.minimum_distance)
 		owner.alpha = 0
-		owner.visible_message("<span class='danger'>[owner] СЂР°РЅРµРЅ СЃ [attack_text] РІ РіСЂСѓРґСЊ!</span>") //We pretend to be hit, since blocking it would stop the message otherwise
+		owner.visible_message("<span class='danger'>[owner] ранен с [attack_text] в грудь!</span>") //We pretend to be hit, since blocking it would stop the message otherwise
 		spawn(40)
 			owner.alpha = initial(owner.alpha)
 		reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration

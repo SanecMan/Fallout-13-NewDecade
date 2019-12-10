@@ -105,7 +105,7 @@
 
 /obj/structure/window/attack_tk(mob/user)
 	user.changeNext_move(CLICK_CD_MELEE)
-	user.visible_message("<span class='notice'>Р§С‚Рѕ-С‚Рѕ СЃС‚СѓС‡РёС‚ РІ [src].</span>")
+	user.visible_message("<span class='notice'>Что-то стучит в [src].</span>")
 	add_fingerprint(user)
 	playsound(loc, 'sound/effects/Glassknock.ogg', 50, 1)
 
@@ -118,7 +118,7 @@
 	if(!can_be_reached(user))
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
-	user.visible_message("[user] СЃС‚СѓС‡РёС‚ РІ РѕРєРЅРѕ.")
+	user.visible_message("[user] стучит в окно.")
 	add_fingerprint(user)
 	playsound(loc, 'sound/effects/Glassknock.ogg', 50, 1)
 

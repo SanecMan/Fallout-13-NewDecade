@@ -31,7 +31,7 @@
 
 	current += XP
 
-	to_chat(owner, "<font color='blue'>Р’С‹ РїРѕР»СѓС‡РёР»Рё [XP] РѕРїС‹С‚Р°! ([toNextLevel()] РѕСЃС‚Р°Р»РѕСЃСЊ РґРѕ СЃР»РµРґСѓСЋС‰РµРіРѕ СѓСЂРѕРІРЅСЏ)</font>")
+	to_chat(owner, "<font color='blue'>Вы получили [XP] опыта! ([toNextLevel()] осталось до следующего уровня)</font>")
 
 	if(toNextLevel() > 0)
 		playsound(owner, "sound/f13effects/xp_add.ogg", 50)
@@ -42,7 +42,7 @@
 /datum/experience/proc/promoteLevel()
 	level += 1
 
-	to_chat(owner, "<font color='blue'>Р’С‹ РїРѕР»СѓС‡РёР»Рё СѓСЂРѕРІРµРЅСЊ [level]!</font>")
+	to_chat(owner, "<font color='blue'>Вы получили уровень [level]!</font>")
 
 	playsound(owner, "sound/f13effects/xp_newLevel.ogg", 50)
 

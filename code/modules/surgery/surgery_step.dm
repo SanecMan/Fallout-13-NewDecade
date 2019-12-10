@@ -71,15 +71,15 @@
 
 
 /datum/surgery_step/proc/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	user.visible_message("[user] СЃРѕР±РёСЂР°РµС‚СЃСЏ РІС‹РїРѕР»РЅРёС‚СЊ РѕРїРµСЂР°С†РёСЋ РЅР° [target].", "<span class='notice'>Р’С‹ РЅР°С‡РёРЅР°РµС‚Рµ РѕРїРµСЂР°С†РёСЋ РЅР° [target]...</span>")
+	user.visible_message("[user] собирается выполнить операцию на [target].", "<span class='notice'>Вы начинаете операцию на [target]...</span>")
 
 
 /datum/surgery_step/proc/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	user.visible_message("[user] succeeds!", "<span class='notice'>Р—Р°РµР±РёСЃСЏ.</span>")
+	user.visible_message("[user] succeeds!", "<span class='notice'>Заебися.</span>")
 	return 1
 
 /datum/surgery_step/proc/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	user.visible_message("<span class='warning'>[user] screws up!</span>", "<span class='warning'>Р’С‹ РїСЂРѕРµР±Р°Р»РёСЃСЊ!</span>")
+	user.visible_message("<span class='warning'>[user] screws up!</span>", "<span class='warning'>Вы проебались!</span>")
 	return 0
 
 /datum/surgery_step/proc/tool_check(mob/user, obj/item/tool)

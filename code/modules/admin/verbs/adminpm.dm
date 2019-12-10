@@ -48,12 +48,12 @@
 		C = whom
 	if(!C)
 		if(holder)
-			to_chat(src, "<font color='red'>РћС€РёР±РєР°: Admin-PM: РРіСЂРѕРє РІС‹С€РµР».</font>")
+			to_chat(src, "<font color='red'>Ошибка: Admin-PM: Игрок вышел.</font>")
 		return
-	message_admins("[key_name_admin(src)] РЅР°С‡Р°Р» РѕС‚РІРµС‡Р°С‚СЊ РЅР° РІРѕРїСЂРѕСЃ РёРіСЂРѕРєР° [key_name(C, 0, 0)].")
-	var/msg = input(src,"Message:", "РџСЂРёРІР°С‚РЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РґР»СЏ [key_name(C, 0, 0)]") as text|null
+	message_admins("[key_name_admin(src)] начал отвечать на вопрос игрока [key_name(C, 0, 0)].")
+	var/msg = input(src,"Message:", "Приватное сообщение для [key_name(C, 0, 0)]") as text|null
 	if (!msg)
-		message_admins("[key_name_admin(src)] РѕС‚РјРµРЅРёР» СЃРІРѕР№ РѕС‚РІРµС‚ РґР»СЏ Р·Р°РїСЂРѕСЃР° [key_name(C, 0, 0)]")
+		message_admins("[key_name_admin(src)] отменил свой ответ для запроса [key_name(C, 0, 0)]")
 		return
 	cmd_admin_pm(whom, msg)
 
@@ -91,14 +91,14 @@
 	else
 		if(!C)
 			if(holder)
-				to_chat(src, "<font color='red'>РћС€РёР±РєР°: Admin-PM: РРіСЂРѕРє РІС‹С€РµР».</font>")
+				to_chat(src, "<font color='red'>Ошибка: Admin-PM: Игрок вышел.</font>")
 			else
 				adminhelp(msg)	//admin we are replying to left. adminhelp instead
 			return
 
 		//get message text, limit it's length.and clean/escape html
 		if(!msg)
-			msg = input(src,"Message:", "РџСЂРёРІР°С‚РЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РґР»СЏ [key_name(C, 0, 0)]") as text|null
+			msg = input(src,"Message:", "Приватное сообщение для [key_name(C, 0, 0)]") as text|null
 
 			if(!msg)
 				return
@@ -109,7 +109,7 @@
 
 			if(!C)
 				if(holder)
-					to_chat(src, "<font color='red'>РћС€РёР±РєР°: Admin-PM: РРіСЂРѕРє РІС‹С€РµР».</font>")
+					to_chat(src, "<font color='red'>Ошибка: Admin-PM: Игрок вышел.</font>")
 				else
 					adminhelp(msg)	//admin we are replying to has vanished, adminhelp instead
 				return
@@ -213,9 +213,9 @@
 	log_admin("IRC PM: [sender] -> [key_name(C)] : [msg]")
 	msg = emoji_parse(msg)
 
-	to_chat(C, "<font color='red' size='4'><b>-- РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° --</b></font>")
+	to_chat(C, "<font color='red' size='4'><b>-- Сообщение от администратора --</b></font>")
 	to_chat(C, "<font color='red'>Admin PM from-<b><a href='?priv_msg=[stealthkey]'>[adminname]</A></b>: [msg]</font>")
-	to_chat(C, "<font color='red'><i>РќР°Р¶РјРёС‚Рµ РЅР° РёРјСЏ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° С‡С‚РѕР±С‹ РѕС‚РІРµС‚РёС‚СЊ.</i></font>")
+	to_chat(C, "<font color='red'><i>Нажмите на имя администратора чтобы ответить.</i></font>")
 	window_flash(C)
 	//always play non-admin recipients the adminhelp sound
 	to_chat(C, 'sound/effects/adminhelp.ogg')

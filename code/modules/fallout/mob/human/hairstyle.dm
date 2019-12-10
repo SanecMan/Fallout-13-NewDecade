@@ -6,23 +6,23 @@
 	icon = 'icons/fallout/mobs/hairstyle.dmi'	  // default icon for all hairstyles
 
 /datum/sprite_accessory/hair/bald
-	name = "Р›С‹СЃС‹Р№" // try to capatilize the names please~
+	name = "Лысый" // try to capatilize the names please~
 	icon_state = "hair_bald" // you do not need to define _s sub-state, game automatically does this for you
 
 /datum/sprite_accessory/hair/balding
-	name = "Р›С‹СЃРµСЋС‰Р°СЏ РїСЂРёС‡РµСЃРєР°"
+	name = "Лысеющая прическа"
 	icon_state = "hair_balding"
 
 /datum/sprite_accessory/hair/reversemohawk
-	name = "РћР±СЂР°С‚РЅС‹Р№ РњРѕРіР°РІРє"
+	name = "Обратный Могавк"
 	icon_state = "hair_reversemohawk"
 
 /datum/sprite_accessory/hair/mohawk
-	name = "РњРѕРіР°РІРє"
+	name = "Могавк"
 	icon_state = "hair_mohawk"
 
 /datum/sprite_accessory/hair/skinhead
-	name = "РЎРєРёРЅС…СЌРґ"
+	name = "Скинхэд"
 	icon_state = "hair_skinhead"
 
 /datum/sprite_accessory/hair/buzz
@@ -30,15 +30,15 @@
 	icon_state = "hair_buzzcut"
 
 /datum/sprite_accessory/hair/punk
-	name = "РџР°РЅРє"
+	name = "Панк"
 	icon_state = "hair_punk"
 
 /datum/sprite_accessory/hair/crew
-	name = "РљСЂСЋРєР°С‚"
+	name = "Крюкат"
 	icon_state = "hair_crewcut"
 
 /datum/sprite_accessory/hair/sargeant
-	name = "Р¤Р»СЌС‚ РўРѕРї"
+	name = "Флэт Топ"
 	icon_state = "hair_sargeant"
 
 /datum/sprite_accessory/hair/fag
@@ -50,15 +50,15 @@
 	icon_state = "hair_cut"
 
 /datum/sprite_accessory/hair/short
-	name = "РљРѕСЂРѕС‚РєРёРµ РІРѕР»РѕСЃС‹"
+	name = "Короткие волосы"
 	icon_state = "hair_short"
 
 /datum/sprite_accessory/hair/shorthair2
-	name = "РљРѕСЂРѕС‚РєРёРµ РІРѕР»РѕСЃС‹ 2"
+	name = "Короткие волосы 2"
 	icon_state = "hair_short2"
 
 /datum/sprite_accessory/hair/shorthair3
-	name = "РљРѕСЂРѕС‚РєРёРµ РІРѕР»РѕСЃС‹ 3"
+	name = "Короткие волосы 3"
 	icon_state = "hair_short3"
 
 /datum/sprite_accessory/hair/shoulderlong
@@ -66,11 +66,11 @@
 	icon_state = "hair_shoulderlength"
 
 /datum/sprite_accessory/hair/long
-	name = "Р”Р»РёРЅРЅС‹Рµ РІРѕР»РѕСЃС‹"
+	name = "Длинные волосы"
 	icon_state = "hair_long"
 
 /datum/sprite_accessory/hair/longer
-	name = "Р‘РѕР»РµРµ РґР»РёРЅРЅС‹Рµ РІРѕР»РѕСЃС‹"
+	name = "Более длинные волосы"
 	icon_state = "hair_longer"
 
 /datum/sprite_accessory/hair/verylong
@@ -78,23 +78,23 @@
 	icon_state = "hair_verylong"
 
 /datum/sprite_accessory/hair/longest
-	name = "Р”Р»РёРЅРЅРµР№С€РёРµ РІРѕР»РѕСЃС‹"
+	name = "Длиннейшие волосы"
 	icon_state = "hair_longest"
 
 /datum/sprite_accessory/hair/undercut
-	name = "РђРЅРґРµСЂРєР°С‚"
+	name = "Андеркат"
 	icon_state = "hair_undercut"
 
 /datum/sprite_accessory/hair/over_eye
-	name = "Р­РјРѕ"
+	name = "Эмо"
 	icon_state = "hair_shortovereye"
 
 /datum/sprite_accessory/hair/long_over_eye
-	name = "Р”Р»РёРЅРЅС‹Р№ СЌРјРѕ"
+	name = "Длинный эмо"
 	icon_state = "hair_longovereye"
 
 /datum/sprite_accessory/hair/very_long_over_eye
-	name = "РћС‡РµРЅСЊ РґР»РёРЅРЅС‹Р№ СЌРјРѕ"
+	name = "Очень длинный эмо"
 	icon_state = "hair_verylongovereye"
 
 /datum/sprite_accessory/hair/longfringe
@@ -178,19 +178,19 @@
 	icon_state = "hair_parted"
 
 /datum/sprite_accessory/hair/pompadour
-	name = "РџРѕРјРїР°РґСѓСЂ"
+	name = "Помпадур"
 	icon_state = "hair_pompadour"
 
 /datum/sprite_accessory/hair/bigpompadour
-	name = "Р‘РѕР»СЊС€РѕР№ РџРѕРјРїР°РґСѓСЂ"
+	name = "Большой Помпадур"
 	icon_state = "hair_bigpompadour"
 
 /datum/sprite_accessory/hair/hitop
-	name = "РҐР°Р№РўРѕРї"
+	name = "ХайТоп"
 	icon_state = "hair_hitop"
 
 /datum/sprite_accessory/hair/quiff
-	name = "РљРІРёС„С„"
+	name = "Квифф"
 	icon_state = "hair_quiff"
 
 /datum/sprite_accessory/hair/bedhead
@@ -206,19 +206,19 @@
 	icon_state = "hair_bedheadv3"
 
 /datum/sprite_accessory/hair/messy
-	name = "РќРµРѕРїСЂСЏС‚РЅР°СЏ"
+	name = "Неопрятная"
 	icon_state = "hair_messy"
 
 /datum/sprite_accessory/hair/messylong
-	name = "Р”Р»РёРЅРЅР°СЏ РЅРµРѕРїСЂСЏС‚РЅР°СЏ"
+	name = "Длинная неопрятная"
 	icon_state = "hair_messylong"
 
 /datum/sprite_accessory/hair/beehive
-	name = "РЈР»РµР№"
+	name = "Улей"
 	icon_state = "hair_beehive"
 
 /datum/sprite_accessory/hair/beehive2
-	name = "РЈР»РµР№ 2"
+	name = "Улей 2"
 	icon_state = "hair_beehive2"
 
 /datum/sprite_accessory/hair/bobcurl
@@ -238,55 +238,55 @@
 	icon_state = "hair_bob3"
 
 /datum/sprite_accessory/hair/bowl
-	name = "Р‘РѕРІР»"
+	name = "Бовл"
 	icon_state = "hair_bowlcut"
 
 /datum/sprite_accessory/hair/combover
-	name = "РљРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅР°СЏ РїСЂРёС‡РµСЃРєР°"
+	name = "Комбинированная прическа"
 	icon_state = "hair_combover"
 
 /datum/sprite_accessory/hair/devillock
-	name = "Р—Р°РјРѕРє РґСЊСЏРІРѕР»Р°"
+	name = "Замок дьявола"
 	icon_state = "hair_devilock"
 
 /datum/sprite_accessory/hair/dreadlocks
-	name = "Р”СЂРµРґС‹"
+	name = "Дреды"
 	icon_state = "hair_dreads"
 
 /datum/sprite_accessory/hair/curls
-	name = "РљСѓРґСЂСЏС€РєРё"
+	name = "Кудряшки"
 	icon_state = "hair_curls"
 
 /datum/sprite_accessory/hair/afro
-	name = "РђС„СЂРѕ"
+	name = "Афро"
 	icon_state = "hair_afro"
 
 /datum/sprite_accessory/hair/afro2
-	name = "РђС„СЂРѕ 2"
+	name = "Афро 2"
 	icon_state = "hair_afro2"
 
 /datum/sprite_accessory/hair/afro_large
-	name = "Р‘РѕР»СЊС€РѕР№ РђС„СЂРѕ"
+	name = "Большой Афро"
 	icon_state = "hair_bigafro"
 
 /datum/sprite_accessory/hair/emo
-	name = "Р­РјРѕ 2"
+	name = "Эмо 2"
 	icon_state = "hair_emo"
 
 /datum/sprite_accessory/hair/emoright
-	name = "Р­РјРѕ СЃ Р·Р°С‡РµСЃРѕРј РІРїСЂР°РІРѕ"
+	name = "Эмо с зачесом вправо"
 	icon_state = "hair_emoright"
 
 /datum/sprite_accessory/hair/longemo
-	name = "Р”Р»РёРЅРЅС‹Р№ СЌРјРѕ 2"
+	name = "Длинный эмо 2"
 	icon_state = "hair_emolong"
 
 /datum/sprite_accessory/hair/feather
-	name = "РџС‘СЂС‹С€РєРѕ"
+	name = "Пёрышко"
 	icon_state = "hair_feather"
 
 /datum/sprite_accessory/hair/jensen
-	name = "РџСЂРёС‡РµСЃРєР° Р”Р¶РµРЅСЃРѕРЅР°"
+	name = "Прическа Дженсона"
 	icon_state = "hair_jensen"
 
 /datum/sprite_accessory/hair/gelled
@@ -294,19 +294,19 @@
 	icon_state = "hair_gelled"
 
 /datum/sprite_accessory/hair/spiky
-	name = "РСЂРѕРєРµР·"
+	name = "Ирокез"
 	icon_state = "hair_spikey"
 
 /datum/sprite_accessory/hair/spiky2
-	name = "РСЂРѕРєРµР· 2"
+	name = "Ирокез 2"
 	icon_state = "hair_spiky"
 
 /datum/sprite_accessory/hair/spiky3
-	name = "РСЂРѕРєРµР· 3"
+	name = "Ирокез 3"
 	icon_state = "hair_spiky2"
 
 /datum/sprite_accessory/hair/hedgehog
-	name = "РџСЂРёС‡РµСЃРєР° С‘Р¶РёРє"
+	name = "Прическа ёжик"
 	icon_state = "hair_hedgehog"
 
 /datum/sprite_accessory/hair/protagonist
@@ -382,11 +382,11 @@
 	icon_state = "hair_floorlengthbraid"
 
 /datum/sprite_accessory/hair/ombre
-	name = "РћРјР±СЂСЌ"
+	name = "Омбрэ"
 	icon_state = "hair_ombre"
 
 /datum/sprite_accessory/hair/updo
-	name = "РђРЅРіРѕ"
+	name = "Анго"
 	icon_state = "hair_updo"
 
 /datum/sprite_accessory/hair/longbangs
@@ -434,7 +434,7 @@
 	icon_state = "hair_business4"
 
 /datum/sprite_accessory/hair/pixie
-	name = "РџРёРєСЃРё"
+	name = "Пикси"
 	icon_state = "hair_pixie"
 
 /datum/sprite_accessory/hair/megaeyebrows
@@ -454,31 +454,31 @@
 	icon_state = "hair_longsidepart"
 
 /datum/sprite_accessory/hair/drillhair
-	name = "Р”СЂРёР»Р» РҐСЌР№СЂ"
+	name = "Дрилл Хэйр"
 	icon_state = "hair_drillhair"
 
 /datum/sprite_accessory/hair/judge
-	name = "Р”Р¶Р°РґР¶"
+	name = "Джадж"
 	icon_state = "hair_judge"
 
 /datum/sprite_accessory/hair/mia
-	name = "РњРёСЏ"
+	name = "Мия"
 	icon_state = "hair_mia"
 
 /datum/sprite_accessory/hair/elize
-	name = "Р­Р»Р°Р№Р·Р°"
+	name = "Элайза"
 	icon_state = "hair_elize"
 
 /datum/sprite_accessory/hair/aradia
-	name = "РђСЂР°РґРёСЏ"
+	name = "Арадия"
 	icon_state = "hair_aradia"
 
 /datum/sprite_accessory/hair/dave
-	name = "Р”РµР№РІ"
+	name = "Дейв"
 	icon_state = "hair_dave"
 
 /datum/sprite_accessory/hair/dirk
-	name = "Р”РёСЂРє"
+	name = "Дирк"
 	icon_state = "hair_dirk"
 
 /datum/sprite_accessory/hair/equius
@@ -490,39 +490,39 @@
 	icon_state = "hair_feferi"
 
 /datum/sprite_accessory/hair/gamzee
-	name = "Р“Р°РјР·Рё"
+	name = "Гамзи"
 	icon_state = "hair_gamzee"
 
 /datum/sprite_accessory/hair/jade
-	name = "Р”Р¶РµР№Рґ"
+	name = "Джейд"
 	icon_state = "hair_jade"
 
 /datum/sprite_accessory/hair/kanaya
-	name = "РљР°РЅР°СЏ"
+	name = "Каная"
 	icon_state = "hair_kanaya"
 
 /datum/sprite_accessory/hair/nepeta
-	name = "РќРµРїРµС‚Р°"
+	name = "Непета"
 	icon_state = "hair_nepeta"
 
 /datum/sprite_accessory/hair/rosa
-	name = "Р РѕР·Р°"
+	name = "Роза"
 	icon_state = "hair_rosa"
 
 /datum/sprite_accessory/hair/rose
-	name = "Р РѕР·РµС‚С‚Р°"
+	name = "Розетта"
 	icon_state = "hair_rose"
 
 /datum/sprite_accessory/hair/roxy
-	name = "Р РѕРєСЃРё"
+	name = "Рокси"
 	icon_state = "hair_roxy"
 
 /datum/sprite_accessory/hair/terezi
-	name = "РўРµСЂРµР·Рё"
+	name = "Терези"
 	icon_state = "hair_terezi"
 
 /datum/sprite_accessory/hair/vriska
-	name = "Р’СЂРёСЃРєР°"
+	name = "Вриска"
 	icon_state = "hair_vriska"
 
 // Facial Hair Definitions
@@ -532,12 +532,12 @@
 	gender = MALE // barf (unless you're a dorf, dorfs dig chix w/ beards :P)
 
 /datum/sprite_accessory/facial_hair/shaved
-	name = "РЎР±СЂРёС‚Рѕ"
+	name = "Сбрито"
 	icon_state = null
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/chaplin
-	name = "РЈСЃС‹ РџСЂРѕР±РѕСЂ"
+	name = "Усы Пробор"
 	icon_state = "facial_chaplin"
 
 /datum/sprite_accessory/facial_hair/selleck
@@ -549,55 +549,55 @@
 	icon_state = "facial_hogan" //-Neek
 
 /datum/sprite_accessory/facial_hair/fu
-	name = "Р¤Сѓ РњР°РЅС‡Сѓ"
+	name = "Фу Манчу"
 	icon_state = "facial_fumanchu"
 
 /datum/sprite_accessory/facial_hair/kungfu
-	name = "РљСѓРЅРі-Р¤Сѓ РњР°СЃС‚РµСЂ"
+	name = "Кунг-Фу Мастер"
 	icon_state = "facial_kungfu"
 
 /datum/sprite_accessory/facial_hair/watson
-	name = "РЈСЃС‹ Р’Р°С‚СЃРѕРЅР°"
+	name = "Усы Ватсона"
 	icon_state = "facial_watson"
 
 /datum/sprite_accessory/facial_hair/britstache
-	name = "Р‘СЂРёС‚Р°РЅСЃРєРёРµ РЈСЃС‹"
+	name = "Британские Усы"
 	icon_state = "facial_britstache"
 
 /datum/sprite_accessory/facial_hair/vandyke
-	name = "РЈСЃС‹ Р’Р°РЅ Р”СЋРєР°"
+	name = "Усы Ван Дюка"
 	icon_state = "facial_vandyke"
 
 /datum/sprite_accessory/facial_hair/elvis
-	name = "Р‘Р°РєРё Р­Р»РІРёСЃР°"
+	name = "Баки Элвиса"
 	icon_state = "facial_elvis"
 
 /datum/sprite_accessory/facial_hair/unshaven
-	name = "Р©РµС‚РёРЅР°"
+	name = "Щетина"
 	icon_state = "facial_unshaven"
 
 /datum/sprite_accessory/facial_hair/chinstrap
-	name = "Р§РёРЅСЃС‚СЂР°Рї"
+	name = "Чинстрап"
 	icon_state = "facial_chin"
 
 /datum/sprite_accessory/facial_hair/neckbeard
-	name = "РќРµРєР±РµСЂРґ"
+	name = "Некберд"
 	icon_state = "facial_neckbeard"
 
 /datum/sprite_accessory/facial_hair/hip
-	name = "Р‘РѕСЂРѕРґР° С…РёРїСЃС‚РµСЂР°"
+	name = "Борода хипстера"
 	icon_state = "facial_hip"
 
 /datum/sprite_accessory/facial_hair/jensen
-	name = "Р‘РѕСЂРѕРґР° Рђ.Р”Р¶РµРЅСЃРµРЅР°"
+	name = "Борода А.Дженсена"
 	icon_state = "facial_jensen"
 
 /datum/sprite_accessory/facial_hair/gt
-	name = "РљРѕР·СЊСЏ Р±РѕСЂРѕРґРєР°"
+	name = "Козья бородка"
 	icon_state = "facial_gt"
 
 /datum/sprite_accessory/facial_hair/abe
-	name = "Р‘РѕСЂРѕРґР° РђРІСЂР°Р°РјР° Р›РёРЅРєРѕР»СЊРЅР°"
+	name = "Борода Авраама Линкольна"
 	icon_state = "facial_abe"
 
 /datum/sprite_accessory/facial_hair/fiveoclock
@@ -605,25 +605,25 @@
 	icon_state = "facial_fiveoclock"
 
 /datum/sprite_accessory/facial_hair/fullbeard
-	name = "РџРѕР»РЅР°СЏ Р±РѕСЂРѕРґР°"
+	name = "Полная борода"
 	icon_state = "facial_fullbeard"
 
 /datum/sprite_accessory/facial_hair/longbeard
-	name = "Р”Р»РёРЅРЅР°СЏ Р±РѕСЂРѕРґР°"
+	name = "Длинная борода"
 	icon_state = "facial_longbeard"
 
 /datum/sprite_accessory/facial_hair/vlongbeard
-	name = "РћС‡РµРЅСЊ РґР»РёРЅРЅР°СЏ Р±РѕСЂРѕРґР°"
+	name = "Очень длинная борода"
 	icon_state = "facial_wise"
 
 /datum/sprite_accessory/facial_hair/moonshiner
-	name = "Р‘РѕСЂРѕРґР° РЎР°РјРѕРіРѕРЅС‰РёРєР°"
+	name = "Борода Самогонщика"
 	icon_state = "facial_moonshiner"
 
 /datum/sprite_accessory/facial_hair/dwarf
-	name = "Р‘РѕСЂРѕРґР° Р”РІРѕСЂС„Р°"
+	name = "Борода Дворфа"
 	icon_state = "facial_dwarf"
 
 /datum/sprite_accessory/facial_hair/tribeard
-	name = "РўСЂРѕР№РЅРѕР±РѕСЂРѕРґРєР°"
+	name = "Тройнобородка"
 	icon_state = "facial_tribeard"

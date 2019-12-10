@@ -9,7 +9,7 @@
 	XP = 20
 
 /datum/crafting_recipe/stimpak
-	name = "Ğ¡Ñ‚Ğ¸Ğ¼ÑƒĞ»ÑÑ‚Ğ¾Ñ€"
+	name = "Ñòèìóëÿòîğ"
 	result = /obj/item/weapon/reagent_containers/f13stimpack
 	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/glow = 2,
 				/obj/item/weapon/reagent_containers/food/snacks/grown/shroom = 1,
@@ -35,7 +35,7 @@
 */
 
 /datum/crafting_recipe/radaway
-	name = "ĞĞ½Ñ‚Ğ¸Ñ€Ğ°Ğ´Ğ¸Ğ½"
+	name = "Àíòèğàäèí"
 	result = /obj/item/weapon/reagent_containers/pill/patch/radaway
 	reqs = list(/obj/item/crafting/abraxo = 2,
 				/datum/reagent/water = 10,
@@ -47,7 +47,7 @@
 
 
 /datum/crafting_recipe/turbo
-	name = "Ğ¢ÑƒÑ€Ğ±Ğ¾"
+	name = "Òóğáî"
 	result = /obj/item/weapon/reagent_containers/pill/patch/turbo
 	reqs = list(/obj/item/weapon/reagent_containers/pill/patch/jet = 1,
 				/obj/item/crafting/duct_tape = 1,
@@ -61,7 +61,7 @@
 	XP = 50
 
 /datum/crafting_recipe/fev
-	name = "Ğ’Ğ Ğ­"
+	name = "ÂĞİ"
 	result = /obj/item/stack/medical/fev
 	reqs = list(/obj/item/weapon/reagent_containers/blood/empty = 1,
 				/datum/reagent/water/fev = 10)

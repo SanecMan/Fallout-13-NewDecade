@@ -82,7 +82,7 @@ var/next_mob_id = 0
 	// voice muffling
 	if(stat == UNCONSCIOUS)
 		if(type & 2) //audio
-			to_chat(src, "<I>... Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ СЂР°Р·РѕР±СЂР°С‚СЊ СЃР»РѕРІ ...</I>")
+			to_chat(src, "<I>... Вы не можете разобрать слов ...</I>")
 	else
 		to_chat(src, msg)
 

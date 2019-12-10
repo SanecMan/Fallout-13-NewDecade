@@ -24,7 +24,7 @@
 /*  CITY */
 /obj/machinery/bounty_machine/faction/city
 	name = "City CentrComm Terminal"
-	desc = "Р­С‚РѕС‚ С‚РµСЂРјРёРЅР°Р» РёСЃРїРѕР»СЊР·СѓРµС‚ РјСЌСЂ, С‡С‚Рѕ Р±С‹ РїРѕРґРґРµСЂР¶РёРІР°С‚СЊ СЃРІСЏР·СЊ СЃ РІРЅРµС€РЅРёРј РјРёСЂРѕРј."
+	desc = "Этот терминал использует мэр, что бы поддерживать связь с внешним миром."
 	icon_state = "terminal"
 	faction_id = "city"
 	quest_type = /datum/bounty_quest/faction/city
