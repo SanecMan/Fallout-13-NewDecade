@@ -3,7 +3,7 @@
 
 /obj/item/weaponcrafting/reciever
 	name = "modular receiver"
-	desc = "A prototype modular receiver and trigger assembly for a firearm."
+	desc = "Прототип модульного спускового механизма для всякого оружия."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "reciever"
 
@@ -112,7 +112,7 @@
 
 /obj/item/crafting/kettle
 	name = "kettle"
-	desc = "A kettle for tea"
+	desc = "Чайник для чая"
 	icon_state = "kettle"
 
 /obj/item/crafting/toaster
@@ -122,12 +122,12 @@
 
 /obj/item/crafting/vacuum_cleaner
 	name = "vacuum cleaner"
-	desc = "A Vacuum cleaner"
+	desc = "Вакуумный пылесос"
 	icon_state = "vacuum_cleaner"
 
 /obj/item/crafting/sensor_module
 	name = "sensor module"
-	desc = "A Sensor module"
+	desc = "Сенсорный модуль"
 	icon_state = "sensor_module"
 
 /obj/item/crafting/cofee_pot
@@ -137,7 +137,7 @@
 
 /obj/item/crafting/cookpot
 	name = "Cookpot"
-	desc = "Cookpot."
+	desc = "Кастрюлька."
 	icon_state = "cookpot"
 
 /obj/item/crafting/Baseball_ball
@@ -222,7 +222,7 @@
 
 /obj/item/crafting/reloader_set
 	name = "Reloader cartridges"
-	desc = "Materials for reloader device."
+	desc = "Материалы для переснарядки гильз."
 	icon_state = "reloader_set"
 //	var cartridges = 100
 /*
@@ -237,7 +237,7 @@
 
 /obj/item/crafting/weapon_repair_kit
 	name = "Weapon repair kit"
-	desc = "It can be used to repair weapons."
+	desc = "С его помощью можно чинить оружие."
 	icon_state = "weapon_repair_set"
 	price = 500
 
@@ -250,7 +250,7 @@
 
 /obj/item/crafting/weapon_parts/ballistic
 	name = "Ballistic Weapon Parts"
-	desc = "You need this if you want craft ballistic weapon."
+	desc = "Вам нужна эта штука, чтобы делать оружие."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "ballistic_weapon_parts_1"
 /*
@@ -260,7 +260,7 @@
 */
 /obj/item/crafting/weapon_parts/energy
 	name = "Energy Weapon Parts"
-	desc = "You need this if you want craft energy weapon."
+	desc = "Вам нужна эта штука, чтобы делать энергооружие."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "e_weapon_parts_1"
 /*
@@ -270,7 +270,7 @@
 */
 /obj/item/crafting/weapon_parts/plasma
 	name = "Plasma Weapon Parts"
-	desc = "You need this if you want craft plasma weapon."
+	desc = "Вам нужна эта штука, чтобы делать плазменное оружие."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "p_weapon_parts_1"
 /*

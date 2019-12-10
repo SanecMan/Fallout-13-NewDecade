@@ -6,22 +6,22 @@
 
 /obj/item/trash/f13/bubblegum
 	name = "Bubblegum wrap"
-	desc = "A piece of wrapping paper from a Big Pops - pre-War branded bubblegum."
+	desc = "Пустая упаковка из под Big Pops - довоенной брендовой жвачки."
 	icon_state = "bubblegum"
 
 /obj/item/trash/f13/bubblegum_large
 	name = "big Bubblegum wrap"
-	desc = "A piece of wrapping paper from an \"Extra\" Big Pops - pre-War branded bubblegum."
+	desc = "Пустая упаковка из под \"Extra\" Big Pops - довоенной брендовой жвачки."
 	icon_state = "bubblegum_large"
 
 /obj/item/trash/f13/cram
 	name = "\proper empty Cram packaging"
-	desc = "An empty package of Cram - pre-War junk food."
+	desc = "Пустая упаковка из под Cram - довоенной бич-еды."
 	icon_state = "cram"
 
 /obj/item/trash/f13/cram_large
 	name = "\proper big empty Cram packaging"
-	desc = "A large empty package of Cram - pre-War junk food."
+	desc = "Пустая упаковка из под Cram - довоенной бич-еды. Эта большая."
 	icon_state = "cram_large"
 
 /obj/item/trash/f13/yumyum
@@ -31,7 +31,7 @@
 
 /obj/item/trash/f13/fancylads
 	name = "\proper empty Fancy Lads package"
-	desc = "An empty package of Fancy Lads - pre-War sweets."
+	desc = "Пустая упаковка из под Fancy Lands - довоенной вкусняшки."
 	icon_state = "fancylads"
 
 /obj/item/trash/f13/sugarbombs
@@ -41,7 +41,7 @@
 
 /obj/item/trash/f13/crisps
 	name = "\proper empty box of Crisps"
-	desc = "An empty package of Potato Crisps - pre-War junk food."
+	desc = "Пустая упаковка из под Картофельных чипсов - довоенной бич-еды."
 	icon_state = "crisps"
 
 /obj/item/trash/f13/steak
@@ -101,12 +101,12 @@
 
 /obj/item/trash/f13/rotten
 	name = "rotten food"
-	desc = "A plate of smelly rotten food. Yuck!"
+	desc = "Тарелка ужасно пахнущей еды. Оно похоже сгнило!"
 	icon_state = "rotten"
 
 /obj/item/trash/f13/tin
 	name = "tin can"
-	desc = "A rusty, empty tin can with no label."
+	desc = "Ржавая, пустая консервная банка."
 	icon_state = "tin"
 
 /obj/item/trash/f13/tin_large

@@ -6,7 +6,7 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 
 /obj/item/stack/rods
 	name = "metal rod"
-	desc = "Some rods. Can be used for building, or something."
+	desc = "Немного арматуры. Можно использовать для строительства чего-либо."
 	singular_name = "metal rod"
 	icon_state = "rods"
 	item_state = "rods"
@@ -18,7 +18,7 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 	throw_range = 7
 	materials = list(MAT_METAL=1000)
 	max_amount = 50
-	attack_verb = list("hit", "bludgeoned", "whacked")
+	attack_verb = list("бьет", "бьет как дубинкой", "изнуренно бьет")
 	hitsound = 'sound/weapons/grenadelaunch.ogg'
 
 /obj/item/stack/rods/New(var/loc, var/amount=null)
@@ -39,14 +39,14 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 		var/obj/item/weapon/weldingtool/WT = W
 
 		if(get_amount() < 2)
-			to_chat(user, "<span class='warning'>You need at least two rods to do this!</span>")
+			to_chat(user, "<span class='warning'>Вам необходимо две арматуры чтобы сделать это!</span>")
 			return
 
 		if(WT.remove_fuel(0,user))
 			var/obj/item/stack/sheet/metal/new_item = new(usr.loc)
-			user.visible_message("[user.name] shaped [src] into metal with the welding tool.", \
-						 "<span class='notice'>You shape [src] into metal with the welding tool.</span>", \
-						 "<span class='italics'>You hear welding.</span>")
+			user.visible_message("[user.name] сварил лист металла из [src] с помощью сварочного аппарата.", \
+						 "<span class='notice'>Вы сварили [src] в лист метала с помощью сварочного аппарата.</span>", \
+						 "<span class='italics'>Вы слышите звук сварки.</span>")
 			var/obj/item/stack/rods/R = src
 			src = null
 			var/replace = (user.get_inactive_held_item()==R)
@@ -57,9 +57,9 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 	else if(istype(W,/obj/item/weapon/reagent_containers/food/snacks))
 		var/obj/item/weapon/reagent_containers/food/snacks/S = W
 		if(amount != 1)
-			to_chat(user, "<span class='warning'>You must use a single rod!</span>")
+			to_chat(user, "<span class='warning'>Вы должны использовать лишь одну арматуру!</span>")
 		else if(S.w_class > WEIGHT_CLASS_SMALL)
-			to_chat(user, "<span class='warning'>The ingredient is too big for [src]!</span>")
+			to_chat(user, "<span class='warning'>Ингридиент слишком большой для [src]!</span>")
 		else
 			var/obj/item/weapon/reagent_containers/food/snacks/customizable/A = new/obj/item/weapon/reagent_containers/food/snacks/customizable/kebab(get_turf(src))
 			A.initialize_custom_food(src, S, user)

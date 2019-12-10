@@ -647,8 +647,8 @@
 
 	if(health >= 0)
 		if(src == M)
-			visible_message("[src] examines [p_them()]self.", \
-				"<span class='notice'>You check yourself for injuries.</span>")
+			visible_message("[src] осматривает [p_them()]себя.", \
+				"<span class='notice'>Вы осматриваете себя на наличие ран.</span>")
 
 			var/list/missing = list("head", "chest", "l_arm", "r_arm", "l_leg", "r_leg")
 			for(var/X in bodyparts)
@@ -683,19 +683,19 @@
 				to_chat(src, "\t [status == "OK" ? "\blue" : "\red"] Your [LB.name] is [status].")
 
 				for(var/obj/item/I in LB.embedded_objects)
-					to_chat(src, "\t <a href='byond://?src=\ref[src];embedded_object=\ref[I];embedded_limb=\ref[LB]'>\red There is \a [I] embedded in your [LB.name]!</a>")
+					to_chat(src, "\t <a href='byond://?src=\ref[src];embedded_object=\ref[I];embedded_limb=\ref[LB]'>\red Здесь [I] застрявшее в [LB.name]!</a>")
 
 
 			for(var/t in missing)
-				to_chat(src, "<span class='boldannounce'>Your [parse_zone(t)] is missing!</span>")
+				to_chat(src, "<span class='boldannounce'>Ваша [parse_zone(t)] отсутствует!</span>")
 
 			if(bleed_rate)
-				to_chat(src, "<span class='danger'>You are bleeding!</span>")
+				to_chat(src, "<span class='danger'>У вас идёт кровь!</span>")
 			if(staminaloss)
 				if(staminaloss > 30)
-					to_chat(src, "<span class='info'>You're completely exhausted.</span>")
+					to_chat(src, "<span class='info'>Вы полностью вымотаны.</span>")
 				else
-					to_chat(src, "<span class='info'>You feel fatigued.</span>")
+					to_chat(src, "<span class='info'>Вы чувствуете усталость.</span>")
 		else
 			if(wear_suit)
 				wear_suit.add_fingerprint(M)

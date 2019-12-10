@@ -1,6 +1,6 @@
 /obj/item/stack/spacecash
 	name = "Dollar"
-	desc = "It's worth 1 credit."
+	desc = "Равноценно 1 крышке."
 	singular_name = "bill"
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "spacecash"
@@ -15,35 +15,35 @@
 
 /obj/item/stack/spacecash/c10
 	icon_state = "spacecash10"
-	desc = "It's worth 10 credits."
+	desc = "Равноценно 10 крышкам."
 	value = 10
 
 /obj/item/stack/spacecash/c20
 	icon_state = "spacecash20"
-	desc = "It's worth 20 credits."
+	desc = "Равноценно 20 крышкам."
 	value = 20
 
 /obj/item/stack/spacecash/c50
 	icon_state = "spacecash50"
-	desc = "It's worth 50 credits."
+	desc = "Равноценно 50 крышкам."
 	value = 50
 
 /obj/item/stack/spacecash/c100
 	icon_state = "spacecash100"
-	desc = "It's worth 100 credits."
+	desc = "Равноценно 100 крышкам."
 	value = 100
 
 /obj/item/stack/spacecash/c200
 	icon_state = "spacecash200"
-	desc = "It's worth 200 credits."
+	desc = "Равноценно 200 крышкам."
 	value = 200
 
 /obj/item/stack/spacecash/c500
 	icon_state = "spacecash500"
-	desc = "It's worth 500 credits."
+	desc = "Равноценно 500 крышкам."
 	value = 500
 
 /obj/item/stack/spacecash/c1000
 	icon_state = "spacecash1000"
-	desc = "It's worth 1000 credits."
+	desc = "Равноценно 1000 крышкам."
 	value = 1000

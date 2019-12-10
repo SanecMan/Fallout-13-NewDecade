@@ -7,7 +7,7 @@
 	var/t_has = p_have()
 	var/t_is = p_are()
 
-	var/msg = "<span class='info'>*---------*\nThis is <EM>[src.name]</EM>!\n"
+	var/msg = "<span class='info'>*---------*\nЁто <EM>[src.name]</EM>!\n"
 
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
@@ -25,14 +25,14 @@
 		if(w_uniform.blood_DNA)
 			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(w_uniform)] [w_uniform.gender==PLURAL?"some":"a"] покрытую кровью [w_uniform.name][tie_msg]!</span>\n"
 		else
-			msg += "[t_He] [t_is] носит [bicon(w_uniform)] \a [w_uniform][tie_msg].\n"
+			msg += "[t_He] [t_is] носит [bicon(w_uniform)] [w_uniform][tie_msg].\n"
 
 	//head
 	if(head)
 		if(head.blood_DNA)
 			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(head)] [head.gender==PLURAL?"some":"a"] покрытую кровью [head.name] на своей голове!</span>\n"
 		else
-			msg += "[t_He] [t_is] носит [bicon(head)] \a [head] на своей голове.\n"
+			msg += "[t_He] [t_is] носит [bicon(head)] [head] на своей голове.\n"
 
 	//suit/armor
 	if(wear_suit)
@@ -46,14 +46,14 @@
 			if(s_store.blood_DNA)
 				msg += "<span class='warning'>[t_He] [t_is] тащит [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] покрытый кровью [s_store.name] на своЄм [wear_suit.name]!</span>\n"
 			else
-				msg += "[t_He] [t_is] тащит [bicon(s_store)] \a [s_store] а своЄм [wear_suit.name].\n"
+				msg += "[t_He] [t_is] тащит [bicon(s_store)] [s_store] а своЄм [wear_suit.name].\n"
 
 	//back
 	if(back)
 		if(back.blood_DNA)
 			msg += "<span class='warning'>[t_He] [t_has] [bicon(back)] [back.gender==PLURAL?"some":"a"] покрытый кровью [back] на своей спине.</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(back)] \a [back] on [t_his] back.\n"
+			msg += "[t_He] [t_has] [bicon(back)] [back] на [t_his] спине.\n"
 
 	//Hands
 	for(var/obj/item/I in held_items)
@@ -63,20 +63,20 @@
 				if(W.wielded)
 					wielded = 1
 			if(I.blood_DNA)
-				msg += "<span class='warning'>[t_He] [t_is] держит [bicon(I)] [I.gender==PLURAL?"some":"a"] покрытый кровью [I.name] в свои [wielded ? "hands" : get_held_index_name(get_held_index_of_item(I))]!</span>\n"
+				msg += "<span class='warning'>[t_He] [t_is] держит [bicon(I)] [I.gender==PLURAL?"some":"a"] покрытый кровью [I.name] в [t_his] [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))]!</span>\n"
 			else
-				msg += "[t_He] [t_is] holding [bicon(I)] \a [I] in [t_his] [wielded ? "hands" : get_held_index_name(get_held_index_of_item(I))].\n"
+				msg += "[t_He] [t_is] держит [bicon(I)] [I] в [t_his] [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))].\n"
 
 	//gloves
 	if(gloves && !(slot_gloves in obscured))
 		if(gloves.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(gloves)] [gloves.gender==PLURAL?"some":"a"] blood-stained [gloves.name] на своих руках!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(gloves)] [gloves.gender==PLURAL?"some":"a"] покрытые кровью [gloves.name] на своих руках!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(gloves)] \a [gloves] on [t_his] hands.\n"
+			msg += "[t_He] [t_has] [bicon(gloves)]  [gloves] на [t_his] руках.\n"
 	else if(blood_DNA)
 		var/hand_number = get_num_arms()
 		if(hand_number)
-			msg += "<span class='warning'>[t_He] [t_has] [hand_number > 1 ? "" : "a"] blood-stained hand[hand_number > 1 ? "s" : ""]!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [hand_number > 1 ? "" : "a"] покрыта€ кровью рука[hand_number > 1 ? "s" : ""]!</span>\n"
 
 	//handcuffed?
 
@@ -90,41 +90,41 @@
 	//belt
 	if(belt)
 		if(belt.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(belt)] [belt.gender==PLURAL?"some":"a"] blood-stained [belt.name] about [t_his] waist!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(belt)] [belt.gender==PLURAL?"some":"a"] покрытый кровью [belt.name] вокруг [t_his] по€са!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(belt)] \a [belt] about [t_his] waist.\n"
+			msg += "[t_He] [t_has] [bicon(belt)] [belt] вокруг [t_his] по€са.\n"
 
 	//shoes
 	if(shoes && !(slot_shoes in obscured))
 		if(shoes.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_is] wearing [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] blood-stained [shoes.name] on [t_his] feet!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] покрытые кровью [shoes.name] на [t_his] ногах!</span>\n"
 		else
-			msg += "[t_He] [t_is] wearing [bicon(shoes)] \a [shoes] on [t_his] feet.\n"
+			msg += "[t_He] [t_is] носит [bicon(shoes)]  [shoes] на [t_his] ногах.\n"
 
 	//mask
 	if(wear_mask && !(slot_wear_mask in obscured))
 		if(wear_mask.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":"a"] blood-stained [wear_mask.name] on [t_his] face!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":"a"] покрытую кровью [wear_mask.name] на [t_his] лице!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(wear_mask)] \a [wear_mask] on [t_his] face.\n"
+			msg += "[t_He] [t_has] [bicon(wear_mask)]  [wear_mask] на [t_his] лице.\n"
 
 	if (wear_neck && !(slot_neck in obscured))
-		msg += "[t_He] [t_is] wearing [bicon(src.wear_neck)] \a [src.wear_neck] around [t_his] neck.\n"
+		msg += "[t_He] [t_is] носит [bicon(src.wear_neck)]  [src.wear_neck] вокруг [t_his] шеи.\n"
 
 	//eyes
 	if(glasses && !(slot_glasses in obscured))
 		if(glasses.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(glasses)] [glasses.gender==PLURAL?"some":"a"] blood-stained [glasses] covering [t_his] eyes!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(glasses)] [glasses.gender==PLURAL?"some":"a"] покрытые кровью [glasses] скрывающие [t_his] глаза!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(glasses)] \a [glasses] covering [t_his] eyes.\n"
+			msg += "[t_He] [t_has] [bicon(glasses)]  [glasses] скрывающие [t_his] глаза.\n"
 
 	//ears
 	if(ears && !(slot_ears in obscured))
-		msg += "[t_He] [t_has] [bicon(ears)] \a [ears] on [t_his] ears.\n"
+		msg += "[t_He] [t_has] [bicon(ears)]  [ears] на [t_his] ушах.\n"
 
 	//ID
 	if(wear_id)
-		msg += "[t_He] [t_is] wearing [bicon(wear_id)] \a [wear_id].\n"
+		msg += "[t_He] [t_is] носит [bicon(wear_id)] \a [wear_id].\n"
 
 	if(src.status != "Wastelander" && !skipface)
 		var/datum/status/S = get_status_datum(src.status)
@@ -152,10 +152,10 @@
 		appears_dead = 1
 		if(getorgan(/obj/item/organ/brain))//Only perform these checks if there is no brain
 			if(suiciding)
-				msg += "<span class='warning'>[t_He] appear[p_s()] to have commited suicide... there is no hope of recovery.</span>\n"
+				msg += "<span class='warning'>[t_He] пытаетс€ совершить самоубийство... нет надежды спасти.</span>\n"
 			if(hellbound)
-				msg += "<span class='warning'>[t_His] soul seems to have been ripped out of [t_his] body.  Revival is impossible.</span>\n"
-			msg += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life"
+				msg += "<span class='warning'>[t_His] похоже, душа покинула [t_his] тело.  –еанимаци€ невозможна.</span>\n"
+			msg += "<span class='deadsay'>[t_He] [t_is] конечности не двигаютс€. ∆изнь окончательно покинула это тело."
 			if(!key)
 				var/foundghost = 0
 				if(mind)
@@ -166,10 +166,10 @@
 								foundghost = 0
 							break
 				if(!foundghost)
-					msg += " and [t_his] soul has departed"
+					msg += " и [t_his] душа покинула тело"
 			msg += "...</span>\n"
 		else if(get_bodypart("head")) //Brain is gone, doesn't matter if they are AFK or present. Check for head first tho. Decapitation has similar message.
-			msg += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>\n"
+			msg += "<span class='deadsay'>ѕохоже, что [t_his] мозг отсутствует...</span>\n"
 
 	var/temp = getBruteLoss() //no need to calculate each of these twice
 
@@ -180,21 +180,21 @@
 		var/obj/item/bodypart/BP = X
 		missing -= BP.body_zone
 		for(var/obj/item/I in BP.embedded_objects)
-			msg += "<B>[t_He] [t_has] \a [bicon(I)] [I] embedded in [t_his] [BP.name]!</B>\n"
+			msg += "<B>[t_He] [t_has] \a [bicon(I)] [I] застр€л в [t_his] [BP.name]!</B>\n"
 
 	//stores missing limbs
 	var/l_limbs_missing = 0
 	var/r_limbs_missing = 0
 	for(var/t in missing)
 		if(t=="head")
-			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] is missing!</B><span class='warning'>\n"
+			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] отсутствует!</B><span class='warning'>\n"
 			continue
 		if(t == "l_arm" || t == "l_leg")
 			l_limbs_missing++
 		else if(t == "r_arm" || t == "r_leg")
 			r_limbs_missing++
 
-		msg += "<B>[capitalize(t_his)] [parse_zone(t)] is missing!</B>\n"
+		msg += "<B>[capitalize(t_his)] [parse_zone(t)] отсутствует!</B>\n"
 
 	if(l_limbs_missing >= 2 && r_limbs_missing == 0)
 		msg += "[t_He] looks all right now.\n"
@@ -205,16 +205,16 @@
 
 	if(temp)
 		if(temp < 30)
-			msg += "[t_He] [t_has] minor bruising.\n"
+			msg += "[t_He] [t_has] небольшие подтЄки крови.\n"
 		else
-			msg += "<B>[t_He] [t_has] severe bruising!</B>\n"
+			msg += "<B>[t_He] [t_has] т€желые кровоподтЄки!</B>\n"
 
 	temp = getFireLoss()
 	if(temp)
 		if(temp < 30)
-			msg += "[t_He] [t_has] minor burns.\n"
+			msg += "[t_He] [t_has] небольшие ожоги.\n"
 		else
-			msg += "<B>[t_He] [t_has] severe burns!</B>\n"
+			msg += "<B>[t_He] [t_has] т€желые ожоги!</B>\n"
 
 	temp = getCloneLoss()
 	if(temp)
@@ -225,35 +225,35 @@
 
 
 	if(fire_stacks > 0)
-		msg += "[t_He] [t_is] covered in something flammable.\n"
+		msg += "[t_He] [t_is] покрыт чем-то горючим.\n"
 	if(fire_stacks < 0)
 		msg += "[t_He] looks a little soaked.\n"
 
 
 	if(pulledby && pulledby.grab_state)
-		msg += "[t_He] [t_is] restrained by [pulledby]'s grip.\n"
+		msg += "[t_He] [t_is] сдерживаетс€ хваткой [pulledby].\n"
 
 	if(nutrition < NUTRITION_LEVEL_STARVING - 50)
-		msg += "[t_He] [t_is] severely malnourished.\n"
+		msg += "[t_He] [t_is] сильно истощен.\n"
 	else if(nutrition >= NUTRITION_LEVEL_FAT)
 		if(user.nutrition < NUTRITION_LEVEL_STARVING - 50)
 			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"
 		else
-			msg += "[t_He] [t_is] quite chubby.\n"
+			msg += "[t_He] [t_is] немного пухл€ш.\n"
 
 	if(blood_volume < BLOOD_VOLUME_SAFE)
-		msg += "[t_He] [t_has] pale skin.\n"
+		msg += "[t_He] [t_has] бледную кожу.\n"
 
 	if(bleedsuppress)
-		msg += "[t_He] [t_is] bandaged with something.\n"
+		msg += "[t_He] [t_is] чем-то перебинтован.\n"
 	else if(bleed_rate)
 		if(reagents.has_reagent("heparin"))
-			msg += "<b>[t_He] [t_is] bleeding uncontrollably!</b>\n"
+			msg += "<b>[t_He] [t_is] тер€ет кровь в огромных количествах!</b>\n"
 		else
-			msg += "<B>[t_He] [t_is] bleeding!</B>\n"
+			msg += "<B>[t_He] [t_is] тер€ет кровь!</B>\n"
 
 	if(reagents.has_reagent("teslium"))
-		msg += "[t_He] is emitting a gentle blue glow!\n"
+		msg += "[t_He] излучает м€гкий голубой свет!\n"
 
 	if(islist(stun_absorption))
 		for(var/i in stun_absorption)
@@ -293,9 +293,9 @@
 					var/interestdebug = auto.interest2string(auto.interest)
 					msg += "<span class='deadsay'>[t_He] [t_is] appears to be [interestdebug] and [dodebug].</span>\n"
 			else if(!key)
-				msg += "<span class='deadsay'>[t_He] [t_is] totally catatonic. The stresses of life in deep-space must have been too much for [t_him]. Any recovery is unlikely.</span>\n"
+				msg += "<span class='deadsay'>[t_He] [t_is] в ступоре. —трессы жизни на ѕустошах, по разному сказываютс€ на люд€х. Any recovery is unlikely.</span>\n"
 			else if(!client)
-				msg += "[t_He] [t_has] a vacant, braindead stare...\n"
+				msg += "[t_He] [t_has] пустой, безжизненный взгл€д аутиста...\n"
 
 		if(digitalcamo)
 			msg += "[t_He] [t_is] moving [t_his] body in an unnatural and blatantly inhuman manner.\n"
@@ -308,7 +308,7 @@
 			if(perpname)
 				var/datum/data/record/R = find_record("name", perpname, data_core.general)
 				if(R)
-					msg += "<span class='deptradio'>Rank:</span> [R.fields["rank"]]<br>"
+					msg += "<span class='deptradio'>–анг:</span> [R.fields["rank"]]<br>"
 					msg += "<a href='?src=\ref[src];hud=1;photo_front=1'>\[Front photo\]</a> "
 					msg += "<a href='?src=\ref[src];hud=1;photo_side=1'>\[Side photo\]</a><br>"
 				if(istype(H.glasses, /obj/item/clothing/glasses/hud/health) || istype(CIH,/obj/item/organ/cyberimp/eyes/hud/medical))
@@ -338,8 +338,8 @@
 						if(R)
 							criminal = R.fields["criminal"]
 
-						msg += "<span class='deptradio'>Criminal status:</span> <a href='?src=\ref[src];hud=s;status=1'>\[[criminal]\]</a>\n"
-						msg += "<span class='deptradio'>Security record:</span> <a href='?src=\ref[src];hud=s;view=1'>\[View\]</a> "
+						msg += "<span class='deptradio'> риминальный статус:</span> <a href='?src=\ref[src];hud=s;status=1'>\[[criminal]\]</a>\n"
+						msg += "<span class='deptradio'>«аписи —Ѕ:</span> <a href='?src=\ref[src];hud=s;view=1'>\[View\]</a> "
 						msg += "<a href='?src=\ref[src];hud=s;add_crime=1'>\[Add crime\]</a> "
 						msg += "<a href='?src=\ref[src];hud=s;view_comment=1'>\[View comment log\]</a> "
 						msg += "<a href='?src=\ref[src];hud=s;add_comment=1'>\[Add comment\]</a>\n"

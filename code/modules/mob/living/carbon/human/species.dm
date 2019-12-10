@@ -1297,7 +1297,7 @@
 		missProb = 0
 
 	if(prob(missProb))
-		H.visible_message("<font color='green'>[H] is lucky as hell!</font>")
+		H.visible_message("<font color='green'>[H] имеет большую удачу!</font>")
 		hit_percent = 0
 
 	if(!damage || hit_percent <= 0)
