@@ -1674,7 +1674,7 @@
 "aGj" = (/obj/structure/closet/crate/bin,/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/ncr)
 "aGk" = (/obj/structure/simple_door/bunker/glass,/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/ncr)
 "aGl" = (/turf/open/floor/f13{tag = "icon-yellowfull"; icon_state = "yellowfull"},/area/f13/ncr)
-"aGm" = (/obj/structure/closet/cardboard/metal,/obj/item/stack/sheet/metal/fifty,/obj/item/stack/sheet/plasteel/twenty,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/ncr)
+"aGm" = (/obj/structure/closet/cardboard,/obj/item/stack/sheet/metal/fifty,/obj/item/stack/sheet/plasteel/twenty,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/ncr)
 "aGn" = (/obj/effect/decal/cleanable/oil{tag = "icon-floor5"; icon_state = "floor5"},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/ncr)
 "aGo" = (/obj/structure/table,/obj/item/weapon/reagent_containers/food/condiment/saltshaker,/obj/item/weapon/reagent_containers/food/condiment/peppermill,/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/ncr)
 "aGp" = (/obj/structure/table,/obj/item/weapon/storage/box/drinkingglasses,/turf/open/floor/f13{tag = "icon-bluedirtychess2"; icon_state = "bluedirtychess2"},/area/f13/ncr)
