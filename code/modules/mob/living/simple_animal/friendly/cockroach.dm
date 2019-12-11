@@ -12,17 +12,17 @@
 	maxbodytemp = INFINITY
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
-	response_help  = "pokes"
-	response_disarm = "shoos"
-	response_harm   = "splats"
-	speak_emote = list("chitters")
+	response_help  = "тыкает"
+	response_disarm = "прогоняет"
+	response_harm   = "давит"
+	speak_emote = list("стрекочет")
 	density = 0
 	ventcrawler = VENTCRAWLER_ALWAYS
 	gold_core_spawnable = 2
-	verb_say = "chitters"
-	verb_ask = "chitters inquisitively"
-	verb_exclaim = "chitters loudly"
-	verb_yell = "chitters loudly"
+	verb_say = "стрекочет"
+	verb_ask = "вопросительно стрекочет"
+	verb_exclaim = "восклицательно стрекочет"
+	verb_yell = "громко стрекочет"
 	var/squish_chance = 50
 	del_on_death = 1
 
@@ -37,10 +37,10 @@
 			var/mob/living/A = AM
 			if(A.mob_size > MOB_SIZE_SMALL && !(A.movement_type & FLYING))
 				if(prob(squish_chance))
-					A.visible_message("<span class='notice'>[A] squashed [src].</span>", "<span class='notice'>You squashed [src].</span>")
+					A.visible_message("<span class='notice'>[A] размазывает [src].</span>", "<span class='notice'>Вы размазали [src].</span>")
 					adjustBruteLoss(1) //kills a normal cockroach
 				else
-					visible_message("<span class='notice'>[src] avoids getting crushed.</span>")
+					visible_message("<span class='notice'>[src] избегает участи быть размазанным.</span>")
 	else
 		if(istype(AM,/obj/structure))
 			if(prob(squish_chance))

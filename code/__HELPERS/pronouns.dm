@@ -67,9 +67,9 @@
 	. = "их"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "её"
+			. = "своих"
 		if(MALE)
-			. = "его"
+			. = "своих"
 	if(capitalized)
 		. = capitalize(.)
 

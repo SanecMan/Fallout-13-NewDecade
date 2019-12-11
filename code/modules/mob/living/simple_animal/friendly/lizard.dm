@@ -8,12 +8,12 @@
 	health = 5
 	maxHealth = 5
 	faction = list("Lizard")
-	attacktext = "bites"
+	attacktext = "кусает"
 	melee_damage_lower = 1
 	melee_damage_upper = 2
 	response_help  = "pets"
-	response_disarm = "shoos"
-	response_harm   = "stomps on"
+	response_disarm = "прогоняет"
+	response_harm   = "наступает на"
 	ventcrawler = VENTCRAWLER_ALWAYS
 	density = 0
 	pass_flags = PASSTABLE | PASSMOB

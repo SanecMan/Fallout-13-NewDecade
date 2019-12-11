@@ -39,7 +39,7 @@
 		if(wear_suit.blood_DNA)
 			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(wear_suit)] [wear_suit.gender==PLURAL?"some":"a"] покрытый кровью [wear_suit.name]!</span>\n"
 		else
-			msg += "[t_He] [t_is] носит [bicon(wear_suit)] \a [wear_suit].\n"
+			msg += "[t_He] [t_is] носит [bicon(wear_suit)] [wear_suit].\n"
 
 		//suit/armor storage
 		if(s_store)
@@ -239,7 +239,7 @@
 		if(user.nutrition < NUTRITION_LEVEL_STARVING - 50)
 			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"
 		else
-			msg += "[t_He] [t_is] немного пухл€ш.\n"
+			msg += "[t_He] [t_is] немного пухл€шка.\n"
 
 	if(blood_volume < BLOOD_VOLUME_SAFE)
 		msg += "[t_He] [t_has] бледную кожу.\n"
