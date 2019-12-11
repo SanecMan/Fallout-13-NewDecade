@@ -177,7 +177,7 @@
 			return
 	else //otherwise just toggle it
 		ooc_allowed = !ooc_allowed
-	to_chat(world, "<B>The OOC channel has been globally [ooc_allowed ? "enabled" : "disabled"].</B>")
+	to_chat(world, "<B>Отправлять сообщения в ООС [ooc_allowed ? "разрешено" : "запрещено"].</B>")
 
 var/global/normal_ooc_colour = OOC_COLOR
 

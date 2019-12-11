@@ -15,9 +15,9 @@
 	turns_per_move = 5
 	see_in_dark = 6
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear = 5, /obj/item/clothing/head/bearpelt = 1)
-	response_help  = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm   = "hits"
+	response_help  = "гладит"
+	response_disarm = "аккуратно пихает в сторону"
+	response_harm   = "бьёт"
 	maxHealth = 60
 	health = 60
 	var/armored = FALSE

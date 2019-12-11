@@ -1,5 +1,5 @@
 /mob/living/carbon/human
-	name = "Unknown"
+	name = "Неизвестный"
 	real_name = "Unknown"
 	voice_name = "Unknown"
 	icon = 'icons/mob/human.dmi'
@@ -209,7 +209,7 @@
 		dat += "<tr><td>&nbsp;&#8627;<B>ID:</B></td><td><A href='?src=\ref[src];item=[slot_wear_id]'>[(wear_id && !(wear_id.flags&ABSTRACT)) ? wear_id : "<font color=grey>Empty</font>"]</A></td></tr>"
 
 	if(handcuffed)
-		dat += "<tr><td><B>Handcuffed:</B> <A href='?src=\ref[src];item=[slot_handcuffed]'>Remove</A></td></tr>"
+		dat += "<tr><td><B>В наручниках:</B> <A href='?src=\ref[src];item=[slot_handcuffed]'>Снять</A></td></tr>"
 	if(legcuffed)
 		dat += "<tr><td><A href='?src=\ref[src];item=[slot_legcuffed]'>Legcuffed</A></td></tr>"
 
@@ -399,7 +399,7 @@
 
 
 						if(!allowed_access)
-							to_chat(H, "<span class='warning'>ERROR: Invalid Access</span>")
+							to_chat(H, "<span class='warning'>ОШИБКА: Не достаточно доступа</span>")
 							return
 
 						if(perpname)
@@ -422,20 +422,20 @@
 											return
 										else if(!istype(H.glasses, /obj/item/clothing/glasses/hud/security) && !istype(H.getorganslot("eye_hud"), /obj/item/organ/cyberimp/eyes/hud/security))
 											return
-											to_chat(usr, "<b>Name:</b> [R.fields["name"]]	<b>Criminal Status:</b> [R.fields["criminal"]]")
+											to_chat(usr, "<b>Имя:</b> [R.fields["name"]]	<b>Криминальный статус:</b> [R.fields["criminal"]]")
 										to_chat(usr, "<b>Minor Crimes:</b>")
 										for(var/datum/data/crime/c in R.fields["mi_crim"])
-											to_chat(usr, "<b>Crime:</b> [c.crimeName]")
-											to_chat(usr, "<b>Details:</b> [c.crimeDetails]")
+											to_chat(usr, "<b>Преступление:</b> [c.crimeName]")
+											to_chat(usr, "<b>Детали:</b> [c.crimeDetails]")
 											to_chat(usr, "Added by [c.author] at [c.time]")
 											to_chat(usr, "----------")
 										to_chat(usr, "<b>Major Crimes:</b>")
 										for(var/datum/data/crime/c in R.fields["ma_crim"])
-											to_chat(usr, "<b>Crime:</b> [c.crimeName]")
-											to_chat(usr, "<b>Details:</b> [c.crimeDetails]")
+											to_chat(usr, "<b>Преступление:</b> [c.crimeName]")
+											to_chat(usr, "<b>Детали:</b> [c.crimeDetails]")
 											to_chat(usr, "Added by [c.author] at [c.time]")
 											to_chat(usr, "----------")
-										to_chat(usr, "<b>Notes:</b> [R.fields["notes"]]")
+										to_chat(usr, "<b>Заметки:</b> [R.fields["notes"]]")
 									return
 
 								if(href_list["add_crime"])
@@ -650,13 +650,13 @@
 	CHECK_DNA_AND_SPECIES(C)
 
 	if(C.stat == DEAD || (C.status_flags & FAKEDEATH))
-		to_chat(src, "<span class='warning'>[C.name] is dead!</span>")
+		to_chat(src, "<span class='warning'>[C.name] мёрьв!</span>")
 		return
 	if(is_mouth_covered())
-		to_chat(src, "<span class='warning'>Remove your mask first!</span>")
+		to_chat(src, "<span class='warning'>Снимите маску для начала!</span>")
 		return 0
 	if(C.is_mouth_covered())
-		to_chat(src, "<span class='warning'>Remove [p_their()] mask first!</span>")
+		to_chat(src, "<span class='warning'>Снимите [p_their()] маску для начала!</span>")
 		return 0
 
 	if(C.cpr_time < world.time + 30)
@@ -707,7 +707,7 @@
 
 /mob/living/carbon/human/cuff_resist(obj/item/I)
 	if(dna && dna.check_mutation(HULK))
-		say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ))
+		say(pick("ЫЪЪА!!", "НННННЫАААААААААААА!!!", "НННЫЫЫА!!!", "ХНННГХ!", "РААРГХ!!" ))
 		if(..(I, cuff_break = FAST_CUFFBREAK))
 			unEquip(I)
 	else
@@ -892,8 +892,8 @@
 /mob/living/carbon/human/vomit(lost_nutrition = 10, blood = 0, stun = 1, distance = 0, message = 1, toxic = 0)
 	if(blood && (NOBLOOD in dna.species.species_traits))
 		if(message)
-			visible_message("<span class='warning'>[src] dry heaves!</span>", \
-							"<span class='userdanger'>You try to throw up, but there's nothing in your stomach!</span>")
+			visible_message("<span class='warning'>[src] сухо хрипит!</span>", \
+							"<span class='userdanger'>Вы пытаетесь проблеваться, но вам уже нечем!</span>")
 		if(stun)
 			Weaken(10)
 		return 1

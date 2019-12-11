@@ -216,10 +216,10 @@
 		if(change > 0)
 			if(M && stat != DEAD)
 				flick_overlay(image('icons/mob/animal.dmi', src, "heart-ani2", ABOVE_MOB_LAYER), list(M.client), 20)
-				emote("me", 1, "purrs!")
+				emote("me", 1, "мурчит!")
 		else
 			if(M && stat != DEAD)
-				emote("me", 1, "hisses!")
+				emote("me", 1, "шипит!")
 
 /mob/living/simple_animal/pet/cat/cak //I told you I'd do it, Remie
 	name = "Keeki"

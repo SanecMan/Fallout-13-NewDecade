@@ -38,7 +38,7 @@
 					if(user.put_in_hands(card))
 						user.visible_message("<span class='notice'>[user] promptly scoops up their pAI's card.</span>")
 			else
-				visible_message("<span class='danger'>[user] stomps on [src]!.</span>")
+				visible_message("<span class='danger'>[user] наступает на [src]!.</span>")
 				take_holo_damage(2)
 
 /mob/living/silicon/pai/bullet_act(obj/item/projectile/Proj)

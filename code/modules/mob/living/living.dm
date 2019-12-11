@@ -288,10 +288,10 @@
 	set category = "IC"
 
 	if(sleeping)
-		to_chat(src, "<span class='notice'>You are already sleeping.</span>")
+		to_chat(src, "<span class='notice'>Вы уже спите.</span>")
 		return
 	else
-		if(alert(src, "You sure you want to sleep for a while?", "Sleep", "Yes", "No") == "Yes")
+		if(alert(src, "Вы уверены что хотите немного поспать?", "Sleep", "Yes", "No") == "Yes")
 			SetSleeping(20) //Short nap
 	update_canmove()
 
@@ -306,13 +306,13 @@
 
 	if(!under_object)
 		resting = !resting
-		to_chat(src, "<span class='notice'>You are now [resting ? "lying" : "getting up"].</span>")
+		to_chat(src, "<span class='notice'>Теперь вы [resting ? "лежите" : "встаете"].</span>")
 		update_canmove()
 	else
 		playsound(loc, pick('sound/f13weapons/pan.ogg', 'sound/items/trayhit2.ogg', 'sound/items/trayhit1.ogg'), 50, 1)
 		Stun(1)
 		apply_damage(5, BRUTE, get_bodypart("head"))
-		to_chat(src, "<span class='danger'>As you try to get up, you bang [under_object] with your head!<br>Ouch!</span>")
+		to_chat(src, "<span class='danger'>Когда вы попытались встать, вы ударились о [under_object] своей головой!<br>Ай!</span>")
 
 /mob/living/proc/surrender()
 	set name = "Surrender"
@@ -323,7 +323,7 @@
 			lay_down()
 
 		Stun(5)
-		visible_message("<b>[src] surrenders!</b>")
+		visible_message("<b>[src] сдаётся!</b>")
 		playsound(src.loc, 'sound/f13effects/surrender.ogg', 50, 1)
 
 
@@ -437,7 +437,7 @@
 
 	if(config.allow_Metadata)
 		if(client)
-			to_chat(src, "[src]'s Metainfo:<br>[client.prefs.metadata]")
+			to_chat(src, "[src]'s Метаинформация:<br>[client.prefs.metadata]")
 		else
 			to_chat(src, "[src] does not have any stored infomation!")
 	else
@@ -580,7 +580,7 @@
 
 	//resisting grabs (as if it helps anyone...)
 	if(!restrained(ignore_grab = 1) && pulledby)
-		visible_message("<span class='danger'>[src] resists against [pulledby]'s grip!</span>")
+		visible_message("<span class='danger'>[src] пытается вырваться из хватки [pulledby]!</span>")
 		resist_grab()
 		return
 
@@ -615,7 +615,7 @@
 	. = 1
 	if(pulledby.grab_state)
 		if(prob(30/pulledby.grab_state))
-			visible_message("<span class='danger'>[src] has broken free of [pulledby]'s grip!</span>")
+			visible_message("<span class='danger'>[src] вырывается из хватки [pulledby]!</span>")
 			pulledby.stop_pulling()
 			return 0
 		if(moving_resist && client) //we resisted by trying to move
@@ -670,8 +670,8 @@
 
 	var/mob/living/carbon/user = src
 	if(!(user.perks.have(/datum/perk/thief)))
-		who.visible_message("<span class='danger'>[src] tries to remove [who]'s [what.name].</span>", \
-			"<span class='userdanger'>[src] tries to remove [who]'s [what.name].</span>")
+		who.visible_message("<span class='danger'>[src] пытается снять [who] с [what.name].</span>", \
+			"<span class='userdanger'>[src] пытается снять [who] с [what.name].</span>")
 
 	what.add_fingerprint(src)
 	if(do_mob(src, who, what.strip_delay))
@@ -698,20 +698,20 @@
 /mob/living/stripPanelEquip(obj/item/what, mob/who, where)
 	what = src.get_active_held_item()
 	if(what && (what.flags & NODROP))
-		to_chat(src, "<span class='warning'>You can't put \the [what.name] on [who], it's stuck to your hand!</span>")
+		to_chat(src, "<span class='warning'>Вы не можете поместить [what.name] на [who], это застряло у вас в руках!</span>")
 		return
 	if(what)
 		var/list/where_list
 		if(islist(where))
 			where_list = where
 			if(!what.mob_can_equip(who, src, where[1], 1))
-				to_chat(src, "<span class='warning'>\The [what.name] doesn't fit in that place!</span>")
+				to_chat(src, "<span class='warning'>[what.name] не помещается сюда!</span>")
 				return
 		else
 			if(!what.mob_can_equip(who, src, where, 1))
-				to_chat(src, "<span class='warning'>\The [what.name] doesn't fit in that place!</span>")
+				to_chat(src, "<span class='warning'>[what.name] не помещается сюда!</span>")
 				return
-		visible_message("<span class='notice'>[src] tries to put [what] on [who].</span>")
+		visible_message("<span class='notice'>[src] пытается надеьб [what] на [who].</span>")
 		if(do_mob(src, who, what.put_on_delay))
 			if(what && Adjacent(who))
 				unEquip(what)
@@ -790,7 +790,7 @@
 			if(pulling)
 				weight += pulling.contents_weight
 				weight += pulling.self_weight
-			stat(null, "Weight: [weight]/[H.special.getWeight(H)]")
+			stat(null, "Вес: [weight]/[H.special.getWeight(H)]")
 
 
 /mob/living/cancel_camera()
@@ -841,11 +841,11 @@
 		if(be_close && in_range(M, src))
 			return 1
 	else
-		to_chat(src, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		to_chat(src, "<span class='warning'>У вас недостаточно мозгов чтобы сделать это!</span>")
 	return
 /mob/living/proc/can_use_guns(var/obj/item/weapon/gun/G)
 	if (G.trigger_guard != TRIGGER_GUARD_ALLOW_ALL && !IsAdvancedToolUser())
-		to_chat(src, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		to_chat(src, "<span class='warning'>У вас недостаточно мозгов чтобы сделать это!</span>")
 		return 0
 	return 1
 
@@ -856,7 +856,7 @@
 	if(staminaloss)
 		var/total_health = (health - staminaloss)
 		if(total_health <= HEALTH_THRESHOLD_CRIT && !stat)
-			to_chat(src, "<span class='notice'>You're too exhausted to keep going...</span>")
+			to_chat(src, "<span class='notice'>Вы слишком устали чтобы продолжать...</span>")
 			Weaken(5)
 			setStaminaLoss(health - 2)
 	update_health_hud()
@@ -927,8 +927,8 @@
 /mob/living/proc/IgniteMob()
 	if(fire_stacks > 0 && !on_fire)
 		on_fire = 1
-		src.visible_message("<span class='warning'>[src] catches fire!</span>", \
-						"<span class='userdanger'>You're set on fire!</span>")
+		src.visible_message("<span class='warning'>[src] горит!</span>", \
+						"<span class='userdanger'>Вы горие!</span>")
 		set_light(3)
 		throw_alert("fire", /obj/screen/alert/fire)
 		update_fire()
@@ -964,7 +964,7 @@
 		fire_stacks /= 2
 		L.fire_stacks += fire_stacks
 		if(L.IgniteMob())
-			log_game("[key_name(src)] bumped into [key_name(L)] and set them on fire")
+			log_game("[key_name(src)] врезается в [key_name(L)] и поджигает")
 
 	if(L_old_on_fire) //Only ignite us and gain their stacks if they were onfire before we bumped them
 		L.fire_stacks /= 2

@@ -361,9 +361,9 @@
 		if(death_sound)
 			playsound(get_turf(src),death_sound, 50, 1)
 		if(deathmessage)
-			visible_message("<span class='danger'>\The [src] [deathmessage]</span>")
+			visible_message("<span class='danger'>[src] [deathmessage]</span>")
 		else if(!del_on_death)
-			visible_message("<span class='danger'>\The [src] stops moving...</span>")
+			visible_message("<span class='danger'>[src] перестает двигаться...</span>")
 	if(del_on_death)
 		ghostize()
 		//Prevent infinite loops if the mob Destroy() is overriden in such

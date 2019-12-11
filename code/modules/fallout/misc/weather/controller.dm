@@ -59,7 +59,7 @@
 					M.apply_damage(damage = 50,damagetype = BURN)
 					shake_camera(M, 5, 4)
 				else
-					M.visible_message("<font color='green'>[M] is lucky as hell!</font>")
+					M.visible_message("<font color='green'>[M] имеет большую удачу!</font>")
 			else if(istype(A, /mob/living/carbon))
 				var/mob/living/M = A
 				M.apply_damage(damage = 150,damagetype = BURN)

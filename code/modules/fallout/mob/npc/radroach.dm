@@ -10,9 +10,9 @@
 	icon_gib = "radroach_g"
 	speak_chance = 0
 	turns_per_move = 5
-	response_help = "pokes"
-	response_disarm = "pushes aside"
-	response_harm = "stomps"
+	response_help = "тыкает"
+	response_disarm = "пихает"
+	response_harm = "пинает"
 	environment_smash = 0
 	respawn_time_of_mob = 150000000
 	move_to_delay = 2
@@ -35,7 +35,7 @@
 
 	melee_damage_lower = 5
 	melee_damage_upper = 5
-	attacktext = "bite"
+	attacktext = "кусает"
 	attack_sound = 'sound/weapons/bite.ogg'
 	aggro_vision_range = 10
 	idle_vision_range = 5

@@ -20,12 +20,12 @@
 	for(var/obj/item/I in held_items)
 		if(!(I.flags & ABSTRACT))
 			if(I.blood_DNA)
-				msg += "<span class='warning'>[t_He] [t_is] holding [bicon(I)] [I.gender==PLURAL?"some":"a"] blood-stained [I.name] in [t_his] [get_held_index_name(get_held_index_of_item(I))]!</span>\n"
+				msg += "<span class='warning'>[t_He] [t_is] держит [bicon(I)] [I.gender==PLURAL?"some":"a"] покрытый кровью [I.name] в [t_his] [get_held_index_name(get_held_index_of_item(I))]!</span>\n"
 			else
 				msg += "[t_He] [t_is] holding [bicon(I)] \a [I] in [t_his] [get_held_index_name(get_held_index_of_item(I))].\n"
 
 	if (back)
-		msg += "[t_He] [t_has] [bicon(src.back)] \a [src.back] on [t_his] back.\n"
+		msg += "[t_He] [t_has] [bicon(src.back)] [src.back] на [t_his] спине.\n"
 	var/appears_dead = 0
 	if (stat == DEAD)
 		appears_dead = 1
@@ -67,9 +67,9 @@
 		msg += "[t_He] seems to be clumsy and unable to think.\n"
 
 	if(fire_stacks > 0)
-		msg += "[t_He] [t_is] covered in something flammable.\n"
+		msg += "[t_He] [t_is] покрыт чем-то горючим.\n"
 	if(fire_stacks < 0)
-		msg += "[t_He] [t_is] looks a little soaked.\n"
+		msg += "[t_He] [t_is] выглядит немного мокро.\n"
 
 	if(pulledby && pulledby.grab_state)
 		msg += "[t_He] [t_is] restrained by [pulledby]'s grip.\n"

@@ -82,7 +82,7 @@
 		if(craftobj == 30)
 			CC = new/obj/item/crafting/wonderglue(user.loc)
 
-		to_chat(user, "<span class='notice'>You take craft materilas from [src].</span>")
+		to_chat(user, "<span class='notice'>Вы разгребли кучу и достали немного материалов из [src].</span>")
 		craftnumber = craftnumber - 1
 	else
 		if(iscyborg(user) || isalien(user))
@@ -149,7 +149,7 @@
 			CC = new/obj/item/crafting/weapon_repair_kit(user.loc)
 		if(craftobj == 30)
 			CC = new/obj/item/crafting/wonderglue(user.loc)
-		to_chat(user, "<span class='notice'>You take last craft materilas from [src].</span>")
+		to_chat(user, "<span class='notice'>Вы достали последний полезный материал из этой кучи.</span>")
 		qdel(src)
 
 /obj/structure/garbage/garbage2

@@ -32,7 +32,7 @@
 
 /obj/item/weapon/twohanded/baseball
 	name = "baseball bat"
-	desc = "A wooden source of joy and pain."
+	desc = "Деревянный источник боли и веселья."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "baseball0"
 	force = 5
@@ -237,7 +237,7 @@
 
 /obj/item/weapon/spear
 	name = "throwing spear"
-	desc = "A rather deadly weapon of an ancient design."
+	desc = "Крайне смертоносное оружие, с допотопным дизайном."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "spear"
 	force = 10
@@ -298,7 +298,7 @@
 
 /obj/item/weapon/twohanded/largehammer
 	name = "large sledgehammer"
-	desc = "Large, strong, heavy weapon of DESTRUCTION."
+	desc = "Большое, сильное, оружие РАЗРУШЕНИЯ."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "largesledgehammer0"
 	flags = CONDUCT
@@ -314,7 +314,7 @@
 
 /obj/item/weapon/twohanded/superhammer
 	name = "super sledge"
-	desc = "Also called \"Superkuvalda\" - BoS produced these using the most modern weapons technology.<br>It's equipped with storage of kinetic energy to enhance the impact."
+	desc = "Суперкувалда - Братство разработало эту хреновину.<br>Это снаряжено небольшим генератором для ускорения импулься."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "supersledgehammer0"
 	flags = CONDUCT
@@ -332,9 +332,9 @@
 	var/datum/effect_system/lightning_spread/s = new /datum/effect_system/lightning_spread
 	s.set_up(5, 1, target.loc)
 	s.start()
-	target.visible_message("<span class='danger'>[target.name] was shocked by the [src.name]!</span>", \
-		"<span class='userdanger'>You feel a powerful shock course through your body sending you flying!</span>", \
-		"<span class='italics'>You hear a heavy electrical crack!</span>")
+	target.visible_message("<span class='danger'>[target.name] оглушен [src.name]!</span>", \
+		"<span class='userdanger'>Вы ощущаете мощный разряд прошедший через ваше тело и отправивший Вас в полёт!</span>", \
+		"<span class='italics'>Вы слышите электрический стрекот!</span>")
 	var/atom/throw_target = get_edge_target_turf(target, get_dir(src, get_step_away(target, src)))
 	target.throw_at(throw_target, 200, 4)
 	charged = 0
@@ -360,7 +360,7 @@
 
 /obj/item/weapon/pickaxe/rust
 	name = "rusty pickaxe"
-	desc = "This pickaxe has seen better days."
+	desc = "Эта кирка знала лучшие дни."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "pickaxe_rust"
 	force = 12
