@@ -43,6 +43,16 @@
 	opening_state = "76opening"
 	broken_state = "76empty"
 
+/obj/structure/vault_door/vault51
+	name = "Vault 51 blast door"
+	desc = "A conventional Vault blast door of \"Nine cog\" model.<br>A blast door design incorporates proper sealants against radiation and other hazardous elements that may be created in the event of a nuclear war, to properly protect its inhabitants."
+	icon_state = "51closed"
+	close_state = "51closed"
+	open_state = "51open"
+	closing_state = "51closing"
+	opening_state = "51opening"
+	broken_state = "51empty"
+
 /obj/structure/vault_door/old
 	name = "\proper ancient Vault blast door"
 	icon_state = "oldclosed"
