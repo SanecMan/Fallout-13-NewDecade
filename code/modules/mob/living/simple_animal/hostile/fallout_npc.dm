@@ -141,7 +141,7 @@
 	respawn_time_of_mob = 900000000
 	response_help = "pokes"
 	response_disarm = "shoves"
-	response_harm = "hits"
+	response_harm = "בüוע"
 	speed = 1
 	stat_attack = 1
 	robust_searching = 1
@@ -206,8 +206,8 @@
 	icon_living = "enclave_soldier"
 	icon_dead = "enclave_soldier"
 	icon_gib = "enclave_soldier"
-	maxHealth = 500
-	health = 500
+	maxHealth = 890
+	health = 890
 	retreat_distance = 5
 	minimum_distance = 5
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
@@ -219,10 +219,30 @@
 	projectilesound = 'sound/f13weapons/plasmarifle.ogg'
 	XP = 80
 
+/mob/living/simple_animal/hostile/enclave/soldier_ca
+	name = "Enclave Private Soldier"
+	desc = "Just a Enclave Soldier"
+	icon_state = "enclave_soldier_ca"
+	icon_living = "enclave_soldier_ca"
+	icon_dead = "enclave_soldier_ca"
+	icon_gib = "enclave_soldier"
+	maxHealth = 250
+	health = 250
+	retreat_distance = 6
+	minimum_distance = 6
+	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
+	self_weight = 45
+	healable = 1
+	ranged = 1
+	rapid = 1
+	projectiletype = /obj/item/projectile/beam
+	projectilesound = 'sound/weapons/resonator_fire.ogg'
+	XP = 40
+
 /obj/effect/mob_spawn/human/corpse/enclave/soldier
 	name = "Enclave Soldier"
 	uniform = /obj/item/clothing/under/f13/enclave_officer
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
+//	suit = /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/military
 	//radio = /obj/item/device/radio/headset

@@ -74,7 +74,7 @@
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "paladin"
-	total_positions = 2
+	total_positions = 1
 	spawn_positions = 2
 	supervisors = "Старейшине"
 	selection_color = "#ec9d9d"
@@ -182,8 +182,8 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
-	suit = /obj/item/clothing/suit/armor/f13/combat_mk1
-	head = /obj/item/clothing/head/helmet/f13/combat_mk1
+	suit = /obj/item/clothing/suit/armor/f13/brotherhood_armor
+	head = /obj/item/clothing/head/helmet/f13/brotherhood_helmet
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/laser/rifle
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 1, \
@@ -197,7 +197,7 @@
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "scriber"
-	total_positions = 7
+	total_positions = 2
 	spawn_positions = 7
 	supervisors = "Старейшине"
 	selection_color = "#ec9d9d"

@@ -91,3 +91,23 @@
 	response_harm   = "punches"
 	attack_sound = 'sound/voice/liveagain.ogg'
 	butcher_results = list(/obj/effect/gibspawner/robot = 1)
+
+/mob/living/simple_animal/pet/dog/protectron_kebab //Not an actual dog
+	name = "Protectron"
+	desc = "A standard RobCo RX2 V1.16.4 \"PROTECT-RONE\", loaded with basic protocols.<br>Looks like it was kept operational for an indefinite period of time. Its body is covered in cracks and dents of various sizes.<br>As it has been repaired countless times, it's amazing the machine is still functioning at all."
+	icon = 'icons/fallout/mobs/animal.dmi'
+	icon_state = "protectron_k"
+	icon_living = "protectron_k"
+	icon_dead = "protectron_k_d"
+	maxHealth = 50
+	health = 50
+	speak_chance = 30
+	speak = list("Добро пожаловать в Кебабтаун! Город возможностей и спокойной жизни!", "Приветствую, путник! Как я могу вам помочь? Загляните в городские магазины!", "Мэр Кебабтауна - лучший человек в пустоши.", "Загляните в бар Пуля, лучшее место чтобы пораскинут ьмозгами.", "Вы пробовали местную воду? Попробуйте!", "Запомните три простых правила пребывания в городе: 1. Не убивайте. 2. Не носите оружие открыто. 3. Не воруйте.", "Ответ на вопрос о смысле жизни - 42.", "Рады видеть вас в нашем городе!")
+	speak_emote = list("beeps", "buzzes")
+	emote_hear = list("beeps", "buzzes", "сканирует окружение","сенсоры в его голове крутятся и издают всякие звуки")
+	emote_see = list("waves with its manipulators", "is calculating chances of survival", "has something going on deep inside of its CPU", "recovers from yet another system error")
+	response_help  = "потряхивает своими манипуляторами"
+	response_disarm = "pushes"
+	response_harm   = "punches"
+	attack_sound = 'sound/voice/liveagain.ogg'
+	butcher_results = list(/obj/effect/gibspawner/robot = 1)
