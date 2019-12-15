@@ -106,7 +106,7 @@
 	speak_emote = list("beeps", "buzzes")
 	emote_hear = list("beeps", "buzzes", "сканирует окружение","сенсоры в его голове крутятся и издают всякие звуки")
 	emote_see = list("waves with its manipulators", "is calculating chances of survival", "has something going on deep inside of its CPU", "recovers from yet another system error")
-	response_help  = "потряхивает своими манипуляторами"
+	response_help  = "стучит по стеклу"
 	response_disarm = "pushes"
 	response_harm   = "punches"
 	attack_sound = 'sound/voice/liveagain.ogg'

@@ -190,7 +190,7 @@ var/datum/subsystem/vote/SSvote
 		mode = vote_type
 		initiator = initiator_key
 		started_time = world.time
-		var/text = "[capitalize(mode)] vote started by [initiator]."
+		var/text = "[capitalize(mode)] голосование запущено [initiator]."
 		if(mode == "custom")
 			text += "\n[question]"
 		log_vote(text)
@@ -219,10 +219,10 @@ var/datum/subsystem/vote/SSvote
 
 	if(mode)
 		if(question)
-			. += "<h2>Vote: '[question]'</h2>"
+			. += "<h2>Голосование: '[question]'</h2>"
 		else
-			. += "<h2>Vote: [capitalize(mode)]</h2>"
-		. += "Time Left: [time_remaining] s<hr><ul>"
+			. += "<h2>Голосованите: [capitalize(mode)]</h2>"
+		. += "Осталось времени: [time_remaining] s<hr><ul>"
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			if(!votes)
