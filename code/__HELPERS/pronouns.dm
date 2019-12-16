@@ -85,7 +85,7 @@
 		temp_gender = gender
 	. = "" //is
 	if(temp_gender == PLURAL || temp_gender == NEUTER)
-		. = "are"
+		. = ""
 
 /client/p_were(temp_gender)
 	if(!temp_gender)
@@ -132,7 +132,7 @@
 		if(MALE)
 			. = "его"
 		if(PLURAL)
-			. = "ех"
+			. = "их"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -162,7 +162,7 @@
 		temp_gender = gender
 	. = "" //is
 	if(temp_gender == PLURAL)
-		. = "are"
+		. = ""
 
 /mob/p_were(temp_gender)
 	if(!temp_gender)

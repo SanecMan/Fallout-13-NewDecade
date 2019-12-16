@@ -62,8 +62,8 @@
 	department_flag = FOB
 	faction = "vault"
 	status = "resident"
-	total_positions = 20
-	spawn_positions = 20
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "смотрителю"
 	selection_color = "#005A20"
 
@@ -110,8 +110,8 @@
 	department_flag = FOB
 	faction = "vault"
 	status = "security"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "смотрителю"
 	selection_color = "#005A20"
 
@@ -162,8 +162,8 @@
 	department_flag = FOB
 	faction = "vault"
 	status = "sciencist"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 1
+	spawn_positions = 2
 	supervisors = "смотрителю"
 	selection_color = "#005A20"
 
@@ -209,8 +209,8 @@
 	department_flag = FOB
 	faction = "vault"
 	status = "engineer"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "смотрителю"
 	selection_color = "#005A20"
 

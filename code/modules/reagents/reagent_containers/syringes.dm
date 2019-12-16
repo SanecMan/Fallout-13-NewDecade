@@ -66,7 +66,7 @@
 		var/mob/living/carbon/monkey/M
 		M = target
 		M.retaliate(user)
-		
+
 	switch(mode)
 		if(SYRINGE_DRAW)
 

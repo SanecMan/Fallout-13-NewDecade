@@ -13,12 +13,12 @@
 	environment_smash = 0
 	response_help = "pokes"
 	response_disarm = "shoves"
-	response_harm = "hits"
-	move_to_delay = 3
+	response_harm = "בüוע"
+	move_to_delay = 2
 	stat_attack = 1
 	robust_searching = 1
-	maxHealth = 350
-	health = 350
+	maxHealth = 1000
+	health = 1000
 	self_weight = 400
 	healable = 0
 
@@ -37,7 +37,7 @@
 	melee_damage_upper = 25
 	minimum_distance = 2
 	retreat_distance = 4
-	attacktext = "punches"
+	attacktext = "בüוע"
 	attack_sound = "punch"
 	a_intent = "harm"
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -51,4 +51,4 @@
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
 
-	XP = 30
+	XP = 55

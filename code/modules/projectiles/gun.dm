@@ -245,20 +245,20 @@
 		return
 
 	if(condition == 0)
-		to_chat(usr, "<span class='info'>With this weapon you can kill only yourself.</span>")
+		to_chat(usr, "<span class='info'>С таким оружием ты можешь убить лишь себя.</span>")
 		return
 
 	if(jammed)
 		if(jam_fixing)
 			return
 
-		usr.visible_message("<span class='warning'>[usr] trying to fix jamming!<span class='warning'>")
+		usr.visible_message("<span class='warning'>[usr] пытается исправить осечку!<span class='warning'>")
 		jam_fixing = TRUE
 		if(do_mob(usr, usr, JAM_FIXTIME))
 			jammed = FALSE
-			to_chat(usr, "<span class='green'>Fixed!</span>")
+			to_chat(usr, "<span class='green'>Исправлено!</span>")
 		else
-			to_chat(usr, "<span class='warning'>Need to stay still!</span>")
+			to_chat(usr, "<span class='warning'>Придётся подождать!</span>")
 
 		jam_fixing = FALSE
 		return

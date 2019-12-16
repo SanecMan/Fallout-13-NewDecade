@@ -670,8 +670,8 @@
 
 	var/mob/living/carbon/user = src
 	if(!(user.perks.have(/datum/perk/thief)))
-		who.visible_message("<span class='danger'>[src] пытается снять [who] с [what.name].</span>", \
-			"<span class='userdanger'>[src] пытается снять [who] с [what.name].</span>")
+		who.visible_message("<span class='danger'>[src] пытается снять[what.name] c [who].</span>", \
+			"<span class='userdanger'>[src] пытается снять [what.name] c [who].</span>")
 
 	what.add_fingerprint(src)
 	if(do_mob(src, who, what.strip_delay))

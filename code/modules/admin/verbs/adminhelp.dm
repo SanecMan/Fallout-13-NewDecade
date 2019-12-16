@@ -115,13 +115,13 @@
 
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
-			to_chat(X, 'sound/effects/adminhelp.ogg')
+			to_chat(X, 'sound/effects/-adminhelp.ogg')
 		window_flash(X)
 		to_chat(X, msg)
 
 
 	//show it to the person adminhelping too
-	to_chat(src, "<span class='adminnotice'>Admin PM from-<b>Админов</b>: [original_msg]</span>")
+	to_chat(src, "<span class='adminnotice'>Вы отправили: [original_msg]</span>")
 
 	//send it to irc if nobody is on and tell us how many were on
 	var/admin_number_present = send2irc_adminless_only(ckey,original_msg)
