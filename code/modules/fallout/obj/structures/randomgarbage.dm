@@ -20,7 +20,7 @@
 	if(iscyborg(user) || isalien(user))
 		return
 	if(craftnumber > 0)
-		craftobj = pick(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30)
+		craftobj = pick(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32)
 		if(craftobj == 1)
 			CC = new/obj/item/crafting/Baseball_ball(user.loc)
 		if(craftobj == 2)
@@ -81,6 +81,10 @@
 			CC = new/obj/item/crafting/weapon_repair_kit(user.loc)
 		if(craftobj == 30)
 			CC = new/obj/item/crafting/wonderglue(user.loc)
+		if(craftobj == 31)
+			CC = new/obj/item/weaponcrafting/handle/pistol(user.loc)
+		if(craftobj == 32)
+			CC = new/obj/item/weaponcrafting/handle/rifle(user.loc)
 
 		to_chat(user, "<span class='notice'>Вы разгребли кучу и достали немного материалов из [src].</span>")
 		craftnumber = craftnumber - 1
@@ -88,7 +92,7 @@
 		if(iscyborg(user) || isalien(user))
 			return
 
-		craftobj = pick(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30)
+		craftobj = pick(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32)
 		if(craftobj == 1)
 			CC = new/obj/item/crafting/Baseball_ball(user.loc)
 		if(craftobj == 2)
@@ -149,6 +153,10 @@
 			CC = new/obj/item/crafting/weapon_repair_kit(user.loc)
 		if(craftobj == 30)
 			CC = new/obj/item/crafting/wonderglue(user.loc)
+		if(craftobj == 31)
+			CC = new/obj/item/weaponcrafting/handle/pistol(user.loc)
+		if(craftobj == 32)
+			CC = new/obj/item/weaponcrafting/handle/rifle(user.loc)
 		to_chat(user, "<span class='notice'>Вы достали последний полезный материал из этой кучи.</span>")
 		qdel(src)
 

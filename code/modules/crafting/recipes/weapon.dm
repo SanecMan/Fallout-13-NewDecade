@@ -70,7 +70,8 @@
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/crafting/weapon_parts/ballistic = 5,
-				/obj/item/stack/sheet/plasteel = 5)
+				/obj/item/stack/sheet/plasteel = 5,
+				/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 1000
 	category = CAT_WEAPON
@@ -82,7 +83,8 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 2,
-				/obj/item/crafting/weapon_parts/ballistic = 1)
+				/obj/item/crafting/weapon_parts/ballistic = 1,
+				/obj/item/weaponcrafting/handle/pistol = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	default = 1
@@ -96,7 +98,8 @@
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/crafting/weapon_parts/ballistic = 2,
 				/obj/item/stack/sheet/metal = 3,
-				/obj/item/stack/sheet/mineral/wood = 3)
+				/obj/item/stack/sheet/mineral/wood = 3,
+				/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	category = CAT_WEAPON
@@ -109,7 +112,8 @@
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 2,
 				/obj/item/crafting/weapon_parts/ballistic = 2,
-				/obj/item/stack/sheet/plasteel = 1)
+				/obj/item/stack/sheet/plasteel = 1,
+				/obj/item/weaponcrafting/handle/pistol = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	category = CAT_WEAPON
@@ -122,7 +126,8 @@
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/crafting/weapon_parts/ballistic = 1,
-				/obj/item/stack/sheet/mineral/wood = 3)
+				/obj/item/stack/sheet/mineral/wood = 3,
+				/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
 	category = CAT_WEAPON
@@ -137,10 +142,10 @@
 				/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/sheet/mineral/wood = 2)
 	tools = list(/obj/item/weapon/screwdriver)
-	time = 500
+	time = 650
 	default = 1
 	category = CAT_WEAPON
-	XP = 40
+	XP = 10
 
 /datum/crafting_recipe/assault_rifle
 	name = "Assault Rifle 5.56mm"
@@ -149,9 +154,10 @@
 				/obj/item/crafting/weapon_parts/ballistic = 3,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/stack/sheet/metal = 3,
-				/obj/item/stack/sheet/plasteel = 2)
+				/obj/item/stack/sheet/plasteel = 2,
+				/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
-	time = 500
+	time = 800
 	category = CAT_WEAPON
 	XP = 140
 
@@ -161,9 +167,10 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/crafting/weapon_parts/ballistic = 1,
 				/obj/item/weaponcrafting/stock = 1,
-				/obj/item/stack/sheet/metal = 3)
+				/obj/item/stack/sheet/metal = 3,
+				/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
-	time = 500
+	time = 650
 	category = CAT_WEAPON
 	XP = 120
 
@@ -183,9 +190,10 @@
 			/obj/item/crafting/resistor = 1,
 			/obj/item/crafting/board = 1,
 			/obj/item/stack/cable_coil = 9,
-			/obj/item/weapon/stock_parts/cell = 1)
+			/obj/item/weapon/stock_parts/cell = 1,
+			/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
-	time = 850
+	time = 1000
 	category = CAT_WEAPON
 	XP = 250
 
@@ -202,9 +210,10 @@
 	/obj/item/crafting/resistor = 1,
 	/obj/item/crafting/board = 1,
 	/obj/item/stack/cable_coil = 5,
-	/obj/item/weapon/stock_parts/cell = 1)
+	/obj/item/weapon/stock_parts/cell = 1,
+	/obj/item/weaponcrafting/handle/pistol = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
-	time = 800
+	time = 900
 	category = CAT_WEAPON
 	XP = 175
 
@@ -221,9 +230,10 @@
 	/obj/item/crafting/resistor = 1,
 	/obj/item/crafting/board = 1,
 	/obj/item/stack/cable_coil = 6,
-	/obj/item/weapon/stock_parts/cell = 1)
+	/obj/item/weapon/stock_parts/cell = 1,
+	/obj/item/weaponcrafting/handle/pistol = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
-	time = 750
+	time = 800
 	category = CAT_WEAPON
 	XP = 140
 
@@ -240,8 +250,10 @@
 	/obj/item/crafting/resistor = 2,
 	/obj/item/crafting/board = 1,
 	/obj/item/stack/cable_coil = 10,
-	/obj/item/weapon/stock_parts/cell = 1, /obj/item/bench/laser)
-	time = 900
+	/obj/item/weapon/stock_parts/cell = 1,
+	/obj/item/weaponcrafting/handle/rifle = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
+	time = 1200
 	category = CAT_WEAPON
 	XP = 400
 
@@ -258,9 +270,10 @@
 			/obj/item/crafting/resistor = 3,
 			/obj/item/crafting/board = 2,
 			/obj/item/stack/cable_coil = 15,
-			/obj/item/weapon/stock_parts/cell = 1)
+			/obj/item/weapon/stock_parts/cell = 1,
+			/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
-	time = 1200
+	time = 1900
 	category = CAT_WEAPON
 	XP = 500
 
@@ -279,11 +292,12 @@
 			/obj/item/crafting/board = 1,
 			/obj/item/crafting/bulb = 1,
 			/obj/item/stack/cable_coil = 1,
-			/obj/item/weapon/stock_parts/cell = 1)
+			/obj/item/weapon/stock_parts/cell = 1,
+			/obj/item/weaponcrafting/handle/pistol = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
-	XP = 150
+	XP = 80
 
 /datum/crafting_recipe/laser_rifle9
 	name = "Laser Rifle AER9"
@@ -300,11 +314,12 @@
 			/obj/item/crafting/board = 1,
 			/obj/item/crafting/bulb = 1,
 			/obj/item/stack/cable_coil = 5,
-			/obj/item/weapon/stock_parts/cell = 1)
+			/obj/item/weapon/stock_parts/cell = 1,
+			/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
-	XP = 200
+	XP = 100
 
 /datum/crafting_recipe/laser_rifle13
 	name = "Laser Rifle AER13"
@@ -321,7 +336,8 @@
 			/obj/item/crafting/board = 1,
 			/obj/item/crafting/bulb = 1,
 			/obj/item/stack/cable_coil = 10,
-			/obj/item/weapon/stock_parts/cell = 1)
+			/obj/item/weapon/stock_parts/cell = 1,
+			/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
@@ -342,7 +358,8 @@
 			/obj/item/crafting/board = 3,
 			/obj/item/crafting/bulb = 3,
 			/obj/item/stack/cable_coil = 20,
-			/obj/item/weapon/stock_parts/cell = 1)
+			/obj/item/weapon/stock_parts/cell = 1,
+			/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON
@@ -363,7 +380,8 @@
 			/obj/item/crafting/board = 1,
 			/obj/item/crafting/bulb = 1,
 			/obj/item/stack/cable_coil = 10,
-			/obj/item/weapon/stock_parts/cell = 1)
+			/obj/item/weapon/stock_parts/cell = 1,
+			/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/laser)
 	time = 800
 	category = CAT_WEAPON

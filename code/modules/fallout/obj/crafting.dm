@@ -13,6 +13,24 @@
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "riflestock"
 
+/obj/item/weaponcrafting/handle/rifle
+	name = "Handle"
+	desc = "Просто рукоятка."
+	icon = 'icons/fallout/objects/crafting.dmi'
+	icon_state = "handle_a_1"
+
+/obj/item/weaponcrafting/handle/rifle/initialize()
+	..()
+	icon_state = "handle_a_[rand(1,2)]"
+
+/obj/item/weaponcrafting/handle/pistol
+	name = "Handle"
+	icon_state = "handle_p_1"
+
+/obj/item/weaponcrafting/handle/pistol/initialize()
+	..()
+	icon_state = "handle_p_[rand(1,3)]"
+
 //The following items are in "crafting" type just to keep code clean.
 /obj/item/crafting
 	name = "Shitspawn"
@@ -242,7 +260,7 @@
 	price = 500
 
 
-//РїРѕСЂР° СЃРґРµР»Р°С‚СЊ Р¶РёР·РЅСЊ РѕСЂСѓР¶РµР№РЅРёРєРѕРІ СЃР»РѕР¶РЅРµРµ//
+//Делаем жизнь оружейников сложнее//
 
 /obj/item/crafting/weapon_parts
 	icon = 'icons/fallout/objects/crafting.dmi'
