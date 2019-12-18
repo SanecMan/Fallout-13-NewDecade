@@ -97,6 +97,22 @@ var/global/list/desertTurfEdgeCache
 	name = "rail"
 	icon_state = "blankrailsmiddle"
 
+/turf/open/indestructible/ground/subway/rail/corner
+	name = "rail"
+	icon_state = "railcorner"
+
+/turf/open/indestructible/ground/subway/rail/corner2
+	name = "rail"
+	icon_state = "railcorner2"
+
+/turf/open/indestructible/ground/subway/rail/corner3
+	name = "rail"
+	icon_state = "railcorner3"
+
+/turf/open/indestructible/ground/subway/rail/corner4
+	name = "rail"
+	icon_state = "railcorner4"
+
 /turf/open/indestructible/ground/subway/rail/end
 	name = "rail"
 	icon_state = "blankrailsright"
