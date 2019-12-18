@@ -1,4 +1,10 @@
 //print a warning message to world.log
+#define DIRECT_OUTPUT(A, B) A << B
+#define SEND_IMAGE(target, image) DIRECT_OUTPUT(target, image)
+#define SEND_SOUND(target, sound) DIRECT_OUTPUT(target, sound)
+#define SEND_TEXT(target, text) DIRECT_OUTPUT(target, text)
+#define WRITE_FILE(file, text) DIRECT_OUTPUT(file, text)
+#define WRITE_LOG(log, text) rustg_log_write(log, text)
 #define WARNING(MSG) warning("[MSG] in [__FILE__] at line [__LINE__] src: [src] usr: [usr].")
 /proc/warning(msg)
 	world.log << "## WARNING: [msg]"
@@ -85,3 +91,10 @@
 
 /proc/log_faction(text)
 	diary << "\[[time_stamp()]]FACTION: [text]"
+
+/* Log to both DD and the logfile. */
+/proc/log_world(text)
+#ifdef USE_CUSTOM_ERROR_HANDLER
+	WRITE_LOG(GLOB.world_runtime_log, text)
+#endif
+	SEND_TEXT(world.log, text)

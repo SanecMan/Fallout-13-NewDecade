@@ -36,10 +36,6 @@ var/list/sqrtTable = list(1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 
 /proc/Default(a, b)
 	return a ? a : b
 
-// Greatest Common Divisor - Euclid's algorithm
-/proc/Gcd(a, b)
-	return b ? Gcd(b, a % b) : a
-
 /proc/Inverse(x)
 	return 1 / x
 
@@ -153,6 +149,7 @@ var/list/sqrtTable = list(1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 
 var/gaussian_next
 #define ACCURACY 10000
 /proc/gaussian(mean, stddev)
+	var/static/gaussian_next
 	var/R1;var/R2;var/working
 	if(gaussian_next != null)
 		R1 = gaussian_next
@@ -168,3 +165,128 @@ var/gaussian_next
 		gaussian_next = R2 * working
 	return (mean + stddev * R1)
 #undef ACCURACY
+
+///tg shitcode port///
+#define PERCENT(val) (round((val)*100, 0.1))
+#define CLAMP01(x) (CLAMP(x, 0, 1))
+#define SIGN(x) ( (x)!=0 ? (x) / abs(x) : 0 )
+
+#define CEILING(x, y) ( -round(-(x) / (y)) * (y) )
+
+#define FLOOR(x, y) ( round((x) / (y)) * (y) )
+
+#if DM_VERSION < 513
+#define CLAMP(CLVALUE,CLMIN,CLMAX) ( max( (CLMIN), min((CLVALUE), (CLMAX)) ) )
+#else
+#define CLAMP(CLVALUE,CLMIN,CLMAX) clamp(CLVALUE, CLMIN, CLMAX)
+#endif
+
+// Similar to clamp but the bottom rolls around to the top and vice versa. min is inclusive, max is exclusive
+#define WRAP(val, min, max) ( min == max ? min : (val) - (round(((val) - (min))/((max) - (min))) * ((max) - (min))) )
+
+// Real modulus that handles decimals
+#define MODULUS(x, y) ( (x) - (y) * round((x) / (y)) )
+
+// Tangent
+#if DM_VERSION < 513
+#define TAN(x) (sin(x) / cos(x))
+#else
+#define TAN(x) tan(x)
+#endif
+
+// Cotangent
+#define COT(x) (1 / TAN(x))
+
+// Secant
+#define SEC(x) (1 / cos(x))
+
+// Cosecant
+#define CSC(x) (1 / sin(x))
+
+#define ATAN2(x, y) ( !(x) && !(y) ? 0 : (y) >= 0 ? arccos((x) / sqrt((x)*(x) + (y)*(y))) : -arccos((x) / sqrt((x)*(x) + (y)*(y))) )
+
+// Greatest Common Divisor - Euclid's algorithm
+/proc/Gcd(a, b)
+	return b ? Gcd(b, (a) % (b)) : a
+
+// Least Common Multiple
+#define Lcm(a, b) (abs(a) / Gcd(a, b) * abs(b))
+
+#define INVERSE(x) ( 1/(x) )
+
+// Used for calculating the radioactive strength falloff
+#define INVERSE_SQUARE(initial_strength,cur_distance,initial_distance) ( (initial_strength)*((initial_distance)**2/(cur_distance)**2) )
+
+#define ISABOUTEQUAL(a, b, deviation) (deviation ? abs((a) - (b)) <= deviation : abs((a) - (b)) <= 0.1)
+
+#define ISEVEN(x) (x % 2 == 0)
+
+#define ISODD(x) (x % 2 != 0)
+
+// Returns true if val is from min to max, inclusive.
+#define ISINRANGE(val, min, max) (min <= val && val <= max)
+
+// Same as above, exclusive.
+#define ISINRANGE_EX(val, min, max) (min < val && val < max)
+
+#define ISINTEGER(x) (round(x) == x)
+
+#define ISMULTIPLE(x, y) ((x) % (y) == 0)
+
+// Performs a linear interpolation between a and b.
+// Note that amount=0 returns a, amount=1 returns b, and
+// amount=0.5 returns the mean of a and b.
+#define LERP(a, b, amount) ( amount ? ((a) + ((b) - (a)) * (amount)) : a )
+
+// Returns the nth root of x.
+#define ROOT(n, x) ((x) ** (1 / (n)))
+
+/proc/get_turf_in_angle(angle, turf/starting, increments)
+	var/pixel_x = 0
+	var/pixel_y = 0
+	for(var/i in 1 to increments)
+		pixel_x += sin(angle)+16*sin(angle)*2
+		pixel_y += cos(angle)+16*cos(angle)*2
+	var/new_x = starting.x
+	var/new_y = starting.y
+	while(pixel_x > 16)
+		pixel_x -= 32
+		new_x++
+	while(pixel_x < -16)
+		pixel_x += 32
+		new_x--
+	while(pixel_y > 16)
+		pixel_y -= 32
+		new_y++
+	while(pixel_y < -16)
+		pixel_y += 32
+		new_y--
+	new_x = CLAMP(new_x, 0, world.maxx)
+	new_y = CLAMP(new_y, 0, world.maxy)
+	return locate(new_x, new_y, starting.z)
+
+// Returns a list where [1] is all x values and [2] is all y values that overlap between the given pair of rectangles
+/proc/get_overlap(x1, y1, x2, y2, x3, y3, x4, y4)
+	var/list/region_x1 = list()
+	var/list/region_y1 = list()
+	var/list/region_x2 = list()
+	var/list/region_y2 = list()
+
+	// These loops create loops filled with x/y values that the boundaries inhabit
+	// ex: list(5, 6, 7, 8, 9)
+	for(var/i in min(x1, x2) to max(x1, x2))
+		region_x1["[i]"] = TRUE
+	for(var/i in min(y1, y2) to max(y1, y2))
+		region_y1["[i]"] = TRUE
+	for(var/i in min(x3, x4) to max(x3, x4))
+		region_x2["[i]"] = TRUE
+	for(var/i in min(y3, y4) to max(y3, y4))
+		region_y2["[i]"] = TRUE
+
+	return list(region_x1 & region_x2, region_y1 & region_y2)
+
+#define EXP_DISTRIBUTION(desired_mean) ( -(1/(1/desired_mean)) * log(rand(1, 1000) * 0.001) )
+#define LORENTZ_DISTRIBUTION(x, s) ( s*TAN(TODEGREES(PI*(rand()-0.5))) + x )
+#define LORENTZ_CUMULATIVE_DISTRIBUTION(x, y, s) ( (1/PI)*TORADIANS(arctan((x-y)/s)) + 1/2 )
+#define RULE_OF_THREE(a, b, x) ((a*x)/b)
+

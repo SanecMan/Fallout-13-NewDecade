@@ -163,7 +163,7 @@
 //hook for printing stats to the "MC" statuspanel for admins to see performance and related stats etc.
 /datum/subsystem/proc/stat_entry(msg)
 	if(!statclick)
-		statclick = new/obj/effect/statclick/debug("Initializing...", src)
+		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
 
 
 
@@ -177,6 +177,7 @@
 		title = "\[[state_letter()]][title]"
 
 	stat(title, statclick.update(msg))
+
 
 /datum/subsystem/proc/state_letter()
 	switch (state)

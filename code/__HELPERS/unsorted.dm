@@ -675,21 +675,21 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 /proc/parse_zone(zone)
 	if(zone == "r_hand")
-		return "right hand"
+		return "правая кисть"
 	else if (zone == "l_hand")
-		return "left hand"
+		return "левая кисть"
 	else if (zone == "l_arm")
-		return "left arm"
+		return "левая рука"
 	else if (zone == "r_arm")
-		return "right arm"
+		return "правая рука"
 	else if (zone == "l_leg")
-		return "left leg"
+		return "левая нога"
 	else if (zone == "r_leg")
-		return "right leg"
+		return "правая нога"
 	else if (zone == "l_foot")
-		return "left foot"
+		return "левая ступня"
 	else if (zone == "r_foot")
-		return "right foot"
+		return "правая ступня"
 	else
 		return zone
 
@@ -1393,6 +1393,11 @@ for(type in view(range, dview_mob))
 				return FALSE
 	return TRUE
 
+#define UNTIL(X) while(!(X)) stoplag()
+
+/proc/pass(...)
+	return
+
 /proc/get_var_from_type(type, variable)
 	if(!type || !variable)
 		return null
@@ -1415,3 +1420,98 @@ for(type in view(range, dview_mob))
 	if(ispath(type, /obj/item/weapon) && !ispath(type, /obj/item/weapon/reagent_containers))
 		return "weapon"
 	return "misc"
+
+// \ref behaviour got changed in 512 so this is necesary to replicate old behaviour.
+// If it ever becomes necesary to get a more performant REF(), this lies here in wait
+// #define REF(thing) (thing && istype(thing, /datum) && (thing:datum_flags & DF_USE_TAG) && thing:tag ? "[thing:tag]" : "\ref[thing]")
+/proc/REF(input)
+	if(istype(input, /datum))
+		var/datum/thing = input
+		if(thing.datum_flags & DF_USE_TAG)
+			if(!thing.tag)
+				stack_trace("A ref was requested of an object with DF_USE_TAG set but no tag: [thing]")
+				thing.datum_flags &= ~DF_USE_TAG
+			else
+				return "\[[url_encode(thing.tag)]\]"
+	return "\ref[input]"
+
+//For these two procs refs MUST be ref = TRUE format like typecaches!
+/proc/weakref_filter_list(list/things, list/refs)
+	if(!islist(things) || !islist(refs))
+		return
+	if(!refs.len)
+		return things
+	if(things.len > refs.len)
+		var/list/f = list()
+		for(var/i in refs)
+			var/datum/weakref/r = i
+			var/datum/d = r.resolve()
+			if(d)
+				f |= d
+		return things & f
+
+	else
+		. = list()
+		for(var/i in things)
+			if(!refs[WEAKREF(i)])
+				continue
+			. |= i
+
+/proc/weakref_filter_list_reverse(list/things, list/refs)
+	if(!islist(things) || !islist(refs))
+		return
+	if(!refs.len)
+		return things
+	if(things.len > refs.len)
+		var/list/f = list()
+		for(var/i in refs)
+			var/datum/weakref/r = i
+			var/datum/d = r.resolve()
+			if(d)
+				f |= d
+
+		return things - f
+	else
+		. = list()
+		for(var/i in things)
+			if(refs[WEAKREF(i)])
+				continue
+			. |= i
+
+/proc/special_list_filter(list/L, datum/callback/condition)
+	if(!islist(L) || !length(L) || !istype(condition))
+		return list()
+	. = list()
+	for(var/i in L)
+		if(condition.Invoke(i))
+			. |= i
+/proc/generate_items_inside(list/items_list,var/where_to)
+	for(var/each_item in items_list)
+		for(var/i in 1 to items_list[each_item])
+			new each_item(where_to)
+
+
+// Makes a call in the context of a different usr
+// Use sparingly
+/world/proc/PushUsr(mob/M, datum/callback/CB, ...)
+	var/temp = usr
+	usr = M
+	if (length(args) > 2)
+		. = CB.Invoke(arglist(args.Copy(3)))
+	else
+		. = CB.Invoke()
+	usr = temp
+
+//datum may be null, but it does need to be a typed var
+#define NAMEOF(datum, X) (#X || ##datum.##X)
+
+#define VARSET_LIST_CALLBACK(target, var_name, var_value) CALLBACK(GLOBAL_PROC, /proc/___callbackvarset, ##target, ##var_name, ##var_value)
+//dupe code because dm can't handle 3 level deep macros
+#define VARSET_CALLBACK(datum, var, var_value) CALLBACK(GLOBAL_PROC, /proc/___callbackvarset, ##datum, NAMEOF(##datum, ##var), ##var_value)
+
+
+/proc/CallAsync(datum/source, proctype, list/arguments)
+	set waitfor = FALSE
+	return call(source, proctype)(arglist(arguments))
+
+#define TURF_FROM_COORDS_LIST(List) (locate(List[1], List[2], List[3]))

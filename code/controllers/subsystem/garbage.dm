@@ -229,8 +229,6 @@ var/datum/subsystem/garbage_collector/SSgarbage
 		qdel(timer)
 	return QDEL_HINT_QUEUE
 
-/datum/var/gc_destroyed //Time when this object was destroyed.
-
 /datum/var/running_find_references
 
 /datum/proc/find_refs()

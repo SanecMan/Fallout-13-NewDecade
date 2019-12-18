@@ -629,3 +629,16 @@
 	put_on_delay = 30
 	strip_delay = 10
 	self_weight = 10
+
+/obj/item/clothing/suit/armor/f13/fluff/sw_sand
+	name = "Sandtrooper armor"
+	desc = "For the imperor."
+	icon = 'icons/SST/SW.dmi'
+	icon_state = "Sandtrooper_chest"
+	item_state = "SandTrooperArmor"
+	body_parts_covered = CHEST
+	armor = list(melee = 60, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100, fire = 100, acid = 100)
+	resistance_flags = UNACIDABLE
+	put_on_delay = 30
+	strip_delay = 10
+	self_weight = 10
