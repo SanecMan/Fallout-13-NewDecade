@@ -167,6 +167,11 @@
 	icon = 'icons/fallout/turfs/walls/subway.dmi'
 	icon_state = "subwaytop"
 
+/turf/closed/indestructible/f13/subway/cornerinner
+	name = "tunnel wall"
+	desc = "This wall is made of reinforced concrete.<br>Pre-War engineers knew how to build reliable things."
+	icon_state = "subway"
+
 /turf/closed/indestructible/f13/matrix //The Chosen One from Arroyo!
 	name = "matrix"
 	desc = "<font color='#6eaa2c'>You suddenly realize the truth - there is no spoon.<br>Digital simulation ends here.</font>"

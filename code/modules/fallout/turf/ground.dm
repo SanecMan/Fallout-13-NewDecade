@@ -93,6 +93,18 @@ var/global/list/desertTurfEdgeCache
 	icon_state = "railsnone"
 	icon = 'icons/fallout/turfs/ground.dmi'
 
+/turf/open/indestructible/ground/subway/rail
+	name = "rail"
+	icon_state = "blankrailsmiddle"
+
+/turf/open/indestructible/ground/subway/rail/end
+	name = "rail"
+	icon_state = "blankrailsright"
+
+/turf/open/indestructible/ground/subway/rail/end2
+	name = "rail"
+	icon_state = "blankrailsleft"
+
 /turf/open/ruins
 	name = "ruins"
 	desc = "It's just a pile of concrete rubble."
