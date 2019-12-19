@@ -411,7 +411,3 @@ var/global/list/ghost_others_options = list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define RATIO_WEIGHT 50 // BIGGER - FASTER.
 
 #define string2charlist(string) (splittext(string, regex("(.)")) - splittext(string, ""))
-
-//TG fix porting.
-#define NO_TK TRUE
-//used by canUseTopic()

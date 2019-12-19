@@ -1155,6 +1155,3 @@
 				message_admins("<span class='notice'>[key_name(usr)] dealt [amount] amount of [Text] damage to [L] </span>")
 				href_list["datumrefresh"] = href_list["mobToDamage"]
 
-/datum/proc/CanProcCall(procname)
-	return TRUE
-

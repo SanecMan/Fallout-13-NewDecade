@@ -79,21 +79,21 @@
 //Turns a direction into text
 /proc/dir2text(direction)
 	switch(direction)
-		if(NORTH)
+		if(1)
 			return "north"
-		if(SOUTH)
+		if(2)
 			return "south"
-		if(EAST)
+		if(4)
 			return "east"
-		if(WEST)
+		if(8)
 			return "west"
-		if(NORTHEAST)
+		if(5)
 			return "northeast"
-		if(SOUTHEAST)
+		if(6)
 			return "southeast"
-		if(NORTHWEST)
+		if(9)
 			return "northwest"
-		if(SOUTHWEST)
+		if(10)
 			return "southwest"
 		else
 	return
@@ -102,21 +102,21 @@
 /proc/text2dir(direction)
 	switch(uppertext(direction))
 		if("NORTH")
-			return NORTH
+			return 1
 		if("SOUTH")
-			return SOUTH
+			return 2
 		if("EAST")
-			return EAST
+			return 4
 		if("WEST")
-			return WEST
+			return 8
 		if("NORTHEAST")
-			return NORTHEAST
+			return 5
 		if("NORTHWEST")
-			return NORTHWEST
+			return 9
 		if("SOUTHEAST")
-			return SOUTHEAST
+			return 6
 		if("SOUTHWEST")
-			return SOUTHWEST
+			return 10
 		else
 	return
 
@@ -562,63 +562,3 @@ for(var/t in test_times)
 			return "Limit"
 		if(LIMIT_WEIGHT to INFINITY)
 			return "Unbearably"
-
-/proc/type2parent(child)
-	var/string_type = "[child]"
-	var/last_slash = findlasttext(string_type, "/")
-	if(last_slash == 1)
-		switch(child)
-			if(/datum)
-				return null
-			if(/obj || /mob)
-				return /atom/movable
-			if(/area || /turf)
-				return /atom
-			else
-				return /datum
-	return text2path(copytext(string_type, 1, last_slash))
-
-//returns a string the last bit of a type, without the preceeding '/'
-/proc/type2top(the_type)
-	//handle the builtins manually
-	if(!ispath(the_type))
-		return
-	switch(the_type)
-		if(/datum)
-			return "datum"
-		if(/atom)
-			return "atom"
-		if(/obj)
-			return "obj"
-		if(/mob)
-			return "mob"
-		if(/area)
-			return "area"
-		if(/turf)
-			return "turf"
-		else //regex everything else (works for /proc too)
-			return lowertext(replacetext("[the_type]", "[type2parent(the_type)]/", ""))
-
-/proc/strtohex(str)
-	if(!istext(str)||!str)
-		return
-	var/r
-	var/c
-	for(var/i = 1 to length(str))
-		c= text2ascii(str,i)
-		r+= num2hex(c)
-	return r
-
-// Decodes hex to raw byte string.
-// If safe=TRUE, returns null on incorrect input strings instead of CRASHing
-/proc/hextostr(str, safe=FALSE)
-	if(!istext(str)||!str)
-		return
-	var/r
-	var/c
-	for(var/i = 1 to length(str)/2)
-		c = hex2num(copytext(str,i*2-1,i*2+1), safe)
-		if(isnull(c))
-			return null
-		r += ascii2text(c)
-	return r

@@ -180,9 +180,6 @@ DBColumn/proc/SqlTypeName(type_handler=src.sql_type)
 		if(STRING) return "STRING"
 		if(BLOB) return "BLOB"
 
-/datum/DBQuery/CanProcCall(proc_name)
-	//fuck off kevinz
-	return FALSE
 
 #undef Default_Cursor
 #undef Client_Cursor

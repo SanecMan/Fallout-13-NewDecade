@@ -88,10 +88,9 @@ var/datum/controller/failsafe/Failsafe
 
 /datum/controller/failsafe/proc/defcon_pretty()
 	return defcon
-/*
+
 /datum/controller/failsafe/proc/stat_entry()
 	if(!statclick)
 		statclick = new/obj/effect/statclick/debug("Initializing...", src)
 
 	stat("Failsafe Controller:", statclick.update("Defcon: [defcon_pretty()] (Interval: [Failsafe.processing_interval] | Iteration: [Failsafe.master_iteration])"))
-*/

@@ -5,45 +5,30 @@
  *			Sorting
  */
 
-
 /*
  * Misc
  */
 
-#define LAZYINITLIST(L) if (!L) L = list()
-#define UNSETEMPTY(L) if (L && !length(L)) L = null
-#define LAZYREMOVE(L, I) if(L) { L -= I; if(!length(L)) { L = null; } }
-#define LAZYADD(L, I) if(!L) { L = list(); } L += I;
-#define LAZYOR(L, I) if(!L) { L = list(); } L |= I;
-#define LAZYFIND(L, V) L ? L.Find(V) : 0
-#define LAZYACCESS(L, I) (L ? (isnum(I) ? (I > 0 && I <= length(L) ? L[I] : null) : L[I]) : null)
-#define LAZYSET(L, K, V) if(!L) { L = list(); } L[K] = V;
-#define LAZYLEN(L) length(L)
-#define LAZYCLEARLIST(L) if(L) L.Cut()
-#define SANITIZE_LIST(L) ( islist(L) ? L : list() )
-#define reverseList(L) reverseRange(L.Copy())
-
 //Returns a list in plain english as a string
 /proc/english_list(list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "" )
-	var/total = length(input)
-	switch(total)
-		if (0)
-			return "[nothing_text]"
-		if (1)
-			return "[input[1]]"
-		if (2)
-			return "[input[1]][and_text][input[2]]"
-		else
-			var/output = ""
-			var/index = 1
-			while (index < total)
-				if (index == total - 1)
-					comma_text = final_comma_text
+	var/total = input.len
+	if (!total)
+		return "[nothing_text]"
+	else if (total == 1)
+		return "[input[1]]"
+	else if (total == 2)
+		return "[input[1]][and_text][input[2]]"
+	else
+		var/output = ""
+		var/index = 1
+		while (index < total)
+			if (index == total - 1)
+				comma_text = final_comma_text
 
-				output += "[input[index]][comma_text]"
-				index++
+			output += "[input[index]][comma_text]"
+			index++
 
-			return "[output][and_text][input[index]]"
+		return "[output][and_text][input[index]]"
 
 //Returns list element or null. Should prevent "index out of bounds" error.
 /proc/listgetindex(list/L, index)
@@ -63,8 +48,8 @@
 //Checks if the list is empty
 /proc/isemptylist(list/L)
 	if(!L.len)
-		return TRUE
-	return FALSE
+		return 1
+	return 0
 
 //Checks for specific types in a list
 /proc/is_type_in_list(atom/A, list/L)
@@ -125,12 +110,10 @@
 	return
 
 //Removes any null entries from the list
-//Returns TRUE if the list had nulls, FALSE otherwise
 /proc/listclearnulls(list/L)
-	var/start_len = L.len
-	var/list/N = new(start_len)
+	var/list/N = new(L.len)
 	L -= N
-	return L.len < start_len
+
 /*
  * Returns list containing all the entries from first list that are not present in second.
  * If skiprep = 1, repeated elements are treated as one.
@@ -441,6 +424,18 @@
 		used_key_list[input_key] = 1
 	return input_key
 
+#if DM_VERSION > 512
+#error Remie said that lummox was adding a way to get a lists
+#error contents via list.values, if that is true remove this
+#error otherwise, update the version and bug lummox
+#elseif
+//Flattens a keyed list into a list of it's contents
+/proc/flatten_list(list/key_list)
+	if(!islist(key_list))
+		return null
+	. = list()
+	for(var/key in key_list)
+		. |= key_list[key]
 
 //Picks from the list, with some safeties, and returns the "default" arg if it fails
 #define DEFAULTPICK(L, default) ((istype(L, /list) && L:len) ? pick(L) : default)
@@ -452,74 +447,3 @@
 #define LAZYADD(L, I) if(!L) { L = list(); } L += I;
 #define LAZYACCESS(L, I) (L ? (isnum(I) ? (I > 0 && I <= L.len ? L[I] : null) : L[I]) : null)
 #define LAZYLEN(L) length(L)
-
-#if DM_VERSION > 513
-#error Remie said that lummox was adding a way to get a lists
-#error contents via list.values, if that is true remove this
-#error otherwise, update the version and bug lummox
-#endif
-//Flattens a keyed list into a list of it's contents
-/proc/flatten_list(list/key_list)
-	if(!islist(key_list))
-		return null
-	. = list()
-	for(var/key in key_list)
-		. |= key_list[key]
-
-/proc/make_associative(list/flat_list)
-	. = list()
-	for(var/thing in flat_list)
-		.[thing] = TRUE
-
-//Picks from the list, with some safeties, and returns the "default" arg if it fails
-#define DEFAULTPICK(L, default) ((islist(L) && length(L)) ? pick(L) : default)
-
-/* Definining a counter as a series of key -> numeric value entries
-
- * All these procs modify in place.
-*/
-
-/proc/counterlist_scale(list/L, scalar)
-	var/list/out = list()
-	for(var/key in L)
-		out[key] = L[key] * scalar
-	. = out
-
-/proc/counterlist_sum(list/L)
-	. = 0
-	for(var/key in L)
-		. += L[key]
-
-/proc/counterlist_normalise(list/L)
-	var/avg = counterlist_sum(L)
-	if(avg != 0)
-		. = counterlist_scale(L, 1 / avg)
-	else
-		. = L
-
-/proc/counterlist_combine(list/L1, list/L2)
-	for(var/key in L2)
-		var/other_value = L2[key]
-		if(key in L1)
-			L1[key] += other_value
-		else
-			L1[key] = other_value
-
-/proc/assoc_list_strip_value(list/input)
-	var/list/ret = list()
-	for(var/key in input)
-		ret += key
-	return ret
-
-/proc/compare_list(list/l,list/d)
-	if(!islist(l) || !islist(d))
-		return FALSE
-
-	if(l.len != d.len)
-		return FALSE
-
-	for(var/i in 1 to l.len)
-		if(l[i] != d[i])
-			return FALSE
-
-	return TRUE

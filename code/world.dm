@@ -494,7 +494,3 @@ var/rebootingpendingmapchange = 0
 			log_game("Failed to change map: Unknown error: Error code #[.]")
 	if(rebootingpendingmapchange)
 		world.Reboot("Map change finished", time = 10)
-
-#ifdef FIND_REF_NO_CHECK_TICK
-	loop_checks = FALSE
-#endif

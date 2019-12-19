@@ -778,16 +778,3 @@
 	strip_delay = 10
 	resistance_flags = UNACIDABLE
 	self_weight = 2
-
-/obj/item/clothing/head/helmet/f13/fluff/sw_sand
-	name = "Sandtrooper helmet"
-	desc = "DROIDS!"
-	icon = 'icons/SST/SW.dmi'
-	icon_state = "Sandtrooper_helmet"
-	item_state = "sw_s_h"
-	armor = list(melee = 30, bullet = 30, laser = 30, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 30, acid = 30)
-	flags_inv = HIDEEARS|HIDEHAIR
-	put_on_delay = 20
-	strip_delay = 30
-	resistance_flags = FIRE_PROOF
-	self_weight = 1
