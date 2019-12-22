@@ -82,20 +82,9 @@
 		/obj/item/weapon/weldingtool/experimental,
 		/obj/item/weapon/restraints/legcuffs/bola
 		)
-	roles = list(
-		/datum/job/gangleader,
-		/datum/job/mayor,
-		/datum/job/general,
-	//	/datum/job/legate,
-		/datum/job/elder,
-		/datum/job/colonel,
-		/datum/job/overseer
-		//datum/job/preacher
-		)
 	price = -1
 
 	on_set(client/client)
-		client.add_race("ghoul", /datum/species/ghoul)
 		client.add_race("human", /datum/species/human)
 
 /datum/content_pack/cigarettes
@@ -127,7 +116,7 @@
 		/obj/item/clothing/head/f13/stormchaser,
 		/obj/item/clothing/head/f13/gambler
 		)
-	price = 5000
+	price = 10000
 
 /datum/content_pack/wardrobe
 	name = "Высшая Мода"
@@ -149,7 +138,7 @@
 		/obj/item/clothing/suit/f13/puffer,
 		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer
 		)
-	price = 5000
+	price = 20000
 
 /datum/content_pack/vault13
 	name = "Убежище 13"
@@ -160,7 +149,7 @@
 		/obj/item/weapon/reagent_containers/food/drinks/flask/vault13,
 		/obj/item/weapon/lighter/vault13
 		)
-	price = 7500
+	price = 15000
 
 /datum/content_pack/bard
 	name = "Музыкальные инструменты"
@@ -184,7 +173,7 @@
 		/obj/item/clothing/shoes/f13/doom,
 		/obj/item/weapon/mounted_chainsaw
 		)
-	price = 100000
+	price = 10000000
 
 /datum/content_pack/followers
 	name = "Набор Последователей"
@@ -201,7 +190,7 @@
 		/obj/item/weapon/storage/backpack/satchel/leather,
 		/obj/item/weapon/storage/firstaid
 	)
-	price = 5000
+	price = 9000
 
 /datum/content_pack/trooper_armor
 	name = "Набор брони НКР"
@@ -215,7 +204,7 @@
 		/obj/item/clothing/suit/armor/f13/ncr/stalker,
 		/obj/item/clothing/suit/armor/f13/ncr/punisher
 		)
-	price = 1000
+	price = 10000
 
 /*
 /datum/content_pack/heavy_trooper
@@ -257,7 +246,7 @@
 		/obj/item/device/instrument/eguitar,
 		/obj/item/key/motorcycle
 		)
-	price = 7500
+	price = 8000
 
 /datum/content_pack/off
 	name = "Набор Бейсболиста"
@@ -270,7 +259,7 @@
 		//obj/item/clothing/gloves/f13/baseball,
 		/obj/item/clothing/shoes/f13/fancy
 		)
-	price = 2500
+	price = 10000
 
 /datum/content_pack/madmax
 	name = "Безумный Макс"
@@ -284,7 +273,7 @@
 		/obj/item/clothing/under/pants/f13/warboy,
 		/obj/item/key/buggy/wheel
 		)
-	price = 10000
+	price = 15000
 
 /datum/content_pack/trooper_armor
 	name = "Броня подразделений НКР"
@@ -298,13 +287,50 @@
 		/obj/item/clothing/suit/armor/f13/ncr/stalker,
 		/obj/item/clothing/suit/armor/f13/ncr/punisher
 		)
-	price = 8000
+	price = 10000
 
 /datum/content_pack/glowing_ghoul
 	name = "Игровая раса: Светящийся Гуль"
 	id = "glowing_ghoul"
 	desc = "<b>Доступно для: Кого угодно, кроме анклавовцев!</b><br>Данный набор, позволяет вам создать светящегося гуля!"
-	price = 10000
+	price = 50000
 
 	on_set(client/client)
 		client.add_race("glowing ghoul", /datum/species/ghoul/glowing)
+
+/datum/content_pack/glowing_ghoul
+	name = "Игровая раса: Гуль"
+	id = "ghoul"
+	desc = "<b>Доступно для: Кого угодно, кроме анклавовцев!</b><br>Данный набор, позволяет вам создать гуля!"
+	price = 30000
+	on_set(client/client)
+		client.add_race("ghoul", /datum/species/ghoul)
+
+/datum/content_pack/specops
+	name = "Отряд Специального Назначения"
+	id = "specops"
+	desc = "<b>Доступно для: кто угодно!</b><br>Альфа 1-1, это браво, как слышите?.<br>.
+	items = list(
+		/obj/item/clothing/gloves/f13/military,
+		/obj/item/clothing/shoes/f13/military,,
+		/obj/item/clothing/suit/armor/f13/black_combat_armor,
+		/obj/item/clothing/under/syndicate/tacticool,
+		/obj/item/clothing/glasses/night
+		)
+	price = 85000
+
+
+/datum/content_pack/leaders
+	id = "leaders"
+	desc = "<b>Доступно для: кого угодно!</b><br>А кто бы не хотел быть лидером?.<br>.
+	roles = list(
+		/datum/job/gangleader,
+		/datum/job/mayor,
+		/datum/job/general,
+	//	/datum/job/legate,
+		/datum/job/elder,
+		/datum/job/colonel,
+		/datum/job/overseer
+		//datum/job/preacher
+		)
+	price = 35000

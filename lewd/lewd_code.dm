@@ -15,7 +15,7 @@
 		moan--
 	lastmoan = moan
 
-	visible_message("<font color=purple> <B>\The [src]</B> [pick("мычит", "мычит в наслаждении",)].</font>")
+	visible_message("<font color=purple> <B>[src]</B> [pick("мычит", "мычит в наслаждении",)].</font>")
 	playsound(get_turf(src), "honk/sound/interactions/moan_[gender == FEMALE ? "f" : "m"][moan].ogg", 70, 1, 0)//, pitch = get_age_pitch())
 
 /mob/proc/cum(var/mob/partner, var/target_orifice)
@@ -66,12 +66,12 @@
 					message = "кончил на шею и грудь [partner]."
 			if(NUTS_TO_FACE)
 				if(partner.has_mouth() && partner.mouth_is_free())
-					message = "энергично втирает свою волосатую пизду в \the [partner]'s рот, прежде чем выстрелить своей густой,липкой спермой на глаза и волосы."
+					message = "энергично втирает свою волосатую пизду в [partner] рот, прежде чем выстрелить своей густой,липкой спермой на глаза и волосы."
 			if(THIGH_SMOTHERING)
 				if(src.has_penis())
-					message = "удерживает  \the [partner] в бедрах, когда член начинает пульсировать, разбрасывая тяжелый груз по всему лицу."
+					message = "удерживает [partner] в бедрах, когда член начинает пульсировать, разбрасывая тяжелый груз по всему лицу."
 				else
-					message = "сомкнул ноги в оргазме на голове \the [partner]'s и кончив на неё"
+					message = "сомкнул ноги в оргазме на голове [partner] и кончив на неё"
 			else
 				message = "спустил на пол!"
 		lust = 5
@@ -86,7 +86,7 @@
 	else if(gender == FEMALE)
 		playsound(loc, "honk/sound/interactions/final_f[rand(1, 5)].ogg", 70, 1, 0)//, pitch = get_age_pitch())
 
-	visible_message("<font color=purple><b>\The [src]</b> [message]</font>")
+	visible_message("<font color=purple><b> [src]</b> [message]</font>")
 
 	multiorgasms += 1
 	if(multiorgasms == 1)
@@ -163,7 +163,7 @@
 		set_is_fucking(partner , CUM_TARGET_MOUTH)
 
 	playsound(loc, "honk/sound/interactions/oral[rand(1, 2)].ogg", 70, 1, -1)
-	visible_message("<b>\The [src]</b> [message]")
+	visible_message("<b>[src]</b> [message]")
 	handle_post_sex(lust_increase, CUM_TARGET_MOUTH, partner)
 	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
@@ -173,7 +173,7 @@
 	var/lust_increase = 10
 
 	if(is_fucking(partner, CUM_TARGET_THROAT))
-		message = "[pick(list("Брутально трахает [partner] в глотку.", "chokes \the [partner] on their dick."))]</span>"
+		message = "[pick(list("Брутально трахает [partner] в глотку.", "насаживает горло [partner] на свой член."))]</span>"
 		if(rand(3))
 			partner.emote("chokes on \The [src]")
 			partner.losebreath = 5
@@ -217,7 +217,7 @@
 		set_is_fucking(partner, CUM_TARGET_VAGINA)
 
 	playsound(loc, "honk/sound/interactions/champ[rand(1, 2)].ogg", 50, 1, -1)
-	visible_message("<b>\The [src]</b> [message]")
+	visible_message("<b>[src]</b> [message]")
 	handle_post_sex(lust_increase, CUM_TARGET_VAGINA, partner)
 	partner.handle_post_sex(lust_increase, null, src)
 	partner.dir = get_dir(partner,src)
@@ -247,21 +247,21 @@
 		message = "опускает свой зад на член [partner]."
 		partner.set_is_fucking(src, CUM_TARGET_ANUS)
 	playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
-	visible_message("<b>\The [src]</b> [message]")
+	visible_message("<b>[src]</b> [message]")
 	partner.handle_post_sex(lust_increase, CUM_TARGET_ANUS, src)
 	handle_post_sex(lust_increase, null, partner)
 	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
 
 /mob/proc/do_fingering(var/mob/partner)
-	visible_message("<b>\The [src]<b> [pick(list("fingers \the [partner].", "fingers \the [partner]'s pussy.", "fingers \the [partner] hard."))]</span>")
+	visible_message("<b>[src]<b> [pick(list("вставляет пальцы в [partner].", "вставляет пальцы в киску [partner].", "трахает пальцами [partner] в киску."))]</span>")
 	playsound(loc, "honk/sound/interactions/champ_fingering.ogg", 50, 1, -1)
 	partner.handle_post_sex(10, null, src)
 	partner.dir = get_dir(partner, src)
 	do_fucking_animation(get_dir(src, partner))
 
 /mob/proc/do_fingerass(var/mob/partner)
-	visible_message("<b>\The [src]<b> [pick(list("fingers \the [partner].", "fingers \the [partner]'s asshole.", "fingers \the [partner] hard."))]</span>")
+	visible_message("<b>[src]<b> [pick(list("вставляет пальчик в дырочку [partner].", "трахает дырочку [partner] палтцем.", "трахает дырочку [partner] тремя пальцами."))]</span>")
 	playsound(loc, "honk/sound/interactions/champ_fingering.ogg", 50, 1, -1)
 	partner.handle_post_sex(10, null, src)
 	partner.dir = get_dir(partner, src)
@@ -347,18 +347,18 @@
 	if(is_fucking(partner, GRINDING_FACE_WITH_FEET)) {
 		if(src.get_item_by_slot(slot_shoes) != null) {
 
-			message = "[pick(list("grinds their [get_shoes()] into [partner] face.", "presses their footwear down hard on [partner] face.", "rubs off the dirt from their [get_shoes()] onto [partner]'s face."))]</span>"
+			message = "[pick(list("мнет лицо [partner] своими [get_shoes()].", "давит своей обувью на лицо [partner].", "почистил грязь со своих [get_shoes()] об лицо [partner]."))]</span>"
 		} else {
 
-			message = "[pick(list("grinds their barefeet into [partner] face.", "Прикрывает рот и нос [partner] своими босымы ногами.", "проводит подошвами своих босых ног по губам [partner]"))]</span>"
+			message = "[pick(list("мнет своими босыми ногами лицо [partner].", "Прикрывает рот и нос [partner] своими босымы ногами.", "проводит подошвами своих босых ног по губам [partner]"))]</span>"
 		}
 	} else if(is_fucking(partner, GRINDING_MOUTH_WITH_FEET)) {
 		if(src.get_item_by_slot(slot_shoes) != null) {
 
-			message = "[pick(list("вытаскивает [get_shoes()] из рта и кладет их на лицо [partner].", "медленно втягивает их [get_shoes()] из рта [partner] помещая их на лицо."))]</span>"
+			message = "[pick(list("вытаскивает [get_shoes()] из рта и кладет их на лицо [partner].", "медленно вытягивает [get_shoes()] из рта [partner] помещая их на лицо."))]</span>"
 		} else {
 
-			message = "[pick(list("вытаскивает босые ноги изо рта [partner] и кладет их на лицо.", "retracts their barefeet from [partner]'s mouth and grinds them into their face instead."))]</span>"
+			message = "[pick(list("вытаскивает босые ноги изо рта [partner] и кладет их на лицо.", "оттаскивает свои пальчики ног из рта [partner] и ставит ступню на лицо, поминая пальцами носик."))]</span>"
 		}
 		set_is_fucking(partner , GRINDING_FACE_WITH_FEET)
 	} else {
@@ -374,7 +374,7 @@
 	}
 
 	playsound(loc, "honk/sound/interactions/foot_dry[rand(1, 4)].ogg", 70, 1, -1)
-	visible_message("<b>\The [src]</b> [message]")
+	visible_message("<b>[src]</b> [message]")
 	partner.handle_post_sex(lust_increase, null, src)
 	partner.dir = get_dir(src, partner)
 	do_fucking_animation(get_dir(src, partner))
@@ -387,7 +387,7 @@
 	if(is_fucking(partner, GRINDING_MOUTH_WITH_FEET)) {
 		if(src.get_item_by_slot(slot_shoes) != null) {
 
-			message = "[pick(list("грубо пихает свои [get_shoes()] глубже в рот [partner].", "harshly forces another inch of their [get_shoes()] into [partner]'s mouth.", "прижимает свои [get_shoes()] в глубь рта [partner]."))]</span>"
+			message = "[pick(list("грубо пихает свои [get_shoes()] глубже в рот [partner].", "грубо пропихивает сантиметр за сантиметром свои [get_shoes()] в рот [partner].", "прижимает свои [get_shoes()] в глубь рта [partner]."))]</span>"
 		} else {
 
 			message = "[pick(list("шевелит пальцами ног внутри рта [partner].", "запихивает свои босые ноги глубже в рот [partner], двигая ими.", "грубо скрежещет ногами по языку [partner]."))]</span>"
@@ -395,7 +395,7 @@
 	} else if(is_fucking(partner, GRINDING_FACE_WITH_FEET)) {
 		if(src.get_item_by_slot(slot_shoes) != null) {
 
-			message = "[pick(list("decides to force their [get_shoes()] deep into [partner]'s mouth.", "прижал кончик своих [get_shoes()] к губам [partner]'s проталкивая из внуть."))]</span>"
+			message = "[pick(list("решает запихать свои [get_shoes()] как можно глубже в рот [partner].", "прижал кончик своих [get_shoes()] к губам [partner]'s проталкивая из внуть."))]</span>"
 		} else {
 
 			message = "[pick(list("открывает рот [partner] пальцами ног и пихает их внутрь.", "давит ногой на рот еще сильнее, толкая ногу в рот [partner]."))]</span>"
@@ -405,7 +405,7 @@
 
 		if(src.get_item_by_slot(slot_shoes) != null) {
 
-			message = "[pick(list("Одним быстрым движением проталкивает свои [get_shoes()] в рот [partner].", "grinds the tip of their [get_shoes()] against [partner]'s mouth before pushing themselves in."))]</span>"
+			message = "[pick(list("Одним быстрым движением проталкивает свои [get_shoes()] в рот [partner].", "заставляет лизать носки своих [get_shoes()], после чего просовывает их в рот [partner]."))]</span>"
 		} else {
 
 			message = "[pick(list("Трет свои грязные босые ноги об лицо [partner]'s прежде чем толкать их в морду.", "толкает свои босые ноги в рот [partner].", "прикрывает рот и нос [partner] ногой, а затем толкает обе ноги внутрь."))]</span>"
@@ -414,7 +414,7 @@
 	}
 
 	playsound(loc, "honk/sound/interactions/foot_wet[rand(1, 3)].ogg", 70, 1, -1)
-	visible_message("<b>\The [src]</b> [message]")
+	visible_message("<b>[src]</b> [message]")
 	partner.handle_post_sex(lust_increase, null, src)
 	partner.dir = get_dir(src, partner)
 	do_fucking_animation(get_dir(src, partner))
@@ -424,7 +424,7 @@
 	var/lust_increase = 1
 
 	if(is_fucking(partner, NUTS_TO_FACE))
-		message = pick(list("grabs the back of [partner]'s head and pulls it into their crotch.", "jams their nutsack right into [partner]'s face.", "roughly grinds their fat nutsack into [partner]'s mouth.", "pulls out their saliva-covered nuts from [partner]'s violated mouth and then wipes off the slime onto their face."))
+		message = pick(list("хватает [partner] за голову и прижимает её к своей машонке.", "водит своей машонкой по лицу [partner].", "roughly grinds their fat nutsack into [partner]'s mouth.", "pulls out their saliva-covered nuts from [partner]'s violated mouth and then wipes off the slime onto their face."))
 	else
 		message = pick(list("wedges a digit into the side of [partner]'s jaw and pries it open before using their other hand to shove their whole nutsack inside!", "stands with their groin inches away from [partner]'s face, then thrusting their hips forward and smothering [partner]'s whole face with their heavy ballsack."))
 		set_is_fucking(partner , NUTS_TO_FACE)
@@ -487,7 +487,7 @@
 		moan()
 
 /obj/item/weapon/dildo
-	name = "dildo"
+	name = "дилдо"
 	desc = "Hmmm, deal throw."
 	icon = 'honk/icons/obj/items/dildo.dmi'
 	icon_state = "dildo"
@@ -506,9 +506,9 @@
 	var/message = ""
 	if(istype(M, /mob/living/carbon/human) && user.zone_selected == "groin" && M.is_nude())
 		if (hole == CUM_TARGET_VAGINA && M.has_vagina())
-			message = (user == M) ?  "fucks their own pussy with \the [src]" : pick(list("fucks [M] right in the pussy with \the [src]", "jams \the [src] right into [M]"))
+			message = (user == M) ?  "трахает свою вагину с помощью [src]" : pick(list("трахает вагину [M] с помощью [src]", "пихает [src] прямо в [M]"))
 		else if (hole == CUM_TARGET_ANUS && M.has_anus())
-			message = (user == M) ? "fucks their own ass with \the [src]" : "fucks [M]'s asshole with \the [src]"
+			message = (user == M) ? "трахает себя в задницу с помощью [src]" : "трахает задницу [M] с помощью [src]"
 	if(message)
 		user.visible_message("<font color=purple>[user] [message].</font>")
 		M.handle_post_sex(pleasure, null, user)
@@ -521,4 +521,4 @@
 		hole = CUM_TARGET_ANUS
 	else
 		hole = CUM_TARGET_VAGINA
-	user << "<span class='warning'>Hmmm. Maybe we should put it in \a [hole]?</span>"
+	user << "<span class='warning'>Гмм, может моя должен пихать эта штука в своя [hole]?</span>"

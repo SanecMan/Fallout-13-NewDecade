@@ -33,7 +33,7 @@
 // If I could have gotten away with using a tilde in the type path, I would have.
 /datum/interaction/lewd
 	command = "assslap"
-	description = "Slap their ass."
+	description = "Ўлепнуть по жопе."
 	simple_message = "USER шлепнул TARGET по заднице!"
 	simple_style = "danger"
 	interaction_sound = 'honk/sound/interactions/slap.ogg'
@@ -106,7 +106,7 @@
 	return ..()
 
 /datum/interaction/lewd/get_action_link_for(var/mob/user, var/mob/target)
-	return "<font color='#FF0000'><b>ERP:</b></font> [..()]"
+	return "<font color='#FF0000'><b>Ё–»:</b></font> [..()]"
 	if(user.stat == DEAD) return
 
 #define CUM_TARGET_MOUTH "mouth"
