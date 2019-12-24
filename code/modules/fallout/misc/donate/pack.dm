@@ -309,7 +309,7 @@
 /datum/content_pack/specops
 	name = "Отряд Специального Назначения"
 	id = "specops"
-	desc = "<b>Доступно для: кто угодно!</b><br>Альфа 1-1, это браво, как слышите?.<br>.
+	desc = "<b>Доступно для: кто угодно!</b><br>Альфа 1-1, это браво, как слышите?.<br>."
 	items = list(
 		/obj/item/clothing/gloves/f13/military,
 		/obj/item/clothing/shoes/f13/military,,
@@ -322,7 +322,7 @@
 
 /datum/content_pack/leaders
 	id = "leaders"
-	desc = "<b>Доступно для: кого угодно!</b><br>А кто бы не хотел быть лидером?.<br>.
+	desc = "<b>Доступно для: кого угодно!</b><br>А кто бы не хотел быть лидером?.<br>."
 	roles = list(
 		/datum/job/gangleader,
 		/datum/job/mayor,
