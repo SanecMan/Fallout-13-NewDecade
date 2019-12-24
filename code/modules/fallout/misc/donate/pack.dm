@@ -173,7 +173,7 @@
 		/obj/item/clothing/shoes/f13/doom,
 		/obj/item/weapon/mounted_chainsaw
 		)
-	price = 10000000
+	price = 9000000000
 
 /datum/content_pack/followers
 	name = "Набор Последователей"
@@ -321,6 +321,7 @@
 
 
 /datum/content_pack/leaders
+	name = "Лидеры всех основных фракций"
 	id = "leaders"
 	desc = "<b>Доступно для: кого угодно!</b><br>А кто бы не хотел быть лидером?.<br>."
 	roles = list(
@@ -333,4 +334,22 @@
 		/datum/job/overseer
 		//datum/job/preacher
 		)
-	price = 35000
+	price = 800000000
+
+/datum/content_pack/enclave2
+	name = "Анклав: роль сержанта"
+	id = "enclave_sergeant"
+	desc = "<b>Открывает доступ к роли сержанта Анклава!</b><br>И-ДИ-ОТ!<br>."
+	roles = list(
+	/datum/outfit/job/enclave_sergeant
+		)
+	price = 6500000
+
+/datum/content_pack/enclave
+	name = "Анклав: роль рядового"
+	id = "enclave_private"
+	desc = "<b>Открывает доступ к роли рядового Анклава!</b><br>ГДЕ ВАША СИЛОВАЯ БРОНЯ?.<br>."
+	roles = list(
+	/datum/job/enclave_private
+		)
+	price = 3500000
