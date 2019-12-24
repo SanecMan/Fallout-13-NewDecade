@@ -272,6 +272,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/m44
 	name = "magnum revolver cylinder"
+	icon_state = "b38"
 	ammo_type = /obj/item/ammo_casing/F13/m44
 	caliber = "44mm"
 	max_ammo = 6
