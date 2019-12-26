@@ -101,14 +101,14 @@
 	if(buckle_mob(M))
 		if(M == user)
 			M.visible_message(\
-				"<span class='notice'>[M] buckles [M.p_them()]self to [src].</span>",\
-				"<span class='notice'>You buckle yourself to [src].</span>",\
-				"<span class='italics'>You hear metal clanking.</span>")
+				"<span class='notice'>[M] садится на [src].</span>",\
+				"<span class='notice'>Вы сели на [src].</span>",\
+				"<span class='italics'>Вы слышите металлический лязг.</span>")
 		else
 			M.visible_message(\
-				"<span class='warning'>[user] buckles [M] to [src]!</span>",\
-				"<span class='warning'>[user] buckles you to [src]!</span>",\
-				"<span class='italics'>You hear metal clanking.</span>")
+				"<span class='warning'>[user] садит [M] на [src]!</span>",\
+				"<span class='warning'>[user] посадил вас на [src]!</span>",\
+				"<span class='italics'>Вы слышите металлический лязг.</span>")
 		return 1
 
 
@@ -117,14 +117,14 @@
 	if(M)
 		if(M != user)
 			M.visible_message(\
-				"<span class='notice'>[user] unbuckles [M] from [src].</span>",\
-				"<span class='notice'>[user] unbuckles you from [src].</span>",\
-				"<span class='italics'>You hear metal clanking.</span>")
+				"<span class='notice'>[user] поднимает [M] с [src].</span>",\
+				"<span class='notice'>[user] поднимает вас с [src].</span>",\
+				"<span class='italics'>Вы слышите металлический лязг.</span>")
 		else
 			M.visible_message(\
-				"<span class='notice'>[M] unbuckles [M.p_them()]self from [src].</span>",\
-				"<span class='notice'>You unbuckle yourself from [src].</span>",\
-				"<span class='italics'>You hear metal clanking.</span>")
+				"<span class='notice'>[M] встает с [src].</span>",\
+				"<span class='notice'>Вы встали с [src].</span>",\
+				"<span class='italics'>Вы слышите металлический лязг.</span>")
 		add_fingerprint(user)
 	return M
 
