@@ -330,12 +330,13 @@
 		/datum/job/general,
 	//	/datum/job/legate,
 		/datum/job/elder,
-		/datum/job/colonel,
+	//	/datum/job/colonel,
 		/datum/job/overseer
 		//datum/job/preacher
 		)
 	price = 800000000
 
+/*
 /datum/content_pack/enclave2
 	name = "Анклав: роль сержанта"
 	id = "enclave_sergeant"
@@ -353,3 +354,4 @@
 	/datum/job/enclave_private
 		)
 	price = 3500000
+*/

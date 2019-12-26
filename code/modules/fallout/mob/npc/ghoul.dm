@@ -82,3 +82,25 @@
 /mob/living/simple_animal/hostile/ghoul/glowing/New()
 	..()
 	SSradiation.processing += src
+
+/mob/living/simple_animal/hostile/ghoul/soldier
+	name = "feral ghoul"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/fallout/mobs/animal.dmi'
+	icon_state = "soldier_ghoul"
+	icon_living = "soldier_ghoul"
+	icon_dead = "soldier_ghoul_d"
+	icon_gib = "gib"
+	maxHealth = 90
+	health = 90
+
+/mob/living/simple_animal/hostile/ghoul/soldier/armored
+	name = "armored feral ghoul"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	icon = 'icons/fallout/mobs/animal.dmi'
+	icon_state = "soldier_ghoul_a"
+	icon_living = "soldier_ghoul_a"
+	icon_dead = "soldier_ghoul_a_d"
+	icon_gib = "gib"
+	maxHealth = 100
+	health = 100

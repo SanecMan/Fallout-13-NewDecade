@@ -543,7 +543,7 @@ This is here to make the tiles around the station mininuke change when it's arme
 	else
 		to_chat(get(src, /mob), "<span class='danger'>You can't help but feel that you just lost something back there...</span>")
 		var/turf/targetturf = relocate()
-		message_admins("[src] кто-то спиздил диск \
+		message_admins("кто-то спиздил диск \
 			[ADMIN_COORDJMP(diskturf)]. Телепортирую сюда \
 			[ADMIN_COORDJMP(targetturf)].")
 		log_game("[src] has been moved out of bounds in [COORD(diskturf)]. \
