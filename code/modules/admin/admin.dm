@@ -3,7 +3,7 @@ var/global/BSACooldown = 0
 
 ////////////////////////////////
 /proc/message_admins(msg)
-	msg = "<span class=\"admin\"><span class=\"prefix\">ADMIN LOG:</span> <span class=\"message\">[msg]</span></span>"
+	msg = "<span class=\"admin\"><span class=\"prefix\">кнц:</span> <span class=\"message\">[msg]</span></span>"
 	to_chat(admins, msg)
 
 /proc/relay_msg_admins(msg)
