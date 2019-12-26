@@ -203,33 +203,33 @@ mob/proc/set_faction(var/faction)
 	return 1
 
 /datum/f13_faction/neutral
-	name = "Neutral"
-	full_name = "Independent Wastelanders"
-	description = "<b>Alignment: True Neutral</b><br>Wastelanders - A catch-all term for anyone living in the wasteland who are not affiliated with any other groups.<br>They make a subsistence living off the land, trade with local settlements, and try not to be ravaged by the abundant (and usually hostile) wildlife, or bands of roaming raider gangs and slavers.<br><i>Home, home on the wastes...</i>"
+	name = "Нейтралы"
+	full_name = "Независимые выживальщики"
+	description = "<b>Предназначение: Истинные Нейтралы</b><br>Wastelanders - A catch-all term for anyone living in the wasteland who are not affiliated with any other groups.<br>They make a subsistence living off the land, trade with local settlements, and try not to be ravaged by the abundant (and usually hostile) wildlife, or bands of roaming raider gangs and slavers.<br><i>Home, home on the wastes...</i>"
 	id = "none"
 	karma = 0
 
 /datum/f13_faction/city
-	name = "City"
+	name = "Город"
 	color = "#804B00"
 	id = "city"
 	head_status = "mayor"
 	preview_image = 'html/factions/city.png'
 	full_name = "City Dwellers"
-	description = "<b>Alignment: Lawful Neutral</b><br>City dwellers - A group of wastelanders that have holed up in the town to wait out the worst and hope for the best.<br>As the City evolved, its citizens became different from the rest of the Wasteland dwellers - they value the safety of a city, prefer better food and clothing, and mostly trust the elected Mayor - even if the decisions made are not the best.<br><i>In Mayor We Trust!</i>"
+	description = "<b>Предназначение: Законопослушные нейтралы</b><br>City dwellers - A group of wastelanders that have holed up in the town to wait out the worst and hope for the best.<br>As the City evolved, its citizens became different from the rest of the Wasteland dwellers - they value the safety of a city, prefer better food and clothing, and mostly trust the elected Mayor - even if the decisions made are not the best.<br><i>In Mayor We Trust!</i>"
 	flags = HAVE_FREQ
 	area = /area/f13/city
 	verbs = list(/mob/proc/begin_head_voting)
 	karma = 10
 
 /datum/f13_faction/raider
-	name = "Slavers"
+	name = "Работорговцы"
 	color = "#804B00"
 	id = "raiders"
 	head_status = "gangleader"
 	preview_image = 'html/factions/raider.png'
 	full_name = "Slaver Gang"
-	description = "<b>Alignment: Chaotic Evil</b><br>Slavers - Any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland, and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
+	description = "<b>Предназначение: Хаотичное Зло</b><br>Slavers - Any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland, and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
 	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/raiders
 	karma = -10
@@ -240,48 +240,48 @@ mob/proc/set_faction(var/faction)
 
 
 /datum/f13_faction/vault
-	name = "Vault"
+	name = "Убежище"
 	color = "#005A20"
 	id = "vault"
 	full_name = "Vault-Tec Corporation"
-	description = "<b>Alignment: True Neutral</b><br>The Vault-Tec Corporation, or simply the VTC - A former company contracted by the United States government before the Great War to design and produce the Vault system, a vast network of complex fallout and research shelters.<br>When the bombs fell, thousands of carefully-selected Vault dwellers were sealed within the safe confinement of the Vaults, and their lucky descendants have (mostly) lived to the present day."
+	description = "<b>Предназначение: Истинные Нейтралы</b><br>The Vault-Tec Corporation, or simply the VTC - A former company contracted by the United States government before the Great War to design and produce the Vault system, a vast network of complex fallout and research shelters.<br>When the bombs fell, thousands of carefully-selected Vault dwellers were sealed within the safe confinement of the Vaults, and their lucky descendants have (mostly) lived to the present day."
 	preview_image = 'html/factions/vault.png'
 	head_status = "overseer"
 	flags = HAVE_FREQ
 	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/vault
 	karma = 15
-	welcome_text = "Your current objectives are:<br>\
+	welcome_text = "Ваши текущие задачи:<br>\
 1. Вы - важная часть убежища, без вас, оно быстро придет в негодность!<br>\
 2. Если вы смотритель, не допускайте Пустошь в ваш дом.<br>\
 3. Земля вам пухом.<br>"
 //	craft_recipes = list(/datum/table_recipe/vlt_encryption_key)
 
 /datum/f13_faction/brotherhood
-	name = "Brotherhood"
+	name = "Братство Стали"
 	color = "#00215a"
 	id = "bs"
 	full_name = "Brotherhood of Steel"
-	description = "<b>Alignment: Lawful Good</b><br>The Brotherhood of Steel, or simply the Brotherhood - A quasi-religious technological organization operating across the ruins of post-War North America, with its roots stemming from the United States Armed Forces and the government-sponsored scientific community from before the Great War.<br>The Brotherhood members rely heavily on subordination and strict Code of Conduct.<br><i>The Steel Endures!</i>"
+	description = "<b>Предназначение: Законопослушное добро</b><br>The Brotherhood of Steel, or simply the Brotherhood - A quasi-religious technological organization operating across the ruins of post-War North America, with its roots stemming from the United States Armed Forces and the government-sponsored scientific community from before the Great War.<br>The Brotherhood members rely heavily on subordination and strict Code of Conduct.<br><i>The Steel Endures!</i>"
 	preview_image = 'html/factions/brotherhood.png'
 	head_status = "elder"
 	flags = HAVE_FREQ
 	area = /area/f13/brotherhood
 	verbs = list(/mob/proc/begin_head_voting)
 	karma = 10
-	welcome_text = "Your current objectives are:<br>\
+	welcome_text = "Ваши текущие задачи:<br>\
 1. В братстве ваша задача неукоснительно следить за вашими законами и нормами, ваша ПА не столько сильна, сколько люди в ней!<br>\
 2. Иерархии и цепи командований - Рекрут > Рыцарь > Паладин > Старейшина. Писарь > Паладин > Старейшина. Нарушать цепь запрещено, пока в братстве достаточно звеньев определенного участка цепи! <br>\
 3. Здесь, в техасе, задача братства - поиск технологий и борьба с анклавом, да да, анклав активно будет с вами воевать, следовательно, вы так же должны не утрачивать инициативу, помните, только в ваших руках технологии не уничтожат мир!<br>\
 4. Не ПА делает паладина паладином, а паладин делает силовую броню несокрушимой, только беспрерывные тренировки, боевой дух и дисциплина помогут вам в борьбе с врагом, не рассчитывайте на лучшую экипировку, не думайте что враг слаб. Уважайте его! Если по каким то причинам, вы не можете эффективно использовать вашу экипировку, доложите об этом старейшине! Ну а если вы сам старейшина, помните, всю грубую работу за вас делают паладины и рыцари, пока вы даете им свою мудрость.<br>"
 
-
+/*
 /datum/f13_faction/enclave
-	name = "Enclave"
+	name = "Анклав"
 	color = "#005A20"
 	id = "enclave"
 	full_name = "Enclave"
-	description = "<b>Alignment: Lawful Evil</b><br>The Enclave - A secretive political, scientific, and militaristic organization that is descended directly from members of the pre-War United States government.<br>They claim to be the legally-sanctioned continuation of the government, while also styling themselves and their overall demeanor as such.<br>Enclave members take pride in being the last known concentrated bastion of pure, unmutated humanity."
+	description = "<b>Предназначение: Законопослушное зло</b><br>The Enclave - A secretive political, scientific, and militaristic organization that is descended directly from members of the pre-War United States government.<br>They claim to be the legally-sanctioned continuation of the government, while also styling themselves and their overall demeanor as such.<br>Enclave members take pride in being the last known concentrated bastion of pure, unmutated humanity."
 	preview_image = 'html/factions/enclave.png'
 	head_status = "colonel"
 	flags = HAVE_FREQ
@@ -293,7 +293,7 @@ mob/proc/set_faction(var/faction)
 2. Ваша задача не дать технологии попасть в руки братства стали, именно вы, солдат единственный защитник суверенитета США. Тем не менее, не тащите в базу хлам, новый бункер никто не построит, если его засрать, солдат!<br>\
 3. Аборигены, мутанты, и прочие - биомусор оставленный нам, от прошлого. Не стоит тратить на него ваши силы, но не дайте им стать в силе равными вам!<br>\
 4. И последнее, ваша ПА и плазмавинтовка - все еще на балансе анклава, утрата экипировки грозит вам пожизненным сроком службы, и еще повезет если солдатом, а не лаборантом.<br>"
-
+*/
 /*datum/f13_faction/ahs
 	name = "Hubologists"
 	color = "#005A20"
@@ -306,12 +306,12 @@ mob/proc/set_faction(var/faction)
 	verbs = list(/mob/proc/begin_head_voting) */
 
 /datum/f13_faction/ncr
-	name = "NCR"
+	name = "НКР"
 	id = "ncr"
 	color = "#020080"
 	flags = HAVE_FREQ | HAVE_FLAG
-	full_name = "New California Republic"
-	description = "<b>Alignment: Lawful Good</b><br>The New California Republic, or simply the NCR - A large, democratic federation with a massive population based in California, with holdings in other States.<br>The NCR emphasizes and claims to support a myriad of old world values, such as democracy, personal liberty, and the rule of law.<br>It also strives to restore general order to the wasteland through improvements to and development of infrastructure and economic systems, as well as basic common peace between people."
+	full_name = "Новая Калифорнийская Республика"
+	description = "<b>Предназначение: Законопослушное добро</b><br>Новая Калифорнийская Республика, или НКР - большая, демократическая федерация с огромным населением в Калифорнии и несколькими штатами.<br>НКР симпатизирует многим ценностям старого мира, таким как Демократия, персональная свобода и законопослушность.<br>Так-же они занимаются восстановлением инфраструктуры, экономики и мира между людьми."
 	preview_image = 'html/factions/ncr.png'
 	head_status = "ncr_general"
 	verbs = list(/mob/proc/begin_head_voting)
@@ -325,7 +325,7 @@ mob/proc/set_faction(var/faction)
 
 /*
 /datum/f13_faction/legion
-	name = "Legion"
+	name = "Легион"
 	head_status = "legate"
 	full_name = "Caesar's Legion"
 	description = "<b>Alignment: Lawful Evil</b><br>Caesar's Legion, or simply the Legion - An autocratic, traditionalist, reactionary slaver society, and a totalitarian dictatorship that is based on the ancient Roman Empire.<br>Its legionaries are a well-organized, culturally insular fighting force.<br>The Legion is first and foremost a slave army, the sole owner of which is Caesar.<br>As a slave army, the Legion maintains a very strict hierarchy with significant division of roles.<br><i>Ave Caesar!</i>"
@@ -344,11 +344,11 @@ mob/proc/set_faction(var/faction)
 */
 
 /datum/f13_faction/followers
-	name = "Followers"
+	name = "Последователи"
 	color = "#005A20"
 	id = "followers"
-	full_name = "Followers of the Appocalypse"
-	description = "<b>Alignment: Neutral Good</b><br>The Followers of the Apocalypse, or simply the Followers - A post-War organization whose goal is to tend to the inhabitants of the wasteland, as well as to ensure that the horrors of the Great War are never to be repeated.<br>To that end, they serve as keepers of knowledge, a position which provides them with the skills they need to carry out their mission.<br>They don't follow a single Great Leader, but instead a handful of independent Leaders for each group."
+	full_name = "Последователи Апокалипсиса"
+	description = "<b>Предназначение: Нейтральное Добро</b><br>The Followers of the Apocalypse, or simply the Followers - A post-War organization whose goal is to tend to the inhabitants of the wasteland, as well as to ensure that the horrors of the Great War are never to be repeated.<br>To that end, they serve as keepers of knowledge, a position which provides them with the skills they need to carry out their mission.<br>They don't follow a single Great Leader, but instead a handful of independent Leaders for each group."
 	preview_image = 'html/factions/followers.png'
 	head_status = "leader"
 	area = /area/f13/followers
@@ -359,11 +359,11 @@ mob/proc/set_faction(var/faction)
 3. Да благославит вас Ремеди.<br>"
 
 /datum/f13_faction/vault
-	name = "Vault"
+	name = "Убежище"
 	color = "#005A20"
 	id = "vault"
-	full_name = "Vault-Tec Corporation"
-	description = "<b>Alignment: True Neutral</b><br>The Vault-Tec Corporation, or simply the VTC - A former company contracted by the United States government before the Great War to design and produce the Vault system, a vast network of complex fallout and research shelters.<br>When the bombs fell, thousands of carefully-selected Vault dwellers were sealed within the safe confinement of the Vaults, and their lucky descendants have (mostly) lived to the present day."
+	full_name = "Корпорация Волт-Тек"
+	description = "<b>Предназначение: Истинниые нейтралы</b><br>The Vault-Tec Corporation, or simply the VTC - A former company contracted by the United States government before the Great War to design and produce the Vault system, a vast network of complex fallout and research shelters.<br>When the bombs fell, thousands of carefully-selected Vault dwellers were sealed within the safe confinement of the Vaults, and their lucky descendants have (mostly) lived to the present day."
 	preview_image = 'html/factions/vault.png'
 	head_status = "overseer"
 	verbs = list(/mob/proc/begin_head_voting)
@@ -375,7 +375,7 @@ mob/proc/set_faction(var/faction)
 3. Земля вам пухом.<br>"
 
 /datum/f13_faction/acolytes
-	name = "Acolytes"
+	name = "Аколиты"
 	color = "#204200"
 	id = "acolytes"
 	full_name = "Acolytes of the Atom"
