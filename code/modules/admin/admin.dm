@@ -22,10 +22,10 @@ var/global/BSACooldown = 0
 		return
 
 	if(!isobserver(usr))
-		log_game("[key_name_admin(usr)] checked the player panel while in game.")
+		log_game("[key_name_admin(usr)] посмотрел панель игроков находясь в игре.")
 
 	if(!M)
-		to_chat(usr, "You seem to be selecting a mob that doesn't exist anymore.")
+		to_chat(usr, "Похоже что выбранное существо больше не существует.")
 		return
 
 	var/body = "<html><head><title>Options for [M.key]</title></head>"
@@ -35,7 +35,7 @@ var/global/BSACooldown = 0
 		body += "\[<A href='?_src_=holder;editrights=rank;ckey=[M.ckey]'>[M.client.holder ? M.client.holder.rank : "Player"]</A>\]"
 
 	if(isnewplayer(M))
-		body += " <B>Hasn't Entered Game</B> "
+		body += " <B>Не вошел в игру</B> "
 	else
 		body += " \[<A href='?_src_=holder;revive=\ref[M]'>Heal</A>\] "
 
@@ -46,40 +46,40 @@ var/global/BSACooldown = 0
 	body += "<a href='?_src_=holder;subtlemessage=\ref[M]'>SM</a> - "
 	body += "<a href='?_src_=holder;adminplayerobservefollow=\ref[M]'>FLW</a>\] </b><br>"
 
-	body += "<b>Mob type</b> = [M.type]<br><br>"
+	body += "<b>Тип моба</b> = [M.type]<br><br>"
 
 	body += "<A href='?_src_=holder;boot2=\ref[M]'>Кикнуть</A> | "
-	body += "<A href='?_src_=holder;newban=\ref[M]'>Бан блять</A> | "
-	body += "<A href='?_src_=holder;jobban2=\ref[M]'>Jobban</A> | "
-	body += "<A href='?_src_=holder;labor=\ref[M]'>Сделать это животное рейдером!</A> | "
-	body += "<A href='?_src_=holder;appearanceban=\ref[M]'>Identity Ban</A> | "
+	body += "<A href='?_src_=holder;newban=\ref[M]'>Бан</A> | "
+	body += "<A href='?_src_=holder;jobban2=\ref[M]'>Джоббан</A> | "
+	body += "<A href='?_src_=holder;labor=\ref[M]'>На шахты!</A> | "
+	body += "<A href='?_src_=holder;appearanceban=\ref[M]'>Бан персонажа</A> | "
 	if(jobban_isbanned(M, "OOC"))
-		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'><font color=red>OOCBan</font></A> | "
+		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'><font color=red>Бан ООС</font></A> | "
 	else
-		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'>OOCBan</A> | "
+		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'>Бан ООС</A> | "
 	if(jobban_isbanned(M, "emote"))
-		body+= "<A href='?_src_=holder;jobban3=emote;jobban4=\ref[M]'><font color=red>EmoteBan</font></A> | "
+		body+= "<A href='?_src_=holder;jobban3=emote;jobban4=\ref[M]'><font color=red>Бан Эмоций</font></A> | "
 	else
-		body+= "<A href='?_src_=holder;jobban3=emote;jobban4=\ref[M]'>Emoteban</A> | "
+		body+= "<A href='?_src_=holder;jobban3=emote;jobban4=\ref[M]'>Бан эмоций</A> | "
 
-	body += "<A href='?_src_=holder;shownoteckey=[M.ckey]'>Notes</A> | "
+	body += "<A href='?_src_=holder;shownoteckey=[M.ckey]'>Пометки</A> | "
 	if(M.client)
 		if(M.client.check_watchlist(M.client.ckey))
-			body += "<A href='?_src_=holder;watchremove=[M.ckey]'>Remove from Watchlist</A> | "
-			body += "<A href='?_src_=holder;watchedit=[M.ckey]'>Edit Watchlist reason</A> "
+			body += "<A href='?_src_=holder;watchremove=[M.ckey]'>убрать из ЛБ</A> | "
+			body += "<A href='?_src_=holder;watchedit=[M.ckey]'>редактировать причину для ЛБ</A> "
 		else
-			body += "<A href='?_src_=holder;watchadd=\ref[M.ckey]'>Add to Watchlist</A> "
+			body += "<A href='?_src_=holder;watchadd=\ref[M.ckey]'>добавить в ЛБ</A> "
 
 		body += "| <A href='?_src_=holder;sendtoprison=\ref[M]'>Тюрьма</A> | "
 		body += "\ <A href='?_src_=holder;sendbacktolobby=\ref[M]'>Отправить в лобби</A> | "
 		var/muted = M.client.prefs.muted
-		body += "<br><b>Mute: </b> "
+		body += "<br><b>Мут: </b> "
 		body += "\[<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_IC]'><font color='[(muted & MUTE_IC)?"red":"blue"]'>IC</font></a> | "
 		body += "<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_OOC]'><font color='[(muted & MUTE_OOC)?"red":"blue"]'>OOC</font></a> | "
 		body += "<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_PRAY]'><font color='[(muted & MUTE_PRAY)?"red":"blue"]'>PRAY</font></a> | "
 		body += "<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_ADMINHELP]'><font color='[(muted & MUTE_ADMINHELP)?"red":"blue"]'>ADMINHELP</font></a> | "
 		body += "<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_DEADCHAT]'><font color='[(muted & MUTE_DEADCHAT)?"red":"blue"]'>DEADCHAT</font></a>\]"
-		body += "(<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_ALL]'><font color='[(muted & MUTE_ALL)?"red":"blue"]'>toggle all</font></a>)"
+		body += "(<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_ALL]'><font color='[(muted & MUTE_ALL)?"red":"blue"]'>переключить всё</font></a>)"
 
 	body += "<br><br>"
 	body += "<A href='?_src_=holder;jumpto=\ref[M]'><b>Jump to</b></A> | "
@@ -87,11 +87,11 @@ var/global/BSACooldown = 0
 	body += "<A href='?_src_=holder;sendmob=\ref[M]'>Send To</A>"
 
 	body += "<br><br>"
-	body += "<A href='?_src_=holder;traitor=\ref[M]'>Traitor panel</A> | "
+	body += "<A href='?_src_=holder;traitor=\ref[M]'>Панель антагонизма</A> | "
 	body += "<A href='?_src_=holder;narrateto=\ref[M]'>Narrate to</A> | "
-	body += "<A href='?_src_=holder;subtlemessage=\ref[M]'>Subtle message</A><br><br>"
+	body += "<A href='?_src_=holder;subtlemessage=\ref[M]'>Проецировать мысль</A><br><br>"
 
-	body += "<A href='?_src_=holder;objectives_show=\ref[M]'>Objectives</A>"
+	body += "<A href='?_src_=holder;objectives_show=\ref[M]'>Задачи</A>"
 
 	if (M.client)
 		if(!isnewplayer(M))
@@ -121,11 +121,11 @@ var/global/BSACooldown = 0
 			if(isAI(M))
 				body += "<B>Is an AI</B> "
 			else if(ishuman(M))
-				body += "<A href='?_src_=holder;makeai=\ref[M]'>Make AI</A> | "
-				body += "<A href='?_src_=holder;makerobot=\ref[M]'>Make Robot</A> | "
-				body += "<A href='?_src_=holder;makealien=\ref[M]'>Make Alien</A> | "
-				body += "<A href='?_src_=holder;makeslime=\ref[M]'>Make Slime</A> | "
-				body += "<A href='?_src_=holder;makeblob=\ref[M]'>Make Blob</A> | "
+				body += "<A href='?_src_=holder;makeai=\ref[M]'>Сделать ИИ</A> | "
+				body += "<A href='?_src_=holder;makerobot=\ref[M]'>Сделать Роботом</A> | "
+				body += "<A href='?_src_=holder;makealien=\ref[M]'>Сделать Чужим</A> | "
+				body += "<A href='?_src_=holder;makeslime=\ref[M]'>Сделать Слизнем</A> | "
+				body += "<A href='?_src_=holder;makeblob=\ref[M]'>Сделать Блобом</A> | "
 
 			//Simple Animals
 			if(isanimal(M))
@@ -134,12 +134,12 @@ var/global/BSACooldown = 0
 				body += "<A href='?_src_=holder;makeanimal=\ref[M]'>Animalize</A> | "
 
 			body += "<br><br>"
-			body += "<b>Rudimentary transformation:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font><br>"
-			body += "<A href='?_src_=holder;simplemake=observer;mob=\ref[M]'>Observer</A> | "
+			body += "<b>Рудиментарная трансформация:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font><br>"
+			body += "<A href='?_src_=holder;simplemake=observer;mob=\ref[M]'>Наблюдатель</A> | "
 			body += "\[ Alien: <A href='?_src_=holder;simplemake=drone;mob=\ref[M]'>Дрон</A>, "
 			body += "<A href='?_src_=holder;simplemake=hunter;mob=\ref[M]'>Охотник</A>, "
 			body += "<A href='?_src_=holder;simplemake=sentinel;mob=\ref[M]'>Sentinel</A>, "
-			body += "<A href='?_src_=holder;simplemake=praetorian;mob=\ref[M]'>Praetorian</A>, "
+			body += "<A href='?_src_=holder;simplemake=praetorian;mob=\ref[M]'>Протареанец</A>, "
 			body += "<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>Королева</A>, "
 			body += "<A href='?_src_=holder;simplemake=larva;mob=\ref[M]'>Лявра</A> \] "
 			body += "<A href='?_src_=holder;simplemake=human;mob=\ref[M]'>Человек</A> "
@@ -148,23 +148,23 @@ var/global/BSACooldown = 0
 			body += "<A href='?_src_=holder;simplemake=monkey;mob=\ref[M]'>Мартышка</A> | "
 			body += "<A href='?_src_=holder;simplemake=robot;mob=\ref[M]'>Киборг</A> | "
 			body += "<A href='?_src_=holder;simplemake=cat;mob=\ref[M]'>Кот</A> | "
-			body += "<A href='?_src_=holder;simplemake=runtime;mob=\ref[M]'>Runtime</A> | "
+			body += "<A href='?_src_=holder;simplemake=runtime;mob=\ref[M]'>Рантайм</A> | "
 			body += "<A href='?_src_=holder;simplemake=corgi;mob=\ref[M]'>Корги</A> | "
 			body += "<A href='?_src_=holder;simplemake=ian;mob=\ref[M]'>Йан</A> | "
 			body += "<A href='?_src_=holder;simplemake=crab;mob=\ref[M]'>Краб</A> | "
-			body += "<A href='?_src_=holder;simplemake=coffee;mob=\ref[M]'>Coffee</A> | "
+			body += "<A href='?_src_=holder;simplemake=coffee;mob=\ref[M]'>Кофе</A> | "
 			//body += "<A href='?_src_=holder;simplemake=parrot;mob=\ref[M]'>Parrot</A> | "
 			//body += "<A href='?_src_=holder;simplemake=polyparrot;mob=\ref[M]'>Poly</A> | "
-			body += "\[ Construct: <A href='?_src_=holder;simplemake=constructarmored;mob=\ref[M]'>Juggernaut</A> , "
+			body += "\[ Construct: <A href='?_src_=holder;simplemake=constructarmored;mob=\ref[M]'>Джаггернаут</A> , "
 			body += "<A href='?_src_=holder;simplemake=constructbuilder;mob=\ref[M]'>Artificer</A> , "
 			body += "<A href='?_src_=holder;simplemake=constructwraith;mob=\ref[M]'>Wraith</A> \] "
-			body += "<A href='?_src_=holder;simplemake=shade;mob=\ref[M]'>Shade</A>"
+			body += "<A href='?_src_=holder;simplemake=shade;mob=\ref[M]'>Тень</A>"
 			body += "<br>"
 
 		body += "<br><br>"
-		body += "<b>Other actions:</b>"
+		body += "<b>Остальные действия:</b>"
 		body += "<br>"
-		body += "<A href='?_src_=holder;forcespeech=\ref[M]'>Forcesay</A> | "
+		body += "<A href='?_src_=holder;forcespeech=\ref[M]'>Заставить сказать</A> | "
 	if (M.client)
 		body += "<A href='?_src_=holder;tdome1=\ref[M]'>Thunderdome 1</A> | "
 		body += "<A href='?_src_=holder;tdome2=\ref[M]'>Thunderdome 2</A> | "
@@ -394,17 +394,17 @@ var/global/BSACooldown = 0
 
 	var/dat = {"
 		<center><B>Щитспавн панель</B></center><hr>\n
-		<A href='?src=\ref[src];c_mode=1'>Change Game Mode</A><br>
+		<A href='?src=\ref[src];c_mode=1'>Изменить игровой режим</A><br>
 		"}
 	if(master_mode == "secret")
-		dat += "<A href='?src=\ref[src];f_secret=1'>(Force Secret Mode)</A><br>"
+		dat += "<A href='?src=\ref[src];f_secret=1'>(принудительный Секрет)</A><br>"
 
 	dat += {"
 		<BR>
-		<A href='?src=\ref[src];create_object=1'>Create Object</A><br>
-		<A href='?src=\ref[src];quick_create_object=1'>Quick Create Object</A><br>
-		<A href='?src=\ref[src];create_turf=1'>Create Turf</A><br>
-		<A href='?src=\ref[src];create_mob=1'>Create Mob</A><br>
+		<A href='?src=\ref[src];create_object=1'>Создать объект</A><br>
+		<A href='?src=\ref[src];quick_create_object=1'>Быстрое создание объекта</A><br>
+		<A href='?src=\ref[src];create_turf=1'>Создать тайл</A><br>
+		<A href='?src=\ref[src];create_mob=1'>Создать моба</A><br>
 		"}
 
 	if(marked_datum && istype(marked_datum, /atom))
@@ -423,13 +423,13 @@ var/global/BSACooldown = 0
 	set desc="Restarts the world immediately"
 	if (!usr.client.holder)
 		return
-	var/confirm = alert("Restart the game world?", "Restart", "Yes", "Cancel")
+	var/confirm = alert("Перезапустить игровой мир?", "Restart", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
 		ticker.delay_end = 0
 		feedback_add_details("admin_verb","R") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-		world.Reboot("Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key].", "end_error", "admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]", 10)
+		world.Reboot("Инициировано [usr.client.holder.fakekey ? "Admin" : usr.key].", "end_error", "admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]", 10)
 
 /datum/admins/proc/end_round()
 	set category = "Server"
@@ -438,7 +438,7 @@ var/global/BSACooldown = 0
 
 	if (!usr.client.holder)
 		return
-	var/confirm = alert("End the round and  restart the game world?", "End Round", "Yes", "Cancel")
+	var/confirm = alert("Закончить раунд и перезапустить игровой мир?", "End Round", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
@@ -518,17 +518,17 @@ var/global/BSACooldown = 0
 	set name="Start Now"
 	if(ticker.current_state == GAME_STATE_PREGAME || ticker.current_state == GAME_STATE_STARTUP)
 		ticker.start_immediately = TRUE
-		log_admin("[usr.key] has started the game.")
+		log_admin("[usr.key] принудительно запустил игру.")
 		var/msg = ""
 		if(ticker.current_state == GAME_STATE_STARTUP)
-			msg = " (The server is still setting up, but the round will be \
-				started as soon as possible.)"
+			msg = " (Сервер всё еще настраивается, но раунд начнется сразу \
+				по завершению настройки.)"
 		message_admins("<font color='blue'>\
-			[usr.key] has started the game.[msg]</font>")
+			[usr.key] начал игру.[msg]</font>")
 		feedback_add_details("admin_verb","SN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		return 1
 	else
-		to_chat(usr, "<font color='red'>Error: Start Now: Game has already started.</font>")
+		to_chat(usr, "<font color='red'>Ошибка: Начать Сейчас: Игра уже начата.</font>")
 
 	return 0
 
@@ -641,7 +641,7 @@ var/global/BSACooldown = 0
 		var/atom/A = new chosen(usr.loc)
 		A.admin_spawned = TRUE
 
-	log_admin("[key_name(usr)] spawned [chosen] at ([usr.x],[usr.y],[usr.z])")
+	log_admin("[key_name(usr)] заспавнил [chosen] в координатах ([usr.x],[usr.y],[usr.z])")
 	feedback_add_details("admin_verb","SA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
@@ -828,9 +828,12 @@ var/global/BSACooldown = 0
 		var/string
 		if(logout && config && config.announce_admin_logout)
 			string = pick(
-				"Педаль вышла: [key_name(src)]")
+				"Администратор вышёл: [key_name(src)]")
 		else if(!logout && config && config.announce_admin_login && (prefs.toggles & ANNOUNCE_LOGIN))
 			string = pick(
-				"Педаль зашла: [key_name(src)]")
+				"Администратор зашёл: [key_name(src)]")
+		else if(!logout && config && config.announce_admin_login && !ckey=="iWuna" && (prefs.toggles & ANNOUNCE_LOGIN))
+			string = pick(
+				"БЛЯТЬ ВУНА ЗАШЛА: [key_name(src)]")
 		if(string)
 			message_admins("[string]")
