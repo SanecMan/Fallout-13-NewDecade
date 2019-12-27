@@ -31,7 +31,7 @@ var/datum/subsystem/vote/SSvote
 		else
 			var/datum/browser/client_popup
 			for(var/client/C in voting)
-				client_popup = new(C, "vote", "Voting Panel")
+				client_popup = new(C, "vote", "Панель голосования")
 				client_popup.set_window_options("can_close=0")
 				client_popup.set_content(interface(C))
 				client_popup.open(0)
@@ -99,13 +99,13 @@ var/datum/subsystem/vote/SSvote
 			text += "\n<b>[choices[i]]:</b> [votes]"
 		if(mode != "custom")
 			if(winners.len > 1)
-				text = "\n<b>Vote Tied Between:</b>"
+				text = "\n<b>Голоса разделились между:</b>"
 				for(var/option in winners)
 					text += "\n\t[option]"
 			. = pick(winners)
-			text += "\n<b>Vote Result: [.]</b>"
+			text += "\n<b>Результат голосования: [.]</b>"
 		else
-			text += "\n<b>Did not vote:</b> [clients.len-voted.len]"
+			text += "\n<b>Воздержалось:</b> [clients.len-voted.len]"
 	else
 		text += "<b>Vote Result: Inconclusive - No Votes!</b>"
 	log_vote(text)
@@ -119,7 +119,7 @@ var/datum/subsystem/vote/SSvote
 	if(.)
 		switch(mode)
 			if("restart")
-				if(. == "End Round")
+				if(. == "Завершить раунд")
 					restart = 1
 			if("gamemode")
 				if(master_mode != .)
@@ -137,8 +137,8 @@ var/datum/subsystem/vote/SSvote
 		if(!active_admins)
 			ticker.force_ending = 1
 		else
-			to_chat(world, "<span style='boldannounce'>Notice:Restart vote will not restart the server automatically because there are active admins on.</span>")
-			message_admins("A restart vote has passed, but there are active admins on with +server, so it has been canceled. If you wish, you may restart the server.")
+			to_chat(world, "<span style='boldannounce'>Примечание: Перезапуск не состоится пока ктивный администратор не нажмет кнопку.</span>")
+			message_admins("Голосование о перезапуске завершено, но на сервере имеется администратор с флагом +server который должен решить окончательно.")
 
 	return .
 
@@ -173,7 +173,7 @@ var/datum/subsystem/vote/SSvote
 		reset()
 		switch(vote_type)
 			if("restart")
-				choices.Add("End Round","Continue Playing")
+				choices.Add("Завершить раунд","Продолжить раунд")
 			if("gamemode")
 				choices.Add(config.votable_modes)
 			if("custom")
@@ -200,7 +200,7 @@ var/datum/subsystem/vote/SSvote
 			var/client/C = c
 			var/datum/action/vote/V = new
 			if(question)
-				V.name = "Vote: [question]"
+				V.name = "Голосование: [question]"
 			V.Grant(C.mob)
 			generated_actions += V
 		return 1
@@ -222,22 +222,22 @@ var/datum/subsystem/vote/SSvote
 			. += "<h2>Голосование: '[question]'</h2>"
 		else
 			. += "<h2>Голосованите: [capitalize(mode)]</h2>"
-		. += "Осталось времени: [time_remaining] s<hr><ul>"
+		. += " Осталось времени: [time_remaining] секунд<hr><ul>"
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			if(!votes)
 				votes = 0
-			. += "<li><a href='?src=\ref[src];vote=[i]'>[choices[i]]</a> ([votes] votes)</li>"
+			. += "<li><a href='?src=\ref[src];vote=[i]'>[choices[i]]</a> ([votes] голосов)</li>"
 		. += "</ul><hr>"
 		if(admin)
-			. += "(<a href='?src=\ref[src];vote=cancel'>Cancel Vote</a>) "
+			. += "(<a href='?src=\ref[src];vote=cancel'>Отменить голосование</a>) "
 	else
-		. += "<h2>Start a vote:</h2><hr><ul><li>"
+		. += "<h2>Начать голосование:</h2><hr><ul><li>"
 		//restart
 		if(trialmin || config.allow_vote_restart)
-			. += "<a href='?src=\ref[src];vote=restart'>Restart</a>"
+			. += "<a href='?src=\ref[src];vote=restart'>Перезапуск</a>"
 		else
-			. += "<font color='grey'>Restart (Disallowed)</font>"
+			. += "<font color='grey'>Перезапуск (Запрещен)</font>"
 		if(trialmin)
 			. += "\t(<a href='?src=\ref[src];vote=toggle_restart'>[config.allow_vote_restart?"Allowed":"Disallowed"]</a>)"
 		. += "</li><li>"
@@ -252,9 +252,9 @@ var/datum/subsystem/vote/SSvote
 		. += "</li>"
 		//custom
 		if(trialmin)
-			. += "<li><a href='?src=\ref[src];vote=custom'>Custom</a></li>"
+			. += "<li><a href='?src=\ref[src];vote=custom'>Настраиваемый</a></li>"
 		. += "</ul><hr>"
-	. += "<a href='?src=\ref[src];vote=close' style='position:absolute;right:50px'>Close</a>"
+	. += "<a href='?src=\ref[src];vote=close' style='position:absolute;right:50px'>Закрыть</a>"
 	return .
 
 
@@ -281,6 +281,9 @@ var/datum/subsystem/vote/SSvote
 		if("gamemode")
 			if(config.allow_vote_mode || usr.client.holder)
 				initiate_vote("gamemode",usr.key)
+/*		if("map")
+			if(usr.client.holder)
+				initiate_vote("map",usr.key)*/
 		if("custom")
 			if(usr.client.holder)
 				initiate_vote("custom",usr.key)

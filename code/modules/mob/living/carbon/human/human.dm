@@ -1,7 +1,7 @@
 /mob/living/carbon/human
 	name = "Неизвестный"
-	real_name = "Unknown"
-	voice_name = "Unknown"
+	real_name = "Неизвестный"
+	voice_name = "Неизвестно"
 	icon = 'icons/mob/human.dmi'
 	icon_state = "caucasian_m_s"
 	self_weight = 0
@@ -650,7 +650,7 @@
 	CHECK_DNA_AND_SPECIES(C)
 
 	if(C.stat == DEAD || (C.status_flags & FAKEDEATH))
-		to_chat(src, "<span class='warning'>[C.name] мёрьв!</span>")
+		to_chat(src, "<span class='warning'>[C.name] мёртв!</span>")
 		return
 	if(is_mouth_covered())
 		to_chat(src, "<span class='warning'>Снимите маску для начала!</span>")

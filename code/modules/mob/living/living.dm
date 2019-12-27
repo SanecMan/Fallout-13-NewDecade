@@ -670,7 +670,7 @@
 
 	var/mob/living/carbon/user = src
 	if(!(user.perks.have(/datum/perk/thief)))
-		who.visible_message("<span class='danger'>[src] пытается снять[what.name] c [who].</span>", \
+		who.visible_message("<span class='danger'>[src] пытается снять [what.name] c [who].</span>", \
 			"<span class='userdanger'>[src] пытается снять [what.name] c [who].</span>")
 
 	what.add_fingerprint(src)
@@ -711,7 +711,7 @@
 			if(!what.mob_can_equip(who, src, where, 1))
 				to_chat(src, "<span class='warning'>[what.name] не помещается сюда!</span>")
 				return
-		visible_message("<span class='notice'>[src] пытается надеьб [what] на [who].</span>")
+		visible_message("<span class='notice'>[src] пытается надеть [what] на [who].</span>")
 		if(do_mob(src, who, what.put_on_delay))
 			if(what && Adjacent(who))
 				unEquip(what)

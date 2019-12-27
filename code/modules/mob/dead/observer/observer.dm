@@ -395,7 +395,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	orbitsize -= (orbitsize/world.icon_size)*(world.icon_size*0.25)
 
 	if(orbiting && orbiting.orbiting != target)
-		to_chat(src, "<span class='notice'>Now orbiting [target].</span>")
+		to_chat(src, "<span class='notice'>Теперь наблюдаем за [target].</span>")
 
 	var/rot_seg
 

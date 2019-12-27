@@ -53,7 +53,7 @@
 		if(back.blood_DNA)
 			msg += "<span class='warning'>[t_He] [t_has] [bicon(back)] [back.gender==PLURAL?"some":"a"] покрытый кровью [back] на своей спине.</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(back)] [back] на [t_his] спине.\n"
+			msg += "[t_He] [t_has] [bicon(back)] [back] на своей спине.\n"
 
 	//Hands
 	for(var/obj/item/I in held_items)
@@ -63,16 +63,16 @@
 				if(W.wielded)
 					wielded = 1
 			if(I.blood_DNA)
-				msg += "<span class='warning'>[t_He] [t_is] держит [bicon(I)] [I.gender==PLURAL?"some":"a"] покрытый кровью [I.name] в [t_his] [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))]!</span>\n"
+				msg += "<span class='warning'>[t_He] [t_is] держит [bicon(I)] [I.gender==PLURAL?"some":"a"] покрытый кровью [I.name] в своих [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))]!</span>\n"
 			else
-				msg += "[t_He] [t_is] держит [bicon(I)] [I] в [t_his] [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))].\n"
+				msg += "[t_He] [t_is] держит [bicon(I)] [I] в своих [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))].\n"
 
 	//gloves
 	if(gloves && !(slot_gloves in obscured))
 		if(gloves.blood_DNA)
 			msg += "<span class='warning'>[t_He] [t_has] [bicon(gloves)] [gloves.gender==PLURAL?"some":"a"] покрытые кровью [gloves.name] на своих руках!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(gloves)]  [gloves] на [t_his] руках.\n"
+			msg += "[t_He] [t_has] [bicon(gloves)]  [gloves] на своих руках.\n"
 	else if(blood_DNA)
 		var/hand_number = get_num_arms()
 		if(hand_number)
@@ -90,26 +90,26 @@
 	//belt
 	if(belt)
 		if(belt.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(belt)] [belt.gender==PLURAL?"some":"a"] покрытый кровью [belt.name] вокруг [t_his] пояса!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(belt)] [belt.gender==PLURAL?"some":"a"] покрытый кровью [belt.name] вокруг своего пояса!</span>\n"
 		else
 			msg += "[t_He] [t_has] [bicon(belt)] [belt] вокруг [t_his] пояса.\n"
 
 	//shoes
 	if(shoes && !(slot_shoes in obscured))
 		if(shoes.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] покрытые кровью [shoes.name] на [t_his] ногах!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] покрытые кровью [shoes.name] на своих ногах!</span>\n"
 		else
 			msg += "[t_He] [t_is] носит [bicon(shoes)]  [shoes] на [t_his] ногах.\n"
 
 	//mask
 	if(wear_mask && !(slot_wear_mask in obscured))
 		if(wear_mask.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":"a"] покрытую кровью [wear_mask.name] на [t_his] лице!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":"a"] покрытую кровью [wear_mask.name] на своём лице!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(wear_mask)]  [wear_mask] на [t_his] лице.\n"
+			msg += "[t_He] [t_has] [bicon(wear_mask)]  [wear_mask] на своём лице.\n"
 
 	if (wear_neck && !(slot_neck in obscured))
-		msg += "[t_He] [t_is] носит [bicon(src.wear_neck)]  [src.wear_neck] вокруг [t_his] шеи.\n"
+		msg += "[t_He] [t_is] носит [bicon(src.wear_neck)]  [src.wear_neck] вокруг своей шеи.\n"
 
 	//eyes
 	if(glasses && !(slot_glasses in obscured))
@@ -120,11 +120,11 @@
 
 	//ears
 	if(ears && !(slot_ears in obscured))
-		msg += "[t_He] [t_has] [bicon(ears)]  [ears] на [t_his] ушах.\n"
+		msg += "[t_He] [t_has] [bicon(ears)]  [ears] на своих ушах.\n"
 
 	//ID
 	if(wear_id)
-		msg += "[t_He] [t_is] носит [bicon(wear_id)] \a [wear_id].\n"
+		msg += "[t_He] [t_is] носит [bicon(wear_id)] [wear_id].\n"
 
 	if(src.status != "Wastelander" && !skipface)
 		var/datum/status/S = get_status_datum(src.status)
@@ -155,7 +155,7 @@
 				msg += "<span class='warning'>[t_He] пытается совершить самоубийство... нет надежды спасти.</span>\n"
 			if(hellbound)
 				msg += "<span class='warning'>[t_His] похоже, душа покинула [t_his] тело.  Реанимация невозможна.</span>\n"
-			msg += "<span class='deadsay'>[t_He] [t_is] конечности не двигаются. Жизнь окончательно покинула это тело."
+			msg += "<span class='deadsay'>Конечности не двигаются. Жизнь окончательно покинула это тело."
 			if(!key)
 				var/foundghost = 0
 				if(mind)
