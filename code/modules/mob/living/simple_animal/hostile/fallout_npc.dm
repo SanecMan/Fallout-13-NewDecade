@@ -115,7 +115,15 @@
 	rapid = 1
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
+	speak = list("Как же хочется на поверхность...", "Смотритель наше спасение!", "Скоро конец смены...", "Смотритель всегда прав. Так говорят.")
+	speak_emote = "говорит,"
+	speak_chance = 1
 	XP = 20
+
+/mob/living/simple_animal/hostile/vault/security/Aggro()
+	..()
+	summon_backup(15)
+	say("ОТРЯД СМЕНЫ БРАВО СРОЧНО КО МНЕ!")
 
 /obj/effect/mob_spawn/human/corpse/vault/security
 	name = "Vault Security"
@@ -128,6 +136,7 @@
 	helmet = /obj/item/clothing/head/helmet/riot
 	//back = /obj/item/weapon/storage/backpack
 	has_id = 0
+
 
 /mob/living/simple_animal/hostile/enclave
 	name = "Enclave"
@@ -282,8 +291,8 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("Everyone knows how to make another human being, but not everyone knows how to make another plasma rifle", "Semper Invicta!", "Steel be with you!")
-	speak_emote = "says,"
+	speak = list("Все знают как управлять людьми, но не каждая обезьяна знает как собрать плазменную винтовку.", "Semper Invicta!", "Да прибудет с тобой сталь!")
+	speak_emote = "говорит,"
 	speak_chance = 1
 	XP = 30
 
@@ -503,7 +512,7 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 	speak = list("Ave, true to Caesar.", "True to Caesar.", "Ave, Amicus.", "The new slave girls are quite beautiful.", "Give me cause, Profligate.", "Degenerates like you belong on a cross.")
-	speak_emote = "says,"
+	speak_emote = "говорит,"
 	speak_chance = 1
 	XP = 20
 

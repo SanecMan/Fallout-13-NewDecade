@@ -1,6 +1,6 @@
 /obj/item/device/radio
 	icon = 'icons/obj/radio.dmi'
-	name = "station bounced radio"
+	name = "маленькая рация."
 	suffix = "\[3\]"
 	icon_state = "walkietalkie"
 	item_state = "walkietalkie"
@@ -516,20 +516,20 @@
 
 /obj/item/device/radio/examine(mob/user)
 	..()
-	to_chat(user, "The key is [key]")
+	to_chat(user, "Ключ шифрования [key]")
 	if (b_stat)
-		to_chat(user, "<span class='notice'>[name] can be attached and modified.</span>")
+		to_chat(user, "<span class='notice'>[name] можно модифицировать или прикреплять к чему-либо.</span>")
 	else
-		to_chat(user, "<span class='notice'>[name] can not be modified or attached.</span>")
+		to_chat(user, "<span class='notice'>[name] нельзя модифицировать или прикреплять к чему-либо.</span>")
 
 /obj/item/device/radio/attackby(obj/item/weapon/W, mob/user, params)
 	add_fingerprint(user)
 	if(istype(W, /obj/item/weapon/screwdriver))
 		b_stat = !b_stat
 		if(b_stat)
-			to_chat(user, "<span class='notice'>The radio can now be attached and modified!</span>")
+			to_chat(user, "<span class='notice'>Теперь это можно модифицировать!</span>")
 		else
-			to_chat(user, "<span class='notice'>The radio can no longer be modified or attached!</span>")
+			to_chat(user, "<span class='notice'>Теперь это нельзя модифицировать!</span>")
 	else
 		return ..()
 
@@ -537,7 +537,7 @@
 	emped++ //There's been an EMP; better count it
 	var/curremp = emped //Remember which EMP this was
 	if (listening && ismob(loc))	// if the radio is turned on and on someone's person they notice
-		to_chat(loc, "<span class='warning'>\The [src] overloads.</span>")
+		to_chat(loc, "<span class='warning'>[src] перегружен.</span>")
 	broadcasting = 0
 	listening = 0
 	for (var/ch_name in channels)
@@ -584,14 +584,14 @@
 					keyslot = null
 
 			recalculateChannels()
-			to_chat(user, "<span class='notice'>You pop out the encryption key in the radio.</span>")
+			to_chat(user, "<span class='notice'>Вы достали ключ шифрования.</span>")
 
 		else
-			to_chat(user, "<span class='warning'>This radio doesn't have any encryption keys!</span>")
+			to_chat(user, "<span class='warning'>У этого радио нет ключей шифрования!</span>")
 
 	else if(istype(W, /obj/item/device/encryptionkey/))
 		if(keyslot)
-			to_chat(user, "<span class='warning'>The radio can't hold another key!</span>")
+			to_chat(user, "<span class='warning'>Радио не может содержать в себе еще один ключ!</span>")
 			return
 
 		if(!keyslot)

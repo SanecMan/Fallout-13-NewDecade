@@ -58,4 +58,4 @@
 
 			src.visible_message("<span class='notice'>[usr] передал [I] в руки [src].</span>")
 		if("No")
-			src.visible_message("<span class='warning'>[usr] пытается передать [I] в руки [src] но [src] отказывается брать.</span>")
+			src.visible_message("<span class='warning'>[usr] пытается передать [I] в руки [src], но [src] отказывается брать.</span>")

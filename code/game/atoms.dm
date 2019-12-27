@@ -197,7 +197,7 @@
 		if(gender == PLURAL)
 			f_name = "some "
 		else
-			f_name = "a "
+			f_name = ""
 		f_name += "<span class='danger'>в крови</span> [name]!"
 
 	to_chat(user, "[bicon(src)] Это [f_name]")
@@ -208,18 +208,18 @@
 //	to_chat(user, "[name]: Dn:[density] dir:[dir] cont:[contents] icon:[icon] is:[icon_state] loc:[loc]")
 
 	if(reagents && (is_open_container() || is_transparent())) //is_open_container() isn't really the right proc for this, but w/e
-		to_chat(user, "It contains:")
+		to_chat(user, "Содержит:")
 		if(reagents.reagent_list.len)
 			if(user.can_see_reagents()) //Show each individual reagent
 				for(var/datum/reagent/R in reagents.reagent_list)
-					to_chat(user, "[R.volume] units of [R.name]")
+					to_chat(user, "[R.volume] единиц [R.name]")
 			else //Otherwise, just show the total volume
 				var/total_volume = 0
 				for(var/datum/reagent/R in reagents.reagent_list)
 					total_volume += R.volume
-				to_chat(user, "[total_volume] units of various reagents")
+				to_chat(user, "[total_volume] единиц разных реагентов")
 		else
-			to_chat(user, "Nothing.")
+			to_chat(user, "Ничего.")
 
 /atom/proc/relaymove()
 	return
