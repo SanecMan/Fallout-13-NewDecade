@@ -1,8 +1,8 @@
 //Fallout 13 deathclaw directory
 
 /mob/living/simple_animal/hostile/deathclaw
-	name = "deathclaw"
-	desc = "A huge monster."
+	name = "Êמדמעü ׁלונעט"
+	desc = "ֱֳֵָ ֱֻßׂÜ."
 	icon = 'icons/fallout/mobs/deathclaw.dmi'
 	icon_state = "deathclaw"
 	icon_living = "deathclaw"

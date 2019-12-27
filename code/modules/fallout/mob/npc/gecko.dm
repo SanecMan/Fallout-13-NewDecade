@@ -1,8 +1,8 @@
 //Fallout 13 gecko directory
 
 /mob/living/simple_animal/hostile/gecko
-	name = "gecko"
-	desc = "It's Gecko, not G.E.C.K."
+	name = "Геккон"
+	desc = "Это Геккон. Не Г.Э.К.К."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "gecko"
 	icon_living = "gecko"

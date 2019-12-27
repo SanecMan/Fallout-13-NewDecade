@@ -1,7 +1,7 @@
 //Fallout 13 rad scorpion directory
 
 /mob/living/simple_animal/hostile/rad_scorpion
-	name = "rad scorpion"
+	name = "рад скорпион"
 	desc = "A giant irradiated scorpion with a blue exoskeleton. Its appearance makes you shudder.<br>This one has a razor sharp stinger with lethal venom inside."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "radscorpion"

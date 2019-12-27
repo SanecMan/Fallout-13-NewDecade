@@ -1,8 +1,8 @@
 //Fallout 13 molerat directory
 
 /mob/living/simple_animal/hostile/molerat
-	name = "molerat"
-	desc = "A giant rodent"
+	name = "Кротокрыс"
+	desc = "Гигантская крыса. Или крот?"
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "mole_rat"
 	icon_living = "mole_rat"

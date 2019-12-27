@@ -90,27 +90,27 @@
 	switch(chosen_hole)
 		if(CUM_TARGET_THROAT)
 			if(M.has_mouth() && M.mouth_is_free())
-				message = "shoves their fat reptillian cock deep down \the [M]'s throat and cums."
+				message = "просовывает свой огромный ящерский член в глотку [M] и кончает."
 				M.reagents.add_reagent("cum", rand(9,15))
 			else
-				message = "cums on \the [M]'s face."
+				message = "кончает на лицо [M]."
 		if(CUM_TARGET_VAGINA)
 			if(M.has_vagina())
-				message = "rams its meaty cock into \the [M]'s pussy and fills it with sperm."
+				message = "пробивает писечку [M] и заполняет её спермой."
 				M.reagents.add_reagent("cum", rand(8,12))
 			else
-				message = "cums on \the [M]'s belly."
+				message = "кончает на живот [M]."
 		if(CUM_TARGET_ANUS)
 			if(M.has_anus())
-				message = "hilts its knot into \the [M]'s ass and floods it with Deathclaw jizz."
+				message = "трахает своим сочным членом [M] в жопу и наполняет её густой спермой Когтя Смерти."
 				M.reagents.add_reagent("cum", rand(8,12))
 			else
-				message = "cums on \the [M]'s backside."
+				message = "кончает на попку [M]."
 		else
-			message = "cums on the floor!"
+			message = "кончает на пол!"
 
 	playsound(loc, "honk/sound/interactions/clawcum[rand(1, 2)].ogg", 70, 1, -1)
-	visible_message("<font color=purple><b>\The [src]</b> [message]</font>")
+	visible_message("<font color=purple><b>\[src]</b> [message]</font>")
 	shake_camera(M, 3, 1)
 	set_is_fucking(null ,null)
 
@@ -120,15 +120,15 @@
 
 	sleep(20)
 	playsound(loc, "honk/sound/interactions/slap.ogg", 70, 1, -1)
-	visible_message("<span class='danger'>\The [src]</b> slaps \the [M] right on the ass!</span>", \
-			"<span class='userdanger'>\The [src]</b> slaps \the [M] right on the ass!</span>", null, COMBAT_MESSAGE_RANGE)
+	visible_message("<span class='danger'>\The [src]</b> шлёпает [M] по заднице!</span>", \
+			"<span class='userdanger'>\The [src]</b> шлёпает [M] по заднице!</span>", null, COMBAT_MESSAGE_RANGE)
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/proc/tearSlot(mob/living/M, slot)
 	var/obj/item/W = M.get_item_by_slot(slot)
 	if(W)
 		M.drop_item_v(W)
 		playsound(loc, "sound/items/poster_ripped.ogg", 70, 1, -1)
-		visible_message("<span class='danger'>\The [src]</b> tears off \the [M]'s clothes!</span>", \
-				"<span class='userdanger'>\The [src]</b> tears off \the [M]'s clothes!</span>", null, COMBAT_MESSAGE_RANGE)
+		visible_message("<span class='danger'>[src]</b> рвёт одежду на [M]!</span>", \
+				"<span class='userdanger'>\The [src]</b> рвёт одежду на [M]!</span>", null, COMBAT_MESSAGE_RANGE)
 		return TRUE
 	return FALSE

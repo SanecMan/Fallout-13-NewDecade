@@ -1,7 +1,7 @@
 //Fallout 13 wolf directory
 
 /mob/living/simple_animal/hostile/wolf
-	name = "feral dog"
+	name = "Дикая собака"
 	desc = "The dogs that survived the Great War are a larger, and tougher breed, size of a wolf.<br>This one seems to be severely malnourished and its eyes are bloody red."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "dog_angry"
@@ -40,7 +40,7 @@
 	XP = 7
 
 /mob/living/simple_animal/hostile/wolf/alpha
-	name = "alpha feral dog"
+	name = "Дикая собака вожак"
 	desc = "The dogs that survived the Great War are a larger, and tougher breed, size of a wolf.<br>Wait... This one's a wolf!"
 	icon_state = "wolf_angry"
 	icon_living = "wolf_angry"

@@ -1,5 +1,5 @@
 /mob/living/simple_animal/hostile/alien_fallout
-	name = "alien"
+	name = "×óæîé"
 	desc = "An Alien."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "grey_gun"

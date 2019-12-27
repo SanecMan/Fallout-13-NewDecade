@@ -1,7 +1,7 @@
 //Fallout 13 cazador directory
 
 /mob/living/simple_animal/hostile/cazador
-	name = "cazador"
+	name = "Касадор"
 	desc = "A big and ugly flying thing."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "cazador"

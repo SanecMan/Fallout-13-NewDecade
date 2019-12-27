@@ -1,5 +1,5 @@
 /mob/living/simple_animal/hostile/synth
-	name = "Synth"
+	name = "Синт"
 	desc = "Synth strider. Looks like weird human but it's machine."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "synthmk1"
@@ -51,7 +51,7 @@
 	XP = 25
 
 /mob/living/simple_animal/hostile/synth/mk2
-	name = "Synth"
+	name = "Синт МК2"
 	icon_state = "synthmk2"
 	icon_living = "synthmk2"
 	icon_dead = "synthmk2_d"
