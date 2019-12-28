@@ -1,7 +1,7 @@
 //Fallout 13 npc ghouls directory
 
 /mob/living/simple_animal/hostile/ghoul
-	name = "дикий гуль"
+	name = "Дикий гуль"
 	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "retro_ghoul"
@@ -34,7 +34,7 @@
 	melee_damage_upper = 20
 	aggro_vision_range = 10
 	idle_vision_range = 7
-	attacktext = "scratches"
+	attacktext = "царапает"
 	attack_sound = "punch"
 
 	XP = 7
@@ -50,7 +50,7 @@
 	..()
 
 /mob/living/simple_animal/hostile/ghoul/aggressive
-	name = "дикий гуль"
+	name = "Дикий гуль"
 	desc = "Have you ever seen a hungry ghoul before?<br>Similar to other feral ghouls, it's more aggressive and confident about the fact that you are the best food around.<br>It is missing a left arm."
 	icon_state = "angry_ghoul"
 	icon_living = "angry_ghoul"
@@ -84,7 +84,7 @@
 	SSradiation.processing += src
 
 /mob/living/simple_animal/hostile/ghoul/soldier
-	name = "дикий гуль"
+	name = "Дикий гуль"
 	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "soldier_ghoul"
@@ -95,7 +95,7 @@
 	health = 90
 
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
-	name = "бронированный дикий гуль"
+	name = "Бронированный дикий гуль"
 	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "soldier_ghoul_a"

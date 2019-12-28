@@ -34,7 +34,7 @@
 	melee_damage_upper = 30
 	aggro_vision_range = 10
 	idle_vision_range = 5
-	attacktext = "scratches"
+	attacktext = "царапает"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1
@@ -78,7 +78,7 @@
 	melee_damage_upper = 45
 	aggro_vision_range = 10
 	idle_vision_range = 5
-	attacktext = "scratches"
+	attacktext = "царапает"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1
@@ -129,7 +129,7 @@
 	melee_damage_upper = 35
 	aggro_vision_range = 10
 	idle_vision_range = 5
-	attacktext = "scratches"
+	attacktext = "царапает"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1
