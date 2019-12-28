@@ -31,7 +31,7 @@ var/datum/subsystem/vote/SSvote
 		else
 			var/datum/browser/client_popup
 			for(var/client/C in voting)
-				client_popup = new(C, "vote", "Панель голосования")
+				client_popup = new(C, "vote", "ПАНЕЛЬ ГОЛОСОВАНИЯ")
 				client_popup.set_window_options("can_close=0")
 				client_popup.set_content(interface(C))
 				client_popup.open(0)
