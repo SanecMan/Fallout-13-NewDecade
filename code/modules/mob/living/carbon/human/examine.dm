@@ -76,7 +76,7 @@
 	else if(blood_DNA)
 		var/hand_number = get_num_arms()
 		if(hand_number)
-			msg += "<span class='warning'>[t_He] [t_has] [hand_number > 1 ? "" : "a"] покрытая кровью рука[hand_number > 1 ? "s" : ""]!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [hand_number > 1 ? "" : ""] покрытую кровью руки!</span>\n"
 
 	//handcuffed?
 
