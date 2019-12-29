@@ -476,7 +476,10 @@
 
 ///FLUFF THINGS///
 
+/mob/living/carbon/human/OnSpawn
 	if(ckey == "DrNuke")
+		new /obj/item/weapon/gun/energy/disabler/fluff/angelofmercy(loc)
+	if(ckey == "iWuna")
 		new /obj/item/weapon/gun/energy/disabler/fluff/angelofmercy(loc)
 
 ///END OF FLUFF SPAWN

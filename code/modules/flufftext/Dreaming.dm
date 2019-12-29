@@ -2,12 +2,12 @@
 	set waitfor = 0
 	dreaming = 1
 	var/list/dreams = list(
-		"an ID card","a bottle","a familiar face","a crewmember","a toolbox","a security officer","the captain",
-		"voices from all around","deep space","a doctor","the engine","a traitor","an ally","darkness",
-		"light","a scientist","a monkey","a catastrophe","a loved one","a gun","warmth","freezing","the sun",
-		"a hat","the Luna","a ruined station","a planet","plasma","air","the medical bay","the bridge","blinking lights",
-		"a blue light","an abandoned laboratory","Nanotrasen","The Syndicate","blood","healing","power","respect",
-		"riches","space","a crash","happiness","pride","a fall","water","flames","ice","melons","flying"
+		"Карта доступа","бутылка","знакомое лицо","житель","брамин","рейнджер","легион",
+		"бытие","глубокий космос","доктор","машина","предательство","товарищ","тьма",
+		"яркая вспышка","учёные","ядерный гриб","катастрофа","любовь","оружие","тепло","холод","солнце",
+		"шляпа","КСН ИСХОД?","разрушенная станция в космосе?","планеты","плазма","космос","медицинский отсек","мостик","моргающие лампы",
+		"голубой свет","покинутая лаборатория","табличка с надписью Нанотрезен","Синдикат","кровь","уьийство","энергия","уважение",
+		"богатство","дыхание","падение","счастье","ЛГБТ","пропасть","вода","жизнь","лёд","арбузы","полёт"
 		)
 	for(var/i = rand(1,4),i > 0, i--)
 		var/dream_image = pick(dreams)
