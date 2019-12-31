@@ -312,13 +312,19 @@
 	desc = "<b>Доступно для: кто угодно!</b><br>Альфа 1-1, это браво, как слышите?.<br>."
 	items = list(
 		/obj/item/clothing/gloves/f13/military,
-		/obj/item/clothing/shoes/f13/military,,
+		/obj/item/clothing/shoes/f13/military,
 		/obj/item/clothing/suit/armor/f13/black_combat_armor,
 		/obj/item/clothing/under/syndicate/tacticool,
 		/obj/item/clothing/glasses/night
 		)
 	price = 85000
 
+/datum/content_pack/f76
+	name = "Коллекционное Издание Фоллаут 13"
+	id = "f76"
+	desc = "<b>Доступно для: кто угодно всего за 200$!</b><br>ЭТО ПРОСТО РАБОТАЕТ.<br>."
+	items = list(/obj/item/weapon/storage/f76bag/bag)
+	price = 200
 
 /datum/content_pack/leaders
 	name = "Лидеры всех основных фракций"
