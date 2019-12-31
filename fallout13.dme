@@ -1350,6 +1350,7 @@
 #include "code\modules\fallout\mob\npc\gecko.dm"
 #include "code\modules\fallout\mob\npc\ghost_people.dm"
 #include "code\modules\fallout\mob\npc\ghoul.dm"
+#include "code\modules\fallout\mob\npc\liberators.dm"
 #include "code\modules\fallout\mob\npc\molerat.dm"
 #include "code\modules\fallout\mob\npc\protectron.dm"
 #include "code\modules\fallout\mob\npc\rad_scorpion.dm"

@@ -38,7 +38,7 @@
 	harm_intent_damage = 20
 	melee_damage_lower = 20
 	melee_damage_upper = 30
-	attacktext = "stings"
+	attacktext = "жалит"
 	attack_sound = 'sound/f13npc/Npc_centaur_attackspit_03.ogg'
 
 	XP = 15
