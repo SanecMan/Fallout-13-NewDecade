@@ -57,9 +57,8 @@
 	desc = "Looks cold."
 	icon_state = "snow"
 	ore_type = /obj/item/stack/sheet/mineral/snow
-	planetary_atmos = false
 	floor_tile = null
-	initial_gas_mix = "o2=60;n2=50;TEMP=180"
+	initial_gas_mix = "o2=22;n2=82;TEMP=180"
 	slowdown = 2
 
 
