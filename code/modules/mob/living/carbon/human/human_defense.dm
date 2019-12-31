@@ -647,7 +647,7 @@
 
 	if(health >= 0)
 		if(src == M)
-			visible_message("[src] осматривает [p_them()]себя.", \
+			visible_message("[src] осматривает себя.", \
 				"<span class='notice'>Вы осматриваете себя на наличие ран.</span>")
 
 			var/list/missing = list("head", "chest", "l_arm", "r_arm", "l_leg", "r_leg")

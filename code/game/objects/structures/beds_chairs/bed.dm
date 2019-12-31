@@ -8,7 +8,7 @@
  * Beds
  */
 /obj/structure/bed
-	name = "bed"
+	name = "кровать"
 	desc = "This is used to lie in, sleep in or strap on."
 	icon_state = "bed"
 	icon = 'icons/fallout/objects/structures/furniture.dmi'

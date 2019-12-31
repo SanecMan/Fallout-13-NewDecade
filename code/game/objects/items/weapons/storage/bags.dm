@@ -27,7 +27,7 @@
 //          Trash bag
 // -----------------------------
 /obj/item/weapon/storage/bag/trash
-	name = "trash bag"
+	name = "Мешок для мусора"
 	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!"
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "trashbag"
@@ -65,7 +65,7 @@
 	return
 
 /obj/item/weapon/storage/bag/trash/bluespace
-	name = "trash bag of holding"
+	name = "мешок для мусора с пространственным преобразователем"
 	desc = "The latest and greatest in custodial convenience, a trashbag that is capable of holding vast quantities of garbage."
 	icon_state = "bluetrashbag"
 	origin_tech = "materials=4;bluespace=4;engineering=4;plasmatech=3"
@@ -77,7 +77,7 @@
 // -----------------------------
 
 /obj/item/weapon/storage/bag/ore
-	name = "mining satchel"
+	name = "сумка шахтёра"
 	desc = "This little bugger can be used to store and transport ores."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "satchel"
@@ -105,7 +105,7 @@
 // -----------------------------
 
 /obj/item/weapon/storage/bag/plants
-	name = "plant bag"
+	name = "Сумка садовода"
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "plantbag"
 	storage_slots = 100; //the number of plant pieces it can carry.

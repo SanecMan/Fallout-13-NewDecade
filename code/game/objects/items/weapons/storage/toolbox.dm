@@ -1,6 +1,6 @@
 /obj/item/weapon/storage/toolbox
-	name = "toolbox"
-	desc = "Danger. Very robust."
+	name = "ящик дл€ инструментов"
+	desc = "ќпасно. ќчень –обустный."
 	icon_state = "red"
 	item_state = "toolbox_red"
 	flags = CONDUCT
@@ -19,7 +19,7 @@
 	return (BRUTELOSS)
 
 /obj/item/weapon/storage/toolbox/emergency
-	name = "emergency toolbox"
+	name = "ящик дл€ инструментов"
 	icon_state = "red"
 	item_state = "toolbox_red"
 
@@ -35,7 +35,7 @@
 	new /obj/item/device/radio/off(src)
 
 /obj/item/weapon/storage/toolbox/mechanical
-	name = "mechanical toolbox"
+	name = "ящик дл€ инструментов механика"
 	icon_state = "blue"
 	item_state = "toolbox_blue"
 
@@ -49,7 +49,7 @@
 	new /obj/item/weapon/wirecutters(src)
 
 /obj/item/weapon/storage/toolbox/electrical
-	name = "electrical toolbox"
+	name = "ящик дл€ инструментов электрика"
 	icon_state = "yellow"
 	item_state = "toolbox_yellow"
 
@@ -68,7 +68,7 @@
 		new /obj/item/stack/cable_coil(src,30,pickedcolor)
 
 /obj/item/weapon/storage/toolbox/syndicate
-	name = "suspicious looking toolbox"
+	name = "ѕодозрительно выгл€д€щий €щик дл€ инструметов"
 	icon_state = "syndicate"
 	item_state = "toolbox_syndi"
 	origin_tech = "combat=2;syndicate=1;engineering=2"

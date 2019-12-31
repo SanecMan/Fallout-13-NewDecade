@@ -1,5 +1,5 @@
 /obj/structure/chair
-	name = "chair"
+	name = "стул"
 	desc = "You sit in this. Either by will or force.\n<span class='notice'>Drag your sprite to sit in the chair. Alt-click to rotate it clockwise.</span>"
 	icon = 'icons/fallout/objects/structures/furniture.dmi'
 	icon_state = "chair"
@@ -111,7 +111,7 @@
 // Chair types
 /obj/structure/chair/wood
 	icon_state = "wooden_chair_settler"
-	name = "wooden chair"
+	name = "деревянный стул"
 	desc = "A chair built from scavenged wood.<br>A work was done by a carpentering amateur - the wasteland settler."
 	resistance_flags = FLAMMABLE
 	obj_integrity = 70
@@ -133,11 +133,11 @@
 
 /obj/structure/chair/wood/fancy
 	icon_state = "wooden_chair_fancy"
-	name = "fancy wooden chair"
+	name = "опртяный деревянный стул"
 	desc = "An elegant chair made of luxurious wood."
 
 /obj/structure/chair/comfy
-	name = "comfy chair"
+	name = "комфортное кресло"
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
 	icon_state = "comfychair"
 	color = rgb(255,255,255)
@@ -202,7 +202,7 @@
 //Stool
 
 /obj/structure/chair/stool
-	name = "stool"
+	name = "стул"
 	desc = "Apply butt."
 	icon_state = "stool"
 	can_buckle = 0
@@ -226,27 +226,27 @@
 		qdel(src)
 
 /obj/structure/chair/stool/red
-	name = "red stool"
+	name = "красный стул"
 	desc = "Apply butt."
 	icon_state = "stool_r"
 
 /obj/structure/chair/stool/yellow
-	name = "yellow stool"
+	name = "жёлтый стул"
 	desc = "Apply butt."
 	icon_state = "stool_y"
 
 /obj/structure/chair/stool/green
-	name = "green stool"
+	name = "зеленый стул"
 	desc = "Apply butt."
 	icon_state = "stool_g"
 
 /obj/structure/chair/stool/blue
-	name = "blue stool"
+	name = "голубой стул"
 	desc = "Apply butt."
 	icon_state = "stool_b"
 
 /obj/structure/chair/stool/bar
-	name = "bar stool"
+	name = "стул"
 	desc = "It has some unsavory stains on it..."
 	icon_state = "bar"
 	item_chair = /obj/item/chair/stool/bar

@@ -328,11 +328,11 @@
 		if(!prevent_warning)
 			for(var/mob/M in viewers(usr, null))
 				if(M == usr)
-					to_chat(usr, "<span class='notice'>Вы кладёте [W]  [src].</span>")
+					to_chat(usr, "<span class='notice'>Вы кладёте [W] в [src].</span>")
 				else if(in_range(M, usr)) //If someone is standing close enough, they can tell what it is...
-					M.show_message("<span class='notice'>[usr] кладёт [W]  [src].</span>", 1)
+					M.show_message("<span class='notice'>[usr] кладёт [W] в [src].</span>", 1)
 				else if(W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...
-					M.show_message("<span class='notice'>[usr] кладёт [W]  [src].</span>", 1)
+					M.show_message("<span class='notice'>[usr] кладёт [W] в [src].</span>", 1)
 
 		orient2hud(usr)
 		for(var/mob/M in can_see_contents())

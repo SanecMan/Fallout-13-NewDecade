@@ -198,7 +198,7 @@ var/highlander_claymores = 0
 	resistance_flags = FIRE_PROOF
 
 /obj/item/weapon/katana/chinese
-	name = "Chinese officer sword"
+	name = "Мечь китайского офицера"
 	desc = "A grimy Chinese straight sword with a leather and bronze hilt. It was wielded by Chinese officers before the Great War."
 	icon_state = "chinese"
 	icon = 'icons/fallout/objects/melee.dmi'

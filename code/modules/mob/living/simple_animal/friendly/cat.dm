@@ -44,7 +44,7 @@
 
 
 /mob/living/simple_animal/pet/cat/space
-	name = "space cat"
+	name = "Космический Кот"
 	desc = "It's a cat... in space!"
 	icon_state = "spacecat"
 	icon_living = "spacecat"
@@ -62,7 +62,7 @@
 	icon_dead = "original_dead"
 
 /mob/living/simple_animal/pet/cat/kitten
-	name = "kitten"
+	name = "Котёнок"
 	desc = "D'aaawwww."
 	icon_state = "kitten"
 	icon_living = "kitten"
@@ -73,7 +73,7 @@
 
 //RUNTIME IS ALIVE! SQUEEEEEEEE~
 /mob/living/simple_animal/pet/cat/Runtime
-	name = "Runtime"
+	name = "Рантайм"
 	desc = "GCAT"
 	icon_state = "cat"
 	icon_living = "cat"

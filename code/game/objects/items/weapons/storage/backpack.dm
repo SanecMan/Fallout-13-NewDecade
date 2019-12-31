@@ -10,8 +10,8 @@
  */
 
 /obj/item/weapon/storage/backpack
-	name = "backpack"
-	desc = "You wear this on your back and put items into it."
+	name = "рюкзак"
+	desc = "Вы можете надеть его на свою спину и ложить в него всякие штуки."
 	icon_state = "backpack"
 	item_state = "backpack"
 	w_class = WEIGHT_CLASS_BULKY
@@ -29,8 +29,8 @@
  */
 
 /obj/item/weapon/storage/backpack/holding
-	name = "bag of holding"
-	desc = "A backpack that opens into a localized pocket of Blue Space."
+	name = "рюкзак бесконечности"
+	desc = "Рюкзак ведущий в карманное пространство."
 	origin_tech = "bluespace=5;materials=4;engineering=4;plasmatech=5"
 	icon_state = "holdingpack"
 	max_w_class = WEIGHT_CLASS_GIGANTIC
@@ -88,7 +88,7 @@
 
 
 /obj/item/weapon/storage/backpack/santabag
-	name = "Santa's Gift Bag"
+	name = "Мешок Санты"
 	desc = "Space Santa uses this to deliver toys to all the nice children in space in Christmas! Wow, it's pretty big!"
 	icon_state = "giftbag0"
 	item_state = "giftbag"
@@ -113,7 +113,7 @@
 	item_state = "clownpack"
 
 /obj/item/weapon/storage/backpack/explorer
-	name = "explorer bag"
+	name = "Рюкзак Исследователя"
 	desc = "A robust backpack for stashing your loot."
 	icon_state = "explorerpack"
 	item_state = "explorerpack"
@@ -125,13 +125,13 @@
 	item_state = "mimepack"
 
 /obj/item/weapon/storage/backpack/medic
-	name = "medical backpack"
+	name = "Медицинский Рюкзак"
 	desc = "It's a backpack especially designed for use in a sterile environment."
 	icon_state = "medicalpack"
 	item_state = "medicalpack"
 
 /obj/item/weapon/storage/backpack/security
-	name = "security backpack"
+	name = "Рюкзак Охраны"
 	desc = "It's a very robust backpack."
 	icon_state = "securitypack"
 	item_state = "securitypack"
@@ -143,13 +143,13 @@
 	item_state = "explorerpack"
 
 /obj/item/weapon/storage/backpack/sstbackpack
-	name = "M.I backpack"
+	name = "Рюкзак Мобильной Пехоты"
 	desc = "fancy backpack for good troopers!"
 	icon_state = "sstback"
 	item_state = "sstback"
 
 /obj/item/weapon/storage/backpack/captain
-	name = "captain's backpack"
+	name = "Рюкзак Капитана"
 	desc = "It's a special backpack made exclusively for Nanotrasen officers."
 	icon_state = "captainpack"
 	item_state = "captainpack"
@@ -199,13 +199,13 @@
  */
 
 /obj/item/weapon/storage/backpack/satchel
-	name = "satchel"
+	name = "Сумка"
 	desc = "A trendy looking satchel."
 	icon_state = "satchel-norm"
 	species_exception = list(/datum/species/angel) //satchels can be equipped since they are on the side, not back !!! supermutant
 
 /obj/item/weapon/storage/backpack/satchel/leather
-	name = "leather satchel"
+	name = "Кожанная сумка"
 	desc = "It's a very fancy satchel made with fine leather."
 	icon_state = "satchel"
 	resistance_flags = 0
