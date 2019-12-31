@@ -1,4 +1,4 @@
-/mob/living/simple_animal/hostile/eyebot
+/mob/living/simple_animal/hostile/liberatormk0
 	name = "Освободитель МК0"
 	desc = "Маленький бирюзовый паукообразный робот с красным «глазом» в виде звезды. Чуть ниже глаза-звезды можно заметить китайские иероглифы, по которым можно догадаться, что данный робот использовался НОАК. При нападении «Освободитель» использует маломощный лазер.."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -24,9 +24,9 @@
 
 	//ambient_sound = 'sound/f13npc/eyebot_loop.ogg'
 
-	sound_speak_chance = 1
+	//sound_speak_chance = 1
 	//sound_speak = list('sound/machines/buzz-sigh.ogg','sound/misc/interference.ogg')
-	sound_speak = list('sound/f13music/enclave_dixie.ogg','sound/f13music/enclave_hymn.ogg','sound/f13music/enclave_montezuma.ogg','sound/f13music/enclave_presidential.ogg','sound/f13music/enclave_stars.ogg', 'sound/f13music/enclave_washington.ogg', 'sound/f13music/enclave_yankee.ogg')
+	//sound_speak = list('sound/f13music/enclave_dixie.ogg','sound/f13music/enclave_hymn.ogg','sound/f13music/enclave_montezuma.ogg','sound/f13music/enclave_presidential.ogg','sound/f13music/enclave_stars.ogg', 'sound/f13music/enclave_washington.ogg', 'sound/f13music/enclave_yankee.ogg')
 
 	aggro_sound_chance = 50
 	aggro_sound = 'sound/f13npc/libdetected.ogg'
