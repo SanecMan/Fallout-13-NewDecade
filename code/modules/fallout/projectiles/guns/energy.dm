@@ -119,6 +119,7 @@
 	w_class = 2
 	price = 500
 	energy_gun = 1
+	fire_sound = 'sound/f13weapons/laserweap76.ogg'
 
 /obj/item/weapon/gun/energy/laser/pistol/wattz1000
 	name ="Wattz 1000 Pistol"
@@ -145,6 +146,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	price = 1000
 	energy_gun = 1
+	fire_sound = 'sound/f13weapons/laserweap76.ogg'
 
 /obj/item/weapon/gun/energy/laser/rifle/aer13
 	name ="Laser Rifle AER13"
@@ -155,6 +157,7 @@
 	burst_size = 2
 	fire_delay = 3
 	energy_gun = 1
+	fire_sound = 'sound/f13weapons/laserweap76.ogg'
 
 /obj/item/weapon/gun/energy/laser/rifle/tri
 	name ="Tribeam"
@@ -184,6 +187,7 @@
 	price = 3500
 	origin_tech = "combat=5;magnets=7"
 	energy_gun = 1
+	fire_sound = 'sound/f13weapons/laserweap76.ogg'
 
 //Gauss Rifles//
 

@@ -52,7 +52,7 @@
 	ranged = 1
 	ranged_cooldown_time = 105
 	projectiletype = /obj/item/projectile/beam
-	projectilesound = 'sound/weapons/resonator_fire.ogg'
+	projectilesound = 'sound/f13weapons/laserweap76.ogg'
 	var/obj/machinery/camera/portable/builtInCamera
 
 	XP = 2

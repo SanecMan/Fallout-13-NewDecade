@@ -48,7 +48,7 @@
 	idle_vision_range = 7
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam
-	projectilesound = 'sound/weapons/resonator_fire.ogg'
+	projectilesound = 'sound/f13weapons/laserweap76.ogg'
 
 	XP = 14
 

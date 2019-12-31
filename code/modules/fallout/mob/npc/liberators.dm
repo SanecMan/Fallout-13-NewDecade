@@ -50,4 +50,4 @@
 	ranged = 1
 	ranged_cooldown_time = 100
 	projectiletype = /obj/item/projectile/beam
-	projectilesound = 'sound/weapons/resonator_fire.ogg'
+	projectilesound = 'sound/f13weapons/laserweap76.ogg'
