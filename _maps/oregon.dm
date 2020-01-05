@@ -4,7 +4,7 @@
 
 		#define MINETYPE "lavaland"
 
-		#include "map_files\TexasWasteland\texas_wastelandnewyear.dmm"
+		#include "map_files\TexasWasteland\texas_wasteland.dmm"
 		#include "map_files\TexasWasteland\z2.dmm"
 		///#include "map_files\debug\wasteland.dmm"
 		///#include "map_files\TexasWasteland\navarro.dmm"
