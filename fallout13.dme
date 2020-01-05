@@ -15,7 +15,7 @@
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
 #include "_maps\oregon.dm"
-#include "_maps\map_files\TexasWasteland\texas_wastelandnewyear.dmm"
+#include "_maps\map_files\TexasWasteland\oregon_wasteland.dmm"
 #include "_maps\map_files\TexasWasteland\z2.dmm"
 #include "code\_compile_options.dm"
 #include "code\world.dm"
