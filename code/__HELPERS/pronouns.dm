@@ -118,7 +118,7 @@
 		if(MALE)
 			. = "он"
 		if(PLURAL)
-			. = "они"
+			. = "это"
 	if(capitalized)
 		. = capitalize(.)
 
