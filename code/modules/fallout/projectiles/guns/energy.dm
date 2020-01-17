@@ -130,6 +130,7 @@
 	fire_delay = 3.5
 	price = 400
 	energy_gun = 1
+	fire_sound = 'sound/f13weapons/laserweap76.ogg'
 
 /obj/item/weapon/gun/energy/laser/rifle
 	name ="Laser Rifle AER9"

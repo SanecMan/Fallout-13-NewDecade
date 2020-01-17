@@ -428,7 +428,7 @@
 	can_suppress = 0
 	burst_size = 0
 	actions_types = list()
-	fire_sound = 'sound/weapons/Laser.ogg'
+	fire_sound = 'sound/f13weapons/laserweap76.ogg'
 	casing_ejector = 0
 
 /obj/item/weapon/gun/ballistic/automatic/laser/update_icon()
