@@ -337,7 +337,7 @@
 	//	/datum/job/legate,
 		/datum/job/elder,
 	//	/datum/job/colonel,
-		/datum/job/overseer
+	//	/datum/job/overseer
 		//datum/job/preacher
 		)
 	price = 800000000

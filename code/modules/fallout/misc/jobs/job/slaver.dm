@@ -135,7 +135,7 @@
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
-	outfit = /datum/outfit/job/dweller
+//	outfit = /datum/outfit/job/dweller
 
 	allowed_packs = list("starter", "cigarettes", "follower", "team_fortress", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom")
 
