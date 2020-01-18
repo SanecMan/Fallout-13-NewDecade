@@ -18,8 +18,8 @@
 	emote_taunt = list("gnashes")
 	taunt_chance = 30
 	move_to_delay = 2
-	maxHealth = 60
-	health = 60
+	maxHealth = 100
+	health = 100
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	movement_type = FLYING

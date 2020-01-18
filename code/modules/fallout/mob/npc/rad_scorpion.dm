@@ -14,8 +14,8 @@
 	response_help  = "touches"
 	response_disarm = "hits"
 	response_harm   = "kicks"
-	maxHealth = 80
-	health = 80
+	maxHealth = 450
+	health = 450
 	self_weight = 120
 
 	faction = list("hostile", "scorpion")

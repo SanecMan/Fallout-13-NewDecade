@@ -16,8 +16,8 @@
 	environment_smash = 0
 	respawn_time_of_mob = 150000000
 	move_to_delay = 2
-	maxHealth = 15
-	health = 15
+	maxHealth = 45
+	health = 45
 	//pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	//mob_size = MOB_SIZE_TINY
 	self_weight = 15

@@ -14,8 +14,8 @@
 	response_harm = "kicks"
 	butcher_results = list(/obj/item/stack/sheet/animalhide/molerat = 1, \
 	/obj/item/weapon/reagent_containers/food/snacks/meat/slab/molerat = 1)
-	maxHealth = 30
-	health = 30
+	maxHealth = 65
+	health = 65
 	self_weight = 35
 
 	faction = list("hostile", "molerat")

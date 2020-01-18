@@ -6,12 +6,14 @@
 
 // хз насколько вообще актуально этим пользоваться
 
-		#include "map_files\TexasWasteland\oregon_wasteland.dmm"
-		#include "map_files\TexasWasteland\z2.dmm"
+		//#include "map_files\TexasWasteland\oregon_wasteland.dmm"
+		//#include "map_files\TexasWasteland\z2.dmm"
 		///#include "map_files\debug\wasteland.dmm"
 		///#include "map_files\TexasWasteland\navarro.dmm"
 		///#include "map_files\TexasWasteland\fartexas.dmm"
         ///#include "map_files\TexasWasteland\z3.dmm"
+		#include "map_files\TexasWasteland\texas_legacy.dmm"
+		#include "map_files\TexasWasteland\z2_legacy.dmm"
 
 		#define MAP_PATH "map_files/TexasWasteland"
         #define MAP_FILE "texas_wastelandnewyear.dmm"

@@ -12,8 +12,8 @@
 	response_help = "pets"
 	response_disarm = "pushes aside"
 	response_harm = "kicks"
-	maxHealth = 60
-	health = 60
+	maxHealth = 80
+	health = 80
 	self_weight = 35
 
 	faction = list("hostile", "wolf")

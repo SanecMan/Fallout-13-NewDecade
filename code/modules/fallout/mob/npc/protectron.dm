@@ -17,8 +17,8 @@
 	move_to_delay = 5
 	stat_attack = 1
 	robust_searching = 1
-	maxHealth = 150
-	health = 150
+	maxHealth = 350
+	health = 350
 	self_weight = 200
 	healable = 0
 

@@ -14,8 +14,8 @@
 	response_disarm = "tries to grab the deathclaw by its large"
 	response_harm = "hits the deathclaw right in its large"
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw = 5, /obj/item/stack/sheet/animalhide/deathclaw=3)
-	maxHealth = 400
-	health = 400
+	maxHealth = 700
+	health = 700
 	self_weight = 500
 	damage_coeff = list(BRUTE = 0.6, BURN = 0.8, TOX = 0.2, CLONE = 0, STAMINA = 1, OXY = 0)
 
