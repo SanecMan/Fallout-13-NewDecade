@@ -1,7 +1,7 @@
 //Fallout 13 primary vehicle
 
 /obj/vehicle/fuel/motorcycle
-	name = "motorcycle"
+	name = "мотоцикл"
 	desc = "Wanderer Motors LLC."
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
 	icon_state = "bike"
@@ -41,7 +41,7 @@
 	cover.layer = ABOVE_MOB_LAYER
 
 /obj/item/key/motorcycle
-	name = "motorcycle key"
+	name = "ключи от мотоцикла"
 	desc = "A keyring with a small steel key.<br>By the look of the key cuts it likely belongs to a motorcycle."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
 
@@ -52,18 +52,18 @@
 //Motorcycle subtypes with different skins
 
 /obj/vehicle/fuel/motorcycle/rusty
-	name = "rusty motorcycle"
+	name = "ржавый мотоцикл"
 	desc = "A very old, weathered motorcycle.<br>Somehow the engine is still intact."
 	icon_state = "bike_rust_med"
 	datum_type = /datum/riding/motorcycle/slow
 
 /obj/vehicle/fuel/motorcycle/green
-	name = "green motorcycle"
+	name = "зеленый мотоцикл"
 	desc = "A military motorcycle from the old days.<br>Oddly enough it's still in pristine condition. The Army always had all the top-quality stuff."
 	icon_state = "bike_green"
 
 /obj/vehicle/fuel/motorcycle/flamy
-	name = "black motorcycle"
+	name = "черный мотоцикл"
 	desc = "A vintage motorcycle from the old days.<br>It's extremely well maintained, jet black, and very shiny.<br>Topping it all off, it has badass flames painted on the fuel tank."
 	icon_state = "bike_flamy"
 

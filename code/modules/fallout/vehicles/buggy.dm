@@ -1,7 +1,7 @@
 //Fallout 13 dune buggy directory
 
 /obj/vehicle/fuel/motorcycle/buggy
-	name = "dune buggy"
+	name = "багги"
 	desc = "<i>Ain't no place for fancy cars on the wasteland.<br>No place for classy brands, but nicknames.<br>Only the rusty and trusty death machines.<br>Only fuel and blood.</i>"
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
 	icon_state = "buggy_dune"
@@ -22,7 +22,7 @@
 	name = pick(names)
 
 /obj/item/key/buggy
-	name = "car key"
+	name = "ключи"
 	desc = "A keyring with a small steel key.<br>By the look of the key cuts, it likely belongs to an automobile."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
 

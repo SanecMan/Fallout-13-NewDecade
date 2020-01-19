@@ -123,7 +123,7 @@
 
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle
-	name = "охотничьЯ винтовка"
+	name = "охотничья винтовка"
 	desc = "Довоенная охотничья винтовка."
 	icon_state = "rifle"
 	item_state = "rifle"
@@ -142,7 +142,7 @@
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
-	icon_state = "охотничьЯ винтовка с прицелом"
+	icon_state = "охотничья винтовка с прицелом"
 	item_state = "rifle-scope"
 	can_suppress = 1
 	zoomable = TRUE
@@ -204,7 +204,7 @@
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
-	name = "БоеваЯ винтовка АР15"
+	name = "Боевая винтовка АР15"
 	desc = "Так-же известная как Боевая Винтовка НКР, винтовка использует обычные боеприпасы калибра 5.56мм и имеет вместимость магазина в 20 патрон."
 	icon_state = "assault-rifle"
 	item_state = "assault"
@@ -320,7 +320,7 @@
 	big_gun = 1
 
 /obj/item/weapon/gun/ballistic/revolver/sequoia
-	name = "«СеквойЯ» рейнджера"
+	name = "«Секвойя» рейнджера"
 	icon_state = "sequoia"
 	desc = "«Секвойя» рейнджера, популярная модель револьвера на пустоши, имеющая богатую рукоятку. Этот отличается от остальных моделей, и имеет серийный номер на дуле."
 	item_state = "liquidsequoia"
