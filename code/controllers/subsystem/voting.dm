@@ -137,7 +137,7 @@ var/datum/subsystem/vote/SSvote
 		if(!active_admins)
 			ticker.force_ending = 1
 		else
-			to_chat(world, "<span style='boldannounce'>Примечание: Перезапуск не состоится пока ктивный администратор не нажмет кнопку.</span>")
+			to_chat(world, "<span style='boldannounce'>Примечание: Перезапуск не состоится пока активный администратор не нажмет кнопку.</span>")
 			message_admins("Голосование о перезапуске завершено, но на сервере имеется администратор с флагом +server который должен решить окончательно.")
 
 	return .
