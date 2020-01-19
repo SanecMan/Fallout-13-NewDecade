@@ -40,7 +40,7 @@
 		mind_data += {"
 		<tr [!m_objective ? "style='visibility:none'" : ""]>
 			<td>
-				[objective_completed_ind] Role Objective:
+				[objective_completed_ind]  вест профессии:
 			</td>
 			<td>
 				<b>[mind.objective.parent.name]</b><br>
@@ -61,9 +61,9 @@
 
 	var/title
 	if(user == src)
-		title = "<div align='center'>Objectives</div>"
+		title = "<div align='center'> весты</div>"
 	else
-		title = "<div align='center'>[src]'s Objectives</div>"
+		title = "<div align='center'> весты [src]</div>"
 
 	var/datum/browser/popup = new(user, "objectives", title, 500, 200)
 	popup.set_content(html)

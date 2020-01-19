@@ -2,7 +2,7 @@
 
 /datum/f13_objective/join
 	name = "Мечта всей жизни"
-	desc = "Since childhood you've dreamed of joining the %faction_name% to unite in the fight for a better future. Now you have finally decided to go through with it.<br>Find and join the %faction_name% !"
+	desc = "С самого своего детства, вы мечтали примкнуть к %faction_name% для борьбы за лучшее будущее. И наконец, вы решились на это.<br>Найдите лидеров %faction_name% и вступите в их группировку!"
 	points = 0
 	kind = INDIVIDUAL
 

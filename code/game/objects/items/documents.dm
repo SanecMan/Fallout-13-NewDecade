@@ -20,13 +20,13 @@
 	desc = "\"Top Secret\" documents detailing sensitive Enclave operational intelligence."
 
 /obj/item/documents/syndicate/red
-	name = "red secret documents"
-	desc = "\"Top Secret\" documents detailing sensitive Syndicate operational intelligence. These documents are verified with a red wax seal."
+	name = "секретные документы Братства"
+	desc = "\"СОВЕРШЕНОНО СЕКРЕТНО\" в документах детально описаны координаты, явки и пароли от бункеров Братства."
 	icon_state = "docs_red"
 
 /obj/item/documents/syndicate/blue
-	name = "blue secret documents"
-	desc = "\"Top Secret\" documents detailing sensitive Syndicate operational intelligence. These documents are verified with a blue wax seal."
+	name = "секретные документы Анклава"
+	desc = "\"СОВЕРШЕНОНО СЕКРЕТНО\" в документах детально описаны координаты, явки и пароли от бункеров Анклава и расположения нефтевышек."
 	icon_state = "docs_blue"
 
 /obj/item/documents/syndicate/mining

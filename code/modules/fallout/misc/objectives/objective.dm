@@ -2,8 +2,8 @@
 
 /datum/f13_objective
 	var
-		name = "Objective"
-		desc = "Objective description"
+		name = "Квест"
+		desc = "Описание квеста"
 		points = 0
 		kind = BOTH
 		list/available_factions = list("all")

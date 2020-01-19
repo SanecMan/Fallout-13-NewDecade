@@ -1,8 +1,8 @@
 //Fallout 13 - Veni, vidi, vici
 
 /datum/f13_objective/expand
-	name = "Command and Conquer"
-	desc = "Your faction must contain %target_size% living members by the end of round."
+	name = "Подчиняй и Властвуй"
+	desc = "Ваша фракция должна насчитывать следующее количество членов, до самого конца игры: %target_size%."
 	points = 0
 	kind = FACTION
 	available_factions = list("city", "raiders")

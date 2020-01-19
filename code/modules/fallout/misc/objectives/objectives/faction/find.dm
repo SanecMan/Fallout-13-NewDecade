@@ -1,15 +1,16 @@
 //Fallout 13 - Where in the World is Carmen Sandiego?
 
 /datum/f13_objective/find
-	name = "Lost and Found"
-	desc = "You must find and hold %item_name%, whatever it takes!<br>The fate of an entire mankind depends on it!"
+	name = "Моя прелесть!"
+	desc = "Вы должны найти и сохранить %item_name%!"
 	points = 0
 	kind = FACTION
 
-	var/list/bos_items = list(/obj/item/ring)
-	var/list/enclave_items = list(/obj/item/ring)
+	var/list/bos_items = list(/obj/item/ring, /obj/item/key/vertibird, /obj/item/documents/syndicate/blue)
+	var/list/enclave_items = list(/obj/item/ring, /obj/item/key/vertibird, /obj/item/documents/syndicate/red)
 	var/list/city_items = list(/obj/item/ring)
 	var/list/other_items = list(/obj/item/ring)
+	var/list/ncr_items = list(/obj/item/ring, /obj/item/key/vertibird, /obj/item/documents/syndicate/blue, /obj/item/documents/syndicate/red)
 
 	assignto_faction(var/datum/f13_faction/F, var/list/data = list())
 		data["target_item"] = get_target(F.id)
