@@ -367,7 +367,7 @@
 	self_weight = 5
 
 /obj/item/clothing/suit/armor/f13/ncr/soldier
-	name = "standard issue trooper armor"
+	name = "стандартная броня НКР"
 	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons, and gauntlets, worn by NCR soldiers in combat environments.<br>This one has had its breastplate emblazoned with the emblem of the NCR, that has slightly faded over time."
 	icon_state = "ncr_armor2"
 	item_state = "ncr_armor2"

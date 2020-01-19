@@ -1,6 +1,6 @@
 
 /obj/structure/closet/body_bag
-	name = "body bag"
+	name = "мешок для трупов"
 	desc = "A plastic bag designed for the storage and transportation of cadavers."
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "bodybag"
@@ -22,14 +22,14 @@
 		if(!in_range(src, user) && loc != user)
 			return
 		if(t)
-			name = "body bag - [t]"
+			name = "мешок для трупов - [t]"
 			tagged = 1
 			update_icon()
 		else
-			name = "body bag"
+			name = "мешок для трупов"
 		return
 	else if(istype(I, /obj/item/weapon/wirecutters))
-		to_chat(user, "<span class='notice'>You cut the tag off [src].</span>")
+		to_chat(user, "<span class='notice'>Вы отрезали бирку [src].</span>")
 		name = "body bag"
 		tagged = 0
 		update_icon()
@@ -54,14 +54,14 @@
 			return 0
 		if(contents.len)
 			return 0
-		visible_message("<span class='notice'>[usr] folds up [src].</span>")
+		visible_message("<span class='notice'>[usr] складывает [src].</span>")
 		var/obj/item/bodybag/B = new foldedbag_path(get_turf(src))
 		usr.put_in_hands(B)
 		qdel(src)
 
 
 /obj/structure/closet/body_bag/bluespace
-	name = "bluespace body bag"
+	name = "квантовый мешок для трупов"
 	desc = "A bluespace body bag designed for the storage and transportation of cadavers."
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "bluebodybag"

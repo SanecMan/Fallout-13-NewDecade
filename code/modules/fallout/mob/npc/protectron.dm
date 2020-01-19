@@ -11,9 +11,9 @@
 	speak_chance = 0
 	turns_per_move = 5
 	environment_smash = 0
-	response_help = "pokes"
-	response_disarm = "shoves"
-	response_harm = "hits"
+	response_help = "тыкает"
+	response_disarm = "пихает"
+	response_harm = "бьёт"
 	move_to_delay = 5
 	stat_attack = 1
 	robust_searching = 1
@@ -24,7 +24,7 @@
 
 	faction = list("hostile", "robot")
 
-	sound_speak_chance = 5
+	sound_speak_chance = 50
 	sound_speak = list('sound/f13npc/robot_charge1.ogg','sound/f13npc/robot_charge2.ogg','sound/f13npc/robot_charge3.ogg')
 
 	aggro_sound_chance = 50
@@ -37,7 +37,7 @@
 	melee_damage_upper = 10
 	minimum_distance = 4
 	retreat_distance = 7
-	attacktext = "punches"
+	attacktext = "бьёт"
 	attack_sound = "punch"
 	a_intent = "harm"
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)

@@ -165,7 +165,7 @@
 	self_weight = 2
 
 /obj/item/clothing/head/helmet/f13/trooper
-	name = "trooper helmet"
+	name = "шлем бойца"
 	desc = "A dully-colored helmet designed to provide troopers a basic head protection.<br>It has a very rough \"mass-produced\" look to it, as it is issued to all NCR soldiers and MPs."
 	icon_state = "trooper"
 	item_state = "trooper"
@@ -212,7 +212,7 @@
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/helmet/f13/ranger
-	name = "ranger helmet"
+	name = "шлем рейнджера"
 	desc = "An old military helmet with a built-in night vision device, commonly worn by Veteran Rangers."
 	icon_state = "ranger"
 	item_state = "ranger"
@@ -236,7 +236,7 @@
 	visor_toggling()
 
 /obj/item/clothing/head/helmet/f13/ranger/attack_self(mob/user)
-	to_chat(user, "<span class='notice'>You [up ? "enabled" : "disabled"] [src].</span>")
+	to_chat(user, "<span class='notice'>Вы [up ? "включили" : "выключили"] [src].</span>")
 	sleep(5)
 	visor_toggling()
 	user << sound('sound/misc/compiler-stage2.ogg',0,0,0,50)

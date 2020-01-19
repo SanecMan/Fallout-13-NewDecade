@@ -402,8 +402,8 @@
 	chameleon_action.emp_randomise()
 
 /obj/item/weapon/gun/energy/laser/chameleon
-	name = "practice laser gun"
-	desc = "A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice."
+	name = "тренировочный лазерный пистолет"
+	desc = "Модифицированная версия лазерного пистолета, стреляет значительно ослабленными пучками энергии для тренировок."
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/practice)
 	clumsy_check = 0
 	needs_permit = 0

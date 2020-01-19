@@ -77,7 +77,7 @@
 		power_supply = A
 		power_supply.forceMove(src)
 		recharge_newshot(1)
-		to_chat(user, "<span class='greenannounce'>You load a new power cell into \the [src].</span>")
+		to_chat(user, "<span class='greenannounce'>¬ы вставили новую €чейку в [src].</span>")
 		update_icon()
 
 		if(O)
@@ -93,7 +93,7 @@
 	if(power_supply)
 		unload_ammo(user)
 	else
-		to_chat(user, "<span class='warning'>There is no battery.</span>")
+		to_chat(user, "<span class='warning'>“ут нет €чейки.</span>")
 
 /obj/item/weapon/gun/energy/proc/unload_ammo(mob/living/user)
 	if(power_supply)
@@ -101,7 +101,7 @@
 		user.put_in_hands(power_supply)
 		power_supply = null
 		update_icon()
-		to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
+		to_chat(user, "<span class='notice'>¬ы изъ€ли €чейку из [src].</span>")
 
 /obj/item/weapon/gun/energy/attack_hand(mob/living/user)
 	if(user.get_inactive_held_item() == src)

@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet
-	name = "helmet"
+	name = "шлем"
 	desc = "Standard Security gear. Protects the head from impacts."
 	icon_state = "helmet"
 	flags = HEADBANGPROTECT
@@ -24,7 +24,7 @@
 	can_flashlight = 1
 
 /obj/item/clothing/head/helmet/alt
-	name = "bulletproof helmet"
+	name = "пулестойкий шлем"
 	desc = "A bulletproof combat helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
 	icon_state = "helmetalt"
 	item_state = "helmetalt"
@@ -41,8 +41,8 @@
 	desc = "It's a helmet specifically designed to protect against close range attacks."
 	icon_state = "riot"
 	item_state = "helmet"
-	toggle_message = "You pull the visor down on"
-	alt_toggle_message = "You push the visor up on"
+	toggle_message = "Вы спустили забрало"
+	alt_toggle_message = "Вы подняли забрало"
 	can_toggle = 1
 	flags = HEADBANGPROTECT
 	armor = list(melee = 45, bullet = 15, laser = 5,energy = 5, bomb = 5, bio = 2, rad = 0, fire = 50, acid = 50)

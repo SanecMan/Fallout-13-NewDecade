@@ -10,8 +10,8 @@
  */
 
 /obj/item/clothing/suit/fire
-	name = "emergency firesuit"
-	desc = "A suit that helps protect against fire and heat."
+	name = "костюм пожарного"
+	desc = "Костюм разработанный для защиты от жара и пламени."
 	icon_state = "fire"
 	item_state = "ro_suit"
 	w_class = WEIGHT_CLASS_BULKY
@@ -36,15 +36,15 @@
 
 
 /obj/item/clothing/suit/fire/heavy
-	name = "heavy firesuit"
-	desc = "An old, bulky thermal protection suit."
+	name = "тяжёлый костюм пожарного"
+	desc = "Старый и громоздкий костюм пожарного."
 	icon_state = "thermal"
 	item_state = "ro_suit"
 	slowdown = 1.5
 
 /obj/item/clothing/suit/fire/atmos
-	name = "firesuit"
-	desc = "An expensive firesuit that protects against even the most deadly of station fires. Designed to protect even if the wearer is set aflame."
+	name = "костюм пожарного"
+	desc = "Очень дорогой костюм, созданный для вылазок в самые жаркие места."
 	icon_state = "atmos_firesuit"
 	item_state = "firesuit_atmos"
 	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT

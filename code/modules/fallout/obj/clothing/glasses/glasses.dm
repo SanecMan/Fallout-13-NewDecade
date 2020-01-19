@@ -6,7 +6,7 @@
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/glasses/f13/biker
-	name = "biker goggles"
+	name = "очки байкера"
 	desc = "B-B-B-B-Bad,<br>B-B-B-B-Bad,<br>B-B-B-B-Bad,<br>Bad to the bone!"
 	icon_state = "biker"
 	item_state = "biker"

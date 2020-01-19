@@ -20,7 +20,7 @@
 		if(istype(w_uniform,/obj/item/clothing/under))
 			var/obj/item/clothing/under/U = w_uniform
 			if(U.hastie)
-				tie_msg += " with [bicon(U.hastie)] \a [U.hastie]"
+				tie_msg += " с [bicon(U.hastie)]  [U.hastie]"
 
 		if(w_uniform.blood_DNA)
 			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(w_uniform)] [w_uniform.gender==PLURAL?"some":"a"] покрытую кровью [w_uniform.name][tie_msg]!</span>\n"
@@ -46,7 +46,7 @@
 			if(s_store.blood_DNA)
 				msg += "<span class='warning'>[t_He] [t_is] тащит [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] покрытый кровью [s_store.name] на своём [wear_suit.name]!</span>\n"
 			else
-				msg += "[t_He] [t_is] тащит [bicon(s_store)] [s_store] а своём [wear_suit.name].\n"
+				msg += "[t_He] [t_is] тащит [bicon(s_store)] [s_store] на своем [wear_suit.name].\n"
 
 	//back
 	if(back)

@@ -558,7 +558,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/vault
-	name = "vault jumpsuit"
+	name = "комбинезон Убежища"
 	desc = "The regulation clothing worn by the vault dwellers of Vault-Tec vaults. It's made of sturdy leather.<br>This particular jumpsuit has no number on the back."
 	icon_state = "vault"
 	item_state = "b_suit"
@@ -566,37 +566,37 @@
 	can_adjust = 1
 
 /obj/item/clothing/under/f13/vault/v13 //The Legend is here.
-	name = "Vault 13 jumpsuit"
+	name = "комбинезон Убежища 13"
 	desc = "The regulation clothing worn by the vault dwellers of Vault-Tec vaults. It's made of sturdy leather.<br>This jumpsuit has number 13 on the back."
 	icon_state = "vault13"
 	item_color = "vault13"
 
 /obj/item/clothing/under/f13/vault/v113
-	name = "Vault 113 jumpsuit"
+	name = "комбинезон Убежища 113"
 	desc = "The regulation clothing worn by the vault dwellers of Vault-Tec vaults. It's made of sturdy leather.<br>This jumpsuit has number 113 on the back."
 	icon_state = "vault113"
 	item_color = "vault113"
 
 /obj/item/clothing/under/f13/vault/v21
-	name = "Vault 21 jumpsuit"
+	name = "комбинезон Убежища 21"
 	desc = "The regulation clothing worn by the vault dwellers of Vault-Tec vaults. It's made of sturdy leather.<br>This jumpsuit has number 21 on the back."
 	icon_state = "vault21"
 	item_color = "vault21"
 
 /obj/item/clothing/under/f13/vault/v42
-	name = "Vault 42 jumpsuit"
+	name = "комбинезон Убежища 42"
 	desc = "The regulation clothing worn by the vault dwellers, of Vault-Tec vaults built to solve the Ultimate Question of life, Universe, and everything. It's made of sturdy leather.<br>This jumpsuit has number 42 on the back."
 	icon_state = "vault42"
 	item_color = "vault42"
 
 /obj/item/clothing/under/f13/vault/v76
-	name = "Vault 76 jumpsuit"
+	name = "комбинезон Убежища 76"
 	desc = "The regulation clothing worn by the vault dwellers, of Vault-Tec vaults built to solve the Ultimate Question of life, Universe, and everything. It's made of sturdy leather.<br>This jumpsuit has number 76 on the back."
 	icon_state = "vault76"
 	item_color = "vault76"
 
 /obj/item/clothing/under/f13/followers
-	name = "followers outfit "
+	name = "одежда последователя "
 	desc = "A white shirt with a pair of dark brown cargo pants - an outfit commonly worn by Followers of the Apocalypse.<br><i>Nihil boni sine labore.</i>"
 	icon_state = "followers"
 	item_state = "bar_suit"
@@ -605,7 +605,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/combat
-	name = "combat uniform"
+	name = "боевая форма"
 	desc = "An ancient combat uniform, that went out of use around the time of the Great War."
 	icon_state = "combat"
 	item_state = "bl_suit"
@@ -615,7 +615,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/enclave_officer
-	name = "officer uniform"
+	name = "форма офицера анклава"
 	desc = "A standard Enclave officer uniform.<br>The outer layer is made of a sturdy material designed to withstand the harsh conditions of the wasteland."
 	icon_state = "enclave_o"
 	item_state = "bl_suit"
@@ -637,7 +637,7 @@
 	self_weight = 3
 
 /obj/item/clothing/under/f13/ncr_officer
-	name = "officer uniform"
+	name = "офицерская форма"
 	desc = "A standard NCR officer uniform.<br>Embroided New California Republic flag patches adorn both sleeves."
 	icon_state = "ncr_o"
 	item_state = "lb_suit"
@@ -648,7 +648,7 @@
 	self_weight = 3
 
 /obj/item/clothing/under/f13/ncr
-	name = "overcoat"
+	name = "шинель"
 	desc = "A regular NCR uniform that consists of khaki field jacket with bellowed hip pockets and khaki breeches."
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
@@ -658,7 +658,7 @@
 	can_adjust = 1
 
 /obj/item/clothing/under/f13/ncr/torn
-	name = "torn overcoat"
+	name = "разодранная шинель"
 	desc = "Some time ago it looked like a regular NCR uniform, but now it looks like a total mess of ripped cloth."
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
@@ -667,7 +667,7 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/general
-	name = "general overcoat"
+	name = "шинель генерала"
 	desc = "A grim looking overcoat - preferable standard for General commander of New California Republic.<br>It's decorated with golden stars, and an insignia plaque that adorns the left side."
 	icon_state = "general"
 	item_state = "lb_suit"
