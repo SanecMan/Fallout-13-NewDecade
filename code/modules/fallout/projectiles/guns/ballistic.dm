@@ -123,7 +123,7 @@
 
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle
-	name = "охотничья винтовка"
+	name = "охотничьЯ винтовка"
 	desc = "Довоенная охотничья винтовка."
 	icon_state = "rifle"
 	item_state = "rifle"
@@ -142,8 +142,8 @@
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
-	icon_state = "охотничья винтовка"
-	item_state = "rifle308scope"
+	icon_state = "охотничьЯ винтовка с прицелом"
+	item_state = "rifle-scope"
 	can_suppress = 1
 	zoomable = TRUE
 	zoom_amt = 12
@@ -204,7 +204,7 @@
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
-	name = "Боевая винтовка АР15"
+	name = "БоеваЯ винтовка АР15"
 	desc = "Так-же известная как Боевая Винтовка НКР, винтовка использует обычные боеприпасы калибра 5.56мм и имеет вместимость магазина в 20 патрон."
 	icon_state = "assault-rifle"
 	item_state = "assault"
@@ -266,7 +266,7 @@
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle/fnfal
-	name = "ФЕН-Фал"
+	name = "ФН-Фал"
 	icon_state = "fnfal"
 	desc = "The FN FAL is a battle rifle designed by Belgian small arms designers Dieudonne Saive and Ernest Vervier and manufactured by FN Herstal. During the Cold War the FAL was adopted by many countries of the North Atlantic Treaty Organization (NATO), with the notable exception of the United States. It is one of the most widely used rifles in history, having been used by more than 90 countries. This particular model sports wooden furniture and an aftermarket conversion that allows it to fire more readily available .308 Winchester ammunition, which is very similar in size to the 7.62?51mm NATO it was originally chambered in."
 	mag_type = /obj/item/ammo_box/magazine/F13/fnfal
@@ -320,7 +320,7 @@
 	big_gun = 1
 
 /obj/item/weapon/gun/ballistic/revolver/sequoia
-	name = "«Секвойя» рейнджера"
+	name = "«СеквойЯ» рейнджера"
 	icon_state = "sequoia"
 	desc = "«Секвойя» рейнджера, популярная модель револьвера на пустоши, имеющая богатую рукоятку. Этот отличается от остальных моделей, и имеет серийный номер на дуле."
 	item_state = "liquidsequoia"
