@@ -143,7 +143,7 @@
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 	icon_state = "охотничья винтовка с прицелом"
-	item_state = "rifle-scope"
+	item_state = "rifle_scope"
 	can_suppress = 1
 	zoomable = TRUE
 	zoom_amt = 12

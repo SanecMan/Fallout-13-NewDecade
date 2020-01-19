@@ -105,7 +105,7 @@
 		key = W
 		user.drop_item()
 		key.loc = src
-		user.visible_message("[user] put keys into [src].", "You put keys into [src].")
+		user.visible_message("[user] вставляет ключи в [src].", "Вы вставляете ключи в [src].")
 		src.verbs += /obj/vehicle/proc/RemoveKey
 		return 1
 	return ..()

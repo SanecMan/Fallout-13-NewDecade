@@ -1,8 +1,8 @@
 //Fallout 13 - Come with me if you want to live
 
 /datum/f13_objective/protect
-	name = "Guardian Angel"
-	desc = "You know that someone important is in a great danger - save and protect them, whatever it takes!"
+	name = "Ангел Хранитель"
+	desc = "Вас наняли чтобы вы защищали кое-кого. Вам обещали заплатить достаточно много, чтобы вы хотели рисковать ради этого!"
 	kind = BOTH
 	available_factions = list("city", "none", "brotherhood")
 

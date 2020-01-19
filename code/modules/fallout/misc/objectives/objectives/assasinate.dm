@@ -1,7 +1,7 @@
 //Fallout 13 - We work in the dark, to serve the light. We are Assassins.
 
 /datum/f13_objective/assassinate
-	name = "Убийство"
+	name = "Убийство в большом городе"
 	desc = "Вас наняли, чтобы разобраться с одной персоной. Вам не сказали причин, лишь имя."
 	kind = BOTH
 

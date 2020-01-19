@@ -253,7 +253,7 @@
 				log_admin("Build Mode: [key_name(user)] built [T] at ([T.x],[T.y],[T.z])")
 				return
 			else if(right_click)
-				log_admin("Build Mode: [key_name(user)] deleted [object] at ([object.x],[object.y],[object.z])")
+				log_admin("Build Mode: [key_name(user)] удалил [object] в ([object.x],[object.y],[object.z])")
 				if(iswallturf(object))
 					var/turf/T = object
 					T.ChangeTurf(/turf/open/floor/plasteel)
