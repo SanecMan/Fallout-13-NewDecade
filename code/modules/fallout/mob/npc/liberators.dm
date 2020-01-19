@@ -51,3 +51,4 @@
 	ranged_cooldown_time = 100
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/f13weapons/laserweap76.ogg'
+	XP = 10
