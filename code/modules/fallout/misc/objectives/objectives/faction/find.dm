@@ -6,11 +6,11 @@
 	points = 0
 	kind = FACTION
 
-	var/list/bos_items = list(/obj/item/ring, /obj/item/key/vertibird, /obj/item/documents/syndicate/blue)
-	var/list/enclave_items = list(/obj/item/ring, /obj/item/key/vertibird, /obj/item/documents/syndicate/red)
+	var/list/bos_items = list(/obj/item/key/vertibird = 45, /obj/item/documents/syndicate/blue = 45)
+	var/list/enclave_items = list(/obj/item/key/vertibird = 45, /obj/item/documents/syndicate/red = 45)
 	var/list/city_items = list(/obj/item/ring)
 	var/list/other_items = list(/obj/item/ring)
-	var/list/ncr_items = list(/obj/item/ring, /obj/item/key/vertibird, /obj/item/documents/syndicate/blue, /obj/item/documents/syndicate/red)
+	var/list/ncr_items = list(/obj/item/ring = 45, /obj/item/key/vertibird = 45, /obj/item/documents/syndicate/blue = 45, /obj/item/documents/syndicate/red = 45)
 
 	assignto_faction(var/datum/f13_faction/F, var/list/data = list())
 		data["target_item"] = get_target(F.id)
