@@ -176,7 +176,7 @@ proc/html_encode_ru(var/t)
 	if(last_char_group == 1)
 		t_out = copytext(t_out,1,length(t_out))	//removes the last character (in this case a space)
 
-	for(var/bad_name in list("space","floor","wall","r-wall","monkey","unknown","inactive ai"))	//prevents these common metagamey names
+	for(var/bad_name in list("space","floor","wall","r-wall","monkey","unknown","inactive ai","Egor Letov","Hitler","Dolboeb","Bruh"))	//prevents these common metagamey names
 		if(cmptext(t_out,bad_name))
 			return	//(not case sensitive)
 
