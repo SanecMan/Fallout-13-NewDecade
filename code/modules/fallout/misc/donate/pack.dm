@@ -342,7 +342,7 @@
 		)
 	price = 800000000
 
-/*
+
 /datum/content_pack/enclave2
 	name = "Анклав: роль сержанта"
 	id = "enclave_sergeant"
@@ -360,4 +360,3 @@
 	/datum/job/enclave_private
 		)
 	price = 3500000
-*/

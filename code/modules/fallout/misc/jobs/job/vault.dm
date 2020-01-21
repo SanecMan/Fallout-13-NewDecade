@@ -15,7 +15,7 @@
 	minimal_player_age = 31
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes")
+	allowed_packs = list("starter", "cigarettes", "f76")
 
 	required_items = list(
 	/obj/item/clothing/glasses/sunglasses,

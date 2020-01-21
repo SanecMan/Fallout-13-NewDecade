@@ -15,7 +15,7 @@
 	minimal_player_age = 36
 	whitelist_on = 1
 
-	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "specops")
 
 	required_items = list(
 	/obj/item/clothing/glasses/sunglasses,
@@ -81,7 +81,7 @@
 	selection_color = "#9d9fec"
 	minimal_player_age = 31
 
-	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper", "specops")
 
 	required_items = list(
 	/obj/item/clothing/head/f13/ncr_officer,
@@ -147,7 +147,7 @@
 
 	outfit = /datum/outfit/job/vranger
 
-	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "specops")
 
 	required_items = list(
 	/obj/item/clothing/glasses/sunglasses,
@@ -205,7 +205,7 @@
 	selection_color = "#9d9fec"
 	minimal_player_age = 16
 
-	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper", "specops")
 
 	required_items = list(
 	/obj/item/clothing/suit/armor/f13/ncr/facewrap,

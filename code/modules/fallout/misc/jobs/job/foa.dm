@@ -15,7 +15,7 @@
 	minimal_player_age = 20
 	whitelist_on = 0
 
-	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "specops")
 
 	required_items = list()
 	denied_items = list()
