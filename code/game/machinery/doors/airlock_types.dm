@@ -578,8 +578,8 @@
 	name = "bunker airlock"
 	desc = "An olive green painted airlock.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
 	icon_state = "bunker"
-	overlays_file = 'icons\obj\doors\airlocks\bunker\bunker'
-	icon = 'icons\obj\doors\airlocks\bunker\bunker'
+	overlays_file = 'icons/obj/doors/airlocks/bunker/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/bunker/bunker.dmi'
 	damage_deflection = 30
 	opacity = 1
 	explosion_block = 5
