@@ -20,7 +20,6 @@
 	required_items = list(
 	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/kitchen/knife/combat,
-	/obj/item/device/radio,
 	/obj/item/weapon/lighter/gold,
 	/obj/item/weapon/reagent_containers/f13stimpack,
 	/obj/item/weapon/reagent_containers/f13stimpack/super
@@ -62,8 +61,7 @@
 	belt_contents = list(/obj/item/ammo_box/magazine/F13/m556 = 1, \
 		/obj/item/ammo_box/magazine/F13/m556/armourpiercing = 1, \
 		/obj/item/weapon/reagent_containers/f13stimpack = 1, \
-		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1, \
-		/obj/item/device/radio = 1, \
+		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1,
 		/obj/item/device/flashlight/torch/flare/blue = 1)
 //NCR Sergeant
 
@@ -128,7 +126,6 @@
 		/obj/item/ammo_box/magazine/F13/m556/armourpiercing = 1, \
 		/obj/item/weapon/reagent_containers/f13stimpack = 1, \
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1, \
-		/obj/item/device/radio = 1, \
 		/obj/item/device/flashlight/torch/flare/blue = 1)
 
 /datum/job/vranger
@@ -177,6 +174,7 @@
 
 /datum/outfit/job/vranger
 	name = "Veteran Ranger"
+	backpack = /obj/item/weapon/prc
 	id = /obj/item/card/id/ncrranger
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/mechanic
@@ -187,8 +185,7 @@
 	weapon = /obj/item/weapon/gun/ballistic/revolver/magnum
 	belt_contents = list(/obj/item/weapon/restraints/handcuffs = 1,
 		/obj/item/weapon/reagent_containers/f13stimpack = 1,
-		/obj/item/ammo_box/F13/m44 = 2,
-		/obj/item/device/radio = 1)
+		/obj/item/ammo_box/F13/m44 = 2)
 
 
 /datum/job/trooper

@@ -296,3 +296,21 @@
 	..()
 	icon_state = "weapon_parts/plasma_[rand(1,3)]"
 */
+
+/obj/item/crafting/instruments
+	name = "instruments for metalwork"
+	desc = "Инструменты для резки по металлу."
+	icon = 'icons/fallout/objects/crafting.dmi'
+	icon_state = "instruments"
+
+/obj/item/crafting/barrel_l
+	name = "long barrel"
+	desc = "Просто ствол."
+	icon = 'icons/fallout/objects/crafting.dmi'
+	icon_state = "barrel_long"
+
+/obj/item/crafting/barrel_s
+	name = "short barrel"
+	desc = "Просто ствол."
+	icon = 'icons/fallout/objects/crafting.dmi'
+	icon_state = "barrel_short"

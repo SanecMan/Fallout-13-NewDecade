@@ -58,7 +58,7 @@
 	belt = /obj/item/weapon/storage/belt/military/army/enclave
 	weapon = /obj/item/weapon/gun/energy/plasma/glock
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2, \
-	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat = 1)
+	/obj/item/weapon/kitchen/knife/combat = 1)
 
 //Enclave Sergeant
 
@@ -112,7 +112,7 @@
 
 /datum/outfit/job/enclave_sergeant
 	name = "Enclave Segeant"
-	backpack = null
+	backpack = /obj/item/weapon/prc
 	satchel = null
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/enclave_officer
@@ -121,8 +121,8 @@
 	head = /obj/item/clothing/head/soft/f13/enclave
 	belt = /obj/item/weapon/storage/belt/military/army/enclave
 	weapon = /obj/item/weapon/gun/energy/plasma/pistol
-	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2, \
-	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat = 1)
+	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2,
+	/obj/item/weapon/kitchen/knife/combat = 1)
 
 //Enclave Private
 
@@ -182,4 +182,4 @@
 	belt = /obj/item/weapon/storage/belt/military/army/enclave
 	weapon = /obj/item/weapon/gun/energy/plasma/pistol
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 1, \
-	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat = 1)
+	/obj/item/weapon/kitchen/knife/combat = 1)

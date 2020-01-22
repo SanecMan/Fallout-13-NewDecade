@@ -26,7 +26,6 @@
 	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/gun/energy/laser/rifle/tri,
 	/obj/item/weapon/kitchen/knife/combat,
-	/obj/item/device/radio,
 	/obj/item/weapon/lighter/engraved
 	)
 
@@ -62,7 +61,6 @@
 	suit = /obj/item/clothing/suit/f13/elder
 	weapon = /obj/item/weapon/gun/energy/laser/pistol
 	belt = /obj/item/weapon/storage/belt/military/army
-	belt_contents = list(/obj/item/device/radio = 1)
 
 //Brotherhood Paladin
 
@@ -114,7 +112,7 @@
 
 /datum/outfit/job/paladin
 	name = "Paladin"
-	backpack = null
+	backpack = /obj/item/weapon/prc
 	satchel = null
 	id = /obj/item/weapon/card/id/gold
 	gloves = /obj/item/clothing/gloves/f13/military

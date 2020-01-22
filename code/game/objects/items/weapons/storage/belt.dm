@@ -32,7 +32,6 @@
 		/obj/item/device/t_scanner,
 		/obj/item/device/analyzer,
 		/obj/item/weapon/extinguisher/mini,
-		/obj/item/device/radio,
 		/obj/item/clothing/gloves,
 		/obj/item/weapon/lighter,
 		/obj/item/weapon/storage/fancy/cigarettes,
@@ -104,7 +103,6 @@
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/weapon/reagent_containers/hypospray,
 		/obj/item/device/sensor_device,
-		/obj/item/device/radio,
 		/obj/item/clothing/gloves/,
 		/obj/item/weapon/lazarus_injector,
 		/obj/item/weapon/bikehorn/rubberducky,
@@ -156,7 +154,6 @@
 		/obj/item/weapon/kitchen/knife/combat,
 		/obj/item/device/flashlight/seclite,
 		/obj/item/weapon/melee/classic_baton/telescopic,
-		/obj/item/device/radio,
 		/obj/item/clothing/gloves/,
 		/obj/item/weapon/restraints/legcuffs/bola
 		)
@@ -190,7 +187,6 @@
 		/obj/item/stack/cable_coil,
 		/obj/item/device/analyzer,
 		/obj/item/weapon/extinguisher/mini,
-		/obj/item/device/radio,
 		/obj/item/clothing/gloves,
 		/obj/item/weapon/resonator,
 		/obj/item/device/mining_scanner,

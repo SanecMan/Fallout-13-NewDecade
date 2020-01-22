@@ -30,37 +30,6 @@
 	default = 1
 	XP = 40
 
-//WEAPON PARTS
-
-
-/datum/crafting_recipe/weaponparts/ballistic
-	name = "Ballistic Weapon Parts"
-	reqs = list(/obj/item/weapon/gun/ballistic/automatic = 1)
-	time = 50
-	category = CAT_WEAPON
-	default = 1
-	XP = 20
-	result = /obj/item/crafting/weapon_parts/ballistic
-
-/datum/crafting_recipe/weaponparts/energy
-	name = "Energy Weapon Parts"
-	reqs = list(/obj/item/weapon/gun/energy/laser = 1)
-	time = 100
-	category = CAT_WEAPON
-	default = 1
-	XP = 20
-	result = /obj/item/crafting/weapon_parts/energy
-
-/datum/crafting_recipe/weaponparts/plasma
-	name = "Plasma Weapon Parts"
-	reqs = list(/obj/item/weapon/gun/energy/plasma = 1)
-	time = 200
-	category = CAT_WEAPON
-	default = 1
-	XP = 20
-	result = /obj/item/crafting/weapon_parts/plasma
-
-
 //BALLISTIC
 
 /datum/crafting_recipe/bozar
@@ -81,8 +50,7 @@
 	name = "10-mm Pistol"
 	result = /obj/item/weapon/gun/ballistic/automatic/pistol/n99
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
-				/obj/item/weaponcrafting/stock = 1,
-				/obj/item/stack/sheet/metal = 2,
+				/obj/item/crafting/barrel_s = 1,
 				/obj/item/crafting/weapon_parts/ballistic = 1,
 				/obj/item/weaponcrafting/handle/pistol = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
@@ -97,8 +65,7 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/crafting/weapon_parts/ballistic = 2,
-				/obj/item/stack/sheet/metal = 3,
-				/obj/item/stack/sheet/mineral/wood = 3,
+				/obj/item/crafting/barrel_l = 1,
 				/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
@@ -110,7 +77,7 @@
 	result = /obj/item/weapon/gun/ballistic/automatic/smg10mm
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
-				/obj/item/stack/sheet/metal = 2,
+				/obj/item/crafting/barrel_s = 1,
 				/obj/item/crafting/weapon_parts/ballistic = 2,
 				/obj/item/stack/sheet/plasteel = 1,
 				/obj/item/weaponcrafting/handle/pistol = 1)
@@ -124,9 +91,8 @@
 	result = /obj/item/weapon/gun/ballistic/shotgun/rifle
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
-				/obj/item/stack/sheet/metal = 3,
+				/obj/item/crafting/barrel_l = 1,
 				/obj/item/crafting/weapon_parts/ballistic = 1,
-				/obj/item/stack/sheet/mineral/wood = 3,
 				/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 500
@@ -139,7 +105,7 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/weaponcrafting/stock = 1,
 				/obj/item/crafting/weapon_parts/ballistic = 1,
-				/obj/item/stack/sheet/metal = 1,
+				/obj/item/crafting/barrel_l = 1,
 				/obj/item/stack/sheet/mineral/wood = 2)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 650
@@ -153,7 +119,7 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/crafting/weapon_parts/ballistic = 3,
 				/obj/item/weaponcrafting/stock = 1,
-				/obj/item/stack/sheet/metal = 3,
+				/obj/item/crafting/barrel_l = 1,
 				/obj/item/stack/sheet/plasteel = 2,
 				/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
@@ -167,7 +133,7 @@
 	reqs = list(/obj/item/weaponcrafting/reciever = 1,
 				/obj/item/crafting/weapon_parts/ballistic = 1,
 				/obj/item/weaponcrafting/stock = 1,
-				/obj/item/stack/sheet/metal = 3,
+				/obj/item/crafting/barrel_l = 1,
 				/obj/item/weaponcrafting/handle/rifle = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/bench/ballistic)
 	time = 650
