@@ -36,7 +36,7 @@
 
 /datum/crafting_recipe/weaponparts/handle_p
 	name = "Pistol Handle"
-	reqs = list(/obj/item/stack/sheet/wood = 1)
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 300
 	category = CAT_MISC
@@ -46,7 +46,7 @@
 
 /datum/crafting_recipe/weaponparts/handle_r
 	name = "Rifle Handle"
-	reqs = list(/obj/item/stack/sheet/wood = 2)
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 300
 	category = CAT_MISC
