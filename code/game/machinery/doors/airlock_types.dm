@@ -578,9 +578,6 @@
 	name = "bunker airlock"
 	desc = "An olive green painted airlock.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
 	icon_state = "bunker"
-	material_type = /obj/item/stack/sheet/metal
-	open_sound = "sound/f13machines/doorairlock_open.ogg"
-	close_sound = "sound/f13machines/doorairlock_close.ogg"
 	damage_deflection = 30
 	opacity = 1
 	explosion_block = 5
