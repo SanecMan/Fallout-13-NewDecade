@@ -84,7 +84,7 @@
 ///как кодить дл€ малышей:
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/codetest //объ€вл€ем директорию объектов
-	icon = 'icon/obj/guns/stalker.dmi' //говорим бульону откуда жрать текстурку дл€ объекта
+	icon = 'icons/obj/guns/stalker.dmi' //говорим бульону откуда жрать текстурку дл€ объекта
 	w_class = WEIGHT_CLASS_NORMAL //зачем прописывать каждый раз одно и то-же?
 	can_suppress = 0
 	small_gun = 1
