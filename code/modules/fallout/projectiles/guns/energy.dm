@@ -23,6 +23,7 @@
 	item_state = "plasma-pistol"
 	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma."
 	origin_tech = "combat=2;magnets=3;prewar=5"
+	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/pistol)
 	weapon_weight = WEAPON_LIGHT
 	w_class = WEIGHT_CLASS_NORMAL
 	burst_size = 1
@@ -41,6 +42,7 @@
 	item_state = "plasma-pistol"
 	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma."
 	origin_tech = "combat=2;magnets=3;prewar=3"
+	fire_sound = 'sound/f13weapons/plasma_pistol.ogg'
 	weapon_weight = WEAPON_LIGHT
 	w_class = 2
 	burst_size = 1

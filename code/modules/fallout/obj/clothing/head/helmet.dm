@@ -555,7 +555,7 @@
 	can_toggle = 1
 	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
 	actions_types = list(/datum/action/item_action/toggle)
-	armor = list(melee = 60, bullet = 55, laser = 85, energy = 65, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
+	armor = list(melee = 95, bullet = 90, laser = 80, energy = 60, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 30)
 	visor_vars_to_toggle = VISOR_DARKNESSVIEW | VISOR_INVISVIEW
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -760,12 +760,12 @@
 	desc = "Meine language INTERNATIONAL"
 	icon_state = "m35"
 	item_state = "m35"
-	armor = list(melee = 30, bullet = 30, laser = 30, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 30, acid = 30)
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 20, bomb = 30, bio = 0, rad = 0, fire = 30, acid = 30)
 	flags_inv = HIDEEARS|HIDEHAIR
 	put_on_delay = 20
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
-	self_weight = 1
+	self_weight = 3
 
 /obj/item/clothing/head/helmet/f13/doom
 	name = "marine helmet"
@@ -777,4 +777,4 @@
 	put_on_delay = 30
 	strip_delay = 10
 	resistance_flags = UNACIDABLE
-	self_weight = 25
+	self_weight = 20

@@ -49,8 +49,8 @@
 
 	outfit = /datum/outfit/job/elder
 
-	access = list()
-	minimal_access = list()
+	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom, access_tech_storage, access_genetics)
+	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom)
 
 /datum/outfit/job/elder
 	name = "Elder"
@@ -109,8 +109,8 @@
 	/obj/item/clothing/suit/f13/mantle_liz
 	)
 
-	access = list()
-	minimal_access = list()
+	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom, access_tech_storage, access_genetics)
+	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom)
 
 /datum/outfit/job/paladin
 	name = "Paladin"
@@ -171,8 +171,9 @@
 
 	outfit = /datum/outfit/job/knight
 
-	access = list()
-	minimal_access = list()
+	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom, access_tech_storage, access_genetics)
+	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom)
+
 
 /datum/outfit/job/knight
 	name = "Knight"
@@ -225,8 +226,8 @@
 
 	outfit = /datum/outfit/job/scriber
 
-	access = list()
-	minimal_access = list()
+	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom, access_tech_storage, access_genetics)
+	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_mineral_storeroom)
 
 /datum/outfit/job/scriber
 	name = "Scriber"

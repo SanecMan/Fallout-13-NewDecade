@@ -490,7 +490,7 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 
-/*/ NEED BICUBIC RESIZE
+/* NEED BICUBIC RESIZE
 /obj/item/clothing/suit/armor/f13/power_armor/equipped(mob/user, slot)
 	if(slot == slot_wear_suit)
 		user.resize = 1.1
@@ -503,8 +503,8 @@
 /obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
 	user.resize = 1
 	user.update_transform()
-	..()
-*/
+	..()*/
+
 
 
 /obj/item/clothing/suit/armor/f13/power_armor/sierra
@@ -558,7 +558,7 @@
 	icon_state = "mk1-tesla"
 	item_state = "mk1-tesla"
 	self_weight = 40
-	armor = list(melee = 60, bullet = 55, laser = 80, energy = 70, bomb = 70, bio = 100, rad = 100, fire = 100, acid = 50)
+	armor = list(melee = 100, bullet = 100, laser = 80, energy = 40, bomb = 90, bio = 100, rad = 100, fire = 100, acid = 50)
 
 /obj/item/clothing/suit/armor/f13/power_armor/superadvanced
 	name = "advanced power armor mark II"
@@ -626,7 +626,7 @@
 	icon_state = "praetor"
 	item_state = "g_suit"
 	body_parts_covered = CHEST
-	armor = list(melee = 75, bullet = 60, laser = 25, energy = 15, bomb = 50, bio = 100, rad = 100, fire = 100, acid = 100)
+	armor = list(melee = 75, bullet = 60, laser = 45, energy = 35, bomb = 50, bio = 100, rad = 100, fire = 100, acid = 100)
 	resistance_flags = UNACIDABLE
 	put_on_delay = 30
 	strip_delay = 10

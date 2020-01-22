@@ -22,6 +22,7 @@
 /obj/item/ammo_casing/F13/m10
 	desc = "A 10mm bullet casing."
 	caliber = "10mm"
+	fire_sound = list('sound/f13weapons/10mm_fire_01.ogg', 'sound/f13weapons/10mm_fire_02.ogg', 'sound/f13weapons/10mm_fire_03.ogg')
 	projectile_type = /obj/item/projectile/bullet/F13/c10mmBullet
 	randomspread = 1
 	variance = 5

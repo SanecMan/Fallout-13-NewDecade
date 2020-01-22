@@ -6,9 +6,12 @@
 	randomspread = 1
 	variance = 5
 	select_name = "kill"
+	fire_sound = list('sound/f13weapons/plasma_rifle.ogg', 'sound/f13weapons/plasmarifle.ogg')
 	e_cost = 100
 	firing_effect_type = /obj/effect/overlay/temp/dir_setting/firing_effect/plasma
 
+/obj/item/ammo_casing/energy/f13plasma/pistol
+	fire_sound = 'sound/f13weapons/plasma_pistol.ogg'
 
 /obj/item/ammo_casing/energy/f13plasma/turbo
 	projectile_type = /obj/item/projectile/beam/plasma/turbo

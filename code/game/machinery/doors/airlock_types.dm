@@ -573,6 +573,8 @@
 	return
 
 ///f13 airlocks///
+/obj/machinery/door/airlock/f13/bunker
+	icon = 'icons/fallout/objects/structures/doors.dmi'
 
 /obj/machinery/door/airlock/f13/bunker
 	name = "bunker airlock"
