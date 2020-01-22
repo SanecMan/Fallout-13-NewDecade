@@ -1,7 +1,7 @@
 /datum/crafting_recipe/radio
 	name = "PRC Radio"
-	result = /obj/item/weapon/prc
-	time = 500
+	result = /obj/item/device/radio
+	time = 800
 	reqs = list(/obj/item/crafting/diode = 2,
 				/obj/item/crafting/transistor = 1,
 				/obj/item/crafting/capacitor = 2,
