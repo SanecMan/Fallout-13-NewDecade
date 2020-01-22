@@ -112,7 +112,7 @@
 
 /datum/outfit/job/paladin
 	name = "Paladin"
-	backpack = /obj/item/weapon/prc
+	backpack = /obj/item/weapon/storage/backpack/prc
 	satchel = null
 	id = /obj/item/weapon/card/id/gold
 	gloves = /obj/item/clothing/gloves/f13/military

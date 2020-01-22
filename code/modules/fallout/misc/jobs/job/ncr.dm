@@ -174,7 +174,7 @@
 
 /datum/outfit/job/vranger
 	name = "Veteran Ranger"
-	backpack = /obj/item/weapon/prc
+	backpack = /obj/item/weapon/storage/backpack/prc
 	id = /obj/item/card/id/ncrranger
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/mechanic

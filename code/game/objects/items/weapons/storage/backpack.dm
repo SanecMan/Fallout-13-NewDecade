@@ -86,6 +86,17 @@
 	explosion(src.loc,(dist),(dist*2),(dist*4))
 	return
 
+/obj/item/weapon/storage/backpack/prc
+	name = "PRC"
+	desc = "Просто рюкзак для переноса рации."
+	icon_state = "prc"
+	max_w_class = WEIGHT_CLASS_SMALL
+	max_combined_w_class = 35
+	resistance_flags = FIRE_PROOF
+	var/pshoom = 'sound/items/PSHOOM.ogg'
+	var/alt_sound = 'sound/items/PSHOOM_2.ogg'
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 60, acid = 50)
+	can_hold = list(/obj/item/device/radio)
 
 /obj/item/weapon/storage/backpack/santabag
 	name = "Мешок Санты"

@@ -38,6 +38,7 @@
 	throw_range = 7
 	w_class = WEIGHT_CLASS_SMALL
 	materials = list(MAT_METAL=75, MAT_GLASS=25)
+	self_weight = 15
 
 	var/const/TRANSMISSION_DELAY = 5 // only 2/second/radio
 	var/const/FREQ_LISTENING = 1

@@ -1,6 +1,6 @@
+////говнокод раций////
 
 
-//The ammo/gun is stored in a back slot item
 /obj/item/weapon/prc
 	name = "PRC-68"
 	desc = "The massive external power source for the laser gatling gun"
@@ -11,6 +11,10 @@
 	w_class = WEIGHT_CLASS_HUGE
 	var/obj/item/device/radio/prc = null
 	var/armed = 0 //whether the gun is attached, 0 is attached, 1 is the gun is wielded.
+	var/overheat = 0
+	var/overheat_max = 100
+	var/heat_diffusion = 2
+	var/obj/item/weapon/prc/ammo_pack
 
 /obj/item/weapon/prc/New()
 	gun = new(src)

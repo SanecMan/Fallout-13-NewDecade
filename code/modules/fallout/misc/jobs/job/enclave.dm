@@ -112,7 +112,7 @@
 
 /datum/outfit/job/enclave_sergeant
 	name = "Enclave Segeant"
-	backpack = /obj/item/weapon/prc
+	backpack = /obj/item/weapon/storage/backpack/prc
 	satchel = null
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/enclave_officer
