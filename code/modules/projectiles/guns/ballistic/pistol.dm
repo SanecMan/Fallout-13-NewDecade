@@ -80,24 +80,3 @@
 	else
 		to_chat(user, "<span class='notice'>..and falls into view. Whew, that was a close one.</span>")
 		user.unEquip(src)
-
-///как кодить для малышей:
-
-/obj/item/weapon/gun/ballistic/automatic/pistol/codetest //объявляем директорию объектов
-	icon = 'icons/obj/guns/stalker.dmi' //говорим бульону откуда жрать текстурку для объекта
-	w_class = WEIGHT_CLASS_NORMAL //зачем прописывать каждый раз одно и то-же?
-	can_suppress = 0
-	small_gun = 1
-	mag_type = /obj/item/ammo_box/magazine/m45 //говорим бульону что это оружие кушает такие магазины
-
-/obj/item/weapon/gun/ballistic/automatic/pistol/codetest/pm
-	name = "Пистолет Макарова" //Говорим бульону имя объекта
-	desc = "Пистолет Макарова, прямо из СССР!" //говорим бульону пистолет это кто?(who?)
-	icon_state = "pm" // даём иконку
-
-//практика.
-
-/obj/item/weapon/gun/ballistic/automatic/pistol/codetest/fort12
-	name = "Пистолет Фора-12"
-	desc = "Пистолет Фора, прямо из УКРССР!"
-	icon_state = "fort12"

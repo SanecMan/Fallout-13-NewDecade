@@ -339,3 +339,24 @@
 	scopetype = /obj/screen/fullscreen/scope/short
 	price = 2500
 	small_gun = 1
+
+///как кодить для малышей:
+
+/obj/item/weapon/gun/ballistic/automatic/pistol/f13/stal //объявляем директорию объектов
+	icon = 'icons/obj/guns/stalker.dmi' //говорим бульону откуда жрать текстурку для объекта
+	w_class = WEIGHT_CLASS_NORMAL //зачем прописывать каждый раз одно и то-же?
+	can_suppress = 0
+	small_gun = 1
+	mag_type = /obj/item/ammo_box/magazine/m45 //говорим бульону что это оружие кушает такие магазины
+
+/obj/item/weapon/gun/ballistic/automatic/pistol/f13/stal/pm
+	name = "ПМ" //Говорим бульону имя объекта
+	desc = "Пистолет Макарова, прямо из СССР!" //говорим бульону пистолет это кто?(who?)
+	icon_state = "pm" // даём иконку
+
+//практика.
+
+/obj/item/weapon/gun/ballistic/automatic/pistol/f13/stal/fort12
+	name = "Фора-12"
+	desc = "Пистолет Фора, прямо из УКРССР!"
+	icon_state = "fort12"

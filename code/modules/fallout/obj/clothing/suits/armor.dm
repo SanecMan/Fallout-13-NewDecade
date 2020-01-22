@@ -490,7 +490,7 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 
-// NEED BICUBIC RESIZE
+/*/ NEED BICUBIC RESIZE
 /obj/item/clothing/suit/armor/f13/power_armor/equipped(mob/user, slot)
 	if(slot == slot_wear_suit)
 		user.resize = 1.1
@@ -504,7 +504,7 @@
 	user.resize = 1
 	user.update_transform()
 	..()
-
+*/
 
 
 /obj/item/clothing/suit/armor/f13/power_armor/sierra
