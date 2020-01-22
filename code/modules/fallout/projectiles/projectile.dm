@@ -1,7 +1,7 @@
 //Plasma bolts
 /obj/item/projectile/beam/plasma
 	name = "плазмы"
-	damage = 40
+	damage = 35
 	irradiate = 4
 	icon_state = "plasma"
 	icon = 'icons/fallout/objects/guns/projectiles.dmi'
@@ -11,7 +11,7 @@
 
 /obj/item/projectile/beam/plasma/turbo
 	name = "концентрированной плазмы"
-	damage = 50
+	damage = 60
 	irradiate = 10
 
 //Bullets library
@@ -27,10 +27,10 @@
 
 /obj/item/projectile/bullet/F13/c9mmBullet/armourpiercing
 	damage = 12
-	armour_penetration = 22
+	armour_penetration = 25
 
 /obj/item/projectile/bullet/F13/c9mmBullet/toxic
-	damage = 12
+	damage = 15
 	damage_type = TOX
 
 /obj/item/projectile/bullet/F13/c9mmBullet/fire
@@ -57,7 +57,7 @@
 
 /obj/item/projectile/bullet/F13/c10mmBullet/armourpiercing
 	damage = 14
-	armour_penetration = 28
+	armour_penetration = 22
 
 /obj/item/projectile/bullet/F13/c10mmBullet/toxic
 	damage = 14
@@ -82,7 +82,7 @@
 
 /obj/item/projectile/bullet/F13/c556Bullet/armourpiercing
 	damage = 18
-	armour_penetration = 28
+	armour_penetration = 22
 
 /obj/item/projectile/bullet/F13/c556Bullet/toxic
 	damage = 20
@@ -107,10 +107,10 @@
 
 /obj/item/projectile/bullet/F13/c44mmBullet/armourpiercing
 	damage = 24
-	armour_penetration = 32
+	armour_penetration = 28
 
 /obj/item/projectile/bullet/F13/c44mmBullet/toxic
-	damage = 32
+	damage = 24
 	damage_type = TOX
 
 /obj/item/projectile/bullet/F13/c44mmBullet/fire
@@ -127,16 +127,16 @@
 	damage = 46
 
 /obj/item/projectile/bullet/F13/c308mmBullet/toxic
-	damage = 34
+	damage = 30
 	damage_type = TOX
 
 /obj/item/projectile/bullet/F13/c308mmBullet/heap
-	damage = 48
+	damage = 60
 	armour_penetration = -44
 
 /obj/item/projectile/bullet/F13/c308mmBullet/armourpiercing
 	damage = 32
-	armour_penetration = 44
+	armour_penetration = 30
 
 /obj/item/projectile/bullet/F13/c308mmBullet/fire
 	damage = 18

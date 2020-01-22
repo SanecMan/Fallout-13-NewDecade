@@ -2,7 +2,7 @@
 	name = "laser"
 	icon_state = "laser"
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
-	damage = 20
+	damage = 25
 	light_color = LIGHT_COLOR_RED
 	damage_type = BURN
 	hitsound = 'sound/weapons/sear.ogg'
