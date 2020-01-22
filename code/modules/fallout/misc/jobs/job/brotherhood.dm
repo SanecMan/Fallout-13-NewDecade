@@ -56,7 +56,7 @@
 	name = "Elder"
 	backpack = null
 	satchel = null
-	id = /obj/item/card/id/dogtag
+	id = /obj/item/weapon/card/id/gold
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
 	suit = /obj/item/clothing/suit/f13/elder
@@ -116,7 +116,7 @@
 	name = "Paladin"
 	backpack = null
 	satchel = null
-	id = /obj/item/card/id/dogtag
+	id = /obj/item/weapon/card/id/gold
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -179,7 +179,7 @@
 	name = "Knight"
 	backpack = null
 	satchel = null
-	id = /obj/item/card/id/dogtag
+	id = /obj/item/weapon/card/id/gold
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -233,7 +233,7 @@
 	name = "Scriber"
 	backpack = null
 	satchel = null
-	id = /obj/item/card/id/dogtag
+	id = /obj/item/weapon/card/id/gold
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/tan
 	suit = /obj/item/clothing/suit/f13/scribe
