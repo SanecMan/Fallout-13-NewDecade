@@ -202,7 +202,7 @@
 	name = "high-capacity micro-fusion cell"
 	origin_tech = "powerstorage=2"
 	icon_state = "hcell"
-	maxcharge = 2000
+	maxcharge = 3000
 	materials = list(MAT_GLASS=60)
 	rating = 3
 	chargerate = 1500
@@ -223,7 +223,7 @@
 	name = "super-capacity micro-fusion cell"
 	origin_tech = "powerstorage=3;materials=3"
 	icon_state = "scell"
-	maxcharge = 3000
+	maxcharge = 5000
 	materials = list(MAT_GLASS=300)
 	rating = 4
 	chargerate = 2000
@@ -236,7 +236,7 @@
 	name = "hyper-capacity micro-fusion cell"
 	origin_tech = "powerstorage=4;engineering=4;materials=4"
 	icon_state = "hpcell"
-	maxcharge = 30000
+	maxcharge = 10000
 	materials = list(MAT_GLASS=400)
 	rating = 5
 	chargerate = 3000
@@ -250,7 +250,7 @@
 	desc = "A rechargable transdimensional power cell."
 	origin_tech = "powerstorage=5;bluespace=4;materials=4;engineering=4"
 	icon_state = "bscell"
-	maxcharge = 40000
+	maxcharge = 20000
 	materials = list(MAT_GLASS=600)
 	rating = 6
 	chargerate = 4000
@@ -321,3 +321,4 @@
 
 /obj/item/weapon/stock_parts/cell/emproof/corrupt()
 	return
+

@@ -20,8 +20,8 @@
 	required_items = list(
 	/obj/item/clothing/gloves/f13/military,
 	/obj/item/clothing/under/f13/recon,
-	/obj/item/clothing/suit/armor/f13/power_armor/t51b,
-	/obj/item/clothing/head/helmet/power_armor/t51b,
+//	/obj/item/clothing/suit/armor/f13/power_armor/t51b,
+//	/obj/item/clothing/head/helmet/power_armor/t51b,
 	/obj/item/clothing/head/soft/f13/utility/navy,
 	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/gun/energy/laser/rifle/tri,
@@ -120,8 +120,8 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51b
-	head = /obj/item/clothing/head/helmet/power_armor/t51b
+//	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51b
+//	head = /obj/item/clothing/head/helmet/power_armor/t51b
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/laser/rifle/aer13
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2, \

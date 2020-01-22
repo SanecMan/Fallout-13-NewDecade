@@ -18,7 +18,6 @@
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "specops", "f76")
 
 	required_items = list(
-	/obj/item/clothing/suit/armor/f13/power_armor/superadvanced,
 	/obj/item/clothing/head/helmet/power_armor/superadvanced,
 	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/gun/energy/plasma,
@@ -84,8 +83,6 @@
 	/obj/item/clothing/head/soft/f13/utility/tan,
 	/obj/item/clothing/under/f13/bdu,
 	/obj/item/clothing/under/f13/dbdu,
-	/obj/item/clothing/suit/armor/f13/power_armor/tesla,
-	/obj/item/clothing/head/helmet/power_armor/tesla,
 	/obj/item/clothing/glasses/sunglasses,
 	/obj/item/weapon/gun/energy/plasma,
 	/obj/item/weapon/lighter/engraved
