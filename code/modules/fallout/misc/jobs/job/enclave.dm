@@ -187,11 +187,11 @@
 /datum/job/enclave_radist
 	title = "Enclave Radist"
 	desc = "Enlist today."
-	flag = ENCLAVE_PRIVATE
+	flag = ENCLAVE_RADIST
 	department_head = list("colonel", "sergeant")
 	department_flag = MEDSCI
 	faction = "enclave"
-	status = "private"
+	status = "private_r"
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "Полковнику"

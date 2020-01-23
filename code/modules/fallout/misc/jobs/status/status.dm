@@ -308,6 +308,12 @@ mob/proc/set_status(var/status)
 	purge_faction = "enclave"
 	color = "#000"
 
+/datum/status/radist_bs
+	name = "Рядовой связист"
+	id = "private_r"
+	purge_faction = "enclave"
+	color = "#000"
+
 /datum/status/volunteer
 	name = "Волонтёр"
 	id = "volunteer"
@@ -338,6 +344,12 @@ mob/proc/set_status(var/status)
 /datum/status/scriber
 	name = "Писец"
 	id = "scriber"
+	purge_faction = "bs"
+	color = "#13306d"
+
+/datum/status/paladin
+	name = "Рыцарь связист"
+	id = "paladin_r"
 	purge_faction = "bs"
 	color = "#13306d"
 

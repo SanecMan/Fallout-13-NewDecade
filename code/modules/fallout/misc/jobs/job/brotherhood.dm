@@ -240,11 +240,11 @@
 /datum/job/radist_bs
 	title = "Radist of Brotherhood"
 	desc = "A warrior, the keeper of peace.<br>You are the one who shall bring justice."
-	flag = KNIGHT
+	flag = KNIGHTRADIST
 	department_head = list("elder", "paladin")
 	department_flag = ENGSEC
 	faction = "bs"
-	status = "knight"
+	status = "paladin_r"
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "Старейшине и Паладинам"
