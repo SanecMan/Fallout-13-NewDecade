@@ -245,8 +245,8 @@
 	department_flag = ENGSEC
 	faction = "bs"
 	status = "paladin_r"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 2
+	spawn_positions = 1
 	supervisors = "Старейшине и Паладинам"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
@@ -256,7 +256,7 @@
 	required_items = list(
 	/obj/item/clothing/under/f13/recon,
 	/obj/item/weapon/gun/energy/laser/pistol,
-	/obj/item/weapon/twohanded/largehammer
+	/obj/item/device/radio/prc/bs
 	)
 
 	denied_items = list(
@@ -285,7 +285,7 @@
 
 /datum/outfit/job/radist_bs
 	name = "BS Radist"
-	backpack = /obj/item/device/radio/prc/bs
+	back = /obj/item/device/radio/prc/bs
 	ears = /obj/item/device/radio/headset/radist
 	id = /obj/item/weapon/card/id/gold
 	gloves = /obj/item/clothing/gloves/f13/military

@@ -35,9 +35,9 @@
 /obj/item/clothing/under/f13/radist_bs
 	name = "old radist uniform"
 	desc = "Практичная форма радиста."
-	icon_state = "radist_bs"
+	icon_state = "bs_radist"
 	item_state = "bl_suit"
-	item_color = "j12"
+	item_color = "bs_radist"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 0

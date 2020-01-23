@@ -192,8 +192,8 @@
 	department_flag = MEDSCI
 	faction = "enclave"
 	status = "private_r"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 1
 	supervisors = "Полковнику"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 19
@@ -203,6 +203,7 @@
 	required_items = list(
 	/obj/item/clothing/under/f13/bdu,
 	/obj/item/clothing/head/soft/f13/utility/olive,
+	/obj/item/device/radio/prc
 	)
 
 	denied_items = list(
@@ -229,7 +230,7 @@
 
 /datum/outfit/job/radist_en
 	name = "Enclave Radist"
-	backpack = /obj/item/device/radio/prc
+	back = /obj/item/device/radio/prc
 	ears = /obj/item/device/radio/headset/radist
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/dbdu

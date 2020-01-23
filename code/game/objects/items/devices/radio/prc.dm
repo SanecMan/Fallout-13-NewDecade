@@ -12,21 +12,6 @@
 	frequency = 6359
 	key = 343
 
-/obj/item/device/radio/prc/New()
-	..()
-	START_PROCESSING(SSobj, src)
-
-/obj/item/device/radio/prc/Destroy()
-	STOP_PROCESSING(SSobj, src)
-	return ..()
-
-/obj/item/device/radio/prc/attack_hand(mob/user)
-	interact(user)
-
-/obj/item/device/radio/prc/interact(mob/user)
-	..()
-	ui_interact(user, state = default_state)
-
 /obj/item/device/radio/prc/bs
 	icon = 'icons/obj/prc.dmi'
 	name = "R-105"
