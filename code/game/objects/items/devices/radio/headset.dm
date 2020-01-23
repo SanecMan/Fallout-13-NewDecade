@@ -5,7 +5,7 @@
 	item_state = "headset"
 	materials = list(MAT_METAL=75)
 	subspace_transmission = 1
-	canhear_range = 0 // can't hear headsets from very far away
+	canhear_range = 1 // can't hear headsets from very far away
 
 	slot_flags = SLOT_EARS
 	var/obj/item/device/encryptionkey/keyslot2 = null

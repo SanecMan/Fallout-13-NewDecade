@@ -179,5 +179,63 @@
 	shoes = /obj/item/clothing/shoes/f13/military
 	head = /obj/item/clothing/head/soft/f13/utility/tan
 	belt = /obj/item/weapon/storage/belt/military/army/enclave
-	weapon = /obj/item/weapon/gun/energy/plasma/pistol
+	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol/n99
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 1, /obj/item/weapon/kitchen/knife/combat = 1)
+
+
+/// enclave radist///
+/datum/job/enclave_radist
+	title = "Enclave Radist"
+	desc = "Enlist today."
+	flag = ENCLAVE_PRIVATE
+	department_head = list("colonel", "sergeant")
+	department_flag = MEDSCI
+	faction = "enclave"
+	status = "private"
+	total_positions = 3
+	spawn_positions = 3
+	supervisors = "Полковнику"
+	selection_color = "#ec9d9d"
+	minimal_player_age = 19
+
+	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "specops", "f76")
+
+	required_items = list(
+	/obj/item/clothing/under/f13/bdu,
+	/obj/item/clothing/head/soft/f13/utility/olive,
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/head/f13/headscarf,
+	/obj/item/clothing/head/f13/pot,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal,
+	/obj/item/clothing/under/f13/settler,
+	/obj/item/clothing/under/f13/brahmin,
+	/obj/item/clothing/under/f13/female/brahmin,
+	/obj/item/clothing/under/f13/worn,
+	/obj/item/clothing/suit/f13/mantle_liz
+	)
+
+	outfit = /datum/outfit/job/radist_en
+
+	access = list()
+	minimal_access = list()
+
+/datum/outfit/job/radist_en
+	name = "Enclave Radist"
+	backpack = /obj/item/device/radio/prc
+	ears = /obj/item/device/radio/headset/radist
+	gloves = /obj/item/clothing/gloves/f13/military
+	uniform = /obj/item/clothing/under/f13/dbdu
+	shoes = /obj/item/clothing/shoes/f13/military
+	suit = /obj/item/clothing/suit/armor/f13/radist_armor
+	head = /obj/item/clothing/head/soft/f13/utility/tan
+	belt = /obj/item/weapon/storage/belt/military/army/enclave
+	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol/n99
+	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 1, /obj/item/weapon/kitchen/knife/combat = 1, /obj/item/clothing/head/helmet/f13/radist = 1)

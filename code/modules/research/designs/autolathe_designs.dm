@@ -395,11 +395,11 @@
 	category = list("initial", "T-Comm")
 
 /datum/design/bounced_radio
-	name = "Station bounced radio"
+	name = "PRC-68"
 	id = "bounced_radio"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 75, MAT_GLASS = 25)
-	build_path = /obj/item/device/radio/off
+	build_path = /obj/item/device/radio/prc
 	category = list("initial", "T-Comm")
 
 /datum/design/infrared_emitter
