@@ -112,7 +112,7 @@
 
 /datum/outfit/job/paladin
 	name = "Paladin"
-	backpack = /obj/item/weapon/storage/backpack/prc
+	backpack = /obj/item/device/radio/prc
 	satchel = null
 	id = /obj/item/weapon/card/id/gold
 	gloves = /obj/item/clothing/gloves/f13/military
@@ -122,8 +122,7 @@
 //	head = /obj/item/clothing/head/helmet/power_armor/t51b
 	belt = /obj/item/weapon/storage/belt/military/army
 	weapon = /obj/item/weapon/gun/energy/laser/rifle/aer13
-	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2, \
-	/obj/item/device/radio = 1,/obj/item/weapon/kitchen/knife/combat = 1)
+	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2,/obj/item/weapon/kitchen/knife/combat = 1)
 
 //Brotherhood Knight
 

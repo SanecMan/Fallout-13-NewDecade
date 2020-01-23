@@ -68,6 +68,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/tri)
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = SLOT_BACK
 	burst_size = 1
 	w_class = 3
 	fire_delay = 15
@@ -85,6 +86,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/f13plasma/turbo)
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = SLOT_BACK
 	fire_delay = 15
 	w_class = 4
 	price = 1500
@@ -101,6 +103,7 @@
 	origin_tech = "combat=6;magnets=6;prewar=5"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rcw)
 	burst_size = 2 //Fuck yeah
+	slot_flags = SLOT_BACK
 	w_class = 3
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
@@ -144,6 +147,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rifle)
 	burst_size = 1
 	fire_delay = 3
+	slot_flags = SLOT_BACK
 	w_class = 3
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY

@@ -1,6 +1,6 @@
 /obj/item/device/radio
 	icon = 'icons/obj/radio.dmi'
-	name = "маленькая рация."
+	name = "walkie-talkie."
 	suffix = "\[3\]"
 	icon_state = "walkietalkie"
 	item_state = "walkietalkie"
@@ -31,14 +31,14 @@
 	var/emped = 0	//Highjacked to track the number of consecutive EMPs on the radio, allowing consecutive EMP's to stack properly.
 //			"Example" = FREQ_LISTENING|FREQ_BROADCASTING
 	flags = CONDUCT | HEAR
-	slot_flags = SLOT_BELT
+	slot_flags = SLOT_BACK
 	languages_spoken = HUMAN | ROBOT
 	languages_understood = HUMAN | ROBOT
 	throw_speed = 3
 	throw_range = 7
-	w_class = WEIGHT_CLASS_SMALL
-	materials = list(MAT_METAL=75, MAT_GLASS=25)
-	self_weight = 15
+	w_class = WEIGHT_CLASS_HUGE
+	materials = list(MAT_METAL=750, MAT_GLASS=250)
+	self_weight = 5
 
 	var/const/TRANSMISSION_DELAY = 5 // only 2/second/radio
 	var/const/FREQ_LISTENING = 1
