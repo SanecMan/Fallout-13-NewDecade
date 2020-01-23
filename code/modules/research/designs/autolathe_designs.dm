@@ -393,7 +393,7 @@
 	materials = list(MAT_METAL = 400, MAT_GLASS = 120)
 	build_path = /obj/item/device/assembly/signaler
 	category = list("initial", "T-Comm")
-
+/*
 /datum/design/bounced_radio
 	name = "PRC-68"
 	id = "bounced_radio"
@@ -401,7 +401,7 @@
 	materials = list(MAT_METAL = 75, MAT_GLASS = 25)
 	build_path = /obj/item/device/radio/prc
 	category = list("initial", "T-Comm")
-
+*/
 /datum/design/infrared_emitter
 	name = "Infrared emitter"
 	id = "infrared_emitter"

@@ -9,8 +9,8 @@
 	slot_flags = SLOT_BACK
 	materials = list(MAT_METAL=850, MAT_GLASS=450)
 	self_weight = 20
-	var/frequency = 6359
-	var/key = 343
+	frequency = 6359
+	key = 343
 
 /obj/item/device/radio/prc/New()
 	..()
@@ -32,8 +32,8 @@
 	name = "R-105"
 	desc = "Где вообще можно было нарыть этот древний кусок дерьма?"
 	icon_state = "r105"
-	var/frequency = 1919
-	var/key = 1501
+	frequency = 1919
+	key = 1501
 
 /obj/item/device/radio/headset/radist
 	name = "radio headset"
