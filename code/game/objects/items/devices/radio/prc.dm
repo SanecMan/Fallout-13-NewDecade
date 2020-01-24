@@ -31,10 +31,10 @@
 	if(loc == user)
 		if(slot_flags == SLOT_BACK)
 			if(user.get_item_by_slot(slot_back) == src)
-				ui_action_click()
+				interact(user)
 			else
 				to_chat(user, "<span class='warning'>Put the radio on your back first!</span>")
-		return
+	return
 	..()
 
 /obj/item/device/radio/prc/MouseDrop(obj/over_object)
