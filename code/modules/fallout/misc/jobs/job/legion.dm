@@ -312,3 +312,6 @@
 	mask = /obj/item/clothing/mask/bandana/f13/legrecruit
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, /obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, /obj/item/weapon/storage/wallet=1,/obj/item/stack/medical/healingpowder=2)
+
+
+///легион принял ислам
