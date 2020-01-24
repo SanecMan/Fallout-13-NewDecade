@@ -89,8 +89,8 @@
 			R.set_frequency(F.freq)
 			R.set_encryption(F.encryption_key)
 
-//	if(!visualsOnly && announce)
-//		announce(H)
+	if(!visualsOnly && announce)
+		announce(H)
 
 /datum/job/proc/get_access()
 	if(!config)	//Needed for robots.

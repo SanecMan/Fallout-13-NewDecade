@@ -1,6 +1,6 @@
 /datum/crafting_recipe/radio
 	name = "PRC Radio"
-	result = /obj/item/device/radio
+	result = /obj/item/device/radio/prc
 	time = 800
 	reqs = list(/obj/item/crafting/diode = 2,
 				/obj/item/crafting/transistor = 1,
