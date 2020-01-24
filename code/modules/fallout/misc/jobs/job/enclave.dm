@@ -51,6 +51,7 @@
 	name = "Colonel"
 	backpack = null
 	satchel = null
+	ears = /obj/item/device/radio/headset/enclave
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/enclave_officer
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -114,6 +115,7 @@
 	name = "Enclave Segeant"
 	backpack = /obj/item/device/radio/prc
 	satchel = null
+	ears = /obj/item/device/radio/headset/enclave
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/enclave_officer
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -174,6 +176,7 @@
 	name = "Enclave Private"
 	backpack = null
 	satchel = null
+	ears = /obj/item/device/radio/headset/enclave
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/dbdu
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -231,7 +234,7 @@
 /datum/outfit/job/radist_en
 	name = "Enclave Radist"
 	back = /obj/item/device/radio/prc
-	ears = /obj/item/device/radio/headset/radist
+	ears = /obj/item/device/radio/headset/enclave
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/dbdu
 	shoes = /obj/item/clothing/shoes/f13/military

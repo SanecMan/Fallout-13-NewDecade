@@ -55,6 +55,7 @@
 	name = "Elder"
 	backpack = null
 	satchel = null
+	ears = /obj/item/device/radio/headset/bs
 	id = /obj/item/weapon/card/id/gold
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -118,6 +119,7 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
+	ears = /obj/item/device/radio/headset/bs
 //	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51b
 //	head = /obj/item/clothing/head/helmet/power_armor/t51b
 	belt = /obj/item/weapon/storage/belt/military/army
@@ -177,6 +179,7 @@
 	backpack = null
 	satchel = null
 	id = /obj/item/weapon/card/id/gold
+	ears = /obj/item/device/radio/headset/bs
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -228,6 +231,7 @@
 /datum/outfit/job/scriber
 	name = "Scriber"
 	backpack = null
+	ears = /obj/item/device/radio/headset/bs
 	satchel = null
 	id = /obj/item/weapon/card/id/gold
 	uniform = /obj/item/clothing/under/f13/combat
@@ -286,7 +290,7 @@
 /datum/outfit/job/radist_bs
 	name = "BS Radist"
 	back = /obj/item/device/radio/prc/bs
-	ears = /obj/item/device/radio/headset/radist
+	ears = /obj/item/device/radio/headset/bs
 	id = /obj/item/weapon/card/id/gold
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/radist_bs

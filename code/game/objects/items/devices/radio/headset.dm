@@ -289,3 +289,24 @@
 		secure_radio_connections[ch_name] = add_radio(src, radiochannels[ch_name])
 
 	return
+
+/obj/item/device/radio/headset/enclave
+	name = "enclave bowman headset"
+	desc = "This is used by your elite security force. Protects ears from flashbangs."
+	flags = EARBANGPROTECT
+	icon_state = "sec_headset_alt"
+	item_state = "sec_headset_alt"
+	freqlock = 6359
+	frequency = 6359
+	key = 343
+
+
+/obj/item/device/radio/headset/bs
+	name = "brotherhood bowman headset"
+	desc = "This is used by your elite security force. Protects ears from flashbangs."
+	flags = EARBANGPROTECT
+	icon_state = "sec_headset_alt"
+	item_state = "sec_headset_alt"
+	freqlock = 1919
+	frequency = 1919
+	key = 1501
