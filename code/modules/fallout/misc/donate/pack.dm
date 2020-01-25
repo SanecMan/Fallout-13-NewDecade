@@ -102,7 +102,7 @@
 		/obj/item/clothing/mask/cigarette/cigar/havana,
 		/obj/item/weapon/lighter
 		)
-	price = 5000
+	price = 1000
 
 /datum/content_pack/team_fortress
 	name = "Набор шапок"
@@ -116,7 +116,7 @@
 		/obj/item/clothing/head/f13/stormchaser,
 		/obj/item/clothing/head/f13/gambler
 		)
-	price = 10000
+	price = 4000
 
 /datum/content_pack/wardrobe
 	name = "Высшая Мода"
@@ -138,7 +138,7 @@
 		/obj/item/clothing/suit/f13/puffer,
 		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer
 		)
-	price = 20000
+	price = 5000
 
 /datum/content_pack/vault13
 	name = "Убежище 13"
@@ -173,7 +173,7 @@
 		/obj/item/clothing/shoes/f13/doom,
 		/obj/item/weapon/mounted_chainsaw
 		)
-	price = 9000000000
+	price = 85000
 
 /datum/content_pack/followers
 	name = "Набор Последователей"
@@ -190,7 +190,7 @@
 		/obj/item/weapon/storage/backpack/satchel/leather,
 		/obj/item/weapon/storage/firstaid
 	)
-	price = 9000
+	price = 4000
 
 /datum/content_pack/trooper_armor
 	name = "Набор брони НКР"
@@ -204,9 +204,9 @@
 		/obj/item/clothing/suit/armor/f13/ncr/stalker,
 		/obj/item/clothing/suit/armor/f13/ncr/punisher
 		)
-	price = 10000
+	price = 4000
 
-/*
+
 /datum/content_pack/heavy_trooper
 	name = "NCR Heavy Infantry Corps"
 	id = "heavy_trooper"
@@ -218,8 +218,8 @@
 		/obj/item/weapon/gun/ballistic/automatic/rifle,
 		/obj/item/ammo_box/magazine/F13/m308
 		)
-	price = 180
-*/
+	price = 8000
+
 
 /datum/content_pack/khan
 	name = "Великие Ханы"
@@ -233,7 +233,7 @@
 		/obj/item/weapon/twohanded/tribal_spear,
 		/obj/item/weapon/restraints/legcuffs/bola/tribal
 		)
-	price = 8000
+	price = 3000
 
 /datum/content_pack/punk
 	name = "Панк"
@@ -246,7 +246,7 @@
 		/obj/item/device/instrument/eguitar,
 		/obj/item/key/motorcycle
 		)
-	price = 8000
+	price = 5000
 
 /datum/content_pack/off
 	name = "Набор Бейсболиста"
@@ -259,7 +259,7 @@
 		//obj/item/clothing/gloves/f13/baseball,
 		/obj/item/clothing/shoes/f13/fancy
 		)
-	price = 10000
+	price = 5000
 
 /datum/content_pack/madmax
 	name = "Безумный Макс"
@@ -287,13 +287,13 @@
 		/obj/item/clothing/suit/armor/f13/ncr/stalker,
 		/obj/item/clothing/suit/armor/f13/ncr/punisher
 		)
-	price = 10000
+	price = 7000
 
 /datum/content_pack/glowing_ghoul
 	name = "Игровая раса: Светящийся Гуль"
 	id = "glowing_ghoul"
 	desc = "<b>Доступно для: Кого угодно, кроме анклавовцев!</b><br>Данный набор, позволяет вам создать светящегося гуля!"
-	price = 50000
+	price = 10000
 
 	on_set(client/client)
 		client.add_race("glowing ghoul", /datum/species/ghoul/glowing)
@@ -317,14 +317,14 @@
 		/obj/item/clothing/under/syndicate/tacticool,
 		/obj/item/clothing/glasses/night
 		)
-	price = 85000
+	price = 9000
 
 /datum/content_pack/f76
 	name = "Коллекционное Издание Фоллаут 13"
 	id = "f76"
 	desc = "<b>Доступно для: кто угодно всего за 200$!</b><br>ЭТО ПРОСТО РАБОТАЕТ.<br>."
 	items = list(/obj/item/weapon/storage/f76bag/bag)
-	price = 200
+	price = 2000
 
 /datum/content_pack/leaders
 	name = "Лидеры всех основных фракций"
@@ -340,7 +340,7 @@
 	//	/datum/job/overseer
 		//datum/job/preacher
 		)
-	price = 800000000
+	price = 100000
 
 
 /datum/content_pack/enclave2
@@ -348,9 +348,9 @@
 	id = "enclave_sergeant"
 	desc = "<b>Открывает доступ к роли сержанта Анклава!</b><br>И-ДИ-ОТ!<br>."
 	roles = list(
-	/datum/outfit/job/enclave_sergeant
+	/datum/job/enclave_sergeant
 		)
-	price = 6500000
+	price = 35000
 
 /datum/content_pack/enclave
 	name = "Анклав: роль рядового"
@@ -359,4 +359,4 @@
 	roles = list(
 	/datum/job/enclave_private
 		)
-	price = 3500000
+	price = 10000
