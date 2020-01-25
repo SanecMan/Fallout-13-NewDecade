@@ -293,16 +293,17 @@
 	name = "Игровая раса: Светящийся Гуль"
 	id = "glowing_ghoul"
 	desc = "<b>Доступно для: Кого угодно, кроме анклавовцев!</b><br>Данный набор, позволяет вам создать светящегося гуля!"
-	price = 10000
+	price = 30000
 
 	on_set(client/client)
 		client.add_race("glowing ghoul", /datum/species/ghoul/glowing)
 
-/datum/content_pack/glowing_ghoul
+/datum/content_pack/ghoul
 	name = "Игровая раса: Гуль"
 	id = "ghoul"
 	desc = "<b>Доступно для: Кого угодно, кроме анклавовцев!</b><br>Данный набор, позволяет вам создать гуля!"
-	price = 30000
+	price = 10000
+
 	on_set(client/client)
 		client.add_race("ghoul", /datum/species/ghoul)
 
@@ -334,9 +335,9 @@
 		/datum/job/gangleader,
 		/datum/job/mayor,
 		/datum/job/general,
-	//	/datum/job/legate,
+		/datum/job/legate,
 		/datum/job/elder,
-	//	/datum/job/colonel,
+		/datum/job/colonel,
 	//	/datum/job/overseer
 		//datum/job/preacher
 		)
