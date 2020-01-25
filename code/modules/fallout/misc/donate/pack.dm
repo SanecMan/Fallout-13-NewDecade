@@ -318,7 +318,7 @@
 		/obj/item/clothing/under/syndicate/tacticool,
 		/obj/item/clothing/glasses/night
 		)
-	price = 9000
+	price = 75000
 
 /datum/content_pack/f76
 	name = "Коллекционное Издание Фоллаут 13"
