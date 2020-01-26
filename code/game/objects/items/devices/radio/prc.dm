@@ -37,6 +37,7 @@
 	return
 	..()
 
+/*
 /obj/item/device/radio/prc/MouseDrop(obj/over_object)
 	if(ismob(src.loc))
 		var/mob/M = src.loc
@@ -45,3 +46,4 @@
 			if(!M.unEquip(src))
 				return
 			M.put_in_hand(src, H.held_index)
+*/

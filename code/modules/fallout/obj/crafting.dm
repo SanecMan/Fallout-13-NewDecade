@@ -14,7 +14,7 @@
 	icon_state = "riflestock"
 
 /obj/item/weaponcrafting/handle/rifle
-	name = "Handle"
+	name = "Rifle Handle"
 	desc = "Просто рукоятка."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "handle_a_1"
@@ -24,7 +24,7 @@
 	icon_state = "handle_a_[rand(1,2)]"
 
 /obj/item/weaponcrafting/handle/pistol
-	name = "Handle"
+	name = "Pistol Handle"
 	icon_state = "handle_p_1"
 
 /obj/item/weaponcrafting/handle/pistol/initialize()

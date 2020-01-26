@@ -36,9 +36,9 @@
 	languages_understood = HUMAN | ROBOT
 	throw_speed = 3
 	throw_range = 7
-	w_class = WEIGHT_CLASS_HUGE
-	materials = list(MAT_METAL=750, MAT_GLASS=250)
-	self_weight = 5
+	w_class = WEIGHT_CLASS_SMALL
+	materials = list(MAT_METAL=250, MAT_GLASS=150)
+	self_weight = 1
 
 	var/const/TRANSMISSION_DELAY = 5 // only 2/second/radio
 	var/const/FREQ_LISTENING = 1
