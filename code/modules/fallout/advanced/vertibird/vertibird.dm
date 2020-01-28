@@ -9,6 +9,7 @@
 	var/locked = TRUE
 	var/inFly = FALSE
 	var/obj/machinery/camera/portable/builtInCamera
+	self_weight = 9999
 
 /obj/vertibird/New()
 	var/obj/item/start = new /obj/landmark/vertibird()
