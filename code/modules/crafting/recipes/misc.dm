@@ -59,7 +59,7 @@
 
 /datum/crafting_recipe/weaponparts/ballistic
 	name = "Ballistic Weapon Parts"
-	reqs = /obj/item/weapon/gun/ballistic/automatic = 1)
+	reqs = list(/obj/item/weapon/gun/ballistic/automatic = 1)
 	time = 400
 	category = CAT_MISC
 	default = 1
