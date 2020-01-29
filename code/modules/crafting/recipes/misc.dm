@@ -64,7 +64,7 @@
 	category = CAT_MISC
 	default = 1
 	XP = 10
-	result = /obj/item/crafting/weapon_parts/ballistic = 1)
+	result = list(/obj/item/crafting/weapon_parts/ballistic = 1)
 
 /datum/crafting_recipe/weaponparts/energy
 	name = "Energy Weapon Parts"
