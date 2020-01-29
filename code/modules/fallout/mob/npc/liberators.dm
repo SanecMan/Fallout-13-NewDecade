@@ -52,3 +52,15 @@
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/f13weapons/laserweap76.ogg'
 	XP = 10
+
+
+/mob/living/simple_animal/hostile/liberatormk0/mk2
+	name = "Освободитель МК2"
+	desc = "Маленький желтый паукообразный робот с красным «глазом» в виде звезды. Чуть ниже глаза-звезды можно заметить китайские иероглифы, по которым можно догадаться, что данный робот использовался НОАК. При нападении «Освободитель» использует маломощный лазер.."
+	icon_state = "liberator_y"
+	icon_living = "liberator_y"
+	icon_dead = "liberator_y_d"
+	icon_gib = "liberator_g"
+	ranged_cooldown_time = 70
+	maxHealth = 120
+	health = 120

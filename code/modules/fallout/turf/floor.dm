@@ -57,3 +57,6 @@
 
 /turf/open/floor/f13/wood/housebase/sand/corner
 	icon_state = "housebase_sandcorner"
+
+/turf/open/floor/f13/wood/wood_st
+	icon_state = "wood_st"

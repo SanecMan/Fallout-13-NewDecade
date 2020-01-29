@@ -1424,6 +1424,7 @@
 #include "code\modules\fallout\obj\structures\table_smooth.dm"
 #include "code\modules\fallout\obj\structures\tables_racks.dm"
 #include "code\modules\fallout\obj\structures\tires.dm"
+#include "code\modules\fallout\obj\structures\tubes.dm"
 #include "code\modules\fallout\obj\structures\vault_door.dm"
 #include "code\modules\fallout\obj\structures\well.dm"
 #include "code\modules\fallout\obj\structures\window.dm"
