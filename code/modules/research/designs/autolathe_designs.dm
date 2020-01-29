@@ -669,7 +669,8 @@
 	category = list("hacked", "Security")
 
 /datum/design/weapon_parts
-	id = "fnfal"
+	name = "Ballistic Parts"
+	id = "ballistic"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 35000, MAT_GLASS = 5000)
 	build_path = /obj/item/crafting/weapon_parts/ballistic

@@ -42,7 +42,7 @@
 	check_friendly_fire = 1
 	del_on_death = 1
 	loot = list(/obj/effect/mine/ghost_man)
-	XP = 55
+	XP = 5
 
 /mob/living/simple_animal/hostile/ghost_man_bear_trap
 	name = "Ghost trapper"
@@ -86,7 +86,7 @@
 	check_friendly_fire = 1
 	del_on_death = 1
 	loot = list(/obj/effect/mine/ghost_man, /obj/item/weapon/beartrapfist)
-	XP = 75
+	XP = 5
 
 /mob/living/simple_animal/hostile/ghost_man_spear
 	name = "Ghost harvester"
@@ -137,4 +137,4 @@
 	check_friendly_fire = 1
 	del_on_death = 1
 	loot = list(/obj/effect/mine/ghost_man, /obj/item/stack/spear)
-	XP = 90
+	XP = 10
