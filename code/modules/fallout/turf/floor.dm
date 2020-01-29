@@ -58,5 +58,12 @@
 /turf/open/floor/f13/wood/housebase/sand/corner
 	icon_state = "housebase_sandcorner"
 
-/turf/open/floor/f13/wood/wood_st
+/turf/open/floor/f13/wood_st
 	icon_state = "wood_st"
+	icon_plating = "plating"
+	name = "floor"
+	icon = 'icons/fallout/turfs/ground.dmi'
+	floor_tile = /obj/item/stack/tile/wood
+	sheet_type = /obj/item/stack/sheet/mineral/wood
+	icon_plating = "housebase"
+	step_sounds = list("human" = "woodfootsteps")
