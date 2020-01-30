@@ -42,7 +42,7 @@
 	category = CAT_MISC
 	default = 1
 	XP = 2
-	result = list(/obj/item/weaponcrafting/handle/pistol = 1)
+	result = /obj/item/weaponcrafting/handle/pistol
 
 /datum/crafting_recipe/weaponparts/handle_r
 	name = "Rifle Handle"
@@ -52,7 +52,7 @@
 	category = CAT_MISC
 	default = 1
 	XP = 4
-	result = list(/obj/item/weaponcrafting/handle/rifle = 1)
+	result = /obj/item/weaponcrafting/handle/rifle
 
 //WEAPON PARTS
 
@@ -64,7 +64,7 @@
 	category = CAT_MISC
 	default = 1
 	XP = 10
-	result = list(/obj/item/crafting/weapon_parts/ballistic = 1)
+	result = /obj/item/crafting/weapon_parts/ballistic
 
 /datum/crafting_recipe/weaponparts/energy
 	name = "Energy Weapon Parts"
@@ -73,7 +73,7 @@
 	category = CAT_MISC
 	default = 1
 	XP = 15
-	result = list(/obj/item/crafting/weapon_parts/energy)
+	result = /obj/item/crafting/weapon_parts/energy
 
 /datum/crafting_recipe/weaponparts/plasma
 	name = "Plasma Weapon Parts"
@@ -82,4 +82,4 @@
 	category = CAT_MISC
 	default = 1
 	XP = 20
-	result = list(/obj/item/crafting/weapon_parts/plasma = 1)
+	result = /obj/item/crafting/weapon_parts/plasma
