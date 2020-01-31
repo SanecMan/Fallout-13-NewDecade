@@ -464,3 +464,39 @@
 	icon_state = "hostanclothes"
 	item_state = "hostanclothes"
 	item_color = "hostanclothes"
+
+/obj/item/clothing/under/victdress
+	name = "black victorian dress"
+	desc = "A victorian style dress, fancy!"
+
+	icon_state = "victorianblackdress"
+
+	item_color = "victorianblackdress"
+
+	body_parts_covered = CHEST|GROIN|LEGS|HANDS
+
+	can_adjust = 0
+
+/obj/item/clothing/under/victdress/red
+	name = "red victorian dress"
+	icon_state = "victorianreddress"
+	item_color = "victorianreddress"
+
+	body_parts_covered = CHEST|GROIN|LEGS|HANDS
+	can_adjust = 0
+
+/obj/item/clothing/under/officeruniform
+	name = "Officer's Uniform"
+	desc = "this uniform was designed by the great designer Hugo Boss."
+	icon_state = "officeruniform"
+	item_state = "officeruniform"
+	item_color = "officeruniform"
+	body_parts_covered = CHEST|GROIN
+
+/obj/item/clothing/under/janimaid
+	name = "maid uniform"
+	desc = "A simple maid uniform for housekeeping."
+	icon_state = "janimaid"
+	item_state = "janimaid"
+	item_color = "janimaid"
+	body_parts_covered = CHEST|GROIN
