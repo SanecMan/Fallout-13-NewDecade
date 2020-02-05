@@ -18,18 +18,18 @@
 	name = "long weapon barrel"
 	result = /obj/item/crafting/barrel_l
 	time = 800
-	reqs = list(/obj/item/crafting/instruments = 1, /obj/item/stack/sheet/metal = 4)
-	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	reqs = list(/obj/item/stack/sheet/metal = 4)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters, /obj/item/crafting/instruments)
 	category = CAT_MISC
 	default = 1
 	XP = 60
 
-/datum/crafting_recipe/barrel
+/datum/crafting_recipe/barrel_s
 	name = "long weapon barrel"
 	result = /obj/item/crafting/barrel_s
 	time = 400
-	reqs = list(/obj/item/crafting/instruments = 1, /obj/item/stack/sheet/metal = 2)
-	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	reqs = list(/obj/item/stack/sheet/metal = 2)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters, /obj/item/crafting/instruments)
 	category = CAT_MISC
 	default = 1
 	XP = 30
