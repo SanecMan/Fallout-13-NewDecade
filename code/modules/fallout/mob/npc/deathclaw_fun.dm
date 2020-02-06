@@ -8,7 +8,10 @@
 	var/pound_cooldown = 0
 	var/chosen_hole
 
-
+/mob/living/simple_animal/hostile/deathclaw/funclaw/funclown
+	name = "Funclown"
+	icon = 'icons/mob/GyperHonk.dmi'
+	icon_state = "Clowan"
 /mob/living/simple_animal/hostile/deathclaw/funclaw/AttackingTarget()
 	var/mob/living/M = target
 	if(!ishuman(M) || M.health > 60)
@@ -132,3 +135,50 @@
 				"<span class='userdanger'>\The [src]</b> рвёт одежду на [M]!</span>", null, COMBAT_MESSAGE_RANGE)
 		return TRUE
 	return FALSE
+
+
+/mob/living/simple_animal/hostile/deathclaw/funclaw/funclown/cum(mob/living/M)
+
+	if(refactory_period > 0)
+		return
+
+	var/message
+
+	if(!istype(M))
+		chosen_hole = null
+
+	switch(chosen_hole)
+		if(CUM_TARGET_THROAT)
+			if(M.has_mouth() && M.mouth_is_free())
+				message = "просовывает свой огромный клоунский член в глотку [M] и кончает."
+				M.reagents.add_reagent("cum", rand(9,15))
+			else
+				message = "кончает на лицо [M]."
+		if(CUM_TARGET_VAGINA)
+			if(M.has_vagina())
+				message = "пробивает писечку [M] и заполняет её спермой."
+				M.reagents.add_reagent("cum", rand(8,12))
+			else
+				message = "кончает на живот [M]."
+		if(CUM_TARGET_ANUS)
+			if(M.has_anus())
+				message = "трахает своим сочным членом [M] в жопу и наполняет её густой спермой Клоуна. ХОНК."
+				M.reagents.add_reagent("cum", rand(8,12))
+			else
+				message = "кончает на попку [M]."
+		else
+			message = "кончает на пол!"
+
+	playsound(loc, "honk/sound/interactions/clawcum[rand(1, 2)].ogg", 70, 1, -1)
+	visible_message("<font color=purple><b>\[src]</b> [message]</font>")
+	shake_camera(M, 3, 1)
+	set_is_fucking(null ,null)
+
+	refactory_period = 5
+	lust = 5
+	lust_tolerance += 50
+
+	sleep(20)
+	playsound(loc, "honk/sound/interactions/slap.ogg", 70, 1, -1)
+	visible_message("<span class='danger'>\The [src]</b> шлёпает [M] по заднице!</span>", \
+			"<span class='userdanger'>\The [src]</b> шлёпает [M] по заднице!</span>", null, COMBAT_MESSAGE_RANGE)
