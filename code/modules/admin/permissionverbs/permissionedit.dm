@@ -13,17 +13,17 @@
 	var/output = {"<!DOCTYPE html>
 <html>
 <head>
-<title>Permissions Panel</title>
+<title>Панель Прав</title>
 <script type='text/javascript' src='search.js'></script>
 <link rel='stylesheet' type='text/css' href='panels.css'>
 </head>
 <body onload='selectTextField();updateSearch();'>
 <div id='main'><table id='searchable' cellspacing='0'>
 <tr class='title'>
-<th style='width:125px;text-align:right;'>CKEY <a class='small' href='?src=\ref[src];editrights=add'>\[+\]</a></th>
-<th style='width:125px;'>RANK</th>
-<th style='width:375px;'>PERMISSIONS</th>
-<th style='width:100%;'>VERB-OVERRIDES</th>
+<th style='width:125px;text-align:right;'>СИКЕЙ <a class='small' href='?src=\ref[src];editrights=add'>\[+\]</a></th>
+<th style='width:125px;'>РАНГ</th>
+<th style='width:375px;'>ПРАВА</th>
+<th style='width:100%;'>VERB-ПЕРЕЗАПИСЬ</th>
 </tr>
 "}
 
@@ -91,7 +91,7 @@
 		insert_query.Execute()
 		var/DBQuery/log_query = dbcon.NewQuery("INSERT INTO `[format_table_name("admin_log")]` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Added new admin [adm_ckey] to rank [new_rank]');")
 		log_query.Execute()
-		to_chat(usr, "<span class='adminnotice'>New admin added.</span>")
+		to_chat(usr, "<span class='adminnotice'>Добавлен новый администратор.</span>")
 	else
 		if(!isnull(admin_id) && isnum(admin_id))
 			var/DBQuery/insert_query = dbcon.NewQuery("UPDATE `[format_table_name("admin")]` SET rank = '[new_rank]' WHERE id = [admin_id]")
