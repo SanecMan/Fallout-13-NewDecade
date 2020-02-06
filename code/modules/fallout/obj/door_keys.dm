@@ -7,6 +7,7 @@
 	slot_flags = SLOT_BELT
 	var/id = null
 	var/static/list/used_ids = list()
+	self_weight = 0.1
 
 /obj/item/door_key/New()
 	..()
