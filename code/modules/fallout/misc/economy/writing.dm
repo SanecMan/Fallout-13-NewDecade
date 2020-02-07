@@ -13,7 +13,7 @@
  */
 /obj/item/weapon/pen
 	desc = "Обычная черная ручка."
-	name = "pen"
+	name = "ручка"
 	icon = 'icons/fallout/objects/bureaucracy.dmi'
 	icon_state = "pen"
 	item_state = "pen"
@@ -31,7 +31,7 @@
 	return(BRUTELOSS)
 
 /obj/item/weapon/pen/marker
-	name = "black marker"
+	name = "черный маркер"
 	desc = "<b>For marking down the most important things.</b>"
 	icon_state = "marker"
 
@@ -56,7 +56,7 @@
 	colour = "white"
 
 /obj/item/weapon/pen/gold
-	name = "golden pen"
+	name = "золотая ручка"
 	desc = "It's a fancy golden pen, filled with extremely rare golden ink."
 	icon_state = "pen_gold"
 	colour = "orange"
@@ -166,7 +166,7 @@
 //For now, these are just pens writing in grey.
 
 /obj/item/weapon/pen/pencil
-	name = "pencil"
+	name = "карандаш"
 	desc = "Дешевое и компактное средство для писания. Но не эффективное."
 	icon_state = "pencil-y"
 	colour = "grey"

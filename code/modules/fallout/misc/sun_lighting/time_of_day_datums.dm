@@ -20,8 +20,8 @@
 
 /datum/time_of_day/night
 	name = "Night"
-	color = "#050d29"
-	duration = 9000
+	color = "#020614"  //old - #050d29
+	duration = 10000
 
 var/day=1
 var/month=1
