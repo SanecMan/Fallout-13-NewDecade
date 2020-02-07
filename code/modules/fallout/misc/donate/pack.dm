@@ -358,9 +358,11 @@
 	roles = list(/datum/job/enclave_private)
 	price = 10000
 
+/*
 /datum/content_pack/dildo
 	name = "ERP"
 	id = "erp"
 	desc = "<b>Доступен для: Всех фракций!</b>HARDER DADDY</b>"
 	items = list(/obj/item/weapon/dildo)
 	price = 15000
+*/
