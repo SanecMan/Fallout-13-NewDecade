@@ -535,3 +535,9 @@
 	icon_state = "bedsheet"
 	user_vars_to_edit = list("name" = "Spooky Ghost", "real_name" = "Spooky Ghost" , "incorporeal_move" = 1, "appearance_flags" = KEEP_TOGETHER|TILE_BOUND, "alpha" = 150)
 	alternate_worn_layer = ABOVE_BODY_FRONT_LAYER //so the bedsheet goes over everything but fire
+
+/obj/item/clothing/suit/jacket/sophie
+	name = "Sophie's coat"
+	icon_state = "sutener"
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/toy,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter,/obj/item/weapon/gun/ballistic/automatic/pistol,/obj/item/weapon/gun/ballistic/revolver,/obj/item/weapon/gun/ballistic/revolver/detective,/obj/item/device/radio)
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)

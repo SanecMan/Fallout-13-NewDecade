@@ -281,3 +281,8 @@
 		H.drop_all_held_items()
 		H.visible_message("<span class='danger'>[user] disarms [H]!</span>", "<span class='userdanger'>[user] disarmed you!</span>")
 	..()
+
+/obj/item/weapon/melee/curator_whip/black
+	name = "souteneur's whip"
+	desc = "Черная плеть, скорее всего используется для.. плотских утех..."
+	icon_state = "whip_black"

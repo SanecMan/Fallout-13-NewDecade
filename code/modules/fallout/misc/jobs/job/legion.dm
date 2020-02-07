@@ -62,7 +62,7 @@
 	head = /obj/item/clothing/head/helmet/f13/leglegate
 	glasses = /obj/item/clothing/glasses/sunglasses/f13/legion
 	weapon = /obj/item/weapon/gun/ballistic/automatic/rifle
-	back = /obj/item/weapon/twohanded/fireaxe/eastblade
+//	back = /obj/item/weapon/twohanded/fireaxe/eastblade
 
 //Legion Centurion
 
