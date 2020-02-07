@@ -10,8 +10,8 @@
 	icon_gib = "brahmin_g"
 	speak = list("Moo.","Moo?","Moo!","MOOOOOO","Moo, I say.","Heeey brooo!","Heeey yooou!") //Original Brahmin from Fallout
 	speak_emote = list("moos","moos hauntingly")
-	emote_hear = list("brays.")
-	emote_see = list("shakes its head.")
+	emote_hear = list("мычит.")
+	emote_see = list("мотает головами.")
 	speed = 4
 	self_weight = 150
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 6, /obj/item/stack/sheet/animalhide/generic=2)
