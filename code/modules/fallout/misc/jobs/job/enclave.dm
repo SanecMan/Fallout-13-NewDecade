@@ -134,7 +134,7 @@
 	department_head = list("colonel", "sergeant")
 	department_flag = MEDSCI
 	faction = "enclave"
-	status = "private"
+	status = "enclave_private"
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "Полковнику"
@@ -194,7 +194,7 @@
 	department_head = list("colonel", "sergeant")
 	department_flag = MEDSCI
 	faction = "enclave"
-	status = "private_r"
+	status = "private_radist"
 	total_positions = 2
 	spawn_positions = 1
 	supervisors = "Полковнику"

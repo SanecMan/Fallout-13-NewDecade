@@ -304,13 +304,13 @@ mob/proc/set_status(var/status)
 
 /datum/status/private
 	name = "Рядовой"
-	id = "private"
+	id = "enclave_private"
 	purge_faction = "enclave"
 	color = "#000"
 
 /datum/status/radist_bs
 	name = "Рядовой связист"
-	id = "private_r"
+	id = "private_radist"
 	purge_faction = "enclave"
 	color = "#000"
 
