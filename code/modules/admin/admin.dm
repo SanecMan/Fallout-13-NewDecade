@@ -394,10 +394,6 @@ var/global/BSACooldown = 0
 
 	var/dat = {"
 		<center><B>Cпавн панель</B></center><hr>\n
-		<A href='?src=\ref[src];c_mode=1'>Изменить игровой режим</A><br>
-		"}
-	if(master_mode == "secret")
-		dat += "<A href='?src=\ref[src];f_secret=1'>(принудительный Секрет)</A><br>"
 
 	dat += {"
 		<BR>
