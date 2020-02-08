@@ -594,7 +594,7 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/raider
-	name = "Raider"
+	name = list("James Rockhoof", "Gamlet Yebenhoyz", "Dolby Jepin", "Erot Baniy", "Chef-Chef", "Meat", "Cannibal Lector", "Cannibal Jones", "Maridge Fills", "Edward Shrader", "Sophie Fuckner", "Herber Willson", "Joseph Gemini", "Folks Gimini", "Wolfgang Meatball", "Shulz Herbs", "Great And Powerful Asshole")
 	desc = "Just a Raider"
 	icon_state = "firefighter_raider"
 	icon_living = "firefighter_raider"
@@ -625,7 +625,7 @@
 	del_on_death = 1
 	speak = list("ЭЙ, СУКА, СЮДА ИДИ!", "Испугался? ДА ТОЧНО ИСПУГАЛСЯ!.", "ДОЛБОЕБИНА, СЮДА ИДИ!", "Я МОГУ ДЕЛАТЬ ЭТО ВЕСЬ СУКА ДЕНЬ!", "Я делал это счотни раз, думаешь этот будет иначе?")
 	speak_emote = list("орёт", "кричит")
-	speak_chance = 25
+	speak_chance = 2
 	XP = 15
 
 /mob/living/simple_animal/hostile/raider/death(gibbed)
