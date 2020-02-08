@@ -192,7 +192,7 @@ var/last_irc_status = 0
 		if (usr)
 			log_admin("[key_name(usr)] Has requested an immediate world restart via client side debugging tools")
 			message_admins("[key_name_admin(usr)] Has requested an immediate world restart via client side debugging tools")
-		to_chat(world, "<span class='boldannounce'>Rebooting World immediately due to host request</span>")
+		to_chat(world, "<span class='boldannounce'>Перезапуск вызван хостом.</span>")
 		return ..(1)
 	var/delay
 	if(time)
