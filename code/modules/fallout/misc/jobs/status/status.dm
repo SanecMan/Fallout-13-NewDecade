@@ -204,8 +204,14 @@ mob/proc/set_status(var/status)
 	change_faction = 1
 	color = "#02005C"
 
+/datum/status/slaver
+	name = "Работорговец"
+	id = "slaver"
+	purge_faction = "raiders"
+	color = "#FF0000"
+
 /datum/status/raider
-	name = "Slaver"
+	name = "Рейдер"
 	id = "raider"
 	purge_faction = "raiders"
 	color = "#FF0000"

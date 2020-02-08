@@ -11,12 +11,18 @@
 /mob/living/simple_animal/hostile/deathclaw/funclaw/bossraider
 	name = "Super-Raider"
 	desc = "ÂÀËÅĞÀ ÅÆÎÂ!"
-	icon = 'icons/mob/GyperHonk.dmi'
-	icon_state = "Clowan"
+	icon = 'icons/mob/raiderboss.dmi'
+	icon_state = "raider"
+	icon_dead = "raider_d"
 	attacktext = "áü¸ò ñ ğàçìàõó"
+	maxHealth = 800
+	health = 800
 	speak_chance = 30
+	faction = list("raiders")
 	speak = list("ÒÛ ÍÅ ÑÀÏĞß×ÅØÜÑß ÑÊÎÒÈÍÀ!", "ÂÀËÅĞÀ ÊĞÓØÈÒÜ!", "ÓÌĞÈ! ÓÌĞÈ!", "ß ÕÎ×Ó ÆĞÀÒÜ!", "ß ÂÛÅÁÓ ÒÅÁß È ÒÂÎŞ ÑÅÌÜŞ, ÏÀÑÊÓÄÀ!", "ÒÂÎÅÉ ÇÀÄÍÈÖÅ ÏĞÈØÅË ÏÈÇÄÅÖ!")
 	speak_emote = list("îğ¸ò", "êğè÷èò")
+	loot = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 3, /obj/effect/gibspawner/human = 1)
+	XP = 25
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/AttackingTarget()
 	var/mob/living/M = target
