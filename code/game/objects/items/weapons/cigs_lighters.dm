@@ -76,7 +76,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/obj/item/clothing/mask/cigarette/cig = help_light_cig(M)
 	if(lit && cig && user.a_intent == INTENT_HELP)
 		if(cig.lit)
-			to_chat(user, "<span class='notice'>The [cig.name] is already lit.</span>")
+			to_chat(user, "<span class='notice'>[cig.name] уже зажжена.</span>")
 		if(M == user)
 			cig.attackby(src, user)
 		else
@@ -140,12 +140,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(istype(glass))	//you can dip cigarettes into beakers
 		var/transfered = glass.reagents.trans_to(src, chem_volume)
 		if(transfered)	//if reagents were transfered, show the message
-			to_chat(user, "<span class='notice'>You dip \the [src] into \the [glass].</span>")
+			to_chat(user, "<span class='notice'>Вы мпотушили [src] в [glass].</span>")
 		else			//if not, either the beaker was empty, or the cigarette was full
 			if(!glass.reagents.total_volume)
-				to_chat(user, "<span class='notice'>[glass] is empty.</span>")
+				to_chat(user, "<span class='notice'>[glass] пуста.</span>")
 			else
-				to_chat(user, "<span class='notice'>[src] is full.</span>")
+				to_chat(user, "<span class='notice'>[src] полна.</span>")
 
 
 /obj/item/clothing/mask/cigarette/proc/light(flavor_text = null)
@@ -210,7 +210,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(smoketime < 1)
 		new type_butt(location)
 		if(ismob(loc))
-			to_chat(M, "<span class='notice'>Your [name] goes out.</span>")
+			to_chat(M, "<span class='notice'>Ваша [name] выгорела.</span>")
 		qdel(src)
 		return
 	open_flame()
@@ -231,7 +231,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/obj/item/clothing/mask/cigarette/cig = help_light_cig(M)
 	if(lit && cig && user.a_intent == INTENT_HELP)
 		if(cig.lit)
-			to_chat(user, "<span class='notice'>The [cig.name] is already lit.</span>")
+			to_chat(user, "<span class='notice'>[cig.name] уже зажжена.</span>")
 		if(M == user)
 			cig.attackby(src, user)
 		else
@@ -405,7 +405,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		STOP_PROCESSING(SSobj, src)
 		return
 	if(!lit && smoketime > 0)
-		to_chat(user, "<span class='notice'>You empty [src] onto [location].</span>")
+		to_chat(user, "<span class='notice'>Вы опустошили [src] в [location].</span>")
 		new /obj/effect/decal/cleanable/ash(location)
 		packeditem = 0
 		smoketime = 0
@@ -487,10 +487,10 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	add_overlay(I)
 
 /obj/item/weapon/lighter/greyscale/ignition_effect(atom/A, mob/user)
-	. = "<span class='notice'>After some fiddling, [user] manages to light [A] with [src].</span>"
+	. = "<span class='notice'>После нескольких попыток, [user], успешно зажигает [A] с помощью [src].</span>"
 
 /obj/item/weapon/lighter/ignition_effect(atom/A, mob/user)
-	. = "<span class='rose'>With a single flick of their wrist, [user] smoothly lights [A] with [src]. Damn [user.p_theyre()] cool.</span>"
+	. = "<span class='rose'>С первого раза, [user] зажигает [A] с помощью [src]. Чёрт, [user.p_theyre()] жжёт.</span>"
 
 /obj/item/weapon/lighter/update_icon()
 	icon_state = lit ? "[icon_state]_on" : "[initial(icon_state)]"
@@ -506,7 +506,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			attack_verb = list("burnt", "singed")
 			if(!istype(src, /obj/item/weapon/lighter/greyscale))
 				user.visible_message("Without even breaking stride, [user] flips open and lights [src] in one smooth movement.", "<span class='notice'>Without even breaking stride, you flip open and lights [src] in one smooth movement.</span>")
-				
+
 			else
 				var/prot = FALSE
 				var/mob/living/carbon/human/H = user
