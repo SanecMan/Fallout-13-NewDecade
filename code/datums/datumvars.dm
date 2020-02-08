@@ -1152,6 +1152,6 @@
 
 			if(amount != 0)
 				log_admin("[key_name(usr)] dealt [amount] amount of [Text] damage to [L] ")
-				message_admins("<span class='notice'>[key_name(usr)] dealt [amount] amount of [Text] damage to [L] </span>")
+				message_admins("<span class='notice'>[key_name(usr)] наносит [amount] урона [Text] на [L] </span>")
 				href_list["datumrefresh"] = href_list["mobToDamage"]
 

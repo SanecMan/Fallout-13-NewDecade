@@ -389,7 +389,7 @@ var/list/admin_verbs_hideable = list(
 	else
 		//ghostize
 		log_admin("[key_name(usr)] admin ghosted.")
-		message_admins("[key_name_admin(usr)] admin ghosted.")
+		message_admins("[key_name_admin(usr)] входит в режим обозрения.")
 		var/mob/body = mob
 		body.ghostize(1)
 		if(body && !body.key)
