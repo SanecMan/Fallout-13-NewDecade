@@ -1311,7 +1311,6 @@
 #include "code\modules\fallout\misc\objectives\objectives\greed.dm"
 #include "code\modules\fallout\misc\objectives\objectives\join.dm"
 #include "code\modules\fallout\misc\objectives\objectives\protect.dm"
-#include "code\modules\fallout\misc\objectives\objectives\revolution.dm"
 #include "code\modules\fallout\misc\objectives\objectives\faction\expand.dm"
 #include "code\modules\fallout\misc\objectives\objectives\faction\find.dm"
 #include "code\modules\fallout\misc\sound_system\sound_system.dm"
