@@ -71,12 +71,6 @@
 		sleep(10)
 		new /obj/item/weapon/gun/medbeam(T)
 		sleep(10)
-	if(user.ckey == "iwuna")
-		to_chat(user, "Спасибо что поддержали проект.")
-		new /obj/item/clothing/suit/jacket/sophie(T)
-		sleep(10)
-		new /obj/item/weapon/melee/curator_whip/black(T)
-		sleep(10)
 
 /mob/living/carbon/human/create_internal_organs()
 	if(!(NOHUNGER in dna.species.species_traits))
