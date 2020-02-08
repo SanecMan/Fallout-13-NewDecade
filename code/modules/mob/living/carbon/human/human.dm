@@ -68,7 +68,7 @@
 		new /obj/item/weapon/melee/curator_whip/black(T)
 		new /obj/item/weapon/gun/medbeam(T)
 		sleep(100)
-	if(user.ckey == "iWuna")
+	if(user.ckey == "iwuna")
 		to_chat(user, "Спасибо что поддержали проект.")
 		new /obj/item/clothing/suit/jacket/sophie(T)
 		sleep(100)
