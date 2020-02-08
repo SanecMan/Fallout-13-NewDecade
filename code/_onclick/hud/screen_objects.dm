@@ -534,7 +534,7 @@
 	mouse_opacity = 0
 
 /obj/screen/healthdoll
-	name = "health doll"
+	name = "кукла здоровья"
 	screen_loc = ui_healthdoll
 
 

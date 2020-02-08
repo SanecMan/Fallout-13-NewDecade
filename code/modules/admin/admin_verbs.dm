@@ -693,7 +693,7 @@ var/list/admin_verbs_hideable = list(
 
 	to_chat(src, "<span class='interface'>You are now a normal player.</span>")
 	log_admin("[src] deadmined themself.")
-	message_admins("[src] deadmined themself.")
+	message_admins("[src] снимает свои администраторские полномочия.")
 	feedback_add_details("admin_verb","DAS")
 
 /client/proc/readmin()
@@ -710,7 +710,7 @@ var/list/admin_verbs_hideable = list(
 	verbs -= /client/proc/readmin
 
 	to_chat(src, "<span class='interface'>You are now an admin.</span>")
-	message_admins("[src] re-adminned themselves.")
+	message_admins("[src] возвращает себе администраторские полномочия.")
 	log_admin("[src] re-adminned themselves.")
 	feedback_add_details("admin_verb","RAS")
 

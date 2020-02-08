@@ -30,7 +30,7 @@
 				break
 		data["target"] = target
 		data["target_rank"] = target.assigned_role
-		data["custom_desc"] = "Your target is <b>%target%</b>, the <b>%target_rank%</b>"
+		data["custom_desc"] = "¬аша цель <b>%target%</b>, роль: <b>%target_rank%</b>"
 		..()
 
 	check_complete(var/datum/objective_holder/holder)

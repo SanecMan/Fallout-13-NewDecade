@@ -505,8 +505,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		return
 
 	if (alert(src, "Вы уверены что хотите удалить:\n[O]\nв ([O.x], [O.y], [O.z])?", "Подтвердите", "Да", "Нет") == "Да")
-		log_admin("[key_name(usr)] удалил [O] в ([O.x],[O.y],[O.z])")
-		message_admins("[key_name_admin(usr)] удалил [O] на координатах ([O.x],[O.y],[O.z])")
+		log_admin("[key_name(usr)] удаляет [O] в ([O.x],[O.y],[O.z])")
+		message_admins("[key_name_admin(usr)] удаляет [O] на координатах ([O.x],[O.y],[O.z])")
 		feedback_add_details("admin_verb","DEL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		qdel(O)
 
