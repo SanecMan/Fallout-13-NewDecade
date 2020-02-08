@@ -67,10 +67,10 @@
 
 //Basic Raider
 
-/datum/job/raider
+/datum/job/slaver
 	title = "Slaver"
 	desc = "A bloodthirsty savage.<br>You have broken every rule but the most important one - the Gang Leader is your supreme commander, the powerful Godfather of all bandits, the only one you trust with your life."
-	flag = RAIDER
+	flag = SLAVER
 	department_head = list("gangleader")
 	department_flag = WASTELAND
 	faction = "raiders"
@@ -119,7 +119,7 @@
 	suit = /obj/item/clothing/suit/armor/f13/supafly
 	head = /obj/item/clothing/head/helmet/f13/supaflyhelmet
 
-/datum/job/raidertrue
+/datum/job/raider
 	title = "Raider"
 	desc = "A bloodthirsty savage.<br>You have broken every rule but the most important one - the Gang Leader is your supreme commander, the powerful Godfather of all bandits, the only one you trust with your life."
 	flag = RAIDER

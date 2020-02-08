@@ -66,6 +66,7 @@
 		new /obj/item/clothing/suit/jacket/sophie(T)
 		new /obj/item/clothing/glasses/sunglasses(T)
 		new /obj/item/weapon/melee/curator_whip/black(T)
+		new /obj/item/weapon/gun/medbeam(T)
 		sleep(100)
 	if(user.ckey == "iWuna")
 		to_chat(user, "Спасибо что поддержали проект.")
