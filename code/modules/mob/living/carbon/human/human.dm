@@ -61,7 +61,7 @@
 		to_chat(user, "Спасибо что поддержали проект.")
 		new /obj/item/weapon/gun/energy/disabler/fluff/angelofmercy(T)
 		sleep(10)
-	if(user.ckey == "lady rainicorn")
+	if(user.ckey == "ladyrainicorn")
 		to_chat(user, "Спасибо что поддержали проект.")
 		new /obj/item/clothing/suit/jacket/sophie(T)
 		sleep(10)
