@@ -1287,7 +1287,6 @@
 #include "code\modules\fallout\misc\donate\packs_show.dm"
 #include "code\modules\fallout\misc\donate\preferences.dm"
 #include "code\modules\fallout\misc\economy\caps.dm"
-#include "code\modules\fallout\misc\economy\economy.dm"
 #include "code\modules\fallout\misc\economy\writing.dm"
 #include "code\modules\fallout\misc\jobs\jobs.dm"
 #include "code\modules\fallout\misc\jobs\faction\faction.dm"
