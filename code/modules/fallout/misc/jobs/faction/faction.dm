@@ -219,7 +219,7 @@ mob/proc/set_faction(var/faction)
 	description = "<b>Предназначение: Законопослушные нейтралы</b><br>City dwellers - A group of wastelanders that have holed up in the town to wait out the worst and hope for the best.<br>As the City evolved, its citizens became different from the rest of the Wasteland dwellers - they value the safety of a city, prefer better food and clothing, and mostly trust the elected Mayor - even if the decisions made are not the best.<br><i>In Mayor We Trust!</i>"
 	flags = HAVE_FREQ
 	area = /area/f13/city
-	verbs = list(/mob/proc/begin_head_voting)
+//	verbs = list(/mob/proc/begin_head_voting)
 	karma = 10
 
 /datum/f13_faction/raider
@@ -230,7 +230,7 @@ mob/proc/set_faction(var/faction)
 	preview_image = 'html/factions/raider.png'
 	full_name = "Slaver Gang"
 	description = "<b>Предназначение: Хаотичное Зло</b><br>Slavers - Any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland, and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
-	verbs = list(/mob/proc/begin_head_voting)
+//	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/raiders
 	karma = -10
 	welcome_text = "МОИ ЗАДАЧИ ТАКОВЫ:<br>\
@@ -267,7 +267,7 @@ mob/proc/set_faction(var/faction)
 	head_status = "elder"
 	flags = HAVE_FREQ
 	area = /area/f13/brotherhood
-	verbs = list(/mob/proc/begin_head_voting)
+//	verbs = list(/mob/proc/begin_head_voting)
 	karma = 10
 	welcome_text = "Ваши текущие задачи:<br>\
 1. В братстве ваша задача неукоснительно следить за вашими законами и нормами, ваша ПА не столько сильна, сколько люди в ней!<br>\
@@ -287,7 +287,7 @@ mob/proc/set_faction(var/faction)
 	flags = HAVE_FREQ
 	area = /area/f13/enclave
 	karma = -5
-	verbs = list(/mob/proc/begin_head_voting)
+//	verbs = list(/mob/proc/begin_head_voting)
 	welcome_text = "Сейчас ваши задачи таковы:<br>\
 1. Как солдат анклава, вы действуете в интересах анклава, а так же служите анклаву, вы родились ради этого! Вас этому учили!<br>\
 2. Ваша задача не дать технологии попасть в руки братства стали, именно вы, солдат единственный защитник суверенитета США. Тем не менее, не тащите в базу хлам, новый бункер никто не построит, если его засрать, солдат!<br>\
@@ -314,7 +314,7 @@ mob/proc/set_faction(var/faction)
 	description = "<b>Предназначение: Законопослушное добро</b><br>Новая Калифорнийская Республика, или НКР - большая, демократическая федерация с огромным населением в Калифорнии и несколькими штатами.<br>НКР симпатизирует многим ценностям старого мира, таким как Демократия, персональная свобода и законопослушность.<br>Так-же они занимаются восстановлением инфраструктуры, экономики и мира между людьми."
 	preview_image = 'html/factions/ncr.png'
 	head_status = "ncr_general"
-	verbs = list(/mob/proc/begin_head_voting)
+//	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/ncr
 	karma = 5
 	welcome_text = "Сейчас ваши задачи таковы:<br>\
@@ -382,7 +382,7 @@ mob/proc/set_faction(var/faction)
 	description = "<b>Alignment: Chaotic Neutral</b><br>Have you ever met a bunch of crazed zealots willing to baptize you with radioactive waste?<br>These fanatics are likely to make it so if you have smooth skin, since they all lost theirs decades ago.<br>They are faithful to their glorious God - the Great Atom, who brings salvation to all living.<br>They honor their faith, and are willing to do everything they can to please the Great Atom, and live eternally with a holy green glow."
 	preview_image = 'html/factions/acolytes.png'
 	head_status = "master_atom"
-	verbs = list(/mob/proc/begin_head_voting)
+//	verbs = list(/mob/proc/begin_head_voting)
 
 //	craft_recipes = list(/datum/table_recipe/den_encryption_key)
 

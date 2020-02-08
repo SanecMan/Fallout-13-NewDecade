@@ -8,10 +8,16 @@
 	var/pound_cooldown = 0
 	var/chosen_hole
 
-/mob/living/simple_animal/hostile/deathclaw/funclaw/funclown
-	name = "Funclown"
+/mob/living/simple_animal/hostile/deathclaw/funclaw/bossraider
+	name = "Super-Raider"
+	desc = "ÂÀËÅĞÀ ÅÆÎÂ!"
 	icon = 'icons/mob/GyperHonk.dmi'
 	icon_state = "Clowan"
+	attacktext = "áü¸ò ñ ğàçìàõó"
+	speak_chance = 30
+	speak = list("ÒÛ ÍÅ ÑÀÏĞß×ÅØÜÑß ÑÊÎÒÈÍÀ!", "ÂÀËÅĞÀ ÊĞÓØÈÒÜ!", "ÓÌĞÈ! ÓÌĞÈ!", "ß ÕÎ×Ó ÆĞÀÒÜ!", "ß ÂÛÅÁÓ ÒÅÁß È ÒÂÎŞ ÑÅÌÜŞ, ÏÀÑÊÓÄÀ!", "ÒÂÎÅÉ ÇÀÄÍÈÖÅ ÏĞÈØÅË ÏÈÇÄÅÖ!")
+	speak_emote = list("îğ¸ò", "êğè÷èò")
+
 /mob/living/simple_animal/hostile/deathclaw/funclaw/AttackingTarget()
 	var/mob/living/M = target
 	if(!ishuman(M) || M.health > 60)
@@ -137,7 +143,7 @@
 	return FALSE
 
 
-/mob/living/simple_animal/hostile/deathclaw/funclaw/funclown/cum(mob/living/M)
+/mob/living/simple_animal/hostile/deathclaw/funclaw/bossraider/cum(mob/living/M)
 
 	if(refactory_period > 0)
 		return

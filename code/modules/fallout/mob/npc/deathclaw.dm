@@ -43,5 +43,4 @@
 	mob_size = MOB_SIZE_LARGE
 	attacktext = "slashes"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-
 	XP = 65
