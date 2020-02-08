@@ -61,15 +61,15 @@
 		to_chat(user, "Спасибо что поддержали проект.")
 		new /obj/item/weapon/gun/energy/disabler/fluff/angelofmercy(T)
 		sleep(100)
-	else if(user.ckey == "lady rainicorn")
+	if(user.ckey == "lady rainicorn")
 		to_chat(user, "Спасибо что поддержали проект.")
-		new /obj/item/clothing/suit/jacket/sophie
-		new /obj/item/clothing/glasses/sunglasses
-		new /obj/item/weapon/melee/curator_whip/black
+		new /obj/item/clothing/suit/jacket/sophie(T)
+		new /obj/item/clothing/glasses/sunglasses(T)
+		new /obj/item/weapon/melee/curator_whip/black(T)
 		sleep(100)
-	else if(user.ckey == "iWuna")
+	if(user.ckey == "iWuna")
 		to_chat(user, "Спасибо что поддержали проект.")
-		new /obj/item/clothing/suit/jacket/sophie
+		new /obj/item/clothing/suit/jacket/sophie(T)
 		sleep(100)
 
 /mob/living/carbon/human/create_internal_organs()

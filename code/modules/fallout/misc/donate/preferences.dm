@@ -215,7 +215,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		</table>
 	</div>
 	<div class="second_block">
-		<h2>Body</h2>
+		<h2>Тело</h2>
 		<table>
 			<tr>
 				<td>
@@ -233,13 +233,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 					<b>Цвет кожи</b>
 				</td>
 				<td>
-					<b>Underwear:</b>
+					<b>Нижнее бельё:</b>
 				</td>
 				<td>
-					<b>Undershirt:</b>
+					<b>Футболка:</b><br>
 				</td>
 				<td>
-					<b>Socks:</b>
+					<b>Носки:</b>
 				</td>
 			</tr>
 			<tr>
