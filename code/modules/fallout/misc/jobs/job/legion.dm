@@ -24,7 +24,6 @@
 	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/weapon/spear,
 	/obj/item/weapon/harpoon,
-	/obj/item/device/radio,
 	/obj/item/weapon/lighter/gold,
 	/obj/item/weapon/reagent_containers/f13stimpack,
 	/obj/item/weapon/reagent_containers/f13stimpack/super
@@ -88,7 +87,6 @@
 	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/weapon/spear,
 	/obj/item/weapon/harpoon,
-	/obj/item/device/radio,
 	/obj/item/weapon/lighter/engraved,
 	/obj/item/weapon/reagent_containers/f13stimpack
 	)
@@ -150,7 +148,6 @@
 	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/weapon/spear,
 	/obj/item/weapon/harpoon,
-	/obj/item/device/radio,
 	/obj/item/weapon/lighter/engraved,
 	/obj/item/weapon/reagent_containers/f13stimpack
 	)
@@ -213,7 +210,6 @@
 	/obj/item/weapon/kitchen/knife/combat,
 	/obj/item/weapon/spear,
 	/obj/item/weapon/harpoon,
-	/obj/item/device/radio,
 	/obj/item/stack/medical/healingpowder
 	)
 
