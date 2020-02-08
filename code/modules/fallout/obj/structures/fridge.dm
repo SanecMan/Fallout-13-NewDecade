@@ -20,6 +20,7 @@
 	name = "fridge"
 	desc = "An old, pre-War refrigerator.<br>Despite being covered in rust and making noises straight out of a horror film, it still keeps your Nuka-Cola cold."
 	icon_state = "fridge"
+	layer = 2
 
 /obj/structure/closet/fridge/standard/New()
 	..()

@@ -437,6 +437,7 @@
 	pass_flags = LETPASSTHROW //You can throw objects over this, despite it's density.
 	obj_integrity = 20
 	max_integrity = 20
+	layer = 2
 
 /obj/structure/rack/CanPass(atom/movable/mover, turf/target, height=0)
 	if(height==0) return 1
