@@ -48,7 +48,29 @@
 
 	handcrafting = new()
 
+	//AWWARE ITEMS
+	spawn(10)
+		SpawnItemByCKEYs(src)
+
 	..()
+
+//Ckey - именно с маленькой буквы.
+/mob/proc/SpawnItemByCKEYs(mob/user)
+	var/turf/T = get_turf(user.loc)
+	if(user.ckey == "drnuke")
+		to_chat(user, "Спасибо что поддержали проект.")
+		new /obj/item/weapon/gun/energy/disabler/fluff/angelofmercy(T)
+		sleep(100)
+	else if(user.ckey == "lady rainicorn")
+		to_chat(user, "Спасибо что поддержали проект.")
+		new /obj/item/clothing/suit/jacket/sophie
+		new /obj/item/clothing/glasses/sunglasses
+		new /obj/item/weapon/melee/curator_whip/black
+		sleep(100)
+	else if(user.ckey == "iWuna")
+		to_chat(user, "Спасибо что поддержали проект.")
+		new /obj/item/clothing/suit/jacket/sophie
+		sleep(100)
 
 /mob/living/carbon/human/create_internal_organs()
 	if(!(NOHUNGER in dna.species.species_traits))

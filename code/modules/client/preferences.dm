@@ -143,12 +143,15 @@ var/list/preferences_datums = list()
 /datum/preferences/proc/ShowChoices(mob/user, var/skill_type = "")
 	if(!user || !user.client)
 		return
-	if(update_preview)
-		update_preview_icon()
-		update_preview = 0
-		CHECK_TICK
-		user << browse_rsc(preview_icon, "previewicon.png")
-		CHECK_TICK
+
+	update_preview_icon()
+	user << browse_rsc(preview_icon, "previewicon.png")
+	//if(update_preview)
+	//	update_preview_icon()
+	//	update_preview = 0
+	//	CHECK_TICK
+	//	user << browse_rsc(preview_icon, "previewicon.png")
+	//	CHECK_TICK
 	var/dat = "<center>"
 
 	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Настройки Персонажа</a> "
@@ -871,13 +874,30 @@ var/list/preferences_datums = list()
 					update_preview = 1
 
 				if("underwear")
-					underwear = "Nude"
+					var/new_underwear
+					if(gender == MALE)
+						new_underwear = input(user, "Choose your character's underwear:", "Character Preference")  as null|anything in underwear_m
+					else
+						new_underwear = input(user, "Choose your character's underwear:", "Character Preference")  as null|anything in underwear_f
+					if(new_underwear)
+						underwear = new_underwear
+					update_preview = 1
 
 				if("undershirt")
-					undershirt = "Nude"
+					var/new_undershirt
+					if(gender == MALE)
+						new_undershirt = input(user, "Choose your character's undershirt:", "Character Preference") as null|anything in undershirt_m
+					else
+						new_undershirt = input(user, "Choose your character's undershirt:", "Character Preference") as null|anything in undershirt_f
+					if(new_undershirt)
+						undershirt = new_undershirt
+					update_preview = 1
 
 				if("socks")
-					socks = "Nude"
+					var/new_socks = input(user, "Choose your character's socks:", "Character Preference") as null|anything in socks_list
+					if(new_socks)
+						socks = new_socks
+					update_preview = 1
 
 				if("eyes")
 					var/new_eyes = input(user, "Choose your character's eye colour:", "Character Preference") as color|null

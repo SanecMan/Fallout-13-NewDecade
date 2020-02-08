@@ -227,10 +227,19 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 			</tr>
 			<tr>
 				<td>
-					<b>Раса:</b>
+					<b>Раса:</b><BR>
 				</td>
 				<td>
 					<b>Цвет кожи</b>
+				</td>
+				<td>
+					<b>Underwear:</b>
+				</td>
+				<td>
+					<b>Undershirt:</b>
+				</td>
+				<td>
+					<b>Socks:</b>
 				</td>
 			</tr>
 			<tr>
@@ -239,6 +248,15 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				</td>
 				<td>
 					<a href='?_src_=prefs;preference=s_tone;task=input'>[data["skin_tone"]]</a>
+				</td>
+				<td>
+					<a href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>
+				</td>
+				<td>
+					<a href ='?_src_=prefs;preference=undershirt;task=input'>[undershirt]</a>
+				</td>
+				<td>
+					<a href ='?_src_=prefs;preference=socks;task=input'>[socks]</a>
 				</td>
 			</tr>
 		</table>
@@ -371,7 +389,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				<a href='?_src_=prefs;preference=reset_all'>&#9762; Сбросить настройки</a>
 				</center>"}
 	CHECK_TICK
-	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Настройки персонажа</div>", 640, 750)
+	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Настройки персонажа</div>", 960, 750)
 	popup.set_content(html)
 	popup.open(0)
 	return 1

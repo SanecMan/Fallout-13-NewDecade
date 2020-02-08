@@ -283,9 +283,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["skin_tone"]			>> skin_tone
 	S["hair_style_name"]	>> hair_style
 	S["facial_style_name"]	>> facial_hair_style
-//	S["underwear"]			>> underwear
-//	S["undershirt"]			>> undershirt
-//	S["socks"]				>> socks
+	S["underwear"]			>> underwear
+	S["undershirt"]			>> undershirt
+	S["socks"]				>> socks
 //	S["backbag"]			>> backbag
 	S["feature_mcolor"]					>> features["mcolor"]
 	S["feature_lizard_tail"]			>> features["tail_lizard"]
@@ -463,10 +463,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["skin_tone"] << skin_tone
 	S["hair_style_name"] << hair_style
 	S["facial_style_name"] << facial_hair_style
-//	S["underwear"] << underwear
-//	S["undershirt"] << undershirt
-//	S["socks"] << socks
-//	S["backbag"] << backbag
+	S["underwear"] << underwear
+	S["undershirt"] << undershirt
+	S["socks"] << socks
+	S["backbag"] << backbag
 	S["species"] << pref_species.id
 	S["feature_mcolor"] << features["mcolor"]
 	S["feature_lizard_tail"] << features["tail_lizard"]
