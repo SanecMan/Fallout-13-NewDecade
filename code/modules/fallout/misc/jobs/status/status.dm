@@ -236,6 +236,11 @@ mob/proc/set_status(var/status)
 	id = "member"
 	change_faction = 1
 
+/datum/status/trader
+	name = "Торговец"
+	id = "trader"
+	color = "#704200"
+
 /datum/status/sheriff
 	name = "Шериф"
 	id = "sheriff"

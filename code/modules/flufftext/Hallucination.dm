@@ -384,7 +384,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 	user.do_attack_animation(src)
 	to_chat(my_target, sound(pick('sound/weapons/genhit1.ogg', 'sound/weapons/genhit2.ogg', 'sound/weapons/genhit3.ogg')))
 	my_target.visible_message("<span class='danger'>[my_target] flails around wildly.</span>", \
-							"<span class='danger'>[my_target] has attacked [src]!</span>")
+							"<span class='danger'>[my_target] атакует [src]!</span>")
 
 	obj_integrity -= P.force
 
@@ -435,7 +435,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 				do_attack_animation(my_target, ATTACK_EFFECT_PUNCH)
 				if(weapon_name)
 					to_chat(my_target, sound(pick('sound/weapons/genhit1.ogg', 'sound/weapons/genhit2.ogg', 'sound/weapons/genhit3.ogg')))
-					my_target.show_message("<span class='danger'>[src.name] has attacked [my_target] with [weapon_name]!</span>", 1)
+					my_target.show_message("<span class='danger'>[src.name] атакует [my_target] с помощью [weapon_name]!</span>", 1)
 					my_target.staminaloss += 30
 					if(prob(20))
 						my_target.blur_eyes(3)

@@ -57,7 +57,7 @@ var/global/list/desertTurfEdgeCache
 	icon_state = "wasteland[rand(1,31)]"
 	..()
 /turf/open/indestructible/ground/dirt
-	name = "dirt"
+	name = "земля"
 	icon_state = "dirtfull"
 	step_sounds = list("human" = "dirtfootsteps")
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
@@ -66,19 +66,19 @@ var/global/list/desertTurfEdgeCache
 	flags = CAN_HAVE_NATURE
 
 /turf/open/indestructible/ground/road
-	name = "\proper road"
+	name = "дорога"
 	icon_state = "innermiddle"
 	icon = 'icons/fallout/turfs/asphalt.dmi'
 	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/sidewalk
-	name = "\proper sidewalk"
+	name = "тротуар"
 	icon_state = "outermiddle"
 	icon = 'icons/fallout/turfs/sidewalk.dmi'
 	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/mountain
-	name = "cave"
+	name = "камень"
 	icon_state = "rockfloor1"
 	icon = 'icons/fallout/turfs/mining.dmi'
 	allowed_plants = list(/obj/item/seeds/glow)

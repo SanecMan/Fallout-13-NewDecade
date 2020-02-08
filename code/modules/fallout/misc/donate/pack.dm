@@ -325,7 +325,7 @@
 	id = "f76"
 	desc = "<b>Доступно для: кто угодно всего за 200$!</b><br>ЭТО ПРОСТО РАБОТАЕТ.<br>."
 	items = list(/obj/item/weapon/storage/f76bag/bag)
-	price = 2000
+	price = 20000
 
 /datum/content_pack/leaders
 	name = "Лидеры всех основных фракций"

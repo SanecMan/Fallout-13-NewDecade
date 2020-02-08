@@ -1,8 +1,8 @@
 //Fallout 13 general destructible floor directory
 
 /turf/open/floor/f13
-	name = "floor"
-
+	name = "пол"
+	desc = "Самый обычный пол."
 	icon_state = "floor"
 	icon_regular_floor = "floor"
 	icon_plating = "plating"
@@ -12,6 +12,7 @@
 	ChangeTurf(baseturf)
 
 /turf/open/floor/f13/wood
+	name = "деревянный пол"
 	icon_state = "housewood1"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	floor_tile = /obj/item/stack/tile/wood
@@ -61,7 +62,7 @@
 /turf/open/floor/f13/wood_st
 	icon_state = "wood_st"
 	icon_plating = "plating"
-	name = "floor"
+	name = "пол"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	floor_tile = /obj/item/stack/tile/wood
 	sheet_type = /obj/item/stack/sheet/mineral/wood

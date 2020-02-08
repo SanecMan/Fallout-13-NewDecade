@@ -43,7 +43,7 @@ var/const/SCRIBER			=(1<<5)
 
 
 var/const/CITIZEN			=(1<<4)
-
+var/const/TRADER			=(1<<5)
 
 
 

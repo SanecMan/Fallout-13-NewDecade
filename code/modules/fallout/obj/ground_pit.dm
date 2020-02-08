@@ -5,6 +5,7 @@
 #define NUMBURYTIMES 3
 
 /turf/open/indestructible/ground/desert
+	name = "песок"
 	var/turf_type = /turf/open/indestructible/ground/desert
 	var/dug = 0
 	var/storedindex = 0

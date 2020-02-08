@@ -2,7 +2,7 @@
 
 /datum/job/mayor
 	title = "Mayor"
-	desc = "A trustworthy authority.<br>You were chosen to guide them, now you have to choose: carrot or stick."
+	desc = "Неоспоримый авторитет.<br>Вас избрали для того, чтобы вы привели их к лучшему завтра."
 	flag = MAYOR
 	department_flag = WASTELAND
 	faction = "city"
@@ -72,7 +72,7 @@
 
 /datum/job/sheriff
 	title = "Sheriff"
-	desc = "A fearless lawkeeper.<br>You were chosen to protect them, now you have to choose: word or sword."
+	desc = "Бесстрашный хранитель закона.<br>Вас избрали чтобы Вы защищали это место."
 	flag = SHERIFF
 	department_flag = WASTELAND
 	faction = "city"
@@ -132,7 +132,7 @@
 	title = "Citizen"
 	flag = CITIZEN
 	department_flag = ENGSEC
-	desc = "A City dweller.<br>You live a better life than most Wastelanders will ever have."
+	desc = "Житель города.<br>Ваша жизнь намного лучше, чем у любого другого бедолаги на пустошах."
 	faction = "city"
 	status = "member"
 	total_positions = 6
@@ -170,4 +170,48 @@
 	backpack = null
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/cowboyt
+	shoes = /obj/item/clothing/shoes/f13/brownie
+
+/datum/job/trader
+	title = "Trader"
+	flag = TRADER
+	department_flag = ENGSEC
+	desc = "Торговец.<br>Вы живёте в достатке, пока у вас есть товар."
+	faction = "city"
+	status = "trader"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "никому"
+	selection_color = "#ece19d"
+	access = list()
+	minimal_access = list()
+	outfit = /datum/outfit/job/trader
+
+	allowed_packs = list("starter", "cigarettes", "follower", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom", "f76", "specops")
+
+	required_items = list(
+	/obj/item/clothing/shoes/f13/tan,
+	/obj/item/clothing/shoes/f13/cowboy,
+	/obj/item/clothing/under/f13/merchant,
+	/obj/item/clothing/under/f13/cowboyb,
+	/obj/item/clothing/suit/f13/cowboygvest,
+	/obj/item/clothing/suit/f13/cowboybvest,
+	/obj/item/clothing/under/f13/female/flapper
+	)
+
+	denied_items = list(
+	/obj/item/clothing/shoes/f13/rag,
+	/obj/item/clothing/under/pants/f13/ghoul,
+	/obj/item/clothing/under/pants/f13/cloth,
+	/obj/item/clothing/under/pants/f13/caravan,
+	/obj/item/clothing/under/f13/rag,
+	/obj/item/clothing/under/f13/tribal,
+	/obj/item/clothing/under/f13/female/tribal
+	)
+
+/datum/outfit/job/trader
+	name = "trader"
+	backpack = null
+	satchel = null
+	uniform = /obj/item/clothing/under/f13/merchant
 	shoes = /obj/item/clothing/shoes/f13/brownie
