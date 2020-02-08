@@ -600,7 +600,6 @@
 	icon_living = "firefighter_raider"
 	icon_dead = "firefighter_raider"
 	icon_gib = "firefighter_raider"
-	speak_chance = 0
 	turns_per_move = 5
 	respawn_time_of_mob = 900000000
 	response_help = "pokes"
@@ -614,7 +613,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "punches"
+	attacktext = "наносит удар"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/raider)
@@ -624,9 +623,9 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("Got to lay off the jet", "Scared huh? You should be.", "The jet will make you jittery", "...I can do this all day", "I've done this 100 times... you think you'll be any different?")
-	speak_emote = "says,"
-	speak_chance = 1
+	speak = list("ЭЙ, СУКА, СЮДА ИДИ!", "Испугался? ДА ТОЧНО МИСПУГАЛСЯ!.", "ДОЛБОЕБИНА, СЮДА ИДИ!", "Я МОГУ ДЕЛАТЬ ЭТО ВЕСЬ СУКА ДЕНЬ!", "Я делал это счотни раз, думаешь этот будет иначе?")
+	speak_emote = list("орёт", "кричит")
+	speak_chance = 25
 	XP = 15
 
 /mob/living/simple_animal/hostile/raider/death(gibbed)
