@@ -594,7 +594,7 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/raider
-	name = list("James Rockhoof", "Gamlet Yebenhoyz", "Dolby Jepin", "Erot Baniy", "Chef-Chef", "Meat", "Cannibal Lector", "Cannibal Jones", "Maridge Fills", "Edward Shrader", "Sophie Fuckner", "Herber Willson", "Joseph Gemini", "Folks Gimini", "Wolfgang Meatball", "Shulz Herbs", "Great And Powerful Asshole")
+	name = "Неизвестный (Рейдер)"
 	desc = "Just a Raider"
 	icon_state = "firefighter_raider"
 	icon_living = "firefighter_raider"
