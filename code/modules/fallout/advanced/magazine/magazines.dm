@@ -41,10 +41,6 @@
 	light_color = LIGHT_COLOR_ORANGE
 	light_power = 1
 	shipment = list (
-
-	/obj/item/ammo_box/a357,
-	/obj/item/ammo_box/magazine/F13/fnfal,
-	/obj/item/ammo_box/magazine/F13/m556,
 	/obj/item/weapon/stock_parts/cell/high,
 	/obj/item/weapon/storage/box/lethalshot,
 	/obj/item/weapon/reagent_containers/f13stimpack,
@@ -70,5 +66,4 @@
 	/obj/item/kit/random,
 	/obj/item/crafting/weapon_repair_kit,
 	/obj/item/weapon/grenade/mine/explosive
-
 	)

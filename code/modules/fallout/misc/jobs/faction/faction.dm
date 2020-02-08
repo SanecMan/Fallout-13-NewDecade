@@ -65,7 +65,7 @@ proc/get_faction_members(var/faction)
 			jobs += job
 	if(preview_image)
 		register_asset("[id].png", preview_image)
-
+/*
 //Vote for new leader. At voting involvement near staying members
 //This proc is so big, but it's easy to understand.
 mob/proc/begin_head_voting()
@@ -170,7 +170,7 @@ mob/proc/begin_head_voting()
 	F.voting = 0
 
 	//END THIS SHIT
-
+*/
 	return 1
 
 mob/proc/set_faction(var/faction)
