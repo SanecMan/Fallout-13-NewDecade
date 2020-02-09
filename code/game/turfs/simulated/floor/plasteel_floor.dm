@@ -416,9 +416,9 @@
 
 
 /turf/open/floor/plasteel/stairs
-	icon_state = "stairs"
+	icon_state = "rampdownbottom"
 /turf/open/floor/plasteel/stairs/left
-	icon_state = "stairs-l"
+	icon_state = "rampuptop"
 /turf/open/floor/plasteel/stairs/medium
 	icon_state = "stairs-m"
 /turf/open/floor/plasteel/stairs/right

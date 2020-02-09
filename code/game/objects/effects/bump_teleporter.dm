@@ -32,3 +32,6 @@ var/list/obj/effect/bump_teleporter/BUMP_TELEPORTERS = list()
 		if(BT.id == src.id_target)
 			usr.forceMove(BT.loc	)//Teleport to location with correct id.
 			return
+
+/obj/effect/bump_teleporter/exit
+	density = 0
