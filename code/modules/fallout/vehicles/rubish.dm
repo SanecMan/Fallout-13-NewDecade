@@ -1,6 +1,6 @@
 //Fallout 13 rubish decoration
 
-/obj/structure/car_rubish1
+/obj/structure/car/rubish1
 	name = "pre-War rubish"
 	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
@@ -10,7 +10,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/car_rubish1/New()
+/obj/structure/car/rubish1/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
@@ -31,7 +31,7 @@
 	S.icon = null
 	S.verbs.Cut()
 
-/obj/structure/car_rubish2
+/obj/structure/car/rubish2
 	name = "pre-War rubish"
 	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
@@ -41,7 +41,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/car_rubish2/New()
+/obj/structure/car/rubish2/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
@@ -62,7 +62,7 @@
 	S.icon = null
 	S.verbs.Cut()
 
-/obj/structure/car_rubish3
+/obj/structure/car/rubish3
 	name = "pre-War rubish"
 	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
@@ -72,7 +72,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/car_rubish3/New()
+/obj/structure/car/rubish3/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
@@ -93,7 +93,7 @@
 	S.icon = null
 	S.verbs.Cut()
 
-/obj/structure/car_rubish4
+/obj/structure/car/rubish4
 	name = "pre-War rubish"
 	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
@@ -103,7 +103,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/car_rubish4/New()
+/obj/structure/car/rubish4/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
@@ -124,7 +124,7 @@
 	S.icon = null
 	S.verbs.Cut()
 
-/obj/structure/debris1
+/obj/structure/debris/v1
 	name = "pre-War building debris"
 	desc = "A pre-War building debris."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
@@ -134,7 +134,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/debris1/New()
+/obj/structure/debris/v1/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
@@ -155,7 +155,7 @@
 	S.icon = null
 	S.verbs.Cut()
 
-/obj/structure/debris2
+/obj/structure/debris/v2
 	name = "pre-War building debris"
 	desc = "A pre-War building debris."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
@@ -165,7 +165,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/debris2/New()
+/obj/structure/debris/v2/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
@@ -186,7 +186,7 @@
 	S.icon = null
 	S.verbs.Cut()
 
-/obj/structure/debris3
+/obj/structure/debris/v3
 	name = "pre-War building debris"
 	desc = "A pre-War building debris."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
@@ -196,7 +196,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/debris3/New()
+/obj/structure/debris/v3/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))
@@ -217,7 +217,7 @@
 	S.icon = null
 	S.verbs.Cut()
 
-/obj/structure/debris4
+/obj/structure/debris/v4
 	name = "pre-War building debris"
 	desc = "A pre-War building debris."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
@@ -227,7 +227,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/debris4/New()
+/obj/structure/debris/v4/New()
 	..()
 
 	var/atom/movable/S = new (locate(x+1,y,z))

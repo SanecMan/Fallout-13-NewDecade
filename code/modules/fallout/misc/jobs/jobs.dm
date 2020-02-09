@@ -38,12 +38,12 @@ var/const/GHOUL_PRIEST		=(1<<9)
 var/const/ELDER				=(1<<1)
 var/const/PALADIN			=(1<<2)
 var/const/KNIGHT			=(1<<3)
-var/const/KNIGHTRADIST			=(1<<6)
+var/const/KNIGHTRADIST		=(1<<6)
 var/const/SCRIBER			=(1<<5)
 
 
 var/const/CITIZEN			=(1<<4)
-var/const/TRADER			=(1<<5)
+var/const/TRADER			=(1<<10)
 
 
 

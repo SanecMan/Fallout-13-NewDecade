@@ -3,7 +3,7 @@
 ////////////////////////////////////////
 
 /datum/design/board/smes
-	name = "Machine Design (SMES Board)"
+	name = "Плата (SMES)"
 	desc = "The circuit board for a SMES."
 	id = "smes"
 	req_tech = list("programming" = 4, "powerstorage" = 4, "engineering" = 4)
@@ -12,7 +12,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/announcement_system
-	name = "Machine Design (Automated Announcement System Board)"
+	name = "Плата (Автоматизированная Система Оповещения)"
 	desc = "The circuit board for an automated announcement system."
 	id = "automated_announcement"
 	req_tech = list("programming" = 3, "bluespace" = 3, "magnets" = 2)
@@ -21,7 +21,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/turbine_computer
-	name = "Computer Design (Power Turbine Console Board)"
+	name = "Компьютерная плата (Консоль Турбинного Генератора)"
 	desc = "The circuit board for a power turbine console."
 	id = "power_turbine_console"
 	req_tech = list("programming" = 4, "powerstorage" = 4, "engineering" = 4)
@@ -30,7 +30,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/emitter
-	name = "Machine Design (Emitter Board)"
+	name = "Плата (Излучатель)"
 	desc = "The circuit board for an emitter."
 	id = "emitter"
 	req_tech = list("programming" = 3, "powerstorage" = 4, "engineering" = 4)
@@ -39,7 +39,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/power_compressor
-	name = "Machine Design (Power Compressor Board)"
+	name = "Плата (Power Compressor Board)"
 	desc = "The circuit board for a power compressor."
 	id = "power_compressor"
 	req_tech = list("programming" = 4, "powerstorage" = 4, "engineering" = 4)
@@ -48,7 +48,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/power_turbine
-	name = "Machine Design (Power Turbine Board)"
+	name = "Плата (Power Turbine Board)"
 	desc = "The circuit board for a power turbine."
 	id = "power_turbine"
 	req_tech = list("programming" = 4, "powerstorage" = 4, "engineering" = 4)
@@ -57,7 +57,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/thermomachine
-	name = "Machine Design (Freezer/Heater Board)"
+	name = "Плата (Freezer/Heater Board)"
 	desc = "The circuit board for a freezer/heater."
 	id = "thermomachine"
 	req_tech = list("programming" = 3)
@@ -66,7 +66,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/space_heater
-	name = "Machine Design (Space Heater Board)"
+	name = "Плата (Space Heater Board)"
 	desc = "The circuit board for a space heater."
 	id = "space_heater"
 	req_tech = list("programming" = 2, "engineering" = 2)
@@ -75,7 +75,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/teleport_station
-	name = "Machine Design (Teleportation Station Board)"
+	name = "Плата (Teleportation Station Board)"
 	desc = "The circuit board for a teleportation station."
 	id = "tele_station"
 	req_tech = list("programming" = 4, "bluespace" = 4, "engineering" = 4, "prewar" = 3)
@@ -84,7 +84,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/teleport_hub
-	name = "Machine Design (Teleportation Hub Board)"
+	name = "Плата (Teleportation Hub Board)"
 	desc = "The circuit board for a teleportation hub."
 	id = "tele_hub"
 	req_tech = list("programming" = 3, "bluespace" = 4, "materials" = 4, "engineering" = 4, "prewar" = 3)
@@ -102,7 +102,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/telepad
-	name = "Machine Design (Telepad Board)"
+	name = "Плата (Telepad Board)"
 	desc = "The circuit board for a telescience telepad."
 	id = "telepad"
 	req_tech = list("programming" = 4, "bluespace" = 4, "prewar" = 4, "engineering" = 4)
@@ -111,7 +111,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/teleconsole
-	name = "Computer Design (Teleporter Console)"
+	name = "Плата (Teleporter Console)"
 	desc = "Allows for the construction of circuit boards used to build a teleporter control console."
 	id = "teleconsole"
 	req_tech = list("programming" = 3, "bluespace" = 3, "prewar" = 4)
@@ -120,7 +120,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/telesci_console
-	name = "Computer Design (Telepad Control Console Board)"
+	name = "Плата (Telepad Control Console Board)"
 	desc = "Allows for the construction of circuit boards used to build a telescience console."
 	id = "telesci_console"
 	req_tech = list("programming" = 3, "bluespace" = 3, "prewar" = 4)
@@ -129,7 +129,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/sleeper
-	name = "Machine Design (Sleeper Board)"
+	name = "Плата (Sleeper Board)"
 	desc = "The circuit board for a sleeper."
 	id = "sleeper"
 	req_tech = list("programming" = 3, "biotech" = 2, "engineering" = 3)
@@ -138,7 +138,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/cryotube
-	name = "Machine Design (Cryotube Board)"
+	name = "Плата (Cryotube Board)"
 	desc = "The circuit board for a cryotube."
 	id = "cryotube"
 	req_tech = list("programming" = 5, "biotech" = 3, "engineering" = 4, "prewar" = 3)
@@ -147,7 +147,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/chem_dispenser
-	name = "Machine Design (Portable Chem Dispenser Board)"
+	name = "Плата (Portable Chem Dispenser Board)"
 	desc = "The circuit board for a portable chem dispenser."
 	id = "chem_dispenser"
 	req_tech = list("programming" = 4, "biotech" = 3, "materials" = 4, "prewar" = 3)
@@ -156,7 +156,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/chem_master
-	name = "Machine Design (Chem Master Board)"
+	name = "Плата (Chem Master Board)"
 	desc = "The circuit board for a Chem Master 3000."
 	id = "chem_master"
 	req_tech = list("biotech" = 3, "materials" = 3, "programming" = 2)
@@ -165,7 +165,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/chem_heater
-	name = "Machine Design (Chemical Heater Board)"
+	name = "Плата (Chemical Heater Board)"
 	desc = "The circuit board for a chemical heater."
 	id = "chem_heater"
 	req_tech = list("engineering" = 2, "biotech" = 2, "programming" = 2)
@@ -174,7 +174,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/clonecontrol
-	name = "Computer Design (Cloning Machine Console)"
+	name = "Плата (Cloning Machine Console)"
 	desc = "Allows for the construction of circuit boards used to build a new Cloning Machine console."
 	id = "clonecontrol"
 	req_tech = list("programming" = 4, "biotech" = 3)
@@ -183,7 +183,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/clonepod
-	name = "Machine Design (Clone Pod)"
+	name = "Плата (Clone Pod)"
 	desc = "Allows for the construction of circuit boards used to build a Cloning Pod."
 	id = "clonepod"
 	req_tech = list("programming" = 4, "biotech" = 3)
@@ -192,7 +192,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/clonescanner
-	name = "Machine Design (Cloning Scanner)"
+	name = "Плата (Cloning Scanner)"
 	desc = "Allows for the construction of circuit boards used to build a Cloning Scanner."
 	id = "clonescanner"
 	req_tech = list("programming" = 4, "biotech" = 3)
@@ -201,7 +201,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/biogenerator
-	name = "Machine Design (Biogenerator Board)"
+	name = "Плата (Biogenerator Board)"
 	desc = "The circuit board for a biogenerator."
 	id = "biogenerator"
 	req_tech = list("programming" = 2, "biotech" = 3, "materials" = 3)
@@ -210,7 +210,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/hydroponics
-	name = "Machine Design (Hydroponics Tray Board)"
+	name = "Плата (Hydroponics Tray Board)"
 	desc = "The circuit board for a hydroponics tray."
 	id = "hydro_tray"
 	req_tech = list("biotech" = 2)
@@ -219,7 +219,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/destructive_analyzer
-	name = "Machine Design (Destructive Analyzer Board)"
+	name = "Плата (Destructive Analyzer Board)"
 	desc = "The circuit board for a destructive analyzer."
 	id = "destructive_analyzer"
 	req_tech = list("programming" = 2, "magnets" = 2, "engineering" = 2)
@@ -228,7 +228,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/experimentor
-	name = "Machine Design (E.X.P.E.R.I-MENTOR Board)"
+	name = "Плата (E.X.P.E.R.I-MENTOR Board)"
 	desc = "The circuit board for an E.X.P.E.R.I-MENTOR."
 	id = "experimentor"
 	req_tech = list("programming" = 2, "magnets" = 2, "engineering" = 2, "bluespace" = 2)
@@ -237,7 +237,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/protolathe
-	name = "Machine Design (Protolathe Board)"
+	name = "Плата (Protolathe Board)"
 	desc = "The circuit board for a protolathe."
 	id = "protolathe"
 	req_tech = list("programming" = 2, "engineering" = 2)
@@ -246,7 +246,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/circuit_imprinter
-	name = "Machine Design (Circuit Imprinter Board)"
+	name = "Плата (Circuit Imprinter Board)"
 	desc = "The circuit board for a circuit imprinter."
 	id = "circuit_imprinter"
 	req_tech = list("programming" = 2, "engineering" = 2)
@@ -264,7 +264,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/rdserver
-	name = "Machine Design (R&D Server Board)"
+	name = "Плата (R&D Server Board)"
 	desc = "The circuit board for an R&D Server."
 	id = "rdserver"
 	req_tech = list("programming" = 3)
@@ -273,7 +273,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/mechfab
-	name = "Machine Design (Exosuit Fabricator Board)"
+	name = "Плата (Exosuit Fabricator Board)"
 	desc = "The circuit board for an Exosuit Fabricator."
 	id = "mechfab"
 	req_tech = list("programming" = 3, "engineering" = 3)
@@ -282,7 +282,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/cyborgrecharger
-	name = "Machine Design (Cyborg Recharger Board)"
+	name = "Плата (Cyborg Recharger Board)"
 	desc = "The circuit board for a Cyborg Recharger."
 	id = "cyborgrecharger"
 	req_tech = list("powerstorage" = 3, "engineering" = 3)
@@ -291,7 +291,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/mech_recharger
-	name = "Machine Design (Mechbay Recharger Board)"
+	name = "Плата (Mechbay Recharger Board)"
 	desc = "The circuit board for a Mechbay Recharger."
 	id = "mech_recharger"
 	req_tech = list("programming" = 3, "powerstorage" = 4, "engineering" = 3)
@@ -300,7 +300,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/microwave
-	name = "Machine Design (Microwave Board)"
+	name = "Плата (Микроволновка)"
 	desc = "The circuit board for a microwave."
 	id = "microwave"
 	req_tech = list("programming" = 2, "magnets" = 2)
@@ -309,7 +309,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/gibber
-	name = "Machine Design (Gibber Board)"
+	name = "Плата (Мясорубка)"
 	desc = "The circuit board for a gibber."
 	id = "gibber"
 	req_tech = list("programming" = 2, "engineering" = 2)
@@ -318,7 +318,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/smartfridge
-	name = "Machine Design (Smartfridge Board)"
+	name = "Плата (Умный холодильник)"
 	desc = "The circuit board for a smartfridge."
 	id = "smartfridge"
 	req_tech = list("programming" = 1)
@@ -327,7 +327,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/monkey_recycler
-	name = "Machine Design (Monkey Recycler Board)"
+	name = "Плата (Мясорубка для мартышек)"
 	desc = "The circuit board for a monkey recycler."
 	id = "smartfridge"
 	req_tech = list("programming" = 1)
@@ -336,7 +336,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/seed_extractor
-	name = "Machine Design (Seed Extractor Board)"
+	name = "Плата (Seed Extractor Board)"
 	desc = "The circuit board for a seed extractor."
 	id = "seed_extractor"
 	req_tech = list("programming" = 1)
@@ -345,7 +345,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/processor
-	name = "Machine Design (Processor Board)"
+	name = "Плата (Processor Board)"
 	desc = "The circuit board for a processor."
 	id = "processor"
 	req_tech = list("programming" = 1)
@@ -354,7 +354,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/recycler
-	name = "Machine Design (Recycler Board)"
+	name = "Плата (Recycler Board)"
 	desc = "The circuit board for a recycler."
 	id = "recycler"
 	req_tech = list("programming" = 2, "engineering" = 2)
@@ -363,7 +363,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/holopad
-	name = "Machine Design (AI Holopad Board)"
+	name = "Плата (AI Holopad Board)"
 	desc = "The circuit board for a holopad."
 	id = "holopad"
 	req_tech = list("programming" = 1)
@@ -372,7 +372,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/autolathe
-	name = "Machine Design (Autolathe Board)"
+	name = "Плата (Автолат)"
 	desc = "The circuit board for an autolathe."
 	id = "autolathe"
 	req_tech = list("programming" = 3, "engineering" = 3)
@@ -381,7 +381,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/recharger
-	name = "Machine Design (Weapon Recharger Board)"
+	name = "Плата (Weapon Recharger Board)"
 	desc = "The circuit board for a Weapon Recharger."
 	id = "recharger"
 	req_tech = list("powerstorage" = 3, "engineering" = 3, "materials" = 4)
@@ -391,7 +391,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/vendor
-	name = "Machine Design (Vendor Board)"
+	name = "Плата (Vendor Board)"
 	desc = "The circuit board for a Vendor."
 	id = "vendor"
 	req_tech = list("programming" = 1)
@@ -400,7 +400,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/ore_redemption
-	name = "Machine Design (Ore Redemption Board)"
+	name = "Плата (Ore Redemption Board)"
 	desc = "The circuit board for an Ore Redemption machine."
 	id = "ore_redemption"
 	req_tech = list("programming" = 2, "engineering" = 2, "prewar" = 3)
@@ -409,7 +409,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/mining_equipment_vendor
-	name = "Machine Design (Mining Rewards Vender Board)"
+	name = "Плата (Mining Rewards Vender Board)"
 	desc = "The circuit board for a Mining Rewards Vender."
 	id = "mining_equipment_vendor"
 	req_tech = list("engineering" = 3)
@@ -418,7 +418,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/tesla_coil
-	name = "Machine Design (Tesla Coil Board)"
+	name = "Плата (Tesla Coil Board)"
 	desc = "The circuit board for a tesla coil."
 	id = "tesla_coil"
 	req_tech = list("programming" = 3, "powerstorage" = 3, "magnets" = 3)
@@ -427,7 +427,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/grounding_rod
-	name = "Machine Design (Grounding Rod Board)"
+	name = "Плата (Grounding Rod Board)"
 	desc = "The circuit board for a grounding rod."
 	id = "grounding_rod"
 	req_tech = list("programming" = 3, "powerstorage" = 3, "magnets" = 3)
@@ -436,7 +436,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/plantgenes
-	name = "Machine Design (Plant DNA Manipulator Board)"
+	name = "Плата (Plant DNA Manipulator Board)"
 	desc = "The circuit board for a plant DNA manipulator."
 	id = "plantgenes"
 	req_tech = list("programming" = 4, "biotech" = 3)
@@ -445,7 +445,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/ntnet_relay
-	name = "Machine Design (NTNet Relay Board)"
+	name = "Плата (NTNet Relay Board)"
 	desc = "The circuit board for a wireless network relay."
 	id = "ntnet_relay"
 	req_tech = list("programming" = 2, "engineering" = 2, "bluespace" = 2)
@@ -454,7 +454,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/limbgrower
-	name = "Machine Design (Limb Grower Board)"
+	name = "Плата (Limb Grower Board)"
 	desc = "The circuit board for a limb grower."
 	id = "limbgrower"
 	req_tech = list("programming" = 3, "biotech" = 2)

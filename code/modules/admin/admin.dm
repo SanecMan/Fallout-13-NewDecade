@@ -395,7 +395,6 @@ var/global/BSACooldown = 0
 	var/dat = {"
 		<center><B>Cпавн панель</B></center><hr>\n
 
-	dat += {"
 		<BR>
 		<A href='?src=\ref[src];create_object=1'>Создать объект</A><br>
 		<A href='?src=\ref[src];quick_create_object=1'>Быстрое создание объекта</A><br>
