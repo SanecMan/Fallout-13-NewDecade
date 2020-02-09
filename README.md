@@ -1,8 +1,8 @@
 ## Fallout 13
 
-**Website:** https://www.reddit.com/r/Fallout13
+**Реддит:** https://www.reddit.com/r/Fallout13
 
-**Main source code:** https://gitlab.com/KoBRaAndrey/F13
+**Исходник кода:** https://gitlab.com/KoBRaAndrey/F13
 
 **Discord:**  https://discord.me/fallout13official
 
@@ -27,11 +27,11 @@ Stated terms of service fully comply with the original AGPL v3 license of /tg/ S
 
 **Code:**
 
-Jackerzz aka Maxyo, KoBRaAndrey, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Tmad40blue, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please.
+Jackerzz aka Maxyo, KoBRaAndrey, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Tmad40blue, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please, SanecMan, iWuna, DuxaDuxovcev, Patapoiiika.
 
 **Graphics / Sprites / Icons:**
 
-Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox, Zhuppa.
+Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox, Zhuppa, iWuna, Yarinevar.
 
 **Ideas / Testing / Support:**
 Deus66
