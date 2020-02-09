@@ -54,11 +54,11 @@
 		var/rendered = "<span class='deadsay'><b>[mind.name]</b> умер в локации <b>[A.name]</b>.</span>"
 		deadchat_broadcast(rendered, follow_target = src, message_type=DEADCHAT_DEATHRATTLE)
 	if(mind)
-		mind.store_memory("Time of death: [tod]", 0)
+		mind.store_memory("Время смерти: [tod]", 0)
 	living_mob_list -= src
 	if(!gibbed)
 		dead_mob_list += src
-	to_chat(src, "Wait for respawn at look at this screen. OOC -> Respawn.")
+	to_chat(src, "Ожидайте респавна. OOC -> Respawn.")
 	paralysis = 0
 	stunned = 0
 	weakened = 0

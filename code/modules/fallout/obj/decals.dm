@@ -44,7 +44,7 @@
 	icon = 'icons/fallout/misc/weather.dmi'
 	icon_state = "redcloud"
 	anchored = 1
-	layer = 4
+	layer = 4.5
 	light_color = LIGHT_COLOR_RED
 	light_power = 0.5
 	light_range = 4

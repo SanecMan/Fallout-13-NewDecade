@@ -193,3 +193,10 @@ FLOOR SAFES
 
 /obj/structure/safe/floor/hide(var/intact)
 	invisibility = intact ? INVISIBILITY_MAXIMUM : 0
+
+
+//small safes
+
+/obj/structure/safe/small
+	name = "table safe"
+	icon_state = "safe_small"
