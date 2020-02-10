@@ -81,3 +81,11 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 	cold_protection = HEAD
 	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
+
+
+/obj/item/clothing/head/hardhat/f13/headlamp
+	name = "налобный фонарик"
+	icon_state = "headlamp0_white"
+	item_state = "headlamp0_white"
+	item_color = "headlamp0_white"
+	light_color = LIGHT_COLOR_YELLOW

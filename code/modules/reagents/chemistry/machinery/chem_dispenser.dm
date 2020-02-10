@@ -174,7 +174,7 @@
 		var/obj/item/weapon/reagent_containers/B = I
 		. = 1 //no afterattack
 		if(beaker)
-			to_chat(user, "<span class='warning'>A container is already loaded into the machine!</span>")
+			to_chat(user, "<span class='warning'>Данный контейнер уже загружен в эту машину!</span>")
 			return
 
 		if(!user.drop_item()) // Can't let go?
@@ -182,7 +182,7 @@
 
 		beaker = B
 		beaker.forceMove(src)
-		to_chat(user, "<span class='notice'>You add \the [B] to the machine.</span>")
+		to_chat(user, "<span class='notice'>Вы добавили [B] в аппарат.</span>")
 
 		if(!icon_beaker)
 			icon_beaker = image('icons/obj/chemical.dmi', src, "disp_beaker") //randomize beaker overlay position.

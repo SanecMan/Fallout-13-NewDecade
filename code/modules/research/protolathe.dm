@@ -101,7 +101,7 @@ Note: Must be placed west/left of and R&D console to function.
 			return 1
 
 		var/obj/item/stack/sheet/stack = O
-		var/amount = round(input("How many sheets do you want to add?") as num)//No decimals
+		var/amount = round(input("Сколько пластин материала вы хотите вставить?") as num)//No decimals
 		if(!in_range(src, stack) || !user.Adjacent(src))
 			return
 		var/amount_inserted = materials.insert_stack(O,amount)
@@ -111,7 +111,7 @@ Note: Must be placed west/left of and R&D console to function.
 			var/stack_name = stack.name
 			busy = 1
 			use_power(max(1000, (MINERAL_MATERIAL_AMOUNT*amount_inserted/10)))
-			to_chat(user, "<span class='notice'>You add [amount_inserted] sheets to the [src.name].</span>")
+			to_chat(user, "<span class='notice'>Вы добавили [amount_inserted] пластин в [src.name].</span>")
 			add_overlay("protolathe_[stack_name]")
 			sleep(10)
 			overlays -= "protolathe_[stack_name]"
@@ -119,7 +119,7 @@ Note: Must be placed west/left of and R&D console to function.
 		updateUsrDialog()
 
 	else if(user.a_intent != INTENT_HARM)
-		to_chat(user, "<span class='warning'>You cannot insert this item into the [name]!</span>")
+		to_chat(user, "<span class='warning'>Вы не можете вставить этот предмет в [name]!</span>")
 		return 1
 	else
 		return 0

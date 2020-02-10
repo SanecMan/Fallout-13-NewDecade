@@ -214,9 +214,9 @@ display round(lastgen) and plasmatank amount
 		var/obj/item/stack/addstack = O
 		var/amount = min((max_sheets - sheets), addstack.amount)
 		if(amount < 1)
-			to_chat(user, "<span class='notice'>The [src.name] is full!</span>")
+			to_chat(user, "<span class='notice'>[src.name] полон!</span>")
 			return
-		to_chat(user, "<span class='notice'>You add [amount] sheets to the [src.name].</span>")
+		to_chat(user, "<span class='notice'>Вы добавили [amount] пластин в [src.name].</span>")
 		sheets += amount
 		addstack.use(amount)
 		updateUsrDialog()
@@ -230,11 +230,11 @@ display round(lastgen) and plasmatank amount
 
 			if(!anchored && !isinspace())
 				connect_to_network()
-				to_chat(user, "<span class='notice'>You secure the generator to the floor.</span>")
+				to_chat(user, "<span class='notice'>Вы закрепляете генератор на полу.</span>")
 				anchored = 1
 			else if(anchored)
 				disconnect_from_network()
-				to_chat(user, "<span class='notice'>You unsecure the generator from the floor.</span>")
+				to_chat(user, "<span class='notice'>Вы открепили генератор от пола.</span>")
 				anchored = 0
 
 			playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)

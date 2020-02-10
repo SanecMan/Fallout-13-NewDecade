@@ -51,11 +51,11 @@
 	..()
 	switch(src.stage)
 		if(1)
-			to_chat(user, "It's an empty frame.")
+			to_chat(user, "Это пустая оболочка.")
 		if(2)
-			to_chat(user, "It's wired.")
+			to_chat(user, "Тут есть проводка.")
 		if(3)
-			to_chat(user, "The casing is closed.")
+			to_chat(user, "Крышка закрыта.")
 
 /obj/structure/light_construct/attackby(obj/item/weapon/W, mob/user, params)
 	add_fingerprint(user)
@@ -82,14 +82,14 @@
 						if("bulb")
 							icon_state = "bulb-construct-stage2"
 					stage = 2
-					user.visible_message("[user.name] adds wires to [src].", \
-						"<span class='notice'>You add wires to [src].</span>")
+					user.visible_message("[user.name] добавляет провода в [src].", \
+						"<span class='notice'>Вы добавили провода в [src].</span>")
 				else
-					to_chat(user, "<span class='warning'>You need one length of cable to wire [src]!</span>")
+					to_chat(user, "<span class='warning'>Вам необходимо найти кабель по-больше для [src]!</span>")
 				return
 		if(2)
 			if(istype(W, /obj/item/weapon/wrench))
-				to_chat(usr, "<span class='warning'>You have to remove the wires first!</span>")
+				to_chat(usr, "<span class='warning'>Для начала уберите провода!</span>")
 				return
 
 			if(istype(W, /obj/item/weapon/wirecutters))
@@ -100,14 +100,14 @@
 					if("bulb")
 						icon_state = "bulb-construct-stage1"
 				new /obj/item/stack/cable_coil(get_turf(loc), 1, "red")
-				user.visible_message("[user.name] removes the wiring from [src].", \
-					"<span class='notice'>You remove the wiring from [src].</span>", "<span class='italics'>You hear clicking.</span>")
+				user.visible_message("[user.name] убирает проводку из [src].", \
+					"<span class='notice'>Вы убрали проводку из [src].</span>", "<span class='italics'>Вы слышите щелчки.</span>")
 				playsound(loc, W.usesound, 100, 1)
 				return
 
 			if(istype(W, /obj/item/weapon/screwdriver))
-				user.visible_message("[user.name] closes [src]'s casing.", \
-					"<span class='notice'>You close [src]'s casing.</span>", "<span class='italics'>You hear screwing.</span>")
+				user.visible_message("[user.name] закрывает крышку [src].", \
+					"<span class='notice'>Вы закрыли крышку [src].</span>", "<span class='italics'>Вы слышите как кто-то что-то закручивает.</span>")
 				playsound(loc, W.usesound, 75, 1)
 				switch(fixture_type)
 					if("tube")

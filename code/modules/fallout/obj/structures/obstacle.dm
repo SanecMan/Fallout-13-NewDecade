@@ -42,12 +42,12 @@
 		if(S.get_amount() < 2)
 			to_chat(user, "<span class='warning'>You need two sheets of metal to finish a wall!</span>")
 			return
-		to_chat(user, "<span class='notice'>You start adding plating...</span>")
+		to_chat(user, "<span class='notice'>Вы начали добавлять обшивку...</span>")
 		if (do_after(user, 40, target = src))
 			if(loc == null || S.get_amount() < 2)
 				return
 			S.use(2)
-			to_chat(user, "<span class='notice'>You add the plating.</span>")
+			to_chat(user, "<span class='notice'>Вы добавили обшивки.</span>")
 			var/turf/T = get_turf(src)
 			T.ChangeTurf(/turf/closed/wall/f13/store)
 			transfer_fingerprints_to(T)
@@ -55,14 +55,14 @@
 		return
 	if(istype(S,/obj/item/stack/sheet/mineral/wood))
 		if(S.get_amount() < 2)
-			to_chat(user, "<span class='warning'>You need two wood planks to finish a wall!</span>")
+			to_chat(user, "<span class='warning'>Вам необходимо еще две доски, чтобы завершить стенку!</span>")
 			return
-		to_chat(user, "<span class='notice'>You start adding plating...</span>")
+		to_chat(user, "<span class='notice'>Вы начали добавлять обшивку...</span>")
 		if (do_after(user, 40, target = src))
 			if(loc == null || S.get_amount() < 2)
 				return
 			S.use(2)
-			to_chat(user, "<span class='notice'>You add the plating.</span>")
+			to_chat(user, "<span class='notice'>Вы добавили обшивки.</span>")
 			var/turf/T = get_turf(src)
 			T.ChangeTurf(/turf/closed/wall/f13/wood/house)
 			transfer_fingerprints_to(T)
