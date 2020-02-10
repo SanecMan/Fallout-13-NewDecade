@@ -85,7 +85,7 @@
 
 /obj/item/clothing/head/hardhat/f13/headlamp
 	name = "налобный фонарик"
-	icon_state = "headlamp0_white"
-	item_state = "headlamp0_white"
-	item_color = "headlamp0_white"
+	icon_state = "headlamp0"
+	item_state = "headlamp0"
+	item_color = "headlamp0"
 	light_color = LIGHT_COLOR_YELLOW

@@ -418,10 +418,10 @@ var/global/BSACooldown = 0
 	set desc="Restarts the world immediately"
 	if (!usr.client.holder)
 		return
-	var/confirm = alert("Перезапустить игровой мир?", "Restart", "Yes", "Cancel")
-	if(confirm == "Cancel")
+	var/confirm = alert("Перезапустить игровой мир?", "Рестарт", "Да", "Отмена")
+	if(confirm == "Отмена")
 		return
-	if(confirm == "Yes")
+	if(confirm == "Да")
 		ticker.delay_end = 0
 		feedback_add_details("admin_verb","R") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		world.Reboot("Инициировано [usr.client.holder.fakekey ? "Admin" : usr.key].", "end_error", "admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]", 10)
@@ -433,10 +433,10 @@ var/global/BSACooldown = 0
 
 	if (!usr.client.holder)
 		return
-	var/confirm = alert("Закончить раунд и перезапустить игровой мир?", "End Round", "Yes", "Cancel")
-	if(confirm == "Cancel")
+	var/confirm = alert("Закончить раунд и перезапустить игровой мир?", "Завершить раунд", "Да", "Отмена")
+	if(confirm == "Отмена")
 		return
-	if(confirm == "Yes")
+	if(confirm == "Да")
 		ticker.force_ending = 1
 		feedback_add_details("admin_verb","ER") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -452,7 +452,7 @@ var/global/BSACooldown = 0
 	if(message)
 		if(!check_rights(R_SERVER,0))
 			message = adminscrub(message,500)
-		to_chat(world, "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b></span>\n \t [message]")
+		to_chat(world, "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Объявляет:</b></span>\n \t [message]")
 		log_admin("Announce: [key_name(usr)] : [message]")
 	feedback_add_details("admin_verb","A") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -560,10 +560,10 @@ var/global/BSACooldown = 0
 	set name="Toggle Respawn"
 	abandon_allowed = !( abandon_allowed )
 	if (abandon_allowed)
-		to_chat(world, "<B>You may now respawn.</B>")
+		to_chat(world, "<B>Теперь вы можете возрождаться.</B>")
 	else
-		to_chat(world, "<B>You may no longer respawn :(</B>")
-	message_admins("<span class='adminnotice'>[key_name_admin(usr)] toggled respawn to [abandon_allowed ? "On" : "Off"].</span>")
+		to_chat(world, "<B>Теперь вы не можете возраждаться :(</B>")
+	message_admins("<span class='adminnotice'>[key_name_admin(usr)] перключил возможность респавна в состояние [abandon_allowed ? "On" : "Off"].</span>")
 	log_admin("[key_name(usr)] toggled respawn to [abandon_allowed ? "On" : "Off"].")
 	world.update_status()
 	feedback_add_details("admin_verb","TR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -579,10 +579,10 @@ var/global/BSACooldown = 0
 	if(newtime)
 		ticker.timeLeft = newtime * 10
 		if(newtime < 0)
-			to_chat(world, "<b>The game start has been delayed.</b>")
+			to_chat(world, "<b>Начало раунда было приостановленно.</b>")
 			log_admin("[key_name(usr)] delayed the round start.")
 		else
-			to_chat(world, "<b>The game will start in [newtime] seconds.</b>")
+			to_chat(world, "<b>Игра начнется через [newtime] секунд.</b>")
 			to_chat(world, 'sound/ai/attention.ogg')
 			log_admin("[key_name(usr)] set the pre-game delay to [newtime] seconds.")
 		feedback_add_details("admin_verb","DELAY") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
