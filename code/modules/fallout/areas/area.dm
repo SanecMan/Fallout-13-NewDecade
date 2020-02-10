@@ -530,3 +530,58 @@
 	blob_allowed = 0
 	environment = 5
 	grow_chance = 5
+
+//Тут находится часть кода для шаттла-поезда. By SanecMan .
+
+//Основа шатла-поезда. Менять если не работает.
+	name = "Обращаться к SanecMan если видишь это"
+	icon_state = "train"
+	ambience = list('sound/f13ambience/warehouse.ogg')
+	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg', \
+	'sound/f13ambience/ambigen_13.ogg','sound/ambience/signal.ogg')
+	blob_allowed = 0
+	environment = 5
+	grow_chance = 5
+	requires_power = 0
+	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
+	has_gravity = 1
+	always_unpowered = 0
+	valid_territory = 0
+	icon_state = "shuttle"
+
+//Сам поезд
+/area/f13/shuttle/train
+	name = "Поезд"
+	icon_state = "train"
+	ambience = list('sound/f13ambience/warehouse.ogg')
+	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg', \
+	'sound/f13ambience/ambigen_13.ogg','sound/ambience/signal.ogg')
+	blob_allowed = 0
+	environment = 5
+	grow_chance = 5
+
+//Метрополитен в котором должен быть кебаб
+/area/f13/metro
+	name = "Метрополитен"
+	icon_state = "metro"
+	ambience = list('sound/f13ambience/warehouse.ogg')
+	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg', \
+	'sound/f13ambience/ambigen_13.ogg','sound/ambience/signal.ogg')
+	blob_allowed = 0
+	environment = 5
+	grow_chance = 5
+
+//Арену ложить на анимацию езды поезда
+/area/f13/shuttle/openspace
+	name = "Поезд на скорости"
+	icon_state = "opentrain"
+	ambience = list('sound/f13ambience/warehouse.ogg')
+	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg', \
+	'sound/f13ambience/ambigen_13.ogg','sound/ambience/signal.ogg')
+	blob_allowed = 0
+	environment = 5
+	grow_chance = 0

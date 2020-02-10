@@ -1,0 +1,10 @@
+"a" = (/turf/closed/wall/shuttle/syndie,/area/f13/shuttle/train)
+"b" = (/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaa
+abbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbba
+aaaaaaaaaaaaaaaaaaaaaaaaa
+"}
