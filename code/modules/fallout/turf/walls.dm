@@ -6,6 +6,7 @@
 	icon = 'icons/fallout/turfs/walls.dmi'
 	icon_state = "matrix"
 
+
 /turf/closed/wall/f13/ReplaceWithLattice()
 	ChangeTurf(baseturf)
 
