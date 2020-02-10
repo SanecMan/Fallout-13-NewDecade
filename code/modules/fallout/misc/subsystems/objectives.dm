@@ -34,7 +34,7 @@ var/datum/subsystem/objectives/SSobjectives
 
 /datum/subsystem/objectives/proc/on_roundend()
 	var/text
-	text += "<h2>Faction Objectives Results:</h2>"
+	text += "<h2>Результат квестов фракций:</h2>"
 
 	for(var/F in human_factions)
 		var/datum/f13_faction/faction = human_factions[F]
@@ -46,13 +46,13 @@ var/datum/subsystem/objectives/SSobjectives
 			desc = O.desc
 		if(O.check_complete(faction.objective))
 //			give_points(mind, O.points)
-			text += "\t<b>The [faction.full_name]</b> <font color='#00FF00'>successfully completed</font> [O.name] objective:<br>"
+			text += "\t<b>The [faction.full_name]</b> <font color='#00FF00'>успешно выполняет</font> [O.name] квест:<br>"
 			text += "\t\t <i>[FormatText(desc, faction.objective.data)]</i><br>"
 		else
-			text += "\t<b>The [faction.full_name]</b> <font color='#FF0000'>has failed to complete</font> [O.name] objective:<br>"
+			text += "\t<b>The [faction.full_name]</b> <font color='#FF0000'>проваливает</font> [O.name] квест:<br>"
 			text += "\t\t <i>[FormatText(desc, faction.objective.data)]</i><br>"
 
-	text += "<h2>Individual Objectives Results:</h2>"
+	text += "<h2>Результат по индивидуальным квестам:</h2>"
 
 	for(var/datum/mind/mind in ticker.minds)
 		if(!mind.objective)
@@ -63,10 +63,10 @@ var/datum/subsystem/objectives/SSobjectives
 			desc = O.desc
 		if(O.check_complete(mind.objective))
 			give_points(mind, O.points)
-			text += "\t<b>[mind]</b> <font color='#00FF00'>successfully completed</font> [O.name] objective:<br>"
+			text += "\t<b>[mind]</b> <font color='#00FF00'>успешно выполняет</font> [O.name] квест:<br>"
 			text += "\t\t <i>[FormatText(desc, mind.objective.data)]</i><br>"
 		else
-			text += "\t<b>[mind]</b> <font color='#FF0000'>has failed to complete</font> [O.name] objective:<br>"
+			text += "\t<b>[mind]</b> <font color='#FF0000'>проваливает</font> [O.name] квест:<br>"
 			text += "\t\t <i>[FormatText(desc, mind.objective.data)]</i><br>"
 	to_chat(world, text)
 
