@@ -778,3 +778,25 @@
 	strip_delay = 10
 	resistance_flags = UNACIDABLE
 	self_weight = 20
+
+/obj/item/clothing/head/f13/headlamp
+	name = "налобный фонарик"
+	icon_state = "headlamp"
+	item_state = "headlamp"
+	item_color = "headlamp"
+	light_color = LIGHT_COLOR_YELLOW
+	var/brightness_on = 4 //luminosity when the light is on
+	var/on = 0
+
+/obj/item/clothing/head/f13/headlamp/proc/toogle_light(mob/user)
+	on = !on
+	icon_state = "[initial(icon_state)][on ? "-light" : ""]"
+	item_state = "[initial(item_state)][on ? "-light" : ""]"
+	user.update_inv_head()
+	if(on)
+		set_light(brightness_on)
+	else
+		set_light(0)
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
