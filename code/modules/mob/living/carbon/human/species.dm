@@ -872,7 +872,7 @@
 				if(50 to 75)
 					if(prob(5))
 						if(!H.weakened)
-							H.emote("падает")
+							H.emote("collapse")
 						H.Weaken(3)
 						to_chat(H, "<span class='danger'>Вы ощущаете слабость.</span>")
 
