@@ -779,7 +779,7 @@
 	resistance_flags = UNACIDABLE
 	self_weight = 20
 
-/obj/item/clothing/head/f13/headlamp
+/obj/item/clothing/head/helmet/f13/headlamp
 	name = "налобный фонарик"
 	icon_state = "headlamp"
 	item_state = "headlamp"
@@ -788,7 +788,7 @@
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = 0
 
-/obj/item/clothing/head/f13/headlamp/proc/toogle_light(mob/user)
+/obj/item/clothing/head/helmet/f13/headlamp/proc/toogle_light(mob/user)
 	on = !on
 	icon_state = "[initial(icon_state)][on ? "-light" : ""]"
 	item_state = "[initial(item_state)][on ? "-light" : ""]"
@@ -800,3 +800,9 @@
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
+
+/obj/item/clothing/head/helmet/f13/headlamp/ui_action_click(mob/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle_helmet_light))
+		toogle_light(user)
+		return 1
+	return ..()
