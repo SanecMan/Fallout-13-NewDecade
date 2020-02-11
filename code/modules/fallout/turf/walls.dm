@@ -162,6 +162,41 @@
 	icon = 'icons/fallout/turfs/walls.dmi'
 	icon_state = "matrix"
 
+//ЧАСТЬ КОДА ПОЕЗДА
+//ПРОШУ БУДУЩИХ КОДЕРОВ ИСПРАВИТЬ МОЮ ОШИБКУ
+
+//Начало кода #poezd
+//Защита от любителей изучить
+/turf/closed/indestructible/f13/train
+	icon = 'icons/effects/effects.dmi'
+	opacity = 0
+
+//Защитный щит
+/turf/closed/indestructible/f13/train/shield
+	name = "Защитное поле"
+	desc = "Непробиваемое защитное поле, которое ограждает тебя от путешествий вглубь."
+	icon_state = "shieldwall"
+
+//Движущеися стены ИХ КОД НЕ ЮЗАТЬ ЕГО В ИГРЕ ПРОСТО БЛЯДЬ ЮЗАЙ TOP И DOWN НАХУЙ.
+/turf/closed/indestructible/f13/train/openwall/top
+	name = "Стена"
+	desc = "Ничего необычного."
+	icon = 'icons/fallout/turfs/train.dmi'
+
+
+//Движущеися стены вверху
+/turf/closed/indestructible/f13/train/openwall/top
+	name = "Стена"
+	desc = "Ничего необычного."
+	icon_state = "topopenwall"
+
+//Движущеися стены внизу
+/turf/closed/indestructible/f13/train/openwall/down
+	name = "Стена"
+	desc = "Ничего необычного."
+	icon_state = "downopenwall"
+//Конец кода поезда #poezd
+
 /turf/closed/indestructible/f13/subway
 	name = "tunnel wall"
 	desc = "This wall is made of reinforced concrete.<br>Pre-War engineers knew how to build reliable things."

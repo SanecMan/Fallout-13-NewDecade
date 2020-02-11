@@ -76,7 +76,6 @@
 	if(z+1 <= world.maxz)
 		drop_z = z+1
 
-
 /turf/open/chasm/straight_down/lava_land_surface
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	planetary_atmos = TRUE
@@ -113,3 +112,33 @@
 
 /turf/open/chasm/straight_down/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+
+//ÊÎÄ ÏÎÅÇÄÀ
+//ÊÎÑÒÛËÜ ÏÐÎØÓ ÓÁÐÀÒÜ
+//#poezd
+
+/* /turf/open/chasm/straight_down/train/
+	baseturf = /turf/open/chasm/straight_down/train/
+	if(1+1 <= world.maxz)
+		drop_x = rand(6,27)
+			if(z+1 <= world.maxz)
+				if(z+1 <= world.maxz)
+					drop_y = rand(99,103)
+						drop_z = 2
+
+//Äâèæóùèåñÿ ïîêðûòèå
+/turf/open/chasm/straight_down/train/openground
+	baseturf = /turf/open/chasm/straight_down/train/openground
+	name = 'Äîðîæíîå ïîêðûòèå'
+	desc = 'Íå ïðûãàé!'
+	icon = 'icons/fallout/turfs/train.dmi'
+	icon_state = "openground"
+
+//Äâèæóùèåñÿ ðåëüñû
+/turf/open/chasm/straight_down/train/openrail
+	baseturf = /turf/open/chasm/straight_down/train/openrail
+	name = 'Ðåëüñû'
+	desc = 'Íå ïðûãàé!'
+	icon = 'icons/fallout/turfs/train.dmi'
+	icon_state = "openwall" */
+
