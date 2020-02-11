@@ -534,8 +534,8 @@
 //Тут находится часть кода для шаттла-поезда. By SanecMan .
 
 //Основа шатла-поезда. Менять если не работает.
+/area/f13/shuttle/
 	name = "Обращаться к SanecMan если видишь это"
-	icon_state = "train"
 	ambience = list('sound/f13ambience/warehouse.ogg')
 	ambientmusic = list('sound/f13music/fo2_vats.ogg','sound/f13music/fo2_outpost.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg','sound/f13ambience/ambigen_12.ogg', \

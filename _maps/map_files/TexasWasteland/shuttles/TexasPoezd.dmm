@@ -1,10 +1,16 @@
 "a" = (/turf/closed/wall/shuttle/syndie,/area/f13/shuttle/train)
 "b" = (/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"c" = (/turf/closed/wall/shuttle/syndie{icon_state = "wall3"; dir = 9},/area/f13/shuttle/train)
+"d" = (/obj/effect/spawner/structure/window/reinforced,/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"e" = (/turf/closed/wall/shuttle/syndie{icon_state = "wall3"; dir = 5},/area/f13/shuttle/train)
+"f" = (/turf/closed/wall/shuttle/syndie{icon_state = "wall3"; dir = 10},/area/f13/shuttle/train)
+"g" = (/turf/closed/wall/shuttle/syndie{icon_state = "wall3"; dir = 6},/area/f13/shuttle/train)
+"h" = (/obj/machinery/door/airlock/shuttle,/turf/open/floor/pod/dark,/area/f13/shuttle/train)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaaaaaaa
-abbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbbbbbbbbbbba
-aaaaaaaaaaaaaaaaaaaaaaaaa
+cadddaahaadddae
+dbbbbbbbbbbbbba
+dbbbbbbbbbbbbba
+dbbbbbbbbbbbbba
+fadddaaaaadddag
 "}
