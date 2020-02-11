@@ -24,7 +24,7 @@
 	idle_vision_range = 5
 	self_weight = 60
 
-	faction = list("hostile", "supermuatant", "coc")
+	faction = list("hostile")
 
 	sound_speak = list('sound/f13npc/Npc_centaur_chasevox_02.ogg','sound/f13npc/Npc_centaur_conscious_lp.ogg','sound/f13npc/Npc_centaur_idle_scan.ogg','sound/f13npc/Npc_centaur_walkbreath_01.ogg')
 	sound_speak_chance = 5
@@ -38,7 +38,7 @@
 	harm_intent_damage = 20
 	melee_damage_lower = 20
 	melee_damage_upper = 30
-	attacktext = "жалит"
+	attacktext = "кусает"
 	attack_sound = 'sound/f13npc/Npc_centaur_attackspit_03.ogg'
 
 	XP = 15
