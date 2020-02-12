@@ -779,16 +779,20 @@
 	resistance_flags = UNACIDABLE
 	self_weight = 20
 
-/obj/item/clothing/head/helmet/f13/headlamp
+/obj/item/clothing/head/hardhat/f13/headlamp
 	name = "налобный фонарик"
 	icon_state = "headlamp"
 	item_state = "headlamp"
-	item_color = "headlamp"
-	light_color = LIGHT_COLOR_YELLOW
-	var/brightness_on = 4 //luminosity when the light is on
+//	light_color = LIGHT_COLOR_YELLOW
+	var/brightness_on = 4 //luminosity when on
 	var/on = 0
+	item_color = "yellow" //Determines used sprites: hardhat[on]_[item_color] and hardhat[on]_[item_color]2 (lying down sprite)
+	armor = list(melee = 5, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	flags_inv = 0
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	resistance_flags = ACID_PROOF
 
-/obj/item/clothing/head/helmet/f13/headlamp/proc/toogle_light(mob/user)
+/* /obj/item/clothing/head/helmet/f13/headlamp/proc/toogle_light(mob/user)
 	on = !on
 	icon_state = "[initial(icon_state)][on ? "-light" : ""]"
 	item_state = "[initial(item_state)][on ? "-light" : ""]"
@@ -805,4 +809,4 @@
 	if(istype(actiontype, /datum/action/item_action/toggle_helmet_light))
 		toogle_light(user)
 		return 1
-	return ..()
+	return ..() */
