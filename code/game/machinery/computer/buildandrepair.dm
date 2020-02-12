@@ -400,6 +400,10 @@
 /obj/item/weapon/circuitboard/computer/ferry/request
 	name = "Transport Ferry Console (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/ferry/request
+	//Плата для поезда #train
+/obj/item/weapon/circuitboard/computer/train
+	name = "Metro Train (Computer Board)"
+	build_path = /obj/machinery/computer/shuttle/train
 /obj/item/weapon/circuitboard/computer/mining_shuttle
 	name = "Mining Shuttle (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/mining
