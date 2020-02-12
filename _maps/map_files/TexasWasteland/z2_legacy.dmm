@@ -740,7 +740,7 @@
 "ol" = (/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/metro)
 "om" = (/turf/open/floor/f13{dir = 10; icon_state = "warndark"},/area/f13/metro)
 "on" = (/obj/machinery/light,/turf/open/floor/f13{icon_state = "warndark"},/area/f13/metro)
-"oo" = (/obj/structure/closet/toolcloset,/obj/item/weapon/circuitboard/computer/train,/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/metro)
+"oo" = (/obj/structure/closet/toolcloset,/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/metro)
 "op" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/metro)
 "oq" = (/mob/living/simple_animal/hostile/eyebot,/turf/open/floor/f13{icon_state = "dark"},/area/f13/metro)
 "or" = (/obj/structure/table,/obj/item/weapon/weldingtool,/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/metro)

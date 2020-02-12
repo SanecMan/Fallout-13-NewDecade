@@ -2,9 +2,6 @@
 	icon = 'icons/fallout/vehicles/bus.dmi'
 	icon_state = "bus2"
 	anchored = 1
-	pixel_x = -110
-	pixel_y = -18
-	anchored = 1
 	layer = ABOVE_MOB_LAYER
 	density = 1
 	obj_integrity = 200

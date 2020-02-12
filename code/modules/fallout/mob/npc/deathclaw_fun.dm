@@ -19,10 +19,20 @@
 	health = 800
 	speak_chance = 30
 	faction = list("raiders")
-	speak = list("рш ме яюопъвеьэяъ яйнрхмю!", "бюкепю йпсьхрэ!", "слпх! слпх!", "ъ унвс фпюрэ!", "ъ бшеас реаъ х рбнч яелэч, оюяйсдю!", "рбнеи гюдмхже опхьек охгдеж!")
+	speak = list("рш ме яюопъвеьэяъ яйнрхмю!", "цкюг мю фнос мюръмс!", "слпх! слпх!", "ъ унвс фпюрэ!", "ъ бшеас реаъ х рбнч яелэч, оюяйсдю!", "рбнеи гюдмхже опхьек охгдеж!")
 	speak_emote = list("НП╦Р", "ЙПХВХР")
 	loot = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 3, /obj/effect/gibspawner/human = 1)
 	XP = 25
+
+/mob/living/simple_animal/hostile/deathclaw/funclaw/bossraider/karlik
+	name = "пЕИДЕП-йЮПКХЙ"
+	desc = "ъпнь йпсьхрэ!"
+	icon_state = "karlik"
+	icon_dead = "raider_d"
+	maxHealth = 600
+	health = 600
+	XP = 15
+
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/AttackingTarget()
 	var/mob/living/M = target
