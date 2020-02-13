@@ -59,9 +59,7 @@
 /obj/machinery/computer/shuttle/train
 	name = "Панель Управления Поездом"
 	desc = "Вы видите панель с кучей кнопок. Большинство из них не работают кроме нескольких, которые позволяют управлять поездом и направлять его на нужные станции."
-	icon_screen = "shuttle"
-	icon_keyboard = "teleport_key"
-	circuit = /obj/item/weapon/circuitboard/computer/train
 	shuttleId = "poezd"
 	possible_destinations = "poezd_kebab;poezd_end"
+	circuit = /obj/item/weapon/circuitboard/computer/train
 
