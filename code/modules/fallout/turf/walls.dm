@@ -169,7 +169,6 @@
 //Защита от любителей изучить
 /turf/closed/indestructible/f13/train
 	icon = 'icons/effects/effects.dmi'
-	hardness = 1000000
 	opacity = 0
 
 //Защитный щит
