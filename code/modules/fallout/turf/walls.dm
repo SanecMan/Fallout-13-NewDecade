@@ -163,12 +163,13 @@
 	icon_state = "matrix"
 
 //вюярэ йндю онегдю
-//опньс асдсыху йндепнб хяопюбхрэ лнч ньхайс
+//опньс асдсыху йндепнб хяопюбхрэ лнч ньхайс #poezd
 
 //мЮВЮКН ЙНДЮ #poezd
 //гЮЫХРЮ НР КЧАХРЕКЕИ ХГСВХРЭ
 /turf/closed/indestructible/f13/train
 	icon = 'icons/effects/effects.dmi'
+	hardness = 1000000
 	opacity = 0
 
 //гЮЫХРМШИ ЫХР
