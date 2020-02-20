@@ -253,7 +253,7 @@ turf/closed/indestructible/f13/splashscreen/New()
 	desc = "The wasteland is calling!"
 	icon = 'icons/fallout/misc/lobby.dmi'
 	//icon_state = "fo3"
-	icon_state = "title[rand(1,26)]"
+	icon_state = "title[rand(1,13)]"
 	layer = 60
 	plane = 1
 	src.fullDark = new/atom/movable{
