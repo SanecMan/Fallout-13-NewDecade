@@ -11,8 +11,8 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	hoodtype = /obj/item/clothing/head/hooded/explorer
-	armor = list(melee = 40, bullet = 30, laser = 30, energy = 30, bomb = 50, bio = 100, rad = 40, fire = 50, acid = 50)
-	allowed = list(/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/restraints/handcuffs,/obj/item/weapon/tank/internals,/obj/item/weapon/stock_parts/cell)
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 50, bio = 100, rad = 40, fire = 50, acid = 50)
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals, /obj/item/weapon/resonator, /obj/item/device/mining_scanner, /obj/item/device/t_scanner/adv_mining_scanner, /obj/item/weapon/gun/energy/kinetic_accelerator, /obj/item/weapon/pickaxe)
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/head/hooded/explorer
@@ -23,7 +23,7 @@
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = FIRE_HELM_MAX_TEMP_PROTECT
-	armor = list(melee = 30, bullet = 25, laser = 25, energy = 25, bomb = 50, bio = 100, rad = 40, fire = 50, acid = 50)
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 50, bio = 100, rad = 40, fire = 50, acid = 50)
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/mask/gas/explorer
@@ -34,7 +34,7 @@
 	visor_flags_inv = HIDEFACIALHAIR
 	visor_flags_cover = MASKCOVERSMOUTH
 	actions_types = list(/datum/action/item_action/adjust)
-	armor = list(melee = 20, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 50, rad = 50, fire = 20, acid = 40)
+	armor = list(melee = 20, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 50, rad = 50, fire = 20, acid = 40)
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/mask/gas/explorer/attack_self(mob/user)
