@@ -128,9 +128,6 @@ var/datum/subsystem/vote/SSvote
 						restart = 1
 					else
 						master_mode = .
-			if("map")
-				SSmapping.changemap(global.config.maplist[.])
-				SSmapping.map_voted = TRUE
 	if(restart)
 		var/active_admins = 0
 		for(var/client/C in admins)
@@ -179,12 +176,6 @@ var/datum/subsystem/vote/SSvote
 				choices.Add("Завершить раунд","Продолжить раунд")
 			if("gamemode")
 				choices.Add(config.votable_modes)
-			if("map")
-				for(var/map in global.config.maplist)
-					var/datum/map_config/VM = config.maplist[map]
-					if(!VM.votable)
-						continue
-					choices.Add(VM.map_name)
 			if("custom")
 				question = stripped_input(usr,"What is the vote for?")
 				if(!question)
@@ -257,16 +248,6 @@ var/datum/subsystem/vote/SSvote
 			. += "<font color='grey'>Игровой режим (Запрещен)</font>"
 		if(trialmin)
 			. += "\t(<a href='?src=\ref[src];vote=toggle_gamemode'>[config.allow_vote_mode?"Allowed":"Disallowed"]</a>)"
-
-		. += "</li>"
-		//map
-		var/avmap = CONFIG_GET(flag/allow_vote_map)
-		if(trialmin || avmap)
-			. += "<a href='?src=[REF(src)];vote=map'>Map</a>"
-		else
-			. += "<font color='grey'>Map (Disallowed)</font>"
-		if(trialmin)
-			. += "\t(<a href='?src=[REF(src)];vote=toggle_map'>[avmap ? "Allowed" : "Disallowed"]</a>)"
 
 		. += "</li>"
 		//custom
