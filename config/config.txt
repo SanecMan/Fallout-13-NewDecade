@@ -2,7 +2,7 @@
 SERVERNAME Fallout 13 - CBET ATOMA
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-#STATIONNAME Wasteland
+STATIONNAME Oregon
 
 ## Put on byond hub: uncomment this to put your server on the byond hub.
 HUB
@@ -153,16 +153,16 @@ CHECK_RANDOMIZER
 SERVER 5.9.12.156:2506
 
 ## forum address
-#FORUMURL http://tgstation13.org/phpBB/index.php
+FORUMURL https://discord.gg/GEMmJYV
 
 ## Wiki address
-#WIKIURL http://www.tgstation13.org/wiki
+WIKIURL http://fallout-13-official.wikidot.com/
 
 ##Rules address
 #RULESURL http://www.tgstation13.org/wiki/Rules
 
 ##Github address
-#GITHUBURL https://www.github.com/tgstation/-tg-station
+GITHUBURL https://github.com/iWuna/Fallout-13-NewDecade
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 #BANAPPEALS http://justanotherday.example.com
@@ -214,7 +214,7 @@ TICKLAG 0.4
 #MEDAL_HUB_PASSWORD
 
 ## Uncomment this to let players see their own notes (they can still be set by admins only)
-#SEE_OWN_NOTES
+SEE_OWN_NOTES
 
 ##Note: all population caps can be used with each other if desired.
 
@@ -273,7 +273,7 @@ ANNOUNCE_ADMIN_LOGIN
 ## Map rotation
 ## This feature requires you are running a Windows OS (or can other wise run .bat files) and that you are using the tgstation-server toolset in tools/
 ## You should edit maps.txt to match your configuration when you enable this.
-#MAPROTATION
+MAPROTATION
 
 ## Map rotate chance delta
 ## This is the chance of map rotation factored to the round length.
