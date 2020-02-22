@@ -302,7 +302,7 @@ var/datum/subsystem/vote/SSvote
 	set category = "OOC"
 	set name = "Vote"
 
-	var/datum/browser/popup = new(src, "vote", "Voting Panel")
+	var/datum/browser/popup = new(src, "vote", "оюмекэ цнкнянбюмхъ")
 	popup.set_window_options("can_close=0")
 	popup.set_content(SSvote.interface(client))
 	popup.open(0)

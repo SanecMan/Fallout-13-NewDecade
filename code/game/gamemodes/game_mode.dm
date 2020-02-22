@@ -189,7 +189,7 @@
 						continuous_sanity_checked = 1
 						return 0
 			if(!continuous_sanity_checked)
-				message_admins("The roundtype ([config_tag]) has no antagonists, continuous round has been defaulted to on and midround_antag has been defaulted to off.")
+				message_admins("В режиме ([config_tag]) не предусмотрены стандартные антагонисты.")
 				config.continuous[config_tag] = 1
 				config.midround_antag[config_tag] = 0
 				SSshuttle.clearHostileEnvironment(src)
