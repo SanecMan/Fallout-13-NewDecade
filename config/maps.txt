@@ -16,6 +16,8 @@ endmap
 map oregon
 	friendlyname Oregon
 	default
+	minplayers 0
+	maxplayers 0
 	voteweight 1.5
 	votable
 endmap
@@ -23,11 +25,15 @@ endmap
 map denwer
 	friendlyname Denwer
 	voteweight 1.5
+	minplayers 0
+	maxplayers 0
 	votable
 endmap
 
 map sierramadre
 	friendlyname Sierra
 	voteweight 1.5
+	minplayers 0
+	maxplayers 0
 	votable
 endmap

@@ -253,7 +253,7 @@ turf/closed/indestructible/f13/splashscreen/New()
 	desc = "The wasteland is calling!"
 	icon = 'icons/fallout/misc/lobby.dmi'
 	//icon_state = "fo3"
-	icon_state = "title[rand(1,26)]"
+	icon_state = "title[rand(1,13)]"
 	layer = 60
 	plane = 1
 	src.fullDark = new/atom/movable{
@@ -270,7 +270,7 @@ turf/closed/indestructible/f13/splashscreen/proc/ticker()
 	while(src && istype(src,/turf/closed/indestructible/f13/splashscreen))
 		//src.swapImage()
 		sleep(src.tickerPeriod)
-	to_chat(world, "Badmins spawn shit and the title screen was deleted.<br>You know... I'm out of here!")
+	to_chat(world, "Администрация-долбоебы, которые удалили экран лобби.<br>ЩИТСПАВНЕРЫ!!!")
 	return
 
 //Change the time to determine how short/long the fading animation is.
