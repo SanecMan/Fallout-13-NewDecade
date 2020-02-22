@@ -81,7 +81,7 @@
 	if(iscyborg(user))
 		user.visible_message("<span class='warning'>[user] dedicates a module to the [initial(name)]s.")
 	else
-		user.visible_message("<span class='warning'>[user] grabs the [initial(name)] with both hands.")
+		user.visible_message("<span class='warning'>[user] хватает [initial(name)] обеими руками.")
 	if(wieldsound)
 		playsound(loc, wieldsound, 50, 1)
 	var/obj/item/weapon/twohanded/offhand/O = new(user) ////Let's reserve his other hand~

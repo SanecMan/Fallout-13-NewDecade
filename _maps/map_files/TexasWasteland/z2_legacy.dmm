@@ -617,7 +617,7 @@
 "lS" = (/obj/structure/chair,/turf/open/floor/f13{tag = "icon-yellowdirtyfull"; icon_state = "yellowdirtyfull"},/area/f13/clinic)
 "lT" = (/obj/structure/barricade/wooden,/turf/open/indestructible/ground/mountain,/area/f13/caves)
 "lU" = (/obj/structure/simple_door/room,/obj/structure/barricade/wooden,/turf/open/indestructible/ground/desert,/area/f13/caves)
-"lV" = (/turf/open/floor/plasteel/stairs{icon_state = "rampdownbottom"; dir = 1},/area/f13/metro)
+"lV" = (/obj/effect/bump_teleporter/exit{id = "metro1_down"},/turf/open/floor/plasteel/stairs{icon_state = "rampdownbottom"; dir = 1},/area/f13/metro)
 "lW" = (/turf/open/floor/f13{dir = 4; icon_state = "warndark"},/area/f13/metro)
 "lX" = (/obj/item/weapon/screwdriver/brass,/turf/open/floor/plating/tunnel,/area/f13/metro)
 "lY" = (/turf/open/floor/f13{dir = 8; icon_state = "warndark"},/area/f13/metro)

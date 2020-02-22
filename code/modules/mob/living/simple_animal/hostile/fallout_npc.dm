@@ -594,8 +594,8 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/raider
-	name = "Неизвестный (Рейдер)"
-	desc = "Just a Raider"
+	name = "Неизвестная личность (Рейдер)"
+	desc = "Просто тупой рейдер."
 	icon_state = "firefighter_raider"
 	icon_living = "firefighter_raider"
 	icon_dead = "firefighter_raider"

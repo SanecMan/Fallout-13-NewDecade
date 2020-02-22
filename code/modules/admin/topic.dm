@@ -1659,7 +1659,7 @@
 
 		//Job + antagonist
 		if(M.mind)
-			special_role_description = "Role: <b>[M.mind.assigned_role]</b>; Antagonist: <font color='red'><b>[M.mind.special_role]</b></font>"
+			special_role_description = "Роль: <b>[M.mind.assigned_role]</b>; Антагонист: <font color='red'><b>[M.mind.special_role]</b></font>"
 		else
 			special_role_description = "Role: <i>Mind datum missing</i> Antagonist: <i>Mind datum missing</i>"
 
@@ -1686,10 +1686,10 @@
 			else
 				gender_description = "<font color='red'><b>[M.gender]</b></font>"
 
-		to_chat(src.owner, "<b>Info about [M.name]:</b> ")
-		to_chat(src.owner, "Mob type = [M.type]; Gender = [gender_description] Damage = [health_description]")
-		to_chat(src.owner, "Name = <b>[M.name]</b>; Real_name = [M.real_name]; Mind_name = [M.mind?"[M.mind.name]":""]; Key = <b>[M.key]</b>;")
-		to_chat(src.owner, "Location = [location_description];")
+		to_chat(src.owner, "<b>Информация об: [M.name]:</b> ")
+		to_chat(src.owner, "Тип моба = [M.type]; Пол = [gender_description] Урон = [health_description]")
+		to_chat(src.owner, "Имя = <b>[M.name]</b>; Настоящее имя = [M.real_name]; Имя разума = [M.mind?"[M.mind.name]":""]; Никнейм = <b>[M.key]</b>;")
+		to_chat(src.owner, "Местоположение = [location_description];")
 		to_chat(src.owner, "[special_role_description]")
 		to_chat(src.owner, "(<a href='?priv_msg=[M.ckey]'>PM</a>) (<A HREF='?src=\ref[src];adminplayeropts=\ref[M]'>PP</A>) (<A HREF='?_src_=vars;Vars=\ref[M]'>VV</A>) (<A HREF='?src=\ref[src];subtlemessage=\ref[M]'>SM</A>) (<A HREF='?src=\ref[src];adminplayerobservefollow=\ref[M]'>FLW</A>) (<A HREF='?src=\ref[src];secrets=check_antagonist'>CA</A>)")
 
@@ -1765,9 +1765,9 @@
 			return
 
 		log_admin("[key_name(H)] got their cookie, spawned by [key_name(src.owner)].")
-		message_admins("[key_name(H)] got their cookie, spawned by [key_name(src.owner)].")
+		message_admins("[key_name(H)] получает печеньку, выданную [key_name(src.owner)].")
 		feedback_inc("admin_cookies_spawned",1)
-		to_chat(H, "<span class='adminnotice'>Your prayers have been answered!! You received the <b>best cookie</b>!</span>")
+		to_chat(H, "<span class='adminnotice'>Ваши мольбы услышаны!! Вкусите эту <b>ПЕЧЕНЬКУ</b>!</span>")
 		to_chat(H, 'sound/effects/pray_chaplain.ogg')
 
 	else if(href_list["BlueSpaceArtillery"])

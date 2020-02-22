@@ -1,11 +1,11 @@
 //Fallout 13 vending machines directory
 
 /obj/machinery/vending/nukacolavend
-	name = "\improper Nuka-Cola vending machine"
+	name = "Автомат с Ядер-Колой"
 	icon = 'icons/fallout/machines/vending.dmi'
 	icon_state = "nuka_vending"
 	icon_deny = "nuka_vending-deny"
-	product_slogans = "Take the leap... enjoy a Quantum!"
+	product_slogans = "Присядь и выпей колы... Насладись Квантом!"
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola/radioactive = 8)
 	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/quantumcola = 4)
 	refill_canister = /obj/item/weapon/vending_refill/nukacolavend
@@ -18,10 +18,10 @@
 	..()
 
 /obj/machinery/vending/nukacolavend/full
-	name = "\improper pristine Nuka-Cola vending machine"
+	name = "Нетронутый автомат с Ядер-Колой"
 	icon_state = "nuka_vending"
 	icon_deny = "nuka_vending-deny"
-	product_slogans = "Take the leap... enjoy a Quantum!"
+	product_slogans = "Присядь и выпей колы... Насладись Квантом!"
 //	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 20)
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 5)
 	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/quantumcola = 10)
@@ -32,13 +32,13 @@
 	..()
 
 /obj/item/weapon/vending_refill/nukacolavend
-	machine_name = "Nuka-Cola vending machine"
+	machine_name = "Автомат с Ядер-Колой"
 	icon_state = "refill_cola"
 	charges = list(20, 2, 0)//of 60 standard, 6 contraband
 	init_charges = list(20, 2, 0)
 
 /obj/item/weapon/vending_refill/nukacolavend/full
-	machine_name = "pristine Nuka-Cola vending machine"
+	machine_name = "Нетронутый автомат с Ядер-Колой"
 	icon_state = "refill_cola"
 	charges = list(20, 2, 0)//of 60 standard, 6 contraband
 	init_charges = list(20, 2, 0)

@@ -1,22 +1,22 @@
 /mob/living/simple_animal/mouse
-	name = "mouse"
-	desc = "It's a nasty, ugly, evil, disease-ridden rodent."
+	name = "мышь"
+	desc = "Маленькая, милая мышка. А так-же разносчик всякой заразы."
 	icon_state = "mouse_gray"
 	icon_living = "mouse_gray"
 	icon_dead = "mouse_gray_dead"
-	speak = list("Squeek!","SQUEEK!","Squeek?")
-	speak_emote = list("squeeks")
-	emote_hear = list("squeeks.")
-	emote_see = list("runs in a circle.", "shakes.")
+	speak = list("Скви!","СКВИ!","Скви?")
+	speak_emote = list("пищит")
+	emote_hear = list("пищит.")
+	emote_see = list("бегает кругами.", "трясётся.")
 	speak_chance = 1
 	turns_per_move = 5
 	see_in_dark = 6
 	maxHealth = 5
 	health = 5
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 1)
-	response_help  = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm   = "splats"
+	response_help  = "гладит"
+	response_disarm = "аккуратно отталкивает"
+	response_harm   = "давит"
 	density = 0
 	ventcrawler = VENTCRAWLER_ALWAYS
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
@@ -56,7 +56,7 @@
 	if( ishuman(AM) )
 		if(!stat)
 			var/mob/M = AM
-			to_chat(M, "<span class='notice'>[bicon(src)] Squeek!</span>")
+			to_chat(M, "<span class='notice'>[bicon(src)] Скви!</span>")
 			playsound(src, 'sound/effects/mousesqueek.ogg', 100, 1)
 	..()
 
@@ -67,13 +67,13 @@
 			var/obj/structure/cable/C = locate() in F
 			if(C && prob(15))
 				if(C.avail())
-					visible_message("<span class='warning'>[src] chews through the [C]. It's toast!</span>")
+					visible_message("<span class='warning'>[src] грызёт [C]. Зажарилась падла!</span>")
 					playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
 					C.deconstruct()
 					death(toast=1)
 				else
 					C.deconstruct()
-					visible_message("<span class='warning'>[src] chews through the [C].</span>")
+					visible_message("<span class='warning'>[src] грызёт [C].</span>")
 
 /*
  * Mouse types

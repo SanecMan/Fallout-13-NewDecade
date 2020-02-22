@@ -267,8 +267,8 @@
 		if (prob(75))
 			add_logs(M, src, "attacked")
 			playsound(loc, 'sound/weapons/bite.ogg', 50, 1, -1)
-			visible_message("<span class='danger'>[M.name] bites [src]!</span>", \
-					"<span class='userdanger'>[M.name] bites [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+			visible_message("<span class='danger'>[M.name] кусает [src]!</span>", \
+					"<span class='userdanger'>[M.name] кусает [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 			return 1
 		else
 			visible_message("<span class='danger'>[M.name] has attempted to bite [src]!</span>", \
@@ -286,8 +286,8 @@
 			L.do_attack_animation(src)
 			if(prob(90))
 				add_logs(L, src, "attacked")
-				visible_message("<span class='danger'>[L.name] bites [src]!</span>", \
-					"<span class='userdanger'>[L.name] bites [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+				visible_message("<span class='danger'>[L.name] кусает [src]!</span>", \
+					"<span class='userdanger'>[L.name] кусает [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 				playsound(loc, 'sound/weapons/bite.ogg', 50, 1, -1)
 				return 1
 			else

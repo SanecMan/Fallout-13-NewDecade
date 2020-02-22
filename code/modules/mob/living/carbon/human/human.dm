@@ -1,7 +1,7 @@
 /mob/living/carbon/human
-	name = "Неизвестный"
-	real_name = "Неизвестный"
-	voice_name = "Неизвестно"
+	name = "Неизвестная личность"
+	real_name = "Неизвестная личность"
+	voice_name = "Неизвестная личность"
 	icon = 'icons/mob/human.dmi'
 	icon_state = "caucasian_m_s"
 	self_weight = 0

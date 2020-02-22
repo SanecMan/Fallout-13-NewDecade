@@ -154,7 +154,7 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/harpoon
-	name = "harpoon"
+	name = "гарпун"
 	desc = "A rusty spear-like instrument previously used in fishing, whaling and sealing - now used for robbing, raiding and manhunting."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "harpoon"
@@ -194,7 +194,7 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/twohanded/tribal_spear
-	name = "tribal spear"
+	name = "племенное копьё"
 	desc = "A haphazardly-constructed, yet still deadly weapon of an ancient design."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "tribalspear0"
@@ -209,7 +209,7 @@
 	armour_penetration = 10
 	materials = list(MAT_METAL=1150, MAT_WOOD=2075)
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
+	attack_verb = list("атакует", "тыкает", "протыкает", "режет")
 	sharpness = IS_SHARP
 	obj_integrity = 200
 	max_integrity = 200
@@ -269,7 +269,7 @@
 	w_class = 2
 
 /obj/item/weapon/hammer
-	name = "hammer"
+	name = "молоток"
 	desc = "A simple construction tool, that can also be used to bring the revenge upon those who kidnapped you and kept you in the basement for several years." //Old Boy (2003)
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "hammer"

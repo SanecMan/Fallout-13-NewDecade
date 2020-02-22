@@ -535,9 +535,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			force = 0
 			attack_verb = null //human_defense.dm takes care of it
 			if(!istype(src, /obj/item/weapon/lighter/greyscale))
-				user.visible_message("You hear a quiet click, as [user] shuts off [src] without even looking at what [user.p_theyre()] doing. Wow.", "<span class='notice'>You quietly shut off [src] without even looking at what you're doing. Wow.</span>")
+				user.visible_message("Вы услышали тихий щелчок, когда [user] тушит [src] не глядя на зажигалку. Охрененно!", "<span class='notice'>Вы деликатно потушили [src] даже не смотря на неё. Охрененно!</span>")
 			else
-				user.visible_message("[user] quietly shuts off [src].", "<span class='notice'>You quietly shut off [src].")
+				user.visible_message("[user] тихо тушит [src].", "<span class='notice'>Вы тихо потушили [src].")
 			if(offsound)
 				playsound(user, offsound, 50, 0)
 			set_light(0)
@@ -547,12 +547,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/weapon/lighter/attack(mob/living/carbon/M, mob/living/carbon/user)
 	if(lit && M.IgniteMob())
-		message_admins("[key_name_admin(user)] set [key_name_admin(M)] on fire")
+		message_admins("[key_name_admin(user)] поджёг [key_name_admin(M)]")
 		log_game("[key_name(user)] set [key_name(M)] on fire")
 	var/obj/item/clothing/mask/cigarette/cig = help_light_cig(M)
 	if(lit && cig && user.a_intent == INTENT_HELP)
 		if(cig.lit)
-			to_chat(user, "<span class='notice'>The [cig.name] is already lit.</span>")
+			to_chat(user, "<span class='notice'>[cig.name] уже зажжена.</span>")
 		if(M == user)
 			cig.attackby(src, user)
 		else

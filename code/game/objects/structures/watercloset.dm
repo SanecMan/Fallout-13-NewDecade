@@ -425,8 +425,8 @@
 	var/washing_face = 0
 	if(selected_area in list("head", "mouth", "eyes"))
 		washing_face = 1
-	user.visible_message("<span class='notice'>[user] starts washing their [washing_face ? "face" : "hands"]...</span>", \
-						"<span class='notice'>You start washing your [washing_face ? "face" : "hands"]...</span>")
+	user.visible_message("<span class='notice'>[user] начинает мыть [washing_face ? "лицо" : "руки"]...</span>", \
+						"<span class='notice'>¬ы начали мыть [washing_face ? "лицо" : "руки"]...</span>")
 	busy = 1
 
 	if(!do_after(user, 40, target = src))
@@ -435,8 +435,8 @@
 
 	busy = 0
 
-	user.visible_message("<span class='notice'>[user] washes their [washing_face ? "face" : "hands"] using [src].</span>", \
-						"<span class='notice'>You wash your [washing_face ? "face" : "hands"] using [src].</span>")
+	user.visible_message("<span class='notice'>[user] начинает мыть [washing_face ? "лицо" : "руки"] использу€ [src].</span>", \
+						"<span class='notice'>¬ы начали мыть [washing_face ? "лицо" : "руки"] использу€ [src].</span>")
 	if(washing_face)
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
@@ -451,14 +451,14 @@
 
 /obj/structure/sink/attackby(obj/item/O, mob/user, params)
 	if(busy)
-		to_chat(user, "<span class='warning'>Someone's already washing here!</span>")
+		to_chat(user, "<span class='warning'> то-то уже умываетс€ тут!</span>")
 		return
 
 	if(istype(O, /obj/item/weapon/reagent_containers))
 		var/obj/item/weapon/reagent_containers/RG = O
 		if(RG.container_type & OPENCONTAINER)
 			RG.reagents.add_reagent(liquid, min(RG.volume - RG.reagents.total_volume, RG.amount_per_transfer_from_this))
-			to_chat(user, "<span class='notice'>You fill [RG] from [src].</span>")
+			to_chat(user, "<span class='notice'>¬ы наполнили [RG] из [src].</span>")
 			return 1
 
 	if(istype(O, /obj/item/weapon/melee/baton))
