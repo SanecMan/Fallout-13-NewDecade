@@ -1,4 +1,5 @@
 #define RAIN_CHANNEL 15
+
 /datum/weather_controller/rain
 	name = "Дождь"
 	id = "Rain_acid"
@@ -52,7 +53,29 @@
 	. = ..()
 
 /datum/weather_controller/rain/process()
-	if(prob(5))
+	if(prob(75))
+		spawn(rand(1,10))
+			var/turf/open/turf = locate(rand(1,world.maxx), rand(1,world.maxy), rand(1,world.maxz))
+			var/area/A = turf.loc
+			if(A.open_space)
+				lightningstrike(turf)
+	if(!currentrun.len)
+		currentrun = mobs.Copy()
+	while(currentrun.len)
+		var/mob/living/M = currentrun[currentrun.len]
+		currentrun.len--
+		if(istype(M, /mob/living/carbon/human))
+			if(prob(0.5))
+				lightningstrike(get_turf(M))
+			var/mob/living/carbon/human/H = M
+			if((!H.wear_mask || !(H.wear_mask.flags_inv & HIDEFACE)) && (!H.head || !(H.head.flags_inv & HIDEFACE)))
+				H.adjustFireLoss(0.1)
+				H.adjustToxLoss(0.5)
+		if (TICK_CHECK)
+			return
+	currentrun.Cut()
+
+/*		if(prob(5))
 		var/turf/open/turf = locate(rand(1,world.maxx), rand(1,world.maxy), rand(1,world.maxz))
 		var/area/A = turf.loc
 		if(!A.open_space)
@@ -68,30 +91,6 @@
 				var/mob/living/carbon/human/H = M
 				H.adjustFireLoss(0.1)
 				H.adjustToxLoss(0.5)
-			if (TICK_CHECK)
-				return
-		currentrun.Cut()
-
-/*	if(!started)
-		return
-	if(prob(5))
-		var/turf/open/turf = locate(rand(1,world.maxx), rand(1,world.maxy), rand(1,world.maxz))
-		var/area/A = turf.loc
-		if(!A.open_space)
-			return
-		if(!currentrun.len)
-			currentrun = mobs.Copy()
-		while(currentrun.len)
-			var/mob/living/M = currentrun[currentrun.len]
-			currentrun.len--
-			if(istype(M, /mob/living/carbon/human))
-				//if(prob(5))
-					//lightningstrike(get_turf(M))
-				var/mob/living/carbon/human/H = M
-				H.adjustBruteLoss(2)
-				H.adjustFireLoss(2)
-				H.adjustToxLoss(2)
-				M.adjustFireLoss(2)
 			if (TICK_CHECK)
 				return
 		currentrun.Cut()

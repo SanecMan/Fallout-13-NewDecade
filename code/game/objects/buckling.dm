@@ -122,8 +122,8 @@
 				"<span class='italics'>Вы слышите металлический лязг.</span>")
 		else
 			M.visible_message(\
-				"<span class='notice'>[M] встает с [src].</span>",\
-				"<span class='notice'>Вы встали с [src].</span>",\
+				"<span class='notice'>[M] покидает [src].</span>",\
+				"<span class='notice'>Вы покинули [src].</span>",\
 				"<span class='italics'>Вы слышите металлический лязг.</span>")
 		add_fingerprint(user)
 	return M
