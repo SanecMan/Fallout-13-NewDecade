@@ -1,7 +1,7 @@
 /datum/weather_controller
 	var/name = "Контроль погоды"
 	var/id = "weather_id"
-	var/desc = "Controlling weather mechanic."
+	var/desc = "Контроллирует погоду."
 
 	var/overlay
 	var/chance = 0		//chance to weather apply

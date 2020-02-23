@@ -770,12 +770,16 @@
 		H.metabolism_efficiency = 1
 	else if(H.nutrition > NUTRITION_LEVEL_FED && H.satiety > 80)
 		if(H.metabolism_efficiency != 1.25 && (H.dna && H.dna.species && !(NOHUNGER in H.dna.species.species_traits)))
-			to_chat(H, "<span class='notice'>Вы чувствуете себя сытым.</span>")
+			if(world.time > H.last_hunger_message + 600)
+				to_chat(H, pick("<span class='notice'>Вы чувствуете себя сытым.</span>", "<span class='notice'>Вы вдоволь наелись.</span>", "<span class='notice'>Вы больше не хотите есть.</span>"))
+				H.last_hunger_message = world.time
 			H.metabolism_efficiency = 1.25
 	else if(H.nutrition < NUTRITION_LEVEL_STARVING + 50)
 		if(H.metabolism_efficiency != 0.8)
-			to_chat(H, "<span class='notice'>Вы чувствуете что хотите есть.</span>")
-		H.metabolism_efficiency = 0.8
+			if(world.time > H.last_hunger_message + 600)
+				to_chat(H, pick("<span class='notice'>Вы чувствуете что хотите есть.</span>", "<span class='notice'>Вы ощущаете голод.</span>", "<span class='notice'>У вас урчит живот.</span>", "<span class='notice'>Вы ощущаете слабую боль в области желудка.</span>", "<span class='notice'>Найдите что-нибудь поесть.</span>"))
+				H.last_hunger_message = world.time
+			H.metabolism_efficiency = 0.8
 	else
 		if(H.metabolism_efficiency == 1.25)
 			to_chat(H, "<span class='notice'>You no longer feel vigorous.</span>")

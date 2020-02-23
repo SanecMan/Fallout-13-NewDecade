@@ -6,8 +6,8 @@
 
 	overlay = "Rain_acid"//"rain"
 	chance = 40
-	duration_min = 1000
-	duration_max = 5000
+	duration_min = 1 MINUTE
+	duration_max = 3 MINUTE
 	var/power = "normal"
 	var/outside_sound
 	var/inside_sound
@@ -52,6 +52,20 @@
 	. = ..()
 
 /datum/weather_controller/rain/process()
+	if(TICK_CHECK)
+		return
+	if(prob(5))
+		var/turf/open/turf = locate(rand(1,world.maxx), rand(1,world.maxy), rand(1,world.maxz))
+		var/area/A = turf.loc
+		if(!A.open_space)
+			return
+		for(var/mob/living/carbon/human/H in A)
+			if(H?.wear_mask.flags_inv & HIDEFACE || H?.head.flags_inv & HIDEFACE)
+				continue
+			H.adjustToxLoss(0.5)
+
+/*	if(!started)
+		return
 	if(prob(5))
 		var/turf/open/turf = locate(rand(1,world.maxx), rand(1,world.maxy), rand(1,world.maxz))
 		var/area/A = turf.loc
@@ -73,46 +87,4 @@
 			if (TICK_CHECK)
 				return
 		currentrun.Cut()
-/*
-	if(prob(5))
-		var/turf/open/turf = locate(rand(1,world.maxx), rand(1,world.maxy), rand(1,world.maxz))
-		var/area/A = turf.loc
-		if(A.open_space)
-			lightningstrike(turf)
-			if(!currentrun.len)
-				currentrun = mobs.Copy()
-			while(currentrun.len)
-				var/mob/living/M = currentrun[currentrun.len]
-				currentrun.len--
-				if(istype(M, /mob/living/carbon/human))
-					var/mob/living/carbon/human/H = M
-						H.adjustBruteLoss(1)
-						H.adjustFireLoss(1)
-						H.adjustToxLoss(1)
-					if (TICK_CHECK)
-					return
-			currentrun.Cut()
-
-/datum/weather_controller/sandstorm/process()
-	if(!started)
-		return
-	if(prob(75))
-		spawn(rand(1,10))
-			var/turf/open/turf = locate(rand(1,world.maxx), rand(1,world.maxy), rand(1,world.maxz))
-			var/area/A = turf.loc
-			if(A.open_space)
-				lightningstrike(turf)
-	if(!currentrun.len)
-		currentrun = mobs.Copy()
-	while(currentrun.len)
-		var/mob/living/M = currentrun[currentrun.len]
-		currentrun.len--
-		if(istype(M, /mob/living/carbon/human))
-			if(prob(0.5))
-				lightningstrike(get_turf(M))
-			var/mob/living/carbon/human/H = M
-			if((!H.wear_mask || !(H.wear_mask.flags_inv & HIDEFACE)) && (!H.head || !(H.head.flags_inv & HIDEFACE)))
-				H.adjustOxyLoss(2)
-		if (TICK_CHECK)
-			return
-	currentrun.Cut()*/
+*/
