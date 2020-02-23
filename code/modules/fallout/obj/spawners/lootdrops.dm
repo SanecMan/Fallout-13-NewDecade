@@ -250,7 +250,7 @@
 	/obj/item/trash/f13/dog = 1,
 	/obj/item/trash/f13/mre = 1,
 	/obj/item/trash/f13/rotten = 1,
-	/obj/item/clothing/head/f13/headscarf = 1)
+	/obj/item/clothing/mask/bandana/f13/headscarf = 1)
 
 
 /obj/effect/spawner/lootdrop/trash/spawnLoot() // prevent tons of trash

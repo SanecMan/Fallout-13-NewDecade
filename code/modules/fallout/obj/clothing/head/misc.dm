@@ -49,12 +49,14 @@
 	item_state = "fedora"
 	flags_inv = HIDEEARS|HIDEHAIR
 
+/*
 /obj/item/clothing/head/f13/headscarf
 	name = "headscarf"
 	desc = "A piece of cloth worn on head for a variety of purposes, such as protection of the head or hair from rain, wind, dirt, cold, warmth, for sanitation, for fashion, recognition or social distinction - with religious significance, to hide baldness, out of modesty, or other forms of social convention."
 	icon_state = "headscarf"
 	item_state = "dethat"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+*/
 
 /obj/item/clothing/head/f13/pot
 	name = "metal cooking pot"

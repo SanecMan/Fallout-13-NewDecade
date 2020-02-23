@@ -9,7 +9,7 @@
 
 /datum/crafting_recipe/headscarf
 	name = "Headscarf"
-	result = /obj/item/clothing/head/f13/headscarf
+	result = /obj/item/clothing/mask/bandana/f13/headscarf
 	reqs = list(/obj/item/stack/sheet/cloth = 4)
 	time = 50
 	category = CAT_CLOTHING

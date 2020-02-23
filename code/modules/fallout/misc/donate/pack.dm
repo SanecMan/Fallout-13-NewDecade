@@ -41,7 +41,7 @@
 	items = list(
 		/obj/item/clothing/shoes/f13/rag,
 		// Hats
-		/obj/item/clothing/head/f13/headscarf,
+		/obj/item/clothing/mask/bandana/f13/headscarf,
 		/obj/item/clothing/head/f13/pot,
 		// Goggles
 		/obj/item/clothing/glasses/regular,
