@@ -354,11 +354,11 @@ BLIND     // can't see anything
 		flags |= visor_flags
 		flags_inv |= visor_flags_inv
 		flags_cover |= visor_flags_cover
-		to_chat(user, "<span class='notice'>You push \the [src] back into place.</span>")
+		to_chat(user, "<span class='notice'>Вы развернули [src] обратно.</span>")
 		slot_flags = initial(slot_flags)
 	else
 		icon_state += "_up"
-		to_chat(user, "<span class='notice'>You push \the [src] out of the way.</span>")
+		to_chat(user, "<span class='notice'>Вы свернули [src].</span>")
 		gas_transfer_coefficient = null
 		permeability_coefficient = null
 		flags &= ~visor_flags

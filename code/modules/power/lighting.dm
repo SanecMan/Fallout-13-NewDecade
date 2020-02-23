@@ -485,11 +485,11 @@
 			prot = 1
 
 		if(prot > 0)
-			to_chat(user, "<span class='notice'>You remove the light [fitting].</span>")
+			to_chat(user, "<span class='notice'>Вы изъяли [fitting].</span>")
 		else if(istype(user) && user.dna.check_mutation(TK))
-			to_chat(user, "<span class='notice'>You telekinetically remove the light [fitting].</span>")
+			to_chat(user, "<span class='notice'>Вы телекинетически изъяли [fitting].</span>")
 		else
-			to_chat(user, "<span class='warning'>You try to remove the light [fitting], but you burn your hand on it!</span>")
+			to_chat(user, "<span class='warning'>Вы попытались изъять [fitting], но обожглись!</span>")
 
 			var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
 			if(affecting && affecting.receive_damage( 0, 5 ))		// 5 burn damage
