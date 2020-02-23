@@ -52,8 +52,6 @@
 	. = ..()
 
 /datum/weather_controller/rain/process()
-	if(TICK_CHECK)
-		return
 	if(prob(5))
 		var/turf/open/turf = locate(rand(1,world.maxx), rand(1,world.maxy), rand(1,world.maxz))
 		var/area/A = turf.loc
