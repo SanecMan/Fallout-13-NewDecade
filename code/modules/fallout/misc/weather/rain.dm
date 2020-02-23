@@ -57,10 +57,20 @@
 		var/area/A = turf.loc
 		if(!A.open_space)
 			return
-		for(var/mob/living/carbon/human/H in A)
-			if(H?.wear_mask.flags_inv & HIDEFACE || H?.head.flags_inv & HIDEFACE)
-				continue
-			H.adjustToxLoss(0.5)
+		if(!currentrun.len)
+			currentrun = mobs.Copy()
+		while(currentrun.len)
+			var/mob/living/M = currentrun[currentrun.len]
+			currentrun.len--
+			if(istype(M, /mob/living/carbon/human))
+				if(prob(5))
+					lightningstrike(get_turf(M))
+				var/mob/living/carbon/human/H = M
+				H.adjustFireLoss(0.1)
+				H.adjustToxLoss(0.5)
+			if (TICK_CHECK)
+				return
+		currentrun.Cut()
 
 /*	if(!started)
 		return
