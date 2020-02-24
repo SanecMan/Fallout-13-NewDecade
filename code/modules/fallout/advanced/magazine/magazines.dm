@@ -67,3 +67,22 @@
 	/obj/item/crafting/weapon_repair_kit,
 	/obj/item/weapon/grenade/mine/explosive
 	)
+
+///trader///
+
+/obj/machinery/magazine/human/trader
+	name = "Джонатан Милсбрук"
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "trader"
+	product_slogans = "Эй! Не хочешь прикупить себе новую пушку?; Оружие! Медикаменты! Подходим берём!; Не желаете чего-нибудь приобрести?; У меня как в греции, всё есть!"
+	var/product_slogans = ""
+	shipment = list (
+	/obj/item/weapon/gun/energy/laser/pistol,
+	/obj/item/weapon/gun/ballistic/automatic/pistol/n99,
+	/obj/item/weapon/gun/ballistic/shotgun/pipe,
+	/obj/item/weapon/reagent_containers/food/drinks/bottle/sunset,
+	/obj/item/weapon/reagent_containers/pill/patch/medx,
+	/obj/item/weapon/reagent_containers/food/snacks/f13/crisps,
+	/obj/item/crafting/weapon_repair_kit,
+	/obj/item/weapon/gun/ballistic/shotgun/trail
+	)
