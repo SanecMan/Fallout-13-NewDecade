@@ -69,13 +69,16 @@
 	)
 
 ///trader///
+/obj/machinery/magazine/human
+	var/product_slogans = ""
+	icon = 'icons/mob/animal.dmi'
+	name = "Человек"
+	icon_state = "marauder1"
 
 /obj/machinery/magazine/human/trader
 	name = "Джонатан Милсбрук"
-	icon = 'icons/mob/animal.dmi'
 	icon_state = "trader"
 	product_slogans = "Эй! Не хочешь прикупить себе новую пушку?; Оружие! Медикаменты! Подходим берём!; Не желаете чего-нибудь приобрести?; У меня как в греции, всё есть!"
-	var/product_slogans = ""
 	shipment = list (
 	/obj/item/weapon/gun/energy/laser/pistol,
 	/obj/item/weapon/gun/ballistic/automatic/pistol/n99,

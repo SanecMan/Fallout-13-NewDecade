@@ -324,6 +324,12 @@
 /obj/item/weapon/reagent_containers/food/drinks/soda_cans
 	name = "soda can"
 
+/obj/item/weapon/reagent_containers/food/drinks/soda_cans/proc/open_soda(mob/user)
+	to_chat(user, "You pull back the tab of \the [src] with a satisfying pop.") //Ahhhhhhhh
+	ENABLE_BITFIELD(reagents.flags, OPENCONTAINER)
+	playsound(src, "can_open", 50, TRUE)
+	spillable = TRUE
+
 /obj/item/weapon/reagent_containers/food/drinks/soda_cans/attack(mob/M, mob/user)
 	if(M == user && !src.reagents.total_volume && user.a_intent == INTENT_HARM && user.zone_selected == "head")
 		user.visible_message("<span class='warning'>[user] crushes the can of [src] on [user.p_their()] forehead!</span>", "<span class='notice'>You crush the can of [src] on your forehead.</span>")
