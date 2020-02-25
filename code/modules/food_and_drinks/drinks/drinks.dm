@@ -330,10 +330,6 @@
 	playsound(src, "can_open", 50, TRUE)
 	spillable = TRUE
 
-/obj/item/weapon/reagent_containers/food/drinks/soda_cans/attack_self(mob/user)
-	if(mob/user)
-		open_soda(user)
-	return ..()
 
 
 /obj/item/weapon/reagent_containers/food/drinks/soda_cans/attack(mob/M, mob/user)
