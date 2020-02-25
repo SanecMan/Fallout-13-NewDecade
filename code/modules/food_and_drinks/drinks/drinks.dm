@@ -331,7 +331,7 @@
 	spillable = TRUE
 
 /obj/item/weapon/reagent_containers/food/drinks/soda_cans/attack_self(mob/user)
-	if(M == user)
+	if(mob/user)
 		open_soda(user)
 	return ..()
 
