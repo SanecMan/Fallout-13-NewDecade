@@ -138,7 +138,7 @@
 	icon_state = "water_cooler"
 	anchored = 1
 	tank_volume = 500
-	var/paper_cups = 25 //Paper cups left from the cooler
+	var/paper_cups = 5 //Paper cups left from the cooler
 
 /obj/structure/reagent_dispensers/water_cooler/examine(mob/user)
 	..()

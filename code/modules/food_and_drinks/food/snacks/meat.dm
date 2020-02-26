@@ -8,7 +8,7 @@
 	icon_state = "meat"
 	dried_type = /obj/item/weapon/reagent_containers/food/snacks/sosjerky
 	bitesize = 3
-	list_reagents = list("nutriment" = 3)
+	list_reagents = list("nutriment" = 3, "toxin" = 2)
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/plain
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/meat/rawcutlet/plain
 	slices_num = 3
@@ -144,7 +144,7 @@
 	name = "bear meat"
 	desc = "A very manly slab of meat."
 	icon_state = "bearmeat"
-	list_reagents = list("nutriment" = 12, "morphine" = 5, "vitamin" = 2)
+	list_reagents = list("nutriment" = 12, "toxin" = 3, "vitamin" = 2)
 	filling_color = "#FFB6C1"
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/bear
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/meat/rawcutlet/bear
