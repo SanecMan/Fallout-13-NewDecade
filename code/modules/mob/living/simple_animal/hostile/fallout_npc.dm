@@ -642,7 +642,7 @@
 	..()
 
 /obj/effect/mob_spawn/human/corpse/raider
-	name = "Raider"
+	name = "Πειδεπ"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/tribal
 	shoes = /obj/item/clothing/shoes/f13/rag
@@ -667,7 +667,7 @@
 	minimum_distance = 2
 	melee_damage_lower = 50
 	melee_damage_upper = 50
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider, /obj/item/weapon/reagent_containers/pill/patch/jet)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider)
 	self_weight = 25
 	healable = 1
 	ranged = 0
@@ -681,7 +681,7 @@
 	minimum_distance = 2
 	melee_damage_lower = 40
 	melee_damage_upper = 40
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/tribal, /obj/item/weapon/reagent_containers/pill/patch/jet)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider/tribal)
 	self_weight = 22
 	healable = 1
 	ranged = 0
@@ -709,7 +709,7 @@
 	melee_damage_upper = 40
 	maxHealth = 200
 	health = 200
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/baseball, /obj/item/weapon/reagent_containers/pill/patch/jet)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider/baseball)
 	self_weight = 30
 	healable = 1
 	ranged = 0
@@ -736,7 +736,7 @@
 	melee_damage_upper = 20
 	maxHealth = 200
 	health = 200
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/biker, /obj/item/weapon/reagent_containers/pill/patch/jet)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider/biker)
 	self_weight = 30
 	healable = 1
 	ranged = 1

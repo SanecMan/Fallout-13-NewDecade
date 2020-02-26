@@ -595,7 +595,7 @@
 "lw" = (/turf/open/floor/plating/tunnel,/area/f13/metro)
 "lx" = (/obj/structure/closet/firecloset,/turf/open/floor/f13{dir = 9; icon_state = "warndark"},/area/f13/metro)
 "ly" = (/obj/structure/handrail/yellow{icon_state = "y_handrail6"},/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/metro)
-"lz" = (/obj/effect/bump_teleporter{id = "metro1_down"; id_target = "metro1_up"},/turf/open/floor/plasteel/stairs/left{icon_state = "rampuptop"; dir = 1},/area/f13/metro)
+"lz" = (/obj/effect/bump_teleporter{id = 112; id_target = 111},/turf/open/floor/plasteel/stairs/left{icon_state = "rampuptop"; dir = 1},/area/f13/metro)
 "lA" = (/obj/structure/handrail/yellow{icon_state = "y_handrail10"},/turf/open/floor/f13{dir = 1; icon_state = "warndark"},/area/f13/metro)
 "lB" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{tag = "icon-reddirtyfull"; icon_state = "reddirtyfull"},/area/f13/clinic)
 "lC" = (/obj/structure/ladder{height = -1; id = 224},/turf/open/indestructible/ground/mountain,/area/f13/caves)
