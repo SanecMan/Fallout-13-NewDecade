@@ -13,8 +13,8 @@
 		#include "map_files\TexasWasteland\oregon_legacy.dmm"
 		#include "map_files\TexasWasteland\z2_legacy.dmm"
 
-		#define MAP_PATH "map_files/OregonWasteland"
-        #define MAP_FILE "texas_legacy.dmm"
+		#define MAP_PATH "map_files/TexasWasteland"
+        #define MAP_FILE "oregon_legacy.dmm"
         #define MAP_NAME "Oregon Wasteland"
         #define MAP_FACTIONS_LIST list("vault", "vault_npc", "bs", "bs_npc", "enclave", "enclave_npc", "none", "none_npc", "city", "city_npc", "raiders", "raiders_npc","ncr", "ncr_npc","legion","legion_npc","followers","followers_npc","coc")
 
