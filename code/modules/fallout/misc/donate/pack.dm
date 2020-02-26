@@ -41,14 +41,12 @@
 	items = list(
 		/obj/item/clothing/shoes/f13/rag,
 		// Hats
-		/obj/item/clothing/mask/bandana/f13/headscarf,
 		/obj/item/clothing/head/f13/pot,
 		// Goggles
 		/obj/item/clothing/glasses/regular,
 		// Uniforms
 		/obj/item/clothing/under/pants/f13/ghoul,
 		/obj/item/clothing/under/pants/f13/cloth,
-		/obj/item/clothing/under/pants/f13/caravan,
 		/obj/item/clothing/under/f13/rag,
 		/obj/item/clothing/under/f13/tribal,
 		/obj/item/clothing/under/f13/female/tribal,
@@ -60,27 +58,8 @@
 		/obj/item/clothing/suit/f13/mantle_liz,
 		// Items
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival,
-		/obj/item/weapon/dice/d6,
-		/obj/item/toy/cards/deck,
-		/obj/item/weapon/storage/fancy/cigarettes,
-		/obj/item/weapon/storage/fancy/cigarettes/tortoise,
-		/obj/item/weapon/storage/box/matches,
 		// Weapons
-		/obj/item/weapon/pipe,
-		/obj/item/weapon/tireiron,
-		/obj/item/weapon/pan,
-		/obj/item/weapon/kitchen/rollingpin,
-		/obj/item/weapon/kitchen/knife,
-		/obj/item/weapon/kitchen/knife/butcher,
-		/obj/item/weapon/scalpel,
-		/obj/item/weapon/shovel,
-		/obj/item/weapon/hammer,
-		/obj/item/weapon/crowbar,
-		/obj/item/weapon/screwdriver,
-		/obj/item/weapon/wirecutters,
-		/obj/item/weapon/wrench,
-		/obj/item/weapon/weldingtool/experimental,
-		/obj/item/weapon/restraints/legcuffs/bola
+		/obj/item/weapon/pipe
 		)
 	price = -1
 
@@ -327,6 +306,7 @@
 	items = list(/obj/item/weapon/storage/f76bag/bag)
 	price = 20000
 
+/*
 /datum/content_pack/leaders
 	name = "Лидеры всех основных фракций"
 	id = "leaders"
@@ -338,31 +318,182 @@
 		/datum/job/legate,
 		/datum/job/elder,
 		/datum/job/colonel,
-	//	/datum/job/overseer
-		//datum/job/preacher
+		/datum/job/overseer
+		/datum/job/preacher
 		)
 	price = 100000
+*/
 
+///отребье///
 
-/datum/content_pack/enclave2
+/datum/content_pack/gang_leader
+	name = "Отребье: Лидер банд"
+	id = "gang_lead"
+	desc = "<b>Открывает доступ к роли Лидера банд!</b><br>Стас Боретский мира сего!<br>."
+	roles = list(/datum/job/gangleader)
+	price = 15000
+
+/datum/content_pack/slaver
+	name = "Отребье: Работорговец"
+	id = "slaver"
+	desc = "<b>Открывает доступ к роли Работорговца!</b><br>Торговля ЛЮДЬМИ спасёт пустоши!<br>."
+	roles = list(/datum/job/slaver)
+	price = 7000
+
+/datum/content_pack/raider
+	name = "Отребье: Рейдер"
+	id = "raider"
+	desc = "<b>Открывает доступ к роли Рейдера!</b><br>УМРИ-УМРИ-УМРИ!<br>."
+	roles = list(/datum/job/raider)
+	price = 1500
+
+///legion///
+
+/datum/content_pack/leg_centurion
+	name = "Легион: Центурион"
+	id = "legion_centurion"
+	desc = "<b>Открывает доступ к роли Центуриона!</b><br>Дегенераты как ты, должны весеь на кресте!<br>."
+	roles = list(/datum/job/centurion)
+	price = 60000
+
+/datum/content_pack/leg_vex
+	name = "Легион: Виксиларий"
+	id = "legion_vex"
+	desc = "<b>Открывает доступ к роли Виксилария!</b><br>Фу, вещества!<br>."
+	roles = list(/datum/job/vex)
+	price = 30000
+
+/datum/content_pack/leg_decan
+	name = "Легион: Деканус"
+	id = "legion_decane"
+	desc = "<b>Открывает доступ к роли Декануса!</b><br>СМЕРТЬ БРАТЬЯМ БУ... Не та реплика... СМЕРТЬ БРАТСТВУ!<br>."
+	roles = list(/datum/job/decan)
+	price = 20000
+
+/datum/content_pack/leg_prime
+	name = "Легион: Прайм"
+	id = "legion_prime"
+	desc = "<b>Открывает доступ к роли Прайма!</b><br>СМЕРТЬ ПЛУТОКРАТАМ!<br>."
+	roles = list(/datum/job/prime)
+	price = 10000
+
+///bruhderhood of gay///
+
+/datum/content_pack/bs_elder
+	name = "Братство: Старейшина"
+	id = "bs_elder"
+	desc = "<b>Открывает доступ к роли Старейшины!</b><br>ТЕХНОЛОГИИ!<br>."
+	roles = list(/datum/job/elder)
+	price = 80000
+
+/datum/content_pack/bs_paladin
+	name = "Братство: Паладин"
+	id = "bs_paladin"
+	desc = "<b>Открывает доступ к роли Паладина!</b><br>ТЕХНОЛОГИИ!<br>."
+	roles = list(/datum/job/paladin)
+	price = 45000
+
+/datum/content_pack/bs_private
+	name = "Братство: Писец и Рыцарь"
+	id = "bs_private"
+	desc = "<b>Открывает доступ к роли Радиста и Рыцаря!</b><br>ТЕХНОЛОГИИ!<br>."
+	roles = list(/datum/job/radist_bs, /datum/job/knight)
+	price = 25000
+
+/datum/content_pack/bs_scriber
+	name = "Братство: Писец"
+	id = "bs_scribe"
+	desc = "<b>Открывает доступ к роли Писца!</b><br>ТЕХНОЛОГИИ!<br>."
+	roles = list(/datum/job/scriber)
+	price = 15000
+
+///Нейтралы и городские///
+
+/datum/content_pack/mayor
+	name = "Городские: Мэр"
+	id = "mayor"
+	desc = "<b>Открывает доступ к роли Мэр!</b><br>Кто если не я?<br>."
+	roles = list(/datum/job/mayor)
+	price = 15000
+
+/datum/content_pack/sherif
+	name = "Городские: Шериф"
+	id = "sherif"
+	desc = "<b>Открывает доступ к роли Шериф!</b><br>Что за шляпка? Гром-баба?<br>."
+	roles = list(/datum/job/sheriff)
+	price = 8000
+
+/datum/content_pack/trader
+	name = "Городские: Торговец"
+	id = "trader"
+	desc = "<b>Открывает доступ к роли Торговец!</b><br>Торговля спасёт пустоши!<br>."
+	roles = list(/datum/job/trader)
+	price = 5000
+
+/datum/content_pack/merc
+	name = "Нейтралы: аёмник"
+	id = "mercenary"
+	desc = "<b>Открывает доступ к роли Наёмник!</b><br>Время деньги!<br>."
+	roles = list(/datum/job/mercenary)
+	price = 3500
+
+/datum/content_pack/gunrunner
+	name = "Нейтралы: Оружейник"
+	id = "gunrunners"
+	desc = "<b>Открывает доступ к роли Оружейник!</b><br>Оружие - наше всё!<br>."
+	roles = list(/datum/job/gunrunner)
+	price = 10000
+
+///Анклав///
+
+/datum/content_pack/enclave_colonel
+	name = "Анклав: роль полковника"
+	id = "enclave_colonel"
+	desc = "<b>Открывает доступ к роли полковника Анклава!</b><br>Служу Америке!<br>."
+	roles = list(/datum/job/colonel)
+	price = 80000
+
+/datum/content_pack/enclave_sergeant
 	name = "Анклав: роль сержанта"
 	id = "enclave_sergeant"
 	desc = "<b>Открывает доступ к роли сержанта Анклава!</b><br>И-ДИ-ОТ!<br>."
 	roles = list(/datum/job/enclave_sergeant)
-	price = 35000
+	price = 45000
 
 /datum/content_pack/enclave
-	name = "Анклав: роль рядового"
+	name = "Анклав: роль рядового и радиста"
 	id = "enclave_private"
-	desc = "<b>Открывает доступ к роли рядового Анклава!</b><br>ГДЕ ВАША СИЛОВАЯ БРОНЯ?.<br>."
-	roles = list(/datum/job/enclave_private)
-	price = 10000
+	desc = "<b>Открывает доступ к роли рядового и радиста Анклава!</b><br>ГДЕ ВАША СИЛОВАЯ БРОНЯ?.<br>."
+	roles = list(/datum/job/enclave_private, /datum/job/enclave_radist)
+	price = 20000
 
-/*
-/datum/content_pack/dildo
-	name = "ERP"
-	id = "erp"
-	desc = "<b>Доступен для: Всех фракций!</b>HARDER DADDY</b>"
-	items = list(/obj/item/weapon/dildo)
-	price = 15000
-*/
+///НКР///
+
+/datum/content_pack/ncr_general
+	name = "НКР: роль генерала."
+	id = "ncr_general"
+	desc = "<b>Открывает доступ к роли генерала НКР!</b><br>Почувствуй вкус демократии!<br>."
+	roles = list(/datum/job/general)
+	price = 50000
+
+/datum/content_pack/ncr_sergeant
+	name = "НКР: роль рейнджера."
+	id = "ncr_sergeant"
+	desc = "<b>Открывает доступ к роли сержанта НКР!</b><br>ГДЕ ВАША СИЛО.. А, не та реплика...<br>."
+	roles = list(/datum/job/ncr_sergeant)
+	price = 30000
+
+
+/datum/content_pack/ncr_ranger
+	name = "НКР: роль рейнджера."
+	id = "ncr_ranger"
+	desc = "<b>Открывает доступ к роли рейнджера НКР!</b><br>Я не должен тут находиться...<br>."
+	roles = list(/datum/job/vranger)
+	price = 20000
+
+/datum/content_pack/ncr_troop
+	name = "НКР: роль рядового."
+	id = "ncr_private"
+	desc = "<b>Открывает доступ к роли рядового НКР!</b><br>Побродив по Мохаве, начинаешь скучать по ядерной зиме...<br>."
+	roles = list(/datum/job/trooper)
+	price = 10000

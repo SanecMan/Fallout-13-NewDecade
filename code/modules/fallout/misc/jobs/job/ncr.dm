@@ -78,7 +78,7 @@
 	supervisors = "генералу"
 	selection_color = "#9d9fec"
 	minimal_player_age = 31
-
+	whitelist_on = 1
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper", "specops")
 
 	required_items = list(
@@ -141,9 +141,9 @@
 	supervisors = "центральному штабу НКР"
 	selection_color = "#9d9fec"
 	minimal_player_age = 25
-
+	whitelist_on = 1
 	outfit = /datum/outfit/job/vranger
-
+	whitelist_on = 1
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "specops")
 
 	required_items = list(
@@ -201,7 +201,7 @@
 	supervisors = "генералу"
 	selection_color = "#9d9fec"
 	minimal_player_age = 16
-
+	whitelist_on = 1
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper", "specops")
 
 	required_items = list(

@@ -78,7 +78,7 @@
 	supervisors = "Старейшине"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
-
+	whitelist_on = 1
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "f76", "specops")
 
 	outfit = /datum/outfit/job/paladin
@@ -141,7 +141,7 @@
 	supervisors = "Старейшине и Паладинам"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
-
+	whitelist_on = 1
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "f76", "specops")
 
 	required_items = list(
@@ -202,7 +202,7 @@
 	supervisors = "Старейшине"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
-
+	whitelist_on = 1
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "f76", "specops")
 
 	denied_items = list(
@@ -254,7 +254,7 @@
 	supervisors = "Старейшине и Паладинам"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
-
+	whitelist_on = 1
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "f76", "specops")
 
 	required_items = list(
