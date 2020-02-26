@@ -33,8 +33,8 @@
 	death_sound = 'sound/f13npc/robot_death.ogg'
 
 	harm_intent_damage = 15
-	melee_damage_lower = 15
-	melee_damage_upper = 25
+	melee_damage_lower = 30
+	melee_damage_upper = 35
 	minimum_distance = 2
 	retreat_distance = 4
 	attacktext = "בüוע"

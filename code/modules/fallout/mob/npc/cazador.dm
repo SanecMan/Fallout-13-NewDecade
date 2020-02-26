@@ -38,8 +38,8 @@
 
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0.2, CLONE = 0, STAMINA = 1, OXY = 0)
 	harm_intent_damage = 10
-	melee_damage_lower = 10
-	melee_damage_upper = 20
+	melee_damage_lower = 20
+	melee_damage_upper = 30
 	attacktext = "жалит"
 	attack_sound = 'sound/weapons/bite.ogg'
 

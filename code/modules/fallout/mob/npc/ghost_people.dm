@@ -30,8 +30,8 @@
 
 	death_sound = 'sound/f13npc/ghoul_death.ogg'
 
-	melee_damage_lower = 15
-	melee_damage_upper = 30
+	melee_damage_lower = 25
+	melee_damage_upper = 35
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	attacktext = "царапает"

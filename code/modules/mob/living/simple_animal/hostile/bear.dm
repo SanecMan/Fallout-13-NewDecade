@@ -1,7 +1,7 @@
 //Space bears!
 /mob/living/simple_animal/hostile/bear
 	name = "space bear"
-	desc = "You don't need to be faster than a space bear, you just need to outrun your crewmates."
+	desc = "You don't need to be faster than a bear, you just need to outrun your mates."
 	icon_state = "bear"
 	icon_living = "bear"
 	icon_dead = "bear_dead"
@@ -36,6 +36,11 @@
 
 	faction = list("russian")
 	gold_core_spawnable = 1
+
+/mob/living/simple_animal/hostile/yaoi
+	name = "ίξ-Γΰι"
+	maxHealth = 120
+	health = 120
 
 //SPACE BEARS! SQUEEEEEEEE~     OW! FUCK! IT BIT MY HAND OFF!!
 /mob/living/simple_animal/hostile/bear/Hudson

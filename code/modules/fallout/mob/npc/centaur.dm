@@ -23,9 +23,7 @@
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	self_weight = 60
-
 	faction = list("hostile")
-
 	sound_speak = list('sound/f13npc/Npc_centaur_chasevox_02.ogg','sound/f13npc/Npc_centaur_conscious_lp.ogg','sound/f13npc/Npc_centaur_idle_scan.ogg','sound/f13npc/Npc_centaur_walkbreath_01.ogg')
 	sound_speak_chance = 5
 
