@@ -32,6 +32,7 @@
 				playsound(get_turf(src), 'sound/effects/meteorimpact.ogg', 100 , 0, 0)
 				for(var/i=1 to log_amount)
 					new /obj/item/weapon/grown/log/tree(get_turf(src))
+						new /obj/item/weapon/sawdust(get_turf(src))
 				qdel(src)
 
 	else
