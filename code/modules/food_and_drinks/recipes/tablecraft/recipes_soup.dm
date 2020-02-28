@@ -224,3 +224,16 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/soup/beet/red
 	category = CAT_SOUP
+
+
+// суп из опилок блять
+
+/datum/crafting_recipe/food/sawdustsoup
+	name = "Sawdust soup"
+	reqs = list(
+		/datum/reagent/water = 10,
+		/obj/item/weapon/reagent_containers/glass/bowl = 1,
+		/obj/item/weapon/reagent_containers/food/snacks/f13/sawdust = 2,
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/soup/f13/sawdust
+	category = CAT_SOUP

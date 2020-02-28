@@ -303,3 +303,11 @@
 	desc = "Strange grass. Looks safe."
 	icon_state = "agave"
 	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
+
+///ебеньградцы довольны.///
+
+/obj/item/weapon/reagent_containers/food/snacks/soup/f13/sawdust
+	name = "—уп с опилками"
+	desc = "ѕодкрепившись этим «јћ≈„“ј“≈Ћ№Ќџћ супом, вам захотелось работать в шахтах в сорока градусный мороз!"
+	icon_state = "sawsoup"
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 3, "mine_salve" = 1)
