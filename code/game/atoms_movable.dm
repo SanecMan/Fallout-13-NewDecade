@@ -11,7 +11,7 @@
 	var/verb_say = "говорит"
 	var/verb_ask = "спрашивает"
 	var/verb_exclaim = "восклицает"
-	var/verb_yell = "ноет"
+	var/verb_yell = "вопит"
 	var/inertia_dir = 0
 	var/atom/inertia_last_loc
 	var/inertia_moving = 0

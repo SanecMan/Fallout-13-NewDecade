@@ -623,7 +623,7 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("İÉ, ÑÓÊÀ, ÑŞÄÀ ÈÄÈ!", "Èñïóãàëñÿ? ÄÀ ÒÎ×ÍÎ ÈÑÏÓÃÀËÑß!.", "ÄÎËÁÎÅÁÈÍÀ, ÑŞÄÀ ÈÄÈ!", "ß ÌÎÃÓ ÄÅËÀÒÜ İÒÎ ÂÅÑÜ ÑÓÊÀ ÄÅÍÜ!", "ß äåëàë ıòî ñ÷îòíè ğàç, äóìàåøü ıòîò áóäåò èíà÷å?")
+	speak = list("İÉ, ÑÓÊÀ, ÑŞÄÀ ÈÄÈ!", "Èñïóãàëñÿ? ÄÀ ÒÎ×ÍÎ ÈÑÏÓÃÀËÑß!.", "ÄÎËÁÎÅÁÈÍÀ, ÑŞÄÀ ÈÄÈ!", "ß ÌÎÃÓ ÄÅËÀÒÜ İÒÎ ÂÅÑÜ ÑÓÊÀ ÄÅÍÜ!", "ß äåëàë ıòî ñîòíè ğàç, äóìàåøü ıòîò áóäåò èíà÷å?")
 	speak_emote = list("îğ¸ò", "êğè÷èò")
 	speak_chance = 2
 	XP = 15
@@ -663,8 +663,8 @@
 	icon_living = "firefighter_raider"
 	icon_dead = "firefighter_raider"
 	icon_gib = "firefighter_raider"
-	retreat_distance = 2
-	minimum_distance = 2
+	retreat_distance = 0
+	minimum_distance = 0
 	melee_damage_lower = 50
 	melee_damage_upper = 50
 	loot = list(/obj/effect/mob_spawn/human/corpse/raider)
@@ -677,8 +677,8 @@
 	icon_living = "tribal_raider"
 	icon_dead = "tribal_raider"
 	icon_gib = "tribal_raider"
-	retreat_distance = 2
-	minimum_distance = 2
+	retreat_distance = 0
+	minimum_distance = 0
 	melee_damage_lower = 40
 	melee_damage_upper = 40
 	loot = list(/obj/effect/mob_spawn/human/corpse/raider/tribal)
@@ -703,8 +703,8 @@
 	icon_living = "baseball_raider"
 	icon_dead = "baseball_raider"
 	icon_gib = "baseball_raider"
-	retreat_distance = 2
-	minimum_distance = 2
+	retreat_distance = 1
+	minimum_distance = 1
 	melee_damage_lower = 40
 	melee_damage_upper = 40
 	maxHealth = 200

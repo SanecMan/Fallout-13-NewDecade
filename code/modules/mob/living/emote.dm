@@ -379,7 +379,7 @@
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
 	else if(copytext(input,1,9) == "восклицает")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext(input,1,6) == "ноет")
+	else if(copytext(input,1,6) == "вопит")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
 	else if(copytext(input,1,5) == "спрашивает")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")

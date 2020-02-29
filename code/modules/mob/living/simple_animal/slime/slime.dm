@@ -23,8 +23,8 @@ var/list/slime_colours = list("rainbow", "grey", "purple", "metal", "orange",
 	response_help  = "гладит"
 	response_disarm = "гонит"
 	response_harm   = "наступает на"
-	emote_see = list("jiggles", "bounces in place")
-	speak_emote = list("telepathically chirps")
+	emote_see = list("дрожит", "скачет на месте")
+	speak_emote = list("телепатически хлюпает")
 	bubble_icon = "slime"
 
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)

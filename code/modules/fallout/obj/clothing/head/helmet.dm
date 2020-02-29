@@ -781,12 +781,12 @@
 
 /obj/item/clothing/head/hardhat/f13/headlamp
 	name = "налобный фонарик"
-	icon_state = "headlamp"
+	icon_state = "headlamp_head"
 	item_state = "headlamp"
-//	light_color = LIGHT_COLOR_YELLOW
-	brightness_on = 4 //luminosity when on
+	light_color = LIGHT_COLOR_YELLOW
+	brightness_on = 2 //luminosity when on
 	on = 0
-	item_color = "yellow" //Determines used sprites: hardhat[on]_[item_color] and hardhat[on]_[item_color]2 (lying down sprite)
+	item_color = "head" //Determines used sprites: hardhat[on]_[item_color] and hardhat[on]_[item_color]2 (lying down sprite)
 	armor = list(melee = 5, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = 0
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
