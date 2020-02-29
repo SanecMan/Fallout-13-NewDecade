@@ -39,7 +39,7 @@
 	if(user.a_intent == INTENT_HARM)
 		return ..()
 	if(!eatverb)
-		eatverb = pick("хрумкаете","жуёте","кусаете","поедаете")
+		eatverb = pick("bite","chew","nibble","gnaw","gobble","chomp")
 	if(!reagents.total_volume)						//Shouldn't be needed but it checks to see if it has anything left in it.
 		to_chat(user, "<span class='notice'>None of [src] left, oh no!</span>")
 		M.unEquip(src)	//so icons update :[
@@ -59,15 +59,15 @@
 				return 0
 
 			else if(fullness <= 50)
-				to_chat(M, "<span class='notice'>Вы жадно сжираете [src] и не жуя, глотаете!</span>")
+				to_chat(M, "<span class='notice'>Вы жрёте [src] не оставляя ни кусочка!</span>")
 			else if(fullness > 50 && fullness < 150)
-				to_chat(M, "<span class='notice'>Вы жадно [eatverb] [src].</span>")
+				to_chat(M, "<span class='notice'>Вы принялись жадно есть [src].</span>")
 			else if(fullness > 150 && fullness < 500)
-				to_chat(M, "<span class='notice'>Вы [eatverb] [src].</span>")
+				to_chat(M, "<span class='notice'>Вы едите [src].</span>")
 			else if(fullness > 500 && fullness < 600)
-				to_chat(M, "<span class='notice'>Вы нехотя [eatverb] кусочек [src].</span>")
+				to_chat(M, "<span class='notice'>Вы неохотно кусаете немного [src].</span>")
 			else if(fullness > (900 * (1 + M.overeatduration / 2000)))	// The more you eat - the more you can eat
-				to_chat(M, "<span class='warning'>Вы больше не можете съесть ни кусочка [src]!</span>")
+				to_chat(M, "<span class='warning'>You cannot force any more of \the [src] to go down your throat!</span>")
 				return 0
 		else
 			if(!isbrain(M))		//If you're feeding it to someone else.
