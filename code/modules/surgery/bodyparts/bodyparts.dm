@@ -509,7 +509,7 @@
 		The hokey pokey has certainly changed a lot since space colonisation."
 	// alternative spellings of 'pokey' are availible
 	icon_state = "default_human_r_leg"
-	attack_verb = list("kicked", "stomped")
+	attack_verb = list("пинает", "давит")
 	max_damage = 40
 	body_zone = "r_leg"
 	body_part = LEG_RIGHT

@@ -45,7 +45,7 @@
 		to_chat(M, "<span class='notice'>Вы отхлебнули из [src].</span>")
 
 	else
-		M.visible_message("<span class='danger'>[user] attempts to feed the contents of [src] to [M].</span>", "<span class='userdanger'>[user] attempts to feed the contents of [src] to [M].</span>")
+		M.visible_message("<span class='danger'>[user] пытается напоить [M] содержимым [src].</span>", "<span class='userdanger'>[user] пытается споить[M]  содержимое [src].</span>")
 		if(!do_mob(user, M))
 			return
 		if(!reagents || !reagents.total_volume)
