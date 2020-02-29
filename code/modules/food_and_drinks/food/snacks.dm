@@ -39,7 +39,7 @@
 	if(user.a_intent == INTENT_HARM)
 		return ..()
 	if(!eatverb)
-		eatverb = pick("хрумкаете","жуёте","кусаете", "поедаете")
+		eatverb = pick("хрумкаете","жуёте","кусаете","поедаете")
 	if(!reagents.total_volume)						//Shouldn't be needed but it checks to see if it has anything left in it.
 		to_chat(user, "<span class='notice'>None of [src] left, oh no!</span>")
 		M.unEquip(src)	//so icons update :[
