@@ -202,7 +202,7 @@
 	list_reagents = list("dry_ramen" = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/beer
-	name = "Space Beer"
+	name = "пиво"
 	desc = "Beer. In space."
 	icon_state = "beer"
 	list_reagents = list("beer" = 30)
