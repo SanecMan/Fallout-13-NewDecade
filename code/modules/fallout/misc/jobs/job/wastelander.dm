@@ -76,7 +76,7 @@
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/mercadv
 	shoes = /obj/item/clothing/shoes/f13/tan
-	head = /obj/item/clothing/head/hardhat/f13/headlamp
+//	head = /obj/item/clothing/head/hardhat/f13/headlamp
 
 //Mercenary
 
