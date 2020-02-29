@@ -145,9 +145,8 @@
 	suit = /obj/item/clothing/suit/f13/veteran
 	head = null
 	belt = /obj/item/weapon/storage/belt/military/army
-	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
-	belt_contents = list(/obj/item/ammo_box/F13/m308 = 1, \
-		/obj/item/stack/medical/healingpowder = 2, \
+	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol/f4/pipe_pistol
+	belt_contents = list(/obj/item/stack/medical/healingpowder = 2, \
 		/obj/item/weapon/reagent_containers/food/drinks/flask/survival = 1,
 		/obj/item/device/flashlight/torch/flare/green = 1)
 

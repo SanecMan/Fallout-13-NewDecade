@@ -341,6 +341,29 @@
 	price = 2500
 	small_gun = 1
 
+
+//fallout 4 бл€ть
+
+/obj/item/weapon/gun/ballistic/automatic/pistol/f4
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_state = "f4"
+
+/obj/item/weapon/gun/ballistic/automatic/pistol/f4/pipe_pistol
+	name = "гладкоствол с патронником"
+	desc = "—амодельный пистолет из ближайшего мусора. Ћучше так, чем ничего."
+	icon_state = "pipe_pistol"
+	origin_tech = "combat=2;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/F13/m10
+	fire_sound = "10mmfire"
+	force = 5
+	can_suppress = 0
+	burst_size = 1
+	fire_delay = 2
+	w_class = 2
+	price = 50
+	recoil = 3
+	small_gun = 1
+
 ///как кодить дл€ малышей:
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/f13/stal //объ€вл€ем директорию объектов
