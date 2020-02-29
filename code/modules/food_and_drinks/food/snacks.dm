@@ -59,7 +59,7 @@
 				return 0
 
 			else if(fullness <= 50)
-				to_chat(M, "<span class='notice'>Вы жадно [eatverb] [src] и не жуя, глотаете!</span>")
+				to_chat(M, "<span class='notice'>Вы жадно сжираете [src] и не жуя, глотаете!</span>")
 			else if(fullness > 50 && fullness < 150)
 				to_chat(M, "<span class='notice'>Вы жадно [eatverb] [src].</span>")
 			else if(fullness > 150 && fullness < 500)
