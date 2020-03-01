@@ -171,3 +171,7 @@
 		var/mob/living/M = target
 		M.adjust_fire_stacks(1)
 		M.IgniteMob()
+
+
+/obj/item/projectile/bullet/F13/c38mmBullet
+	damage = 4

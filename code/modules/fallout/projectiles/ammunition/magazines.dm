@@ -284,3 +284,10 @@
 
 /obj/item/ammo_box/magazine/internal/shot/lethal/trail
 	max_ammo = 8
+
+/obj/item/ammo_box/magazine/internal/cylinder/piperev
+	name = ".38 cylinder"
+	icon_state = "b38"
+	ammo_type = /obj/item/ammo_casing/F13/piperev
+	caliber = "38mm"
+	max_ammo = 12

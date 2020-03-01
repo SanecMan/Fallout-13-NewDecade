@@ -115,3 +115,10 @@
 
 /obj/item/ammo_casing/F13/a556/fire
 	projectile_type = /obj/item/projectile/bullet/F13/c556Bullet/fire
+
+/obj/item/ammo_casing/F13/piperev
+	desc = "A .38 bullet casing."
+	caliber = "38mm"
+	projectile_type = /obj/item/projectile/bullet/F13/c38mmBullet
+	randomspread = 1
+	variance = 3

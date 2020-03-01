@@ -784,7 +784,7 @@
 	icon_state = "hardhat0_head"
 	item_state = "hardhat0_head"
 	light_color = LIGHT_COLOR_YELLOW
-	brightness_on = 2 //luminosity when on
+	brightness_on = 3 //luminosity when on
 	on = 0
 	item_color = "head" //Determines used sprites: hardhat[on]_[item_color] and hardhat[on]_[item_color]2 (lying down sprite)
 	armor = list(melee = 5, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)

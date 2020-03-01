@@ -351,10 +351,10 @@
 /obj/item/weapon/gun/ballistic/automatic/pistol/f4/pipe_pistol
 	name = "гладкоствол с патронником"
 	desc = "Самодельный пистолет из ближайшего мусора. Лучше так, чем ничего."
-	icon_state = "pipe_pistol"
+	icon_state = "zipgun"
 	origin_tech = "combat=2;materials=2"
-	mag_type = /obj/item/ammo_box/magazine/F13/m10
-	fire_sound = "10mmfire"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/piperev
+	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	force = 5
 	can_suppress = 0
 	burst_size = 1
