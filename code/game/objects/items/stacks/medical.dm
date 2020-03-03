@@ -69,9 +69,9 @@
 		else
 			var/t_himself = "себе"
 			if(user.gender == MALE)
-				t_himself = "нём"
+				t_himself = "себе"
 			else if(user.gender == FEMALE)
-				t_himself = "ней"
+				t_himself = "себе"
 			user.visible_message("<span class='notice'>[user] начинает применение [src] на [t_himself]...</span>", "<span class='notice'>Вы начинаете применение [src] на себе...</span>")
 			if(!do_mob(user, M, self_delay))
 				return
