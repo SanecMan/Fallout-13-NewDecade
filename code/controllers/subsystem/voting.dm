@@ -91,7 +91,7 @@ var/datum/subsystem/vote/SSvote
 		if(question)
 			text += "<b>[question]</b>"
 		else
-			text += "<b>[capitalize(mode)] Vote</b>"
+			text += "<b>[capitalize(mode)] голосование</b>"
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			if(!votes)
@@ -177,11 +177,11 @@ var/datum/subsystem/vote/SSvote
 			if("gamemode")
 				choices.Add(config.votable_modes)
 			if("custom")
-				question = stripped_input(usr,"What is the vote for?")
+				question = stripped_input(usr,"О чём это голосование?")
 				if(!question)
 					return 0
 				for(var/i=1,i<=10,i++)
-					var/option = capitalize(stripped_input(usr,"Please enter an option or hit cancel to finish"))
+					var/option = capitalize(stripped_input(usr,"Введите вариант ответа или оставьте поле пустым чтобы продолжить"))
 					if(!option || mode || !usr.client)
 						break
 					choices.Add(option)
