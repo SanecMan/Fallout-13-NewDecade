@@ -42,9 +42,9 @@
 		  <div class="right_table">
 		  	<center>[spack_data["name"]]</center>
 		  	<span style="float: right; font-style: normal; font-weight: lighter; font-size: xx-small;">Баланс: [parent.donate_money] атомов</span><br>
-		  	description:
+		  	Описание:
 		  	<p style="margin-left: 25px; font-size: x-small;">[spack_data["desc"]]</p>
-		  	<h2>Price: [(pack.id in parent.content_packs) ? "purchased" : pack.price]</h2><br>
+		  	<h2>Цена: [(pack.id in parent.content_packs) ? "purchased" : pack.price]</h2><br>
            	<a [(selected_pack in parent.content_packs) ? "class='linkOff'" : ""] href='?_src_=prefs;preference=content_packs;buy=[pack.id]'>Купить</a>
             <div style="[hide_data ? "visibility: hidden;" : ""] display: block; width: 98%; border: 1px solid #0bcc62; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px">
               <div style="width: 30%; display: inline-block; float: left;[spack_data["items"] ? "" : " visibility: hidden;"]">
@@ -68,6 +68,6 @@
                 <div style="width: 100%;clear: both; "></div>
             </div>
 		  </div>"}
-	var/datum/browser/popup = new(user, "packs", "<div align='center'>Content Packs</div>", 640, 350)
+	var/datum/browser/popup = new(user, "packs", "<div align='center'>Атомный Магазин</div>", 640, 350)
 	popup.set_content(html)
 	popup.open(0)
