@@ -332,7 +332,7 @@
 	desc = "<b>Открывает доступ к роли Лидера банд!</b><br>Стас Боретский мира сего!<br>."
 	roles = list(/datum/job/gangleader)
 	price = 15000
-
+/*
 /datum/content_pack/slaver
 	name = "Отребье: Работорговец"
 	id = "slaver"
@@ -346,7 +346,7 @@
 	desc = "<b>Открывает доступ к роли Рейдера!</b><br>УМРИ-УМРИ-УМРИ!<br>."
 	roles = list(/datum/job/raider)
 	price = 1500
-
+*/
 ///legion///
 
 /datum/content_pack/leg_centurion
@@ -392,7 +392,7 @@
 	desc = "<b>Открывает доступ к роли Паладина!</b><br>ТЕХНОЛОГИИ!<br>."
 	roles = list(/datum/job/paladin)
 	price = 45000
-
+/*
 /datum/content_pack/bs_private
 	name = "Братство: Писец и Рыцарь"
 	id = "bs_private"
@@ -406,7 +406,7 @@
 	desc = "<b>Открывает доступ к роли Писца!</b><br>ТЕХНОЛОГИИ!<br>."
 	roles = list(/datum/job/scriber)
 	price = 15000
-
+*/
 ///Нейтралы и городские///
 
 /datum/content_pack/mayor
@@ -415,23 +415,23 @@
 	desc = "<b>Открывает доступ к роли Мэр!</b><br>Кто если не я?<br>."
 	roles = list(/datum/job/mayor)
 	price = 15000
-
+/*
 /datum/content_pack/sherif
 	name = "Городские: Шериф"
 	id = "sherif"
 	desc = "<b>Открывает доступ к роли Шериф!</b><br>Что за шляпка? Гром-баба?<br>."
 	roles = list(/datum/job/sheriff)
 	price = 8000
-
+*/
 /datum/content_pack/trader
 	name = "Городские: Торговец"
 	id = "trader"
 	desc = "<b>Открывает доступ к роли Торговец!</b><br>Торговля спасёт пустоши!<br>."
 	roles = list(/datum/job/trader)
 	price = 5000
-
+/*
 /datum/content_pack/merc
-	name = "Нейтралы: аёмник"
+	name = "Нейтралы: Наёмник"
 	id = "mercenary"
 	desc = "<b>Открывает доступ к роли Наёмник!</b><br>Время деньги!<br>."
 	roles = list(/datum/job/mercenary)
@@ -443,7 +443,7 @@
 	desc = "<b>Открывает доступ к роли Оружейник!</b><br>Оружие - наше всё!<br>."
 	roles = list(/datum/job/gunrunner)
 	price = 10000
-
+*/
 ///Анклав///
 
 /datum/content_pack/enclave_colonel

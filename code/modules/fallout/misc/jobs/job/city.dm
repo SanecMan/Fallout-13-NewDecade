@@ -84,7 +84,7 @@
 	access = list()
 	minimal_access = list()
 	outfit = /datum/outfit/job/sheriff
-	whitelist_on = 1
+	whitelist_on = 0
 	allowed_packs = list("starter", "cigarettes", "follower", "team_fortress", "wardrobe", "vault13", "bard", "khan", "super_ten", "punk", "off", "madmax", "doom", "f76", "specops")
 
 	required_items = list(
