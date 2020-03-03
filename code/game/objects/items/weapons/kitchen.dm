@@ -13,8 +13,8 @@
 	origin_tech = "materials=1"
 
 /obj/item/weapon/kitchen/fork
-	name = "fork"
-	desc = "Pointy."
+	name = "вилка"
+	desc = "Острая."
 	icon_state = "fork"
 	force = 5
 	w_class = WEIGHT_CLASS_TINY
@@ -51,9 +51,9 @@
 
 
 /obj/item/weapon/kitchen/knife
-	name = "kitchen knife"
+	name = "кухонный нож"
 	icon_state = "knife"
-	desc = "A general purpose Chef's Knife made by WonderCook Incorporated. Guaranteed to stay sharp for years to come."
+	desc = "Обычный кухонный нож. Отлично режет овощи, мясо и людей."
 	flags = CONDUCT
 	force = 10
 	w_class = WEIGHT_CLASS_SMALL
@@ -81,16 +81,16 @@
 	return (BRUTELOSS)
 
 /obj/item/weapon/kitchen/knife/ritual
-	name = "ritual knife"
+	name = "ритуальный нож"
 	desc = "The unearthly energies that once powered this blade are now dormant."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "render"
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/kitchen/knife/butcher
-	name = "butcher's cleaver"
+	name = "тесак"
 	icon_state = "butch"
-	desc = "A huge thing used for chopping and chopping up meat. This includes wasteland settlers and settler by-products."
+	desc = "Идеальное орудие для нарезки мяса, рубки костей, а вот кого, решать уже вам."
 	flags = CONDUCT
 	force = 15
 	throwforce = 10
@@ -99,27 +99,27 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/kitchen/knife/combat
-	name = "combat knife"
+	name = "боевой нож"
 	icon_state = "buckknife"
 	item_state = "knife"
-	desc = "A military combat utility survival knife."
+	desc = "Стандартный боевой нож."
 	force = 20
 	throwforce = 20
 	origin_tech = "materials=3;combat=4"
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
 
 /obj/item/weapon/kitchen/knife/combat/survival
-	name = "survival knife"
+	name = "нож для выживания"
 	icon_state = "survivalknife"
-	desc = "A hunting grade survival knife."
-	force = 15
+	desc = "Охотничий нож. Красивый."
+	force = 12
 	throwforce = 10
 
 /obj/item/weapon/kitchen/knife/combat/bone
-	name = "bone dagger"
+	name = "нож из костей"
 	item_state = "bone_dagger"
 	icon_state = "bone_dagger"
-	desc = "A sharpened bone. The bare mimimum in survival."
+	desc = "Обточенная кость. Самый минимум для выживания."
 	force = 15
 	throwforce = 15
 	materials = list()
@@ -132,10 +132,10 @@
 	origin_tech = null
 
 /obj/item/weapon/kitchen/knife/carrotshiv
-	name = "carrot shiv"
+	name = "заточка из маркови"
 	icon_state = "carrotshiv"
 	item_state = "carrotshiv"
-	desc = "Unlike other carrots, you should probably keep this far away from your eyes."
+	desc = "Кто вообще до этого додумался?"
 	force = 8
 	throwforce = 12//fuck git
 	materials = list()
@@ -144,8 +144,8 @@
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/weapon/kitchen/rollingpin
-	name = "rolling pin"
-	desc = "Used to knock out the cheating husband."
+	name = "скалка"
+	desc = "Бейте ей людей по голове. Ну или катайте тесто."
 	icon_state = "rolling_pin"
 	force = 8
 	throwforce = 5
@@ -157,27 +157,27 @@
 /* Trays  moved to /obj/item/weapon/storage/bag */
 
 /obj/item/weapon/kitchen/knife/cosmicknife
-	name = "cosmic knife"
+	name = "космический нож"
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "cosmicknife"
 	item_state = "cosmicknife"
 	desc = "Made from a ''space age'' Saturnite alloy in the Big Mountain Research and Development Center, cosmic knives were advertised to be super-sharp, all-purpose kitchen knives that would not chip or dull. They proved to be too sharp for their own good, with a majority of them winding up on backorder for casinos in Texas years later."
-	force = 40
-	throwforce = 35
+	force = 21
+	throwforce = 15
 	embed_chance = 100
-	armour_penetration = 100
+	armour_penetration = 20
 	origin_tech = "materials=3;combat=4"
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
 
 /obj/item/weapon/kitchen/knife/heatcosmicknife
-	name = "heat cosmic knife"
+	name = "нагретый космический нож"
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "heatcosmicknife"
 	item_state = "heatcosmicknife"
 	desc = "Made from a ''space age'' Saturnite alloy in the Big Mountain Research and Development Center, cosmic knives were advertised to be super-sharp, all-purpose kitchen knives that would not chip or dull. They proved to be too sharp for their own good, with a majority of them winding up on backorder for casinos in Texas years later. This one heat"
-	force = 60
-	throwforce = 55
+	force = 30
+	throwforce = 20
 	embed_chance = 100
-	armour_penetration = 150
+	armour_penetration = 45
 	origin_tech = "materials=3;combat=4"
-	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
+	attack_verb = list("slashed", "тыкает", "нарезает", "разрезает", "ripped", "режет")

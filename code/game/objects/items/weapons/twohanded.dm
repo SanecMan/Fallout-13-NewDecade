@@ -49,7 +49,7 @@
 	if(iscyborg(user))
 		to_chat(user, "<span class='notice'>You free up your module.</span>")
 	else
-		user.visible_message("<span class='warning'>[user] let's go of their other hand.")
+		user.visible_message("<span class='warning'>[user] освобождает свою вторую руку.")
 	if(unwieldsound)
 		playsound(loc, unwieldsound, 50, 1)
 	var/obj/item/weapon/twohanded/offhand/O = user.get_inactive_held_item()

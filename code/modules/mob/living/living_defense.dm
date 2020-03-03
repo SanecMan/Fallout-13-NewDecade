@@ -157,8 +157,8 @@
 				return
 		updatehealth()
 		attacked_trigger(M)
-		visible_message("<span class='danger'>[M.name] has hit [src]!</span>", \
-						"<span class='userdanger'>[M.name] has hit [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+		visible_message("<span class='danger'>[M.name] бьёт [src]!</span>", \
+						"<span class='userdanger'>[M.name] бьёт [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 		add_logs(M.occupant, src, "attacked", M, "(INTENT: [uppertext(M.occupant.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
 	else
 		step_away(src,M)
@@ -190,8 +190,8 @@
 		if(user.grab_state) //only the first upgrade is instantaneous
 			var/old_grab_state = user.grab_state
 			var/grab_upgrade_time = 30
-			visible_message("<span class='danger'>[user] starts to tighten [user.p_their()] grip on [src]!</span>", \
-				"<span class='userdanger'>[user] starts to tighten [user.p_their()] grip on you!</span>")
+			visible_message("<span class='danger'>[user] начинает усиливать свой захват на шее [src]!</span>", \
+				"<span class='userdanger'>[user] начинает усиливать свой захват на твоей шее!</span>")
 			if(!do_mob(user, src, grab_upgrade_time))
 				return 0
 			if(!user.pulling || user.pulling != src || user.grab_state != old_grab_state || user.a_intent != INTENT_GRAB)
@@ -200,19 +200,19 @@
 		switch(user.grab_state)
 			if(GRAB_AGGRESSIVE)
 				add_logs(user, src, "grabbed", addition="aggressively")
-				visible_message("<span class='danger'>[user] has grabbed [src] aggressively!</span>", \
-								"<span class='userdanger'>[user] has grabbed [src] aggressively!</span>")
+				visible_message("<span class='danger'>[user] хватает [src] агрессивнее!</span>", \
+								"<span class='userdanger'>[user] хватает [src] агрессивнее!</span>")
 				drop_all_held_items()
 				stop_pulling()
 			if(GRAB_NECK)
-				visible_message("<span class='danger'>[user] has grabbed [src] by the neck!</span>",\
-								"<span class='userdanger'>[user] has grabbed you by the neck!</span>")
+				visible_message("<span class='danger'>[user] хватает [src] за шею!</span>",\
+								"<span class='userdanger'>[user] хватает вас за шею!</span>")
 				update_canmove() //we fall down
 				if(!buckled && !density)
 					Move(user.loc)
 			if(GRAB_KILL)
-				visible_message("<span class='danger'>[user] is strangling [src]!</span>", \
-								"<span class='userdanger'>[user] is strangling you!</span>")
+				visible_message("<span class='danger'>[user] душит [src]!</span>", \
+								"<span class='userdanger'>[user] душит вас!</span>")
 				update_canmove() //we fall down
 				if(!buckled && !density)
 					Move(user.loc)
@@ -271,8 +271,8 @@
 					"<span class='userdanger'>[M.name] кусает [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 			return 1
 		else
-			visible_message("<span class='danger'>[M.name] has attempted to bite [src]!</span>", \
-				"<span class='userdanger'>[M.name] has attempted to bite [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+			visible_message("<span class='danger'>[M.name] пытается укусить [src]!</span>", \
+				"<span class='userdanger'>[M.name] неудачно пытается укусить [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 	return 0
 
 /mob/living/attack_larva(mob/living/carbon/alien/larva/L)

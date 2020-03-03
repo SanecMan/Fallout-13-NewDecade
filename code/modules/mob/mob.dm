@@ -341,7 +341,7 @@ var/next_mob_id = 0
 	if(ismob(AM))
 		var/mob/M = AM
 		if(!supress_message)
-			visible_message("<span class='warning'>[src] has grabbed [M] passively!</span>")
+			visible_message("<span class='warning'>[src] хватает [M] пассивно!</span>")
 		if(!iscarbon(src))
 			M.LAssailant = null
 		else
@@ -426,7 +426,7 @@ var/next_mob_id = 0
 	if (!( abandon_allowed ))
 		return
 	if ((stat != 2 || !( ticker )))
-		to_chat(usr, "<span class='boldnotice'>You must be dead to use this!</span>")
+		to_chat(usr, "<span class='boldnotice'>Вы должны умереть чтобы использовать это!</span>")
 		return
 
 	if(jobban_isbanned(src, "labor"))

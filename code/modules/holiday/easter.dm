@@ -35,16 +35,16 @@
 					new /mob/living/simple_animal/chicken/rabbit(R.loc)
 
 /mob/living/simple_animal/chicken/rabbit
-	name = "\improper rabbit"
-	desc = "The hippiest hop around."
+	name = "кролик"
+	desc = "Боже блять, как мило!"
 	icon = 'icons/mob/Easter.dmi'
 	icon_state = "rabbit_white"
 	icon_living = "rabbit_white"
 	icon_dead = "rabbit_white_dead"
 	speak = list("Hop into Easter!","Come get your eggs!","Prizes for everyone!")
-	speak_emote = list("sniffles","twitches")
-	emote_hear = list("hops.")
-	emote_see = list("hops around","bounces up and down")
+	speak_emote = list("принюхивается","водит ушками")
+	emote_hear = list("прыг.")
+	emote_see = list("прыгает вокруг","прыгает")
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 1)
 	egg_type = /obj/item/weapon/reagent_containers/food/snacks/egg/loaded
 	food_type = /obj/item/weapon/reagent_containers/food/snacks/grown/carrot

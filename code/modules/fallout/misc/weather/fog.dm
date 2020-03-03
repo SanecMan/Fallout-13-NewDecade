@@ -4,7 +4,7 @@
 	desc = "Просто туман."
 
 	overlay = "fog"
-	chance = 20
+	chance = 25
 	duration_min = 500
 	duration_max = 2000
 

@@ -352,3 +352,39 @@
 	time = 800
 	category = CAT_WEAPON
 	XP = 400
+
+/datum/crafting_recipe/spikedbat_r
+	name = "Spikedbat Roped"
+	result = /obj/item/weapon/melee/baseball_bat/spikedbat/roped
+	reqs = list(/obj/item/weapon/melee/baseball_bat/spikedbat = 1, /obj/item/weapon/restraints/handcuffs/cable/rope = 1)
+	time = 45
+	category = CAT_WEAPON
+	default = 1
+	XP = 0.5
+
+/datum/crafting_recipe/barbedbat_r
+	name = "Barberbat Roped"
+	result = /obj/item/weapon/melee/baseball_bat/barbedbat/roped
+	reqs = list(/obj/item/weapon/melee/baseball_bat/barbedbat = 1, /obj/item/weapon/restraints/handcuffs/cable/rope = 1)
+	time = 45
+	category = CAT_WEAPON
+	default = 1
+	XP = 0.5
+
+/datum/crafting_recipe/bladedbat_r
+	name = "Bladedbat Roped"
+	result = /obj/item/weapon/melee/baseball_bat/bladedbat/roped
+	reqs = list(/obj/item/weapon/melee/baseball_bat/bladedbat = 1, /obj/item/weapon/restraints/handcuffs/cable/rope = 1)
+	time = 45
+	category = CAT_WEAPON
+	default = 1
+	XP = 0.5
+
+/datum/crafting_recipe/ablative_r
+	name = "Metalbat Roped"
+	result = /obj/item/weapon/melee/baseball_bat/ablative/roped
+	reqs = list(/obj/item/weapon/melee/baseball_bat/ablative = 1, /obj/item/weapon/restraints/handcuffs/cable/rope = 1)
+	time = 45
+	category = CAT_WEAPON
+	default = 1
+	XP = 0.5

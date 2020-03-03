@@ -6,7 +6,7 @@
 	desc = "Sandstorm."
 
 	overlay = "sandstorm"
-	chance = 5
+	chance = 15
 	duration_min = 3 MINUTE
 	duration_max = 6 MINUTE
 	var/list/mobs = list()

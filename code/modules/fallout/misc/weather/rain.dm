@@ -6,7 +6,7 @@
 	desc = "Simple rain."
 
 	overlay = "Rain_acid"//"rain"
-	chance = 40
+	chance = 10
 	duration_min = 1 MINUTE
 	duration_max = 3 MINUTE
 	var/power = "normal"
