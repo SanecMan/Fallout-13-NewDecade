@@ -25,7 +25,7 @@
 		user.visible_message("<span class='warning'>[user] делает глубокий и продолжительный поцелуй с [target].</span>")
 	else
 		user.visible_message("<span class='warning'>[user] целует [target] по-французки.</span>")
-/*
+
 /datum/interaction/lewd/oral
 	command = "suckvag"
 	description = "Отлизать."
@@ -300,4 +300,3 @@
 
 /datum/interaction/lewd/thighs/display_interaction(var/mob/user, var/mob/target)
 	user.do_thighs(target)
-*/
