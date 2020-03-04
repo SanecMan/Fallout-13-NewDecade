@@ -83,3 +83,12 @@
 	default = 1
 	XP = 20
 	result = /obj/item/crafting/weapon_parts/plasma
+
+/datum/crafting_recipe/rope
+	name = "Rope"
+	reqs = list(/obj/item/stack/sheet/cloth = 4)
+	time = 100
+	category = CAT_MISC
+	default = 1
+	XP = 5
+	result = /obj/item/weapon/restraints/handcuffs/cable/rope
