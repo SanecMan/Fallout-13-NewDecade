@@ -1,3 +1,4 @@
+
 /obj/item/clothing/suit/space/space_ninja/proc/ninja_sword_recall()
 	set name = "Recall Energy Katana (Variable Cost)"
 	set desc = "Teleports the Energy Katana linked to this suit to its wearer, cost based on distance."
@@ -10,7 +11,7 @@
 	var/inview = 1
 
 	if(!energyKatana)
-		H << "<span class='warning'>Could not locate Energy Katana!</span>"
+		to_chat(H, "<span class='warning'>Could not locate Energy Katana!</span>")
 		return
 
 	if(energyKatana in H)
@@ -23,14 +24,22 @@
 		inview = 0
 
 	if(!ninjacost(cost))
+		if(istype(energyKatana.loc, /mob/living/carbon))
+			var/mob/living/carbon/C = energyKatana.loc
+			C.unEquip(energyKatana)
+
+			//Somebody swollowed my sword, probably the clown doing a circus act.
+			if(energyKatana in C.stomach_contents)
+				C.stomach_contents -= energyKatana
 
 		energyKatana.forceMove(get_turf(energyKatana))
 
-		if(energyKatana.loc && inview) //If we can see the katana, throw it towards ourselves, damaging people as we go.
+		if(inview) //If we can see the katana, throw it towards ourselves, damaging people as we go.
 			energyKatana.spark_system.start()
 			playsound(H, "sparks", 50, 1)
-			energyKatana.visible_message("<span class='danger'>\the [energyKatana] flies towards [H]!</span>","<span class='warning'>You hold out your hand and \the [energyKatana] flies towards you!</span>")
+			H.visible_message("<span class='danger'>\the [energyKatana] flies towards [H]!</span>","<span class='warning'>You hold out your hand and \the [energyKatana] flies towards you!</span>")
 			energyKatana.throw_at(H, distance+1, energyKatana.throw_speed,H)
 
 		else //Else just TP it to us.
 			energyKatana.returnToOwner(H,1)
+
