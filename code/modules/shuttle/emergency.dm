@@ -60,12 +60,12 @@
 	var/obj/item/weapon/card/id/ID = user.get_idcard()
 
 	if(!ID)
-		to_chat(user, "<span class='warning'>You don't have an ID.</span>")
+		user << "<span class='warning'>You don't have an ID.</span>"
 		return
 
 	if(!(access_heads in ID.access))
-		to_chat(user, "<span class='warning'>The access level of \
-			your card is not high enough.</span>")
+		user << "<span class='warning'>The access level of \
+			your card is not high enough.</span>"
 		return
 
 	var/old_len = authorized.len
@@ -86,13 +86,12 @@
 
 	if((old_len != authorized.len) && !ENGINES_STARTED)
 		var/alert = (authorized.len > old_len)
+		var/repeal = (authorized.len < old_len)
 		var/remaining = auth_need - authorized.len
 		if(authorized.len && remaining)
-			minor_announce("[remaining] authorizations \
-				needed until shuttle is launched early", null, alert)
-		else
-			minor_announce("All authorizations to launch the shuttle \
-				early have been revoked.")
+			minor_announce("[remaining] authorizations needed until shuttle is launched early", null, alert)
+		if(repeal)
+			minor_announce("Early launch authorization revoked, [remaining] authorizations needed")
 
 /obj/machinery/computer/emergency_shuttle/proc/authorize(mob/user, source)
 	var/obj/item/weapon/card/id/ID = user.get_idcard()
@@ -138,7 +137,7 @@
 		return
 
 	if(emagged || ENGINES_STARTED)	//SYSTEM ERROR: THE SHUTTLE WILL LA-SYSTEM ERROR: THE SHUTTLE WILL LA-SYSTEM ERROR: THE SHUTTLE WILL LAUNCH IN 10 SECONDS
-		to_chat(user, "<span class='warning'>The shuttle is already about to launch!</span>")
+		user << "<span class='warning'>The shuttle is already about to launch!</span>"
 		return
 
 	var/time = TIME_LEFT
@@ -323,7 +322,7 @@
 			if(time_left <= 50 && !sound_played) //4 seconds left:REV UP THOSE ENGINES BOYS. - should sync up with the launch
 				sound_played = 1 //Only rev them up once.
 				for(var/area/shuttle/escape/E in world)
-					to_chat(E, 'sound/effects/hyperspace_begin.ogg')
+					E << 'sound/effects/hyperspace_begin.ogg'
 
 			if(time_left <= 0 && !SSshuttle.emergencyNoEscape)
 				//move each escape pod (or applicable spaceship) to its corresponding transit dock
@@ -335,7 +334,7 @@
 
 				//now move the actual emergency shuttle to its transit dock
 				for(var/area/shuttle/escape/E in world)
-					to_chat(E, 'sound/effects/hyperspace_progress.ogg')
+					E << 'sound/effects/hyperspace_progress.ogg'
 				enterTransit()
 				mode = SHUTTLE_ESCAPE
 				launch_status = ENDGAME_LAUNCHED
@@ -349,12 +348,12 @@
 			if(areaInstance.parallax_movedir && time_left <= PARALLAX_LOOP_TIME)
 //				parallax_slowdown()
 				for(var/area/shuttle/escape/E in world)
-					to_chat(E, 'sound/effects/hyperspace_end.ogg')
-				/*for(var/A in SSshuttle.mobile)
-					var/obj/docking_port/mobile/M = A
-					if(M.launch_status == ENDGAME_LAUNCHED)
-						if(istype(M, /obj/docking_port/mobile/pod))
-							M.parallax_slowdown()*/
+					E << 'sound/effects/hyperspace_end.ogg'
+//				for(var/A in SSshuttle.mobile)
+//					var/obj/docking_port/mobile/M = A
+//					if(M.launch_status == ENDGAME_LAUNCHED)
+//						if(istype(M, /obj/docking_port/mobile/pod))
+//							M.parallax_slowdown()
 
 			if(time_left <= 0)
 				//move each escape pod to its corresponding escape dock
@@ -393,7 +392,7 @@
 			launch_status = EARLY_LAUNCHED
 			return ..()
 	else
-		to_chat(usr, "<span class='warning'>Escape pods will only launch during \"Code Red\" security alert.</span>")
+		usr << "<span class='warning'>Escape pods will only launch during \"Code Red\" security alert.</span>"
 		return 1
 
 /obj/docking_port/mobile/pod/New()
@@ -437,7 +436,7 @@
 			turfs -= T
 			T = pick(turfs)
 		else
-			src.forceMove(T)
+			src.loc = T
 			break
 
 //Pod suits/pickaxes
@@ -487,7 +486,7 @@
 	if(security_level == SEC_LEVEL_RED || security_level == SEC_LEVEL_DELTA)
 		. = ..()
 	else
-		to_chat(usr, "The storage unit will only unlock during a Red or Delta security alert.")
+		usr << "The storage unit will only unlock during a Red or Delta security alert."
 
 /obj/item/weapon/storage/pod/attack_hand(mob/user)
 	return

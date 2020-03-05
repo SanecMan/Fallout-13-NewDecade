@@ -297,7 +297,7 @@ var/next_mob_id = 0
 	for(var/mob/living/simple_animal/hostile/commanded/C in oview(src.loc))
 		C.target_point(A, src)
 
-	PoolOrNew(/obj/effect/overlay/temp/point, list(A,invisibility))
+	new /obj/effect/overlay/temp/point(A,invisibility)
 
 	return 1
 

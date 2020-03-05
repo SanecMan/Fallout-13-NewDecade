@@ -29,6 +29,8 @@
 /obj/effect/overlay/temp/Destroy()
 	..()
 	return QDEL_HINT_PUTINPOOL
+//	. = ..()
+//	deltimer(timerid)
 
 /obj/effect/overlay/temp/New()
 	..()

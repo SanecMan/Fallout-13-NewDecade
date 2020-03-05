@@ -5,6 +5,7 @@
 		#define MINETYPE "lavaland"
 
 // хз насколько вообще актуально этим пользоваться
+#ifndef TRAVIS_MASS_MAP_BUILD
 
 		///#include "map_files\debug\wasteland.dmm"
 		///#include "map_files\TexasWasteland\navarro.dmm"
@@ -19,7 +20,7 @@
         #define MAP_FACTIONS_LIST list("vault", "vault_npc", "bs", "bs_npc", "enclave", "enclave_npc", "none", "none_npc", "city", "city_npc", "raiders", "raiders_npc","ncr", "ncr_npc","legion","legion_npc","followers","followers_npc","coc")
 
 		#define MAP_TRANSITION_CONFIG list()
-
+#endif
 #elif !defined(MAP_OVERRIDE)
 
 	#warn a map has already been included, ignoring wasteland debug.

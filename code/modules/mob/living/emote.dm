@@ -143,6 +143,21 @@
 	if(!.)
 		user.SpinAnimation(7,1)
 
+/datum/emote/living/carbon/human/unspeakable
+	key = "eat my anus"
+	key_third_person = "fuck me daddy"
+	message = "daddy taught us not to be ashamed of our dicks"
+
+/datum/emote/living/carbon/human/unspeakable/pee
+	key = "pee"
+	key_third_person = "pees"
+	message = "ссыт."
+
+/datum/emote/living/carbon/human/unspeakable/poo
+	key = "poo"
+	key_third_person = "poops"
+	message = "срёт."
+
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"

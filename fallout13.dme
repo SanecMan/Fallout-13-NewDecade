@@ -14,6 +14,7 @@
 
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
+#include "_maps\loadallmaps.dm"
 #include "_maps\oregon.dm"
 #include "_maps\map_files\TexasWasteland\oregon_legacy.dmm"
 #include "_maps\map_files\TexasWasteland\z2_legacy.dmm"
@@ -288,6 +289,7 @@
 #include "code\datums\wires\airlock.dm"
 #include "code\datums\wires\apc.dm"
 #include "code\datums\wires\autolathe.dm"
+#include "code\datums\wires\emitter.dm"
 #include "code\datums\wires\explosive.dm"
 #include "code\datums\wires\mulebot.dm"
 #include "code\datums\wires\particle_accelerator.dm"
@@ -296,6 +298,7 @@
 #include "code\datums\wires\robot.dm"
 #include "code\datums\wires\suit_storage_unit.dm"
 #include "code\datums\wires\syndicatebomb.dm"
+#include "code\datums\wires\tesla_coil.dm"
 #include "code\datums\wires\vending.dm"
 #include "code\datums\wires\wires.dm"
 #include "code\game\alternate_appearance.dm"

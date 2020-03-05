@@ -74,5 +74,5 @@
 	med_hud_set_health()
 	med_hud_set_status()
 	if(client)
-		client.screen += PoolOrNew(/obj/screen/fullscreen/death)
+		client.screen += new /obj/screen/fullscreen/death
 	return TRUE

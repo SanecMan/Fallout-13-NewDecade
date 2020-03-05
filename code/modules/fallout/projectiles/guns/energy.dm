@@ -215,3 +215,4 @@
 	price = 4000
 	energy_gun = 1
 	origin_tech = "combat=7;magnets=8;prewar=6"
+
