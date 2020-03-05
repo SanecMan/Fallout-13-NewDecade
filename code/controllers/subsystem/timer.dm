@@ -1,4 +1,4 @@
-#define BUCKET_LEN (world.fps*1*60) //how many ticks should we keep in the bucket. (1 minutes worth)
+#define BUCKET_LEN (world.fps*10*60) //how many ticks should we keep in the bucket. (10 minutes worth)
 #define BUCKET_POS(timer) (round((timer.timeToRun - SStimer.head_offset) / world.tick_lag) + 1)
 var/datum/subsystem/timer/SStimer
 
@@ -16,11 +16,12 @@ var/datum/subsystem/timer/SStimer
 	var/head_offset = 0 //world.time of the first entry in the the bucket.
 	var/practical_offset = 0 //index of the first non-empty item in the bucket.
 	var/bucket_resolution = 0 //world.tick_lag the bucket was designed for
-	var/bucket_count = 0 //how many timers are in the buckets
 
-	var/list/bucket_list //list of buckets, each bucket holds every timer that has to run that byond tick.
+	var/list/buckets //list of buckets, each bucket holds every timer that has to run that byond tick.
 
 	var/list/timer_id_dict //list of all active timers assoicated to their timer id (for easy lookup)
+
+	var/list/timer_src_dict //list of everything with an active timer attached to it as key with a list of those timers as the value (for destroy)
 
 	var/list/clienttime_timers //special snowflake timers that run on fancy pansy "client time"
 
@@ -28,8 +29,9 @@ var/datum/subsystem/timer/SStimer
 /datum/subsystem/timer/New()
 	processing = list()
 	hashes = list()
-	bucket_list = list()
+
 	timer_id_dict = list()
+	timer_src_dict = list()
 
 	clienttime_timers = list()
 
@@ -37,157 +39,83 @@ var/datum/subsystem/timer/SStimer
 
 
 /datum/subsystem/timer/stat_entry(msg)
-	..("B:[bucket_count] P:[length(processing)] H:[length(hashes)] C:[length(clienttime_timers)]")
+	..("P:[length(processing)] H:[length(hashes)] C:[length(clienttime_timers)]")
 
-/datum/subsystem/timer/fire(resumed = FALSE)
+/datum/subsystem/timer/fire()
 	if (length(clienttime_timers))
 		for (var/thing in clienttime_timers)
-			var/datum/timedevent/ctime_timer = thing
-			if (ctime_timer.spent)
-				qdel(ctime_timer)
-				continue
-			if (ctime_timer.timeToRun <= REALTIMEOFDAY)
-				var/datum/callback/callBack = ctime_timer.callBack
-				ctime_timer.spent = TRUE
-				callBack.InvokeAsync()
-				qdel(ctime_timer)
+			var/datum/timedevent/event = thing
+			if (event.timeToRun <= REALTIMEOFDAY)
+				var/datum/callback/callback = event.callback
+				qdel(event) //this is right, we delete the event before running it so that stack overflows don't cause us to repeatively run the same event
+				callback.InvokeAsync()
 
 			if (MC_TICK_CHECK)
 				return
 
-	var/static/list/spent = list()
-	var/static/datum/timedevent/timer
-	var/static/datum/timedevent/head
+	if (head_offset + (world.tick_lag * BUCKET_LEN) < world.time || length(src.buckets) != BUCKET_LEN || world.tick_lag != bucket_resolution)
+		refill_buckets()
 
-	if (practical_offset > BUCKET_LEN || (!resumed  && length(src.bucket_list) != BUCKET_LEN || world.tick_lag != bucket_resolution))
-		shift_buckets()
-		resumed = FALSE
-
-
-	if (!resumed)
-		timer = null
-		head = null
-
-	var/list/bucket_list = src.bucket_list
-
+	var/list/buckets = src.buckets
 	while (practical_offset <= BUCKET_LEN && head_offset + (practical_offset*world.tick_lag) <= world.time && !MC_TICK_CHECK)
-		if (!timer || !head || timer == head)
-			head = bucket_list[practical_offset]
-			if (!head)
-				practical_offset++
-				if (MC_TICK_CHECK)
-					break
-				continue
-			timer = head
-		do
-			var/datum/callback/callBack = timer.callBack
-			if (!callBack)
-				qdel(timer)
-				bucket_resolution = null //force bucket recreation
-				CRASH("Invalid timer: timer.timeToRun=[timer.timeToRun]||qdeleted(timer)=[qdeleted(timer)]||world.time=[world.time]||head_offset=[head_offset]||practical_offset=[practical_offset]||timer.spent=[timer.spent]")
-
-			if (!timer.spent)
-				spent += timer
-				timer.spent = TRUE
-				callBack.InvokeAsync()
-
-			timer = timer.next
-
+		var/datum/timedevent/event = buckets[practical_offset]
+		while (event)
+			var/datum/callback/callback = event.callback
+			if (!callback)
+				CRASH("Invalid event: event.timeToRun=[event.timeToRun]||qdeleted(event)=[qdeleted(event)]||world.time=[world.time]||head_offset=[head_offset]||practical_offset=[practical_offset]")
+			qdel(event) //same as above
+			callback.InvokeAsync()
 			if (MC_TICK_CHECK)
 				return
-		while (timer && timer != head)
-		timer = null
-		bucket_list[practical_offset++] = null
-		if (MC_TICK_CHECK)
-			return
+			event = buckets[practical_offset]
 
-	bucket_count -= length(spent)
+		practical_offset++
 
-	for (var/spent_timer in spent)
-		qdel(spent_timer)
-
-	spent.len = 0
-
-
-/datum/subsystem/timer/proc/shift_buckets()
-	var/list/bucket_list = src.bucket_list
-	var/list/alltimers = list()
-	//collect the timers currently in the bucket
-	for (var/bucket_head in bucket_list)
-		if (!bucket_head)
-			continue
-		var/datum/timedevent/bucket_node = bucket_head
-		do
-			alltimers += bucket_node
-			bucket_node = bucket_node.next
-		while(bucket_node && bucket_node != bucket_head)
-
-	bucket_list.len = 0
-	bucket_list.len = BUCKET_LEN
-
+/datum/subsystem/timer/proc/refill_buckets()
+	sortTim(processing, /proc/cmp_timer)
+	src.buckets = new(BUCKET_LEN)
 	practical_offset = 1
-	bucket_count = 0
-	head_offset = world.time
 	bucket_resolution = world.tick_lag
-
-	alltimers += processing
-	if (!length(alltimers))
-		return
-
-	sortTim(alltimers, .proc/cmp_timer)
-
-	var/datum/timedevent/head = alltimers[1]
-
-	if (head.timeToRun < head_offset)
-		head_offset = head.timeToRun
-
-	var/list/timers_to_remove = list()
-
-	for (var/thing in alltimers)
-		var/datum/timedevent/timer = thing
-		if (!timer)
-			timers_to_remove += timer
+	var/list/buckets = src.buckets
+	var/new_offset
+	for (var/thing in processing)
+		var/datum/timedevent/event = thing
+		if (!event)
+			processing -= event
 			continue
 
-		var/bucket_pos = BUCKET_POS(timer)
+		if (isnull(new_offset))
+			new_offset = event.timeToRun
+
+		var/bucket_pos = round((event.timeToRun - new_offset) / world.tick_lag) + 1
 		if (bucket_pos > BUCKET_LEN)
 			break
 
-		timers_to_remove += timer //remove it from the big list once we are done
-		if (!timer.callBack || timer.spent)
-			continue
-		bucket_count++
-		var/datum/timedevent/bucket_head = bucket_list[bucket_pos]
+		var/datum/timedevent/bucket_head = buckets[bucket_pos]
 		if (!bucket_head)
-			bucket_list[bucket_pos] = timer
-			timer.next = null
-			timer.prev = null
+			buckets[bucket_pos] = event
 			continue
 
 		if (!bucket_head.prev)
 			bucket_head.prev = bucket_head
-		timer.next = bucket_head
-		timer.prev = bucket_head.prev
-		timer.next.prev = timer
-		timer.prev.next = timer
-
-	processing = (alltimers - timers_to_remove)
+		event.next = bucket_head
+		event.prev = bucket_head.prev
+		event.next.prev = event
+		event.prev.next = event
+	head_offset = new_offset
 
 
 /datum/subsystem/timer/Recover()
 	processing |= SStimer.processing
 	hashes |= SStimer.hashes
-	timer_id_dict |= SStimer.timer_id_dict
-	bucket_list |= SStimer.bucket_list
 
-/datum/var/list/active_timers
 /datum/timedevent
 	var/id
-	var/datum/callback/callBack
+	var/datum/callback/callback
 	var/timeToRun
+	var/datum/timerid
 	var/hash
 	var/list/flags
-	var/spent = FALSE //set to true right before running.
 
 	//cicular doublely linked list
 	var/datum/timedevent/next
@@ -195,103 +123,95 @@ var/datum/subsystem/timer/SStimer
 
 	var/static/nextid = 1
 
-/datum/timedevent/New(datum/callback/callBack, timeToRun, flags, hash)
+/datum/timedevent/New(datum/callback/callback, timeToRun, flags, hash)
 	id = nextid++
-	src.callBack = callBack
+	src.callback = callback
 	src.timeToRun = timeToRun
 	src.flags = flags
-	src.hash = hash
 
-	if (flags & TIMER_UNIQUE)
+	if (hash)
+		src.hash = hash
 		SStimer.hashes[hash] = src
-	if (flags & TIMER_STOPPABLE)
-		SStimer.timer_id_dict["timerid[id]"] = src
 
-	if (callBack.object != GLOBAL_PROC)
-		LAZYINITLIST(callBack.object.active_timers)
-		callBack.object.active_timers += src
+	SStimer.timer_id_dict["timerid[id]"] = src
+
+	if (callback.object != GLOBAL_PROC)
+		SStimer.timer_src_dict[callback.object] = src
 
 	if (flags & TIMER_CLIENT_TIME)
 		SStimer.clienttime_timers += src
 		return
 
+	SStimer.processing += src
+
 	//get the list of buckets
-	var/list/bucket_list = SStimer.bucket_list
+	var/list/buckets = SStimer.buckets
 	//calculate our place in the bucket list
 	var/bucket_pos = BUCKET_POS(src)
-	//we are too far aways from needing to run to be in the bucket list, shift_buckets() will handle us.
-	if (bucket_pos > length(bucket_list))
-		SStimer.processing += src
+	//we are too far aways from needing to run to be in the bucket list, refill_buckets() will handle us.
+	if (bucket_pos > length(buckets))
 		return
 	//get the bucket for our tick
-	var/datum/timedevent/bucket_head = bucket_list[bucket_pos]
-	SStimer.bucket_count++
-	//empty bucket, we will just add ourselves
-	if (!bucket_head)
-		bucket_list[bucket_pos] = src
+	var/datum/timedevent/event = buckets[bucket_pos]
+	//empty bucket, we will just add ourself
+	if (!event)
+		buckets[bucket_pos] = src
 		if (bucket_pos < SStimer.practical_offset)
 			SStimer.practical_offset = bucket_pos
 		return
 	//other wise, lets do a simplified linked list add.
-	if (!bucket_head.prev)
-		bucket_head.prev = bucket_head
-	next = bucket_head
-	prev = bucket_head.prev
+	if (!event.prev)
+		event.prev = event
+
+	next = event
+	prev = event.prev
 	next.prev = src
 	prev.next = src
 
+
 /datum/timedevent/Destroy()
-	..()
-	if (flags & TIMER_UNIQUE)
+	if (hash)
 		SStimer.hashes -= hash
 
+	SStimer.timer_id_dict -= "timerid[id]"
 
-	if (callBack && callBack.object && callBack.object != GLOBAL_PROC && callBack.object.active_timers)
-		callBack.object.active_timers -= src
-		UNSETEMPTY(callBack.object.active_timers)
+	if (callback && callback.object != GLOBAL_PROC)
+		SStimer.timer_src_dict -= callback.object
 
-	callBack = null
-
-	if (flags & TIMER_STOPPABLE)
-		SStimer.timer_id_dict -= "timerid[id]"
+	callback = null
 
 	if (flags & TIMER_CLIENT_TIME)
 		SStimer.clienttime_timers -= src
 		return QDEL_HINT_IWILLGC
 
-	if (!spent)
-		if (prev == next && next)
-			next.prev = null
-			prev.next = null
-		else
-			if (prev)
-				prev.next = next
-			if (next)
-				next.prev = prev
+	SStimer.processing -= src
 
-		var/bucketpos = BUCKET_POS(src)
-		var/datum/timedevent/buckethead
-		var/list/bucket_list = SStimer.bucket_list
-
-		if (bucketpos > 0 && bucketpos <= length(bucket_list))
-			buckethead = bucket_list[bucketpos]
-			SStimer.bucket_count--
-		else
-			SStimer.processing -= src
-
-		if (buckethead == src)
-			bucket_list[bucketpos] = next
+	if (prev == next && next)
+		next.prev = null
+		prev.next = null
 	else
-		if (prev && prev.next == src)
+		if (prev)
 			prev.next = next
-		if (next && next.prev == src)
+
+		if (next)
 			next.prev = prev
-	next = null
+
+	var/bucketpos = BUCKET_POS(src)
+	var/datum/timedevent/buckethead
+	var/list/buckets = SStimer.buckets
+
+	if (bucketpos > 0 && bucketpos <= length(buckets))
+		buckethead = buckets[bucketpos]
+	if (buckethead == src)
+		buckets[bucketpos] = next
+
 	prev = null
+	next = null
 
-	return QDEL_HINT_PUTINPOOL
+	return QDEL_HINT_IWILLGC
 
-proc/addtimer(datum/callback/callback, wait, flags)
+
+/proc/addtimer(datum/callback/callback, wait, flags)
 	if (!callback)
 		return
 
@@ -306,42 +226,28 @@ proc/addtimer(datum/callback/callback, wait, flags)
 		hashlist += callback.arguments
 		hash = hashlist.Join("|||||||")
 
-		var/datum/timedevent/hash_timer = SStimer.hashes[hash]
-		if(hash_timer)
-			if (hash_timer.spent) //it's pending deletion, pretend it doesn't exist.
-				hash_timer.hash = null
-				SStimer.hashes -= hash
+		var/datum/timedevent/hash_event = SStimer.hashes[hash]
+		if(hash_event)
+			if (flags & TIMER_OVERRIDE)
+				qdel(hash_event)
 			else
-
-				if (flags & TIMER_OVERRIDE)
-					qdel(hash_timer)
-				else
-					if (hash_timer.flags & TIMER_STOPPABLE)
-						. = hash_timer.id
-					return
-
+				return hash_event.id
 
 	var/timeToRun = world.time + wait
 	if (flags & TIMER_CLIENT_TIME)
 		timeToRun = REALTIMEOFDAY + wait
 
-	var/datum/timedevent/timer = PoolOrNew(/datum/timedevent, list(callback, timeToRun, flags, hash))
-	if (flags & TIMER_STOPPABLE)
-		return timer.id
+	var/datum/timedevent/event = new(callback, timeToRun, flags, hash)
+
+
+	return event.id
+
 
 /proc/deltimer(id)
 	if (!id)
 		return FALSE
-	if (!istext(id))
-		if (istype(id, /datum/timedevent))
-			qdel(id)
-			return TRUE
-	var/datum/timedevent/timer = SStimer.timer_id_dict["timerid[id]"]
-	if (timer && !timer.spent)
-		qdel(timer)
+	var/datum/timedevent/event = SStimer.timer_id_dict["timerid[id]"]
+	if (event)
+		qdel(event)
 		return TRUE
 	return FALSE
-
-
-#undef BUCKET_LEN
-#undef BUCKET_POS

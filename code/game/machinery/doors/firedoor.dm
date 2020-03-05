@@ -49,11 +49,11 @@
 	add_fingerprint(user)
 	if(operating)
 		return
-	
+
 	if(welded)
 		if(istype(C, /obj/item/weapon/wrench))
 			if(boltslocked)
-				to_chat(user, "<span class='notice'>There are screws locking the bolts in place!</span>")
+				user << "<span class='notice'>There are screws locking the bolts in place!</span>"
 				return
 			playsound(get_turf(src), C.usesound, 50, 1)
 			user.visible_message("<span class='notice'>[user] starts undoing [src]'s bolts...</span>", \
@@ -80,7 +80,7 @@
 /obj/machinery/door/firedoor/try_to_weld(obj/item/weapon/weldingtool/W, mob/user)
 	if(W.remove_fuel(0, user))
 		welded = !welded
-		to_chat(user, "<span class='danger'>You [welded?"welded":"unwelded"] \the [src]</span>")
+		user << "<span class='danger'>You [welded?"welded":"unwelded"] \the [src]</span>"
 		update_icon()
 
 /obj/machinery/door/firedoor/try_to_crowbar(obj/item/I, mob/user)
@@ -104,7 +104,7 @@
 /obj/machinery/door/firedoor/attack_alien(mob/user)
 	add_fingerprint(user)
 	if(welded)
-		to_chat(user, "<span class='warning'>[src] refuses to budge!</span>")
+		user << "<span class='warning'>[src] refuses to budge!</span>"
 		return
 	open()
 
@@ -212,13 +212,13 @@
 	..()
 	switch(constructionStep)
 		if(CONSTRUCTION_PANEL_OPEN)
-			to_chat(user, "There is a small metal plate covering the wires.")
+			user << "There is a small metal plate covering the wires."
 		if(CONSTRUCTION_WIRES_EXPOSED)
-			to_chat(user, "Wires are trailing from the maintenance panel.")
+			user << "Wires are trailing from the maintenance panel."
 		if(CONSTRUCTION_GUTTED)
-			to_chat(user, "The circuit board is visible.")
+			user << "The circuit board is visible."
 		if(CONSTRUCTION_NOCIRCUIT)
-			to_chat(user, "There are no electronics in the frame.")
+			user << "There are no electronics in the frame."
 
 /obj/structure/firelock_frame/update_icon()
 	..()
@@ -243,7 +243,7 @@
 				return
 			if(istype(C, /obj/item/weapon/wrench))
 				if(locate(/obj/machinery/door/firedoor) in get_turf(src))
-					to_chat(user, "<span class='warning'>There's already a firelock there.</span>")
+					user << "<span class='warning'>There's already a firelock there.</span>"
 					return
 				playsound(get_turf(src), C.usesound, 50, 1)
 				user.visible_message("<span class='notice'>[user] starts bolting down [src]...</span>", \
@@ -264,10 +264,10 @@
 			if(istype(C, /obj/item/stack/sheet/plasteel))
 				var/obj/item/stack/sheet/plasteel/P = C
 				if(reinforced)
-					to_chat(user, "<span class='warning'>[src] is already reinforced.</span>")
+					user << "<span class='warning'>[src] is already reinforced.</span>"
 					return
 				if(P.get_amount() < 2)
-					to_chat(user, "<span class='warning'>You need more plasteel to reinforce [src].</span>")
+					user << "<span class='warning'>You need more plasteel to reinforce [src].</span>"
 					return
 				user.visible_message("<span class='notice'>[user] begins reinforcing [src]...</span>", \
 									 "<span class='notice'>You begin reinforcing [src]...</span>")
@@ -333,7 +333,7 @@
 			if(istype(C, /obj/item/stack/cable_coil))
 				var/obj/item/stack/cable_coil/B = C
 				if(B.get_amount() < 5)
-					to_chat(user, "<span class='warning'>You need more wires to add wiring to [src].</span>")
+					user << "<span class='warning'>You need more wires to add wiring to [src].</span>"
 					return
 				user.visible_message("<span class='notice'>[user] begins wiring [src]...</span>", \
 									 "<span class='notice'>You begin adding wires to [src]...</span>")
