@@ -36,8 +36,8 @@ Bonus
 				if(!(M.ear_deaf))
 					to_chat(M, "<span class='userdanger'>Your ears pop and begin ringing loudly!</span>")
 					M.setEarDamage(-1,INFINITY) //Shall be enough
-
-/datum/symptom/deafness/proc/Undeafen(mob/living/M)
-	if(M)
-		M << "<span class='warning'>Звон в ваших ушах постепенно спадает...</span>"
-		M.setEarDamage(-1,0)
+					spawn(200)
+						if(M)
+							to_chat(M, "<span class='warning'>The ringing in your ears fades...</span>")
+							M.setEarDamage(-1,0)
+	return

@@ -15,5 +15,7 @@ var/datum/subsystem/assets/SSasset
 		A.register()
 
 	for(var/client/C in clients)
-		addtimer(CALLBACK(GLOBAL_PROC, .proc/getFilesSlow, C, cache, FALSE), 10)
+		// Doing this to a client too soon after they've connected can cause issues, also the proc we call sleeps.
+		spawn(10)
+			getFilesSlow(C, cache, FALSE)
 	..()

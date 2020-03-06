@@ -2,7 +2,7 @@
 /mob
 	var/list/screens = list()
 
-/mob/proc/overlay_fullscreen(category, type, severity)
+/mob/proc/overlay_fullscreen(category, type, severity, animated = 0)
 	var/obj/screen/fullscreen/screen
 	if(screens[category])
 		screen = screens[category]
@@ -19,6 +19,10 @@
 
 	screens[category] = screen
 	if(client && stat != DEAD)
+		if(animated)
+			screen.alpha = 0
+			spawn(0)
+				animate(screen, alpha = 255, time = animated, flags = ANIMATION_RELATIVE )
 		client.screen += screen
 	return screen
 
@@ -30,17 +34,16 @@
 	screens -= category
 
 	if(animated)
-		animate(screen, alpha = 0, time = animated)
-		addtimer(CALLBACK(src, .proc/clear_fullscreen_after_animate, screen), animated, TIMER_CLIENT_TIME)
+		spawn(0)
+			animate(screen, alpha = 0, time = animated)
+			sleep(animated)
+			if(client)
+				client.screen -= screen
+			qdel(screen)
 	else
 		if(client)
 			client.screen -= screen
 		qdel(screen)
-
-/mob/proc/clear_fullscreen_after_animate(obj/screen/fullscreen/screen)
-	if(client)
-		client.screen -= screen
-	qdel(screen)
 
 /mob/proc/clear_fullscreens()
 	for(var/category in screens)

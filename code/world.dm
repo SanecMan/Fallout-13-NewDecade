@@ -13,6 +13,7 @@
 var/list/map_transition_config = MAP_TRANSITION_CONFIG
 
 /world/New()
+	check_for_cleanbot_bug()
 	map_ready = 1
 	world.log << "Map is ready."
 
@@ -58,6 +59,9 @@ var/list/map_transition_config = MAP_TRANSITION_CONFIG
 
 	data_core = new /datum/datacore()
 
+	spawn(10)
+		Master.Setup()
+
 	SortAreas()						//Build the list of all existing areas and sort it alphabetically
 	process_teleport_locs()			//Sets up the wizard teleport locations
 
@@ -67,7 +71,8 @@ var/list/map_transition_config = MAP_TRANSITION_CONFIG
 	map_name = "Unknown"
 	#endif
 
-	Master.Setup(10, FALSE)
+
+	return
 
 #define IRC_STATUS_THROTTLE 50
 var/last_irc_status = 0

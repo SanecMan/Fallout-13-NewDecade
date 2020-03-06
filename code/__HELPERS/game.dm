@@ -319,14 +319,24 @@
 	O.screen_loc = screen_loc
 	return O
 
-/proc/remove_images_from_clients(image/I, list/show_to)
-	for(var/client/C in show_to)
-		C.images -= I
+/proc/Show2Group4Delay(obj/O, list/group, delay=0)
+	if(!isobj(O))
+		return
+	if(!group)
+		group = clients
+	for(var/client/C in group)
+		C.screen += O
+	if(delay)
+		spawn(delay)
+			for(var/client/C in group)
+				C.screen -= O
 
 /proc/flick_overlay(image/I, list/show_to, duration)
 	for(var/client/C in show_to)
 		C.images += I
-	addtimer(CALLBACK(GLOBAL_PROC, /.proc/remove_images_from_clients, I, show_to), duration)
+	spawn(duration)
+		for(var/client/C in show_to)
+			C.images -= I
 
 /proc/flick_overlay_view(image/I, atom/target, duration) //wrapper for the above, flicks to everyone who can see the target atom
 	var/list/viewing = list()
