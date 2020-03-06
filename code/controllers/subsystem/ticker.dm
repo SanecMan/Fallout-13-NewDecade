@@ -55,16 +55,13 @@ var/datum/subsystem/ticker/ticker
 
 /datum/subsystem/ticker/New()
 	NEW_SS_GLOBAL(ticker)
-
-	/*
+/*
 	login_music = pickweight(list('sound/f13music/fo2_brotherhood.ogg' = 45, 'sound/f13music/fo2_outpost.ogg' =45, 'sound/f13music/fo2_city.ogg' =45, 'sound/f13music/fo2_village.ogg' =5, 'sound/f13music/fo2_vats.ogg' =5)) // choose title music!
+*/
 	if(SSevent.holidays && SSevent.holidays[APRIL_FOOLS])
 		login_music = 'sound/f13music/mysterious_stranger.ogg'
-	*/
 
 	login_music = pickweight(list('sound/f13music/Johnny Guitar.ogg' = 45, 'sound/f13music/f76menu.ogg' = 80, 'sound/f13music/Where Have You Been All My Life.ogg' =45, 'sound/f13music/Goin Under.ogg' = 45, 'sound/f13music/Blue Moon.ogg' =45, 'sound/f13music/Heartaches by the Number.ogg' = 45, 'sound/f13music/Somethings Gotta Give.ogg' =45, 'sound/f13music/takemehome.ogg' = 50))
-
-	//login_music = 'sound/f13music/Johnny Guitar.ogg'
 
 /datum/subsystem/ticker/Initialize(timeofday)
 	if(!syndicate_code_phrase)
@@ -77,8 +74,8 @@ var/datum/subsystem/ticker/ticker
 	switch(current_state)
 		if(GAME_STATE_STARTUP)
 			timeLeft = config.lobby_countdown * 10
-			to_chat(world, "<span class='boldnotice'>Добро пожаловать на Пустоши!</span>")
-			to_chat(world, "Пожалуйста, настройте своего персонажа и нажмите \"Готов\". Игра начнется через [config.lobby_countdown] секунд.")
+			world << "<span class='boldnotice'>Добро пожаловать на Fallout 13 - CBET ATOMA!</span>"
+			world << "Пожалуйста, настройте персонажа и нажмите \"Готов\". Игра начнется чере [config.lobby_countdown] с."
 			current_state = GAME_STATE_PREGAME
 			for(var/client/C in clients)
 				window_flash(C) //let them know lobby has opened up.
@@ -122,8 +119,6 @@ var/datum/subsystem/ticker/ticker
 				current_state = GAME_STATE_FINISHED
 				toggle_ooc(1) // Turn it on
 				declare_completion(force_ending)
-				spawn(50)
-					world.Reboot("Round ended.", "end_proper", "proper completion")
 
 /datum/subsystem/ticker/proc/setup()
 		//Create and announce mode
@@ -142,14 +137,14 @@ var/datum/subsystem/ticker/ticker
 
 		if(!mode)
 			if(!runnable_modes.len)
-				to_chat(world, "<B>Unable to choose playable game mode.</B> Reverting to pre-game lobby.")
+				world << "<B>Unable to choose playable game mode.</B> Reverting to pre-game lobby."
 				return 0
 			mode = pickweight(runnable_modes)
 
 	else
 		mode = config.pick_mode(master_mode)
 		if(!mode.can_start())
-			to_chat(world, "<B>Не вышло запустить [mode.name].</B> Недостаточно игроков, [mode.required_players] players and [mode.required_enemies] eligible antagonists needed. Reverting to pre-game lobby.")
+			world << "<B>Не удаётся запустить [mode.name].</B> Недостаточно игроков, [mode.required_players] игроков и [mode.required_enemies] антагонистов необходимо. Возврат в лобби."
 			qdel(mode)
 			mode = null
 			SSjob.ResetOccupations()
@@ -164,7 +159,7 @@ var/datum/subsystem/ticker/ticker
 		if(!can_continue)
 			qdel(mode)
 			mode = null
-			to_chat(world, "<B>Error setting up [master_mode].</B> Reverting to pre-game lobby.")
+			world << "<B>Error setting up [master_mode].</B> Reverting to pre-game lobby."
 			SSjob.ResetOccupations()
 			return 0
 	else
@@ -175,8 +170,8 @@ var/datum/subsystem/ticker/ticker
 		for (var/datum/game_mode/M in runnable_modes)
 			modes += M.name
 		modes = sortList(modes)
-		to_chat(world, "<b>Игровой режим: секретно!\
-		Возможно:</B> [english_list(modes)]")
+		world << "<b>Игровой режим: Пустоши!\n\
+		Возможно:</B> [english_list(modes)]"
 	else
 		mode.announce()
 
@@ -191,34 +186,33 @@ var/datum/subsystem/ticker/ticker
 	equip_characters()
 	data_core.manifest()
 
-	SSobjectives.setup_objectives()
-
 	Master.RoundStart()
 
-	to_chat(world, "<B><FONT color='#3c4438'>Все последующие события будут записаны под кодовым именем:<br><FONT color='#77ca00'>[station_name()]</FONT><br><FONT color='#3c4438'>Удачи вам в вашем выживании!</FONT></B>")
-	to_chat(world, sound('sound/f13music/game_start.ogg'))
+	world << "<FONT color='blue'><B>Добро пожжаловать на Пустоши, наслаждайтесь игрой!</B></FONT>"
+	world << sound('sound/AI/welcome.ogg')
 
 	if(SSevent.holidays)
-		to_chat(world, "<font color='blue'>and...</font>")
+		world << "<font color='blue'>и...</font>"
 		for(var/holidayname in SSevent.holidays)
 			var/datum/holiday/holiday = SSevent.holidays[holidayname]
-			to_chat(world, "<h4>[holiday.greet()]</h4>")
+			world << "<h4>[holiday.greet()]</h4>"
 
-
-	spawn(0)//Forking here so we dont have to wait for this to finish
-		mode.post_setup()
-		//Cleanup some stuff
-		/*
-		for(var/obj/effect/landmark/start/S in landmarks_list)
-			//Deleting Startpoints but we need the ai point to AI-ize people later
-			if(S.name != "AI")
-				qdel(S)
-		*/
-		var/list/adm = get_admin_counts()
-		if(!adm["present"])
-			send2irc("Server", "Round just started with no active admins online!")
+	PostSetup()
 
 	return 1
+
+/datum/subsystem/ticker/proc/PostSetup()
+	set waitfor = 0
+	mode.post_setup()
+	//Cleanup some stuff
+	for(var/obj/effect/landmark/start/S in landmarks_list)
+		//Deleting Startpoints but we need the ai point to AI-ize people later
+		if(S.name != "AI")
+			qdel(S)
+
+	var/list/adm = get_admin_counts()
+	if(!adm["present"])
+		send2irc("Server", "Round just started with no active admins online!")
 
 //Plus it provides an easy way to make cinematics for other events. Just use this as a template
 /datum/subsystem/ticker/proc/station_explosion_cinematic(station_missed=0, override = null)
@@ -255,7 +249,7 @@ var/datum/subsystem/ticker/ticker
 				if("nuclear emergency") //Nuke wasn't on station when it blew up
 					flick("intro_nuke",cinematic)
 					sleep(35)
-					to_chat(world, sound('sound/effects/explosionfar.ogg'))
+					world << sound('sound/effects/explosionfar.ogg')
 					flick("station_intact_fade_red",cinematic)
 					cinematic.icon_state = "summary_nukefail"
 				if("gang war") //Gang Domination (just show the override screen)
@@ -265,18 +259,18 @@ var/datum/subsystem/ticker/ticker
 				if("fake") //The round isn't over, we're just freaking people out for fun
 					flick("intro_nuke",cinematic)
 					sleep(35)
-					to_chat(world, sound('sound/items/bikehorn.ogg'))
+					world << sound('sound/items/bikehorn.ogg')
 					flick("summary_selfdes",cinematic)
 				else
 					flick("intro_nuke",cinematic)
 					sleep(35)
-					to_chat(world, sound('sound/effects/explosionfar.ogg'))
+					world << sound('sound/effects/explosionfar.ogg')
 					//flick("end",cinematic)
 
 
 		if(NUKE_MISS_STATION || NUKE_SYNDICATE_BASE)	//nuke was nowhere nearby	//TODO: a really distant explosion animation
 			sleep(50)
-			to_chat(world, sound('sound/effects/explosionfar.ogg'))
+			world << sound('sound/effects/explosionfar.ogg')
 		else	//station was destroyed
 			if( mode && !override )
 				override = mode.name
@@ -285,25 +279,25 @@ var/datum/subsystem/ticker/ticker
 					flick("intro_nuke",cinematic)
 					sleep(35)
 					flick("station_explode_fade_red",cinematic)
-					to_chat(world, sound('sound/effects/explosionfar.ogg'))
+					world << sound('sound/effects/explosionfar.ogg')
 					cinematic.icon_state = "summary_nukewin"
 				if("AI malfunction") //Malf (screen,explosion,summary)
 					flick("intro_malf",cinematic)
 					sleep(76)
 					flick("station_explode_fade_red",cinematic)
-					to_chat(world, sound('sound/effects/explosionfar.ogg'))
+					world << sound('sound/effects/explosionfar.ogg')
 					cinematic.icon_state = "summary_malf"
 				if("blob") //Station nuked (nuke,explosion,summary)
 					flick("intro_nuke",cinematic)
 					sleep(35)
 					flick("station_explode_fade_red",cinematic)
-					to_chat(world, sound('sound/effects/explosionfar.ogg'))
+					world << sound('sound/effects/explosionfar.ogg')
 					cinematic.icon_state = "summary_selfdes"
 				if("no_core") //Nuke failed to detonate as it had no core
 					flick("intro_nuke",cinematic)
 					sleep(35)
 					flick("station_intact",cinematic)
-					to_chat(world, sound('sound/ambience/signal.ogg'))
+					world << sound('sound/ambience/signal.ogg')
 					sleep(100)
 					if(cinematic)
 						qdel(cinematic)
@@ -315,18 +309,17 @@ var/datum/subsystem/ticker/ticker
 					flick("intro_nuke",cinematic)
 					sleep(35)
 					flick("station_explode_fade_red", cinematic)
-					to_chat(world, sound('sound/effects/explosionfar.ogg'))
+					world << sound('sound/effects/explosionfar.ogg')
 					cinematic.icon_state = "summary_selfdes"
 	//If its actually the end of the round, wait for it to end.
 	//Otherwise if its a verb it will continue on afterwards.
-	spawn(300)
-		if(cinematic)
-			qdel(cinematic)		//end the cinematic
-		for(var/mob/M in mob_list)
-			M.notransform = FALSE //gratz you survived
-	return
+	addtimer(CALLBACK(src, .proc/finish_cinematic), 300)
 
-
+/datum/subsystem/ticker/proc/finish_cinematic()
+	if(cinematic)
+		qdel(cinematic)		//end the cinematic
+	for(var/mob/M in mob_list)
+		M.notransform = FALSE //gratz you survived
 
 /datum/subsystem/ticker/proc/create_characters()
 	for(var/mob/new_player/player in player_list)
@@ -349,16 +342,177 @@ var/datum/subsystem/ticker/ticker
 
 
 /datum/subsystem/ticker/proc/equip_characters()
+	var/captainless=1
 	for(var/mob/living/carbon/human/player in player_list)
 		if(player && player.mind && player.mind.assigned_role)
+			if(player.mind.assigned_role == "Overseer")
+				captainless=0
 			if(player.mind.assigned_role != player.mind.special_role)
 				SSjob.EquipRank(player, player.mind.assigned_role, 0)
+	if(captainless)
+		for(var/mob/M in player_list)
+			if(!isnewplayer(M))
+				M << "В убежище нет смотрителя."
 
 /datum/subsystem/ticker/proc/declare_completion()
+	set waitfor = FALSE
+	var/station_evacuated = EMERGENCY_ESCAPED_OR_ENDGAMED
+	var/num_survivors = 0
+	var/num_escapees = 0
+	var/num_shuttle_escapees = 0
 
-	to_chat(world, "<BR><BR><BR><FONT size=3><B>Раунд завершен.</B></FONT>")
-
+	world << "<BR><BR><BR><FONT size=3><B>Раунд завершен.</B></FONT>"
 	SSobjectives.on_roundend()
+
+	//Player status report
+	for(var/mob/Player in mob_list)
+		if(Player.mind && !isnewplayer(Player))
+			if(Player.stat != DEAD && !isbrain(Player))
+				num_survivors++
+				if(station_evacuated) //If the shuttle has already left the station
+					var/area/shuttle_area
+					if(SSshuttle && SSshuttle.emergency)
+						shuttle_area = SSshuttle.emergency.areaInstance
+					if(!Player.onCentcom() && !Player.onSyndieBase())
+						Player << "<font color='blue'><b>Вы смогли пережить события...</b></FONT>"
+					else
+						num_escapees++
+						Player << "<font color='green'><b>Вы смогли пережить события за [Player.real_name].</b></FONT>"
+						if(get_area(Player) == shuttle_area)
+							num_shuttle_escapees++
+				else
+					Player << "<font color='green'><b>Вы смогли пережить события за [Player.real_name].</b></FONT>"
+			else
+				Player << "<font color='red'><b>Пустошь поглатила вас...</b></FONT>"
+
+		CHECK_TICK
+
+	//Round statistics report
+	var/datum/station_state/end_state = new /datum/station_state()
+	end_state.count()
+	var/station_integrity = min(PERCENT(start_state.score(end_state)), 100)
+
+	world << "<BR>[TAB]Длительность раунда: <B>[round(world.time / 36000)]:[add_zero("[world.time / 600 % 60]", 2)]:[world.time / 100 % 6][world.time / 100 % 10]</B>"
+	if(mode.station_was_nuked)
+		ticker.news_report = STATION_DESTROYED_NUKE
+	var/total_players = joined_player_list.len
+	if(joined_player_list.len)
+		world << "<BR>[TAB]Всего человек: <B>[total_players]</B>"
+		if(station_evacuated)
+		world << "<BR>[TAB]Рейтинг выживаемости: <B>[num_survivors] ([PERCENT(num_survivors/total_players)]%)</B>"
+	world << "<BR>"
+
+	CHECK_TICK
+
+	//Silicon laws report
+	for (var/mob/living/silicon/ai/aiPlayer in mob_list)
+		if (aiPlayer.stat != 2 && aiPlayer.mind)
+			world << "<b>[aiPlayer.name] (Сыгран: [aiPlayer.mind.key]) его законами были:</b>"
+			aiPlayer.show_laws(1)
+		else if (aiPlayer.mind) //if the dead ai has a mind, use its key instead
+			world << "<b>[aiPlayer.name] (Сыгран: [aiPlayer.mind.key]) его законы на момент де-активации:</b>"
+			aiPlayer.show_laws(1)
+
+		world << "<b>Всего изменений законов: [aiPlayer.law_change_counter]</b>"
+
+		if (aiPlayer.connected_robots.len)
+			var/robolist = "<b>[aiPlayer.real_name] прислужниками были:</b> "
+			for(var/mob/living/silicon/robot/robo in aiPlayer.connected_robots)
+				if(robo.mind)
+					robolist += "[robo.name][robo.stat?" (Deactivated) (Сыгран: [robo.mind.key]), ":" (Сыгран: [robo.mind.key]), "]"
+			world << "[robolist]"
+
+	CHECK_TICK
+
+	for (var/mob/living/silicon/robot/robo in mob_list)
+		if (!robo.connected_ai && robo.mind)
+			if (robo.stat != 2)
+				world << "<b>[robo.name] (Сыгран: [robo.mind.key]) выжил как робот без ИскИн, его законы:</b>"
+			else
+				world << "<b>[robo.name] (Сыгран: [robo.mind.key]) не смог пережить события в пустоши без ИскИн, его законы:</b>"
+
+			if(robo) //How the hell do we lose robo between here and the world messages directly above this?
+				robo.laws.show_laws(world)
+
+	CHECK_TICK
+
+	mode.declare_completion()//To declare normal completion.
+
+	CHECK_TICK
+
+	//calls auto_declare_completion_* for all modes
+	for(var/handler in typesof(/datum/game_mode/proc))
+		if (findtext("[handler]","auto_declare_completion_"))
+			call(mode, handler)(force_ending)
+
+	CHECK_TICK
+
+	if(cross_allowed)
+		send_news_report()
+
+	CHECK_TICK
+
+	//Print a list of antagonists to the server log
+	var/list/total_antagonists = list()
+	//Look into all mobs in world, dead or alive
+	for(var/datum/mind/Mind in minds)
+		var/temprole = Mind.special_role
+		if(temprole)							//if they are an antagonist of some sort.
+			if(temprole in total_antagonists)	//If the role exists already, add the name to it
+				total_antagonists[temprole] += ", [Mind.name]([Mind.key])"
+			else
+				total_antagonists.Add(temprole) //If the role doesnt exist in the list, create it and add the mob
+				total_antagonists[temprole] += ": [Mind.name]([Mind.key])"
+
+	CHECK_TICK
+
+	//Now print them all into the log!
+	log_game("Антагонистами раунда были...")
+	for(var/i in total_antagonists)
+		log_game("[i]s[total_antagonists[i]].")
+
+	CHECK_TICK
+
+	//Borers
+	var/borerwin = FALSE
+	if(borers.len)
+		var/borertext = "<br><font size=3><b>The borers were:</b></font>"
+		for(var/mob/living/simple_animal/borer/B in borers)
+			if((B.key || B.controlling) && B.stat != DEAD)
+				borertext += "<br>[B.controlling ? B.victim.key : B.key] was [B.truename] ("
+				var/turf/location = get_turf(B)
+				if(location.z == ZLEVEL_CENTCOM && B.victim)
+					borertext += "escaped with host"
+				else
+					borertext += "failed"
+				borertext += ")"
+		world << borertext
+
+		var/total_borers = 0
+		for(var/mob/living/simple_animal/borer/B in borers)
+			if((B.key || B.victim) && B.stat != DEAD)
+				total_borers++
+		if(total_borers)
+			var/total_borer_hosts = 0
+			for(var/mob/living/carbon/C in mob_list)
+				var/mob/living/simple_animal/borer/D = C.has_brain_worms()
+				var/turf/location = get_turf(C)
+				if(location.z == ZLEVEL_CENTCOM && D && D.stat != DEAD)
+					total_borer_hosts++
+			if(total_borer_hosts_needed <= total_borer_hosts)
+				borerwin = TRUE
+			world << "<b>There were [total_borers] borers alive at round end!</b>"
+			world << "<b>A total of [total_borer_hosts] borers with hosts escaped on the shuttle alive. The borers needed [total_borer_hosts_needed] hosts to escape.</b>"
+			if(borerwin)
+				world << "<b><font color='green'>The borers were successful!</font></b>"
+			else
+				world << "<b><font color='red'>The borers have failed!</font></b>"
+
+	CHECK_TICK
+
+	mode.declare_station_goal_completion()
+
+	CHECK_TICK
 
 	//Adds the del() log to world.log in a format condensable by the runtime condenser found in tools
 	if(SSgarbage.didntgc.len)
@@ -368,12 +522,18 @@ var/datum/subsystem/ticker/ticker
 			dellog += "Failures : [SSgarbage.didntgc[path]] \n"
 		world.log << dellog
 
+	CHECK_TICK
+
 	//Collects persistence features
 	SSpersistence.CollectData()
-	return 1
 
-/datum/subsystem/ticker/proc/send_tip_of_the_round()
+	sleep(50)
+	if(mode.station_was_nuked)
+		world.Reboot("Пустоши уничтожены ядерным взрывом.", "end_proper", "nuke")
+	else
+		world.Reboot("Round ended.", "end_proper", "proper completion")
 /*
+/datum/subsystem/ticker/proc/send_tip_of_the_round()
 	var/m
 	if(selected_tip)
 		m = selected_tip
@@ -386,10 +546,9 @@ var/datum/subsystem/ticker/ticker
 			m = pick(memetips)
 
 	if(m)
-		to_chat(world, "<font color='purple'><b>Tip of the round: \
-			</b>[html_encode_ru(m)]</font>")
+		world << "<font color='purple'><b>Tip of the round: \
+			</b>[html_encode(m)]</font>"
 */
-
 /datum/subsystem/ticker/proc/check_queue()
 	if(!queued_players.len || !config.hard_popcap)
 		return
@@ -401,14 +560,14 @@ var/datum/subsystem/ticker/ticker
 		if(5) //every 5 ticks check if there is a slot available
 			if(living_player_count() < config.hard_popcap)
 				if(next_in_line && next_in_line.client)
-					to_chat(next_in_line, "<span class='userdanger'>A slot has opened! You have approximately 20 seconds to join. <a href='?src=\ref[next_in_line];late_join=override'>\>\>Join Game\<\<</a></span>")
-					to_chat(next_in_line, sound('sound/misc/notice1.ogg'))
+					next_in_line << "<span class='userdanger'>A slot has opened! You have approximately 20 seconds to join. <a href='?src=\ref[next_in_line];late_join=override'>\>\>Join Game\<\<</a></span>"
+					next_in_line << sound('sound/misc/notice1.ogg')
 					next_in_line.LateChoices()
 					return
 				queued_players -= next_in_line //Client disconnected, remove he
 			queue_delay = 0 //No vacancy: restart timer
 		if(25 to INFINITY)  //No response from the next in line when a vacancy exists, remove he
-			to_chat(next_in_line, "<span class='danger'>No response recieved. You have been removed from the line.</span>")
+			next_in_line << "<span class='danger'>No response recieved. You have been removed from the line.</span>"
 			queued_players -= next_in_line
 			queue_delay = 0
 
@@ -425,8 +584,7 @@ var/datum/subsystem/ticker/ticker
 	//map rotate chance defaults to 75% of the length of the round (in minutes)
 	if (!prob((world.time/600)*config.maprotatechancedelta))
 		return
-	spawn(0) //compiling a map can lock up the mc for 30 to 60 seconds if we don't spawn
-		maprotate()
+	addtimer(CALLBACK(GLOBAL_PROC, /.proc/maprotate), 0)
 
 
 /world/proc/has_round_started()
