@@ -20,8 +20,7 @@ var/const/INJECT = 5 //injection
 	var/flags
 
 /datum/reagents/Destroy()
-	..()
-	return QDEL_HINT_PUTINPOOL
+	. = ..()
 
 /datum/reagents/New(maximum=100)
 	maximum_volume = maximum
@@ -35,7 +34,7 @@ var/const/INJECT = 5 //injection
 		var/paths = subtypesof(/datum/reagent)
 		chemical_reagents_list = list()
 		for(var/path in paths)
-			var/datum/reagent/D = PoolOrNew(path)
+			var/datum/reagent/D = new path()
 			chemical_reagents_list[D.id] = D
 	if(!chemical_reactions_list)
 		//Chemical Reactions - Initialises all /datum/chemical_reaction into a list
@@ -48,7 +47,7 @@ var/const/INJECT = 5 //injection
 
 		for(var/path in paths)
 
-			var/datum/chemical_reaction/D = PoolOrNew(path)
+			var/datum/chemical_reaction/D = new path()
 			var/list/reaction_ids = list()
 
 			if(D.required_reagents && D.required_reagents.len)
@@ -243,7 +242,7 @@ var/const/INJECT = 5 //injection
 							need_mob_update += R.overdose_start(C)
 					if(R.addiction_threshold)
 						if(R.volume >= R.addiction_threshold && !is_type_in_list(R, cached_addictions))
-							var/datum/reagent/new_reagent = PoolOrNew(R.type)
+							var/datum/reagent/new_reagent = new R.type()
 							cached_addictions.Add(new_reagent)
 					if(R.overdosed)
 						need_mob_update += R.overdose_process(C)
@@ -539,7 +538,7 @@ var/const/INJECT = 5 //injection
 	var/datum/reagent/D = chemical_reagents_list[reagent]
 	if(D)
 
-		var/datum/reagent/R = PoolOrNew(D.type)
+		var/datum/reagent/R = new D.type()
 		cached_reagents += R
 		R.holder = src
 		R.volume = amount

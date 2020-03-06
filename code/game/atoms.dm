@@ -334,7 +334,7 @@ var/list/blood_splatter_icons = list()
 
 	var/obj/effect/decal/cleanable/blood/splatter/B = locate() in src
 	if(!B)
-		B = PoolOrNew(/obj/effect/decal/cleanable/blood/splatter, src)
+		B = new /obj/effect/decal/cleanable/blood/splatter(src)
 	B.transfer_blood_dna(blood_dna) //give blood info to the blood decal.
 	return 1 //we bloodied the floor
 

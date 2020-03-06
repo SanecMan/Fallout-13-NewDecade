@@ -14,7 +14,6 @@
 
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
-#include "_maps\loadallmaps.dm"
 #include "_maps\oregon.dm"
 #include "_maps\map_files\TexasWasteland\oregon_legacy.dmm"
 #include "_maps\map_files\TexasWasteland\z2_legacy.dmm"

@@ -23,7 +23,7 @@
 /obj/item/ammo_casing/New()
 	..()
 	if(projectile_type)
-		BB = PoolOrNew(projectile_type,src)
+		BB = new projectile_type(src)
 
 	pixel_x = rand(-10, 10)
 	pixel_y = rand(-10, 10)
@@ -31,8 +31,8 @@
 	update_icon()
 
 /obj/item/ammo_casing/Destroy()
-	..()
-	return QDEL_HINT_PUTINPOOL
+	. = ..()
+//	return QDEL_HINT_PUTINPOOL
 
 /obj/item/ammo_casing/update_icon()
 	..()
@@ -42,7 +42,7 @@
 //proc to magically refill a casing with a new projectile
 /obj/item/ammo_casing/proc/newshot() //For energy weapons, syringe gun, shotgun shells and wands (!).
 	if(!BB)
-		BB = PoolOrNew(projectile_type, src)
+		BB = new projectile_type(src)
 
 /obj/item/ammo_casing/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ammo_box))

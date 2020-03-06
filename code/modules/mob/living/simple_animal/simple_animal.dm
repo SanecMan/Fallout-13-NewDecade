@@ -108,8 +108,7 @@
 	spawnPosition = loc
 
 /mob/living/simple_animal/Destroy()
-	..()
-	return QDEL_HINT_PUTINPOOL
+	. = ..()
 
 /mob/living/simple_animal/Login()
 	if(src && src.client)

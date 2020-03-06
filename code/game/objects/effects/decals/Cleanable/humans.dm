@@ -18,8 +18,8 @@
 	for(var/datum/disease/D in viruses)
 		D.cure(0)
 	viruses = null
-	..()
-	return QDEL_HINT_PUTINPOOL
+	. = ..()
+//	return QDEL_HINT_PUTINPOOL
 
 /obj/effect/decal/cleanable/blood/replace_decal(obj/effect/decal/cleanable/blood/C)
 	if (C.blood_DNA)

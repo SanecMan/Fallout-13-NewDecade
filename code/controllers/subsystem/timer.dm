@@ -1,4 +1,4 @@
-  #define BUCKET_LEN (world.fps*1*60) //how many ticks should we keep in the bucket. (1 minutes worth)
+#define BUCKET_LEN (world.fps*1*60) //how many ticks should we keep in the bucket. (1 minutes worth)
 #define BUCKET_POS(timer) (round((timer.timeToRun - SStimer.head_offset) / world.tick_lag) + 1)
 var/datum/subsystem/timer/SStimer
 
@@ -60,44 +60,33 @@ var/datum/subsystem/timer/SStimer
 
 	var/list/bucket_list = src.bucket_list
 	var/static/list/spent = list()
-	LOOP_OUTER
-		while (practical_offset <= BUCKET_LEN && head_offset + (practical_offset*world.tick_lag) <= world.time && !MC_TICK_CHECK)
-			var/datum/timedevent/head = bucket_list[practical_offset]
-			if (!head)
-				practical_offset++
-				if (MC_TICK_CHECK)
-					break
-				continue
-			var/datum/timedevent/timer = head
-			do
-				var/datum/callback/callBack = timer.callBack
-				if (!callBack || timer.spent)
-					qdel(timer)
-					bucket_resolution = null //force bucket recreation
-					CRASH("Invalid timer: timer.timeToRun=[timer.timeToRun]||qdeleted(timer)=[qdeleted(timer)]||world.time=[world.time]||head_offset=[head_offset]||practical_offset=[practical_offset]||timer.spent=[timer.spent]")
-
-				spent += timer
-				timer.spent = TRUE
-
-				callBack.InvokeAsync()
-
-				timer = timer.next
-
-				if (MC_TICK_CHECK)
-					if (!timer || timer == head)
-						break
-					if (head.prev)
-						head.prev.next = timer
-						if (timer.prev)
-							timer.prev.next = head
-						timer.prev = head.prev
-						bucket_list[practical_offset] = timer
-					break LOOP_OUTER
-			while (timer && timer != head)
-
-			bucket_list[practical_offset++] = null
+	while (practical_offset <= BUCKET_LEN && head_offset + (practical_offset*world.tick_lag) <= world.time && !MC_TICK_CHECK)
+		var/datum/timedevent/head = bucket_list[practical_offset]
+		if (!head)
+			practical_offset++
 			if (MC_TICK_CHECK)
 				break
+			continue
+		var/datum/timedevent/timer = head
+		do
+			var/datum/callback/callBack = timer.callBack
+			if (!callBack || timer.spent)
+				continue
+
+			spent += timer
+			timer.spent = TRUE
+
+			callBack.InvokeAsync()
+
+			timer = timer.next
+
+			if (MC_TICK_CHECK)
+				return
+		while (timer && timer != head)
+
+		bucket_list[practical_offset++] = null
+		if (MC_TICK_CHECK)
+			break
 
 	bucket_count -= length(spent)
 
@@ -251,7 +240,7 @@ var/datum/subsystem/timer/SStimer
 
 	if (flags & TIMER_CLIENT_TIME)
 		SStimer.clienttime_timers -= src
-		return QDEL_HINT_IWILLGC
+		return QDEL_HINT_QUEUE
 
 	if (flags & TIMER_STOPPABLE)
 		SStimer.timer_id_dict -= "timerid[id]"
@@ -286,7 +275,7 @@ var/datum/subsystem/timer/SStimer
 			next.prev = null
 	next = null
 	prev = null
-	return QDEL_HINT_IWILLGC
+	return QDEL_HINT_QUEUE
 
 proc/addtimer(datum/callback/callback, wait, flags)
 	if (!callback)

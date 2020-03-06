@@ -12,8 +12,8 @@
 	var/vital = 0
 
 /obj/item/organ/Destroy()
-	..()
-	return QDEL_HINT_PUTINPOOL
+	. = ..()
+//	return QDEL_HINT_PUTINPOOL
 
 /obj/item/organ/proc/Insert(mob/living/carbon/M, special = 0)
 	if(!iscarbon(M) || owner == M)
@@ -712,11 +712,11 @@
 
 /mob/living/carbon/regenerate_organs()
 	if(!(NOBREATH in dna.species.species_traits) && !getorganslot("lungs"))
-		var/obj/item/organ/lungs/L = PoolOrNew(/obj/item/organ/lungs)
+		var/obj/item/organ/lungs/L = new()
 		L.Insert(src)
 
 	if(!(NOBLOOD in dna.species.species_traits) && !getorganslot("heart"))
-		var/obj/item/organ/heart/H = PoolOrNew(/obj/item/organ/heart)
+		var/obj/item/organ/heart/H = new()
 		H.Insert(src)
 
 	if(!getorganslot("tongue"))
@@ -724,10 +724,10 @@
 
 		for(var/tongue_type in dna.species.mutant_organs)
 			if(ispath(tongue_type, /obj/item/organ/tongue))
-				T = PoolOrNew(tongue_type)
+				T = new tongue_type()
 				T.Insert(src)
 
 		// if they have no mutant tongues, give them a regular one
 		if(!T)
-			T = PoolOrNew(T)
+			T = new()
 			T.Insert(src)

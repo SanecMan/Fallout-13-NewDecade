@@ -25,12 +25,11 @@
 	mouse_opacity = 0
 	var/duration = 10 //in deciseconds
 	var/randomdir = TRUE
+	var/timerid
 
 /obj/effect/overlay/temp/Destroy()
-	..()
-	return QDEL_HINT_PUTINPOOL
-//	. = ..()
-//	deltimer(timerid)
+	. = ..()
+	deltimer(timerid)
 
 /obj/effect/overlay/temp/New()
 	..()

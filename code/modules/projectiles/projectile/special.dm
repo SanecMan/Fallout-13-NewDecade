@@ -274,7 +274,7 @@
 			continue
 		A.throw_at(T, power+1, 1)
 	for(var/turf/F in range(T,power))
-		PoolOrNew(/obj/effect/overlay/temp/gravpush, F)
+		new /obj/effect/overlay/temp/gravpush(F)
 
 /obj/item/projectile/gravitychaos
 	name = "gravitational blast"
