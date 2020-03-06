@@ -369,14 +369,14 @@
 	desc = "<b>Открывает доступ к роли Декануса!</b><br>СМЕРТЬ БРАТЬЯМ БУ... Не та реплика... СМЕРТЬ БРАТСТВУ!<br>."
 	roles = list(/datum/job/decan)
 	price = 20000
-
+/*
 /datum/content_pack/leg_prime
 	name = "Легион: Прайм"
 	id = "legion_prime"
 	desc = "<b>Открывает доступ к роли Прайма!</b><br>СМЕРТЬ ПЛУТОКРАТАМ!<br>."
 	roles = list(/datum/job/prime)
 	price = 10000
-
+*/
 ///bruhderhood of gay///
 
 /datum/content_pack/bs_elder
@@ -490,10 +490,11 @@
 	desc = "<b>Открывает доступ к роли рейнджера НКР!</b><br>Я не должен тут находиться...<br>."
 	roles = list(/datum/job/vranger)
 	price = 20000
-
+/*
 /datum/content_pack/ncr_troop
 	name = "НКР: роль рядового."
 	id = "ncr_private"
 	desc = "<b>Открывает доступ к роли рядового НКР!</b><br>Побродив по Мохаве, начинаешь скучать по ядерной зиме...<br>."
 	roles = list(/datum/job/trooper)
 	price = 10000
+*/

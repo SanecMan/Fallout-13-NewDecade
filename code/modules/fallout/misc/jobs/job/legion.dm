@@ -263,7 +263,7 @@
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
-	whitelist_on = 1
+	whitelist_on = 0
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten")
 
 	required_items = list(

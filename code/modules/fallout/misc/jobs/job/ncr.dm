@@ -201,7 +201,7 @@
 	supervisors = "генералу"
 	selection_color = "#9d9fec"
 	minimal_player_age = 16
-	whitelist_on = 1
+	whitelist_on = 0
 	allowed_packs = list("starter", "cigarettes", "follower", "bard", "super_ten", "trooper_armor", "heavy_trooper", "specops")
 
 	required_items = list(
