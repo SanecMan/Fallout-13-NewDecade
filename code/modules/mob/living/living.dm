@@ -928,7 +928,7 @@
 	if(fire_stacks > 0 && !on_fire)
 		on_fire = 1
 		src.visible_message("<span class='warning'>[src] горит!</span>", \
-						"<span class='userdanger'>Вы горие!</span>")
+						"<span class='userdanger'>Вы горите!</span>")
 		set_light(3)
 		throw_alert("fire", /obj/screen/alert/fire)
 		update_fire()
