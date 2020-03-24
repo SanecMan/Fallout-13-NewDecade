@@ -1,7 +1,7 @@
 //Fallout 13 protectron directory
 
 /mob/living/simple_animal/hostile/sentrybot
-	name = "sentrybot"
+	name = "Робот-Охранник"
 	desc = "A pre-War type of sentrybot.<br>Extremely dangerous machine."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "sentrybot"
@@ -25,12 +25,12 @@
 	faction = list("hostile", "robot")
 
 	sound_speak_chance = 5
-	sound_speak = list('sound/f13npc/robot_charge1.ogg','sound/f13npc/robot_charge2.ogg','sound/f13npc/robot_charge3.ogg')
+	sound_speak = list('sound/f13npc/sentrybot/idle_1.ogg','sound/f13npc/sentrybot/idle_2.ogg','sound/f13npc/sentrybot/idle_3.ogg','sound/f13npc/sentrybot/idle_4.ogg')
 
 	aggro_sound_chance = 50
-	aggro_sound = 'sound/f13npc/robot_alert.ogg'
+	aggro_sound = list('sound/f13npc/sentrybot/attack_1.ogg', 'sound/f13npc/sentrybot/attack_2.ogg', 'sound/f13npc/sentrybot/attack_3.ogg', 'sound/f13npc/sentrybot/attack_4.ogg', 'sound/f13npc/sentrybot/attack_5.ogg', 'sound/f13npc/sentrybot/attack_6.ogg', 'sound/f13npc/sentrybot/attack_7.ogg', 'sound/f13npc/sentrybot/attack_8.ogg', 'sound/f13npc/sentrybot/attack_9.ogg', 'sound/f13npc/sentrybot/attack_10.ogg', 'sound/f13npc/sentrybot/attack_11.ogg', 'sound/f13npc/sentrybot/attack_12.ogg')
 
-	death_sound = 'sound/f13npc/robot_death.ogg'
+	death_sound = list('sound/f13npc/sentrybot/death_1.ogg', 'sound/f13npc/sentrybot/death_2.ogg', 'sound/f13npc/sentrybot/death_3.ogg', 'sound/f13npc/sentrybot/death_4.ogg', 'sound/f13npc/sentrybot/death_5.ogg', 'sound/f13npc/sentrybot/death_6.ogg')
 
 	harm_intent_damage = 15
 	melee_damage_lower = 30

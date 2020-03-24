@@ -21,17 +21,12 @@
 	health = 350
 	self_weight = 200
 	healable = 0
-
 	faction = list("hostile", "robot")
-
 	sound_speak_chance = 50
-	sound_speak = list('sound/f13npc/robot_charge1.ogg','sound/f13npc/robot_charge2.ogg','sound/f13npc/robot_charge3.ogg')
-
+	sound_speak = list('sound/f13npc/protectron/idle_1.ogg','sound/f13npc/protectron/idle_2.ogg','sound/f13npc/protectron/idle_3.ogg','sound/f13npc/protectron/idle_4.ogg','sound/f13npc/protectron/idle_5.ogg','sound/f13npc/protectron/idle_6.ogg','sound/f13npc/protectron/idle_7.ogg')
 	aggro_sound_chance = 50
-	aggro_sound = 'sound/f13npc/robot_alert.ogg'
-
-	death_sound = 'sound/f13npc/robot_death.ogg'
-
+	aggro_sound = list('sound/f13npc/protectron/attack_1.ogg', 'sound/f13npc/protectron/attack_2.ogg', 'sound/f13npc/protectron/attack_3.ogg', 'sound/f13npc/protectron/attack_4.ogg', 'sound/f13npc/protectron/attack_5.ogg', 'sound/f13npc/protectron/attack_6.ogg', 'sound/f13npc/protectron/attack_7.ogg', 'sound/f13npc/protectron/attack_8.ogg', 'sound/f13npc/protectron/attack_9.ogg', 'sound/f13npc/protectron/attack_10.ogg', 'sound/f13npc/protectron/attack_11.ogg', 'sound/f13npc/protectron/attack_12.ogg', 'sound/f13npc/protectron/attack_13.ogg')
+	death_sound = list('sound/f13npc/protectron/death_1.ogg', 'sound/f13npc/protectron/death_7.ogg', 'sound/f13npc/protectron/death_2.ogg', 'sound/f13npc/protectron/death_3.ogg', 'sound/f13npc/protectron/death_4.ogg', 'sound/f13npc/protectron/death_5.ogg', 'sound/f13npc/protectron/death_6.ogg', 'sound/f13npc/protectron/death_7.ogg')
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 20
