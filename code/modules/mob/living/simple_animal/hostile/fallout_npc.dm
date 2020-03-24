@@ -625,7 +625,7 @@
 	sound_speak = list('sound/f13npc/raider/idle_1.ogg','sound/f13npc/raider/idle_2.ogg','sound/f13npc/raider/idle_3.ogg','sound/f13npc/raider/idle_4.ogg')
 	aggro_sound_chance = 50
 	aggro_sound = list('sound/f13npc/raider/attack_1.ogg', 'sound/f13npc/raider/attack_2.ogg', 'sound/f13npc/raider/attack_3.ogg', 'sound/f13npc/raider/attack_4.ogg', 'sound/f13npc/raider/attack_5.ogg', 'sound/f13npc/raider/attack_6.ogg', 'sound/f13npc/raider/attack_7.ogg', 'sound/f13npc/raider/attack_8.ogg', 'sound/f13npc/raider/attack_9.ogg', 'sound/f13npc/raider/attack_10.ogg', 'sound/f13npc/raider/attack_11.ogg', 'sound/f13npc/raider/attack_12.ogg', 'sound/f13npc/raider/attack_13.ogg', 'sound/f13npc/raider/attack_14.ogg', 'sound/f13npc/raider/attack_15.ogg', 'sound/f13npc/raider/attack_16.ogg')
-	death_sound = list('sound/f13npc/raider/death_1.ogg', 'sound/f13npc/raider/death_7.ogg', 'sound/f13npc/raider/death_2.ogg', 'sound/f13npc/raider/death_3.ogg', 'sound/f13npc/raider/death_4.ogg')
+	death_sound = list('sound/f13npc/raider/death_1.ogg', 'sound/f13npc/raider/death_2.ogg', 'sound/f13npc/raider/death_3.ogg', 'sound/f13npc/raider/death_4.ogg')
 	harm_intent_damage = 5
 	melee_damage_lower = 20
 	melee_damage_upper = 30

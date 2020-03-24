@@ -9,9 +9,9 @@
 	icon_dead = "mole_rat_dead"
 	icon_gib = "gib"
 	turns_per_move = 1
-	response_help = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm = "kicks"
+	response_help = "гладит"
+	response_disarm = "пихает в бок"
+	response_harm = "пинает"
 	butcher_results = list(/obj/item/stack/sheet/animalhide/molerat = 1, \
 	/obj/item/weapon/reagent_containers/food/snacks/meat/slab/molerat = 1)
 	maxHealth = 65
@@ -33,7 +33,7 @@
 	melee_damage_upper = 20
 	aggro_vision_range = 12 //I SEE EVERYTHING
 	idle_vision_range = 10
-	attacktext = "bites"
+	attacktext = "кусает"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 3
 

@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/sentrybot
 	name = "Робот-Охранник"
-	desc = "A pre-War type of sentrybot.<br>Extremely dangerous machine."
+	desc = "Довоенный Робот-Охранник.<br>Очень грозная машина."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
