@@ -1,7 +1,7 @@
 #define CUM_TARGET_THROAT "throat"
 #define CUM_TARGET_VAGINA "vagina"
 #define CUM_TARGET_ANUS "anus"
-
+//god abondoned us
 /mob/living/simple_animal/hostile/deathclaw/funclaw
 	name = "Funclaw"
 	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one seems to have a strange look in its eyes.."
