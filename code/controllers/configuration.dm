@@ -163,7 +163,7 @@
 	var/revival_brain_life = -1
 
 	var/rename_cyborg = 0
-	var/ooc_during_round = 0
+	var/ooc_during_round = 1
 	var/emojis = 0
 
 	//Used for modifying movement speed for mobs.
