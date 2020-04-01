@@ -349,6 +349,13 @@
 */
 ///legion///
 
+/datum/content_pack/leg_legate
+	name = "Легион: Легат"
+	id = "legion_legate"
+	desc = "<b>Открывает доступ к роли Легата!</b><br>Аве мне!<br>."
+	roles = list(/datum/job/legate)
+	price = 80000
+
 /datum/content_pack/leg_centurion
 	name = "Легион: Центурион"
 	id = "legion_centurion"
