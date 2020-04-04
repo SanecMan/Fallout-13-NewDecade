@@ -21,11 +21,11 @@ var/list/interactions
 /mob/proc/list_interaction_attributes()
 	var/dat = ""
 	if(has_hands())
-		dat += "...имеет руки."
+		dat += "TARGET имеет руки."
 	if(has_mouth())
 		if(dat != "")
 			dat += "<br>"
-		dat += "...имеет рот, который [mouth_is_free() ? "не прикрыт" : "прикрыт"]."
+		dat += "TARGET имеет рот, который [mouth_is_free() ? "не прикрыт" : "прикрыт"]."
 	return dat
 
 /datum/interaction
