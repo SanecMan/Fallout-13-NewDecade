@@ -790,7 +790,7 @@
 			if(pulling)
 				weight += pulling.contents_weight
 				weight += pulling.self_weight
-			stat(null, "Вес: [weight]/[H.special.getWeight(H)]")
+			stat(null, "Weight: [weight]/[H.special.getWeight(H)]")
 
 
 /mob/living/cancel_camera()
