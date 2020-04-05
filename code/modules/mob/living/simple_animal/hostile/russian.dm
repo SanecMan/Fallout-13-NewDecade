@@ -23,7 +23,7 @@
 	unsuitable_atmos_damage = 15
 	faction = list("chinese")
 	status_flags = CANPUSH
-	del_on_death = 0
+	del_on_death = 1
 	loot = list(/obj/effect/mob_spawn/human/corpse/russian)
 
 /mob/living/simple_animal/hostile/russian/ranged
