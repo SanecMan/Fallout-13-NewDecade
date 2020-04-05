@@ -1242,6 +1242,7 @@
 #include "code\modules\fallout\advanced\give.dm"
 #include "code\modules\fallout\advanced\hrange.dm"
 #include "code\modules\fallout\advanced\mob_loot.dm"
+#include "code\modules\fallout\advanced\pipboyTEST.dm"
 #include "code\modules\fallout\advanced\skills.dm"
 #include "code\modules\fallout\advanced\special.dm"
 #include "code\modules\fallout\advanced\teleport.dm"

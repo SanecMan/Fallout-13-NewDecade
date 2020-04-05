@@ -2,7 +2,7 @@
 	name = "����"
 	desc = "Better stay away from that thing."
 	icon = 'icons/fallout/objects/items.dmi'
-	icon_state = "landmine_placed"
+	icon_state = "landmine_item"
 	var/triggered = 0
 	det_time = 0																										//Âçðûâàåòñÿ ìîìåíòàëüíî
 
@@ -82,7 +82,7 @@
 /obj/item/weapon/grenade/mine/explosive/planted
 	active = 1
 	anchored = 1
-	icon_state = "mine_active"
+	icon_state = "landmine_active"
 
 /obj/item/weapon/grenade/mine/caps_mine
 	name = "caps mine"
