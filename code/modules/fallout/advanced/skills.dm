@@ -18,6 +18,44 @@
 
 	var/mob/living/carbon/human/owner
 
+/datum/skills/proc/skillSuccessChance(var/skill_name)
+	var/chance = 100
+
+	var/I = getPoint(skill_name)
+	if(!I)
+		return chance
+
+	switch(I)
+		if(1) chance = 5
+		if(2) chance = 10
+		if(3) chance = 15
+		if(4) chance = 20
+		if(5) chance = 25
+		if(6) chance = 40
+		if(7) chance = 50
+		if(8) chance = 60
+		if(9) chance = 70
+		if(10) chance = 80
+	return chance
+
+/datum/skills/proc/skillSpeedMod(var/skill_name, var/duration)
+	var/I = getPoint(skill_name)
+	if(!I)
+		return duration
+
+	switch(I)
+		if(1) duration = duration * 4
+		if(2) duration = duration * 3
+		if(3) duration = round(duration * 2.75)
+		if(4) duration = round(duration * 2.50)
+		if(5) duration = round(duration * 2.25)
+		if(6) duration = duration * 2
+		if(7) duration = round(duration * 1.75)
+		if(8) duration = round(duration * 1.50)
+		if(9) duration = round(duration * 1.25)
+	return duration
+
+
 /datum/skills/proc/reagent(type)
 	if(!owner)
 		return FALSE
@@ -56,7 +94,7 @@
 		if("science")
 			. = science
 		else
-			. = 26
+			. = FALSE
 
 /datum/skills/proc/getSpentPoints()
 	return small_guns + big_guns + barter + energy_weapons +  explosives + lockpick + medicine + melee_weapons + repair + sneak + speech + unarmed + science

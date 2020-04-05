@@ -15,7 +15,7 @@
 "ao" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/indestructible/ground/dirt{icon_state = "dirt"},/area/f13/wasteland)
 "ap" = (/turf/open/indestructible/ground/dirt{dir = 6; icon_state = "dirt"},/area/f13/wasteland)
 "aq" = (/turf/open/indestructible/ground/dirt{tag = "icon-dirt (EAST)"; icon_state = "dirt"; dir = 4},/area/f13/wasteland)
-"ar" = (/obj/structure/simple_door/room,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"ar" = (/obj/structure/table/wood,/obj/item/door_key,/obj/item/door_key,/obj/item/door_key,/obj/item/weapon/storage/keys_set,/obj/item/lockpick/cheat,/obj/item/lockpick/pro,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "as" = (/turf/open/indestructible/ground/dirt{tag = "icon-dirtcorner (EAST)"; icon_state = "dirtcorner"; dir = 4},/area/f13/wasteland)
 "at" = (/turf/open/indestructible/ground/dirt{tag = "icon-dirt (NORTH)"; icon_state = "dirt"; dir = 1},/area/f13/wasteland)
 "au" = (/obj/machinery/trading_machine/weapon,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
@@ -60,6 +60,7 @@
 "bh" = (/obj/structure/table/wood,/obj/effect/decal/cleanable/dirt,/obj/item/weapon/grenade/syndieminibomb,/obj/item/weapon/grenade/syndieminibomb,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "bi" = (/obj/item/weapon/grenade/mine,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "bj" = (/obj/item/weapon/grenade/mine,/turf/open/indestructible/ground/dirt,/area/f13/wasteland)
+"bl" = (/obj/structure/table/wood,/obj/item/lock,/obj/item/lock,/obj/item/lock,/obj/item/lockpick,/turf/open/floor/f13/wood,/area/f13/wasteland)
 
 (1,1,1) = {"
 abababababababababababababababababababababababababababababababababababababababab
@@ -94,9 +95,9 @@ abaqbjalalalalalalalalalalalalalbfahahbiahahahahahahahahahahahahahahahahahababab
 abaqalalalalalalalalalalalalalalbfahahahahahahahahahahahahahahahahahbiahahababab
 abasatatatatatatatatatataAalalalbfahahahahahahahahahahahahahahahahahahahahababab
 ababaCaCaEaEaCaTaCaCahbiakalalalbfahahahahahahahahahahahahahahahahahahahahababab
-ababaCaaaeacavaIaIaEahahakalalalbfahahahahahahahahahahahahahahahahahahahahababab
-ababaCawaIaIaIagaIaEahahakalalalbfahahahahahahahadahahahahahahahahahahahahababab
-ababaCaxaIaMaraMaMaCahahakalalalbfahahahahahahahahahahahahahahahahahahahahababab
+ababaCaaaeacavaIaraEahahakalalalbfahahahahahahahahahahahahahahahahahahahahababab
+ababaCawaIaIaIagblaEahahakalalalbfahahahahahahahadahahahahahahahahahahahahababab
+ababaCaxaIaMaMaHaMaCahahakalalalbfahahahahahahahahahahahahahahahahahahahahababab
 ababaCbgaIaMaIaIayaEahahakalalalbfahahahahahahahahahahahahahahahahahahahahababab
 ababaCbhaIaMayayauaEahahakalalalbfahahahahahahahahahahahahahahahahahahahahababab
 ababaCaCaCaCaCaCaCaCahahakalalalbfahahahahahahahahahahahahahahahahahahahahababab

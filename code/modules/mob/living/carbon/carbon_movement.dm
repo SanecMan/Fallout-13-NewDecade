@@ -19,14 +19,15 @@
 		if(istype(src, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = src
 			if(istype(H.wear_suit, /obj/item/clothing/suit/armor/f13/power_armor))
+				. += 2
 				var/obj/item/clothing/suit/armor/f13/power_armor/PA = H.wear_suit
 				if(!PA.enabled)
 					. += 10
 
-				if(!perks.have(/datum/perk_hidden/powerArmor) && (H.special.getPoint("a") < 8 && H.special.getPoint("s") < 9))
-					. += 10
-				else
-					. += 5
+				if(!perks.have(/datum/perk_hidden/powerArmor))
+					. += 7
+				else if(H.special.getPoint("a") < 8 && H.special.getPoint("s") < 9)
+					. += 4
 		/*
 		if(src:wear_suit)
 			var/classSlowdown = (src:wear_suit:self_weight) / 30

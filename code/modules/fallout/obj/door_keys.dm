@@ -1,6 +1,6 @@
 /obj/item/door_key
-	name = "unusable key"
-	desc = "A small grey key."
+	name = "неиспользованный ключ"
+	desc = "Маленький серый ключ."
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "empty_key"
 	w_class = WEIGHT_CLASS_TINY
@@ -64,7 +64,6 @@
 	desc = "Put your keys here and make using doors comfortable!"
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "keychain_0"
-	density = 0
 	storage_slots = 4
 	can_hold = list(/obj/item/door_key)
 	rustle_jimmies = FALSE
@@ -84,14 +83,17 @@
 
 
 /obj/item/lock
-	name = "unusable padlock"
-	desc = "A small grey lock."
+	name = "неиспользованный замок"
+	desc = "Маленький серый замок."
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "closed_lock"
 	w_class = WEIGHT_CLASS_TINY
 	layer = 100
 	var/open = FALSE
 	var/id = null
+	var/jammed = FALSE
+	var/jammed_chance = 20
+	var/spam_protect_time = 0
 
 /obj/item/lock/New(location)
 	..()
@@ -115,6 +117,8 @@
 			if(id == K.id)
 				to_chat(user, "<span class='notice'>Вы начинаете [open ? "закрывать" : "открывать"] замок.</span>")
 				if(do_after(user, 15, target = loc))
+					if(!open && jammed)
+						to_chat(user, "<span class='userdanger'>Ключ туго проворачивается в замке, похоже кто-то пытался его взломать!</span>")
 					toogle()
 			else
 				to_chat(user, "<span class='warning'>Неверный ключ!</span>")
@@ -129,6 +133,39 @@
 				src.attach_id(new_id)
 				to_chat(user, "<span class='notice'>[K] sets for [src] now.</span>")
 		return 1
+
+	if(istype(W,/obj/item/lockpick))
+		if(jammed)
+			to_chat(user, "<span class='warning'>Этот замок заклинил, теперь его можно открыть только ключом.</span>")
+			return
+
+		if(world.time < spam_protect_time)
+			to_chat(user, "<span class='warning'>Вам нужно немного времени, чтобы сконцентрироваться.</span>")
+			return
+
+		var/obj/item/lockpick/L = W
+		var/mob/living/carbon/C
+		if(istype(user, /mob/living/carbon))
+			C = user
+
+		var/duration = C.skills.skillSpeedMod("lockpick", L.lockpicking_time)
+		if(id && !open)
+			spam_protect_time = duration + world.time
+			to_chat(user, "<span class='warning'>Вы начинаете вскрывать замок.</span>")
+			if(do_after(user, duration, target = loc))
+				if(prob(C.skills.skillSuccessChance("lockpick")))
+					toogle()
+					to_chat(user, "<span class='green'>Вы вскрыли замок!.</span>")
+					return
+				else
+					if(prob(jammed_chance))
+						jammed = TRUE
+						to_chat(user, "<span class='userdanger'>Замок заклинило!</span>")
+					else
+						to_chat(user, "<span class='warning'>Вам не удалось взломать замок!</span>")
+				if(prob(L.broken_chance))
+					to_chat(user, "<span class='warning'>[L.name] сломалась!</span>")
+					qdel(L)
 	. = ..()
 
 /obj/item/lock/proc/attach_id(id)
@@ -137,7 +174,33 @@
 
 /obj/item/lock/proc/toogle()
 	open = !open
+	jammed = FALSE
 	update_icon()
 
 /obj/item/lock/update_icon()
 	icon_state = open ? "opened_lock" : "closed_lock"
+
+
+  ////////////
+ //LOCKPICK//
+/obj/item/lockpick
+	name = "заколка"
+	desc = "Обычная заколка для волоc, однако в умелых руках может выступать в роли отмычки."
+	icon = 'icons/fallout/objects/keys.dmi'
+	icon_state = "Hairpin"
+
+	var/lockpicking_time = 100
+	var/broken_chance = 50
+
+/obj/item/lockpick/pro
+	name = "отмычка"
+	desc = "Профессиональный инструмент медвежатника."
+	icon_state = "Professional_lockpick_kit"
+
+	lockpicking_time = 50
+	broken_chance = 15
+
+/obj/item/lockpick/cheat
+	color = "#009933"
+	lockpicking_time = 1
+	broken_chance = 0

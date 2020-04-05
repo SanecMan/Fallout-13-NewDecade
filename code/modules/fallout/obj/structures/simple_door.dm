@@ -153,6 +153,10 @@
 				attach_padlock(P)
 				P.attackby(I, user, params)
 				return 1
+	if(istype(I, /obj/item/lockpick))
+		if(padlock)
+			padlock.attackby(I, user, params)
+
 	if(user.a_intent == INTENT_HARM)
 		return ..()
 	attack_hand(user)
