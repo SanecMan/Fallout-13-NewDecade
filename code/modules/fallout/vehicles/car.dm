@@ -39,9 +39,3 @@
 	S.anchored = 1
 	S.icon = null
 	S.verbs.Cut()
-
-	S = new (locate(x+3,y,z))
-	S.density = 1
-	S.anchored = 1
-	S.icon = null
-	S.verbs.Cut()
