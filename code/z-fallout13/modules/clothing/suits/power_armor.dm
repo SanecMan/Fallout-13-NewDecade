@@ -232,6 +232,9 @@
 	light_color = LIGHT_COLOR_YELLOW
 	icon = 'icons/fallout/clothing/hats.dmi'
 
+/datum/action/item_action/toggle_helmet_light
+	button_icon_state = "pa_helmet"
+
 /obj/item/clothing/head/helmet/power_armor/proc/toogle_light(mob/user)
 	on = !on
 	icon_state = "[initial(icon_state)][on ? "-light" : ""]"
@@ -245,8 +248,6 @@
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
 
-/datum/action/item_action/toggle_helmet_light
-	button_icon_state = "pa_helmet"
 
 /obj/item/clothing/head/helmet/power_armor/ui_action_click(mob/user, actiontype)
 	if(istype(actiontype, /datum/action/item_action/toggle_helmet_light))
