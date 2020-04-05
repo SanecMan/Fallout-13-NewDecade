@@ -241,12 +241,12 @@
 	minimum_distance = 6
 
 	sound_speak_chance = 3
-	sound_speak = pick('sound/f13npc/enclave_npc/idle_1.ogg')
+	sound_speak = list('sound/f13npc/enclave_npc/idle_1.ogg')
 
 	aggro_sound_chance = 50
-	aggro_sound = pick('sound/f13npc/enclave_npc/attack_1.ogg','sound/f13npc/enclave_npc/attack_2.ogg','sound/f13npc/enclave_npc/attack_3.ogg','sound/f13npc/enclave_npc/attack_4.ogg','sound/f13npc/enclave_npc/attack_5.ogg','sound/f13npc/enclave_npc/attack_6.ogg','sound/f13npc/enclave_npc/attack_7.ogg','sound/f13npc/enclave_npc/attack_8.ogg','sound/f13npc/enclave_npc/attack_9.ogg','sound/f13npc/enclave_npc/attack_10.ogg','sound/f13npc/enclave_npc/attack_11.ogg','sound/f13npc/enclave_npc/attack_12.ogg','sound/f13npc/enclave_npc/attack_13.ogg','sound/f13npc/enclave_npc/attack_14.ogg','sound/f13npc/enclave_npc/attack_15.ogg')
+	aggro_sound = list('sound/f13npc/enclave_npc/attack_1.ogg','sound/f13npc/enclave_npc/attack_2.ogg','sound/f13npc/enclave_npc/attack_3.ogg','sound/f13npc/enclave_npc/attack_4.ogg','sound/f13npc/enclave_npc/attack_5.ogg','sound/f13npc/enclave_npc/attack_6.ogg','sound/f13npc/enclave_npc/attack_7.ogg','sound/f13npc/enclave_npc/attack_8.ogg','sound/f13npc/enclave_npc/attack_9.ogg','sound/f13npc/enclave_npc/attack_10.ogg','sound/f13npc/enclave_npc/attack_11.ogg','sound/f13npc/enclave_npc/attack_12.ogg','sound/f13npc/enclave_npc/attack_13.ogg','sound/f13npc/enclave_npc/attack_14.ogg','sound/f13npc/enclave_npc/attack_15.ogg')
 
-	death_sound = pick('sound/f13npc/enclave_npc/death_1.ogg','sound/f13npc/enclave_npc/death_2.ogg','sound/f13npc/enclave_npc/death_3.ogg','sound/f13npc/enclave_npc/death_4.ogg','sound/f13npc/enclave_npc/death_5.ogg','sound/f13npc/enclave_npc/death_6.ogg','sound/f13npc/enclave_npc/death_7.ogg','sound/f13npc/enclave_npc/death_8.ogg','sound/f13npc/enclave_npc/death_9.ogg','sound/f13npc/enclave_npc/death_10.ogg','sound/f13npc/enclave_npc/death_11.ogg')
+	death_sound = list('sound/f13npc/enclave_npc/death_1.ogg','sound/f13npc/enclave_npc/death_2.ogg','sound/f13npc/enclave_npc/death_3.ogg','sound/f13npc/enclave_npc/death_4.ogg','sound/f13npc/enclave_npc/death_5.ogg','sound/f13npc/enclave_npc/death_6.ogg','sound/f13npc/enclave_npc/death_7.ogg','sound/f13npc/enclave_npc/death_8.ogg','sound/f13npc/enclave_npc/death_9.ogg','sound/f13npc/enclave_npc/death_10.ogg','sound/f13npc/enclave_npc/death_11.ogg')
 
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	self_weight = 45
@@ -622,10 +622,10 @@
 	maxHealth = 150
 	health = 150
 	sound_speak_chance = 50
-	sound_speak = pick('sound/f13npc/raider/idle_1.ogg','sound/f13npc/raider/idle_2.ogg','sound/f13npc/raider/idle_3.ogg','sound/f13npc/raider/idle_4.ogg')
+	sound_speak = list('sound/f13npc/raider/idle_1.ogg','sound/f13npc/raider/idle_2.ogg','sound/f13npc/raider/idle_3.ogg','sound/f13npc/raider/idle_4.ogg')
 	aggro_sound_chance = 50
-	aggro_sound = pick('sound/f13npc/raider/attack_1.ogg','sound/f13npc/raider/attack_2.ogg','sound/f13npc/raider/attack_3.ogg','sound/f13npc/raider/attack_4.ogg','sound/f13npc/raider/attack_5.ogg','sound/f13npc/raider/attack_6.ogg','sound/f13npc/raider/attack_7.ogg','sound/f13npc/raider/attack_8.ogg','sound/f13npc/raider/attack_9.ogg','sound/f13npc/raider/attack_10.ogg','sound/f13npc/raider/attack_11.ogg','sound/f13npc/raider/attack_12.ogg','sound/f13npc/raider/attack_13.ogg','sound/f13npc/raider/attack_14.ogg','sound/f13npc/raider/attack_15.ogg','sound/f13npc/raider/attack_16.ogg')
-	death_sound = pick('sound/f13npc/raider/death_1.ogg', 'sound/f13npc/raider/death_2.ogg','sound/f13npc/raider/death_3.ogg','sound/f13npc/raider/death_4.ogg')
+	aggro_sound = list('sound/f13npc/raider/attack_1.ogg','sound/f13npc/raider/attack_2.ogg','sound/f13npc/raider/attack_3.ogg','sound/f13npc/raider/attack_4.ogg','sound/f13npc/raider/attack_5.ogg','sound/f13npc/raider/attack_6.ogg','sound/f13npc/raider/attack_7.ogg','sound/f13npc/raider/attack_8.ogg','sound/f13npc/raider/attack_9.ogg','sound/f13npc/raider/attack_10.ogg','sound/f13npc/raider/attack_11.ogg','sound/f13npc/raider/attack_12.ogg','sound/f13npc/raider/attack_13.ogg','sound/f13npc/raider/attack_14.ogg','sound/f13npc/raider/attack_15.ogg','sound/f13npc/raider/attack_16.ogg')
+	death_sound = list('sound/f13npc/raider/death_1.ogg', 'sound/f13npc/raider/death_2.ogg','sound/f13npc/raider/death_3.ogg','sound/f13npc/raider/death_4.ogg')
 	harm_intent_damage = 5
 	melee_damage_lower = 20
 	melee_damage_upper = 30
