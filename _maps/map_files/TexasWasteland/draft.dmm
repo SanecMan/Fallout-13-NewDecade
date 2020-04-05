@@ -450,35 +450,85 @@
 "iH" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/effect/spawner/lootdrop/food,/obj/item/door_key,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
 "iI" = (/obj/structure/table/wood,/obj/machinery/microwave,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
 "iJ" = (/obj/item/stack/caps/random,/turf/open/indestructible/ground/mountain,/area/f13/wasteland)
-"jc" = (/turf/closed/wall/f13/ruins,/area/f13/wasteland)
-"jd" = (/turf/open/ruins,/area/f13/wasteland)
-"je" = (/turf/open/ruins{tag = "icon-rubbleplate"; icon_state = "rubbleplate"},/area/f13/wasteland)
-"jf" = (/turf/open/ruins{tag = "icon-rubble (NORTHWEST)"; icon_state = "rubble"; dir = 9},/area/f13/wasteland)
-"jg" = (/obj/item/stack/caps/random,/turf/open/ruins{tag = "icon-rubble (NORTHWEST)"; icon_state = "rubble"; dir = 9},/area/f13/wasteland)
-"jh" = (/turf/open/ruins{tag = "icon-rubble (NORTH)"; icon_state = "rubble"; dir = 1},/area/f13/wasteland)
-"ji" = (/turf/open/ruins{tag = "icon-rubblecorner (NORTH)"; icon_state = "rubblecorner"; dir = 1},/area/f13/wasteland)
-"jj" = (/turf/open/ruins{tag = "icon-rubblecorner (EAST)"; icon_state = "rubblecorner"; dir = 4},/area/f13/wasteland)
-"jk" = (/obj/effect/spawner/lootdrop/trash,/turf/open/ruins{dir = 1; icon_state = "rubblecorner"; tag = "icon-rubblecorner (WEST)"},/area/f13/wasteland)
-"jm" = (/turf/open/ruins{dir = 2; icon_state = "rubblecorner"; tag = "icon-rubblecorner (WEST)"},/area/f13/wasteland)
-"jn" = (/turf/open/ruins{tag = "icon-rubble"; icon_state = "rubble"},/area/f13/wasteland)
-"jo" = (/turf/open/ruins{tag = "icon-rubblecorner (WEST)"; icon_state = "rubblecorner"; dir = 8},/area/f13/wasteland)
-"jp" = (/obj/effect/spawner/lootdrop/crafts,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"jq" = (/turf/open/ruins{tag = "icon-rubble (SOUTHEAST)"; icon_state = "rubble"; dir = 6},/area/f13/wasteland)
-"js" = (/turf/open/ruins{tag = "icon-rubble (SOUTHWEST)"; icon_state = "rubble"; dir = 10},/area/f13/wasteland)
-"jt" = (/obj/structure/window/fulltile/ruins{tag = "icon-ruinswindowbrokenvertical (NORTHEAST)"; icon_state = "ruinswindowbrokenvertical"},/turf/open/ruins,/area/f13/wasteland)
-"ju" = (/turf/open/ruins{tag = "icon-rubble (EAST)"; icon_state = "rubble"; dir = 4},/area/f13/wasteland)
-"jv" = (/obj/structure/decoration/ruins{tag = "icon-overlapcorner"; icon_state = "overlapcorner"},/turf/open/ruins,/area/f13/wasteland)
-"jw" = (/obj/structure/decoration/ruins{tag = "icon-overlapcorner (NORTH)"; icon_state = "overlapcorner"; dir = 1},/turf/open/ruins,/area/f13/wasteland)
-"jy" = (/turf/open/ruins{tag = "icon-rubble (WEST)"; icon_state = "rubble"; dir = 8},/area/f13/wasteland)
-"jz" = (/obj/structure/decoration/ruins{tag = "icon-overlaptriple (EAST)"; icon_state = "overlaptriple"; dir = 4},/turf/open/ruins,/area/f13/wasteland)
-"jA" = (/obj/structure/decoration/ruins{tag = "icon-overlap (WEST)"; icon_state = "overlap"; dir = 8},/turf/open/ruins,/area/f13/wasteland)
-"jB" = (/obj/structure/decoration/ruins{tag = "icon-overlapcornershade"; icon_state = "overlapcornershade"},/turf/open/ruins,/area/f13/wasteland)
-"jC" = (/obj/structure/decoration/ruins{tag = "icon-overlapcornershade (NORTH)"; icon_state = "overlapcornershade"; dir = 1},/turf/open/ruins,/area/f13/wasteland)
-"jD" = (/turf/open/ruins{dir = 8; icon_state = "rubblecorner"; tag = "icon-rubblecorner"},/area/f13/wasteland)
-"jE" = (/turf/open/ruins{dir = 4; icon_state = "rubblecorner"; tag = "icon-rubblecorner (WEST)"},/area/f13/wasteland)
-"jF" = (/obj/effect/spawner/lootdrop/crafts,/turf/open/ruins{tag = "icon-rubble (NORTHEAST)"; icon_state = "rubble"; dir = 5},/area/f13/wasteland)
-"jG" = (/obj/effect/spawner/lootdrop/trash,/turf/open/ruins{tag = "icon-rubblecorner (NORTH)"; icon_state = "rubblecorner"; dir = 1},/area/f13/wasteland)
-"jH" = (/turf/open/ruins{tag = "icon-rubbleslab"; icon_state = "rubbleslab"},/area/f13/wasteland)
+"iK" = (/turf/closed/wall/f13/vault,/area/f13/wasteland)
+"iL" = (/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/wasteland)
+"iM" = (/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/wasteland)
+"iN" = (/mob/living/simple_animal/hostile/radroach,/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/wasteland)
+"iO" = (/mob/living/simple_animal/hostile/radroach,/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/wasteland)
+"iP" = (/mob/living/simple_animal/hostile/synth,/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/wasteland)
+"iQ" = (/obj/structure/toilet{dir = 4},/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
+"iR" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13,/area/f13/wasteland)
+"iS" = (/turf/open/floor/f13,/area/f13/wasteland)
+"iT" = (/obj/machinery/atmospherics/components/unary/tank/oxygen,/turf/open/floor/f13,/area/f13/wasteland)
+"iU" = (/obj/structure/fluff/empty_sleeper/nanotrasen,/turf/open/floor/f13,/area/f13/wasteland)
+"iV" = (/obj/structure/guncase/shotgun,/turf/open/floor/f13,/area/f13/wasteland)
+"iW" = (/obj/structure/rack,/obj/item/weapon/bottlecap_mine,/turf/open/floor/f13,/area/f13/wasteland)
+"iX" = (/obj/structure/guncase/shotgun,/obj/machinery/light{dir = 1},/turf/open/floor/f13,/area/f13/wasteland)
+"iY" = (/obj/structure/rack,/obj/item/stack/sheet/plasteel/twenty,/turf/open/floor/f13,/area/f13/wasteland)
+"iZ" = (/obj/structure/disposalpipe/trunk{dir = 4},/obj/machinery/disposal/deliveryChute{dir = 8},/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/wasteland)
+"ja" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/closed/wall/f13/vault,/area/f13/wasteland)
+"jb" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/open/indestructible/ground/mountain,/area/f13/wasteland)
+"jc" = (/obj/machinery/light{dir = 8},/turf/open/floor/f13,/area/f13/wasteland)
+"jd" = (/mob/living/simple_animal/hostile/synth,/turf/open/floor/f13,/area/f13/wasteland)
+"je" = (/mob/living/simple_animal/hostile/radroach,/turf/open/floor/f13,/area/f13/wasteland)
+"jf" = (/mob/living/simple_animal/hostile/russian,/turf/open/floor/f13,/area/f13/wasteland)
+"jg" = (/obj/structure/fluff/paper/stack{tag = "icon-paperstack (WEST)"; icon_state = "paperstack"; dir = 8},/turf/open/floor/f13,/area/f13/wasteland)
+"jh" = (/mob/living/simple_animal/hostile/molerat,/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/wasteland)
+"ji" = (/obj/machinery/autolathe,/turf/open/floor/f13,/area/f13/wasteland)
+"jj" = (/obj/structure/fluff/paper/stack{tag = "icon-paperstack (NORTHWEST)"; icon_state = "paperstack"; dir = 9},/turf/open/floor/f13,/area/f13/wasteland)
+"jk" = (/mob/living/simple_animal/hostile/synth/mk2,/turf/open/floor/f13,/area/f13/wasteland)
+"jl" = (/mob/living/simple_animal/hostile/creature,/turf/open/floor/f13,/area/f13/wasteland)
+"jm" = (/obj/structure/rack,/obj/item/weapon/gun/ballistic/automatic/pistol/deagle/gold,/turf/open/floor/f13,/area/f13/wasteland)
+"jn" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{icon_state = "floorsolid"},/area/f13/wasteland)
+"jo" = (/obj/structure/simple_door/metal/ventilation,/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/wasteland)
+"jp" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/wasteland)
+"jq" = (/obj/machinery/door/airlock/highsecurity,/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/wasteland)
+"jr" = (/turf/open/floor/engine,/area/f13/wasteland)
+"js" = (/obj/machinery/light{dir = 1},/turf/open/floor/engine,/area/f13/wasteland)
+"jt" = (/obj/structure/window/reinforced{tag = "icon-rwindow (EAST)"; icon_state = "rwindow"; dir = 4},/turf/open/floor/engine,/area/f13/wasteland)
+"ju" = (/obj/machinery/atmospherics/components/unary/tank/oxygen_agent_b,/turf/open/floor/engine,/area/f13/wasteland)
+"jv" = (/obj/machinery/computer/upload/ai,/turf/open/floor/engine,/area/f13/wasteland)
+"jw" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13,/area/f13/wasteland)
+"jx" = (/obj/machinery/vending/coffee,/turf/open/floor/f13,/area/f13/wasteland)
+"jy" = (/obj/structure/girder/reinforced,/turf/open/indestructible/ground/mountain,/area/f13/wasteland)
+"jz" = (/obj/machinery/light{dir = 8},/turf/open/floor/engine,/area/f13/wasteland)
+"jA" = (/obj/structure/AIcore,/mob/living/simple_animal/hostile/illusion,/turf/open/floor/engine,/area/f13/wasteland)
+"jB" = (/obj/structure/door_assembly/door_assembly_vault,/turf/open/floor/engine,/area/f13/wasteland)
+"jC" = (/mob/living/simple_animal/hostile/sentrybot,/turf/open/floor/f13,/area/f13/wasteland)
+"jD" = (/obj/structure/fluff/paper/stack{tag = "icon-paperstack (SOUTHEAST)"; icon_state = "paperstack"; dir = 6},/turf/open/floor/f13,/area/f13/wasteland)
+"jE" = (/mob/living/simple_animal/hostile/molerat,/turf/open/indestructible/ground/mountain,/area/f13/wasteland)
+"jF" = (/obj/machinery/light,/turf/open/floor/engine,/area/f13/wasteland)
+"jG" = (/obj/structure/fluff/paper/stack,/turf/open/floor/engine,/area/f13/wasteland)
+"jH" = (/obj/machinery/computer/aifixer,/turf/open/floor/engine,/area/f13/wasteland)
+"jI" = (/obj/structure/simple_door/blast,/turf/open/floor/f13{icon_state = "floordirtysolid"},/area/f13/wasteland)
+"jJ" = (/obj/structure/punching_bag,/turf/open/floor/f13,/area/f13/wasteland)
+"jK" = (/obj/machinery/atmospherics/components/unary/cryo_cell,/turf/open/floor/f13,/area/f13/wasteland)
+"jL" = (/turf/open/floor/f13{icon_state = "rampuptop"},/area/f13/wasteland)
+"jM" = (/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/wasteland)
+"jN" = (/obj/machinery/mech_bay_recharge_port,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/wasteland)
+"jO" = (/obj/machinery/light{dir = 1},/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/wasteland)
+"jP" = (/obj/machinery/mech_bay_recharge_port{tag = "icon-recharge_port (WEST)"; icon_state = "recharge_port"; dir = 8},/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/wasteland)
+"jQ" = (/obj/machinery/door/airlock/hatch,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
+"jR" = (/mob/living/simple_animal/hostile/morph,/turf/open/floor/f13,/area/f13/wasteland)
+"jS" = (/obj/machinery/door/airlock/highsecurity,/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/wasteland)
+"jT" = (/mob/living/simple_animal/hostile/sentrybot,/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/wasteland)
+"jU" = (/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/wasteland)
+"jV" = (/mob/living/simple_animal/bot/mulebot,/turf/open/floor/f13,/area/f13/wasteland)
+"jW" = (/obj/structure/fluff/empty_sleeper/nanotrasen{tag = "icon-sleeper-o (NORTH)"; icon_state = "sleeper-o"; dir = 1},/turf/open/floor/f13,/area/f13/wasteland)
+"jX" = (/obj/machinery/atmospherics/components/unary/tank/air,/turf/open/floor/f13,/area/f13/wasteland)
+"jY" = (/obj/structure/fluff/paper/stack{tag = "icon-paperstack (SOUTHEAST)"; icon_state = "paperstack"; dir = 6},/turf/open/floor/f13{icon_state = "darkrusty"},/area/f13/wasteland)
+"jZ" = (/obj/machinery/iv_drip,/turf/open/floor/f13{icon_state = "darkdirty"},/area/f13/wasteland)
+"ka" = (/mob/living/simple_animal/hostile/protectron,/turf/open/floor/f13{icon_state = "darkdirtysolid"},/area/f13/wasteland)
+"kb" = (/obj/structure/vault_door/old{id = 9},/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/wasteland)
+"kc" = (/mob/living/simple_animal/hostile/protectron,/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/wasteland)
+"kd" = (/obj/machinery/doorButtons/vaultButton{id = 9},/turf/open/floor/plating/tunnel,/area/f13/wasteland)
+"ke" = (/turf/open/floor/plating/tunnel,/area/f13/wasteland)
+"kf" = (/obj/structure/fluff/paper/stack{tag = "icon-paperstack (NORTH)"; icon_state = "paperstack"; dir = 1},/turf/open/floor/plating/tunnel,/area/f13/wasteland)
+"kg" = (/obj/machinery/porta_turret/syndicate,/turf/open/floor/plating/tunnel{icon_state = "tunnelchess"},/area/f13/wasteland)
+"kh" = (/turf/open/floor/plating/tunnel{icon_state = "tunnelchess"},/area/f13/wasteland)
+"ki" = (/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/wasteland)
+"kj" = (/obj/machinery/porta_turret/syndicate,/turf/open/floor/plating/tunnel{icon_state = "tunnelchess2"},/area/f13/wasteland)
+"kk" = (/turf/open/floor/plating/tunnel{icon_state = "tunnelchess2"},/area/f13/wasteland)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -511,32 +561,32 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadahahahahahaNbQdMaNaNdNaNaNaNahahahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadahdOdPdOdQaNdRaNaNdSaNaNaNaMahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadahaeaeaeaeaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadahdTdUdVahahahahbbahahahahahahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadahaeaeaeaeaeaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajcjcjcjcjcjcjcaaaaaaaaaaaaaaaaaaadahdWdXdWahaAbnaNaNaNdYdZahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajcjdjdjejdjfjcjcaaaaaaaaaaaaaaaaadaheaebecahedaNeeefegbQedahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaRadaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajcjdjgjhjhjijcaaaaaaaaaaaaaaaaaaadahahahahahdZaNeheiejaNekahaaaaaaaaaaaaaaahbJbqcCbsbqbLelahbqbqadadaaaaaaaaaaahaRembdahcTbccTahbcahczahaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajjjhjkjmjnjoaajpaaaaaaaaaaaaaaaaadadadadadahedaNeneoepaNedahaaaaaaaaaaaaaaahbqembqaQeqeradahesbIbsahaaaaaaaaaaahahahbdbdbqetbqeuembdbdahaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajcaajmjqjdjsjoaaaaaaaaaaaaaaaaaaaaadadadadahevewaNaMaNexdZahaaaaaaaaaaaaaaahbqeyesbIbqadadahahbcahahaaaaaaaaaaahcCbCbdbIbqcCbLezbdeAadaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajtaajujvjcjwjyaaaaaaaaaaaaaaaaaaaaadadadadahahahahahahahahahaaaaaaaaaaaaaaahbqeBbqeCadadadadadadadadaaaaaaaaaaahahahahbcaheAahahahahbqaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajcaajujzjcjAjyadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahelerbJadadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajujBjcjCjyadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahahahahahahahahahadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajDjEjFjdjfjGadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajcjsjDjEjhjiaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajcjdjsjDaaaaadadaaaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajHjdjsjpaaadadaaaaaaaaaaaaaaadadadadadadadadafafafafadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajadadadaeaeadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajcjcjcjcjcadadadaaaaaaaaaaaaaaadadadadadadadafaiaiaiaiafadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakajajajajajajajajaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadafaiaiaiaiaiaiafadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakalamamamamavaxamaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadafaiaiaiaoaiaiaiaiafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakalamamamamamamamaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadafaiaiaiaiaiaiapaqaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakajajajajajajajajaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadafafafaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadafanaraiaiaiaoaiaiaiaiaoaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadafasaraiaiaqaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadafafafaiaiaiaiaiaiaiaiaiaqaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadafaiaiaiapaiaiaiaiaiaiaaaaaaaaaaadadadahagagfwagagahadadadadadadadahahahahahahahahadadadadaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadafaiaiaiaiaiaiaiaiafaaaaaaaaaaadahagagfBagagagagagadadadadadadadahdufCfDfEfDfFahadadadadaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadafaiaiaiaiapaiafadaaaaaaaaaaadagagagagagagagagagadadadahahahahahfGahcZahcZfHahahahahahaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadadafaiaiaiaiafadadaaaaaaaaaaagagfIagagfJagagfKfLahadadahfMfNfOahfPfQfRfSahfTahfUfVfWahaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadafafafafadadadaaaaaaaaaaahagagfKagagagagagagadadadahaNfGfXahfYaNfGfGfZdugafGfGahahaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadadadaaaaaaaaaaaeadgbagagaggcgcahadadadadahgdfGgeahahahgfgfahahahggahahadaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadahdWdXdWahaAbnaNaNaNdYdZahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaaaa
+adadaeadadadaeadaeadaeaeadaeadadaeadaeaeadadaeadadaeaeadadadaeadaeadadagagagaaaaaaaaaaaaaaaaadaheaebecahedaNeeefegbQedahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaRadaaaa
+adadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadagaaaaaaaaaaaaaaaaadahahahahahdZaNeheiejaNekahaaaaaaaaaaaaaaahbJbqcCbsbqbLelahbqbqadadaaaaaaaaaaahaRembdahcTbccTahbcahczahaaaa
+adadadadiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKadadaaaaaaaaaaaaaaaaadadadadadahedaNeneoepaNedahaaaaaaaaaaaaaaahbqembqaQeqeradahesbIbsahaaaaaaaaaaahahahbdbdbqetbqeuembdbdahaaaa
+adadadadiKiLiMiLiLiLiNiLiLiMiMiLiLiLiMiLiLiLiMiMiMiLiLiMiMiLiLiLiMiMiMiKadagaaaaaaaaaaaaaaaaaaadadadadahevewaNaMaNexdZahaaaaaaaaaaaaaaahbqeyesbIbqadadahahbcahahaaaaaaaaaaahcCbCbdbIbqcCbLezbdeAadaaaaaa
+adadadadiKiOiKiKiKiKiKiKiKiKiKiKiKiKiKiKiLiKiKiKiKiKiKiKiKiKiKiKiPiLiMiKadagaaaaaaaaaaaaaaaaaaadadadadahahahahahahahahahaaaaaaaaaaaaaaahbqeBbqeCadadadadadadadadaaaaaaaaaaahahahahbcaheAahahahahbqaaaaaa
+adadadadiKiMiKiQiRiSiSiKiSiSiSiKiTiUiSiKiLiKiTiUiSiKiViWiXiYiViKiLiLiZjajbagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahelerbJadadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiLiKiKiKjciSiRiSjdiSiKiSiSiSiKiMiKiSiSjeiKiSiSjfjgiSiKiLjhiLiKadagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahahahahahahahahahadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiLiKjijdiSiSiKiSiSiSiKjjiSjkiKiMiKjliSiSiKiViYiSjmiViKiLiLiMiKadagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiMiKiKiKiKiKiKiKiSiSiKiKjniKiKjoiKiKjpiKiKiKiKjqiKiKiKiKiKiMiKadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadagiKiMiKjrjsjtjujviKiSiSiKiSiSiSjwiSiSiSiSiSiSjwiSiSiSjdiSjxiKiMiKadadaaaaaaaaaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadagagjyiMiKjzjAjrjrjrjBiSiSjpiSjCiSiSiSjDiSiSiSiSiSiSiSiSiSiSiSjoiMiKadadaaaaaaaaaaaaaaaaaaaaadadadadadadadadafafafafadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaajadadadaeaeadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadjEiKiMiKjrjFjtjGjHiKiSiSiKiSiSiSiSiSiSiSiSiSiSjgiSiSiSiSiSiSiKiMiKadadaaaaaaaaaaaaaaaaaaaaadadadadadadadafaiaiaiaiafadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaakajajajajajajajajaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiLiKiKiKiKiKiKiKiSiSiKiKjpiKiKjoiKiKjpiKjniKiKiKiKjIiKiKiKiMiKadadaaaaaaaaaaaaaaaaaaaaadadadadadadafaiaiaiaiaiaiafadaaaaaaaaaaaaaaaaaaaaaaaaaaaaakalamamamamavaxamaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiLiKjJiSjJiSiKiSiSiSiKiSiSiSiKiLiKjKiSiKjLjMiKjNjOjLjOjPiKiLiKadadaaaaaaaaaaaaaaaaaaaaadadadadadafaiaiaiaoaiaiaiaiafaaaaaaaaaaaaaaaaaaaaaaaaaaaaakalamamamamamamamaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiLiKjciSiSjkjQiSiSiSiKjdiSiSiKiMiKjRiSiKjMjMjSjMjTjUjTjMiKiLiKadadaaaaaaaaaaaaaaaaaaaaadadadadafaiaiaiaiaiaiapaqaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaakajajajajajajajajaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiMiKjJiSjJiSiKjViSjdiKiSjWiSiKiMiKjXjXiKjUjUiKjMjYjUjUjZiKiMiKadadaaaaaaaaaaaaaaaaaaaaadafafafaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaajadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiOiKiKiKiKiKiKiKiKiKiKiKiKiKiKiMiKiKiKiKiKiKiKiKiMiLiMiKiKiLiKadadaaaaaaaaaaaaaaaaaaaaadafanaraiaiaiaoaiaiaiaiaoaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiLiMiMiLiLiLiMiLiLiLiMiMiLiMiMiMiMiMiMiLiLkaiMiKiKkbiKiKkciLiKadadaaaaaaaaaaaaaaaaaaaaadafasaraiaiaqaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+adadadadiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKiKkdkekfiKiKiKiKadadaaaaaaaaaaaaaaaaaaaaadafafafaiaiaiaiaiaiaiaiaiaqaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaadadadadadadadadadadadadadadadadadadadadadadadadadadkgkekhkikjadadadadadaaaaaaaaaaaaaaaaaaaaadadadadafaiaiaiapaiaiaiaiaiaiaaaaadadadahagagfwagagahadadadadadadadahahahahahahahahadadadadaaaaaaaaaaaa
+aaaaadadadadadadadadadadadadadadadadadadadadadadadadadagagkkkikhagagadadadadaaaaaaaaaaaaaaaaaaaaadadadadadafaiaiaiaiaiaiaiaiafaaaaadahagagfBagagagagagadadadadadadadahdufCfDfEfDfFahadadadadaaaaaaaaaaaa
+aaaaadadadadadadadadadadadadadadadadadadadadadadadadagagagagagagagagagadadadaaaaaaaaaaaaaaaaaaaaadadadadadadafaiaiaiaiapaiafadaaaaadagagagagagagagagagadadadahahahahahfGahcZahcZfHahahahahahaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadadafaiaiaiaiafadadaaaaagagfIagagfJagagfKfLahadadahfMfNfOahfPfQfRfSahfTahfUfVfWahaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadafafafafadadadaaaaahagagfKagagagagagagadadadahaNfGfXahfYaNfGfGfZdugafGfGahahaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadadadaaaaaeadgbagagaggcgcahadadadadahgdfGgeahahahgfgfahahahggahahadaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeadahagghgcagagadadahahahahgiahahfGfGgjaNfGfGahahahafadaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeadadadaggcagagadadahgkaNfGaNbnahglfGgmgnfGbGafafafafaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeadadadadahaggcahahahaNgogpaNgqahaNgraNaNfGbwafgsaaaaaaaaaaaaaaaaaa
