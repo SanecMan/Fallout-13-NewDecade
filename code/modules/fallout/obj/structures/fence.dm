@@ -107,6 +107,14 @@
 	icon_state = "[icontype][icon_junction][!density ? "-open" : ""]"
 
 
+/obj/structure/fence/broken
+	name = "сломанный металлический забор"
+	density = 0
+	icon_state = "metal_fence3-broken-alt"
+
+/obj/structure/fence/broken/alt
+	density = 0
+	icon_state = "metal_fence3-broken"
 
 /obj/structure/wood_fence
 	name = "wood fence"

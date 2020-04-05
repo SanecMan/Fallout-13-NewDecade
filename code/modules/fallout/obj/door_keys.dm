@@ -60,17 +60,16 @@
 	return null
 
 /obj/item/weapon/storage/keys_set
-	name       = "key chain"
-	desc       = "Put your keys here and make using doors comfortable!"
-	icon       = 'icons/fallout/objects/keys.dmi'
+	name = "key chain"
+	desc = "Put your keys here and make using doors comfortable!"
+	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "keychain_0"
-	density    = 0
+	density = 0
 	storage_slots = 4
 	can_hold = list(/obj/item/door_key)
 	rustle_jimmies = FALSE
-
-	w_class              = WEIGHT_CLASS_TINY
-	max_w_class          = WEIGHT_CLASS_TINY
+	w_class = WEIGHT_CLASS_TINY
+	max_w_class = WEIGHT_CLASS_TINY
 	slot_flags = SLOT_BELT
 	max_combined_w_class = 4
 
@@ -114,11 +113,11 @@
 		var/obj/item/door_key/K = W
 		if(id)
 			if(id == K.id)
-				to_chat(user, "<span class='notice'>You begin [open ? "locking" : "unlocking"] padlock.</span>")
+				to_chat(user, "<span class='notice'>Вы начинаете [open ? "закрывать" : "открывать"] замок.</span>")
 				if(do_after(user, 15, target = loc))
 					toogle()
 			else
-				to_chat(user, "<span class='warning'>Wrong key!</span>")
+				to_chat(user, "<span class='warning'>Неверный ключ!</span>")
 		else
 			if(K.id)
 				attach_id(K.id)

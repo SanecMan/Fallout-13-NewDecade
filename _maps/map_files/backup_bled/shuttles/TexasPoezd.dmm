@@ -1,0 +1,23 @@
+"a" = (/turf/closed/wall/shuttle/syndie,/area/f13/shuttle/train)
+"b" = (/obj/machinery/door/airlock/shuttle,/obj/docking_port/mobile{dheight = 0; dir = 2; dwidth = 7; height = 5; id = "poezd"; launch_status = 0; name = "Superspeed Metro Train"; port_angle = 180; preferred_direction = 1; roundstart_move = "poezd_kebab"; timid = 1; width = 15},/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"c" = (/turf/closed/wall/shuttle/syndie{icon_state = "wall3"; dir = 9},/area/f13/shuttle/train)
+"d" = (/obj/effect/spawner/structure/window/reinforced,/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"e" = (/turf/closed/wall/shuttle/syndie{icon_state = "wall3"; dir = 5},/area/f13/shuttle/train)
+"f" = (/turf/closed/wall/shuttle/syndie{icon_state = "wall3"; dir = 10},/area/f13/shuttle/train)
+"g" = (/turf/closed/wall/shuttle/syndie{icon_state = "wall3"; dir = 6},/area/f13/shuttle/train)
+"h" = (/obj/machinery/computer/shuttle/train,/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"i" = (/obj/machinery/light{dir = 1},/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"j" = (/obj/structure/chair/stool{tag = "icon-bench (EAST)"; icon_state = "bench"; dir = 4},/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"k" = (/obj/structure/chair/stool{tag = "icon-bench_center"; icon_state = "bench_center"; dir = 2},/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"l" = (/obj/structure/chair/stool{tag = "icon-bench (WEST)"; icon_state = "bench"; dir = 8},/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"m" = (/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"n" = (/obj/machinery/light,/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+"o" = (/obj/machinery/door/airlock/shuttle,/turf/open/floor/pod/dark,/area/f13/shuttle/train)
+
+(1,1,1) = {"
+cadddaabaadddae
+dijklmimimjklid
+dmmmmmmhmmmmmmd
+dnjklmnmnmjklnd
+fadddaaoaadddag
+"}

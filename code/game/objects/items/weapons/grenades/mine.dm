@@ -1,5 +1,5 @@
 /obj/item/weapon/grenade/mine
-	name = "mine"
+	name = "мина"
 	desc = "Better stay away from that thing."
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "landmine_placed"
@@ -30,7 +30,7 @@
 
 
 /obj/item/weapon/grenade/mine/proc/mineEffect(mob/victim)																//Г‘ГѕГ¤Г  ГЇГЁГёГҐГ¬ ГЅГґГґГҐГЄГІ Г®ГІ Г¬ГЁГ­Г». ГЏГ®-ГµГ®Г°Г®ГёГҐГ¬Гі, Г­ГіГ¦Г­Г® ГЇГҐГ°ГҐГЇГЁГ±Г ГІГј, Г·ГІГ®ГЎ ГѕГ§Г Г«Г±Гї ГЇГ°Г®ГЄ prime()
-	to_chat(victim, "<span class='danger'>*click*</span>")
+	to_chat(victim, "<span class='danger'>*дзынь*</span>")
 
 /obj/item/weapon/grenade/mine/Crossed(AM as mob|obj)
 	if(active)
@@ -55,7 +55,7 @@
 /obj/item/weapon/grenade/mine/proc/triggermine(mob/victim)
 	if(triggered)
 		return
-	visible_message("<span class='danger'>[victim] sets off [bicon(src)] [src]!</span>")
+	visible_message("<span class='danger'>выражение лица [victim] приходит в ужас, когда активируется [bicon(src)] [src]!</span>")
 	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
 	s.set_up(3, 1, src)
 	s.start()
@@ -66,7 +66,7 @@
 
 
 /obj/item/weapon/grenade/mine/explosive
-	name = "explosive mine"
+	name = "мина"
 	var/range_devastation = 0
 	var/range_heavy = 1
 	var/range_light = 2
@@ -80,6 +80,7 @@
 /obj/item/weapon/grenade/mine/explosive/planted
 	active = 1
 	anchored = 1
+	icon_state = "mine_active"
 
 /obj/item/weapon/grenade/mine/caps_mine
 	name = "caps mine"

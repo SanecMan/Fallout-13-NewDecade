@@ -14,6 +14,7 @@
 	light_type = null
 
 /obj/machinery/light/sign/break_light_tube()
+	icon_state = "broken"
 	return 0
 
 

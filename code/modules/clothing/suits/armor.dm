@@ -396,6 +396,14 @@
 			charge = min(max_charge,charge + 50) //Charge in the dark
 		animate(user,alpha = Clamp(255 - charge,0,255),time = 5)
 
+/obj/item/clothing/suit/stealth/stealthsuit/hans
+	name = "Advanced Stealth Suit"
+	desc = "A form-fitting armor suit complete with an active stealth field that can be triggered at the press of a button."
+	icon_state = "stealth_hans"
+	item_state = "stealthsuit"
+	armor = list(melee = 15, bullet = 15, laser = 15,energy = 15, bomb = 30, bio = 40, rad = 60, fire = 100, acid = 100)
+
+
 //All of the armor below is mostly unused
 
 /obj/item/clothing/suit/armor/centcom
