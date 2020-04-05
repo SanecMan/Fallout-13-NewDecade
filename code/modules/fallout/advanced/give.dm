@@ -48,7 +48,7 @@
 				to_chat(usr,"<span class='warning'>Руки заполнены.</span>")
 				return
 
-			if(usr.drop_item_v())
+			if(!usr.drop_item_v())
 				return
 
 			if(!put_in_hands(I))

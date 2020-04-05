@@ -14,9 +14,7 @@
 
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
-#include "_maps\oregon.dm"
-#include "_maps\map_files\TexasWasteland\oregon_legacy.dmm"
-#include "_maps\map_files\TexasWasteland\z2_legacy.dmm"
+#include "_maps\wasteland_debug.dm"
 #include "code\_compile_options.dm"
 #include "code\world.dm"
 #include "code\__DATASTRUCTURES\heap.dm"
@@ -2277,6 +2275,8 @@
 #include "code\orphaned_procs\dbcore.dm"
 #include "code\orphaned_procs\priority_announce.dm"
 #include "code\orphaned_procs\statistics.dm"
+#include "code\z-fallout13\game\objects\items\skill_books.dm"
+#include "code\z-fallout13\modules\clothing\suits\power_armor.dm"
 #include "goon\code\datums\browserOutput.dm"
 #include "honk\code\game\objects\effects\decals\Cleanable\misc.dm"
 #include "honk\sound\code\game\objects\effects\decals\Cleanable\misc.dm"

@@ -9,8 +9,7 @@
 	name = "sparks"
 	icon_state = "sparks"
 	anchored = 1
-	light_range = 1
-	light_color = LIGHT_COLOR_YELLOW
+	luminosity = 1
 
 /obj/effect/particle_effect/sparks/New()
 	..()

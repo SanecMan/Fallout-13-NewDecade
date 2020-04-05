@@ -36,8 +36,8 @@ var/explosionid = 1
 	var/list/cached_exp_block = list()
 
 	if(adminlog)
-		message_admins("¬зрыв размером ([devastation_range], [heavy_impact_range], [light_impact_range], [flame_range]) в зоне [epicenter.loc.name] ([epicenter.x],[epicenter.y],[epicenter.z] - <a href='?_src_=holder;adminplayerobservecoodjump=1;X=[epicenter.x];Y=[epicenter.y];Z=[epicenter.z]'>“≈Ћ≈ѕќ–“ј÷»я</a>)")
-		log_game("¬зрыв размером ([devastation_range], [heavy_impact_range], [light_impact_range], [flame_range]) в зоне [epicenter.loc.name] ([epicenter.x],[epicenter.y],[epicenter.z])")
+		message_admins("Explosion with size ([devastation_range], [heavy_impact_range], [light_impact_range], [flame_range]) in area [epicenter.loc.name] ([epicenter.x],[epicenter.y],[epicenter.z] - <a href='?_src_=holder;adminplayerobservecoodjump=1;X=[epicenter.x];Y=[epicenter.y];Z=[epicenter.z]'>JMP</a>)")
+		log_game("Explosion with size ([devastation_range], [heavy_impact_range], [light_impact_range], [flame_range]) in area [epicenter.loc.name] ([epicenter.x],[epicenter.y],[epicenter.z])")
 
 	// Play sounds; we want sounds to be different depending on distance so we will manually do it ourselves.
 	// Stereo users will also hear the direction of the explosion!
@@ -62,9 +62,9 @@ var/explosionid = 1
 						M.playsound_local(epicenter, get_sfx("explosion"), 100, 1, frequency, falloff = 5) // get_sfx() is so that everyone gets the same sound
 					// You hear a far explosion if you're outside the blast radius. Small bombs shouldn't be heard all over the station.
 					else if(dist <= far_dist)
-						var/far_volume = Clamp(far_dist, 30, 200) // Volume is based on explosion size and dist
-						far_volume += (dist <= far_dist * 0.5 ? 50 : 5) // add 50 volume if the mob is pretty close to the explosion
-						M.playsound_local(epicenter, get_sfx("explosion_far"), far_volume, 1, frequency, falloff = 5)
+						var/far_volume = Clamp(far_dist, 30, 50) // Volume is based on explosion size and dist
+						far_volume += (dist <= far_dist * 0.5 ? 50 : 0) // add 50 volume if the mob is pretty close to the explosion
+						M.playsound_local(epicenter, 'sound/effects/explosionfar.ogg', far_volume, 1, frequency, falloff = 5)
 
 	//postpone processing for a bit
 	var/postponeCycles = max(round(devastation_range/8),1)
@@ -74,14 +74,10 @@ var/explosionid = 1
 	if(heavy_impact_range > 1)
 		if(smoke)
 			var/datum/effect_system/explosion/smoke/E = new/datum/effect_system/explosion/smoke()
-			if(heavy_impact_range > 3)
-				E.epic = 1
 			E.set_up(epicenter)
 			E.start()
 		else
 			var/datum/effect_system/explosion/E = new/datum/effect_system/explosion()
-			if(heavy_impact_range > 3)
-				E.epic = 1
 			E.set_up(epicenter)
 			E.start()
 
@@ -104,10 +100,6 @@ var/explosionid = 1
 			for(var/obj/structure/window/W in T)
 				if(W.reinf && W.fulltile)
 					cached_exp_block[T] += W.explosion_block
-
-			for(var/obj/structure/simple_door/D in T)
-				if(D.density && D.explosion_block)
-					cached_exp_block[T] += D.explosion_block
 
 			for(var/obj/structure/blob/B in T)
 				cached_exp_block[T] += B.explosion_block

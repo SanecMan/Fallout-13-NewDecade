@@ -11,6 +11,12 @@
 	self_weight = 20
 	frequency = 6359
 	key = 343
+	actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/device/radio/prc/ui_action_click(mob/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle))
+		interact(user)
+		return
 
 /obj/item/device/radio/prc/bs
 	icon = 'icons/obj/prc.dmi'
@@ -24,18 +30,6 @@
 	name = "radio headset"
 	icon = 'icons/obj/prc.dmi'
 	icon_state = "headset"
-
-/////////////////////
-
-/obj/item/device/radio/prc/attack_hand(mob/user)
-	if(loc == user)
-		if(slot_flags == SLOT_BACK)
-			if(user.get_item_by_slot(slot_back) == src)
-				interact(user)
-			else
-				to_chat(user, "<span class='warning'>Put the radio on your back first!</span>")
-	return
-	..()
 
 /*
 /obj/item/device/radio/prc/MouseDrop(obj/over_object)

@@ -256,9 +256,10 @@
 
 		// eyes
 		if((EYECOLOR in species_traits) && HD)
-			var/image/img_eyes_s = image("icon" = 'icons/mob/human_face.dmi', "icon_state" = "[eyes]_s", "layer" = -BODY_LAYER)
-			img_eyes_s.color = "#" + H.eye_color
-			standing	+= img_eyes_s
+			if(H.stat != DEAD)
+				var/image/img_eyes_s = image("icon" = 'icons/mob/human_face.dmi', "icon_state" = "[eyes]_s", "layer" = -BODY_LAYER)
+				img_eyes_s.color = "#" + H.eye_color
+				standing	+= img_eyes_s
 
 	//Underwear, Undershirts & Socks
 	if(H.underwear)

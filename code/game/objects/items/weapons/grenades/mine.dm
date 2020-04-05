@@ -1,8 +1,8 @@
 /obj/item/weapon/grenade/mine
 	name = "mine"
 	desc = "Better stay away from that thing."
-	icon = 'icons/obj/weapons.dmi'
-	icon_state = "uglymine"
+	icon = 'icons/fallout/objects/items.dmi'
+	icon_state = "landmine_placed"
 	var/triggered = 0
 	det_time = 0																										//Âçðûâàåòñÿ ìîìåíòàëüíî
 

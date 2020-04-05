@@ -50,3 +50,8 @@
 	name = "Крепкий хребет"
 	description = "Вы можете нести дополнительные 20 фунтов веса."
 	icon_state = "perk_strongback"
+
+/datum/perk/power_armor_cell_economy
+	name = "Физик-ядерщик"
+	description = "Вам известны секреты использования ядерных блоков в совокупности с силовой броней. Силовая броня расходует батарею в два раза медленнее."
+	icon_state = "fizik_yadreni"
