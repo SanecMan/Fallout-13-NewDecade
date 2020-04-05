@@ -194,7 +194,7 @@ var/datum/subsystem/vote/SSvote
 		if(mode == "custom")
 			text += "\n[question]"
 		if(mode == "restart")
-			text += "Перезапуск"
+			text += " Перезапуск?"
 		log_vote(text)
 		to_chat(world, "\n<font color='purple'><b>[text]</b>\nПропишите <b>vote</b> или кликните <a href='?src=\ref[src]'>СЮДА</a> чтобы проголосовать.\nУ вас [config.vote_period/10] секунд чтобы проголосовать.</font>")
 		time_remaining = round(config.vote_period/10)
