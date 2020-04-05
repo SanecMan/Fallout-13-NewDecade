@@ -37,7 +37,7 @@
 	faction = list("russian")
 	gold_core_spawnable = 1
 
-/mob/living/simple_animal/hostile/yaoi
+/mob/living/simple_animal/hostile/bear/yaoi
 	name = "ίξ-Γΰι"
 	maxHealth = 120
 	health = 120

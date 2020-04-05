@@ -31,7 +31,7 @@
 	smooth = SMOOTH_OLD
 	layer = ABOVE_ALL_MOB_LAYER
 	canSmoothWith = list(/turf/closed/wall, /turf/closed/wall/f13/ruins, /turf/closed/wall/f13/store, /turf/closed/wall/f13/supermart, /turf/closed/wall/f13/wood, /obj/structure/fence,
-	/turf/closed/mineral, /turf/closed/wall/f13/wood/house)
+	/turf/closed/mineral, /turf/closed/wall/f13/wood/house, /turf/closed/wall/r_wall/rust, /turf/closed/wall/rust, /turf/closed/wall/vault)
 
 /obj/structure/fence/update_icon()
 	queue_smooth(src)

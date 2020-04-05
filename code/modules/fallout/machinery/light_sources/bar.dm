@@ -3,7 +3,7 @@
 /obj/machinery/light/sign
 	name = "bar sign"
 	icon_state = "blue0"
-	base_state = "blue"
+	base_state = "blue0"
 	icon = 'icons/fallout/machines/64x32.dmi'
 	fitting = "sign"
 	brightness = 4
