@@ -137,23 +137,6 @@
 		to_chat(usr, "<span class='boldwarning'>[src] отключилась!.</span>")
 
 
-/* NEED BICUBIC RESIZE
-/obj/item/clothing/suit/armor/f13/power_armor/equipped(mob/user, slot)
-	if(slot == slot_wear_suit)
-		user.resize = 1.1
-	else
-		user.resize = 1
-
-	user.update_transform()
-	..()
-
-/obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
-	user.resize = 1
-	user.update_transform()
-	..()*/
-
-
-
 /obj/item/clothing/suit/armor/f13/power_armor/sierra
 	name = "scorched sierra power armor"
 	desc = "The scorched Sierra power armor is a suit of T-45d power armor that has been modified by the NCR for its officers. The left shoulder pauldron has been replaced with a hairless, taxidermied bear's head held in place by a green mantle with two bronze star medallion clips. The back-mounted power cylinders have been replaced by a more streamlined box unit with glowing green panels which also appear on the forearms. The armor itself is slightly blackened due to the nuclear detonation. The bolts on the armor appear to have once been plated in gold-flake, along with gold trim all around the armor."
@@ -261,6 +244,9 @@
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
+
+/datum/action/item_action/toggle_helmet_light
+	button_icon_state = "pa_helmet"
 
 /obj/item/clothing/head/helmet/power_armor/ui_action_click(mob/user, actiontype)
 	if(istype(actiontype, /datum/action/item_action/toggle_helmet_light))
