@@ -43,7 +43,7 @@
 
 			if(user.perks.have(/datum/perk/lightstep))
 				if(prob(50))
-					user.visible_message("<font color='green'>[user] avoid mine explosion!</font>")
+					user.visible_message("<font color='green'>[user] аккуратно обходит мину!</font>")
 					return
 
 			if(!(MM.movement_type & FLYING))
@@ -67,10 +67,12 @@
 
 /obj/item/weapon/grenade/mine/explosive
 	name = "мина"
+	desc = "Мина. Маленькое блюдце начиненное взрывчаткой."
 	var/range_devastation = 0
 	var/range_heavy = 1
 	var/range_light = 2
 	var/range_flash = 3
+	icon_state = "landmine_item"
 	price = 350
 
 /obj/item/weapon/grenade/mine/explosive/mineEffect(mob/victim)

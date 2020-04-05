@@ -235,6 +235,21 @@
 /datum/action/item_action/toggle_helmet_light
 	button_icon_state = "pa_helmet"
 
+/obj/item/clothing/head/helmet/power_armor/ui_action_click(mob/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle_helmet_light))
+	on = !on
+	icon_state = "[initial(icon_state)][on ? "-light" : ""]"
+	item_state = "[initial(item_state)][on ? "-light" : ""]"
+	user.update_inv_head()
+	if(on)
+		set_light(brightness_on)
+	else
+		set_light(0)
+	for(var/X in actions)
+		var/datum/action/A = X
+		return
+
+/*/
 /obj/item/clothing/head/helmet/power_armor/proc/toogle_light(mob/user)
 	on = !on
 	icon_state = "[initial(icon_state)][on ? "-light" : ""]"
@@ -247,7 +262,7 @@
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
-
+*/
 
 /obj/item/clothing/head/helmet/power_armor/ui_action_click(mob/user, actiontype)
 	if(istype(actiontype, /datum/action/item_action/toggle_helmet_light))
