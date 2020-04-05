@@ -30,3 +30,5 @@
 		new /obj/effect/decal/cleanable/ash/large(get_turf(src))
 		qdel(perk)
 		qdel(src)
+
+///спасибо господи///
