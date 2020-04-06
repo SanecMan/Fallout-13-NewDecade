@@ -10,8 +10,6 @@
 	icon_gib = "radstag_dead"
 	emote_hear = list("фыркает.")
 	emote_see = list("мотает головами.")
-	minimum_distance = 4
-	retreat_distance = 7
 	speed = 4
 	self_weight = 150
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 6, /obj/item/stack/sheet/animalhide/generic=2)
