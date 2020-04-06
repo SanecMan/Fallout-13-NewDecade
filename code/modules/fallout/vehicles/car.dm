@@ -1,7 +1,7 @@
 //Fallout 13 decorative derelict vehicles directory
 
 /obj/structure/car
-	name = "pre-War automobile"
+	name = "остов автомобиля"
 	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
 	icon_state = "derelict"
@@ -26,7 +26,7 @@
 	icon_state = "car1"
 
 /obj/structure/car/highwayman/initialize()
-	icon_state = "car[rand(1, 5)]"
+	icon_state = "car[rand(1, 4)]"
 
 	var/atom/movable/S = new (locate(x+1,y,z))
 	S.density = 1
