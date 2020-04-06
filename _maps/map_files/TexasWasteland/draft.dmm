@@ -235,56 +235,56 @@
 "eA" = (/obj/structure/door_assembly/door_assembly_hatch,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "eB" = (/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
 "eC" = (/obj/structure/bed,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"eD" = (/obj/structure/window/fulltile/house,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eE" = (/obj/item/clothing/suit/f13/vest,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eF" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eG" = (/obj/effect/spawner/lootdrop/trash,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eH" = (/obj/structure/decoration/clock/old{pixel_y = 32},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eI" = (/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
+"eD" = (/turf/closed/wall/f13/wood/house,/area/f13/office)
+"eE" = (/obj/structure/window/fulltile/house,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eF" = (/obj/item/clothing/suit/f13/vest,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eG" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eH" = (/obj/effect/spawner/lootdrop/trash,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eI" = (/obj/structure/decoration/clock/old{pixel_y = 32},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
 "eJ" = (/obj/structure/flora/tree/wasteland,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"eK" = (/obj/structure/table/wood,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eL" = (/obj/structure/chair,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eM" = (/obj/structure/table/wood,/obj/item/device/radio,/obj/effect/spawner/lootdrop/wmelee_low,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eN" = (/obj/structure/table,/obj/effect/decal/cleanable/cobweb,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eO" = (/obj/structure/bed,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eP" = (/obj/structure/table,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eQ" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eR" = (/obj/item/clothing/head/papersack,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eS" = (/obj/item/clothing/under/rank/prisoner,/obj/item/clothing/shoes/f13/rag,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eT" = (/obj/item/weapon/razor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eU" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eV" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eW" = (/obj/item/clothing/under/f13/brahmin,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eX" = (/obj/item/clothing/suit/f13/duster,/obj/item/clothing/gloves/f13/military,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eY" = (/obj/item/ammo_casing/shotgun/buckshot,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"eZ" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fa" = (/obj/structure/simple_door/metal/store,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fb" = (/obj/structure/window/fulltile/house,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fc" = (/obj/effect/decal/cleanable/ash/large,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fd" = (/obj/item/clothing/suit/f13/cowboybvest,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fe" = (/obj/structure/closet,/obj/item/clothing/suit/f13/duster,/obj/item/clothing/suit/f13/autumn,/obj/item/clothing/under/f13/cowboyb,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ff" = (/obj/structure/closet,/obj/item/clothing/suit/f13/duster,/obj/item/clothing/suit/f13/autumn,/obj/item/clothing/gloves/f13/leather,/obj/item/clothing/head/f13/cowboy,/obj/item/clothing/under/f13/cowboyb,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fg" = (/obj/structure/closet,/obj/item/clothing/suit/armor/f13/kit,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fh" = (/obj/structure/simple_door/metal/store,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"fi" = (/obj/effect/decal/cleanable/cobweb,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"fj" = (/obj/structure/safe,/obj/item/clothing/suit/armor/f13/chestplate,/obj/item/weapon/gun/ballistic/automatic/bozar,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"fk" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"fl" = (/obj/item/ammo_box/magazine/pistolm9mm,/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
+"eK" = (/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eL" = (/obj/structure/table/wood,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eM" = (/obj/structure/chair,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eN" = (/obj/structure/table/wood,/obj/item/device/radio,/obj/effect/spawner/lootdrop/wmelee_low,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eO" = (/obj/structure/table,/obj/effect/decal/cleanable/cobweb,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eP" = (/obj/structure/bed,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eQ" = (/obj/structure/table,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eR" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eS" = (/obj/item/clothing/head/papersack,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eT" = (/obj/item/clothing/under/rank/prisoner,/obj/item/clothing/shoes/f13/rag,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eU" = (/obj/item/weapon/razor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eV" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eW" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eX" = (/obj/item/clothing/under/f13/brahmin,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eY" = (/obj/item/clothing/suit/f13/duster,/obj/item/clothing/gloves/f13/military,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"eZ" = (/obj/item/ammo_casing/shotgun/buckshot,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fa" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fb" = (/obj/structure/simple_door/metal/store,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fc" = (/obj/structure/window/fulltile/house,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fd" = (/obj/effect/decal/cleanable/ash/large,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fe" = (/obj/item/clothing/suit/f13/cowboybvest,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ff" = (/obj/structure/closet,/obj/item/clothing/suit/f13/duster,/obj/item/clothing/suit/f13/autumn,/obj/item/clothing/under/f13/cowboyb,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fg" = (/obj/structure/closet,/obj/item/clothing/suit/f13/duster,/obj/item/clothing/suit/f13/autumn,/obj/item/clothing/gloves/f13/leather,/obj/item/clothing/head/f13/cowboy,/obj/item/clothing/under/f13/cowboyb,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fh" = (/obj/structure/closet,/obj/item/clothing/suit/armor/f13/kit,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fi" = (/obj/structure/simple_door/metal/store,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"fj" = (/obj/effect/decal/cleanable/cobweb,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"fk" = (/obj/structure/safe,/obj/item/clothing/suit/armor/f13/chestplate,/obj/item/weapon/gun/ballistic/automatic/bozar,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"fl" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
 "fm" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner"; icon_state = "outerbordercorner"},/area/f13/wasteland)
 "fn" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner (WEST)"; icon_state = "outerbordercorner"; dir = 8},/area/f13/wasteland)
 "fo" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalleftborderleft0"; icon_state = "verticalleftborderleft0"},/area/f13/wasteland)
-"fp" = (/obj/item/stack/caps/random,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
+"fp" = (/obj/item/ammo_box/magazine/pistolm9mm,/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
 "fq" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright0"; icon_state = "verticalrightborderright0"},/area/f13/wasteland)
-"fr" = (/obj/structure/fluff/paper/stack,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fs" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ft" = (/obj/item/clothing/under/f13/doctor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fu" = (/obj/structure/chair,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"fv" = (/obj/effect/decal/cleanable/blood/old,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
+"fr" = (/obj/item/stack/caps/random,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fs" = (/obj/structure/fluff/paper/stack,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ft" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fu" = (/obj/item/clothing/under/f13/doctor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"fv" = (/obj/structure/chair,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
 "fw" = (/obj/item/weapon/reagent_containers/f13stimpack,/turf/open/indestructible/ground/mountain,/area/f13/wasteland)
-"fx" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
+"fx" = (/obj/effect/decal/cleanable/blood/old,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
 "fy" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-horizontalbottomborderbottom0"; icon_state = "horizontalbottomborderbottom0"},/area/f13/wasteland)
 "fz" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outerbordercorner (NORTH)"; icon_state = "outerbordercorner"; dir = 1},/area/f13/wasteland)
-"fA" = (/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
+"fA" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
 "fB" = (/obj/structure/closet/crate/trashcart,/turf/open/indestructible/ground/mountain,/area/f13/wasteland)
 "fC" = (/obj/machinery/mineral/unloading_machine,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "fD" = (/obj/machinery/conveyor{dir = 8; icon_state = "conveyor0"; id = "mining_internal"; tag = "icon-conveyor0 (WEST)"},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
@@ -408,47 +408,47 @@
 "hR" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-verticalrightborderright2bottom"; icon_state = "verticalrightborderright2bottom"},/area/f13/wasteland)
 "hS" = (/mob/living/simple_animal/hostile/ghoul/soldier,/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
 "hT" = (/mob/living/simple_animal/hostile/ghoul/soldier,/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerinner (EAST)"; icon_state = "outermaincornerinner"; dir = 4},/area/f13/wasteland)
-"hU" = (/obj/structure/rack,/obj/item/clothing/suit/armor/f13/leatherarmor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"hV" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"hW" = (/obj/item/weapon/newspaper,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"hX" = (/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/item/clothing/gloves/f13/military,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"hY" = (/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"hZ" = (/obj/effect/decal/cleanable/oil,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ia" = (/obj/structure/chair{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ib" = (/obj/structure/table/wood,/obj/effect/decal/cleanable/dirt,/obj/item/clothing/glasses/f13/biker,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ic" = (/obj/structure/table/wood,/obj/item/lock,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"id" = (/obj/structure/table/wood,/obj/item/clothing/head/f13/det_hat_alt,/obj/effect/spawner/lootdrop/clothing_middle,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ie" = (/obj/structure/table/wood,/obj/item/door_key,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"if" = (/obj/structure/chair{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ig" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"ih" = (/obj/structure/rack,/obj/effect/decal/cleanable/dirt,/obj/item/clothing/shoes/f13/military/diesel,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"ii" = (/obj/item/clothing/head/f13/bandit,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ij" = (/obj/effect/decal/cleanable/ash/large,/obj/machinery/light/small,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ik" = (/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"il" = (/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"im" = (/obj/machinery/light/small,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"in" = (/obj/structure/chair{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"io" = (/obj/structure/table/wood,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ip" = (/obj/structure/table/wood,/obj/effect/spawner/lootdrop/food,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iq" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ir" = (/obj/item/clothing/under/f13/bennys,/obj/item/door_key,/obj/structure/rack,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"is" = (/obj/item/clothing/suit/f13/sheriff,/obj/effect/spawner/lootdrop/clothing_middle,/obj/structure/rack,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"it" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/wmelee_low,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/wasteland)
-"iu" = (/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iv" = (/obj/structure/chair{dir = 1},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iw" = (/obj/structure/chair{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"ix" = (/obj/structure/closet/crate,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iy" = (/obj/effect/spawner/lootdrop/clothing_middle,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iz" = (/obj/structure/table,/obj/item/weapon/suppressor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iA" = (/obj/structure/table,/obj/item/weapon/paper,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iB" = (/obj/structure/table,/obj/item/lock,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iC" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iD" = (/obj/structure/closet/fridge,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
+"hU" = (/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"hV" = (/obj/structure/rack,/obj/item/clothing/suit/armor/f13/leatherarmor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"hW" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"hX" = (/obj/item/weapon/newspaper,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"hY" = (/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/item/clothing/gloves/f13/military,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"hZ" = (/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ia" = (/obj/effect/decal/cleanable/oil,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ib" = (/obj/structure/chair{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ic" = (/obj/structure/table/wood,/obj/effect/decal/cleanable/dirt,/obj/item/clothing/glasses/f13/biker,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"id" = (/obj/structure/table/wood,/obj/item/lock,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ie" = (/obj/structure/table/wood,/obj/item/clothing/head/f13/det_hat_alt,/obj/effect/spawner/lootdrop/clothing_middle,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"if" = (/obj/structure/table/wood,/obj/item/door_key,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ig" = (/obj/structure/chair{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ih" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"ii" = (/obj/structure/rack,/obj/effect/decal/cleanable/dirt,/obj/item/clothing/shoes/f13/military/diesel,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"ij" = (/obj/item/clothing/head/f13/bandit,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ik" = (/obj/effect/decal/cleanable/ash/large,/obj/machinery/light/small,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"il" = (/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"im" = (/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/item/ammo_casing/caseless,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"in" = (/obj/machinery/light/small,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"io" = (/obj/structure/chair{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ip" = (/obj/structure/table/wood,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iq" = (/obj/structure/table/wood,/obj/effect/spawner/lootdrop/food,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ir" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"is" = (/obj/item/clothing/under/f13/bennys,/obj/item/door_key,/obj/structure/rack,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"it" = (/obj/item/clothing/suit/f13/sheriff,/obj/effect/spawner/lootdrop/clothing_middle,/obj/structure/rack,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"iu" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/wmelee_low,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/f13/office)
+"iv" = (/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iw" = (/obj/structure/chair{dir = 1},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"ix" = (/obj/structure/chair{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iy" = (/obj/structure/closet/crate,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iz" = (/obj/effect/spawner/lootdrop/clothing_middle,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iA" = (/obj/structure/table,/obj/item/weapon/suppressor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iB" = (/obj/structure/table,/obj/item/weapon/paper,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iC" = (/obj/structure/table,/obj/item/lock,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iD" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
 "iE" = (/obj/effect/mob_spawner/gecko,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
-"iF" = (/obj/structure/chair{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iG" = (/obj/item/weapon/kitchen/knife,/obj/item/weapon/reagent_containers/food/condiment/saltshaker,/obj/item/weapon/reagent_containers/food/condiment/peppermill,/obj/structure/table/wood,/obj/effect/spawner/lootdrop/wmelee_low,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iH" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/effect/spawner/lootdrop/food,/obj/item/door_key,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
-"iI" = (/obj/structure/table/wood,/obj/machinery/microwave,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/wasteland)
+"iF" = (/obj/structure/closet/fridge,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iG" = (/obj/structure/chair{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iH" = (/obj/item/weapon/kitchen/knife,/obj/item/weapon/reagent_containers/food/condiment/saltshaker,/obj/item/weapon/reagent_containers/food/condiment/peppermill,/obj/structure/table/wood,/obj/effect/spawner/lootdrop/wmelee_low,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
+"iI" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/drinks/flask,/obj/effect/spawner/lootdrop/food,/obj/item/door_key,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
 "iJ" = (/obj/item/stack/caps/random,/turf/open/indestructible/ground/mountain,/area/f13/wasteland)
 "iK" = (/turf/closed/wall/f13/vault,/area/f13/wasteland)
 "iL" = (/turf/open/floor/f13{icon_state = "darkrustysolid"},/area/f13/wasteland)
@@ -529,6 +529,7 @@
 "ki" = (/turf/open/floor/plating/tunnel{icon_state = "tunnelrusty"},/area/f13/wasteland)
 "kj" = (/obj/machinery/porta_turret/syndicate,/turf/open/floor/plating/tunnel{icon_state = "tunnelchess2"},/area/f13/wasteland)
 "kk" = (/turf/open/floor/plating/tunnel{icon_state = "tunnelchess2"},/area/f13/wasteland)
+"kl" = (/obj/structure/table/wood,/obj/machinery/microwave,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "floorrusty"},/area/f13/office)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -590,25 +591,25 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeadahagghgcagagadadahahahahgiahahfGfGgjaNfGfGahahahafadaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeadadadaggcagagadadahgkaNfGaNbnahglfGgmgnfGbGafafafafaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeadadadadahaggcahahahaNgogpaNgqahaNgraNaNfGbwafgsaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaadadaaaaaaaaaaaaaaaaacaaaaaaauauauauauauauaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeaeadadadadaggcgtgugvaNaNbGfGbxgwgxaNaNfRaNfGgaaaaaaaawaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaacaaaaaaaaaaaIaaaaaaeDeEeFeGeHeIauaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaeaeaeadadadgcgtgtgyfGfGduaNgzgwfGfGaNgAaNfGgaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaeJaaaaaaaaaaaaaaaaaaeDeIeKeLeKeFeDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeahahahahaNgBgqfGgCahfGfGdufGfGgDafaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaauauauauauauauauauaueFeKeKeMeFeDaaaaaaawaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeadadadahgEfGfGaNexahgFfGgGgjgdfGafafafafadaaaaaaaaaaaa
-aaaaaaaaaaacaaaaaaaaaueNeOaueOePaueOePaueFeFeIeFeFeDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeadadadahahahahgiahahfGgHdufGgIgxahahahafadaaaaaaaaaaaa
-aaaaaaaaaacIaaaaaaaaaueQeRaueFeSaueTeQaueGeUeVeUeVauaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeadadadadadahgJaNgKahahahgfgfahahahgLahahadaaaaaaaaaaaa
-aaaaaaaaaaaaaaauauauaueWeFaueFeFaueXeYaueDaueZaueDauauauauauauauauaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeahaNdugDahgMgNaNaNfGdugifGfGahahaaaaaaaaaaaa
-aaaaaaaaaaaaauaueGeFaufafbaufbfaaufbfaaueGeFfcfdeFfefffgfhfifjfkauaaaaaaaaaaaaaaaaaaaaaaaaaaaagOgPgPgOgPaiaiaiaigPgPgPgPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeahaNgQgRahfGfGdudngrgSahgTgUgLahaaaaaaaaaaaa
-aaaaaaaaaaaaaueFeFeFaueFeFflfpfrfseFeFeDeFfteLeLfueLeFfvaufxfAhUauaaaaaaaaaaaaaaaaaaaafmgVgVgVgVgVgVgVgVgVgVgVgVgVgVgVgVaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeahahahahahgWgXgWfGfGgYahahahahahaaaaaaaaaaaa
-aaaaaaaaaaaafaeFeQeGfahVhWeVhXhYfveIhZfaeFiaibicidieifeFauigfxihauaaaaaaaaaaaaaaaaaiaifogZhahahahahahahahahahahahahahbfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeadadadadahgWhchdfGhehfahadadadadaaaaaaaaaaaa
-aaaaaaaaaaaaaueFeFeFauiieVijikilimeIeFeDeFinioipeKioifiqauirisitauaaaaaaaaaaaaaaaagPaiaaaaaaaaaahghghghghghghhhihhhghjfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeadadadadahahahahahahahahadadadadaaaaaaaaaaaa
-aaaaaaaaaaaaauaueFeFaufafbaufbfaaufbfaauiueViviwiviveFeFauauauauauaaaaaaaaaaaaaaaagPaiaaaaaaaaaahghghghkhhhghhhlhlhhhjfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaauauauaueFeFaueFeFaueYeFauixeFeFeFeIeFeGhZauaaaaaaaaaaaaaaaaaaaaaaaaaiaiaaaaaaaaaahhhhhhhhhhhghlhlhhhhhjfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaauiyeFaufveFaueFeFauaueFeQauauauauauauaaaaaaaaaaaaaaaaaaaaaaaaaiaiaaaaaaaaaahhhhhhhlhlhlhlhlhhhhhjfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaadadadaaaaauizeOaueOiAaueOiBaueFeFeFeGeFauaaaaaaaaaaaaaaaaadaaaaaaaaaaaagPaiaaaaaaaaaahhhhhhhlhihhhmhhhnhghjfqaaaaaahoaigOaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaadadadadaaauauauauauauauauauauiCeGeFeFiDauaaaaaaaaaaaaaaadadaaaaaaaaaaaahpaiaaaaaaaaaahghghghhhhhghnhnhqhghjfqaaaaaagOgOgOgPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaadiEadadadaaaaaaaaaaaaaaaaaaauinipiFeFiGauaaaaaaaaaaaaaaadadaaaaaaaaaaaagOgPaaaaaaaaaahghghghhhghghrhrhrhghsfqaaaaaagPgPgPgOgPgPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahthghjahhuhvahaaaaaaaaaaaa
-aaaaaaaaaaaaaaadadadadaaaaaaaaaaaaaaaaauiniHiFeFiIauaaaaaaaaaaaaadadadaaaaaaaaaaaagPgPaaaaaaaaaafyhwhthghjhxfyfyfyfyfyfzaaaaaaaiaihyaigPaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahthzhjfqhAaaaaaaaaaaaaaaaa
-aaaaaaaaadadadadadahahahahadadadaaaaaaauauauauauauauaaaaaaaaaaaaadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahBaigPgPgPgPaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahChDhEfqhFaaaaaaaaaaaaaaaa
+aaaaaaaaaaadadaaaaaaaaaaaaaaaaacaaaaaaeDeDeDeDeDeDeDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeaeadadadadaggcgtgugvaNaNbGfGbxgwgxaNaNfRaNfGgaaaaaaaawaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaacaaaaaaaaaaaIaaaaaaeEeFeGeHeIeKeDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaeaeaeadadadgcgtgtgyfGfGduaNgzgwfGfGaNgAaNfGgaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaeJaaaaaaaaaaaaaaaaaaeEeKeLeMeLeGeEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeahahahahaNgBgqfGgCahfGfGdufGfGgDafaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaeDeDeDeDeDeDeDeDeDeDeGeLeLeNeGeEaaaaaaawaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeadadadahgEfGfGaNexahgFfGgGgjgdfGafafafafadaaaaaaaaaaaa
+aaaaaaaaaaacaaaaaaaaeDeOePeDePeQeDePeQeDeGeGeKeGeGeEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeadadadahahahahgiahahfGgHdufGgIgxahahahafadaaaaaaaaaaaa
+aaaaaaaaaacIaaaaaaaaeDeReSeDeGeTeDeUeReDeHeVeWeVeWeDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeadadadadadahgJaNgKahahahgfgfahahahgLahahadaaaaaaaaaaaa
+aaaaaaaaaaaaaaeDeDeDeDeXeGeDeGeGeDeYeZeDeEeDfaeDeEeDeDeDeDeDeDeDeDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeahaNdugDahgMgNaNaNfGdugifGfGahahaaaaaaaaaaaa
+aaaaaaaaaaaaeDeDeHeGeDfbfceDfcfbeDfcfbeDeHeGfdfeeGfffgfhfifjfkfleDaaaaaaaaaaaaaaaaaaaaaaaaaaaagOgPgPgOgPaiaiaiaigPgPgPgPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeahaNgQgRahfGfGdudngrgSahgTgUgLahaaaaaaaaaaaa
+aaaaaaaaaaaaeDeGeGeGeDeGeGfpfrfsfteGeGeEeGfueMeMfveMeGfxeDfAhUhVeDaaaaaaaaaaaaaaaaaaaafmgVgVgVgVgVgVgVgVgVgVgVgVgVgVgVgVaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeahahahahahgWgXgWfGfGgYahahahahahaaaaaaaaaaaa
+aaaaaaaaaaaafbeGeReHfbhWhXeWhYhZfxeKiafbeGibicidieifigeGeDihfAiieDaaaaaaaaaaaaaaaaaiaifogZhahahahahahahahahahahahahahbfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeadadadadahgWhchdfGhehfahadadadadaaaaaaaaaaaa
+aaaaaaaaaaaaeDeGeGeGeDijeWikilimineKeGeEeGioipiqeLipigireDisitiueDaaaaaaaaaaaaaaaagPaiaaaaaaaaaahghghghghghghhhihhhghjfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaeadadadadahahahahahahahahadadadadaaaaaaaaaaaa
+aaaaaaaaaaaaeDeDeGeGeDfbfceDfcfbeDfcfbeDiveWiwixiwiweGeGeDeDeDeDeDaaaaaaaaaaaaaaaagPaiaaaaaaaaaahghghghkhhhghhhlhlhhhjfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaeDeDeDeDeGeGeDeGeGeDeZeGeDiyeGeGeGeKeGeHiaeDaaaaaaaaaaaaaaaaaaaaaaaaaiaiaaaaaaaaaahhhhhhhhhhhghlhlhhhhhjfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaeDizeGeDfxeGeDeGeGeDeDeGeReDeDeDeDeDeDaaaaaaaaaaaaaaaaaaaaaaaaaiaiaaaaaaaaaahhhhhhhlhlhlhlhlhhhhhjfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaadadadaaaaeDiAePeDePiBeDePiCeDeGeGeGeHeGeDaaaaaaaaaaaaaaaaadaaaaaaaaaaaagPaiaaaaaaaaaahhhhhhhlhihhhmhhhnhghjfqaaaaaahoaigOaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaadadadadaaeDeDeDeDeDeDeDeDeDeDiDeHeGeGiFeDaaaaaaaaaaaaaaadadaaaaaaaaaaaahpaiaaaaaaaaaahghghghhhhhghnhnhqhghjfqaaaaaagOgOgOgPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaadiEadadadaaaaaaaaaaaaaaaaaaeDioiqiGeGiHeDaaaaaaaaaaaaaaadadaaaaaaaaaaaagOgPaaaaaaaaaahghghghhhghghrhrhrhghsfqaaaaaagPgPgPgOgPgPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahthghjahhuhvahaaaaaaaaaaaa
+aaaaaaaaaaaaaaadadadadaaaaaaaaaaaaaaaaeDioiIiGeGkleDaaaaaaaaaaaaadadadaaaaaaaaaaaagPgPaaaaaaaaaafyhwhthghjhxfyfyfyfyfyfzaaaaaaaiaihyaigPaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahthzhjfqhAaaaaaaaaaaaaaaaa
+aaaaaaaaadadadadadahahahahadadadaaaaaaeDeDeDeDeDeDeDaaaaaaaaaaaaadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahBaigPgPgPgPaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahChDhEfqhFaaaaaaaaaaaaaaaa
 aaaaaaaaadadadadahahiJiJahahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafnhGgPgPgOgOgPaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahHhDhIfqhAaaaaaaaaaaaaaaaa
 aaaaaaaaadadadadahagatiJagahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaigPgOhJhKgOgPaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahLhDhMhNhAaaaaaaaaaaaaaaaa
 aaaaaaaaadadadadahagiJiJagahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaagPhOgOhPhogOgPgPaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahthQhjhRhAaaaaaaaaaaaaaaaa
