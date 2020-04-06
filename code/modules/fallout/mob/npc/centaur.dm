@@ -1,7 +1,7 @@
 //Fallout 13 Centaur directory
 
 /mob/living/simple_animal/hostile/centaur
-	name = "centaur"
+	name = "кентавр"
 	desc = "Centaurs are mutated creatures. They are a result of infection by the Forced Evolutionary Virus gone horribly wrong."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "centaur"

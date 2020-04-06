@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/liberatormk0
 	name = "Освободитель МК0"
 	desc = "Маленький бирюзовый паукообразный робот с красным «глазом» в виде звезды. Чуть ниже глаза-звезды можно заметить китайские иероглифы, по которым можно догадаться, что данный робот использовался НОАК. При нападении «Освободитель» использует маломощный лазер.."
-	icon = 'icons/fallout/mobs/animal.dmi'
+	icon = 'icons/fallout/mobs/liberator.dmi'
 	icon_state = "liberator"
 	icon_living = "liberator"
 	icon_dead = "liberator_d"

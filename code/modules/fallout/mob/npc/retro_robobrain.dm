@@ -1,7 +1,7 @@
 //Fallout 13 protectron directory
 
 /mob/living/simple_animal/hostile/retro_robobrain
-	name = "retro_robobrain"
+	name = "Робомозг"
 	desc = "A pre-War type of robobrain.<br>Extremely dangerous machine."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "retro_robobrain"

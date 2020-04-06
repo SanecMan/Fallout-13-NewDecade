@@ -1,7 +1,7 @@
 //Fallout 13 securitron directory
 
 /mob/living/simple_animal/hostile/securitron
-	name = "securitron"
+	name = "סוךü‏נטעטענמם ּÊ1"
 	desc = "A pre-War type of securitron.<br>Extremely dangerous machine."
 	icon = 'icons/fallout/mobs/robots.dmi'
 	icon_state = "Securitron"
