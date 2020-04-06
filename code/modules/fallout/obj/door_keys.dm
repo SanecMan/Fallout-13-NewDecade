@@ -188,6 +188,8 @@
 	desc = "Обычная заколка для волоc, однако в умелых руках может выступать в роли отмычки."
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "Hairpin"
+	self_weight = 0.1
+	w_class = WEIGHT_CLASS_TINY
 
 	var/lockpicking_time = 100
 	var/broken_chance = 50
@@ -204,3 +206,47 @@
 	color = "#009933"
 	lockpicking_time = 1
 	broken_chance = 0
+
+
+  ////////////////
+ //LOCKPICK BOX//
+/obj/item/weapon/storage/bag/lockpicks
+	name = "коробок шпилек"
+	desc = "Маленькая довоенная коробочка со шпильками."
+	icon = 'icons/fallout/objects/storage.dmi'
+	icon_state = "lockpickbox_closed"
+	item_state = "zippo"
+	storage_slots = 60
+	w_class = WEIGHT_CLASS_TINY
+	slot_flags = SLOT_BELT
+	display_contents_with_number = TRUE
+	can_hold = list(/obj/item/lockpick)
+	cant_hold = list(/obj/item/lockpick/pro)
+	var/opened = FALSE
+
+/obj/item/weapon/storage/bag/lockpicks/attack_self()
+	opened = !opened
+	update_icon()
+
+/obj/item/weapon/storage/bag/lockpicks/New()
+	..()
+	var/count = rand(1, 5)
+	for(var/i=1; i <= count; i++)
+		new /obj/item/lockpick(src)
+
+/obj/item/weapon/storage/bag/lockpicks/update_icon()
+	if(!opened)
+		icon_state = "lockpickbox_closed"
+	else
+		switch(contents.len)
+			if(0) icon_state = "lockpickbox_open-0"
+			if(1) icon_state = "lockpickbox_open-1"
+			else icon_state = "lockpickbox_open-2"
+
+/obj/item/weapon/storage/bag/lockpicks/handle_item_insertion(obj/item/W, prevent_warning = 0, mob/user)
+	opened = TRUE
+	return ..()
+
+/obj/item/weapon/storage/bag/lockpicks/remove_from_storage(obj/item/W, atom/new_location, burn = 0)
+	opened = TRUE
+	return ..()
