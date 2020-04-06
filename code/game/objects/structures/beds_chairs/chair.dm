@@ -136,6 +136,12 @@
 	name = "опртяный деревянный стул"
 	desc = "An elegant chair made of luxurious wood."
 
+/obj/structure/chair/wood/stal
+	icon = 'icons/fallout/objects/structures/furniture.dmi'
+	icon_state = "chair_stalker"
+	name = "деревянный стул"
+	desc = "Деревянный стул. Покрылся пылью уже."
+
 /obj/structure/chair/comfy
 	name = "комфортное кресло"
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
