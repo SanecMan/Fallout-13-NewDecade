@@ -524,6 +524,34 @@
 	w_class = WEIGHT_CLASS_SMALL
 	recharge_time = 60
 
+/obj/item/toy/talking/isabelle
+	name = "plush Isabelle"
+	desc = "Плюшевая игрушка Изабеллы! Твою мать как мило!"
+	icon_state = "isabelle"
+
+/obj/item/toy/talking/isabelle/activation_message(mob/user)
+	user.visible_message(
+		"<span class='notice'>[user] presses the button on \the [src].</span>",
+		"<span class='notice'>You press the button on \the [src].</span>",
+		"<span class='notice'>You hear a soft click.</span>")
+
+/obj/item/toy/talking/isabelle/generate_messages()
+	var/list/messages = list()
+	messages = list(
+	"Good morning, Mayor!",
+	"Я могу вам чем-то сегодня помочь?",
+	"Они хотят, чтобы я была в Smash?!",
+	"Должна сказать, я и сама фанатка K.K. Slider...")
+	return messages
+
+/obj/item/toy/talking/strength
+	name = "Strength bobblehead"
+	desc = "It's Strength bobblehead"
+	icon = 'icons/fallout/objects/items.dmi'
+	icon_state = "strength"
+	w_class = WEIGHT_CLASS_SMALL
+	recharge_time = 60
+
 /obj/item/toy/talking/strength/activation_message(mob/user)
 	user.visible_message(
 		"<span class='notice'>[user] presses the button on \the [src].</span>",
