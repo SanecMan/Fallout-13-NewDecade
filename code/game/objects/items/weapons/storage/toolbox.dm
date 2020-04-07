@@ -45,7 +45,6 @@
 	new /obj/item/weapon/wrench(src)
 	new /obj/item/weapon/weldingtool(src)
 	new /obj/item/weapon/crowbar(src)
-	new /obj/item/device/analyzer(src)
 	new /obj/item/weapon/wirecutters(src)
 
 /obj/item/weapon/storage/toolbox/electrical
@@ -58,7 +57,6 @@
 	var/pickedcolor = pick("red","yellow","green","blue","pink","orange","cyan","white")
 	new /obj/item/weapon/screwdriver(src)
 	new /obj/item/weapon/wirecutters(src)
-	new /obj/item/device/t_scanner(src)
 	new /obj/item/weapon/crowbar(src)
 	new /obj/item/stack/cable_coil(src,30,pickedcolor)
 	new /obj/item/stack/cable_coil(src,30,pickedcolor)
@@ -134,3 +132,20 @@
 /obj/item/weapon/storage/toolbox/brass/prefilled/ratvar/admin
 	slab_type = /obj/item/clockwork/slab/debug
 	proselytizer_type = /obj/item/clockwork/clockwork_proselytizer/scarab/debug
+
+/obj/item/weapon/storage/toolbox/rusty
+	name = "ржавый ящик для инструментов"
+	desc = "Опасно. Очень ржавый."
+	icon_state = "toolbox_rusty"
+	item_state = "toolbox_rusty"
+	materials = list(MAT_METAL = 300)
+	origin_tech = "combat=1;engineering=1"
+	attack_verb = list("огревает ящиком")
+
+/obj/item/weapon/storage/toolbox/rusty/New()
+	..()
+	new /obj/item/weapon/screwdriver(src)
+	new /obj/item/weapon/wrench(src)
+	new /obj/item/weapon/weldingtool(src)
+	new /obj/item/weapon/crowbar(src)
+	new /obj/item/weapon/wirecutters(src)

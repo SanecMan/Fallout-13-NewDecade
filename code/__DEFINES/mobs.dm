@@ -107,3 +107,6 @@
 #define SNPC_STEALTH 2
 #define SNPC_MARTYR 3
 #define SNPC_PSYCHO 4
+
+//respawn things//
+#define RESPAWN_TIMER 3000
