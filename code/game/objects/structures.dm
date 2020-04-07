@@ -67,6 +67,9 @@
 		density = 0
 		. = step(A,get_dir(A,src.loc))
 		density = 1
+		return TRUE
+	else
+		return FALSE
 
 /obj/structure/proc/climb_structure(mob/user)
 	src.add_fingerprint(user)
