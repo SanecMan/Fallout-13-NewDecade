@@ -1,19 +1,11 @@
-## Fallout 13 [RU]
-
-**Реддит:** https://www.reddit.com/r/Fallout13
-
-**Исходник кода:** https://gitlab.com/KoBRaAndrey/F13
-
-**Discord:**  https://discord.me/fallout13official
-
-## Fallout 13 [EN]
+## Fallout 13
 **Reddit:** https://www.reddit.com/r/Fallout13
 
 **Code source:** https://gitlab.com/KoBRaAndrey/F13
 
 **Discord:**  https://discord.me/fallout13official
 
-## Terms of service
+## Terms of service | Условия соглашения
 
 A friendly reminder to anyone who would like to create personal edition of a game to host a server while keeping the code base private - a source code is licensed under /tg/ Station 13 terms, and thus rendering your project closed-source will likely cause considerable sanctions on their behalf. Honestly, we tried it ourselves - it didn't work, and Byond administration officially disabled one of our servers for violation of licensing terms - don't repeat our mistakes.
 
@@ -54,7 +46,7 @@ _Praise our Overlords!_
 
 And all the others who made our dreams come true.
 
-## Soundtrack
+## Soundtrack | Саундтрек
 
 Music by Harry James Orchestra 1939-1946.
 
@@ -72,12 +64,12 @@ You can download zip archive with unedited music tracks here:
 
 [click](http://www.mediafire.com/download/fdlmc67zwwyw26d/Fallout13OST.zip)
 
-## Disclaimer
+## Disclaimer | Дисклеймер
 
 **Note: This is not associated with Bethesda Softworks in any way! Fallout 13 is neither a trademark, nor a commercial product.
 2017 Bethesda Softworks LLC. Trademarks belong to their respective owners.**
 
-## LICENSE
+## LICENSE | Лицензирование
 
 **Fallout 13 is based of /tg/ Station 13 source code and thus is licensed and distributed accordingly.**
 
