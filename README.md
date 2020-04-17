@@ -1,8 +1,15 @@
-## Fallout 13
+## Fallout 13 [RU]
 
 **Реддит:** https://www.reddit.com/r/Fallout13
 
 **Исходник кода:** https://gitlab.com/KoBRaAndrey/F13
+
+**Discord:**  https://discord.me/fallout13official
+
+## Fallout 13 [EN]
+**Reddit:** https://www.reddit.com/r/Fallout13
+
+**Code source:** https://gitlab.com/KoBRaAndrey/F13
 
 **Discord:**  https://discord.me/fallout13official
 
@@ -23,18 +30,18 @@ If you desire to host your own server based of Fallout 13 source code - you may 
 
 Stated terms of service fully comply with the original AGPL v3 license of /tg/ Station 13, as long as this applies to the running server of unofficial community.
 
-## Credits
+## Credits | Особые благодарности
 
 **Code:**
 
-Jackerzz aka Maxyo, KoBRaAndrey, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Tmad40blue, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please, SanecMan, iWuna, DuxaDuxovcev, Patapoiiika.
+Jackerzz aka Maxyo, KoBRaAndrey, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Tmad40blue, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please, SanecMan, iWuna, DuxaDuxovcev, Patapoiiika, Lenorka.
 
 **Graphics / Sprites / Icons:**
 
-Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox, Zhuppa, iWuna, Yarinevar.
+Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox, Zhuppa, iWuna, Yarinevar, TheRiddler.
 
 **Ideas / Testing / Support:**
-Deus66
+Deus66, DrNuke, Def0lt, Dillashaw, KleFFir, Fanxelt.
 
 **Origins:**
 
