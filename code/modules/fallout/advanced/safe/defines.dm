@@ -1,6 +1,6 @@
 /obj/structure/safe_caps
-	name = "Caps safe"
-	desc = "Save your caps from yourself!"
+	name = "сейф для крышек"
+	desc = "Сохраните свои деньги от себя самого!"
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "safe"
 

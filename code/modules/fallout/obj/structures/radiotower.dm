@@ -1,6 +1,6 @@
 /obj/structure/radiotower
-	name = "Radio Tower"
-	desc = "Tall radio tower with wires and rust..."
+	name = "радио вышка"
+	desc = "¬ысока€ радио вышка, покрыта€ сло€ми ржавчины и оборванными проводами..."
 	icon = 'icons/fallout/misc/radiotower.dmi'
 	icon_state = "radiotower"
 	density = 1

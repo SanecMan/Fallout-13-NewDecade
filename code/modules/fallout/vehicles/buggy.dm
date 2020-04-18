@@ -79,12 +79,16 @@
 	names = list("Interceptor")
 
 /obj/vehicle/fuel/motorcycle/buggy/tank
-	name = "MTV"
-	names = list("Коробочка 2", "CVR-T", "U.N.I.T CVR", "Igniter", "Heat", "Est Probitie", "Pollywog")
+	name = "CVR"
+	names = list("Коробочка 2", "CVR-T", "U.N.I.T CVR", "Igniter", "Heat", "Est Probitie", "T-90")
 	icon = 'icons/fallout/vehicles/CVR.dmi'
 	icon_state = "CVR(T)-WFLV_207"
-	desc = "FUCKING TANK!"
+	desc = "Танк, ТАНК МАТЬ ЕГО!"
 	layer = 5
 	fuel = 1000
 	max_fuel = 1000
 	self_weight = 2000
+	engine_loop_sound = 'sound/f13machines/tank_moving.ogg'
+
+/datum/riding/motorcycle/buggy/tank
+	vehicle_move_delay = 2.5
