@@ -11,7 +11,7 @@
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/structure/cargocrate/initialize()
-	icon_state = "cargocrate[rand(1, 6)]"
+//	icon_state = "cargocrate[rand(1, 6)]"
 
 	var/atom/movable/S = new (locate(x+1,y,z))
 	S.density = 1
