@@ -80,6 +80,9 @@
 	if(status == "raider")
 		ticker.mode.set_antag_hud(H, "raider")
 
+	if(status == "sheriff")
+		ticker.mode.set_antag_hud(H, "sheriff")
+
 	H.set_faction(faction)
 	H.set_status(status)
 	var/datum/f13_faction/F = get_faction_datum(H.social_faction)

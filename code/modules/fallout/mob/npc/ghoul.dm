@@ -50,6 +50,13 @@
 
 	..()
 
+/mob/living/simple_animal/hostile/ghoul/Life()
+	. = ..()
+	if(!.)
+		if(prob(0.1))
+			visible_message("<span class='notice'>Тело [src] разлагается!</span>")
+			gib(FALSE, FALSE, FALSE, TRUE)
+
 /mob/living/simple_animal/hostile/ghoul/aggressive
 	name = "Дикий гуль"
 	desc = "Have you ever seen a hungry ghoul before?<br>Similar to other feral ghouls, it's more aggressive and confident about the fact that you are the best food around.<br>It is missing a left arm."
