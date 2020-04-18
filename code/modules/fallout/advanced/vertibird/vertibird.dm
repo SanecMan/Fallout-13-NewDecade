@@ -23,7 +23,7 @@
 
 /obj/vertibird/attack_hand(mob/user)
 	if(locked)
-		to_chat(usr, "It's locked.")
+		to_chat(usr, "Закртыо.")
 		return
 
 	if(inFly)

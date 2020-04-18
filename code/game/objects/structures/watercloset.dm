@@ -1,6 +1,6 @@
 /obj/structure/toilet
-	name = "toilet"
-	desc = "The HT-451, a torque rotation-based, waste disposal unit for small matter. This one seems remarkably clean."
+	name = "унитаз"
+	desc = "Белый друг человечества. Сейчас канализация практически не работает, но эй, не в кусты же?"
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "toilet00"
 	density = 0
@@ -106,8 +106,8 @@
 		return ..()
 
 /obj/structure/urinal
-	name = "urinal"
-	desc = "The HU-452, an experimental urinal. Comes complete with experimental urinal cake."
+	name = "писсуар"
+	desc = "Огромный, вонючий писсуар."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "urinal"
 	density = 0
@@ -176,8 +176,8 @@
 	list_reagents = list("chlorine" = 3, "ammonia" = 1)
 
 /obj/machinery/shower
-	name = "shower"
-	desc = "The HS-451. Installed in the 2550s by the Nanotrasen Hygiene Division."
+	name = "душ"
+	desc = "Нет ничего лучше душа, после очередной вылазки."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "shower"
 	density = 0
@@ -190,7 +190,7 @@
 
 
 /obj/effect/mist
-	name = "mist"
+	name = "туман"
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "mist"
 	layer = FLY_LAYER
@@ -392,8 +392,8 @@
 
 
 /obj/item/weapon/bikehorn/rubberducky
-	name = "rubber ducky"
-	desc = "Rubber ducky you're so fine, you make bathtime lots of fuuun. Rubber ducky I'm awfully fooooond of yooooouuuu~"	//thanks doohl
+	name = "резиновая уточка"
+	desc = "Резиновая мать её уточка! Кря-кря!"	//thanks doohl
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "rubberducky"
 	item_state = "rubberducky"
@@ -401,10 +401,10 @@
 
 
 /obj/structure/sink
-	name = "sink"
+	name = "раковина"
+	desc = "Раковина, её можно использовать для того чтобы умыть свои руки или лицо."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "sink"
-	desc = "A sink used for washing one's hands and face."
 	anchored = 1
 	var/busy = 0 	//Something's being washed at the moment
 	var/liquid = "radwater" //Gargule /What u gain
@@ -419,7 +419,7 @@
 		return
 
 	if(busy)
-		to_chat(user, "<span class='notice'>Someone's already washing here.</span>")
+		to_chat(user, "<span class='notice'>Кто-то уже использует это.</span>")
 		return
 	var/selected_area = parse_zone(user.zone_selected)
 	var/washing_face = 0
@@ -478,7 +478,7 @@
 
 	if(istype(O, /obj/item/weapon/mop))
 		O.reagents.add_reagent("water", 5)
-		to_chat(user, "<span class='notice'>You wet [O] in [src].</span>")
+		to_chat(user, "<span class='notice'>Вы смочили [O] в [src].</span>")
 		playsound(loc, 'sound/effects/slosh.ogg', 25, 1)
 
 	if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/monkeycube))
@@ -495,7 +495,7 @@
 		return
 
 	if(user.a_intent != INTENT_HARM)
-		to_chat(user, "<span class='notice'>You start washing [O]...</span>")
+		to_chat(user, "<span class='notice'>Вы начинаете чистить [O]...</span>")
 		busy = 1
 		if(!do_after(user, 40, target = src))
 			busy = 0
@@ -503,8 +503,8 @@
 		busy = 0
 		O.clean_blood()
 		O.acid_level = 0
-		user.visible_message("<span class='notice'>[user] washes [O] using [src].</span>", \
-							"<span class='notice'>You wash [O] using [src].</span>")
+		user.visible_message("<span class='notice'>[user] чистит [O] используя [src].</span>", \
+							"<span class='notice'>Вы чистите [O] используя [src].</span>")
 		return 1
 	else
 		return ..()
@@ -516,12 +516,12 @@
 
 
 /obj/structure/sink/kitchen
-	name = "kitchen sink"
+	name = "кухонная раковина"
 	icon_state = "sink_alt"
 
 
 /obj/structure/sink/puddle	//splishy splashy ^_^
-	name = "puddle"
+	name = "лужа"
 	icon_state = "puddle"
 
 /obj/structure/sink/puddle/attack_hand(mob/M)
@@ -540,8 +540,8 @@
 
 
 /obj/structure/curtain
-	name = "curtain"
-	desc = "Contains less than 1% mercury."
+	name = "шторы"
+	desc = "Содержит менее 1% ртути."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "open"
 	color = "#ACD1E9" //Default color, didn't bother hardcoding other colors, mappers can and should easily change it.

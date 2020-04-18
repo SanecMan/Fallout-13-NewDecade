@@ -1,8 +1,9 @@
 //Fallout 13 general flora directory
 
 /obj/structure/flora/grass/wasteland
+	name = "трава"
 	icon = 'icons/fallout/flora/flora.dmi'
-	desc = "You see nothing out of the ordinary."
+	desc = "Ничего особенного ,просто трава..."
 	icon_state = "tall_grass_1"
 
 /obj/structure/flora/grass/wasteland/New()
@@ -11,9 +12,9 @@
 
 /obj/structure/flora/grass/wasteland/attackby(obj/item/weapon/W, mob/user, params)
 	if(W.sharpness && W.force > 0 && !(NODECONSTRUCT in flags))
-		to_chat(user, "You begin to harvest [src]...")
+		to_chat(user, "Вы начинаете собирать [src]...")
 		if(do_after(user, 100/W.force, target = user))
-			to_chat(user, "<span class='notice'>You've collected [src]</span>")
+			to_chat(user, "<span class='notice'>Вы собрали немного [src]</span>")
 			var/obj/item/stack/sheet/grass/G = user.get_inactive_held_item()
 			if(istype(G))
 				G.add(1)
@@ -25,8 +26,8 @@
 		. = ..()
 
 /obj/structure/flora/tree/wasteland
-	name = "dead tree"
-	desc = "It's the most dull thing you have ever seen in your life."
+	name = "сухое дерево"
+	desc = "Это пожалуй самая странная вещь что вы видели в своей жизни."
 	icon = 'icons/fallout/flora/trees.dmi'
 	icon_state = "deadtree_1"
 	log_amount = 3
@@ -44,8 +45,8 @@
 		icon_state = "tree_stump"
 
 /obj/structure/flora/tree/tall
-	name = "dead tree"
-	desc = "A rather tall tree that has been dead for a long time.<br>Interestingly it is still standing, as a reminder of its green past."
+	name = "сухое дерево"
+	desc = "Длинный ствол дерева, погибшего когда-то.<br>Стоит, как-бы напоминая о былых временах, зеленых и спокойных."
 	icon = 'icons/fallout/flora/talltrees.dmi'
 	icon_state = "tree_1"
 	log_amount = 7
@@ -63,10 +64,22 @@
 		icon_state = "tree_stump"
 
 /obj/structure/flora/cactus
-	name = "cactus"
-	desc = "A brave green cactus."
+	name = "кактус"
+	desc = "Гордый, зеленый кактус."
 	icon = 'icons/fallout/flora/trees.dmi'
 	icon_state = "cactus"
 	density = 1
 	pixel_x = -16
 	layer = FLY_LAYER
+
+/obj/structure/flora/burned
+	name = "обгоревший пень"
+	desc = "Черный, если бы были инструменты, можно было бы пустить на уголь."
+	icon = 'icons/fallout/flora/wild.dmi'
+	icon_state = "burnedtree5"
+	density = 1
+	layer = FLY_LAYER
+
+/obj/structure/flora/burned/New()
+	icon_state = "burnedtree[rand(1,10)]"
+	..()
