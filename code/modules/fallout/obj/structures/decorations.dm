@@ -96,7 +96,7 @@
 
 /obj/structure/decoration_f13/decal/hole
 	name = "дырка от пули"
-	desc = "Походе, кто-то вёл тут ожесточенную перестрелку... Когда-то.
+	desc = "Походе, кто-то вёл тут ожесточенную перестрелку... Когда-то."
 	icon_state = "bhole-small"
 
 /obj/structure/decoration_f13/decal/hole/medium
