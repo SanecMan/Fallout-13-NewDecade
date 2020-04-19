@@ -129,7 +129,7 @@
 
 
 /obj/item/weapon/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
-	to_chat(user, "<span class='danger'>*click*</span>")
+	to_chat(user, "<span class='danger'>*клик*</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 
 
@@ -628,11 +628,11 @@
 	if(istype(I, /obj/item/crafting/weapon_repair_kit))
 		if(condition < 90)
 			if(do_after(user, 20, target = src))
-				to_chat(user, "<span class='notice'>You repaired your weapon.</span>")
+				to_chat(user, "<span class='notice'>Вы починили оружие.</span>")
 				condition = min(100, condition + 40)
 				qdel(I)
 		else
-			to_chat(user, "<span class='notice'>No need, weapon in good condition.</span>")
+			to_chat(user, "<span class='notice'>Не требуется. оружие в прекрасном состоянии.</span>")
 
 	if(can_flashlight)
 		if(istype(I, /obj/item/device/flashlight/seclite))

@@ -9,7 +9,7 @@
 	if(modificationsNames.len == 0)
 		return
 
-	to_chat(user, "WMK installed:")
+	to_chat(user, "Модуль установлен:")
 
 	for(var/S in modificationsNames)
 		to_chat(user, S)
@@ -18,7 +18,7 @@
 	..()
 
 	if(user.special.getPoint("i") + user.skills.getPoint("repair") <= 12)
-		to_chat(user, "You too dumb or have not enough repair skills for this upgrade")
+		to_chat(user, "У вас не хватает навыхов, чтобы поставить улучшение.")
 		return
 
 	if(istype(W, /obj/item/kit))

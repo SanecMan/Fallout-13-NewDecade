@@ -125,7 +125,7 @@
 	update_icon()
 
 /obj/structure/burnbarrel
-	name = "burnbarrel"
+	name = "бочка"
 
 	density = 1
 	anchored = 1

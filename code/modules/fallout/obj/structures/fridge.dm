@@ -1,7 +1,7 @@
 //Fallout 13 fridge directory
 
 /obj/structure/closet/wood
-	name = "wood"
+	name = "бочка"
 	desc = "An old, wood barel with drinks."
 	icon_state = "wood"
 
@@ -17,7 +17,7 @@
 		new /obj/item/weapon/reagent_containers/food/drinks/bottle/sunset(src)
 
 /obj/structure/closet/fridge
-	name = "fridge"
+	name = "холодильник"
 	desc = "An old, pre-War refrigerator.<br>Despite being covered in rust and making noises straight out of a horror film, it still keeps your Nuka-Cola cold."
 	icon_state = "fridge"
 	layer = 2

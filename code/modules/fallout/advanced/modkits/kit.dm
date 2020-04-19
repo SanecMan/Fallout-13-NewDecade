@@ -1,5 +1,5 @@
 /obj/item/kit
-	name = "Modification Kit"
+	name = "набор модификации"
 	desc = "Бесполезен."
 	icon = 'icons/fallout/advanced/modkits.dmi'
 	icon_state = "wmk"
