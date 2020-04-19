@@ -28,28 +28,28 @@
 	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
 	else
-		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>????????? ?????????</A></p>"
+		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Настройка персонажа</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
 			if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 				output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Un-Ready</a> \]</p>"
 			else
-				output += "<p>\[ <b>?????</b> | <a href='byond://?src=\ref[src];ready=0'>?? ?????</a> \]</p>"
+				output += "<p>\[ <b>Готов</b> | <a href='byond://?src=\ref[src];ready=0'>Не готов</a> \]</p>"
 		else
 			if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Un-Ready</b> \]</p>"
 				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 			else
-				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>?????</a> | <b>?? ?????</b> \]</p>"
-				output += "<p><a href='byond://?src=\ref[src];show_content=1'>?????? ???????!</a></p>"
+				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>?Готов</a> | <b>Не готов</b> \]</p>"
+				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
 	else
 		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
 			output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 		else
-			output += "<p><a href='byond://?src=\ref[src];late_join=1'>??????????????!</A></p>"
-			output += "<p><a href='byond://?src=\ref[src];show_content=1'>?????? ???????!</a></p>"
+			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Присоедениться!</A></p>"
+			output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
 /*
 	if(client && client.holder)
 		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
@@ -78,11 +78,18 @@
 	output += "</center>"
 
 	//src << browse(output,"window=playersetup;size=210x240;can_close=0")
-	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Настройки нового персонажа</div>", 220, 265)
-	popup.set_window_options("can_close=0")
-	popup.set_content(output)
-	popup.open(0)
-	return
+	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+		var/datum/browser/popup = new(src, "playersetup", "<div align='center'>New character create</div>", 220, 265)
+		popup.set_window_options("can_close=0")
+		popup.set_content(output)
+		popup.open(0)
+		return
+	else
+		var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Настройки нового персонажа</div>", 220, 265)
+		popup.set_window_options("can_close=0")
+		popup.set_content(output)
+		popup.open(0)
+		return
 
 /mob/new_player/Stat()
 	..()
@@ -432,15 +439,23 @@
 	var/hours = mills / 36000
 
 	var/dat = {"<meta charset="UTF-8">"}
-	dat += "<div class='notice'>Длительность раунда: [round(hours)]ч [round(mins)]м</div>"
+	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+		dat += "<div class='notice'>Round duration: [round(hours)]h [round(mins)]m</div>"
+	else
+		dat += "<div class='notice'>Длительность раунда: [round(hours)]ч [round(mins)]м</div>"
 
 	var/available_job_count = 0
 	for(var/datum/job/job in SSjob.occupations)
 		if(job && IsJobAvailable(job.title))
 			available_job_count++;
 
-	dat += "<div class='clearBoth'>Выберите одну из доступных ролей:</div><br>"
-	dat += "<div class='jobs'><div class='jobsColumn'>"
+	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+		dat += "<div class='clearBoth'>Choose your role:</div><br>"
+		dat += "<div class='jobs'><div class='jobsColumn'>"
+	else
+		dat += "<div class='clearBoth'>Выберите одну из доступных ролей:</div><br>"
+		dat += "<div class='jobs'><div class='jobsColumn'>"
+
 	var/job_count = 0
 	for(var/datum/job/job in SSjob.occupations)
 		if(job && IsJobAvailable(job.title))
@@ -462,7 +477,10 @@
 	//src << browse(dat, "window=latechoices;size=300x640;can_close=1")
 
 	// Added the new browser window method
-	var/datum/browser/popup = new(src, "latechoices", "Выберите роль", 440, 500)
+	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+		var/datum/browser/popup = new(src, "latechoices", "Choose Role", 440, 500)
+	else
+		var/datum/browser/popup = new(src, "latechoices", "Выберите роль", 440, 500)
 	popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 	popup.set_content(dat)
 	popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
