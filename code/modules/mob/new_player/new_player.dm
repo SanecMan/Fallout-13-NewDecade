@@ -479,11 +479,14 @@
 	// Added the new browser window method
 	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 		var/datum/browser/popup = new(src, "latechoices", "Choose Role", 440, 500)
+		popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
+		popup.set_content(dat)
+		popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
 	else
 		var/datum/browser/popup = new(src, "latechoices", "Выберите роль", 440, 500)
-	popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
-	popup.set_content(dat)
-	popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
+		popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
+		popup.set_content(dat)
+		popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
 
 
 /mob/new_player/proc/create_character()
