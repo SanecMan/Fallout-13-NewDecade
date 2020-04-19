@@ -7,7 +7,7 @@ var/list/whitelist
 	for(var/line in file2list(WHITELISTFILE))
 		if(!line)
 			continue
-		if(findtextEx(line,"#",1,2))
+		if(findtextEx_char(line,"#",1,2))
 			continue
 		whitelist += line
 

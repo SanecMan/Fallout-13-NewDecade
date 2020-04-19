@@ -99,7 +99,7 @@
 
 	updatemodules()
 
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	dat += "<a href='byond://?src=\ref[src];refresh=1'>Refresh</a>"
 	if(scanner && pod1 && ((scanner.scan_level > 2) || (pod1.efficiency > 5)))
 		if(!autoprocess)
@@ -408,7 +408,7 @@
 		R.fields["mrace"] = rando_race.type
 	R.fields["ckey"] = subject.ckey
 	R.fields["name"] = subject.real_name
-	R.fields["id"] = copytext(md5(subject.real_name), 2, 6)
+	R.fields["id"] = copytext_char(md5(subject.real_name), 2, 6)
 	R.fields["UE"] = subject.dna.unique_enzymes
 	R.fields["UI"] = subject.dna.uni_identity
 	R.fields["SE"] = subject.dna.struc_enzymes

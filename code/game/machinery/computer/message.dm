@@ -67,7 +67,8 @@
 	//If the computer is being hacked or is emagged, display the reboot message.
 	if(hacking || emagged)
 		message = rebootmsg
-	var/dat = "<center><font color='blue'[message]</font>/</center>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<center><font color='blue'[message]</font>/</center>"
 
 	if(auth)
 		dat += "<h4><dd><A href='?src=\ref[src];auth=1'>&#09;<font color='green'>\[Authenticated\]</font></a>&#09;/"
@@ -265,7 +266,7 @@
 		//Turn the server on/off.
 		if (href_list["active"])
 			if(auth) linkedServer.active = !linkedServer.active
-		//Find a server
+		//Find_char a server
 		if (href_list["find"])
 			if(message_servers && message_servers.len > 1)
 				src.linkedServer = input(usr,"Please select a server.", "Select a server.", null) as null|anything in message_servers

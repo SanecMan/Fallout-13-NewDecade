@@ -1,7 +1,7 @@
 /obj/machinery/computer/holodeck/attack_hand(var/mob/user as mob)
 	user.set_machine(src)
-
-	var/dat = "<h3>Current Loaded Programs</h3>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<h3>Current Loaded Programs</h3>"
 	dat += "<a href='?src=\ref[src];loadarea=[offline_program.type]'>Power Off</a><br>"
 	for(var/area/A in program_cache)
 		dat += "<a href='?src=\ref[src];loadarea=[A.type]'>[A.name]</a><br>"
@@ -17,7 +17,8 @@
 	return
 
 /obj/machinery/computer/holodeck/attack_ai(var/mob/user as mob)
-	var/dat = "<h3>Current Loaded Programs</h3>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<h3>Current Loaded Programs</h3>"
 
 	dat += "<a href='?src=\ref[src];loadarea=[offline_program.type]'>Power Off</a><br>"
 	for(var/area/A in program_cache)

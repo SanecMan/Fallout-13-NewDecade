@@ -39,8 +39,8 @@
 
 /obj/machinery/photocopier/attack_hand(mob/user)
 	user.set_machine(src)
-
-	var/dat = "Photocopier<BR><BR>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "Photocopier<BR><BR>"
 	if(copy || photocopy || doccopy || (ass && (ass.loc == src.loc)))
 		dat += "<a href='byond://?src=\ref[src];remove=1'>Remove Paper</a><BR>"
 		if(toner)
@@ -81,8 +81,8 @@
 							else			//no toner? shitty copies for you!
 								c.info = "<font color = #808080>"
 							var/copied = copy.info
-							copied = replacetext(copied, "<font face=\"[PEN_FONT]\" color=", "<font face=\"[PEN_FONT]\" nocolor=")	//state of the art techniques in action
-							copied = replacetext(copied, "<font face=\"[CRAYON_FONT]\" color=", "<font face=\"[CRAYON_FONT]\" nocolor=")	//This basically just breaks the existing color tag, which we need to do because the innermost tag takes priority.
+							copied = replacetext_char(copied, "<font face=\"[PEN_FONT]\" color=", "<font face=\"[PEN_FONT]\" nocolor=")	//state of the art techniques in action
+							copied = replacetext_char(copied, "<font face=\"[CRAYON_FONT]\" color=", "<font face=\"[CRAYON_FONT]\" nocolor=")	//This basically just breaks the existing color tag, which we need to do because the innermost tag takes priority.
 							c.info += copied
 							c.info += "</font>"
 							c.name = copy.name

@@ -45,7 +45,7 @@
 /* Initialization */
 /obj/machinery/bounty_machine/New()
 	InitQuestList()
-	FindPod(pod_distance)
+	Find_charPod(pod_distance)
 	UpdateActiveQuests()
 
 
@@ -144,8 +144,8 @@
  *	Pod management
 */
 
-/* Find and assign firs pod in distance */
-/obj/machinery/bounty_machine/proc/FindPod(var/distance = 1)
+/* Find_char and assign firs pod in distance */
+/obj/machinery/bounty_machine/proc/Find_charPod(var/distance = 1)
 	for(var/Obj in view(distance, src))
 		if(istype(Obj, /obj/machinery/bounty_pod))
 			connected_pod = Obj
@@ -155,7 +155,7 @@
  *	GUI
 */
 /obj/machinery/bounty_machine/proc/ShowUI()
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	var/datum/asset/assets = get_asset_datum(/datum/asset/simple/bounty_employers)
 	assets.send(usr)
 
@@ -203,7 +203,7 @@
 		ShowUI()
 
 	if(href_list["findpod"])
-		FindPod(pod_distance)
+		Find_charPod(pod_distance)
 		ShowUI()
 
 /*

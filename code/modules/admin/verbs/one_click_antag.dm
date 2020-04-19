@@ -10,7 +10,7 @@
 
 /datum/admins/proc/one_click_antag()
 
-	var/dat = {"
+	var/dat = {"<meta charset="UTF-8">
 		<a href='?src=\ref[src];makeAntag=traitors'>Make Traitors</a><br>
 		<a href='?src=\ref[src];makeAntag=changelings'>Make Changelings</a><br>
 		<a href='?src=\ref[src];makeAntag=revs'>Make Revs</a><br>

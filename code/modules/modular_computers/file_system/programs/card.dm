@@ -92,7 +92,7 @@
 	var/list/formatted = list()
 	for(var/job in jobs)
 		formatted.Add(list(list(
-			"display_name" = replacetext(job, "&nbsp", " "),
+			"display_name" = replacetext_char(job, "&nbsp", " "),
 			"target_rank" = id_card && id_card.assignment ? id_card.assignment : "Unassigned",
 			"job" = job)))
 
@@ -371,8 +371,8 @@
 			var/obj/item/weapon/card/id/id_card = card_slot.stored_card
 
 			data["has_id"] = !!id_card
-			data["id_rank"] = id_card && id_card.assignment ? html_encode_ru(id_card.assignment) : "Unassigned"
-			data["id_owner"] = id_card && id_card.registered_name ? html_encode_ru(id_card.registered_name) : "-----"
+			data["id_rank"] = id_card && id_card.assignment ? html_encode(id_card.assignment) : "Unassigned"
+			data["id_owner"] = id_card && id_card.registered_name ? html_encode(id_card.registered_name) : "-----"
 			data["id_name"] = id_card ? strip_html_simple(id_card.name) : "-----"
 
 			if(show_assignments)
@@ -391,7 +391,7 @@
 				var/list/all_centcom_access = list()
 				for(var/access in get_all_centcom_access())
 					all_centcom_access.Add(list(list(
-						"desc" = replacetext(get_centcom_access_desc(access), "&nbsp", " "),
+						"desc" = replacetext_char(get_centcom_access_desc(access), "&nbsp", " "),
 						"ref" = access,
 						"allowed" = (access in id_card.access) ? 1 : 0)))
 				data["all_centcom_access"] = all_centcom_access
@@ -406,7 +406,7 @@
 						for(var/access in get_region_accesses(i))
 							if (get_access_desc(access))
 								accesses.Add(list(list(
-								"desc" = replacetext(get_access_desc(access), "&nbsp", " "),
+								"desc" = replacetext_char(get_access_desc(access), "&nbsp", " "),
 								"ref" = access,
 								"allowed" = (access in id_card.access) ? 1 : 0)))
 

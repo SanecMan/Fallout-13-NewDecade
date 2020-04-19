@@ -534,7 +534,8 @@
 /obj/machinery/oven_old/interact(mob/user) // The microwave Menu
 	if(panel_open || !anchored)
 		return
-	var/dat = "<div class='statusDisplay'>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<div class='statusDisplay'>"
 	if(broken > 0)
 		dat += "ERROR: 09734014-A2379-D18746 --Bad memory<BR>Contact your operator or use command line to rebase memory ///git checkout {HEAD} -a commit pull --rebase push {*NEW HEAD*}</div>"    //Thats how all the git fiddling looks to me
 	else if(operating)

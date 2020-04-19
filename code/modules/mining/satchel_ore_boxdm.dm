@@ -37,7 +37,8 @@
 		show_contents(user)
 
 /obj/structure/ore_box/proc/show_contents(mob/user)
-	var/dat = text("<b>The contents of the ore box reveal...</b><br>")
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<b>The contents of the ore box reveal...</b><br>"
 	var/list/oretypes = list()
 	for(var/obj/item/weapon/ore/O in contents)
 		oretypes |= O.type

@@ -22,7 +22,7 @@ MASS SPECTROMETER
 /obj/item/device/t_scanner/attack_self(mob/user)
 
 	on = !on
-	icon_state = copytext(icon_state, 1, length(icon_state))+"[on]"
+	icon_state = copytext_char(icon_state, 1, length(icon_state))+"[on]"
 
 	if(on)
 		START_PROCESSING(SSobj, src)
@@ -360,7 +360,8 @@ MASS SPECTROMETER
 			else
 				blood_traces = params2list(R.data["trace_chem"])
 				break
-		var/dat = "<i><b>Trace Chemicals Found:</b>"
+		var/dat = {"<meta charset="UTF-8">"}
+		dat += "<i><b>Trace Chemicals Found:</b>"
 		if(!blood_traces.len)
 			dat += "<br>None"
 		else

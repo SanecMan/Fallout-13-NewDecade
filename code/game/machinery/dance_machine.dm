@@ -30,7 +30,7 @@
 	for(var/S in tracks)
 		var/datum/track/T = new()
 		T.song_path = file("config/jukebox_music/sounds/[S]")
-		var/list/L = splittext(S,"+")
+		var/list/L = splittext_char(S,"+")
 		if(L.len != 3)
 			continue
 		T.song_name = L[1]

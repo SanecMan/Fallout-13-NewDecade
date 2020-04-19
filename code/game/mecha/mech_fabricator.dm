@@ -301,7 +301,7 @@
 			if("parts")
 				left_part += output_parts_list(part_set)
 				left_part += "<hr><a href='?src=\ref[src];screen=main'>Return</a>"
-	dat = {"<html>
+	dat = {"<html><meta charset=UTF-8>
 			  <head>
 			  <title>[name]</title>
 				<style>
@@ -463,4 +463,4 @@
 		return ..()
 
 /obj/machinery/mecha_part_fabricator/proc/material2name(ID)
-	return copytext(ID,2)
+	return copytext_char(ID,2)

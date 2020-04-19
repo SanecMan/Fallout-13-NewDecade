@@ -62,7 +62,7 @@ var/list/admin_ranks = list()								//list of all admin_rank datums
 	return flag
 
 /proc/admin_keyword_to_path(word) //use this with verb keywords eg +/client/proc/blah
-	return text2path(copytext(word, 2, findtext(word, " ", 2, 0)))
+	return text2path(copytext_char(word, 2, findtext_char(word, " ", 2, 0)))
 
 // Adds/removes rights to this admin_rank
 /datum/admin_rank/proc/process_keyword(word, previous_rights=0)
@@ -107,11 +107,11 @@ var/list/admin_ranks = list()								//list of all admin_rank datums
 		for(var/line in file2list("config/admin_ranks.txt"))
 			if(!line)
 				continue
-			if(findtextEx(line,"#",1,2))
+			if(findtextEx_char(line,"#",1,2))
 				continue
 
-			var/next = findtext(line, "=")
-			var/datum/admin_rank/R = new(ckeyEx(copytext(line, 1, next)))
+			var/next = findtext_char(line, "=")
+			var/datum/admin_rank/R = new(ckeyEx(copytext_char(line, 1, next)))
 			if(!R)
 				continue
 			admin_ranks += R
@@ -119,7 +119,7 @@ var/list/admin_ranks = list()								//list of all admin_rank datums
 			var/prev = findchar(line, "+-", next, 0)
 			while(prev)
 				next = findchar(line, "+-", prev + 1, 0)
-				R.process_keyword(copytext(line, prev, next), previous_rights)
+				R.process_keyword(copytext_char(line, prev, next), previous_rights)
 				prev = next
 
 			previous_rights = R.rights
@@ -180,10 +180,10 @@ var/list/admin_ranks = list()								//list of all admin_rank datums
 		for(var/line in lines)
 			if(!length(line))
 				continue
-			if(findtextEx(line, "#", 1, 2))
+			if(findtextEx_char(line, "#", 1, 2))
 				continue
 
-			var/list/entry = splittext(line, "=")
+			var/list/entry = splittext_char(line, "=")
 			if(entry.len < 2)
 				continue
 
@@ -356,7 +356,7 @@ var/list/admin_ranks = list()								//list of all admin_rank datums
 
 			D.disassociate()
 
-			if(!findtext(D.rank.name, "([adm_ckey])"))	//not a modified subrank, need to duplicate the admin_rank datum to prevent modifying others too
+			if(!findtext_char(D.rank.name, "([adm_ckey])"))	//not a modified subrank, need to duplicate the admin_rank datum to prevent modifying others too
 				D.rank = new("[D.rank.name]([adm_ckey])", D.rank.rights, D.rank.adds, D.rank.subs)	//duplicate our previous admin_rank but with a new name
 				//we don't add this clone to the admin_ranks list, as it is unique to that ckey
 

@@ -100,7 +100,7 @@ var/list/slime_colours = list("rainbow", "grey", "purple", "metal", "orange",
 	colour = new_colour
 	update_name()
 	slime_mutation = mutation_table(colour)
-	var/sanitizedcolour = replacetext(colour, " ", "")
+	var/sanitizedcolour = replacetext_char(colour, " ", "")
 	coretype = text2path("/obj/item/slime_extract/[sanitizedcolour]")
 	regenerate_icons()
 

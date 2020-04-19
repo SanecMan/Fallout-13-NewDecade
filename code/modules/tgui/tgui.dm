@@ -198,11 +198,11 @@
 	var/html
 	// Poplate HTML with JSON if we're supposed to inline.
 	if(inline)
-		html = replacetextEx(SStgui.basehtml, "{}", get_json(initial_data))
+		html = replacetextEx_char(SStgui.basehtml, "{}", get_json(initial_data))
 	else
 		html = SStgui.basehtml
-	html = replacetextEx(html, "\[ref]", "\ref[src]")
-	html = replacetextEx(html, "\[style]", style)
+	html = replacetextEx_char(html, "\[ref]", "\ref[src]")
+	html = replacetextEx_char(html, "\[style]", style)
 	return html
 
  /**
@@ -253,8 +253,8 @@
 	// Generate the JSON.
 	var/json = json_encode(json_data)
 	// Strip #255/improper.
-	json = replacetext(json, "\proper", "")
-	json = replacetext(json, "\improper", "")
+	json = replacetext_char(json, "\proper", "")
+	json = replacetext_char(json, "\improper", "")
 	return json
 
  /**

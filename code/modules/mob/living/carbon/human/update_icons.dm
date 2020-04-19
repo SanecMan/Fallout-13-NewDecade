@@ -467,14 +467,14 @@ generate/load female uniform sprites matching all previously decided variables
 */
 /obj/item/proc/build_worn_icon(var/state = "", var/default_layer = 0, var/default_icon_file = null, var/isinhands = FALSE, var/femaleuniform = NO_FEMALE_UNIFORM)
 
-	//Find a valid icon file from variables+arguments
+	//Find_char a valid icon file from variables+arguments
 	var/file2use
 	if(!isinhands && alternate_worn_icon)
 		file2use = alternate_worn_icon
 	if(!file2use)
 		file2use = default_icon_file
 
-	//Find a valid layer from variables+arguments
+	//Find_char a valid layer from variables+arguments
 	var/layer2use
 	if(alternate_worn_layer)
 		layer2use = alternate_worn_layer

@@ -43,12 +43,12 @@
 	var/list/temp_list
 	if(!id_with_upload.len)
 		temp_list = list()
-		temp_list = splittext(id_with_upload_string, ";")
+		temp_list = splittext_char(id_with_upload_string, ";")
 		for(var/N in temp_list)
 			id_with_upload += text2num(N)
 	if(!id_with_download.len)
 		temp_list = list()
-		temp_list = splittext(id_with_download_string, ";")
+		temp_list = splittext_char(id_with_download_string, ";")
 		for(var/N in temp_list)
 			id_with_download += text2num(N)
 
@@ -247,7 +247,7 @@
 	if(..())
 		return
 	user.set_machine(src)
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 
 	switch(screen)
 		if(0) //Main Menu

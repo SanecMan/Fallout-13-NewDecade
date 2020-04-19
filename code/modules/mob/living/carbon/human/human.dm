@@ -154,15 +154,16 @@
 	if(istype(wear_suit, /obj/item/clothing/suit/armor/f13/power_armor))
 		var/obj/item/clothing/suit/armor/f13/power_armor/PA = wear_suit
 		if(statpanel("Status"))
+			stat("Силовая броня:")
 			if(PA.enabled)
-				stat("PA Status: On.")
+				stat("Статус: Активирована.")
 			else
-				stat("PA Status: Off.")
+				stat("Статус: Деактивирована.")
 
 			if(PA.power_cell)
-				stat("PA Cell: [round(PA.power_cell.percent())]%")
+				stat("Питание: Заряд [round(PA.power_cell.percent())]%")
 			else
-				stat("PA Cell: ..Missing..")
+				stat("Питание: ..Отсутствует..")
 
 
 /mob/living/carbon/human/show_inv(mob/user)

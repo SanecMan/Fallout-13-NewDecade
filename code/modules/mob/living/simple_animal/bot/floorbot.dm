@@ -197,7 +197,7 @@
 			process_type = HULL_BREACH //Ensures the floorbot does not try to "fix" space areas or shuttle docking zones.
 			target = scan(/turf/open/space)
 
-		if(!target && placetiles) //Finds a floor without a tile and gives it one.
+		if(!target && placetiles) //Find_chars a floor without a tile and gives it one.
 			process_type = PLACE_TILE //The target must be the floor and not a tile. The floor must not already have a floortile.
 			target = scan(/turf/open/floor)
 
@@ -267,7 +267,7 @@
 
 /mob/living/simple_animal/bot/floorbot/proc/is_hull_breach(turf/t) //Ignore space tiles not considered part of a structure, also ignores shuttle docking areas.
 	var/area/t_area = get_area(t)
-	if(t_area && (t_area.name == "Space" || findtext(t_area.name, "huttle")))
+	if(t_area && (t_area.name == "Space" || findtext_char(t_area.name, "huttle")))
 		return 0
 	else
 		return 1

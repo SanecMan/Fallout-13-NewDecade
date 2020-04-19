@@ -183,7 +183,8 @@ var/global/list/RPD_recipes=list(
 /obj/item/weapon/pipe_dispenser/proc/show_menu(mob/user)
 	if(!user || !src)
 		return 0
-	var/dat = {"<h2>Type</h2>
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += {"<h2>Type</h2>
 <b>Utilities:</b>
 <ul>"}
 	if(p_class != EATING_MODE)

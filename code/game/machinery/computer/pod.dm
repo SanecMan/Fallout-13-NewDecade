@@ -43,7 +43,7 @@
 	if(..())
 		return
 
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	user.set_machine(src)
 	if(connected)
 		var/d2

@@ -25,7 +25,7 @@
 /mob/living/silicon/pai/verb/paiInterface()
 	set category = "pAI Commands"
 	set name = "Software Interface"
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	var/left_part = ""
 	var/right_part = softwareMenu()
 	src.set_machine(src)
@@ -72,7 +72,7 @@
 
 												// Declaring a doctype is necessary to enable BYOND's crappy browser's more advanced CSS functionality
 	dat = {"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
-			<html>
+			<html><meta charset=UTF-8>
 			<head>
 				<style type=\"text/css\">
 					body { background-image:url('html/paigrid.png'); }
@@ -274,7 +274,7 @@
 // MENUS
 
 /mob/living/silicon/pai/proc/softwareMenu()			// Populate the right menu
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 
 	dat += "<A href='byond://?src=\ref[src];software=refresh'>Refresh</A><br>"
 	// Built-in
@@ -328,7 +328,7 @@
 
 
 /mob/living/silicon/pai/proc/downloadSoftware()
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 
 	dat += "<h2>Centcom pAI Module Subversion Network</h2><br>"
 	dat += "<pre>Remaining Available Memory: [src.ram]</pre><br>"
@@ -347,7 +347,7 @@
 
 
 /mob/living/silicon/pai/proc/directives()
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 
 	dat += "[(src.master) ? "Your master: [src.master] ([src.master_dna])" : "You are bound to no one."]"
 	dat += "<br><br>"
@@ -390,7 +390,7 @@
 
 //Remote Signaller
 /mob/living/silicon/pai/proc/softwareSignal()
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	dat += "<h3>Remote Signaller</h3><br><br>"
 	dat += {"<B>Frequency/Code</B> for signaler:<BR>
 	Frequency:
@@ -473,7 +473,7 @@
 
 // Security HUD
 /mob/living/silicon/pai/proc/facialRecognition()
-	var/dat = {"<h3>Facial Recognition Suite</h3><br>
+	var/dat = {"<meta charset="UTF-8"><h3>Facial Recognition Suite</h3><br>
 				When enabled, this package will scan all viewable faces and compare them against the known criminal database, providing real-time graphical data about any detected persons of interest.<br><br>
 				The package is currently [ (src.secHUD) ? "<font color=#55FF55>en" : "<font color=#FF5555>dis" ]abled.</font><br>
 				<a href='byond://?src=\ref[src];software=securityhud;sub=0;toggle=1'>Toggle Package</a><br>
@@ -482,7 +482,7 @@
 
 // Medical HUD
 /mob/living/silicon/pai/proc/medicalAnalysis()
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	if(src.subscreen == 0)
 		dat += {"<h3>Medical Analysis Suite</h3><br>
 				 <h4>Visual Status Overlay</h4><br>
@@ -525,7 +525,8 @@
 
 // Atmospheric Scanner
 /mob/living/silicon/pai/proc/softwareAtmo()
-	var/dat = "<h3>Atmospheric Sensor</h4>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<h3>Atmospheric Sensor</h4>"
 
 	var/turf/T = get_turf(src.loc)
 	if (isnull(T))
@@ -551,7 +552,8 @@
 
 // Camera Jack - Clearly not finished
 /mob/living/silicon/pai/proc/softwareCamera()
-	var/dat = "<h3>Camera Jack</h3>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<h3>Camera Jack</h3>"
 	dat += "Cable status : "
 
 	if(!src.cable)
@@ -570,7 +572,8 @@
 
 // Door Jack
 /mob/living/silicon/pai/proc/softwareDoor()
-	var/dat = "<h3>Airlock Jack</h3>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<h3>Airlock Jack</h3>"
 	dat += "Cable status : "
 	if(!src.cable)
 		dat += "<font color=#FF5555>Retracted</font> <br>"
@@ -623,8 +626,8 @@
 
 // Digital Messenger
 /mob/living/silicon/pai/proc/pdamessage()
-
-	var/dat = "<h3>Digital Messenger</h3>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<h3>Digital Messenger</h3>"
 	dat += {"<b>Signal/Receiver Status:</b> <A href='byond://?src=\ref[src];software=pdamessage;toggler=1'>
 	[(pda.toff) ? "<font color='red'>\[Off\]</font>" : "<font color='green'>\[On\]</font>"]</a><br>
 	<b>Ringer Status:</b> <A href='byond://?src=\ref[src];software=pdamessage;ringer=1'>

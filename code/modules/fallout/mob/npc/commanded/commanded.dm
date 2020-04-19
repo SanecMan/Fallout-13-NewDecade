@@ -24,7 +24,7 @@
 	if(ismob(speaker))
 		if(is_master(speaker))
 			command_buffer.Add(speaker)
-			command_buffer.Add(lowertext_uni(html_decode(raw_message)))
+			command_buffer.Add(html_decode(raw_message))
 	return ..()
 
 /mob/living/simple_animal/hostile/commanded/proc/is_master(var/mob/speaker)
@@ -72,7 +72,7 @@
 		var/text = command_buffer[2]
 		var/filtered_name = lowertext(html_decode(name))
 		if(parse_phrase(text,filtered_name) || parse_phrase(text,"anybody")) //in case somebody wants to command 8 bears at once.
-			var/substring = copytext(text,length(filtered_name)+1) //get rid of the name.
+			var/substring = copytext_char(text,length(filtered_name)+1) //get rid of the name.
 			listen(speaker,substring)
 		command_buffer.Remove(command_buffer[1],command_buffer[2])
 	. = ..()
@@ -87,7 +87,7 @@
 			if(COMMANDED_STOP)
 				commanded_stop()
 
-/mob/living/simple_animal/hostile/commanded/FindTarget(var/list/possible_targets, var/HasTargetsList = 0)
+/mob/living/simple_animal/hostile/commanded/Find_charTarget(var/list/possible_targets, var/HasTargetsList = 0)
 	if(!search_enemy)
 		return
 	. = ..()
@@ -211,7 +211,7 @@
 		if(parse_phrase(text, "[M]"))
 			found = 1
 		else
-			var/list/parsed_name = splittext(sanitize_simple(lowertext_uni(html_decode("[M]")),list("-"=" ", "."=" ", "," = " ", "'" = " ")), " ") //this big MESS is basically 'turn this into words, no punctuation, lowercase so we can check first name/last name/etc'
+			var/list/parsed_name = splittext_char(sanitize_simple(html_decode("[M]"),list("-"=" ", "."=" ", "," = " ", "'" = " ")), " ") //this big MESS is basically 'turn this into words, no punctuation, lowercase so we can check first name/last name/etc'
 			for(var/a in parsed_name)
 				if(a == "the" || length(a) < 2) //get rid of shit words.
 					continue
@@ -244,7 +244,7 @@
 
 /mob/living/simple_animal/hostile/commanded/proc/enemy_command(var/mob/speaker,var/text)
 	for(var/F in human_factions)
-		if(parse_phrase(text, lowertext_uni(F)))
+		if(parse_phrase(text, F))
 			faction_enemy += F
 			faction -= F
 			accepted()
@@ -258,7 +258,7 @@
 	return 0
 /mob/living/simple_animal/hostile/commanded/proc/friend_command(var/mob/speaker,var/text)
 	for(var/F in human_factions)
-		if(parse_phrase(text, lowertext_uni(F)))
+		if(parse_phrase(text, F))
 			faction_enemy -= F
 			faction += F
 			accepted()

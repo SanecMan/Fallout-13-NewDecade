@@ -325,8 +325,8 @@ var/list/TYPES_SHORTCUTS = list(
 	for(var/type in types)
 		var/typename = "[type]"
 		for (var/tn in TYPES_SHORTCUTS)
-			if (copytext(typename,1, length("[tn]/")+1)=="[tn]/" /*findtextEx(typename,"[tn]/",1,2)*/ )
-				typename = TYPES_SHORTCUTS[tn]+copytext(typename,length("[tn]/"))
+			if (copytext_char(typename,1, length("[tn]/")+1)=="[tn]/" /*findtextEx_char(typename,"[tn]/",1,2)*/ )
+				typename = TYPES_SHORTCUTS[tn]+copytext_char(typename,length("[tn]/"))
 				break
 		.[typename] = type
 
@@ -348,7 +348,7 @@ var/list/TYPES_SHORTCUTS = list(
 	var/list/matches = new
 	for(var/key in L)
 		var/value = L[key]
-		if(findtext("[key]", filter) || findtext("[value]", filter))
+		if(findtext_char("[key]", filter) || findtext_char("[value]", filter))
 			matches[key] = value
 	return matches
 
@@ -679,7 +679,8 @@ var/list/TYPES_SHORTCUTS = list(
 	set name = "Display del() Log"
 	set desc = "Displays a list of things that have failed to GC this round"
 
-	var/dat = "<B>List of things that failed to GC this round</B><BR><BR>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<B>List of things that failed to GC this round</B><BR><BR>"
 
 	for(var/path in SSgarbage.didntgc)
 		dat += "[path] - [SSgarbage.didntgc[path]] times<BR>"

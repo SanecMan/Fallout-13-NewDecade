@@ -267,7 +267,8 @@
 	if(stat & (BROKEN|NOPOWER))
 		return
 	user.set_machine(src)
-	var/dat = "<B>Magnetic Control Console</B><BR><BR>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<B>Magnetic Control Console</B><BR><BR>"
 	if(!autolink)
 		dat += {"
 		Frequency: <a href='?src=\ref[src];operation=setfreq'>[frequency]</a><br>
@@ -339,7 +340,7 @@
 				if(speed <= 0)
 					speed = 1
 			if("setpath")
-				var/newpath = copytext(sanitize(input(usr, "Please define a new path!",,path) as text|null),1,MAX_MESSAGE_LEN)
+				var/newpath = copytext_char(sanitize(input(usr, "Please define a new path!",,path) as text|null),1,MAX_MESSAGE_LEN)
 				if(newpath && newpath != "")
 					moving = 0 // stop moving
 					path = newpath
@@ -408,9 +409,9 @@
 
 	for(var/i=1, i<=maximum_character, i++) // iterates through all characters in path
 
-		var/nextchar = copytext(path, i, i+1) // find next character
+		var/nextchar = copytext_char(path, i, i+1) // find next character
 
 		if(!(nextchar in list(";", "&", "*", " "))) // if char is a separator, ignore
-			rpath += copytext(path, i, i+1) // else, add to list
+			rpath += copytext_char(path, i, i+1) // else, add to list
 
 		// there doesn't HAVE to be separators but it makes paths syntatically visible

@@ -50,13 +50,13 @@
 
 	codes = new()
 
-	var/list/entries = splittext(codes_txt, ";")	// entries are separated by semicolons
+	var/list/entries = splittext_char(codes_txt, ";")	// entries are separated by semicolons
 
 	for(var/e in entries)
-		var/index = findtext(e, "=")		// format is "key=value"
+		var/index = findtext_char(e, "=")		// format is "key=value"
 		if(index)
-			var/key = copytext(e, 1, index)
-			var/val = copytext(e, index+1)
+			var/key = copytext_char(e, 1, index)
+			var/val = copytext_char(e, index+1)
 			codes[key] = val
 		else
 			codes[e] = "1"
@@ -162,7 +162,7 @@ Transponder Codes:<UL>"}
 		usr.set_machine(src)
 
 		if(href_list["locedit"])
-			var/newloc = copytext(sanitize(input("Enter New Location", "Navigation Beacon", location) as text|null),1,MAX_MESSAGE_LEN)
+			var/newloc = copytext_char(sanitize(input("Enter New Location", "Navigation Beacon", location) as text|null),1,MAX_MESSAGE_LEN)
 			if(newloc)
 				location = newloc
 				updateDialog()

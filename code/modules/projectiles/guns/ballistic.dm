@@ -32,7 +32,7 @@
 
 
 /obj/item/weapon/gun/ballistic/process_chamber(empty_chamber = 1)
-	var/obj/item/ammo_casing/AC = chambered //Find chambered round
+	var/obj/item/ammo_casing/AC = chambered //Find_char chambered round
 	if(istype(AC)) //there's a chambered round
 		if(casing_ejector)
 			AC.forceMove(get_turf(src)) //Eject casing onto ground.
@@ -113,7 +113,7 @@
 /*
 //This isn't used anymore.
 /obj/item/weapon/gun/ballistic/attack_self(mob/living/user)
-	var/obj/item/ammo_casing/AC = chambered //Find chambered round
+	var/obj/item/ammo_casing/AC = chambered //Find_char chambered round
 	if(magazine)
 		magazine.forceMove(get_turf(src.loc))
 		user.put_in_hands(magazine)
@@ -133,7 +133,7 @@
 	return
 */
 /obj/item/weapon/gun/ballistic/attack_self(mob/living/user)
-	var/obj/item/ammo_casing/AC = chambered //Find chambered round
+	var/obj/item/ammo_casing/AC = chambered //Find_char chambered round
 	if(magazine)
 		unload_ammo(user)
 	else if(chambered)

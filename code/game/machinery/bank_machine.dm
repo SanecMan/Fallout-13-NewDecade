@@ -49,7 +49,8 @@
 	if(..())
 		return
 	src.add_fingerprint(usr)
-	var/dat = "[world.name] secure vault. Authorized personnel only.<br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "[world.name] secure vault. Authorized personnel only.<br>"
 	dat += "Current Balance: [SSshuttle.points] credits.<br>"
 	if(!siphoning)
 		dat += "<A href='?src=\ref[src];siphon=1'>Siphon Credits</A><br>"

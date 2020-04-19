@@ -18,7 +18,7 @@
 					matches += "ID ([client.computer_id])"
 					spawn() alert("You have logged in already with another key this round, please log out of this one NOW or risk being banned!")
 				if(matches)
-					if (findtext(M.lastKnownIP, "91.123.153"))
+					if (findtext_char(M.lastKnownIP, "91.123.153"))
 						return
 
 					if(M.client)

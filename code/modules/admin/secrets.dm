@@ -1,7 +1,8 @@
 /datum/admins/proc/Secrets()
 	if(!check_rights(0))	return
 
-	var/dat = "<B>The first rule of adminbuse is: you don't talk about the adminbuse.</B><HR>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<B>The first rule of adminbuse is: you don't talk about the adminbuse.</B><HR>"
 
 	dat +={"
 			<B>General Secrets</B><BR>
@@ -92,7 +93,8 @@
 	var/ok = 0
 	switch(item)
 		if("admin_log")
-			var/dat = "<B>Admin Log<HR></B>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Admin Log<HR></B>"
 			for(var/l in admin_log)
 				dat += "<li>[l]</li>"
 			if(!admin_log.len)
@@ -100,7 +102,8 @@
 			usr << browse(dat, "window=admin_log")
 
 		if("list_job_debug")
-			var/dat = "<B>Job Debug info.</B><HR>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Job Debug info.</B><HR>"
 			if(SSjob)
 				for(var/line in SSjob.job_debug)
 					dat += "[line]<BR>"
@@ -112,7 +115,8 @@
 				usr << browse(dat, "window=jobdebug;size=600x500")
 
 		if("show_admins")
-			var/dat = "<B>Current admins:</B><HR>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Current admins:</B><HR>"
 			if(admin_datums)
 				for(var/ckey in admin_datums)
 					var/datum/admins/D = admin_datums[ckey]
@@ -120,7 +124,8 @@
 				usr << browse(dat, "window=showadmins;size=600x500")
 
 		if("show_current_watchlist")
-			var/dat = "<B>Watchlist: </B><HR>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Watchlist: </B><HR>"
 			if(current_watchlist)
 				for(var/ckey in current_watchlist)
 					dat += "[ckey] - [current_watchlist[ckey]]"
@@ -166,7 +171,8 @@
 		if("list_bombers")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Bombing List<HR>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Bombing List<HR>"
 			for(var/l in bombers)
 				dat += text("[l]<BR>")
 			usr << browse(dat, "window=bombers")
@@ -174,7 +180,8 @@
 		if("list_signalers")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing last [length(lastsignalers)] signalers.</B><HR>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Showing last [length(lastsignalers)] signalers.</B><HR>"
 			for(var/sig in lastsignalers)
 				dat += "[sig]<BR>"
 			usr << browse(dat, "window=lastsignalers;size=800x500")
@@ -182,7 +189,8 @@
 		if("list_lawchanges")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing last [length(lawchanges)] law changes.</B><HR>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Showing last [length(lawchanges)] law changes.</B><HR>"
 			for(var/sig in lawchanges)
 				dat += "[sig]<BR>"
 			usr << browse(dat, "window=lawchanges;size=800x500")
@@ -229,7 +237,8 @@
 		if("manifest")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing Crew Manifest.</B><HR>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Showing Crew Manifest.</B><HR>"
 			dat += "<table cellspacing=5><tr><th>Name</th><th>Position</th></tr>"
 			for(var/datum/data/record/t in data_core.general)
 				dat += "<tr><td>[t.fields["name"]]</td><td>[t.fields["rank"]]</td></tr>"
@@ -238,7 +247,8 @@
 		if("DNA")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing DNA from blood.</B><HR>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Showing DNA from blood.</B><HR>"
 			dat += "<table cellspacing=5><tr><th>Name</th><th>DNA</th><th>Blood Type</th></tr>"
 			for(var/mob/living/carbon/human/H in mob_list)
 				if(H.ckey)
@@ -248,7 +258,8 @@
 		if("fingerprints")
 			if(!check_rights(R_ADMIN))
 				return
-			var/dat = "<B>Showing Fingerprints.</B><HR>"
+			var/dat = {"<meta charset="UTF-8">"}
+			dat += "<B>Showing Fingerprints.</B><HR>"
 			dat += "<table cellspacing=5><tr><th>Name</th><th>Fingerprints</th></tr>"
 			for(var/mob/living/carbon/human/H in mob_list)
 				if(H.ckey)
@@ -327,7 +338,7 @@
 			if(!ticker || !ticker.mode)
 				alert("The game hasn't started yet!")
 				return
-			var/objective = copytext(sanitize(input("Enter an objective")),1,MAX_MESSAGE_LEN)
+			var/objective = copytext_char(sanitize(input("Enter an objective")),1,MAX_MESSAGE_LEN)
 			if(!objective)
 				return
 			feedback_inc("admin_secrets_fun_used",1)

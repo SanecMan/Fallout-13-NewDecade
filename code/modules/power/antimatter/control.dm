@@ -295,7 +295,7 @@
 			return
 	user.set_machine(src)
 
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	dat += "AntiMatter Control Panel<BR>"
 	dat += "<A href='?src=\ref[src];close=1'>Close</A><BR>"
 	dat += "<A href='?src=\ref[src];refresh=1'>Refresh</A><BR>"

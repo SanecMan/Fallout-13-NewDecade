@@ -84,22 +84,22 @@
 
 		for(var/line in lines)
 //			to_chat(world, line)
-			for(var/beat in splittext(lowertext(line), ","))
+			for(var/beat in splittext_char(lowertext(line), ","))
 //				to_chat(world, "beat: [beat]")
-				var/list/notes = splittext(beat, "/")
-				for(var/note in splittext(notes[1], "-"))
+				var/list/notes = splittext_char(beat, "/")
+				for(var/note in splittext_char(notes[1], "-"))
 //					to_chat(world, "note: [note]")
 					if(!playing || shouldStopPlaying(user))//If the instrument is playing, or special case
 						playing = 0
 						return
-					if(lentext(note) == 0)
+					if(length(note) == 0)
 						continue
-//					to_chat(world, "Parse: [copytext(note,1,2)]")
+//					to_chat(world, "Parse: [copytext_char(note,1,2)]")
 					var/cur_note = text2ascii(note) - 96
 					if(cur_note < 1 || cur_note > 7)
 						continue
-					for(var/i=2 to lentext(note))
-						var/ni = copytext(note,i,i+1)
+					for(var/i=2 to length(note))
+						var/ni = copytext_char(note,i,i+1)
 						if(!text2num(ni))
 							if(ni == "#" || ni == "b" || ni == "n")
 								cur_acc[cur_note] = ni
@@ -118,7 +118,7 @@
 	updateDialog(user)
 
 /datum/song/proc/interact(mob/user)
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 
 	if(lines.len > 0)
 		dat += "<H3>Playback</H3>"
@@ -190,21 +190,21 @@
 	else if(href_list["import"])
 		var/t = ""
 		do
-			t = html_encode_ru(input(usr, "Please paste the entire song, formatted:", text("[]", name), t)  as message)
+			t = html_encode(input(usr, "Please paste the entire song, formatted:", text("[]", name), t)  as message)
 			if(!in_range(instrumentObj, usr))
 				return
 
-			if(lentext(t) >= 3072)
+			if(length(t) >= 3072)
 				var/cont = input(usr, "Your message is too long! Would you like to continue editing it?", "", "yes") in list("yes", "no")
 				if(cont == "no")
 					break
-		while(lentext(t) > 3072)
+		while(length(t) > 3072)
 
 		//split into lines
 		spawn()
-			lines = splittext(t, "\n")
-			if(copytext(lines[1],1,6) == "BPM: ")
-				tempo = sanitize_tempo(600 / text2num(copytext(lines[1],6)))
+			lines = splittext_char(t, "\n")
+			if(copytext_char(lines[1],1,6) == "BPM: ")
+				tempo = sanitize_tempo(600 / text2num(copytext_char(lines[1],6)))
 				lines.Cut(1,2)
 			else
 				tempo = sanitize_tempo(5) // default 120 BPM
@@ -213,7 +213,7 @@
 				lines.Cut(51)
 			var/linenum = 1
 			for(var/l in lines)
-				if(lentext(l) > 50)
+				if(length(l) > 50)
 					to_chat(usr, "Line [linenum] too long!")
 					lines.Remove(l)
 				else
@@ -244,13 +244,13 @@
 			playsong(usr)
 
 	else if(href_list["newline"])
-		var/newline = html_encode_ru(input("Enter your line: ", instrumentObj.name) as text|null)
+		var/newline = html_encode(input("Enter your line: ", instrumentObj.name) as text|null)
 		if(!newline || !in_range(instrumentObj, usr))
 			return
 		if(lines.len > 50)
 			return
-		if(lentext(newline) > 50)
-			newline = copytext(newline, 1, 50)
+		if(length(newline) > 50)
+			newline = copytext_char(newline, 1, 50)
 		lines.Add(newline)
 
 	else if(href_list["deleteline"])
@@ -261,11 +261,11 @@
 
 	else if(href_list["modifyline"])
 		var/num = round(text2num(href_list["modifyline"]),1)
-		var/content = html_encode_ru(input("Enter your line: ", instrumentObj.name, lines[num]) as text|null)
+		var/content = html_encode(input("Enter your line: ", instrumentObj.name, lines[num]) as text|null)
 		if(!content || !in_range(instrumentObj, usr))
 			return
-		if(lentext(content) > 50)
-			content = copytext(content, 1, 50)
+		if(length(content) > 50)
+			content = copytext_char(content, 1, 50)
 		if(num > lines.len || num < 1)
 			return
 		lines[num] = content

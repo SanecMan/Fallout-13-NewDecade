@@ -21,7 +21,7 @@ var/datum/subsystem/persistence/SSpersistence
 	var/placed_satchels = 0
 
 	if(!isnull(old_secret_satchels))
-		expanded_old_satchels = splittext(old_secret_satchels,"#")
+		expanded_old_satchels = splittext_char(old_secret_satchels,"#")
 		if(PlaceSecretSatchel(expanded_old_satchels))
 			placed_satchels++
 	else
@@ -51,7 +51,7 @@ var/datum/subsystem/persistence/SSpersistence
 	old_secret_satchels = jointext(expanded_old_satchels,"#")
 	to_chat(secret_satchels[MAP_NAME], old_secret_satchels)
 
-	var/list/chosen_satchel = splittext(satchel_string,"|")
+	var/list/chosen_satchel = splittext_char(satchel_string,"|")
 	if(!chosen_satchel || isemptylist(chosen_satchel) || chosen_satchel.len != 3) //Malformed
 		return 0
 

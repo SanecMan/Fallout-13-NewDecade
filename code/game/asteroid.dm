@@ -148,7 +148,7 @@ var/global/max_secret_rooms = 6
 	if(!turfs.len)
 		return 0
 
-	while(!valid)//Finds some spots to place these rooms at, where they won't be spotted immediately.
+	while(!valid)//Find_chars some spots to place these rooms at, where they won't be spotted immediately.
 		valid = 1
 		sanity++
 		if(sanity > 100)

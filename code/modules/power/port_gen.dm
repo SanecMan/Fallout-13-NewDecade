@@ -277,8 +277,8 @@ display round(lastgen) and plasmatank amount
 			return
 
 	user.set_machine(src)
-
-	var/dat = text("<b>[name]</b><br>")
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += text("<b>[name]</b><br>")
 	if (active)
 		dat += text("Generator: <A href='?src=\ref[src];action=disable'>On</A><br>")
 	else

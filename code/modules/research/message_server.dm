@@ -27,7 +27,7 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 	if(href_list["photo"])
 		var/mob/M = usr
 		M << browse_rsc(photo, "pda_photo.png")
-		M << browse("<html><head><title>PDA Photo</title></head>" \
+		M << browse("<html><meta charset=UTF-8><head><title>PDA Photo</title></head>" \
 		+ "<body style='overflow:hidden;margin:0;text-align:center'>" \
 		+ "<img src='pda_photo.png' width='192' style='-ms-interpolation-mode:nearest-neighbor' />" \
 		+ "</body></html>", "window=book;size=192x192")
@@ -178,7 +178,7 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 
 /datum/feedback_variable/proc/add_details(text)
 	if (istext(text))
-		text = replacetext(text, " ", "_")
+		text = replacetext_char(text, " ", "_")
 		if (!details)
 			details = text
 		else

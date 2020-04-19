@@ -71,13 +71,14 @@
 		return
 
 	user.set_machine(src)
-	var/dat = "<center><table>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<center><table>"
 	var/i
 	for(i=contents.len, i>=1, i--)
 		var/obj/item/P = contents[i]
 		dat += "<tr><td><a href='?src=\ref[src];retrieve=\ref[P]'>[P.name]</a></td></tr>"
 	dat += "</table></center>"
-	user << browse("<html><head><title>[name]</title></head><body>[dat]</body></html>", "window=filingcabinet;size=350x300")
+	user << browse("<html><meta charset=UTF-8><head><title>[name]</title></head><body>[dat]</body></html>", "window=filingcabinet;size=350x300")
 
 /obj/structure/filingcabinet/attack_tk(mob/user)
 	if(anchored)

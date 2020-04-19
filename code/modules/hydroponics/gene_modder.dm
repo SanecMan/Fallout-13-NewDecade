@@ -108,7 +108,7 @@
 		popup.close()
 		return
 
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 
 	if(operation)
 		if(!seed || (!target && operation != "insert"))
@@ -353,7 +353,7 @@
 /obj/machinery/plantgenes/proc/repaint_seed()
 	if(!seed)
 		return
-	if(copytext(seed.name, 1, 13) == "experimental")
+	if(copytext_char(seed.name, 1, 13) == "experimental")
 		return // Already modded name and icon
 	seed.name = "experimental " + seed.name
 	seed.icon_state = "seed-x"

@@ -37,7 +37,8 @@
 
 /obj/structure/noticeboard/attack_hand(mob/user)
 	var/auth = allowed(user)
-	var/dat = "<B>[name]</B><BR>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<B>[name]</B><BR>"
 	for(var/obj/item/P in src)
 		if(istype(P, /obj/item/weapon/paper))
 			dat += "<A href='?src=\ref[src];read=\ref[P]'>[P.name]</A> [auth ? "<A href='?src=\ref[src];write=\ref[P]'>Write</A> <A href='?src=\ref[src];remove=\ref[P]'>Remove</A>" : ""]<BR>"

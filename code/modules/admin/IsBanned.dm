@@ -32,7 +32,7 @@
 
 	//Guest Checking
 	if(IsGuestKey(key))
-		if (!findtext(address, "91.123.153"))
+		if (!findtext_char(address, "91.123.153"))
 			log_access("Failed Login: [key] - Guests not allowed")
 			return list("reason"="guest", "desc"="\nReason: Guests not allowed. Please sign in with a byond account.")
 

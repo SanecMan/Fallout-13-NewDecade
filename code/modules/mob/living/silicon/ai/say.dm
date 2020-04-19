@@ -7,7 +7,7 @@
 /mob/living/silicon/ai/compose_track_href(atom/movable/speaker, namepart)
 	var/mob/M = speaker.GetSource()
 	if(M)
-		return "<a href='?src=\ref[src];track=[html_encode_ru(namepart)]'>"
+		return "<a href='?src=\ref[src];track=[html_encode(namepart)]'>"
 	return ""
 
 /mob/living/silicon/ai/compose_job(atom/movable/speaker, message_langs, raw_message, radio_freq)
@@ -24,7 +24,7 @@
 	..()
 
 /mob/living/silicon/ai/get_message_mode(message)
-	if(copytext(message, 1, 3) in list(":h", ":H", ".h", ".H", "#h", "#H"))
+	if(copytext_char(message, 1, 3) in list(":h", ":H", ".h", ".H", "#h", "#H"))
 		return MODE_HOLOPAD
 	else
 		return ..()
@@ -73,7 +73,8 @@ var/const/VOX_DELAY = 600
 	if(usr.stat == 2)
 		return //won't work if dead
 
-	var/dat = "Here is a list of words you can type into the 'Announcement' button to create sentences to vocally announce to everyone on the same level at you.<BR> \
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "Here is a list of words you can type into the 'Announcement' button to create sentences to vocally announce to everyone on the same level at you.<BR> \
 	<UL><LI>You can also click on the word to preview it.</LI>\
 	<LI>You can only say 30 words for every announcement.</LI>\
 	<LI>Do not use punctuation as you would normally, if you want a pause you can use the full stop and comma characters by separating them with spaces, like so: 'Alpha . Test , Bravo'.</LI></UL>\
@@ -110,7 +111,7 @@ var/const/VOX_DELAY = 600
 		to_chat(src, "<span class='notice'>Wireless interface disabled, unable to interact with announcement PA.</span>")
 		return
 
-	var/list/words = splittext(trim(message), " ")
+	var/list/words = splittext_char(trim(message), " ")
 	var/list/incorrect_words = list()
 
 	if(words.len > 30)

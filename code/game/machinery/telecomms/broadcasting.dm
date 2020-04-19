@@ -60,7 +60,7 @@
 						var/data, var/compression, var/list/level, var/freq, var/list/spans,
 						var/verb_say, var/verb_ask, var/verb_exclaim, var/verb_yell, var/key)
 
-	message = copytext(message, 1, MAX_BROADCAST_LEN)
+	message = copytext_char(message, 1, MAX_BROADCAST_LEN)
 
 	if(!message)
 		return

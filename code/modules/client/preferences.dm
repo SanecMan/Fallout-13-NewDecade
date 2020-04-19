@@ -152,7 +152,8 @@ var/list/preferences_datums = list()
 	//	CHECK_TICK
 	//	user << browse_rsc(preview_icon, "previewicon.png")
 	//	CHECK_TICK
-	var/dat = "<center>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<center>"
 
 	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Настройки Персонажа</a> "
 	dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Настройки Игры</a> "
@@ -810,7 +811,7 @@ var/list/preferences_datums = list()
 				if("metadata")
 					var/new_metadata = input(user, "Enter any information you'd like others to see, such as Roleplay-preferences:", "Game Preference" , metadata)  as message|null
 					if(new_metadata)
-						metadata = sanitize(copytext(new_metadata,1,MAX_MESSAGE_LEN))
+						metadata = sanitize(copytext_char(new_metadata,1,MAX_MESSAGE_LEN))
 
 				if("hair")
 					var/new_hair = input(user, "Choose your character's hair colour:", "Character Preference") as null|color

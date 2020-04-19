@@ -22,7 +22,7 @@
 
 /obj/item/areaeditor/attack_self(mob/user)
 	add_fingerprint(user)
-	var/text = "<BODY><HTML><head><title>[src]</title></head> \
+	var/text = "<BODY><meta charset=UTF-8><HTML><head><title>[src]</title></head> \
 				<h2>[station_name()] [src.name]</h2> \
 				<small>[fluffnotice]</small><hr>"
 	switch(get_area_type())
@@ -68,7 +68,7 @@
 	if(!legend)
 		var/area/A = get_area()
 		if(get_area_type() == AREA_STATION)
-			. += "<p>According to \the [src], you are now in <b>\"[html_encode_ru(A.name)]\"</b>.</p>"
+			. += "<p>According to \the [src], you are now in <b>\"[html_encode(A.name)]\"</b>.</p>"
 			. += "<p>You may <a href='?src=\ref[src];edit_area=1'>make an amendment</a> to the drawing.</p>"
 		. += "<p><a href='?src=\ref[src];view_legend=1'>View wire colour legend</a></p>"
 		if(!viewing)
@@ -182,7 +182,7 @@
 			var/message = "<p><b>[wire_name_directory[device]]:</b>"
 			for(var/Col in wire_color_directory[device])
 				var/wire_name = wire_color_directory[device][Col]
-				if(!findtext(wire_name, WIRE_DUD_PREFIX))	//don't show duds
+				if(!findtext_char(wire_name, WIRE_DUD_PREFIX))	//don't show duds
 					message += "<p><span style='color: [Col]'>[Col]</span>: [wire_name]</p>"
 			message += "</p>"
 			return message
@@ -257,19 +257,19 @@
 
 
 /obj/item/areaeditor/proc/set_area_machinery_title(area/A,title,oldtitle)
-	if(!oldtitle) // or replacetext goes to infinite loop
+	if(!oldtitle) // or replacetext_char goes to infinite loop
 		return
 	for(var/area/RA in A.related)
 		for(var/obj/machinery/airalarm/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = replacetext_char(M.name,oldtitle,title)
 		for(var/obj/machinery/power/apc/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = replacetext_char(M.name,oldtitle,title)
 		for(var/obj/machinery/atmospherics/components/unary/vent_scrubber/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = replacetext_char(M.name,oldtitle,title)
 		for(var/obj/machinery/atmospherics/components/unary/vent_pump/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = replacetext_char(M.name,oldtitle,title)
 		for(var/obj/machinery/door/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = replacetext_char(M.name,oldtitle,title)
 	//TODO: much much more. Unnamed airlocks, cameras, etc.
 
 

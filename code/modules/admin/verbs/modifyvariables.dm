@@ -12,7 +12,7 @@ var/list/VVpixelmovement = list("step_x", "step_y", "bound_height", "bound_width
 		. = VV_NUM
 
 	else if (istext(var_value))
-		if (findtext(var_value, "\n"))
+		if (findtext_char(var_value, "\n"))
 			. = VV_MESSAGE
 		else
 			. = VV_TEXT
@@ -241,7 +241,7 @@ var/list/VVpixelmovement = list("step_x", "step_y", "bound_height", "bound_width
 			.["type"] = /list
 
 /client/proc/vv_parse_text(O, new_var)
-	if(O && findtext(new_var,"\["))
+	if(O && findtext_char(new_var,"\["))
 		var/process_vars = alert(usr,"\[] detected in string, process as variables?","Process Variables?","Yes","No")
 		if(process_vars == "Yes")
 			. = string2listofvars(new_var, O)
@@ -287,12 +287,12 @@ var/list/VVpixelmovement = list("step_x", "step_y", "bound_height", "bound_width
 		//	fancy type with the base type removed from the begaining,
 		//	the type with the base type removed from the begaining
 		var/fancytype = types[D.type]
-		if (findtext(fancytype, types[type]))
-			fancytype = copytext(fancytype, lentext(types[type])+1)
-		var/shorttype = copytext("[D.type]", lentext("[type]")+1)
-		if (lentext(shorttype) > lentext(fancytype))
+		if (findtext_char(fancytype, types[type]))
+			fancytype = copytext_char(fancytype, length(types[type])+1)
+		var/shorttype = copytext_char("[D.type]", length("[type]")+1)
+		if (length(shorttype) > length(fancytype))
 			shorttype = fancytype
-		if (!lentext(shorttype))
+		if (!length(shorttype))
 			shorttype = "/"
 
 		.["[D]([shorttype])\ref[D]#[i]"] = D
@@ -308,7 +308,7 @@ var/list/VVpixelmovement = list("step_x", "step_y", "bound_height", "bound_width
 	if(class == VV_TEXT || class == VV_MESSAGE)
 		var/list/varsvars = vv_parse_text(O, var_value)
 		for(var/V in varsvars)
-			var_value = replacetext(var_value,"\[[V]]","[O.vars[V]]")
+			var_value = replacetext_char(var_value,"\[[V]]","[O.vars[V]]")
 
 	return var_value
 
@@ -323,7 +323,7 @@ var/list/VVpixelmovement = list("step_x", "step_y", "bound_height", "bound_width
 	if(class == VV_TEXT || class == VV_MESSAGE)
 		var/list/varsvars = vv_parse_text(O, var_value)
 		for(var/V in varsvars)
-			var_value = replacetext(var_value,"\[[V]]","[O.vars[V]]")
+			var_value = replacetext_char(var_value,"\[[V]]","[O.vars[V]]")
 
 	if (O)
 		L = L.Copy()
@@ -477,7 +477,7 @@ var/list/VVpixelmovement = list("step_x", "step_y", "bound_height", "bound_width
 				if (O.vv_edit_var(objectvar, L))
 					to_chat(src, "Your edit was rejected by the object.")
 					return
-			world.log << "### ListVarEdit by [src]: [O.type] [objectvar]: REMOVED=[html_encode_ru("[original_var]")]"
+			world.log << "### ListVarEdit by [src]: [O.type] [objectvar]: REMOVED=[html_encode("[original_var]")]"
 			log_admin("[key_name(src)] modified [original_name]'s [objectvar]: REMOVED=[original_var]")
 			message_admins("[key_name_admin(src)] modified [original_name]'s [objectvar]: REMOVED=[original_var]")
 			return
@@ -485,7 +485,7 @@ var/list/VVpixelmovement = list("step_x", "step_y", "bound_height", "bound_width
 		if(VV_TEXT)
 			var/list/varsvars = vv_parse_text(O, new_var)
 			for(var/V in varsvars)
-				new_var = replacetext(new_var,"\[[V]]","[O.vars[V]]")
+				new_var = replacetext_char(new_var,"\[[V]]","[O.vars[V]]")
 
 
 	if(assoc)
@@ -599,12 +599,12 @@ var/list/VVpixelmovement = list("step_x", "step_y", "bound_height", "bound_width
 		if(VV_TEXT)
 			var/list/varsvars = vv_parse_text(O, var_new)
 			for(var/V in varsvars)
-				var_new = replacetext(var_new,"\[[V]]","[O.vars[V]]")
+				var_new = replacetext_char(var_new,"\[[V]]","[O.vars[V]]")
 
 
 	if (O.vv_edit_var(variable, var_new) == FALSE)
 		to_chat(src, "Your edit was rejected by the object.")
 		return
-	world.log << "### VarEdit by [src]: [O.type] [variable]=[html_encode_ru("[O.vars[variable]]")]"
+	world.log << "### VarEdit by [src]: [O.type] [variable]=[html_encode("[O.vars[variable]]")]"
 	log_admin("[key_name(src)] modified [original_name]'s [variable] to [O.vars[variable]]")
 	message_admins("[key_name_admin(src)] modified [original_name]'s [variable] to [O.vars[variable]]")

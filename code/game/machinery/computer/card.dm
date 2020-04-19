@@ -144,7 +144,7 @@ var/time_last_changed_position = 0
 		dat += " || Confirm Identity: "
 		var/S
 		if(scan)
-			S = html_encode_ru(scan.name)
+			S = html_encode(scan.name)
 		else
 			S = "--------"
 		dat += "<a href='?src=\ref[src];choice=scan'>[S]</a>"
@@ -202,21 +202,21 @@ var/time_last_changed_position = 0
 		var/target_owner
 		var/target_rank
 		if(modify)
-			target_name = html_encode_ru(modify.name)
+			target_name = html_encode(modify.name)
 		else
 			target_name = "--------"
 		if(modify && modify.registered_name)
-			target_owner = html_encode_ru(modify.registered_name)
+			target_owner = html_encode(modify.registered_name)
 		else
 			target_owner = "--------"
 		if(modify && modify.assignment)
-			target_rank = html_encode_ru(modify.assignment)
+			target_rank = html_encode(modify.assignment)
 		else
 			target_rank = "Unassigned"
 
 		var/scan_name
 		if(scan)
-			scan_name = html_encode_ru(scan.name)
+			scan_name = html_encode(scan.name)
 		else
 			scan_name = "--------"
 
@@ -237,7 +237,7 @@ var/time_last_changed_position = 0
 		var/list/alljobs = list("Unassigned")
 		alljobs += (istype(src,/obj/machinery/computer/card/centcom)? get_all_centcom_jobs() : get_all_jobs()) + "Custom"
 		for(var/job in alljobs)
-			jobs_all += "<a href='?src=\ref[src];choice=assign;assign_target=[job]'>[replacetext(job, " ", "&nbsp")]</a> " //make sure there isn't a line break in the middle of a job
+			jobs_all += "<a href='?src=\ref[src];choice=assign;assign_target=[job]'>[replacetext_char(job, " ", "&nbsp")]</a> " //make sure there isn't a line break in the middle of a job
 
 
 		var/body
@@ -284,9 +284,9 @@ var/time_last_changed_position = 0
 				accesses += "<h5>Central Command:</h5>"
 				for(var/A in get_all_centcom_access())
 					if(A in modify.access)
-						accesses += "<a href='?src=\ref[src];choice=access;access_target=[A];allowed=0'><font color=\"red\">[replacetext(get_centcom_access_desc(A), " ", "&nbsp")]</font></a> "
+						accesses += "<a href='?src=\ref[src];choice=access;access_target=[A];allowed=0'><font color=\"red\">[replacetext_char(get_centcom_access_desc(A), " ", "&nbsp")]</font></a> "
 					else
-						accesses += "<a href='?src=\ref[src];choice=access;access_target=[A];allowed=1'>[replacetext(get_centcom_access_desc(A), " ", "&nbsp")]</a> "
+						accesses += "<a href='?src=\ref[src];choice=access;access_target=[A];allowed=1'>[replacetext_char(get_centcom_access_desc(A), " ", "&nbsp")]</a> "
 			else
 				accesses += "<div align='center'><b>Access</b></div>"
 				accesses += "<table style='width:100%'>"
@@ -302,9 +302,9 @@ var/time_last_changed_position = 0
 					accesses += "<td style='width:14%' valign='top'>"
 					for(var/A in get_region_accesses(i))
 						if(A in modify.access)
-							accesses += "<a href='?src=\ref[src];choice=access;access_target=[A];allowed=0'><font color=\"red\">[replacetext(get_access_desc(A), " ", "&nbsp")]</font></a> "
+							accesses += "<a href='?src=\ref[src];choice=access;access_target=[A];allowed=0'><font color=\"red\">[replacetext_char(get_access_desc(A), " ", "&nbsp")]</font></a> "
 						else
-							accesses += "<a href='?src=\ref[src];choice=access;access_target=[A];allowed=1'>[replacetext(get_access_desc(A), " ", "&nbsp")]</a> "
+							accesses += "<a href='?src=\ref[src];choice=access;access_target=[A];allowed=1'>[replacetext_char(get_access_desc(A), " ", "&nbsp")]</a> "
 						accesses += "<br>"
 					accesses += "</td>"
 				accesses += "</tr></table>"

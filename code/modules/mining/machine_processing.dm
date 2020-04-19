@@ -20,8 +20,8 @@
 			qdel(src)
 
 /obj/machinery/mineral/processing_unit_console/attack_hand(mob/user)
-
-	var/dat = "<b>Smelter control console</b><br><br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<b>Smelter control console</b><br><br>"
 	//iron
 	if(machine.ore_iron || machine.ore_glass || machine.ore_plasma || machine.ore_uranium || machine.ore_gold || machine.ore_cooper || machine.ore_silver || machine.ore_diamond || machine.ore_clown || machine.ore_adamantine)
 		if(machine.ore_iron)

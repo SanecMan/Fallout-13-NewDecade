@@ -192,7 +192,7 @@
 
 			/////////////////
 			//href protection
-			being_built = files.FindDesignByID(href_list["make"]) //check if it's a valid design
+			being_built = files.Find_charDesignByID(href_list["make"]) //check if it's a valid design
 			if(!being_built)
 				return
 
@@ -246,7 +246,7 @@
 
 			for(var/v in files.known_designs)
 				var/datum/design/D = files.known_designs[v]
-				if(findtext(D.name,href_list["to_search"]))
+				if(findtext_char(D.name,href_list["to_search"]))
 					matching_designs.Add(D)
 			updateUsrDialog()
 	else
@@ -267,7 +267,8 @@
 	prod_coeff = min(1,max(0,T)) // Coeff going 1 -> 0,8 -> 0,6 -> 0,4
 
 /obj/machinery/autolathe/proc/main_win(mob/user)
-	var/dat = "<div class='statusDisplay'><h3>Autolathe Menu:</h3><br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<div class='statusDisplay'><h3>Autolathe Menu:</h3><br>"
 	dat += materials_printout()
 
 	dat += "<form name='search' action='?src=\ref[src]'>\
@@ -293,7 +294,8 @@
 	return dat
 
 /obj/machinery/autolathe/proc/category_win(mob/user,selected_category)
-	var/dat = "<A href='?src=\ref[src];menu=[AUTOLATHE_MAIN_MENU]'>Return to main menu</A>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<A href='?src=\ref[src];menu=[AUTOLATHE_MAIN_MENU]'>Return to main menu</A>"
 	dat += "<div class='statusDisplay'><h3>Browsing [selected_category]:</h3><br>"
 	dat += materials_printout()
 
@@ -327,7 +329,8 @@
 	return dat
 
 /obj/machinery/autolathe/proc/search_win(mob/user)
-	var/dat = "<A href='?src=\ref[src];menu=[AUTOLATHE_MAIN_MENU]'>Return to main menu</A>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<A href='?src=\ref[src];menu=[AUTOLATHE_MAIN_MENU]'>Return to main menu</A>"
 	dat += "<div class='statusDisplay'><h3>Search results:</h3><br>"
 	dat += materials_printout()
 
@@ -353,7 +356,8 @@
 	return dat
 
 /obj/machinery/autolathe/proc/materials_printout()
-	var/dat = "<b>Total amount:</b> [materials.total_amount] / [materials.max_amount] cm<sup>3</sup><br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<b>Total amount:</b> [materials.total_amount] / [materials.max_amount] cm<sup>3</sup><br>"
 	for(var/mat_id in materials.materials)
 		var/datum/material/M = materials.materials[mat_id]
 		dat += "<b>[M.name] amount:</b> [M.amount] cm<sup>3</sup><br>"

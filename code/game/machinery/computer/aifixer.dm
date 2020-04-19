@@ -24,7 +24,7 @@
 
 /obj/machinery/computer/aifixer/interact(mob/user)
 
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 
 	if (src.occupier)
 		var/laws

@@ -17,7 +17,7 @@
 /obj/item/door_key/attack_self(mob/user as mob)
 	if(!id)
 		return
-	src.name = input("Choose key label.",,copytext(src.name,0, length(src.name) - 3)) + " key"
+	src.name = input("Choose key label.",,copytext_char(src.name,0, length(src.name) - 3)) + " key"
 	return
 
 /obj/item/door_key/attackby(obj/item/W, mob/user, params)

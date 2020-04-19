@@ -97,7 +97,7 @@
 
 	switch(class)
 		if(VV_RESTORE_DEFAULT)
-			to_chat(src, "Finding items...")
+			to_chat(src, "Find_charing items...")
 			var/list/items = get_all_of_type(O.type, method)
 			to_chat(src, "Changing [items.len] items...")
 			for(var/thing in items)
@@ -121,9 +121,9 @@
 				else
 					unique = FALSE
 					for(var/V in varsvars)
-						new_value = replacetext(new_value,"\[[V]]","[O.vars[V]]")
+						new_value = replacetext_char(new_value,"\[[V]]","[O.vars[V]]")
 
-			to_chat(src, "Finding items...")
+			to_chat(src, "Find_charing items...")
 			var/list/items = get_all_of_type(O.type, method)
 			to_chat(src, "Changing [items.len] items...")
 			for(var/thing in items)
@@ -133,7 +133,7 @@
 				if(unique)
 					new_value = pre_processing
 					for(var/V in varsvars)
-						new_value = replacetext(new_value,"\[[V]]","[D.vars[V]]")
+						new_value = replacetext_char(new_value,"\[[V]]","[D.vars[V]]")
 
 				if (D.vv_edit_var(variable, new_value) != FALSE)
 					accepted++
@@ -151,7 +151,7 @@
 				many = FALSE
 
 			var/type = value["type"]
-			to_chat(src, "Finding items...")
+			to_chat(src, "Find_charing items...")
 			var/list/items = get_all_of_type(O.type, method)
 			to_chat(src, "Changing [items.len] items...")
 			for(var/thing in items)
@@ -169,7 +169,7 @@
 				CHECK_TICK
 
 		else
-			to_chat(src, "Finding items...")
+			to_chat(src, "Find_charing items...")
 			var/list/items = get_all_of_type(O.type, method)
 			to_chat(src, "Changing [items.len] items...")
 			for(var/thing in items)
@@ -193,7 +193,7 @@
 	if (rejected)
 		to_chat(src, "[rejected] out of [count] objects rejected your edit")
 
-	world.log << "### MassVarEdit by [src]: [O.type] (A/R [accepted]/[rejected]) [variable]=[html_encode_ru("[O.vars[variable]]")]([list2params(value)])"
+	world.log << "### MassVarEdit by [src]: [O.type] (A/R [accepted]/[rejected]) [variable]=[html_encode("[O.vars[variable]]")]([list2params(value)])"
 	log_admin("[key_name(src)] mass modified [original_name]'s [variable] to [O.vars[variable]] ([accepted] objects modified)")
 	message_admins("[key_name_admin(src)] mass modified [original_name]'s [variable] to [O.vars[variable]] ([accepted] objects modified)")
 

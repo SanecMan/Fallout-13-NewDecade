@@ -84,7 +84,7 @@
 	var/list/civ = list()
 	var/list/bot = list()
 	var/list/misc = list()
-	var/dat = {"
+	var/dat = {"<meta charset="UTF-8">
 	<head><style>
 		.manifest {border-collapse:collapse;}
 		.manifest td, th {border:1px solid [monochrome?"black":"#DEF; background-color:white; color:black"]; padding:.25em}
@@ -177,8 +177,8 @@
 			even = !even
 
 	dat += "</table>"
-	dat = replacetext(dat, "\n", "")
-	dat = replacetext(dat, "\t", "")
+	dat = replacetext_char(dat, "\n", "")
+	dat = replacetext_char(dat, "\t", "")
 	return dat
 
 

@@ -23,14 +23,14 @@ proc
     ////////////////////
     // Replacing text //
     ////////////////////
-	dd_replacetext(text, search_string, replacement_string)
+	dd_replacetext_char(text, search_string, replacement_string)
 		// A nice way to do this is to split the text into an array based on the search_string,
 		// then put it back together into text using replacement_string as the new separator.
 		var/list/textList = dd_text2list(text, search_string)
 		return dd_list2text(textList, replacement_string)
 
 
-	dd_replaceText(text, search_string, replacement_string)
+	dd_replacetext_char(text, search_string, replacement_string)
 		var/list/textList = dd_text2List(text, search_string)
 		return dd_list2text(textList, replacement_string)
 
@@ -40,13 +40,13 @@ proc
 	/////////////////////
 	dd_hasprefix(text, prefix)
 		var/start = 1
-		var/end = lentext(prefix) + 1
-		return findtext(text, prefix, start, end)
+		var/end = length(prefix) + 1
+		return findtext_char(text, prefix, start, end)
 
 	dd_hasPrefix(text, prefix)
 		var/start = 1
-		var/end = lentext(prefix) + 1
-		return findtextEx(text, prefix, start, end)
+		var/end = length(prefix) + 1
+		return findtextEx_char(text, prefix, start, end)
 
 
     /////////////////////
@@ -54,26 +54,26 @@ proc
 	/////////////////////
 	dd_hassuffix(text, suffix)
 		var/start = length(text) - length(suffix)
-		if (start) return findtext(text, suffix, start)
+		if (start) return findtext_char(text, suffix, start)
 
 	dd_hasSuffix(text, suffix)
 		var/start = length(text) - length(suffix)
-		if (start) return findtextEx(text, suffix, start)
+		if (start) return findtextEx_char(text, suffix, start)
 
 	/////////////////////////////
 	// Turning text into lists //
 	/////////////////////////////
 	dd_text2list(text, separator)
-		var/textlength      = lentext(text)
-		var/separatorlength = lentext(separator)
+		var/textlength      = length(text)
+		var/separatorlength = length(separator)
 		var/list/textList   = new /list()
 		var/searchPosition  = 1
 		var/findPosition    = 1
 		var/buggyText
 		while (1)															// Loop forever.
-			findPosition = findtext(text, separator, searchPosition, 0)
-			buggyText = copytext(text, searchPosition, findPosition)		// Everything from searchPosition to findPosition goes into a list element.
-			textList += "[buggyText]"										// Working around weird problem where "text" != "text" after this copytext().
+			findPosition = findtext_char(text, separator, searchPosition, 0)
+			buggyText = copytext_char(text, searchPosition, findPosition)		// Everything from searchPosition to findPosition goes into a list element.
+			textList += "[buggyText]"										// Working around weird problem where "text" != "text" after this copytext_char().
 
 			searchPosition = findPosition + separatorlength					// Skip over separator.
 			if (findPosition == 0)											// Didn't find anything at end of string so stop here.
@@ -84,16 +84,16 @@ proc
 					return textList
 
 	dd_text2List(text, separator)
-		var/textlength      = lentext(text)
-		var/separatorlength = lentext(separator)
+		var/textlength      = length(text)
+		var/separatorlength = length(separator)
 		var/list/textList   = new /list()
 		var/searchPosition  = 1
 		var/findPosition    = 1
 		var/buggyText
 		while (1)															// Loop forever.
-			findPosition = findtextEx(text, separator, searchPosition, 0)
-			buggyText = copytext(text, searchPosition, findPosition)		// Everything from searchPosition to findPosition goes into a list element.
-			textList += "[buggyText]"										// Working around weird problem where "text" != "text" after this copytext().
+			findPosition = findtextEx_char(text, separator, searchPosition, 0)
+			buggyText = copytext_char(text, searchPosition, findPosition)		// Everything from searchPosition to findPosition goes into a list element.
+			textList += "[buggyText]"										// Working around weird problem where "text" != "text" after this copytext_char().
 
 			searchPosition = findPosition + separatorlength					// Skip over separator.
 			if (findPosition == 0)											// Didn't find anything at end of string so stop here.
@@ -121,7 +121,7 @@ proc
 		if (size == length)
 			return new_message
 		if (size > length)
-			return copytext(new_message, 1, length + 1)
+			return copytext_char(new_message, 1, length + 1)
 
 		// Need to pad text to center it.
 		var/delta = length - size
@@ -147,4 +147,4 @@ proc
 		if (size <= length)
 			return message
 		else
-			return copytext(message, 1, length + 1)
+			return copytext_char(message, 1, length + 1)

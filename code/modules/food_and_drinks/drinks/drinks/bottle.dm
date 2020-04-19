@@ -57,7 +57,7 @@
 
 	force = 15 //Smashing bottles over someoen's head hurts.
 
-	var/obj/item/bodypart/affecting = user.zone_selected //Find what the player is aiming at
+	var/obj/item/bodypart/affecting = user.zone_selected //Find_char what the player is aiming at
 
 	var/armor_block = 0 //Get the target's armor values for normal attack damage.
 	var/armor_duration = 0 //The more force the bottle has, the longer the duration.
@@ -260,7 +260,7 @@
 		shortname = pick_n_take(removals)
 
 	var/list/final_fullname = list()
-	for(var/word in splittext(fullname, " "))
+	for(var/word in splittext_char(fullname, " "))
 		if(prob(chance))
 			word = pick_n_take(removals)
 		final_fullname += word

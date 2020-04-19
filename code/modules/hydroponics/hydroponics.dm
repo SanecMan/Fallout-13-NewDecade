@@ -87,7 +87,7 @@
 	else
 		return ..()
 
-/obj/machinery/hydroponics/proc/FindConnected()
+/obj/machinery/hydroponics/proc/Find_charConnected()
 	var/list/connected = list()
 	var/list/processing_atoms = list(src)
 
@@ -759,7 +759,7 @@
 				playsound(loc, 'sound/effects/slosh.ogg', 25, 1)
 
 		if(irrigate && reagent_source.amount_per_transfer_from_this > 30 && reagent_source.reagents.total_volume >= 30 && using_irrigation)
-			trays = FindConnected()
+			trays = Find_charConnected()
 			if (trays.len > 1)
 				visi_msg += ", setting off the irrigation system"
 

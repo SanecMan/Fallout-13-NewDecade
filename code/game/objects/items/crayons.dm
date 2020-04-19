@@ -318,7 +318,7 @@
 			return
 
 	if(length(text_buffer))
-		drawing = copytext(text_buffer,1,2)
+		drawing = copytext_char(text_buffer,1,2)
 
 
 	var/list/turf/affected_turfs = list()
@@ -353,7 +353,7 @@
 		to_chat(user, "<span class='notice'>You spray a [temp] on \the [target.name]</span>")
 
 	if(length(text_buffer))
-		text_buffer = copytext(text_buffer,2)
+		text_buffer = copytext_char(text_buffer,2)
 
 	if(post_noise)
 		audible_message("<span class='notice'>You hear spraying.</span>")

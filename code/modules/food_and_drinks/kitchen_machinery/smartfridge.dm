@@ -173,7 +173,8 @@
 	if(stat)
 		return 0
 
-	var/dat = "<TT><b>Select an item:</b><br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<TT><b>Select an item:</b><br>"
 
 	if (contents.len == 0)
 		dat += "<font color = 'red'>No product loaded!</font>"
@@ -264,11 +265,12 @@
 	..()
 
 /obj/machinery/smartfridge/drying_rack/interact(mob/user)
-	var/dat = ..()
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += ..()
 	if(dat)
 		dat += "<br>"
 		dat += "<a href='byond://?src=\ref[src];dry=1'>Toggle Drying</A> "
-		user << browse("<HEAD><TITLE>[src] supplies</TITLE></HEAD><TT>[dat]</TT>", "window=smartfridge")
+		user << browse("<meta charset=UTF-8><HEAD><TITLE>[src] supplies</TITLE></HEAD><TT>[dat]</TT>", "window=smartfridge")
 	onclose(user, "smartfridge")
 
 /obj/machinery/smartfridge/drying_rack/Topic(href, list/href_list)

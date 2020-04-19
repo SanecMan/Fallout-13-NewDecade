@@ -49,7 +49,7 @@
 	else if(isnull(open_uis[src_object_key][ui_key]) || !istype(open_uis[src_object_key][ui_key], /list))
 		return null // No UIs open for this object.
 
-	for(var/datum/tgui/ui in open_uis[src_object_key][ui_key]) // Find UIs for this object.
+	for(var/datum/tgui/ui in open_uis[src_object_key][ui_key]) // Find_char UIs for this object.
 		if(ui.user == user) // Make sure we have the right user
 			return ui
 

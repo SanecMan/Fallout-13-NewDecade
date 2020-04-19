@@ -41,28 +41,28 @@ var/list/department_radio_keys = list(
 
 	  //kinda localization -- rastaf0
 	  //same keys as above, but on russian keyboard layout. This file uses cp1251 as encoding.
-	  ":ê" = "right hand",	"#ê" = "right hand",	".ê" = "right hand",
-	  ":ä" = "left hand",	"#ä" = "left hand",		".ä" = "left hand",
-	  ":ø" = "intercom",	"#ø" = "intercom",		".ø" = "intercom",
-	  ":ð" = "department",	"#ð" = "department",	".ð" = "department",
-	  ":ñ" = "Command",		"#ñ" = "Command",		".ñ" = "Command",
-	  ":ò" = "Science",		"#ò" = "Science",		".ò" = "Science",
-	  ":ü" = "Medical",		"#ü" = "Medical",		".ü" = "Medical",
-	  ":ó" = "Engineering",	"#ó" = "Engineering",	".ó" = "Engineering",
-	  ":û" = "Security",	"#û" = "Security",		".û" = "Security",
-	  ":ö" = "whisper",		"#ö" = "whisper",		".ö" = "whisper",
-	  ":è" = "binary",		"#è" = "binary",		".è" = "binary",
-	  ":ô" = "alientalk",	"#ô" = "alientalk",		".ô" = "alientalk",
-	  ":å" = "Syndicate",	"#å" = "Syndicate",		".å" = "Syndicate",
-	  ":é" = "Supply",		"#é" = "Supply",		".é" = "Supply",
-	  ":ï" = "changeling",	"#ï" = "changeling",	".ï" = "changeling"
+	  ":ГЄ" = "right hand",	"#ГЄ" = "right hand",	".ГЄ" = "right hand",
+	  ":Г¤" = "left hand",	"#Г¤" = "left hand",		".Г¤" = "left hand",
+	  ":Гё" = "intercom",	"#Гё" = "intercom",		".Гё" = "intercom",
+	  ":Г°" = "department",	"#Г°" = "department",	".Г°" = "department",
+	  ":Г±" = "Command",		"#Г±" = "Command",		".Г±" = "Command",
+	  ":ГІ" = "Science",		"#ГІ" = "Science",		".ГІ" = "Science",
+	  ":Гј" = "Medical",		"#Гј" = "Medical",		".Гј" = "Medical",
+	  ":Гі" = "Engineering",	"#Гі" = "Engineering",	".Гі" = "Engineering",
+	  ":Г»" = "Security",	"#Г»" = "Security",		".Г»" = "Security",
+	  ":Г¶" = "whisper",		"#Г¶" = "whisper",		".Г¶" = "whisper",
+	  ":ГЁ" = "binary",		"#ГЁ" = "binary",		".ГЁ" = "binary",
+	  ":Гґ" = "alientalk",	"#Гґ" = "alientalk",		".Гґ" = "alientalk",
+	  ":ГҐ" = "Syndicate",	"#ГҐ" = "Syndicate",		".ГҐ" = "Syndicate",
+	  ":Г©" = "Supply",		"#Г©" = "Supply",		".Г©" = "Supply",
+	  ":ГЇ" = "changeling",	"#ГЇ" = "changeling",	".ГЇ" = "changeling"
 )
 
 var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 
 /mob/living/say(message, bubble_type,var/list/spans = list(), sanitize = TRUE)
 	if(sanitize)
-		message = trim(copytext(sanitize(capitalize_uni(message)), 1, MAX_MESSAGE_LEN))
+		message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
 	if(!message || message == "")
 		return
 
@@ -83,11 +83,11 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 		return
 
 	if(message_mode == MODE_HEADSET || message_mode == MODE_ROBOT)
-		message = copytext(message, 2)
+		message = copytext_char(message, 2)
 	else if(message_mode)
-		message = copytext(message, 3)
-	if(findtext(message, " ", 1, 2))
-		message = copytext(message, 2)
+		message = copytext_char(message, 3)
+	if(findtext_char(message, " ", 1, 2))
+		message = copytext_char(message, 2)
 
 	if(handle_inherent_channels(message, message_mode)) //Hiveminds, binary chat & holopad.
 		return
@@ -135,10 +135,10 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 	var/deaf_type
 	if(speaker != src)
 		if(!radio_freq) //These checks have to be seperate, else people talking on the radio will make "You can't hear yourself!" appear when hearing people over the radio while deaf.
-			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] ���-��, �� �� �� �������."
+			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] что-то, но вы не слышите."
 			deaf_type = 1
 	else
-		deaf_message = "<span class='notice'>�� �� ������� ������ ����!</span>"
+		deaf_message = "<span class='notice'>Вы не слышите самого себя!</span>"
 		deaf_type = 2 // Since you should be able to hear yourself without looking
 	if(!(message_langs & languages_understood) || force_compose) //force_compose is so AIs don't end up without their hrefs.
 		message = compose_message(speaker, message_langs, raw_message, radio_freq, spans)
@@ -195,15 +195,15 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 	return 1
 
 /mob/living/proc/check_emote(message)
-	if(copytext(message, 1, 2) == "*")
-		emote(copytext(message, 2))
+	if(copytext_char(message, 1, 2) == "*")
+		emote(copytext_char(message, 2))
 		return 1
 
 /mob/living/proc/get_message_mode(message)
-	if(copytext(message, 1, 2) == ";")
+	if(copytext_char(message, 1, 2) == ";")
 		return MODE_HEADSET
 	else if(length(message) > 2)
-		return department_radio_keys[copytext(message, 1, 3)]
+		return department_radio_keys[copytext_char(message, 1, 3)]
 
 /mob/living/proc/handle_inherent_channels(message, message_mode)
 	if(message_mode == MODE_CHANGELING)
@@ -313,7 +313,7 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 /mob/living/say_quote(input, list/spans)
 	var/tempinput = attach_spans(input, spans)
 	if (stuttering)
-		return "���������, \"[tempinput]\""
+		return "заикается, \"[tempinput]\""
 	if (getBrainLoss() >= 60)
-		return "������, \"[tempinput]\""
+		return "мямлит, \"[tempinput]\""
 	return ..()

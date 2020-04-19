@@ -298,7 +298,7 @@
 			if(POLLTYPE_IRV)
 				if (!href_list["IRVdata"])
 					to_chat(src, "<span class='danger'>No ordering data found. Please try again or contact an administrator.</span>")
-				var/list/votelist = splittext(href_list["IRVdata"], ",")
+				var/list/votelist = splittext_char(href_list["IRVdata"], ",")
 				if (!vote_on_irv_poll(pollid, votelist))
 					to_chat(src, "<span class='danger'>Vote failed, please try again or contact an administrator.</span>")
 					return
@@ -423,7 +423,8 @@
 	var/mins = (mills % 36000) / 600
 	var/hours = mills / 36000
 
-	var/dat = "<div class='notice'>Длительность раунда: [round(hours)]ч [round(mins)]м</div>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<div class='notice'>Длительность раунда: [round(hours)]ч [round(mins)]м</div>"
 
 	var/available_job_count = 0
 	for(var/datum/job/job in SSjob.occupations)
@@ -482,7 +483,7 @@
 	return new_character
 
 /mob/new_player/proc/ViewManifest()
-	var/dat = "<html><body>"
+	var/dat = "<html><meta charset=UTF-8><body>"
 	dat += "<h4>Crew Manifest</h4>"
 	dat += data_core.get_manifest(OOC = 1)
 

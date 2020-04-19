@@ -12,7 +12,7 @@
 /obj/machinery/pipedispenser/attack_hand(mob/user)
 	if(..())
 		return 1
-	var/dat = {"
+	var/dat = {"<meta charset="UTF-8">
 <b>Regular pipes:</b><BR>
 <A href='?src=\ref[src];make=[PIPE_SIMPLE];dir=1'>Pipe</A><BR>
 <A href='?src=\ref[src];make=[PIPE_SIMPLE];dir=5'>Bent Pipe</A><BR>
@@ -143,7 +143,8 @@ Nah
 	if(..())
 		return 1
 
-	var/dat = {"<b>Disposal Pipes</b><br><br>
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += {"<b>Disposal Pipes</b><br><br>
 <A href='?src=\ref[src];dmake=[DISP_PIPE_STRAIGHT]'>Pipe</A><BR>
 <A href='?src=\ref[src];dmake=[DISP_PIPE_BENT]'>Bent Pipe</A><BR>
 <A href='?src=\ref[src];dmake=[DISP_JUNCTION]'>Junction</A><BR>
@@ -194,7 +195,8 @@ Nah
 	if(..())
 		return 1
 
-	var/dat = {"<B>Transit Tubes:</B><BR>
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += {"<B>Transit Tubes:</B><BR>
 <A href='?src=\ref[src];tube=[TRANSIT_TUBE_STRAIGHT]'>Straight Tube</A><BR>
 <A href='?src=\ref[src];tube=[TRANSIT_TUBE_STRAIGHT_CROSSING]'>Straight Tube with Crossing</A><BR>
 <A href='?src=\ref[src];tube=[TRANSIT_TUBE_CURVED]'>Curved Tube</A><BR>

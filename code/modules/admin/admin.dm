@@ -28,7 +28,7 @@ var/global/BSACooldown = 0
 		to_chat(usr, "Похоже что выбранное существо больше не существует.")
 		return
 
-	var/body = "<html><head><title>Options for [M.key]</title></head>"
+	var/body = "<html><meta charset=UTF-8><head><title>Options for [M.key]</title></head>"
 	body += "<body>Options panel for <b>[M]</b>"
 	if(M.client)
 		body += " played by <b>[M.client]</b> "
@@ -392,7 +392,7 @@ var/global/BSACooldown = 0
 	if(!check_rights(0))
 		return
 
-	var/dat = {"
+	var/dat = {"<meta charset="UTF-8">
 		<center><B>Cпавн панель</B></center><hr>\n
 
 		<BR>
@@ -722,7 +722,7 @@ var/global/BSACooldown = 0
 /datum/admins/proc/manage_free_slots()
 	if(!check_rights())
 		return
-	var/dat = "<html><head><title>Manage Free Slots</title></head><body>"
+	var/dat = "<html><meta charset=UTF-8><head><title>Manage Free Slots</title></head><body>"
 	var/count = 0
 
 	if(ticker && !ticker.mode)
@@ -732,9 +732,9 @@ var/global/BSACooldown = 0
 	if(SSjob)
 		for(var/datum/job/job in SSjob.occupations)
 			count++
-			var/J_title = html_encode_ru(job.title)
-			var/J_opPos = html_encode_ru(job.total_positions - (job.total_positions - job.current_positions))
-			var/J_totPos = html_encode_ru(job.total_positions)
+			var/J_title = html_encode(job.title)
+			var/J_opPos = html_encode(job.total_positions - (job.total_positions - job.current_positions))
+			var/J_totPos = html_encode(job.total_positions)
 			if(job.total_positions < 0)
 				dat += "[J_title]: [J_opPos]   (unlimited)"
 			else

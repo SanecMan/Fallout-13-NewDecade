@@ -11,7 +11,7 @@
 	icon_state ="bookParticleAccelerator"
 	author = "Engineering Encyclopedia"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
 	title = "Particle Accelerator User's Guide"
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -54,7 +54,7 @@
 	title = "Singularity Safety in Special Circumstances"
 //big pile of shit below.
 
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -100,7 +100,7 @@
 	icon_state ="bookHydroponicsPodPeople"
 	author = "Farmer John"
 	title = "The Human Harvest - From seed to market"
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -117,7 +117,7 @@
 				want to revive fallen comrades. Growing pod people is easy, but prone to disaster.
 				<p>
 				<ol>
-				<li>Find a dead person who is in need of cloning. </li>
+				<li>Find_char a dead person who is in need of cloning. </li>
 				<li>Take a blood sample with a syringe. </li>
 				<li>Inject a seed pack with the blood sample. </li>
 				<li>Plant the seeds. </li>
@@ -137,7 +137,7 @@
 	title = "Cloning techniques of the 26th century"
 //big pile of shit below.
 
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -215,7 +215,7 @@
 	title = "APLU \"Ripley\" Construction and Operation Manual"
 //big pile of shit below.
 
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -288,7 +288,7 @@
 	icon_state = "rdbook"
 	author = "Dr. H.P. Kritz"
 	title = "Mentoring your Experiments"
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 		<head>
 		<style>
 		h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -311,7 +311,7 @@
 		<h2>BASIC PROCESS</h2>
 		The usage of the E.X.P.E.R.I-MENTOR is quite simple:
 		<ol>
-			<li>Find an item with a technological background</li>
+			<li>Find_char an item with a technological background</li>
 			<li>Insert the item into the E.X.P.E.R.I-MENTOR</li>
 			<li>Cycle through each processing method of the device.</li>
 			<li>Stand back, even in case of a successful experiment, as the machine might produce undesired behaviour.</li>
@@ -420,7 +420,7 @@
 	icon_state = "rdbook"
 	author = "Dr. L. Ight"
 	title = "Research and Development 101"
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -470,7 +470,7 @@
 	icon_state = "borgbook"
 	author = "XISC"
 	title = "Cyborgs for Dummies"
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 				<head>
 				<style>
 				h1 {font-size: 21px; margin: 15px 0px 5px;}
@@ -569,7 +569,7 @@
 				  <ol>
 				    Option 1: Robotics console
 				    <li>Use the Robotics console in the RD's office</li>
-				    <li>Find the entry for your Cyborg</li>
+				    <li>Find_char the entry for your Cyborg</li>
 				    <li>Press the Lockdown button on the Robotics console</li>
 				  </ol>
 				  <ol>
@@ -663,7 +663,7 @@
 	icon_state = "cooked_book"
 	author = "Lord Frenrir Cageth"
 	title = "Chef Recipes"
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -745,7 +745,7 @@
 	icon_state = "barbook"
 	author = "Sir John Rose"
 	title = "Barman Recipes"
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -798,7 +798,7 @@
 	icon_state ="bookDetective"
 	author = "Nanotrasen"
 	title = "The Film Noir: Proper Procedures for Investigations"
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 			<head>
 			<style>
 			h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -839,7 +839,7 @@
 	icon_state ="bookNuclear"
 	author = "Syndicate"
 	title = "Fission Mailed: Nuclear Sabotage 101"
-	dat = {"<html>
+	dat = {"<html><meta charset="UTF-8">
 			Nuclear Explosives 101:<br>
 			Hello and thank you for choosing the Syndicate for your nuclear information needs.<br>
 			Today's crash course will deal with the operation of a Fusion Class Nanotrasen made Nuclear Device.<br>
@@ -885,7 +885,7 @@
 	if(config.wikiurl)
 		dat = {"
 
-			<html><head>
+			<html><meta charset="UTF-8"><head>
 			<style>
 				iframe {
 					display: none;

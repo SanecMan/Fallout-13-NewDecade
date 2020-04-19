@@ -12,7 +12,7 @@
 		return
 
 
-	message = trim(html_encode_ru(message))
+	message = trim(html_encode(message))
 	if(!can_speak(message))
 		return
 
@@ -40,7 +40,7 @@
 		var/health_diff = round(-HEALTH_THRESHOLD_DEAD + health)
 		// If we cut our message short, abruptly end it with a-..
 		var/message_len = length(message)
-		message = copytext(message, 1, health_diff) + "[message_len > health_diff ? "-.." : "..."]"
+		message = copytext_char(message, 1, health_diff) + "[message_len > health_diff ? "-.." : "..."]"
 		message = Ellipsis(message, 10, 1)
 
 	message = treat_message(message)

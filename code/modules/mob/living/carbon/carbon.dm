@@ -189,7 +189,7 @@
 
 /mob/living/carbon/show_inv(mob/user)
 	user.set_machine(src)
-	var/dat = {"
+	var/dat = {"<meta charset="UTF-8">"
 	<HR>
 	<B><FONT size=3>[name]</FONT></B>
 	<HR>

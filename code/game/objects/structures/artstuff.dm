@@ -68,7 +68,7 @@ var/global/list/globalBlankCanvases[AMT_OF_CANVASES]
 	whichGlobalBackup = 4
 
 
-//Find the right size blank canvas
+//Find_char the right size blank canvas
 /obj/item/weapon/canvas/proc/getGlobalBackup()
 	. = null
 	if(globalBlankCanvases[whichGlobalBackup])

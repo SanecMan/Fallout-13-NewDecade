@@ -139,7 +139,8 @@
 	if (stat)
 		return 0
 
-	var/dat = "<b>Stored seeds:</b><br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<b>Stored seeds:</b><br>"
 
 	if (contents.len == 0)
 		dat += "<font color='red'>No seeds</font>"
@@ -167,7 +168,7 @@
 	href_list["yi"] = text2num(href_list["yi"])
 	href_list["pot"] = text2num(href_list["pot"])
 
-	for (var/datum/seed_pile/N in piles)//Find the pile we need to reduce...
+	for (var/datum/seed_pile/N in piles)//Find_char the pile we need to reduce...
 		if (href_list["name"] == N.name && href_list["li"] == N.lifespan && href_list["en"] == N.endurance && href_list["ma"] == N.maturation && href_list["pr"] == N.production && href_list["yi"] == N.yield && href_list["pot"] == N.potency)
 			if(N.amount <= 0)
 				return

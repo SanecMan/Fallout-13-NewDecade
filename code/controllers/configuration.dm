@@ -277,16 +277,16 @@
 		t = trim(t)
 		if(length(t) == 0)
 			continue
-		else if(copytext(t, 1, 2) == "#")
+		else if(copytext_char(t, 1, 2) == "#")
 			continue
 
-		var/pos = findtext(t, " ")
+		var/pos = findtext_char(t, " ")
 		var/name = null
 		var/value = null
 
 		if(pos)
-			name = lowertext(copytext(t, 1, pos))
-			value = copytext(t, pos + 1)
+			name = lowertext(copytext_char(t, 1, pos))
+			value = copytext_char(t, pos + 1)
 		else
 			name = lowertext(t)
 
@@ -587,13 +587,13 @@
 				if("midround_antag_life_check")
 					config.midround_antag_life_check = text2num(value)
 				if("min_pop")
-					var/pop_pos = findtext(value, " ")
+					var/pop_pos = findtext_char(value, " ")
 					var/mode_name = null
 					var/mode_value = null
 
 					if(pop_pos)
-						mode_name = lowertext(copytext(value, 1, pop_pos))
-						mode_value = copytext(value, pop_pos + 1)
+						mode_name = lowertext(copytext_char(value, 1, pop_pos))
+						mode_value = copytext_char(value, pop_pos + 1)
 						if(mode_name in config.modes)
 							config.min_pop[mode_name] = text2num(mode_value)
 						else
@@ -601,13 +601,13 @@
 					else
 						diary << "Incorrect minimum population configuration definition: [mode_name]  [mode_value]."
 				if("max_pop")
-					var/pop_pos = findtext(value, " ")
+					var/pop_pos = findtext_char(value, " ")
 					var/mode_name = null
 					var/mode_value = null
 
 					if(pop_pos)
-						mode_name = lowertext(copytext(value, 1, pop_pos))
-						mode_value = copytext(value, pop_pos + 1)
+						mode_name = lowertext(copytext_char(value, 1, pop_pos))
+						mode_value = copytext_char(value, pop_pos + 1)
 						if(mode_name in config.modes)
 							config.max_pop[mode_name] = text2num(mode_value)
 						else
@@ -631,13 +631,13 @@
 				if("traitor_objectives_amount")
 					config.traitor_objectives_amount = text2num(value)
 				if("probability")
-					var/prob_pos = findtext(value, " ")
+					var/prob_pos = findtext_char(value, " ")
 					var/prob_name = null
 					var/prob_value = null
 
 					if(prob_pos)
-						prob_name = lowertext(copytext(value, 1, prob_pos))
-						prob_value = copytext(value, prob_pos + 1)
+						prob_name = lowertext(copytext_char(value, 1, prob_pos))
+						prob_value = copytext_char(value, prob_pos + 1)
 						if(prob_name in config.modes)
 							config.probabilities[prob_name] = text2num(prob_value)
 						else
@@ -688,7 +688,7 @@
 					lawids += law_id
 				if("law_weight")
 					// Value is in the form "LAWID,NUMBER"
-					var/list/L = splittext(value, ",")
+					var/list/L = splittext_char(value, ",")
 					if(L.len != 2)
 						diary << "Invalid LAW_WEIGHT: " + t
 						continue
@@ -759,16 +759,16 @@
 		t = trim(t)
 		if(length(t) == 0)
 			continue
-		else if(copytext(t, 1, 2) == "#")
+		else if(copytext_char(t, 1, 2) == "#")
 			continue
 
-		var/pos = findtext(t, " ")
+		var/pos = findtext_char(t, " ")
 		var/command = null
 		var/data = null
 
 		if(pos)
-			command = lowertext(copytext(t, 1, pos))
-			data = copytext(t, pos + 1)
+			command = lowertext(copytext_char(t, 1, pos))
+			data = copytext_char(t, pos + 1)
 		else
 			command = lowertext(t)
 
@@ -809,16 +809,16 @@
 		t = trim(t)
 		if(length(t) == 0)
 			continue
-		else if(copytext(t, 1, 2) == "#")
+		else if(copytext_char(t, 1, 2) == "#")
 			continue
 
-		var/pos = findtext(t, " ")
+		var/pos = findtext_char(t, " ")
 		var/name = null
 		var/value = null
 
 		if(pos)
-			name = lowertext(copytext(t, 1, pos))
-			value = copytext(t, pos + 1)
+			name = lowertext(copytext_char(t, 1, pos))
+			value = copytext_char(t, pos + 1)
 		else
 			name = lowertext(t)
 

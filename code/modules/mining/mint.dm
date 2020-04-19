@@ -36,7 +36,8 @@
 		materials.insert_stack(O, O.amount)
 
 /obj/machinery/mineral/mint/attack_hand(mob/user)
-	var/dat = "<b>Coin Press</b><br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<b>Coin Press</b><br>"
 
 	for(var/mat_id in materials.materials)
 		var/datum/material/M = materials.materials[mat_id]

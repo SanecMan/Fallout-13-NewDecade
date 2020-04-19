@@ -81,7 +81,7 @@ var/list/possible_uplinker_IDs = list("Alfa","Bravo","Charlie","Delta","Echo","F
 	src.add_fingerprint(user)
 	user.set_machine(src)
 
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	if(linkedboss)
 		dat += "[linkedboss] has [linkedboss.storedcrystals] telecrystals available for distribution. <BR><BR>"
 	else
@@ -162,7 +162,7 @@ var/list/possible_uplinker_IDs = list("Alfa","Bravo","Charlie","Delta","Echo","F
 	user.set_machine(src)
 
 
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	dat += "<a href='byond://?src=\ref[src];scan=1'>Scan for TC stations.</a><BR>"
 	dat += "This [src] has [storedcrystals] telecrystals available for distribution. <BR>"
 	dat += "<BR><BR>"

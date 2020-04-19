@@ -62,7 +62,8 @@
 		update_icon()
 
 /obj/structure/guncase/proc/ShowWindow(mob/user)
-	var/dat = {"<div class='block'>
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += {"<div class='block'>
 				<h3>Stored Guns</h3>
 				<table align='center'>"}
 	for(var/i = contents.len, i >= 1, i--)

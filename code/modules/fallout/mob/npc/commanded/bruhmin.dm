@@ -64,8 +64,8 @@
 /mob/living/simple_animal/hostile/commanded/bruhmin/show_inv(mob/user)
 	user.set_machine(src)
 	if(user.stat) return
-
-	var/dat = 	"<div align='center'><b>Inventory of [name]</b></div><p>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += 	"<div align='center'><b>Inventory of [name]</b></div><p>"
 	if(inventory_back)
 		dat +=	"<br><b>Back:</b> [inventory_back] (<a href='?src=\ref[src];remove_inv=back'>Remove</a>)"
 	else

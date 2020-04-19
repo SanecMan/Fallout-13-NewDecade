@@ -306,4 +306,4 @@ var/list/pointers = list()
 	for(var/d in data)
 		var/val = data[d]
 		if(istext(val))
-			data[d] = html_encode_ru(val)
+			data[d] = html_encode(val)

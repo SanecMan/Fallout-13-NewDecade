@@ -114,7 +114,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		hidden_uplink.interact(user)
 		return
 
-	var/dat = "<html><head><title>Personal Data Assistant</title></head><body bgcolor=\"#808000\"><style>a, a:link, a:visited, a:active, a:hover { color: #000000; }img {border-style:none;}</style>"
+	var/dat = "<html><meta charset=UTF-8><head><title>Personal Data Assistant</title></head><body bgcolor=\"#808000\"><style>a, a:link, a:visited, a:active, a:hover { color: #000000; }img {border-style:none;}</style>"
 
 	dat += "<a href='byond://?src=\ref[src];choice=Refresh'><img src=pda_refresh.png> Refresh</a>"
 
@@ -429,7 +429,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 							U << browse(null, "window=pda")
 							src.mode = 0
 						else
-							t = copytext(sanitize(t), 1, 20)
+							t = copytext_char(sanitize(t), 1, 20)
 							ttone = t
 				else
 					U << browse(null, "window=pda")
@@ -870,11 +870,11 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			to_chat(user, "<span class='warning'>Unable to scan! Paper is blank.</span>")
 			return
 		notehtml = PP.info
-		note = replacetext(notehtml, "<BR>", "\[br\]")
-		note = replacetext(note, "<li>", "\[*\]")
-		note = replacetext(note, "<ul>", "\[list\]")
-		note = replacetext(note, "</ul>", "\[/list\]")
-		note = html_encode_ru(note)
+		note = replacetext_char(notehtml, "<BR>", "\[br\]")
+		note = replacetext_char(note, "<li>", "\[*\]")
+		note = replacetext_char(note, "<ul>", "\[list\]")
+		note = replacetext_char(note, "</ul>", "\[/list\]")
+		note = html_encode(note)
 		notescanned = 1
 		to_chat(user, "<span class='notice'>Paper scanned. Saved to PDA's notekeeper.</span>")//concept of scanning paper copyright brainoblivion 2009
 
@@ -978,7 +978,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if(user.stat == 2)
 		return //won't work if dead
 	if(!isnull(aiPDA))
-		var/HTML = "<html><head><title>AI PDA Message Log</title></head><body>[aiPDA.tnote]</body></html>"
+		var/HTML = "<html><meta charset=UTF-8><head><title>AI PDA Message Log</title></head><body>[aiPDA.tnote]</body></html>"
 		user << browse(HTML, "window=log;size=400x444;border=1;can_resize=1;can_close=1;can_minimize=0")
 	else
 		to_chat(user, "You do not have a PDA. You should make an issue report about this.")

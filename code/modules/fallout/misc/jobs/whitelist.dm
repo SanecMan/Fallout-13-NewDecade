@@ -38,7 +38,7 @@ var/list/whitelist
 	while(query.NextRow())
 		var/list/row_data = query.GetRowData()
 		if(rank != null)
-			if(findtext(row_data["rank"], rank))
+			if(findtext_char(row_data["rank"], rank))
 				return 1
 			else
 				return 0

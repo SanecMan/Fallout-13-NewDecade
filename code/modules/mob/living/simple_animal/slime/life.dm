@@ -430,10 +430,10 @@
 	if (speech_buffer.len > 0)
 		var/who = speech_buffer[1] // Who said it?
 		var/phrase = speech_buffer[2] // What did they say?
-		if ((findtext(phrase, num2text(number)) || findtext(phrase, "slimes"))) // Talking to us
-			if (findtext(phrase, "hello") || findtext(phrase, "hi"))
+		if ((findtext_char(phrase, num2text(number)) || findtext_char(phrase, "slimes"))) // Talking to us
+			if (findtext_char(phrase, "hello") || findtext_char(phrase, "hi"))
 				to_say = pick("Hello...", "Hi...")
-			else if (findtext(phrase, "follow"))
+			else if (findtext_char(phrase, "follow"))
 				if (Leader)
 					if (Leader == who) // Already following him
 						to_say = pick("Yes...", "Lead...", "Follow...")
@@ -448,7 +448,7 @@
 						to_say = "I follow..."
 					else // Not friendly enough
 						to_say = pick("No...", "I no follow...")
-			else if (findtext(phrase, "stop"))
+			else if (findtext_char(phrase, "stop"))
 				if (buckled) // We are asked to stop feeding
 					if (Friends[who] >= SLIME_FRIENDSHIP_STOPEAT)
 						Feedstop()
@@ -476,7 +476,7 @@
 							to_say = "Yes... I stop..."
 						else
 							to_say = "No... keep follow..."
-			else if (findtext(phrase, "stay"))
+			else if (findtext_char(phrase, "stay"))
 				if (Leader)
 					if (Leader == who)
 						holding_still = Friends[who] * 10
@@ -492,14 +492,14 @@
 						to_say = "Yes... stay..."
 					else
 						to_say = "No... won't stay..."
-			else if (findtext(phrase, "attack"))
+			else if (findtext_char(phrase, "attack"))
 				if (rabid && prob(20))
 					Target = who
 					AIprocess() //Wake up the slime's Target AI, needed otherwise this doesn't work
 					to_say = "ATTACK!?!?"
 				else if (Friends[who] >= SLIME_FRIENDSHIP_ATTACK)
 					for (var/mob/living/L in view(7,src)-list(src,who))
-						if (findtext(phrase, lowertext(L.name)))
+						if (findtext_char(phrase, lowertext(L.name)))
 							if (isslime(L))
 								to_say = "NO... [L] slime friend"
 								--Friends[who] //Don't ask a slime to attack its friend

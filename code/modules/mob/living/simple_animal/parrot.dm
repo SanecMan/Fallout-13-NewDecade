@@ -182,7 +182,8 @@
  */
 /mob/living/simple_animal/parrot/show_inv(mob/user)
 	user.set_machine(src)
-	var/dat = 	"<div align='center'><b>Inventory of [name]</b></div><p>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += 	"<div align='center'><b>Inventory of [name]</b></div><p>"
 	if(ears)
 		dat +=	"<br><b>Headset:</b> [ears] (<a href='?src=\ref[src];remove_inv=ears'>Remove</a>)"
 	else
@@ -215,8 +216,8 @@
 						ears.forceMove(src.loc)
 						ears = null
 						for(var/possible_phrase in speak)
-							if(copytext(possible_phrase,1,3) in department_radio_keys)
-								possible_phrase = copytext(possible_phrase,3)
+							if(copytext_char(possible_phrase,1,3) in department_radio_keys)
+								possible_phrase = copytext_char(possible_phrase,3)
 					else
 						to_chat(usr, "<span class='warning'>There is nothing to remove from its [remove_from]!</span>")
 						return
@@ -424,8 +425,8 @@
 						if(prob(50))
 							useradio = 1
 
-						if(copytext(possible_phrase,1,3) in department_radio_keys)
-							possible_phrase = "[useradio?pick(available_channels):""][copytext(possible_phrase,3)]" //crop out the channel prefix
+						if(copytext_char(possible_phrase,1,3) in department_radio_keys)
+							possible_phrase = "[useradio?pick(available_channels):""][copytext_char(possible_phrase,3)]" //crop out the channel prefix
 						else
 							possible_phrase = "[useradio?pick(available_channels):""][possible_phrase]"
 
@@ -433,8 +434,8 @@
 
 				else //If we have no headset or channels to use, dont try to use any!
 					for(var/possible_phrase in speak)
-						if(copytext(possible_phrase,1,3) in department_radio_keys)
-							possible_phrase = "[copytext(possible_phrase,3,length(possible_phrase)+1)]" //crop out the channel prefix
+						if(copytext_char(possible_phrase,1,3) in department_radio_keys)
+							possible_phrase = "[copytext_char(possible_phrase,3,length(possible_phrase)+1)]" //crop out the channel prefix
 						newspeak.Add(possible_phrase)
 				speak = newspeak
 
@@ -480,7 +481,7 @@
 			parrot_state = PARROT_SWOOP | PARROT_RETURN
 			return
 
-		else //Have an item but no perch? Find one!
+		else //Have an item but no perch? Find_char one!
 			parrot_perch = search_for_perch()
 			if(parrot_perch)
 				parrot_state = PARROT_SWOOP | PARROT_RETURN

@@ -70,15 +70,15 @@
 	performance += rand(0, 150) / 100 * boost
 
 /datum/stock/proc/generateIndustry()
-	if (findtext(name, "Farms"))
+	if (findtext_char(name, "Farms"))
 		industry = new /datum/industry/agriculture
-	else if (findtext(name, "Software") || findtext(name, "Programming")  || findtext(name, "IT Group") || findtext(name, "Electronics") || findtext(name, "Electric") || findtext(name, "Nanotechnology"))
+	else if (findtext_char(name, "Software") || findtext_char(name, "Programming")  || findtext_char(name, "IT Group") || findtext_char(name, "Electronics") || findtext_char(name, "Electric") || findtext_char(name, "Nanotechnology"))
 		industry = new /datum/industry/it
-	else if (findtext(name, "Mobile") || findtext(name, "Communications"))
+	else if (findtext_char(name, "Mobile") || findtext_char(name, "Communications"))
 		industry = new /datum/industry/communications
-	else if (findtext(name, "Pharmaceuticals") || findtext(name, "Health"))
+	else if (findtext_char(name, "Pharmaceuticals") || findtext_char(name, "Health"))
 		industry = new /datum/industry/health
-	else if (findtext(name, "Wholesale") || findtext(name, "Stores"))
+	else if (findtext_char(name, "Wholesale") || findtext_char(name, "Stores"))
 		industry = new /datum/industry/consumer
 	else
 		var/ts = typesof(/datum/industry) - /datum/industry

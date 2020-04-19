@@ -61,7 +61,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	return "ERROR: Report This"
 
 /proc/CallMaterialName(ID)
-	if (copytext(ID, 1, 2) == "$" && materials_list[ID])
+	if (copytext_char(ID, 1, 2) == "$" && materials_list[ID])
 		var/datum/material/material = materials_list[ID]
 		return material.name
 
@@ -597,7 +597,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			var/datum/design/D = files.known_designs[v]
 			if(!(D.build_type & compare))
 				continue
-			if(findtext(D.name,href_list["to_search"]))
+			if(findtext_char(D.name,href_list["to_search"]))
 				matching_designs.Add(D)
 
 	updateUsrDialog()
@@ -624,7 +624,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	if(first_use)
 		SyncRDevices()
 
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	files.RefreshResearch()
 	switch(screen) //A quick check to make sure you get the right screen when a device is disconnected.
 		if(2 to 2.9)

@@ -410,7 +410,7 @@
 		playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 60, 1)
 		src.showUI(user)
 
-/* Find item by name and price in content and return type */
+/* Find_char item by name and price in content and return type */
 /obj/machinery/trading_machine/proc/find_item(var/item_name, var/item_price)
 	for(var/obj/item/Itm in content)
 		if(content[Itm] == item_price && Itm.name == item_name)
@@ -428,7 +428,7 @@
 	popup.open()
 
 /obj/machinery/trading_machine/proc/get_ui_content(var/state)
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	switch(state)
 		// --- Work
 		if(STATE_IDLE)

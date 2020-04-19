@@ -138,7 +138,8 @@
 	if(!ishuman(user))
 		return
 	user.set_machine(src)
-	var/dat = {"<TT>Turned [on ? "On" : "Off"] -
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += {"<TT>Turned [on ? "On" : "Off"] -
 <A href='?src=\ref[src];power=1'>Toggle</A><BR>
 <B>Frequency/Code</B> for electropack:<BR>
 Frequency:
@@ -275,7 +276,8 @@ Code:
 	if(!ishuman(user))
 		return
 	user.set_machine(src)
-	var/dat = {"<TT>Turned [on ? "On" : "Off"] -
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += {"<TT>Turned [on ? "On" : "Off"] -
 <A href='?src=\ref[src];power=1'>Toggle</A><BR>
 <B>Frequency/Code</B> for electropack:<BR>
 Frequency:

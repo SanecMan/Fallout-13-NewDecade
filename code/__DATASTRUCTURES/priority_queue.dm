@@ -16,7 +16,7 @@
 	return !L.len
 
 //return the index the element should be in the priority queue using dichotomic search
-/PriorityQueue/proc/FindElementIndex(atom/A)
+/PriorityQueue/proc/Find_charElementIndex(atom/A)
 	var/i = 1
 	var/j = L.len
 	var/mid
@@ -42,7 +42,7 @@
 		L.Add(A)
 		return
 
-	L.Insert(FindElementIndex(A),A)
+	L.Insert(Find_charElementIndex(A),A)
 
 //removes and returns the first element in the queue
 /PriorityQueue/proc/Dequeue()

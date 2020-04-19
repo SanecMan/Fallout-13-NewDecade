@@ -52,7 +52,7 @@
 		// Once you've inhaled the toner, you throw up your lungs
 		// and then die.
 
-		// Find out if there is an open turf in front of us,
+		// Find_char out if there is an open turf in front of us,
 		// and if not, pick the turf we are standing on.
 		var/turf/T = get_step(get_turf(src), user.dir)
 		if(!isopenturf(T))

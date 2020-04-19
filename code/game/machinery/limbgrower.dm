@@ -54,7 +54,8 @@
 	if(!is_operational())
 		return
 
-	var/dat = main_win(user)
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += main_win(user)
 
 	switch(screen)
 		if(LIMBGROWER_MAIN_MENU)
@@ -108,7 +109,7 @@
 
 			/////////////////
 			//href protection
-			being_built = files.FindDesignByID(href_list["make"]) //check if it's a valid design
+			being_built = files.Find_charDesignByID(href_list["make"]) //check if it's a valid design
 			if(!being_built)
 				return
 
@@ -172,7 +173,8 @@
 	prod_coeff = min(1,max(0,T)) // Coeff going 1 -> 0,8 -> 0,6 -> 0,4
 
 /obj/machinery/limbgrower/proc/main_win(mob/user)
-	var/dat = "<div class='statusDisplay'><h3>Limb Grower Menu:</h3><br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<div class='statusDisplay'><h3>Limb Grower Menu:</h3><br>"
 	dat += "<A href='?src=\ref[src];menu=[LIMBGROWER_CHEMICAL_MENU]'>Chemical Storage</A>"
 	dat += materials_printout()
 	dat += "<table style='width:100%' align='center'><tr>"
@@ -189,7 +191,8 @@
 	return dat
 
 /obj/machinery/limbgrower/proc/category_win(mob/user,selected_category)
-	var/dat = "<A href='?src=\ref[src];menu=[LIMBGROWER_MAIN_MENU]'>Return to main menu</A>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<A href='?src=\ref[src];menu=[LIMBGROWER_MAIN_MENU]'>Return to main menu</A>"
 	dat += "<div class='statusDisplay'><h3>Browsing [selected_category]:</h3><br>"
 	dat += materials_printout()
 
@@ -208,7 +211,8 @@
 
 
 /obj/machinery/limbgrower/proc/chemical_win(mob/user)
-	var/dat = "<A href='?src=\ref[src];menu=[LIMBGROWER_MAIN_MENU]'>Return to main menu</A>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<A href='?src=\ref[src];menu=[LIMBGROWER_MAIN_MENU]'>Return to main menu</A>"
 	dat += "<div class='statusDisplay'><h3>Browsing Chemical Storage:</h3><br>"
 	dat += materials_printout()
 
@@ -220,7 +224,8 @@
 	return dat
 
 /obj/machinery/limbgrower/proc/materials_printout()
-	var/dat = "<b>Total amount:></b> [reagents.total_volume] / [reagents.maximum_volume] cm<sup>3</sup><br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<b>Total amount:></b> [reagents.total_volume] / [reagents.maximum_volume] cm<sup>3</sup><br>"
 	return dat
 
 /obj/machinery/limbgrower/proc/can_build(datum/design/D)

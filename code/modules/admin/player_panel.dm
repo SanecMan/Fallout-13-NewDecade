@@ -1,7 +1,7 @@
 /datum/admins/proc/player_panel_new()//The new one
 	if(!check_rights())
 		return
-	var/dat = "<html><head><title>Player Panel</title></head>"
+	var/dat = "<html><meta charset=UTF-8><head><title>Player Panel</title></head>"
 
 	//javascript, the part that does most of the work~
 	dat += {"
@@ -270,9 +270,9 @@
 				else
 					M_job = "Ghost"
 
-			var/M_name = html_encode_ru(M.name)
-			var/M_rname = html_encode_ru(M.real_name)
-			var/M_key = html_encode_ru(M.key)
+			var/M_name = html_encode(M.name)
+			var/M_rname = html_encode(M.real_name)
+			var/M_key = html_encode(M.key)
 
 			//output for each mob
 			dat += {"
@@ -310,7 +310,7 @@
 
 /datum/admins/proc/check_antagonists()
 	if (ticker && ticker.current_state >= GAME_STATE_PLAYING)
-		var/dat = "<html><head><title>Round Status</title></head><body><h1><B>Round Status</B></h1>"
+		var/dat = "<html><meta charset=UTF-8><head><title>Round Status</title></head><body><h1><B>Round Status</B></h1>"
 		if(ticker.mode.replacementmode)
 			dat += "Former Game Mode: <B>[ticker.mode.name]</B><BR>"
 			dat += "Replacement Game Mode: <B>[ticker.mode.replacementmode.name]</B><BR>"

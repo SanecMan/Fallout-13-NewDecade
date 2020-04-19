@@ -297,7 +297,7 @@ var/total_borer_hosts_needed = 10
 
 /mob/living/simple_animal/borer/say(message)
 	if(dd_hasprefix(message, ";"))
-		message = copytext(message,2)
+		message = copytext_char(message,2)
 		for(var/borer in borers)
 			to_chat(borer, "<span class='borer'>Cortical Link: [truename] sings, \"[message]\"")
 		for(var/mob/dead in dead_mob_list)

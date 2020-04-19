@@ -411,7 +411,7 @@
 	explanation_text = "Ensure your department prospers over all else."
 
 /datum/objective/abductee/abductception
-	explanation_text = "You have been changed forever. Find the ones that did this to you and give them a taste of their own medicine."
+	explanation_text = "You have been changed forever. Find_char the ones that did this to you and give them a taste of their own medicine."
 
 /datum/objective/abductee/ghosts
 	explanation_text = "Conduct a seance with the spirits of the afterlife."
@@ -455,4 +455,4 @@
 	explanation_text = "Expand the station."
 
 /datum/objective/abductee/pragnant
-	explanation_text = "You are pregnant and soon due. Find a safe place to deliver your baby."
+	explanation_text = "You are pregnant and soon due. Find_char a safe place to deliver your baby."

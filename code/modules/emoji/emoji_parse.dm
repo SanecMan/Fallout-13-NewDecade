@@ -11,23 +11,23 @@ var/list/emojis
 	var/search = 0
 	var/emoji = ""
 	while(1)
-		search = findtext(text, ":", pos)
-		parsed += copytext(text, pos, search)
+		search = findtext_char(text, ":", pos)
+		parsed += copytext_char(text, pos, search)
 		if(search)
 			pos = search
-			search = findtext(text, ":", pos+1)
+			search = findtext_char(text, ":", pos+1)
 			if(search)
-				emoji = lowertext(copytext(text, pos+1, search))
+				emoji = lowertext(copytext_char(text, pos+1, search))
 				if(emoji in emojis)
 					parsed += bicon(icon('icons/emoji.dmi', emoji))
 					pos = search + 1
 				else
-					parsed += copytext(text, pos, search)
+					parsed += copytext_char(text, pos, search)
 					pos = search
 				emoji = ""
 				continue
 			else
-				parsed += copytext(text, pos, search)
+				parsed += copytext_char(text, pos, search)
 		break
 	return parsed
 

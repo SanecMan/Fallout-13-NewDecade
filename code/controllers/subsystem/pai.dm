@@ -47,32 +47,32 @@ var/list/obj/item/device/paicard/pai_card_list = list()
 			if("name")
 				t = input("Enter a name for your pAI", "pAI Name", candidate.name) as text
 				if(t)
-					candidate.name = copytext(sanitize(t),1,MAX_NAME_LEN)
+					candidate.name = copytext_char(sanitize(t),1,MAX_NAME_LEN)
 			if("desc")
 				t = input("Enter a description for your pAI", "pAI Description", candidate.description) as message
 				if(t)
-					candidate.description = copytext(sanitize(t),1,MAX_MESSAGE_LEN)
+					candidate.description = copytext_char(sanitize(t),1,MAX_MESSAGE_LEN)
 			if("role")
 				t = input("Enter a role for your pAI", "pAI Role", candidate.role) as text
 				if(t)
-					candidate.role = copytext(sanitize(t),1,MAX_MESSAGE_LEN)
+					candidate.role = copytext_char(sanitize(t),1,MAX_MESSAGE_LEN)
 			if("ooc")
 				t = input("Enter any OOC comments", "pAI OOC Comments", candidate.comments) as message
 				if(t)
-					candidate.comments = copytext(sanitize(t),1,MAX_MESSAGE_LEN)
+					candidate.comments = copytext_char(sanitize(t),1,MAX_MESSAGE_LEN)
 			if("save")
 				candidate.savefile_save(usr)
 			if("load")
 				candidate.savefile_load(usr)
 				//In case people have saved unsanitized stuff.
 				if(candidate.name)
-					candidate.name = copytext(sanitize(candidate.name),1,MAX_NAME_LEN)
+					candidate.name = copytext_char(sanitize(candidate.name),1,MAX_NAME_LEN)
 				if(candidate.description)
-					candidate.description = copytext(sanitize(candidate.description),1,MAX_MESSAGE_LEN)
+					candidate.description = copytext_char(sanitize(candidate.description),1,MAX_MESSAGE_LEN)
 				if(candidate.role)
-					candidate.role = copytext(sanitize(candidate.role),1,MAX_MESSAGE_LEN)
+					candidate.role = copytext_char(sanitize(candidate.role),1,MAX_MESSAGE_LEN)
 				if(candidate.comments)
-					candidate.comments = copytext(sanitize(candidate.comments),1,MAX_MESSAGE_LEN)
+					candidate.comments = copytext_char(sanitize(candidate.comments),1,MAX_MESSAGE_LEN)
 
 			if("submit")
 				if(candidate)
@@ -95,7 +95,7 @@ var/list/obj/item/device/paicard/pai_card_list = list()
 		candidates.Add(candidate)
 
 
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	dat += {"
 			<style type="text/css">
 
@@ -161,7 +161,7 @@ var/list/obj/item/device/paicard/pai_card_list = list()
 	var/list/available = list()
 	for(var/datum/paiCandidate/c in SSpai.candidates)
 		available.Add(check_ready(c))
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 
 	dat += {"
 			<style type="text/css">

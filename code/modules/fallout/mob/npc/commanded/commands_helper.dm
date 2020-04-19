@@ -20,16 +20,16 @@ proc/translit(text)
 	return sanitize_simple(text, translit_symbols)
 
 proc/parse_phrase(text, name)
-	if(findtext(text,name))
+	if(findtext_char(text,name))
 		return 1
 	if(name in phrases_storage)
 		var/names = phrases_storage[name]
-		names = splittext(names,",")
+		names = splittext_char(names,",")
 		for(var/N in names)
-			if(findtext(text,"[N]"))
+			if(findtext_char(text,"[N]"))
 				return 1
 	var/translit = translit(text)
-	if(findtext(translit,name))
+	if(findtext_char(translit,name))
 		if(phrases_storage[name])
 			phrases_storage[name] += ",[translit]"
 		else

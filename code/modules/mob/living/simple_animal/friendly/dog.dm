@@ -55,8 +55,8 @@
 /mob/living/simple_animal/pet/dog/corgi/show_inv(mob/user)
 	user.set_machine(src)
 	if(user.stat) return
-
-	var/dat = 	"<div align='center'><b>Inventory of [name]</b></div><p>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += 	"<div align='center'><b>Inventory of [name]</b></div><p>"
 	if(inventory_head)
 		dat +=	"<br><b>Head:</b> [inventory_head] (<a href='?src=\ref[src];remove_inv=head'>Remove</a>)"
 	else

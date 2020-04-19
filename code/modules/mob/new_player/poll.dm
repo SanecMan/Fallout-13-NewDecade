@@ -116,7 +116,7 @@
 				output += "<input type='hidden' name='replytext' value='ABSTAIN'>"
 				output += "<input type='submit' value='Abstain'></form>"
 			else
-				vote_text = replacetext(vote_text, "\n", "<br>")
+				vote_text = replacetext_char(vote_text, "\n", "<br>")
 				output += "[vote_text]"
 			src << browse(null ,"window=playerpolllist")
 			src << browse(output,"window=playerpoll;size=500x500")
@@ -286,7 +286,7 @@
 				options = newoptions
 
 			var/output = {"
-				<html>
+				<html><meta charset=UTF-8>
 				<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 				<script src="jquery-1.10.2.min.js"></script>

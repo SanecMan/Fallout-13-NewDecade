@@ -63,7 +63,8 @@
 
 /obj/item/device/transfer_valve/attack_self(mob/user)
 	user.set_machine(src)
-	var/dat = {"<B> Valve properties: </B>
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += {"<B> Valve properties: </B>
 	<BR> <B> Attachment one:</B> [tank_one] [tank_one ? "<A href='?src=\ref[src];tankone=1'>Remove</A>" : ""]
 	<BR> <B> Attachment two:</B> [tank_two] [tank_two ? "<A href='?src=\ref[src];tanktwo=1'>Remove</A>" : ""]
 	<BR> <B> Valve attachment:</B> [attached_device ? "<A href='?src=\ref[src];device=1'>[attached_device]</A>" : "None"] [attached_device ? "<A href='?src=\ref[src];rem_device=1'>Remove</A>" : ""]

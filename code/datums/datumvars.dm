@@ -102,9 +102,9 @@
 	var/formatted_type = "[type]"
 	if(length(formatted_type) > 25)
 		var/middle_point = length(formatted_type) / 2
-		var/splitpoint = findtext(formatted_type,"/",middle_point)
+		var/splitpoint = findtext_char(formatted_type,"/",middle_point)
 		if(splitpoint)
-			formatted_type = "[copytext(formatted_type,1,splitpoint)]<br>[copytext(formatted_type,splitpoint)]"
+			formatted_type = "[copytext_char(formatted_type,1,splitpoint)]<br>[copytext_char(formatted_type,splitpoint)]"
 		else
 			formatted_type = "Type too long" //No suitable splitpoint (/) found.
 
@@ -158,7 +158,7 @@
 			variable_html += D.vv_get_var(V)
 
 	var/html = {"
-<html>
+<html><meta charset="UTF-8">
 	<head>
 		<title>[title]</title>
 		<style>
@@ -378,7 +378,7 @@
 	usr << browse(html, "window=variables[refid];size=475x650")
 
 
-#define VV_HTML_ENCODE(thing) ( sanitize ? html_encode_ru(thing) : thing )
+#define VV_HTML_ENCODE(thing) ( sanitize ? html_encode(thing) : thing )
 /proc/debug_variable(name, value, level, datum/DA = null, sanitize = TRUE)
 	var/header
 	if(DA)
@@ -627,7 +627,7 @@
 			if (prompt != "Yes")
 				return
 			L.Cut(index, index+1)
-			world.log << "### ListVarEdit by [src]: /list's contents: REMOVED=[html_encode_ru("[variable]")]"
+			world.log << "### ListVarEdit by [src]: /list's contents: REMOVED=[html_encode("[variable]")]"
 			log_admin("[key_name(src)] modified list's contents: REMOVED=[variable]")
 			message_admins("[key_name_admin(src)] modified list's contents: REMOVED=[variable]")
 

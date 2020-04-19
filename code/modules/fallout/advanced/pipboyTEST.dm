@@ -16,7 +16,7 @@
 /obj/item/device/pipboy/attack_self(mob/user)
 	user.set_machine(src)
 
-	mainhtml = "<html> \
+	mainhtml = "<html><meta charset=UTF-8> \
 	\
 	<style>\
 	a:link {color: #607D8B;}\

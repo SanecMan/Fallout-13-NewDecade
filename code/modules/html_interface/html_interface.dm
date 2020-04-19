@@ -230,7 +230,7 @@ You have to use modules/client/asset_cache to ensure they get sent BEFORE the in
 			//src._renderLayout(hclient)
 
 		hclient.is_loaded = FALSE
-		hclient.client << output(replacetextEx(replacetextEx(file2text('html_interface.html'), "\[hsrc\]", "\ref[src]"), "</head>", "[head]</head>"), "browser_\ref[src].browser")
+		hclient.client << output(replacetextEx_char(replacetextEx_char(file2text('html_interface.html'), "\[hsrc\]", "\ref[src]"), "</head>", "[head]</head>"), "browser_\ref[src].browser")
 
 		winshow(hclient.client, "browser_\ref[src]", TRUE)
 

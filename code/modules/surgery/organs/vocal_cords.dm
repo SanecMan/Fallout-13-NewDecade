@@ -162,19 +162,19 @@ var/static/regex/multispin_words = regex("like a record baby")
 
 	for(var/V in listeners)
 		var/mob/living/L = V
-		if(L.mind && L.mind.devilinfo && findtext(message, L.mind.devilinfo.truename))
-			var/start = findtext(message, L.mind.devilinfo.truename)
+		if(L.mind && L.mind.devilinfo && findtext_char(message, L.mind.devilinfo.truename))
+			var/start = findtext_char(message, L.mind.devilinfo.truename)
 			listeners = list(L) //let's be honest you're never going to find two devils with the same name
 			power_multiplier *= 5 //if you're a devil and god himself addressed you, you fucked up
 			//Cut out the name so it doesn't trigger commands
-			message = copytext(message, 0, start)+copytext(message, start + length(L.mind.devilinfo.truename), length(message) + 1)
+			message = copytext_char(message, 0, start)+copytext_char(message, start + length(L.mind.devilinfo.truename), length(message) + 1)
 			break
-		else if(findtext(message, L.real_name) == 1)
+		else if(findtext_char(message, L.real_name) == 1)
 			specific_listeners += L //focus on those with the specified name
 			//Cut out the name so it doesn't trigger commands
 			found_string = L.real_name
 
-		else if(L.mind && findtext(message, L.mind.assigned_role) == 1)
+		else if(L.mind && findtext_char(message, L.mind.assigned_role) == 1)
 			specific_listeners += L //focus on those with the specified job
 			//Cut out the job so it doesn't trigger commands
 			found_string = L.mind.assigned_role
@@ -182,37 +182,37 @@ var/static/regex/multispin_words = regex("like a record baby")
 	if(specific_listeners.len)
 		listeners = specific_listeners
 		power_multiplier *= (1 + (1/specific_listeners.len)) //2x on a single guy, 1.5x on two and so on
-		message = copytext(message, 0, 1)+copytext(message, 1 + length(found_string), length(message) + 1)
+		message = copytext_char(message, 0, 1)+copytext_char(message, 1 + length(found_string), length(message) + 1)
 
 	//STUN
-	if(findtext(message, stun_words))
+	if(findtext_char(message, stun_words))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.Stun(3 * power_multiplier)
 		next_command = world.time + cooldown_stun
 
 	//WEAKEN
-	else if(findtext(message, weaken_words))
+	else if(findtext_char(message, weaken_words))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.Weaken(3 * power_multiplier)
 		next_command = world.time + cooldown_stun
 
 	//SLEEP
-	else if((findtext(message, sleep_words)))
+	else if((findtext_char(message, sleep_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.Sleeping(2 * power_multiplier)
 		next_command = world.time + cooldown_stun
 
 	//VOMIT
-	else if((findtext(message, vomit_words)))
+	else if((findtext_char(message, vomit_words)))
 		for(var/mob/living/carbon/C in listeners)
 			C.vomit(10 * power_multiplier)
 		next_command = world.time + cooldown_stun
 
 	//SILENCE
-	else if((findtext(message, silence_words)))
+	else if((findtext_char(message, silence_words)))
 		for(var/mob/living/carbon/C in listeners)
 			if(owner.mind && (owner.mind.assigned_role == "Librarian" || owner.mind.assigned_role == "Mime"))
 				power_multiplier *= 3
@@ -220,41 +220,41 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_stun
 
 	//HALLUCINATE
-	else if((findtext(message, hallucinate_words)))
+	else if((findtext_char(message, hallucinate_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			new /obj/effect/hallucination/delusion(get_turf(L),L,duration=150 * power_multiplier,skip_nearby=0)
 		next_command = world.time + cooldown_meme
 
 	//WAKE UP
-	else if((findtext(message, wakeup_words)))
+	else if((findtext_char(message, wakeup_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.SetSleeping(0)
 		next_command = world.time + cooldown_damage
 
 	//HEAL
-	else if((findtext(message, heal_words)))
+	else if((findtext_char(message, heal_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.heal_overall_damage(10 * power_multiplier, 10 * power_multiplier, 0, 0)
 		next_command = world.time + cooldown_damage
 
 	//BRUTE DAMAGE
-	else if((findtext(message, hurt_words)))
+	else if((findtext_char(message, hurt_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.apply_damage(15 * power_multiplier, def_zone = "chest")
 		next_command = world.time + cooldown_damage
 
 	//BLEED
-	else if((findtext(message, bleed_words)))
+	else if((findtext_char(message, bleed_words)))
 		for(var/mob/living/carbon/human/H in listeners)
 			H.bleed_rate += (5 * power_multiplier)
 		next_command = world.time + cooldown_damage
 
 	//FIRE
-	else if((findtext(message, burn_words)))
+	else if((findtext_char(message, burn_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.adjust_fire_stacks(1 * power_multiplier)
@@ -262,7 +262,7 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_damage
 
 	//REPULSE
-	else if((findtext(message, repulse_words)))
+	else if((findtext_char(message, repulse_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			var/throwtarget = get_edge_target_turf(owner, get_dir(owner, get_step_away(L, owner)))
@@ -270,7 +270,7 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_damage
 
 	//WHO ARE YOU?
-	else if((findtext(message, whoareyou_words)))
+	else if((findtext_char(message, whoareyou_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			if(L.mind && L.mind.devilinfo)
@@ -280,34 +280,34 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_meme
 
 	//SAY MY NAME
-	else if((findtext(message, saymyname_words)))
+	else if((findtext_char(message, saymyname_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.say("[owner.name]!") //"Unknown!"
 		next_command = world.time + cooldown_meme
 
 	//KNOCK KNOCK
-	else if((findtext(message, knockknock_words)))
+	else if((findtext_char(message, knockknock_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.say("Who's there?")
 		next_command = world.time + cooldown_meme
 
 	//STATE LAWS
-	else if((findtext(message, statelaws_words)))
+	else if((findtext_char(message, statelaws_words)))
 		for(var/mob/living/silicon/S in listeners)
 			S.statelaws(force = 1)
 		next_command = world.time + cooldown_stun
 
 	//MOVE
-	else if((findtext(message, move_words)))
+	else if((findtext_char(message, move_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			step(L, pick(cardinal))
 		next_command = world.time + cooldown_meme
 
 	//WALK
-	else if((findtext(message, walk_words)))
+	else if((findtext_char(message, walk_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			if(L.m_intent != MOVE_INTENT_WALK)
@@ -315,7 +315,7 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_meme
 
 	//RUN
-	else if((findtext(message, run_words)))
+	else if((findtext_char(message, run_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			if(L.m_intent != MOVE_INTENT_RUN)
@@ -323,44 +323,44 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_meme
 
 	//HELP INTENT
-	else if((findtext(message, helpintent_words)))
+	else if((findtext_char(message, helpintent_words)))
 		for(var/mob/living/carbon/human/H in listeners)
 			H.a_intent_change(INTENT_HELP)
 		next_command = world.time + cooldown_meme
 
 	//DISARM INTENT
-	else if((findtext(message, disarmintent_words)))
+	else if((findtext_char(message, disarmintent_words)))
 		for(var/mob/living/carbon/human/H in listeners)
 			H.a_intent_change(INTENT_DISARM)
 		next_command = world.time + cooldown_meme
 
 	//GRAB INTENT
-	else if((findtext(message, grabintent_words)))
+	else if((findtext_char(message, grabintent_words)))
 		for(var/mob/living/carbon/human/H in listeners)
 			H.a_intent_change(INTENT_GRAB)
 		next_command = world.time + cooldown_meme
 
 	//HARM INTENT
-	else if((findtext(message, harmintent_words)))
+	else if((findtext_char(message, harmintent_words)))
 		for(var/mob/living/carbon/human/H in listeners)
 			H.a_intent_change(INTENT_HARM)
 		next_command = world.time + cooldown_meme
 
 	//THROW/CATCH
-	else if((findtext(message, throwmode_words)))
+	else if((findtext_char(message, throwmode_words)))
 		for(var/mob/living/carbon/C in listeners)
 			C.throw_mode_on()
 		next_command = world.time + cooldown_meme
 
 	//FLIP
-	else if((findtext(message, flip_words)))
+	else if((findtext_char(message, flip_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.emote("flip")
 		next_command = world.time + cooldown_meme
 
 	//REST
-	else if((findtext(message, rest_words)))
+	else if((findtext_char(message, rest_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			if(!L.resting)
@@ -368,7 +368,7 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_meme
 
 	//GET UP
-	else if((findtext(message, getup_words)))
+	else if((findtext_char(message, getup_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			if(L.resting)
@@ -379,7 +379,7 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_damage
 
 	//SIT
-	else if((findtext(message, sit_words)))
+	else if((findtext_char(message, sit_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			for(var/obj/structure/chair/chair in get_turf(L))
@@ -388,7 +388,7 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_meme
 
 	//STAND UP
-	else if((findtext(message, stand_words)))
+	else if((findtext_char(message, stand_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			if(L.buckled && istype(L.buckled, /obj/structure/chair))
@@ -396,14 +396,14 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_meme
 
 	//DANCE
-	else if((findtext(message, dance_words)))
+	else if((findtext_char(message, dance_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.emote("dance")
 		next_command = world.time + cooldown_meme
 
 	//JUMP
-	else if((findtext(message, jump_words)))
+	else if((findtext_char(message, jump_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.say("HOW HIGH?!!")
@@ -411,28 +411,28 @@ var/static/regex/multispin_words = regex("like a record baby")
 		next_command = world.time + cooldown_meme
 
 	//SALUTE
-	else if((findtext(message, salute_words)))
+	else if((findtext_char(message, salute_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.emote("salute")
 		next_command = world.time + cooldown_meme
 
 	//PLAY DEAD
-	else if((findtext(message, deathgasp_words)))
+	else if((findtext_char(message, deathgasp_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.emote("deathgasp")
 		next_command = world.time + cooldown_meme
 
 	//PLEASE CLAP
-	else if((findtext(message, clap_words)))
+	else if((findtext_char(message, clap_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.emote("clap")
 		next_command = world.time + cooldown_meme
 
 	//HONK
-	else if((findtext(message, honk_words)))
+	else if((findtext_char(message, honk_words)))
 		addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, get_turf(owner), "sound/items/bikehorn.ogg", 300, 1), 25)
 		if(owner.mind && owner.mind.assigned_role == "Clown")
 			for(var/mob/living/carbon/C in listeners)
@@ -442,7 +442,7 @@ var/static/regex/multispin_words = regex("like a record baby")
 			next_command = world.time + cooldown_meme
 
 	//RIGHT ROUND
-	else if((findtext(message, multispin_words)))
+	else if((findtext_char(message, multispin_words)))
 		for(var/V in listeners)
 			var/mob/living/L = V
 			L.SpinAnimation(speed = 10, loops = 5)

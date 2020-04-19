@@ -954,7 +954,8 @@
 	interact(user)
 
 /obj/item/toy/cards/cardhand/interact(mob/user)
-	var/dat = "You have:<BR>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "You have:<BR>"
 	for(var/t in currenthand)
 		dat += "<A href='?src=\ref[src];pick=[t]'>A [t].</A><BR>"
 	dat += "Which card will you remove next?"

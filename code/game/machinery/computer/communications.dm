@@ -412,7 +412,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		return
 
 	user.set_machine(src)
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	if(SSshuttle.emergency.mode == SHUTTLE_CALL)
 		var/timeleft = SSshuttle.emergency.timeLeft()
 		dat += "<B>Emergency shuttle</B>\n<BR>\nETA: [timeleft / 60 % 60]:[add_zero(num2text(timeleft % 60), 2)]"
@@ -506,7 +506,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		if(STATE_ALERT_LEVEL)
 			dat += "Current alert level: [get_security_level()]<BR>"
 			if(security_level == SEC_LEVEL_DELTA)
-				dat += "<font color='red'><b>The self-destruct mechanism is active. Find a way to deactivate the mechanism to lower the alert level or evacuate.</b></font>"
+				dat += "<font color='red'><b>The self-destruct mechanism is active. Find_char a way to deactivate the mechanism to lower the alert level or evacuate.</b></font>"
 			else
 				dat += "<A HREF='?src=\ref[src];operation=securitylevel;newalertlevel=[SEC_LEVEL_BLUE]'>Blue</A><BR>"
 				dat += "<A HREF='?src=\ref[src];operation=securitylevel;newalertlevel=[SEC_LEVEL_GREEN]'>Green</A>"
@@ -542,7 +542,8 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	popup.open()
 
 /obj/machinery/computer/communications/proc/get_javascript_header(form_id)
-	var/dat = {"<script type="text/javascript">
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += {"<script type="text/javascript">
 						function getLength(){
 							var reasonField = document.getElementById('reasonfield');
 							if(reasonField.value.length >= [CALL_SHUTTLE_REASON_LENGTH]){
@@ -560,7 +561,8 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 /obj/machinery/computer/communications/proc/get_call_shuttle_form(ai_interface = 0)
 	var/form_id = "callshuttle"
-	var/dat = get_javascript_header(form_id)
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += get_javascript_header(form_id)
 	dat += "<form name='callshuttle' id='[form_id]' action='?src=\ref[src]' method='get' style='display: inline'>"
 	dat += "<input type='hidden' name='src' value='\ref[src]'>"
 	dat += "<input type='hidden' name='operation' value='[ai_interface ? "ai-callshuttle2" : "callshuttle2"]'>"
@@ -570,7 +572,8 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 /obj/machinery/computer/communications/proc/get_cancel_shuttle_form()
 	var/form_id = "cancelshuttle"
-	var/dat = get_javascript_header(form_id)
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += get_javascript_header(form_id)
 	dat += "<form name='cancelshuttle' id='[form_id]' action='?src=\ref[src]' method='get' style='display: inline'>"
 	dat += "<input type='hidden' name='src' value='\ref[src]'>"
 	dat += "<input type='hidden' name='operation' value='cancelshuttle2'>"
@@ -579,7 +582,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	return dat
 
 /obj/machinery/computer/communications/proc/interact_ai(mob/living/silicon/ai/user)
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	switch(src.aistate)
 		if(STATE_DEFAULT)
 			if(SSshuttle.emergencyLastCallLoc)
@@ -636,7 +639,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		if(STATE_ALERT_LEVEL)
 			dat += "Current alert level: [get_security_level()]<BR>"
 			if(security_level == SEC_LEVEL_DELTA)
-				dat += "<font color='red'><b>The self-destruct mechanism is active. Find a way to deactivate the mechanism to lower the alert level or evacuate.</b></font>"
+				dat += "<font color='red'><b>The self-destruct mechanism is active. Find_char a way to deactivate the mechanism to lower the alert level or evacuate.</b></font>"
 			else
 				dat += "<A HREF='?src=\ref[src];operation=ai-securitylevel;newalertlevel=[SEC_LEVEL_BLUE]'>Blue</A><BR>"
 				dat += "<A HREF='?src=\ref[src];operation=ai-securitylevel;newalertlevel=[SEC_LEVEL_GREEN]'>Green</A>"

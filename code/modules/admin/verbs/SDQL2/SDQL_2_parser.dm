@@ -359,7 +359,7 @@
 //object_type:	<type path> | string
 	object_type(i, list/node)
 
-		if(copytext(token(i), 1, 2) == "/")
+		if(copytext_char(token(i), 1, 2) == "/")
 			node += token(i)
 
 		else
@@ -395,8 +395,8 @@
 //string:	''' <some text> ''' | '"' <some text > '"'
 	string(i, list/node)
 
-		if(copytext(token(i), 1, 2) in list("'", "\""))
-			node += copytext(token(i),2,-1)
+		if(copytext_char(token(i), 1, 2) in list("'", "\""))
+			node += copytext_char(token(i),2,-1)
 
 		else
 			parse_error("Expected string but found '[token(i)]'")
@@ -529,7 +529,7 @@
 			node += text2num(token(i))
 			i++
 
-		else if(copytext(token(i), 1, 2) in list("'", "\""))
+		else if(copytext_char(token(i), 1, 2) in list("'", "\""))
 			i = string(i, node)
 
 		else

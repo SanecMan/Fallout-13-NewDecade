@@ -19,6 +19,6 @@
 	XP = 2
 
 	/mob/living/simple_animal/cow/brahmin/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, list/spans)
-		if(findtext(raw_message, "C0WM4K6MOM0"))
+		if(findtext_char(raw_message, "C0WM4K6MOM0"))
 			src.Hear(message, speaker, message_langs, raw_message, radio_freq, spans)
 		. = ..()

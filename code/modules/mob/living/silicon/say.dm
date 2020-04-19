@@ -13,7 +13,7 @@
 	for(var/mob/M in player_list)
 		if(M.binarycheck())
 			if(isAI(M))
-				var/renderedAI = "<i><span class='game say'>Robotic Talk, <a href='?src=\ref[M];track=[html_encode_ru(name)]'><span class='name'>[name] ([desig])</span></a> <span class='message'>[message_a]</span></span></i>"
+				var/renderedAI = "<i><span class='game say'>Robotic Talk, <a href='?src=\ref[M];track=[html_encode(name)]'><span class='name'>[name] ([desig])</span></a> <span class='message'>[message_a]</span></span></i>"
 				to_chat(M, renderedAI)
 			else
 				to_chat(M, rendered)

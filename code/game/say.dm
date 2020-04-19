@@ -65,8 +65,8 @@ var/list/freqtospan = list(
 /atom/movable/proc/say_quote(input, list/spans=list())
 	if(!input)
 		return "says, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
-	var/ending = copytext(input, length(input))
-	if(copytext(input, length(input) - 1) == "!!")
+	var/ending = copytext_char(input, length(input))
+	if(copytext_char(input, length(input) - 1) == "!!")
 		spans |= SPAN_YELL
 		return "[verb_yell], \"[attach_spans(input, spans)]\""
 	input = attach_spans(input, spans)
@@ -125,7 +125,7 @@ var/list/freqtospan = list(
 	var/returntext = radiochannelsreverse["[freq]"]
 	if(returntext)
 		return returntext
-	return "[copytext("[freq]", 1, 4)].[copytext("[freq]", 4, 5)]"
+	return "[copytext_char("[freq]", 1, 4)].[copytext_char("[freq]", 4, 5)]"
 
 /proc/attach_spans(input, list/spans)
 	return "[message_spans_start(spans)][input]</span>"
@@ -138,7 +138,7 @@ var/list/freqtospan = list(
 	return output
 
 /proc/say_test(text)
-	var/ending = copytext(text, length(text))
+	var/ending = copytext_char(text, length(text))
 	if (ending == "?")
 		return "1"
 	else if (ending == "!")

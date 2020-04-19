@@ -41,7 +41,8 @@
 
 
 /obj/item/weapon/clipboard/attack_self(mob/user)
-	var/dat = "<title>Clipboard</title>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "<title>Clipboard</title>"
 	if(haspen)
 		dat += "<A href='?src=\ref[src];pen=1'>Remove Pen</A><BR><HR>"
 	else

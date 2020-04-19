@@ -54,8 +54,8 @@
 
 
 /obj/item/clothing/suit/armor/f13/power_armor/verb/onOffPA()
-	set name = "On/Off Power Armor"
-	set category = "Power Armor"
+	set name = "Вкл./Выкл. Силовую броню"
+	set category = "Силовая Броня"
 	set src in view(1)
 
 	if(istype(usr, /mob/living/carbon))
@@ -77,8 +77,8 @@
 		to_chat(usr, "<span class='notice'>Силовая броня деактивирована.</span>")
 
 /obj/item/clothing/suit/armor/f13/power_armor/verb/ejectInsertCell()
-	set name = "Eject/Insert Power Cell"
-	set category = "Power Armor"
+	set name = "Изъять/Вставить Ядерную ячейку"
+	set category = "Силовая Броня"
 	set src in view(1)
 
 	if(istype(usr, /mob/living/carbon))

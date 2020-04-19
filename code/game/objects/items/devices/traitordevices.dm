@@ -107,7 +107,8 @@ effective or pretty fucking useless.
 	user.set_machine(src)
 
 	var/cooldown = round(max(10, (intensity*5 - wavelength/4)))
-	var/dat = "Irradiation: <A href='?src=\ref[src];rad=1'>[irradiate ? "On" : "Off"]</A><br>"
+	var/dat = {"<meta charset="UTF-8">"}
+	dat += "Irradiation: <A href='?src=\ref[src];rad=1'>[irradiate ? "On" : "Off"]</A><br>"
 	dat += "Scan Mode: <a href='?src=\ref[src];mode=1'>"
 	if(!scanmode)
 		dat += "Scan Health"

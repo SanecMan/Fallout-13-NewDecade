@@ -143,7 +143,7 @@
 
 /obj/item/device/camera_bug/proc/camera_report()
 	// this should only be called if current exists
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	var/list/seen = get_seens()
 	if(seen && seen.len >= 1)
 		var/list/names = list()
@@ -267,8 +267,8 @@
 		if(tracking.name != tracked_name) // Hiding their identity, tricksy
 			var/mob/M = tracking
 			if(istype(M))
-				if(!(tracked_name == "Unknown" && findtext(tracking.name,"Unknown"))) // we saw then disguised before
-					if(!(tracked_name == M.real_name && findtext(tracking.name,M.real_name))) // or they're still ID'd
+				if(!(tracked_name == "Unknown" && findtext_char(tracking.name,"Unknown"))) // we saw then disguised before
+					if(!(tracked_name == M.real_name && findtext_char(tracking.name,M.real_name))) // or they're still ID'd
 						src.updateSelfDialog()//But if it's neither of those cases
 						return // you won't find em on the cameras
 			else

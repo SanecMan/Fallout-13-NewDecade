@@ -379,7 +379,7 @@ AI MODULES
 	for(var/line in file2list("config/silicon_laws.txt"))
 		if(!line)
 			continue
-		if(findtextEx(line,"#",1,2))
+		if(findtextEx_char(line,"#",1,2))
 			continue
 
 		laws += line

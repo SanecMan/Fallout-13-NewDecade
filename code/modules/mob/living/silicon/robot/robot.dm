@@ -246,7 +246,7 @@
 	uneq_active()
 
 /mob/living/silicon/robot/proc/robot_alerts()
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	for (var/cat in alarms)
 		dat += text("<B>[cat]</B><BR>\n")
 		var/list/L = alarms[cat]
@@ -883,7 +883,7 @@
 			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
 							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
 
-			// Find a turf near or on the original location to bounce to
+			// Find_char a turf near or on the original location to bounce to
 			if(P.starting)
 				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
 				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
@@ -905,7 +905,7 @@
 			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
 							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
 
-			// Find a turf near or on the original location to bounce to
+			// Find_char a turf near or on the original location to bounce to
 			if(P.starting)
 				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
 				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
@@ -959,7 +959,7 @@
 			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
 							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
 
-			// Find a turf near or on the original location to bounce to
+			// Find_char a turf near or on the original location to bounce to
 			if(P.starting)
 				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
 				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
@@ -981,7 +981,7 @@
 			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
 							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
 
-			// Find a turf near or on the original location to bounce to
+			// Find_char a turf near or on the original location to bounce to
 			if(P.starting)
 				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
 				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
@@ -1036,7 +1036,7 @@
 			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
 							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
 
-			// Find a turf near or on the original location to bounce to
+			// Find_char a turf near or on the original location to bounce to
 			if(P.starting)
 				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
 				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
@@ -1058,7 +1058,7 @@
 			visible_message("<span class='danger'>The [P.name] is reflected by [src]'s armor!</span>", \
 							"<span class='userdanger'>The [P.name] is reflected by your armor!</span>")
 
-			// Find a turf near or on the original location to bounce to
+			// Find_char a turf near or on the original location to bounce to
 			if(P.starting)
 				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
 				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
@@ -1090,7 +1090,7 @@
 		return
 	switch(notifytype)
 		if(1) //New Cyborg
-			to_chat(connected_ai, "<br><br><span class='notice'>NOTICE - New cyborg connection detected: <a href='?src=\ref[connected_ai];track=[html_encode_ru(name)]'>[name]</a></span><br>")
+			to_chat(connected_ai, "<br><br><span class='notice'>NOTICE - New cyborg connection detected: <a href='?src=\ref[connected_ai];track=[html_encode(name)]'>[name]</a></span><br>")
 		if(2) //New Module
 			to_chat(connected_ai, "<br><br><span class='notice'>NOTICE - Cyborg module change detected: [name] has loaded the [designation] module.</span><br>")
 		if(3) //New Name

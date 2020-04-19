@@ -313,7 +313,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 				return	//all done. The ghost is auto-deleted
 
 		//check if they were a monkey
-		else if(findtext(G_found.real_name,"monkey"))
+		else if(findtext_char(G_found.real_name,"monkey"))
 			if(alert("This character appears to have been a monkey. Would you like to respawn them as such?",,"Yes","No")=="Yes")
 				var/mob/living/carbon/monkey/new_monkey = new(pick(latejoin))
 				G_found.mind.transfer_to(new_monkey)	//be careful when doing stuff like this! I've already checked the mind isn't in use
@@ -851,7 +851,7 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 	id_select += "</select>"
 
 	var/dat = {"
-	<html><head><title>Create Outfit</title></head><body>
+	<html><meta charset=UTF-8><head><title>Create Outfit</title></head><body>
 	<form name="outfit" action="byond://?src=\ref[src]" method="get">
 	<input type="hidden" name="src" value="\ref[src]">
 	<input type="hidden" name="create_outfit" value="1">
@@ -1151,7 +1151,7 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 	holder.modify_goals()
 
 /datum/admins/proc/modify_goals()
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	for(var/datum/station_goal/S in ticker.mode.station_goals)
 		dat += "[S.name] - <a href='?src=\ref[S];announce=1'>Announce</a> | <a href='?src=\ref[S];remove=1'>Remove</a><br>"
 	dat += "<br><a href='?src=\ref[src];add_station_goal=1'>Add New Goal</a>"

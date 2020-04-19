@@ -387,7 +387,7 @@ var/datum/subsystem/ticker/ticker
 
 	if(m)
 		to_chat(world, "<font color='purple'><b>Tip of the round: \
-			</b>[html_encode_ru(m)]</font>")
+			</b>[html_encode(m)]</font>")
 */
 
 /datum/subsystem/ticker/proc/check_queue()

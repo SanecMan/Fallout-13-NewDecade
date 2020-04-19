@@ -70,8 +70,8 @@ var/savefile/iconCache = new /savefile("data/iconCache.sav") //Cache of icons fo
 	// Arguments are in the form "param[paramname]=thing"
 	var/list/params = list()
 	for(var/key in href_list)
-		if(length(key) > 7 && findtext(key, "param")) // 7 is the amount of characters in the basic param key template.
-			var/param_name = copytext(key, 7, -1)
+		if(length(key) > 7 && findtext_char(key, "param")) // 7 is the amount of characters in the basic param key template.
+			var/param_name = copytext_char(key, 7, -1)
 			var/item       = href_list[key]
 
 			params[param_name] = item
@@ -180,8 +180,8 @@ var/savefile/iconCache = new /savefile("data/iconCache.sav") //Cache of icons fo
 
 	iconCache[iconKey] << icon
 	var/iconData = iconCache.ExportText(iconKey)
-	var/list/partial = splittext(iconData, "{")
-	return replacetext(copytext(partial[2], 3, -5), "\n", "")
+	var/list/partial = splittext_char(iconData, "{")
+	return replacetext_char(copytext_char(partial[2], 3, -5), "\n", "")
 
 /proc/bicon(var/obj, var/use_class = 1)
 	var/ispath = 0
@@ -245,14 +245,13 @@ var/savefile/iconCache = new /savefile("data/iconCache.sav") //Cache of icons fo
 			return
 
 		//Some macros remain in the string even after parsing and fuck up the eventual output
-		if (findtext(message, "\improper"))
-			message = replacetext(message, "\improper", "")
-		if (findtext(message, "\proper"))
-			message = replacetext(message, "\proper", "")
+		if (findtext_char(message, "\improper"))
+			message = replacetext_char(message, "\improper", "")
+		if (findtext_char(message, "\proper"))
+			message = replacetext_char(message, "\proper", "")
 
-		message = replacetext(message, "\n", "<br>")
-		message = replacetext(message, "\t", "&nbsp;&nbsp;&nbsp;&nbsp;")
-		message = replacetext(message, "ÿ", "&#1103;")
+		message = replacetext_char(message, "\n", "<br>")
+		//message = replacetext_char(message, "\t", "&nbsp;&nbsp;&nbsp;&nbsp;")
 
 		message = macro2html(message)
 

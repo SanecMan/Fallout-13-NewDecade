@@ -50,7 +50,7 @@
 
 /datum/industry/proc/detokenize(var/str)
 	for (var/T in tokens)
-		str = replacetext(str, "%[T]%", pick(tokens[T]))
+		str = replacetext_char(str, "%[T]%", pick(tokens[T]))
 	return str
 
 /datum/industry/agriculture

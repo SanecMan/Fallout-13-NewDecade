@@ -227,7 +227,7 @@
 		coin++
 
 /obj/machinery/party/musicwriter/attack_hand(mob/user)
-	var/dat = ""
+	var/dat = {"<meta charset="UTF-8">"}
 	if(writing)
 		dat += "Memory scan completed. <br>Writing from scan of [retard_name] mind... Please Stand By."
 	else if(!coin)
@@ -254,8 +254,8 @@
 					var/datum/turntable_soundtrack/T = new
 					var/obj/item/card/music/disk = new
 					T.path = S
-					T.f_name = copytext(N, 1, 2)
-					T.name = copytext(N, 2)
+					T.f_name = copytext_char(N, 1, 2)
+					T.name = copytext_char(N, 2)
 					disk.data = T
 					disk.name = "disk ([N])"
 					disk.loc = src.loc

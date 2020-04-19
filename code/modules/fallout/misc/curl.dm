@@ -6,7 +6,7 @@ _curl
 		Http(url, data, file, method = HTTP_GET)
 			if(istext(data))
 				// @ prefix denotes file name
-				if(length(data) && copytext(data, 1, 2) != "@")
+				if(length(data) && copytext_char(data, 1, 2) != "@")
 					data = url_encode(data)
 			else if(istype(data, /list))
 				data = list2params(data)

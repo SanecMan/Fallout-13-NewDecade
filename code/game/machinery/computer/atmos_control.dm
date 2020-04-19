@@ -158,10 +158,10 @@
 	var/datum/radio_frequency/freq = SSradio.return_frequency(1441)
 	var/list/devices = freq.devices["_default"]
 	for(var/obj/machinery/atmospherics/components/unary/vent_pump/U in devices)
-		var/list/text = splittext(U.id_tag, "_")
+		var/list/text = splittext_char(U.id_tag, "_")
 		IO |= text[1]
 	for(var/obj/machinery/atmospherics/components/unary/outlet_injector/U in devices)
-		var/list/text = splittext(U.id, "_")
+		var/list/text = splittext_char(U.id, "_")
 		IO |= text[1]
 	if(!IO.len)
 		to_chat(user, "<span class='alert'>No machinery detected.</span>")
@@ -172,7 +172,7 @@
 		name = "[uppertext(S)] Supply Control"
 		var/list/new_devices = freq.devices["4"]
 		for(var/obj/machinery/air_sensor/U in new_devices)
-			var/list/text = splittext(U.id_tag, "_")
+			var/list/text = splittext_char(U.id_tag, "_")
 			if(text[1] == S)
 				sensors = list("[S]_sensor" = "Tank")
 				break

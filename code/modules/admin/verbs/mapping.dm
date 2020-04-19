@@ -149,7 +149,7 @@ var/list/admin_verbs_debug_mapping = list(
 	set name = "Show roundstart AT list"
 	set desc = "Displays a list of active turfs coordinates at roundstart"
 
-	var/dat = {"<b>Coordinate list of Active Turfs at Roundstart</b>
+	var/dat = {"<meta charset="UTF-8"><b>Coordinate list of Active Turfs at Roundstart</b>
 	 <br>Real-time Active Turfs list you can see in Air Subsystem at active_turfs var<br>"}
 
 	for(var/i=1; i<=active_turfs_startlist.len; i++)
