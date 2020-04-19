@@ -1,5 +1,5 @@
 /obj/machinery/magazine
-	name = "Magazine"
+	name = "торговый автомат"
 	desc = "It's time to spent your caps!"
 	icon = 'icons/obj/vending.dmi'
 	icon_state = "sec"

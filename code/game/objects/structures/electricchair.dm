@@ -1,5 +1,5 @@
 /obj/structure/chair/e_chair
-	name = "electric chair"
+	name = "электрический стул"
 	desc = "Looks absolutely SHOCKING!\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
 	icon_state = "echair0"
 	var/obj/item/assembly/shock_kit/part = null
@@ -48,7 +48,7 @@
 
 
 /obj/structure/chair/gallows
-	name = "gallow"
+	name = "висельница"
 	desc = "Looks creepy!"
 	icon_state = "gallow0"
 	var/last_time = 1

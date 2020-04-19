@@ -48,7 +48,44 @@
 	idle_vision_range = 7
 	ranged = 1
 	rapid = 1
-	projectiletype = /obj/item/projectile/beam
+	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
-
 	XP = 55
+
+/obj/item/projectile/beam/laser/pistol/ultraweak
+	damage = 10 //quantity over quality
+
+/mob/living/simple_animal/hostile/sentrybot/proc/do_death_beep()
+	playsound(src, 'sound/machines/triple_beep.ogg', 75, TRUE)
+	visible_message("<span class='warning'>Вы слышите частый бип-бип из [src]!</span>", "<span class='warning'>Вы слышите частый бип!</span>")
+
+/mob/living/simple_animal/hostile/sentrybot/proc/self_destruct()
+	explosion(src,1,2,4,4)
+	qdel(src)
+
+/mob/living/simple_animal/hostile/sentrybot/death()
+	new /obj/effect/particle_effect/sparks
+	for(var/i in 1 to 3)
+		addtimer(CALLBACK(src, .proc/do_death_beep), i * 1 SECONDS)
+	addtimer(CALLBACK(src, .proc/self_destruct), 4 SECONDS)
+	return ..()
+
+/mob/living/simple_animal/hostile/sentrybot/Aggro()
+	..()
+	summon_backup(10)
+
+/mob/living/simple_animal/hostile/assaultron
+	name = "штурмотрон"
+	desc = "A deadly close combat robot developed by RobCo.  Their head laser is absolutely devastating."
+	icon = 'icons/fallout/mobs/animal.dmi'
+	icon_state = "assaultron"
+	icon_living = "assaultron"
+	icon_dead = "gib7"
+	health = 900
+	maxHealth = 900
+	melee_damage_lower = 20
+	melee_damage_upper = 30
+	speed = 0
+	attacktext = "избивает своими клешнями"
+	faction = list("hostile", "robot")
+	XP = 35

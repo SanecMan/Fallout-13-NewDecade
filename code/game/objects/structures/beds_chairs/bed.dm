@@ -171,22 +171,22 @@
 	icon_state = "alienbed"
 
 /obj/structure/bed/mattress
-	name = "mattress"
+	name = "матрас"
 	desc = "A nosy little dummy, are you?<br>A mattress is a large pad for supporting the reclining body, of course most of wasteland dwellers can't afford having a bed, so this is the most common sleeping spot around."
 	icon_state = "mattress"
 
 /obj/structure/bed/mattress/pillow
-	name = "soft mattress"
+	name = "м€гкий матрас"
 	desc = "A common soft matress.<br>Most of wasteland dwellers can't afford having a bed, so this is the most common sleeping spot around.<br>Wow, there's a soft pillow on top of it!"
 	icon_state = "mattress_pillow"
 
 /obj/structure/bed/mattress/holey
-	name = "holey mattress"
+	name = "дыр€вый матрас"
 	desc = "A common, not that soft matress.<br>Someone or something has made a several holes in it."
 	icon_state = "mattress_holey"
 
 /obj/structure/bed/mattress/dirty/New()
 	..()
-	name = "dirty mattress"
+	name = "гр€зный матрас"
 	desc = "An awfully smelly, dirty mattress.<br>It has soaked with something foul, so now it smells worse than a ghoul's piss..."
 	icon_state = pick("mattress_dirty","mattress_bloody","mattress_dried","mattress_mossy")

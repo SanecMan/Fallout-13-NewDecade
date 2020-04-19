@@ -1,6 +1,6 @@
 /obj/machinery/modular_computer/console
-	name = "console"
-	desc = "A stationary computer."
+	name = "терминал"
+	desc = "Громоздкий терминал, производства РобКо, вещь на века."
 
 	icon = 'icons/obj/modular_console.dmi'
 	icon_state = "console"

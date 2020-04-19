@@ -346,7 +346,7 @@
 
 
 /obj/machinery/oven_old
-	name = "oven"
+	name = "печка"
 	desc = "Cooks and boils stuff."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "oven_old"

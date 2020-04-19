@@ -9,6 +9,8 @@
 	var/container_type = 0
 	var/admin_spawned = 0	//was this spawned by an admin? used for stat tracking stuff.
 	var/datum/reagents/reagents = null
+	var/eng_desc = ""
+	var/eng_name = ""
 
 	//This atom's HUD (med/sec, etc) images. Associative list.
 	var/list/image/hud_list = null
@@ -200,10 +202,22 @@
 			f_name = ""
 		f_name += "<span class='danger'>в крови</span> [name]!"
 
-	to_chat(user, "[bicon(src)] Это [f_name]")
+	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		to_chat(user, "[bicon(src)] This is [f_name]")
+	else
+		to_chat(user, "[bicon(src)] Это [f_name]")
+
+	if(name)
+		if(eng_name && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			to_chat(user, eng_name)
+		else
+			return
 
 	if(desc)
-		to_chat(user, desc)
+		if(eng_desc && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			to_chat(user, eng_desc)
+		else
+			to_chat(user, desc)
 	// *****RM
 //	to_chat(user, "[name]: Dn:[density] dir:[dir] cont:[contents] icon:[icon] is:[icon_state] loc:[loc]")
 
@@ -212,12 +226,12 @@
 		if(reagents.reagent_list.len)
 			if(user.can_see_reagents()) //Show each individual reagent
 				for(var/datum/reagent/R in reagents.reagent_list)
-					to_chat(user, "[R.volume] единиц [R.name]")
+					to_chat(user, "[R.volume] едениц [R.name]")
 			else //Otherwise, just show the total volume
 				var/total_volume = 0
 				for(var/datum/reagent/R in reagents.reagent_list)
 					total_volume += R.volume
-				to_chat(user, "[total_volume] единиц разных реагентов")
+				to_chat(user, "[total_volume] едениц разных реагентов")
 		else
 			to_chat(user, "Ничего.")
 

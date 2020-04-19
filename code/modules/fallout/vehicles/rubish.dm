@@ -1,8 +1,8 @@
 //Fallout 13 rubish decoration
 
 /obj/structure/car/rubish1
-	name = "pre-War rubish"
-	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
+	name = "остов автомобиля"
+	desc = "Ржавый каркас автомобиля.<br>Нет, это уже нельзя починить."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "car_rubish1"
 	anchored = 1
@@ -32,8 +32,8 @@
 	S.verbs.Cut()
 
 /obj/structure/car/rubish2
-	name = "pre-War rubish"
-	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
+	name = "остов автомобиля"
+	desc = "Ржавый каркас автомобиля.<br>Нет, это уже нельзя починить."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "car_rubish2"
 	anchored = 1
@@ -63,8 +63,8 @@
 	S.verbs.Cut()
 
 /obj/structure/car/rubish3
-	name = "pre-War rubish"
-	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
+	name = "остов автомобиля"
+	desc = "Ржавый каркас автомобиля.<br>Нет, это уже нельзя починить."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "car_rubish3"
 	anchored = 1
@@ -125,8 +125,8 @@
 	S.verbs.Cut()
 
 /obj/structure/debris/v1
-	name = "pre-War building debris"
-	desc = "A pre-War building debris."
+	name = "обломки зданий"
+	desc = "Куча мусора, когда-то было зданием."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "debris1"
 	anchored = 1
@@ -156,8 +156,8 @@
 	S.verbs.Cut()
 
 /obj/structure/debris/v2
-	name = "pre-War building debris"
-	desc = "A pre-War building debris."
+	name = "обломки зданий"
+	desc = "Куча мусора, когда-то было зданием."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "debris2"
 	anchored = 1
@@ -187,8 +187,8 @@
 	S.verbs.Cut()
 
 /obj/structure/debris/v3
-	name = "pre-War building debris"
-	desc = "A pre-War building debris."
+	name = "обломки зданий"
+	desc = "Куча мусора, когда-то было зданием."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "debris3"
 	anchored = 1
@@ -218,8 +218,8 @@
 	S.verbs.Cut()
 
 /obj/structure/debris/v4
-	name = "pre-War building debris"
-	desc = "A pre-War building debris."
+	name = "обломки зданий"
+	desc = "Куча мусора, когда-то было зданием."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "debris4"
 	anchored = 1
@@ -249,8 +249,8 @@
 	S.verbs.Cut()
 
 /obj/structure/statue_fal
-	name = "Ranger statue"
-	desc = "A big ranger statue."
+	name = "статуя Рейнджера"
+	desc = "Огромная статуя Рейнджера НКР."
 	icon = 'icons/fallout/objects/structures/statue.dmi'
 	icon_state = "statue1"
 	anchored = 1

@@ -359,8 +359,10 @@
 		shock(L)
 
 /obj/item/weapon/pickaxe/rust
-	name = "rusty pickaxe"
+	name = "ржавая кирка"
 	desc = "Эта кирка знала лучшие дни."
+	eng_name = "rusted pickaxe"
+	eng_desc = "This pickaxe looks a bit... rusty."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "pickaxe_rust"
 	force = 12

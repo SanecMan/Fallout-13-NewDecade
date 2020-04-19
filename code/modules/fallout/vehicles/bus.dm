@@ -82,7 +82,8 @@
 	playsound(src, 'sound/effects/meteorimpact.ogg', rand(50,100), 1)
 
 /obj/structure/bus_door
-	name = "broken bus door"
+	name = "сломанная дверь автобуса"
+	desc = "Когда-то, это было частью автобуса."
 	icon = 'icons/fallout/objects/structures/trash.dmi'
 	icon_state = "bus_door"
 	anchored = 1
