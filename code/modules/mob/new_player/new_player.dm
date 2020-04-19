@@ -24,24 +24,32 @@
 		forceMove(locate(1,1,1))
 
 /mob/new_player/proc/new_player_panel()
-
-	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Настройка персонажа</A></p>"
+	var/output = ""
+	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
+	else
+		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>????????? ?????????</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			output += "<p>\[ <b>Готов</b> | <a href='byond://?src=\ref[src];ready=0'>Не готов</a> \]</p>"
+			if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+				output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Un-Ready</a> \]</p>"
+			else
+				output += "<p>\[ <b>?????</b> | <a href='byond://?src=\ref[src];ready=0'>?? ?????</a> \]</p>"
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Готов</a> | <b>Не готов</b> \]</p>"
-
+			if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Un-Ready</b> \]</p>"
+				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
+			else
+				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>?????</a> | <b>?? ?????</b> \]</p>"
+				output += "<p><a href='byond://?src=\ref[src];show_content=1'>?????? ???????!</a></p>"
 	else
-		//output += "<p><a href='byond://?src=\ref[src];manifest=1'>View Manifest</A></p>"
-		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Присоедениться!</A></p>"
-
-	output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить Контент!</a></p>"
-/*
-	output += "<p><a href='byond://?src=\ref[src];contribute=1'>Contribute</a></p>"
-*/
-
+		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+			output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
+		else
+			output += "<p><a href='byond://?src=\ref[src];late_join=1'>??????????????!</A></p>"
+			output += "<p><a href='byond://?src=\ref[src];show_content=1'>?????? ???????!</a></p>"
 /*
 	if(client && client.holder)
 		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"

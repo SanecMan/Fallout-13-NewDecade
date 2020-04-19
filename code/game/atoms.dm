@@ -211,7 +211,7 @@
 		if(eng_name && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
 			to_chat(user, eng_name)
 		else
-			return
+			to_chat(user, name)
 
 	if(desc)
 		if(eng_desc && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
