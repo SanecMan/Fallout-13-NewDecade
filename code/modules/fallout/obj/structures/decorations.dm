@@ -104,3 +104,51 @@
 
 /obj/structure/decoration_f13/decal/hole/large
 	icon_state = "bhole-large"
+
+/obj/structure/decoration_f13/poster
+	name = "постер"
+	desc = "ѕросто постер."
+	icon = 'icons/obj/contraband.dmi'
+	icon_state = "rolled_poster"
+	anchored = 1
+
+/obj/structure/decoration_f13/poster/v2
+	icon_state = "poster2"
+
+/obj/structure/decoration_f13/poster/v3
+	icon_state = "poster2_legit"
+
+/obj/structure/decoration_f13/poster/v4
+	icon_state = "poster3_legit"
+
+/obj/structure/decoration_f13/poster/v5
+	icon_state = "poster5_legit"
+
+/obj/structure/decoration_f13/poster/v6
+	icon_state = "poster17_legit"
+
+/obj/structure/decoration_f13/poster/v7
+	icon_state = "poster20_legit"
+
+/obj/structure/decoration_f13/poster/v8
+	icon_state = "poster21_legit"
+
+/obj/structure/decoration_f13/poster/v9
+	icon_state = "poster26_legit"
+
+/obj/structure/decoration_f13/poster/v10
+	icon_state = "poster11_legit"
+
+/obj/structure/decoration_f13/poster/v11
+	icon_state = "poster7"
+
+/obj/structure/decoration_f13/poster/v12
+	icon_state = "poster20_legit"
+
+/obj/structure/decoration_f13/poster/pinup
+	name = "пинап"
+	desc = "постер с красивой женщиной, раньше их называли пинапами..."
+	icon_state = "poster4"
+
+/obj/structure/decoration_f13/poster/pinup/v2
+	icon_state = "poster36"
