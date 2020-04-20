@@ -33,13 +33,20 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 //Data of factions. Taking all available factions of this world and showing them as list (once can show 4 max).
 	var/factions_data
 	if(parent && parent.allowed_factions)
-		for(var/i = choiced_faction_index to choiced_faction_index + 3)
-			if(i > parent.allowed_factions.len)
-				break
-			var/datum/f13_faction/faction = parent.allowed_factions[i]
-			factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>"
-	if(!factions_data)
-		factions_data = "<center>Нет доступных фракций</center>"
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			for(var/i = choiced_faction_index to choiced_faction_index + 3)
+				if(i > parent.allowed_factions.len)
+					break
+				var/datum/f13_faction/faction = parent.allowed_factions[i]
+				factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.eng_full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.eng_name]</a>"
+		else
+			for(var/i = choiced_faction_index to choiced_faction_index + 3)
+				if(i > parent.allowed_factions.len)
+					break
+				var/datum/f13_faction/faction = parent.allowed_factions[i]
+				factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>"
+		if(!factions_data)
+			factions_data = "<center>Нет доступных фракций</center>"
 
 
 // Roles data. Showing all jobs of selected faction and showing priorities.
@@ -146,27 +153,40 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 
 	var/list/data = list(
 	"saves_data" = "[saves_data]",
-	"r_name" = "[be_random_name ? "Yes" : "No"]",
+	"r_name" = "[be_random_name ? "Да" : "Нет"]",
+	"e_r_name" = "[be_random_name ? "Yes" : "No"]",
 	"name" = "[real_name]",
 
+	"e_gender" = "[gender == MALE ? "&#9794;Male" : "&#9792;Female"]",
 	"gender" = "[gender == MALE ? "&#9794;Мужчина" : "&#9792;Женщина"]",
 	"age" = "[age]",
-	"r_body" = "[be_random_body ? "Yes" : "No"]",
+	"r_body" = "[be_random_body ? "Да" : "Нет"]",
+	"e_r_body" = "[be_random_body ? "Yes" : "No"]",
 	"species" = "[pref_species ? pref_species.name : "Human"]",
 	"skin_tone" = "[skin_tone]",
 	"factions_data" = "[factions_data]",
 	"f_id" = "[choiced_faction.id]",
+	"eng_f_name" = "[choiced_faction.eng_full_name]",
 	"f_name" = "[choiced_faction.full_name]",
+	"e_f_desc" = "[choiced_faction.eng_description]",
 	"f_desc" = "[choiced_faction.description]",
+	"e_head" = "[e_head ? e_head : "Empty"]",
 	"head" = "[e_head ? e_head : "Пусто"]",
+	"e_suit" = "[e_suit ? e_suit : "Empty"]",
 	"suit" = "[e_suit ? e_suit : "Пусто"]",
+	"eng_uniform" = "[e_uniform ? e_uniform : "Empty"]",
 	"uniform" = "[e_uniform ? e_uniform : "Пусто"]",
+	"eng_shoes" = "[e_shoes ? e_shoes : "Empty"]",
 	"shoes" = "[e_shoes ? e_shoes : "Пусто"]",
 	"jobs_data" = "[jobs_data]",
+	"eng_gloves" = "[e_gloves ? e_gloves : "Empty"]",
 	"gloves" = "[e_gloves ? e_gloves : "Пусто"]",
 	"l_pocket" = "[e_l_pocket ? e_l_pocket : "Пусто"]",
+	"eng_l_pocket" = "[e_l_pocket ? e_l_pocket : "Empty"]",
+	"eng_weapon" = "[e_weapon ? e_weapon : "Empty"]",
 	"weapon" = "[e_weapon ? e_weapon : "Пусто"]",
 	"r_pocket" = "[e_r_pocket ? e_r_pocket : "Пусто"]",
+	"eng_r_pocket" = "[e_r_pocket ? e_r_pocket : "Empty"]",
 	"hair_style" = "[hair_style]",
 	"hair_color" = "#[hair_color]",
 	"f_hair_style" = "[facial_hair_style]",
@@ -197,13 +217,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 				<tr>
 					<td width='75%' valign='top'>
 						<a href='?_src_=prefs;preference=name;task=random'>&#9762; Random name</a>
-						<a href='?_src_=prefs;preference=name'>Always random name: [data["r_name"]]</a>
+						<a href='?_src_=prefs;preference=name'>Always random name: [data["e_r_name"]]</a>
 						<br>
 						<b>Name:</b>
 						<a href='?_src_=prefs;preference=name;task=input'>[data["name"]]</a>
 						<br>
 						<b>Gender:</b>
-						<a href='?_src_=prefs;preference=gender'>[data["gender"]]</a>
+						<a href='?_src_=prefs;preference=gender'>[data["e_gender"]]</a>
 						<br>
 						<b>Age:</b>
 						<a href='?_src_=prefs;preference=age;task=input'>[data["age"]]</a>
@@ -223,7 +243,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 						<a href='?_src_=prefs;preference=all;task=random'>&#9762; Random body</a>
 					</td>
 					<td>
-						<a href='?_src_=prefs;preference=all'>Always random body: [data["r_body"]]</a><br>
+						<a href='?_src_=prefs;preference=all'>Always random body: [data["e_r_body"]]</a><br>
 					</td>
 				</tr>
 				<tr>
@@ -278,33 +298,33 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 									<img src="[data["f_id"]].png" alt="logo">
 								</div>
 							</center>
-							<b><center>[data["f_name"]]</center></b>
-							[data["f_desc"]]
+							<b><center>[data["eng_f_name"]]</center></b>
+							[data["e_f_desc"]]
 						</div>
 					</div>
 				</div>
 				<div class="right_block_frame">
 					<div class="right_block_frame_item">
 						<h3>Head</h3>
-						<a href='?_src_=prefs;preference=chooise;task=equip;item=head;' [data["d_head"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["head"], data["d_head"] )]\"" : "" ]>[CutText(data["head"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=head;' [data["d_head"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["head"], data["d_head"] )]\"" : "" ]>[CutText(data["e_head"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=head'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=head'>&gt;</a>
 					</div>
 					<div class="right_block_frame_item">
 						<h3>Suit</h3>
-						<a href='?_src_=prefs;preference=chooise;task=equip;item=armor' [data["d_suit"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["suit"], data["d_suit"])]\"" : "" ]>[CutText(data["suit"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=armor' [data["d_suit"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["suit"], data["d_suit"])]\"" : "" ]>[CutText(data["e_suit"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=armor'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=armor'>&gt;</a>
 					</div>
 					<div class="right_block_frame_item">
 						<h3>Uniform</h3>
-						<a href='?_src_=prefs;preference=chooise;task=equip;item=uniform' [data["d_uniform"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["uniform"], data["d_uniform"])]\"" : "" ]>[CutText(data["uniform"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=uniform' [data["d_uniform"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["uniform"], data["d_uniform"])]\"" : "" ]>[CutText(data["eng_uniform"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=uniform'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=uniform'>&gt;</a>
 					</div>
 					<div class="right_block_frame_item">
 						<h3>Shoes</h3>
-						<a href='?_src_=prefs;preference=chooise;task=equip;item=shoes' [data["d_shoes"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["shoes"], data["d_shoes"])]\"" : "" ]>[CutText(data["shoes"], MAX_ITEM_LENGTH)]</a><br>
+						<a href='?_src_=prefs;preference=chooise;task=equip;item=shoes' [data["d_shoes"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["shoes"], data["d_shoes"])]\"" : "" ]>[CutText(data["eng_shoes"], MAX_ITEM_LENGTH)]</a><br>
 						<a href='?_src_=prefs;preference=previous;task=equip;item=shoes'>&lt;</a>
 						<a href='?_src_=prefs;preference=next;task=equip;item=shoes'>&gt;</a>
 					</div>
@@ -322,13 +342,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 					<div class="left_mid">
 						<div class="mid_item">
 							<h3> Gloves </h3>
-							<a href='?_src_=prefs;preference=chooise;task=equip;item=gloves' [data["d_gloves"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["gloves"], data["d_gloves"])]\"" : "" ]>[CutText(data["gloves"], MAX_ITEM_LENGTH)]</a><br>
+							<a href='?_src_=prefs;preference=chooise;task=equip;item=gloves' [data["d_gloves"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["gloves"], data["d_gloves"])]\"" : "" ]>[CutText(data["eng_gloves"], MAX_ITEM_LENGTH)]</a><br>
 							<a href='?_src_=prefs;preference=previous;task=equip;item=gloves'>&lt;</a>
 							<a href='?_src_=prefs;preference=next;task=equip;item=gloves'>&gt;</a>
 						</div>
 						<div class="mid_item">
 							<h3> Pocket 1 </h3>
-							<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_1' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["r_pocket"], MAX_ITEM_LENGTH)]</a><br>
+							<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_1' [data["d_r_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["r_pocket"], data["d_r_pocket"])]\"" : "" ]>[CutText(data["eng_r_pocket"], MAX_ITEM_LENGTH)]</a><br>
 							<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_1'>&lt;</a>
 							<a href='?_src_=prefs;preference=next;task=equip;item=pocket_1'>&gt;</a>
 						</div>
@@ -336,13 +356,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 					<div class="right_mid">
 						<div class="mid_item">
 							<h3>Pocket </h3>
-							<a href='?_src_=prefs;preference=chooise;task=equip;item=weapon' [data["d_weapon"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["weapon"], data["d_weapon"])]\"" : "" ]>[CutText(data["weapon"], MAX_ITEM_LENGTH)]</a><br>
+							<a href='?_src_=prefs;preference=chooise;task=equip;item=weapon' [data["d_weapon"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["weapon"], data["d_weapon"])]\"" : "" ]>[CutText(data["eng_weapon"], MAX_ITEM_LENGTH)]</a><br>
 							<a href='?_src_=prefs;preference=previous;task=equip;item=weapon'>&lt;</a>
 							<a href='?_src_=prefs;preference=next;task=equip;item=weapon'>&gt;</a>
 						</div>
 						<div class="mid_item">
 							<h3> Pocket 2</h3>
-							<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_2' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["l_pocket"], MAX_ITEM_LENGTH)]</a><br>
+							<a href='?_src_=prefs;preference=chooise;task=equip;item=pocket_2' [data["d_l_pocket"] ? "class=\"tooltip\" data-tooltip=\"[ItemTooltip(data["l_pocket"], data["d_l_pocket"])]\"" : "" ]>[CutText(data["eng_l_pocket"], MAX_ITEM_LENGTH)]</a><br>
 							<a href='?_src_=prefs;preference=previous;task=equip;item=pocket_2'>&lt;</a>
 							<a href='?_src_=prefs;preference=next;task=equip;item=pocket_2'>&gt;</a>
 						</div>

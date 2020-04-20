@@ -30,6 +30,7 @@
 	density = 1
 	smooth = SMOOTH_OLD
 	layer = ABOVE_ALL_MOB_LAYER
+	pass_flags = LETPASSTHROW
 	canSmoothWith = list(/turf/closed/wall, /turf/closed/wall/f13/ruins, /turf/closed/wall/f13/store, /turf/closed/wall/f13/supermart, /turf/closed/wall/f13/wood, /obj/structure/fence,
 	/turf/closed/mineral, /turf/closed/wall/f13/wood/house, /turf/closed/wall/r_wall/rust, /turf/closed/wall/rust, /turf/closed/wall/vault)
 

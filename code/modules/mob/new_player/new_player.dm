@@ -34,14 +34,16 @@
 		if(ready)
 			if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 				output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Un-Ready</a> \]</p>"
+				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 			else
 				output += "<p>\[ <b>Готов</b> | <a href='byond://?src=\ref[src];ready=0'>Не готов</a> \]</p>"
+				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
 		else
 			if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Un-Ready</b> \]</p>"
 				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 			else
-				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>?Готов</a> | <b>Не готов</b> \]</p>"
+				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Готов</a> | <b>Не готов</b> \]</p>"
 				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
 	else
 		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
@@ -50,10 +52,13 @@
 		else
 			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Присоедениться!</A></p>"
 			output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
+
+
 /*
 	if(client && client.holder)
 		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 */
+
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()

@@ -64,6 +64,9 @@
 	if(sufix)
 		I.name = "[I.name] [sufix]"
 
-	to_chat(usr, "<font color='blue'>Вы установили [name] на [I.name].</font>")
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		to_chat(usr, "<font color='blue'>You installed [name] on [I.name].</font>")
+	else
+		to_chat(usr, "<font color='blue'>Вы установили [name] на [I.name].</font>")
 
 	qdel(src)

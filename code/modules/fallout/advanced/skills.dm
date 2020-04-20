@@ -131,34 +131,64 @@
 /datum/skills/proc/getPointDescription(type)
 	var/description
 
-	switch(type)
-		if("small_guns")
-			description = "The use, care and general knowledge of small firearms - pistols, SMGs and rifles."
-		if("big_guns")
-			description = "The operation and maintenance of really big guns - miniguns, rocket launchers, flamethrowers and such.)"
-		if("barter")
-			description = "Trading and trade-related tasks. The ability to get better prices for items you sell, and lower prices for items you buy."
-		if("energy_weapons")
-			description = "The care and feeding of energy-based weapons. How to arm and operate weapons that use laser or plasma technology."
-		if("explosives")
-			description = "The finding and removal of traps. Also the setting of explosives for demolition purposes."
-		if("lockpick")
-			description = "The skill of opening locks without the proper key. The use of lockpicks or electronic lockpicks will greatly enhance this skill."
-		if("medicine")
-			description = "The higher a player's Medicine skill, the more hit points they will replenish when using a stimpak and the more effective they are at using any other medicinal item (such as Rad-X or RadAway)."
-		if("melee_weapons")
-			description = "Using non-ranged weapons in hand-to-hand or melee combat - knives, sledgehammers, spears, clubs and so on."
-		if("repair")
-			description = "The practical application of the Science skill, for fixing of broken equipment, machinery and electronics."
-		if("sneak")
-			description = "Quiet movement, and the ability to remain unnoticed. If successful, you will be much harder to locate. You cannot run and sneak at the same time."
-		if("speech")
-			description = "The ability to communicate in a practical and efficient manner. The skill of convincing others that your position is correct. The ability to lie and not get caught."
-		if("unarmed")
-			description = "A combination of martial arts, boxing and other hand-to-hand martial arts. Combat with your hands and feet."
-		if("science")
-			description = "Covers a variety of high-technology skills, such as computers, biology, physics, and geology."
-	return description
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		switch(type)
+			if("small_guns")
+				description = "The use, care and general knowledge of small firearms - pistols, SMGs and rifles."
+			if("big_guns")
+				description = "The operation and maintenance of really big guns - miniguns, rocket launchers, flamethrowers and such.)"
+			if("barter")
+				description = "Trading and trade-related tasks. The ability to get better prices for items you sell, and lower prices for items you buy."
+			if("energy_weapons")
+				description = "The care and feeding of energy-based weapons. How to arm and operate weapons that use laser or plasma technology."
+			if("explosives")
+				description = "The finding and removal of traps. Also the setting of explosives for demolition purposes."
+			if("lockpick")
+				description = "The skill of opening locks without the proper key. The use of lockpicks or electronic lockpicks will greatly enhance this skill."
+			if("medicine")
+				description = "The higher a player's Medicine skill, the more hit points they will replenish when using a stimpak and the more effective they are at using any other medicinal item (such as Rad-X or RadAway)."
+			if("melee_weapons")
+				description = "Using non-ranged weapons in hand-to-hand or melee combat - knives, sledgehammers, spears, clubs and so on."
+			if("repair")
+				description = "The practical application of the Science skill, for fixing of broken equipment, machinery and electronics."
+			if("sneak")
+				description = "Quiet movement, and the ability to remain unnoticed. If successful, you will be much harder to locate. You cannot run and sneak at the same time."
+			if("speech")
+				description = "The ability to communicate in a practical and efficient manner. The skill of convincing others that your position is correct. The ability to lie and not get caught."
+			if("unarmed")
+				description = "A combination of martial arts, boxing and other hand-to-hand martial arts. Combat with your hands and feet."
+			if("science")
+				description = "Covers a variety of high-technology skills, such as computers, biology, physics, and geology."
+		return description
+	else
+		switch(type)
+			if("small_guns")
+				description = "Общие знания об мелком и среднем оружии и его обслуживании - пистолеты, ПП и винтовки."
+			if("big_guns")
+				description = "Общие знания об крупном оружии и его обслуживании - миниганы, ракетницы, огнемёты."
+			if("barter")
+				description = "Торвгля. Возможность договариваться, снижая цену у торговцев."
+			if("energy_weapons")
+				description = "Общие знания об энергитическом оружии и его обслуживании - лазерное и плазменное."
+			if("explosives")
+				description = "Способность замечать ловушки и взрывчатку. А так-же знания о том, как этой взрывчаткой пользоваться."
+			if("lockpick")
+				description = "Способность взламывать двери и не только. Отмычки, хорошо дополняют это умение."
+			if("medicine")
+				description = "Чем выше этот навык, тем больше очков здоровья вы получите при использовании стимуляторов, АнтиРадина или РадИкс."
+			if("melee_weapons")
+				description = "Общие знания об оружии ближнего боя - ножи, биты, трубы и прочее."
+			if("repair")
+				description = "Практическое воплощение Науки, способность ремонтировать вещи, элеектронику и.т.п."
+			if("sneak")
+				description = "Способность незаметно передвигаться, очень важна если вы плохо сражаетесь."
+			if("speech")
+				description = "Умение вести диалог, одно из лучших умений для выживания на пустоши."
+			if("unarmed")
+				description = "Общие знания о том, как драться не имея ничего под рукой."
+			if("science")
+				description = "Благодаря этому, определяются ваши познания в физике, биологии и прочих науках."
+		return description
 
 /*
 /datum/skills/proc/ui(type)

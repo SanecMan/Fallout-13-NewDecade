@@ -195,6 +195,7 @@
 /atom/proc/examine(mob/user)
 	//This reformat names to get a/an properly working on item descriptions when they are bloody
 	var/f_name = "\a [src]."
+	var/eng_f_name = "\a [src.eng_name]"
 	if(src.blood_DNA && !istype(src, /obj/effect/decal))
 		if(gender == PLURAL)
 			f_name = "some "
@@ -203,15 +204,9 @@
 		f_name += "<span class='danger'>в крови</span> [name]!"
 
 	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
-		to_chat(user, "[bicon(src)] This is [f_name]")
+		to_chat(user, "[bicon(src)] This is [eng_f_name]")
 	else
 		to_chat(user, "[bicon(src)] Это [f_name]")
-
-	if(name)
-		if(eng_name && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
-			to_chat(user, eng_name)
-		else
-			to_chat(user, name)
 
 	if(desc)
 		if(eng_desc && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))

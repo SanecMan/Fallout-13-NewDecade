@@ -1,6 +1,8 @@
 /obj/machinery/computer/vertibird_console
-	name = "Vertibird control"
+	name = "пульт управления винтокрылом"
 	desc = "Используется для управления Винтокрылом."
+	eng_name = "Vertibird control"
+	eng_desc = "This can be used for vertibird control."
 	icon = 'icons/fallout/machines/terminals.dmi'
 	icon_state = "enclave"
 	icon_screen = "enclave_on"

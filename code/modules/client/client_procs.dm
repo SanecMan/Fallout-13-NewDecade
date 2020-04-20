@@ -254,13 +254,14 @@ var/next_external_rsc = 0
 
 	screen += void
 
+/*
 	if(prefs.lastchangelog != changelog_hash) //bolds the changelog button on the interface so we know there are updates.
 		to_chat(src, "<span class='info'>Вы не прочли список обновлений.</span>")
 		if(config.aggressive_changelog)
 			changelog()
 		else
 			winset(src, "infowindow.changelog", "font-style=bold")
-
+*/
 	if(ckey in clientmessages)
 		for(var/message in clientmessages[ckey])
 			to_chat(src, message)

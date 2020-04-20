@@ -157,12 +157,21 @@ var/global/image/fire_overlay = image("icon" = 'icons/effects/fire.dmi', "icon_s
 /obj/item/examine(mob/user) //This might be spammy. Remove?
 	..()
 	var/pronoun
-	if(src.gender == PLURAL)
-		pronoun = "They are"
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(src.gender == PLURAL)
+			pronoun = "They are"
+		else
+			pronoun = "This is"
 	else
-		pronoun = "Это"
+		if(src.gender == PLURAL)
+			pronoun = "Они"
+		else
+			pronoun = "Это"
 	var/size = weightclass2text(src.w_class)
-	to_chat(user, "[pronoun] [size] предмет.")//e.g. They are a small item. or It is a bulky item.
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		to_chat(user, "[pronoun] [size] item.")//e.g. They are a small item. or It is a bulky item.
+	else
+		to_chat(user, "[pronoun] [size] предмет.")
 
 
 	if(user.research_scanner) //Mob has a research scanner active.

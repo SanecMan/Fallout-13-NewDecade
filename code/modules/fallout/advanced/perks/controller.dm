@@ -53,8 +53,12 @@
 
 /datum/perkController/proc/uiChoose()
 	if(count == 0)
-		to_chat(usr, "You need more experience to do this!")
-		return
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			to_chat(usr, "You need more experience to do this!")
+			return
+		else
+			to_chat(usr, "Вам необходимо больше опыта для этого!")
+			return
 
 	if(perkPool.len == 0)
 		fillPerkPool()
@@ -94,23 +98,42 @@
 	owner.browse_rsc_icon("icons/perks.dmi", "[first.icon_state]")
 	owner.browse_rsc_icon("icons/perks.dmi", "[second.icon_state]")
 
-	html += {"
-	<style>table tr { text-align: center }</style>
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		html += {"
+		<style>table tr { text-align: center }</style>
 
-	<table width="100%">
-		<tr><td>[first.name]</td><td>[second.name]</td></tr>
-		<tr><td><img src='[first.icon_state].png' class='center'></td><td><img src='[second.icon_state].png' class='center'></td></tr>
-		<tr><td>[first.description]</td><td>[second.description]</td></tr>
-		<tr>
-			<td><a href='?src=\ref[src];perk=1'>Выбрать</a></td>
-			<td><a href='?src=\ref[src];perk=2'>Выбрать</a></td>
-		</tr>
-	</table'>"}
+		<table width="100%">
+			<tr><td>[first.name]</td><td>[second.name]</td></tr>
+			<tr><td><img src='[first.icon_state].png' class='center'></td><td><img src='[second.icon_state].png' class='center'></td></tr>
+			<tr><td>[first.description]</td><td>[second.description]</td></tr>
+			<tr>
+				<td><a href='?src=\ref[src];perk=1'>Choose</a></td>
+				<td><a href='?src=\ref[src];perk=2'>Choose</a></td>
+			</tr>
+		</table'>"}
 
-	qdel(first)
-	qdel(second)
+		qdel(first)
+		qdel(second)
 
-	return html
+		return html
+	else
+		html += {"
+		<style>table tr { text-align: center }</style>
+
+		<table width="100%">
+			<tr><td>[first.name]</td><td>[second.name]</td></tr>
+			<tr><td><img src='[first.icon_state].png' class='center'></td><td><img src='[second.icon_state].png' class='center'></td></tr>
+			<tr><td>[first.description]</td><td>[second.description]</td></tr>
+			<tr>
+				<td><a href='?src=\ref[src];perk=1'>Выбрать</a></td>
+				<td><a href='?src=\ref[src];perk=2'>Выбрать</a></td>
+			</tr>
+		</table'>"}
+
+		qdel(first)
+		qdel(second)
+
+		return html
 
 /datum/perkController/Topic(href, href_list)
 	if(..())

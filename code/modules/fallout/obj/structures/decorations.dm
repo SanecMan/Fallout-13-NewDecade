@@ -18,6 +18,7 @@
 	name = "плита"
 	desc = "Довоенная плита, ржавая, старая и нерабочая."
 	icon_state = "gasstove"
+	pass_flags = LETPASSTHROW
 
 /obj/structure/decoration_f13/radiator
 	name = "радиатор"

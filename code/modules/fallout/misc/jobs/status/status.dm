@@ -35,6 +35,8 @@ proc/get_mobs_by_status(status)
 
 	var/welcome_text = ""
 
+	var/eng_welcome_text = ""
+
 	var/verbs = list()
 
 	var/change_faction = 1
@@ -74,10 +76,17 @@ mob/proc/set_status(var/status)
 
 	src.status = S.id
 	var/text
-	text += "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>"
-	if(S.welcome_text)
-		text += "<br>[S.welcome_text]"
-	to_chat(src, text)
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		text += "<span class='notice'>Now you're <span style='color: [S.color];'>[S.name]</span>.</span>"
+		if(S.welcome_text)
+			text += "<br>[S.eng_welcome_text]"
+		to_chat(src, text)
+	else
+		text += "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>"
+		if(S.welcome_text)
+			text += "<br>[S.welcome_text]"
+		to_chat(src, text)
+
 	src.verbs += S.verbs
 	src.allow_recipes += S.craft_recipes
 	if(S.purge_faction != null)
@@ -118,9 +127,14 @@ mob/proc/set_status(var/status)
 		var/datum/f13_faction/F = get_faction_datum(src.social_faction)
 		to_chat(M, "<span class='notice'>Вы присоеденились к <span style='color: [F.color];'>[F.name]</span> faction.</span>")
 		if(F.welcome_text)
-			to_chat(M, "<br>[F.welcome_text]")
-	M.set_status(status)
-	to_chat(M, "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>")
+			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+				to_chat(M, "<br>[F.eng_welcome_text]")
+				M.set_status(status)
+				to_chat(M, "<span class='notice'>Now you're <span style='color: [S.color];'>[S.name]</span>.</span>")
+			else
+				to_chat(M, "<br>[F.welcome_text]")
+				M.set_status(status)
+				to_chat(M, "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>")
 	if(S.welcome_text)
 		to_chat(M, "<br>[S.welcome_text]")
 

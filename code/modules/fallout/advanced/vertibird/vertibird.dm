@@ -23,8 +23,12 @@
 
 /obj/vertibird/attack_hand(mob/user)
 	if(locked)
-		to_chat(usr, "Закртыо.")
-		return
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			to_chat(usr, "Locked.")
+			return
+		else
+			to_chat(usr, "Закртыо.")
+			return
 
 	if(inFly)
 		return
@@ -33,11 +37,19 @@
 
 /obj/vertibird/proc/toggleLock(var/mob/user)
 	if(locked)
-		locked = FALSE
-		to_chat(user, "Вы открыли винтокрыл.")
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			locked = FALSE
+			to_chat(user, "You unlocked VB-02.")
+		else
+			locked = FALSE
+			to_chat(user, "Вы открыли винтокрыл.")
 	else
-		locked = TRUE
-		to_chat(user, "Вы закрыли винтокрыл.")
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			locked = TRUE
+			to_chat(user, "You locked VB-02.")
+		else
+			locked = TRUE
+			to_chat(user, "Вы закрыли винтокрыл.")
 
 /obj/vertibird/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/key/vertibird))
@@ -45,14 +57,22 @@
 
 /obj/vertibird/MouseDrop_T(obj/O, mob/user)
 	if(locked)
-		to_chat(usr, "Закрыто.")
-		return
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			to_chat(usr, "Locked.")
+			return
+		else
+			to_chat(usr, "Закрыто.")
+			return
 
 	moveIn(O)
 
 /obj/vertibird/proc/getIn(mob/U)
-	src.visible_message("[U] заходит в винтокрыл.")
-	U.forceMove(vertibirdEnterZone)
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		src.visible_message("[U] enters Vertibird.")
+		U.forceMove(vertibirdEnterZone)
+	else
+		src.visible_message("[U] заходит в винтокрыл.")
+		U.forceMove(vertibirdEnterZone)
 
 /obj/vertibird/proc/moveIn(obj/O)
 	O.forceMove(vertibirdEnterZone)

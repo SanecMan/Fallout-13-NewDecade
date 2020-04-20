@@ -12,8 +12,12 @@
 
 /mob/living/simple_animal/hostile/eyebot/virtual/proc/enter(var/mob/user)
 	if(ckey)
-		to_chat(user, "Eyebot already under control!")
-		return
+		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+			to_chat(user, "Eyebot already under control!")
+			return
+		else
+			to_chat(user, "Робоглаз уже управляется кем-то!")
+			return
 
 	pilot = user
 	ckey = user.ckey
@@ -21,7 +25,6 @@
 /mob/living/simple_animal/hostile/eyebot/virtual/proc/leave()
 	set name = "Stop Control"
 	set category = "EYEBOT"
-
 	pilot.ckey = ckey
 
 /mob/living/simple_animal/hostile/eyebot/virtual/death(gibbed)

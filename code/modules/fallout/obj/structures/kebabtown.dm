@@ -2,6 +2,8 @@
 
 /obj/machinery/light/kebab
 	name = "Kebabtown sign"
+	desc = "Выглядит отвратительно."
+	eng_desc = "So awful..."
 	icon_state = "Kebab0"
 	base_state = "Kebab"
 	icon = 'icons/fallout/objects/structures/kebabtown.dmi'
@@ -9,7 +11,7 @@
 	brightness = 4
 	active_power_usage = 50
 	density = 1
-	desc = "So awful..."
+	pass_flags = LETPASSTHROW
 	light_color = LIGHT_COLOR_YELLOW
 	light_type = null
 
@@ -18,6 +20,8 @@
 
 /obj/machinery/light/kebab_sign
 	name = "Kebabtown"
+	desc = "Выглядит отвратительно."
+	eng_desc = "So awful..."
 	icon_state = "kebab_sign0"
 	base_state = "kebab_sign"
 	icon = 'icons/fallout/objects/structures/kebabtown.dmi'
@@ -25,7 +29,7 @@
 	brightness = 4
 	active_power_usage = 50
 	density = 0
-	desc = "So awful..."
+	pass_flags = LETPASSTHROW
 	light_color = LIGHT_COLOR_YELLOW
 	light_type = null
 

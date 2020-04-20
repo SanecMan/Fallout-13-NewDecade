@@ -1,6 +1,6 @@
 /datum/perk
 	var/name = "Dummy"
-	var/description = "Вы не должны видеть этого."
+	var/description = ""
 	var/icon = "icons/perks.dmi"
 	var/icon_state = ""
 

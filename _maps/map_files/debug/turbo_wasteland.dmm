@@ -29,18 +29,18 @@
 "aC" = (/turf/closed/wall/f13/wood/house,/area/f13/wasteland)
 "aD" = (/obj/structure/window/fulltile/house,/obj/structure/barricade/wooden/planks/pregame,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aE" = (/obj/structure/window/fulltile/house{tag = "icon-housewindowbroken (NORTHEAST)"; icon_state = "housewindowbroken"},/obj/structure/barricade/wooden/planks/pregame,/turf/open/floor/f13/wood,/area/f13/wasteland)
-"aF" = (/obj/structure/sink{dir = 8; icon_state = "sink"; pixel_x = -12; tag = "icon-sink (WEST)"},/obj/structure/mirror{pixel_x = -32},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"aF" = (/mob/living/simple_animal/hostile/ghoul,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "aG" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aH" = (/obj/structure/simple_door/room,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aI" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
-"aJ" = (/obj/structure/bed,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"aJ" = (/obj/structure/sink{dir = 8; icon_state = "sink"; pixel_x = -12; tag = "icon-sink (WEST)"},/obj/structure/mirror{pixel_x = -32},/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aK" = (/obj/structure/dresser,/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aL" = (/obj/structure/toilet{tag = "icon-toilet00 (NORTH)"; icon_state = "toilet00"; dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aM" = (/turf/closed/wall/f13/wood/interior,/area/f13/wasteland)
-"aN" = (/obj/effect/spawner/lootdrop/crafts,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
-"aO" = (/obj/structure/closet/cabinet,/obj/item/weapon/reagent_containers/hypospray/medipen/tuberculosiscure,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"aN" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"aO" = (/obj/structure/bed,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aP" = (/obj/structure/closet/crate/bin,/obj/effect/spawner/lootdrop/wmelee_low,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
-"aQ" = (/obj/structure/sink/kitchen{pixel_y = 28},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"aQ" = (/obj/effect/spawner/lootdrop/crafts,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aR" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aS" = (/obj/structure/decoration/clock/old{pixel_y = 32},/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aT" = (/obj/structure/simple_door/interior,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
@@ -57,13 +57,29 @@
 "be" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/indestructible/ground/dirt{dir = 1; icon_state = "dirt"},/area/f13/wasteland)
 "bf" = (/obj/structure/fence,/turf/open/indestructible/ground/dirt{tag = "icon-dirt (WEST)"; icon_state = "dirt"; dir = 8},/area/f13/wasteland)
 "bg" = (/obj/effect/decal/cleanable/dirt,/obj/structure/table/wood,/obj/item/ammo_casing/shotgun/buckshot,/obj/item/ammo_casing/shotgun/beanbag,/obj/item/ammo_casing/shotgun/breaching,/obj/item/ammo_casing/shotgun/rubbershot,/obj/item/ammo_casing/shotgun/meteorshot,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"bh" = (/obj/structure/closet/cabinet,/obj/item/weapon/reagent_containers/hypospray/medipen/tuberculosiscure,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "bi" = (/obj/item/weapon/grenade/mine,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "bj" = (/obj/item/weapon/grenade/mine,/turf/open/indestructible/ground/dirt,/area/f13/wasteland)
 "bk" = (/obj/structure/barricade/sandbags/metal,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "bl" = (/obj/structure/table/wood,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "bm" = (/obj/structure/barricade/sandbags/wooden,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "bn" = (/obj/effect/decal/cleanable/dirt,/turf/closed/wall/f13/wood/house,/area/f13/wasteland)
+"bo" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "bp" = (/obj/structure/barricade/sandbags{dir = 1},/turf/open/indestructible/ground/dirt{tag = "icon-dirt (NORTH)"; icon_state = "dirt"; dir = 1},/area/f13/wasteland)
+"bq" = (/obj/structure/sink/kitchen{pixel_y = 28},/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"br" = (/obj/structure/chair/wood/worn,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"bs" = (/obj/structure/table/wood,/obj/item/weapon/katana,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"bt" = (/obj/structure/table/wood,/obj/item/weapon/katana/chinese,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"bu" = (/mob/living/simple_animal/hostile/eyebot,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"bv" = (/obj/item/weapon/grenade/mine,/mob/living/simple_animal/hostile/eyebot/virtual,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"bw" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/computer/eyebots,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"bx" = (/obj/effect/landmark/start{name = "Prime"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"by" = (/obj/effect/landmark/start{name = "Trooper"},/turf/open/floor/f13/wood,/area/f13/building)
+"bz" = (/obj/effect/landmark/start{name = "Citizen"},/turf/open/floor/f13/wood,/area/f13/building)
+"bA" = (/obj/effect/landmark/start{name = "Mayor"},/turf/open/floor/f13/wood_st,/area/f13/building)
+"bB" = (/obj/effect/landmark/latejoin,/turf/open/indestructible/ground/desert,/area/f13/forest)
+"bC" = (/obj/structure/table/wood,/obj/item/weapon/pickaxe/rust,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"bD" = (/obj/structure/table/wood,/obj/effect/decal/cleanable/dirt,/obj/item/weapon/pickaxe/rust,/turf/open/floor/f13/wood,/area/f13/wasteland)
 
 (1,1,1) = {"
 abababababababababababababababababababababababababababababababababababababababab
@@ -71,12 +87,12 @@ abababababababababababababababababababababababababababababababababababababababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
+abahahahahahahahahahahahahahahahahahaFahahahahaFahahahahahahahahahahahahahababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
+abahahahahahahahahahahahahahahahahahahahahahahaFahahahahahaFahahahahahahahababab
+abahahahahahahahahahahahahahahahahahaFahahahahahahahahahahahahahahahahahahababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
-abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
-abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
-abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
-abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
+abahahahahahahahahahahahahahahahahahahahahahahaFahahahahahahahahahahahahahababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
@@ -85,24 +101,24 @@ abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
 abahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahababab
 abaBaBaCaCaCaCaCaDaEaCaCamaoaoaoaoaoaoaoaoaoaoaoaoajajaoaoaoaoaoaoaoaoaoaoababab
-abahahaCaFaGaHaIaIaJaKaCakalalalalalalalalalalalalalalalalalalalalalalalalababab
-abahahaCaIaLaMaNaIaIaOaCakalalalalalalalalalalalalalalalalalalalalalalalalababab
+abahahaCaJaGaHaIaNaOaKaCakalalalalalalalalalalalalalalalalalalalalalalalalababab
+abahahaCaNaLaMaQaIaNbhaCakalalalalalalalalalalalalalalalalalalalalalalalalababab
 abahaCaCaMaMaMaMaHaMaMaCakalalalalalalalalalalalalalalalalalalalalalalalalababab
-abahaCaPaGaQaMaIaRaSaIaTakalalalazbebebebebebebebebeananbebebebebebebebebeababab
-abahaUaIaVaIaHaIaWaIaVaCakalalalbfahahahahahahahahahahahahahahahahahahahahababab
-abahaCaXaYaZaMaIbabbbcaCakalalalbfahbiahahahahahahahbkbkahahahahahahbiahahababab
-abaBaCaCbdaCaCaCaEaEaCaCakalalalbfahahahahahbiahahahahahahahahahahahahahahababab
-abaiacafacafacafacacafacapalalalbfahahahahahahahahahahahahahahahahahahahahababab
-abaqalalalalalalalalalalalalalalbfahahahahahahahahahbmbmahahbiahahahahahahababab
+abahaCaPbobqaMbzaRaSbAaTakalalalazbebebebebebebebebeananbebebebebebebebebeababab
+abahaUaNbraNaHaIaWaIaVaCakalalalbfahahahahahahahahahahahahahahahahahahahahababab
+abahaCaXaYaZaMbybabbbcaCakalalalbfbxbxahbuahahahahahbkbkahahahahahahbiahahababab
+abaBaCaCbdaCaCaCaEaEaCaCakalalalbfbxbxahbBahbvahahahahahahahahahahahahahahababab
+abaiacafacafacafacacafacapalalalbfbxbxahahahahahahahahahahahahahahahahahahababab
+abaqalalalalalalalalalalalalalalbfahahahbBahbBahahahbmbmahahbiahahahahahahababab
 abaqbjalalalalalalalalalalalalalbfahahbiahahahahahahahahahahahahahahahahahababab
-abaqalalalalalalalalalalalalalalbfahahahahahahahahahahahahahahahahahbiahahababab
+abaqalalalalalalalalalalalalalalbfahahahahahbBahahahahahahahahahahahbiahahababab
 abasatatatbpbpatatatatataAalalalbfahahahahahahahahahahahahahahahahahahahahababab
 ababaCaCaEaEaCaTaCaCaCaCakalalalbfahahahahahahahahahahahahahahahahahahahahababab
-ababaCblblblblaIaybgaraEakalalalbfahahahahahahahahahahahahahahahahahahahahababab
-ababaCbcaIaIaIagaIaIaaaEakalalalbfahahahahahahahadahahahahahahahahahahahahababab
+ababaCblbCbsbtaIaybgaraEakalalalbfahahahahahahahahahahahahahahahahahahahahababab
+ababaCbDaIaIaIagaIaIaaaEakalalalbfahahahahahahahadahahahahahahahahahahahahababab
 ababaCbcaIaMaMaHaMaIaeaCakalalalbfahahahahahahahahahahahahahahahahahahahahababab
 ababaCbcaIaMauaIawaIaxaEakalalalbfahahahahahahahahahahahahahahahahahahahahababab
-ababaCavaIaMaIaIawaIaxaEakalalalbfahahahahahahahahahahahahahahahahahahahahababab
+ababaCavaIaMbwaIawaIaxaEakalalalbfahahahahahahahahahahahahahahahahahahahahababab
 ababaCaCaCaCaCaCaCbnbnaCakalalalbfahahahahahahahahahahahahahahahahahahahahababab
 abababababababababababababababababababababababababababababababababababababababab
 abababababababababababababababababababababababababababababababababababababababab

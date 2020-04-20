@@ -73,10 +73,15 @@ obj/flagpole/proc/onCaptured(var/faction)
 
 	var/datum/f13_faction/faction_datum = get_faction_datum(faction)
 	var/faction_name = faction_datum.name
-	to_chat(world, "<font size='4' color='red'>Точка [flag_location] была захвачена [faction_name]!</font>")
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		to_chat(world, "<font size='4' color='red'>[flag_location] was captured by [faction_name]!</font>")
+	else
+		to_chat(world, "<font size='4' color='red'>Точка [flag_location] была захвачена [faction_name]!</font>")
 
 obj/flagpole/proc/onLoosing()
-	to_chat(world, "<font size='3' color='blue'>Кто-то пытается захватить точку [flag_location]</font>")
-
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		to_chat(world, "<font size='3' color='blue'>Someone trying to capture [flag_location]</font>")
+	else
+		to_chat(world, "<font size='3' color='blue'>Кто-то пытается захватить точку [flag_location]</font>")
 obj/flagpole/proc/onUpdate()
 	flag.pixel_y = 10 + flag_tickets

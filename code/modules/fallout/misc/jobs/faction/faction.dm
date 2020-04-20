@@ -24,14 +24,18 @@ proc/get_faction_members(var/faction)
 
 /datum/f13_faction
 	var/name = "UNKNOWN"
+	var/eng_name = "UNKNOWN"
 	var/full_name = "UNKNOWN"
+	var/eng_full_name = "UNKNOWN"
 	var/id = "none"
 	var/flags = null
 	var/list/jobs = list()
 
 	var/welcome_text = "" //Showing text on faction joining
+	var/eng_welcome_text = "" //Showing text on faction joining
 	var/color = "#171717"
 	var/description = "<b>Alignment: Chaotic Badmin</b><br>Something's wrong!<br><i>Badmins spawn shit and factions engine has broken.</i>"
+	var/eng_description = "<b>Alignment: Chaotic Badmin</b><br>Something's wrong!<br><i>Badmins spawn shit and factions engine has broken.</i>"
 	var/preview_image = 'html/factions/neutral.png'
 
 	var/head_status = null //Main status at this faction. Currently using for leader voting
@@ -205,17 +209,23 @@ mob/proc/set_faction(var/faction)
 /datum/f13_faction/neutral
 	name = "Нейтралы"
 	full_name = "Независимые выживальщики"
+	eng_description = "<b>Alignment: True Neutral</b><br>Wastelanders - A catch-all term for anyone living in the wasteland who are not affiliated with any other groups.<br>They make a subsistence living off the land, trade with local settlements, and try not to be ravaged by the abundant (and usually hostile) wildlife, or bands of roaming raider gangs and slavers.<br><i>Home, home on the wastes...</i>"
 	description = "<b>Предназначение: Истинные Нейтралы</b><br>Wastelanders - A catch-all term for anyone living in the wasteland who are not affiliated with any other groups.<br>They make a subsistence living off the land, trade with local settlements, and try not to be ravaged by the abundant (and usually hostile) wildlife, or bands of roaming raider gangs and slavers.<br><i>Home, home on the wastes...</i>"
+	eng_name = "Neutrals"
+	eng_full_name = "Independed Survivors"
 	id = "none"
 	karma = 0
 
 /datum/f13_faction/city
 	name = "Город"
+	full_name = "Выходцы из местного городка."
+	eng_name = "City"
+	eng_full_name = "City Dwellers."
 	color = "#804B00"
 	id = "city"
 	head_status = "mayor"
 	preview_image = 'html/factions/city.png'
-	full_name = "City Dwellers"
+	eng_description = "<b>Alignment: Lawful Neutral</b><br>City dwellers - A group of wastelanders that have holed up in the town to wait out the worst and hope for the best.<br>As the City evolved, its citizens became different from the rest of the Wasteland dwellers - they value the safety of a city, prefer better food and clothing, and mostly trust the elected Mayor - even if the decisions made are not the best.<br><i>In Mayor We Trust!</i>"
 	description = "<b>Предназначение: Законопослушные нейтралы</b><br>City dwellers - A group of wastelanders that have holed up in the town to wait out the worst and hope for the best.<br>As the City evolved, its citizens became different from the rest of the Wasteland dwellers - they value the safety of a city, prefer better food and clothing, and mostly trust the elected Mayor - even if the decisions made are not the best.<br><i>In Mayor We Trust!</i>"
 	flags = HAVE_FREQ
 	area = /area/f13/city
@@ -223,20 +233,19 @@ mob/proc/set_faction(var/faction)
 	karma = 10
 
 /datum/f13_faction/raider
-	name = "Работорговцы"
+	name = "Работорговцы и Рейдеры"
+	full_name = "Банда разнообразного отребья."
+	eng_name = "Riders&Slavers"
+	eng_full_name = "Thug Gang"
 	color = "#804B00"
 	id = "raiders"
 	head_status = "gangleader"
 	preview_image = 'html/factions/raider.png'
-	full_name = "Slaver Gang"
+	eng_description = "<b>Alignment: Chaotic Evil</b><br>Slavers - Any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland, and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
 	description = "<b>Предназначение: Хаотичное Зло</b><br>Slavers - Any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland, and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
 //	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/raiders
 	karma = -10
-	welcome_text = "МОИ ЗАДАЧИ ТАКОВЫ:<br>\
-1. ГРАБЬ НАСИЛУЙ УБИВАЙ!<br>\
-2. Но надо не забывать подчиняться главе нашему! <br>\
-3. Хотя может лучше крышевать лошков?<br>"
 
 /*
 /datum/f13_faction/vault
@@ -259,9 +268,12 @@ mob/proc/set_faction(var/faction)
 */
 /datum/f13_faction/brotherhood
 	name = "Братство"
+	full_name = "Братство Стали"
+	eng_name = "Brotherhood"
+	eng_full_name = "Brotherhood of Steel"
 	color = "#00215a"
 	id = "bs"
-	full_name = "Brotherhood of Steel"
+	eng_description = "<b>Alignment: Lawful Good</b><br>The Brotherhood of Steel, or simply the Brotherhood - A quasi-religious technological organization operating across the ruins of post-War North America, with its roots stemming from the United States Armed Forces and the government-sponsored scientific community from before the Great War.<br>The Brotherhood members rely heavily on subordination and strict Code of Conduct.<br><i>The Steel Endures!</i>"
 	description = "<b>Предназначение: Законопослушное добро</b><br>The Brotherhood of Steel, or simply the Brotherhood - A quasi-religious technological organization operating across the ruins of post-War North America, with its roots stemming from the United States Armed Forces and the government-sponsored scientific community from before the Great War.<br>The Brotherhood members rely heavily on subordination and strict Code of Conduct.<br><i>The Steel Endures!</i>"
 	preview_image = 'html/factions/brotherhood.png'
 	head_status = "elder"
@@ -269,18 +281,15 @@ mob/proc/set_faction(var/faction)
 	area = /area/f13/brotherhood
 //	verbs = list(/mob/proc/begin_head_voting)
 	karma = 10
-	welcome_text = "Ваши текущие задачи:<br>\
-1. В братстве ваша задача неукоснительно следить за вашими законами и нормами, ваша ПА не столько сильна, сколько люди в ней!<br>\
-2. Иерархии и цепи командований - Рекрут > Рыцарь > Паладин > Старейшина. Писарь > Паладин > Старейшина. Нарушать цепь запрещено, пока в братстве достаточно звеньев определенного участка цепи! <br>\
-3. Здесь, в техасе, задача братства - поиск технологий и борьба с анклавом, да да, анклав активно будет с вами воевать, следовательно, вы так же должны не утрачивать инициативу, помните, только в ваших руках технологии не уничтожат мир!<br>\
-4. Не ПА делает паладина паладином, а паладин делает силовую броню несокрушимой, только беспрерывные тренировки, боевой дух и дисциплина помогут вам в борьбе с врагом, не рассчитывайте на лучшую экипировку, не думайте что враг слаб. Уважайте его! Если по каким то причинам, вы не можете эффективно использовать вашу экипировку, доложите об этом старейшине! Ну а если вы сам старейшина, помните, всю грубую работу за вас делают паладины и рыцари, пока вы даете им свою мудрость.<br>"
-
 
 /datum/f13_faction/enclave
 	name = "Анклав"
+	full_name = "Великий Анклав!"
+	eng_name = "Enclave"
+	eng_full_name = "Great Enclave!"
 	color = "#005A20"
 	id = "enclave"
-	full_name = "Enclave"
+	eng_description = "<b>Alignment: Lawful Evil</b><br>The Enclave - A secretive political, scientific, and militaristic organization that is descended directly from members of the pre-War United States government.<br>They claim to be the legally-sanctioned continuation of the government, while also styling themselves and their overall demeanor as such.<br>Enclave members take pride in being the last known concentrated bastion of pure, unmutated humanity."
 	description = "<b>Предназначение: Законопослушное зло</b><br>The Enclave - A secretive political, scientific, and militaristic organization that is descended directly from members of the pre-War United States government.<br>They claim to be the legally-sanctioned continuation of the government, while also styling themselves and their overall demeanor as such.<br>Enclave members take pride in being the last known concentrated bastion of pure, unmutated humanity."
 	preview_image = 'html/factions/enclave.png'
 	head_status = "colonel"
@@ -288,11 +297,6 @@ mob/proc/set_faction(var/faction)
 	area = /area/f13/enclave
 	karma = -5
 //	verbs = list(/mob/proc/begin_head_voting)
-	welcome_text = "Сейчас ваши задачи таковы:<br>\
-1. Как солдат анклава, вы действуете в интересах анклава, а так же служите анклаву, вы родились ради этого! Вас этому учили!<br>\
-2. Ваша задача не дать технологии попасть в руки братства стали, именно вы, солдат единственный защитник суверенитета США. Тем не менее, не тащите в базу хлам, новый бункер никто не построит, если его засрать, солдат!<br>\
-3. Аборигены, мутанты, и прочие - биомусор оставленный нам, от прошлого. Не стоит тратить на него ваши силы, но не дайте им стать в силе равными вам!<br>\
-4. И последнее, ваша ПА и плазмавинтовка - все еще на балансе анклава, утрата экипировки грозит вам пожизненным сроком службы, и еще повезет если солдатом, а не лаборантом.<br>"
 
 /*datum/f13_faction/ahs
 	name = "Hubologists"
@@ -307,28 +311,29 @@ mob/proc/set_faction(var/faction)
 
 /datum/f13_faction/ncr
 	name = "НКР"
+	full_name = "Новая Калифорнийская Республика"
+	eng_name = "NCR"
+	eng_full_name = "New California Republic"
 	id = "ncr"
 	color = "#020080"
 	flags = HAVE_FREQ | HAVE_FLAG
-	full_name = "Новая Калифорнийская Республика"
+	eng_description = "<b>Alignment: Lawful Good</b><br>New California Republic, or simply, NCR - большая, демократическая федерация с огромным населением в Калифорнии и несколькими штатами.<br>НКР симпатизирует многим ценностям старого мира, таким как Демократия, персональная свобода и законопослушность.<br>Так-же они занимаются восстановлением инфраструктуры, экономики и мира между людьми."
 	description = "<b>Предназначение: Законопослушное добро</b><br>Новая Калифорнийская Республика, или НКР - большая, демократическая федерация с огромным населением в Калифорнии и несколькими штатами.<br>НКР симпатизирует многим ценностям старого мира, таким как Демократия, персональная свобода и законопослушность.<br>Так-же они занимаются восстановлением инфраструктуры, экономики и мира между людьми."
 	preview_image = 'html/factions/ncr.png'
 	head_status = "ncr_general"
 //	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/ncr
 	karma = 5
-	welcome_text = "Сейчас ваши задачи таковы:<br>\
-1. Как солдат НКР вы должны наводить порядок вокруг города, уничтожайте любого рейдера что видите рядом, разыскивайте и изничтожайте членов Легиона.<br>\
-2. Как солдат НКР, вы должны хранить жителей от ужасов Пустоши.<br>\
-3. Твое выживание, тоже важно!<br>"
-
 
 
 /datum/f13_faction/legion
 	name = "Легион"
+	full_name = "Легион Цезаря"
+	eng_name = "Legion"
+	eng_full_name = "Caesar's Legion"
 	head_status = "legate"
-	full_name = "Caesar's Legion"
-	description = "<b>Alignment: Lawful Evil</b><br>Caesar's Legion, or simply the Legion - An autocratic, traditionalist, reactionary slaver society, and a totalitarian dictatorship that is based on the ancient Roman Empire.<br>Its legionaries are a well-organized, culturally insular fighting force.<br>The Legion is first and foremost a slave army, the sole owner of which is Caesar.<br>As a slave army, the Legion maintains a very strict hierarchy with significant division of roles.<br><i>Ave Caesar!</i>"
+	eng_description = "<b>Alignment: Lawful Evil</b><br>Caesar's Legion, or simply the Legion - An autocratic, traditionalist, reactionary slaver society, and a totalitarian dictatorship that is based on the ancient Roman Empire.<br>Its legionaries are a well-organized, culturally insular fighting force.<br>The Legion is first and foremost a slave army, the sole owner of which is Caesar.<br>As a slave army, the Legion maintains a very strict hierarchy with significant division of roles.<br><i>Ave Caesar!</i>"
+	description = "<b>Предназначение: Законопослушное Зло</b><br>Caesar's Legion, or simply the Legion - An autocratic, traditionalist, reactionary slaver society, and a totalitarian dictatorship that is based on the ancient Roman Empire.<br>Its legionaries are a well-organized, culturally insular fighting force.<br>The Legion is first and foremost a slave army, the sole owner of which is Caesar.<br>As a slave army, the Legion maintains a very strict hierarchy with significant division of roles.<br><i>Ave Caesar!</i>"
 	preview_image = 'html/factions/legion.png'
 	id = "legion"
 	color = "#C24D44"
@@ -337,26 +342,21 @@ mob/proc/set_faction(var/faction)
 	karma = -5
 //	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm, \
 						 /datum/table_recipe/legion_encryption_key)
-	welcome_text = "Сейчас ваши задачи таковы:<br>\
-	1. Как член Легиона, вы должны подчиняться любому выше вас по званию.<br>\
-	2. Вы должны захватывать жителей в рабство, а так-же искоренять любое восстание.<br>\
-	3. Как солдат Легиона, вы должны вступать в бой с НКР. ДЕРИТЕСЬ НАСМЕРТЬ, ЗА ЦЕЗАРЯ НАХУЙ!"
-
 
 /datum/f13_faction/followers
 	name = "Последователи"
+	full_name = "Последователи Апокалипсиса"
+	eng_name = "Followers"
+	eng_full_name = "Followers of Apocalypse"
 	color = "#005A20"
 	id = "followers"
-	full_name = "Последователи Апокалипсиса"
+	eng_description = "<b>Alignment: Neutral Good</b><br>The Followers of the Apocalypse, or simply the Followers - A post-War organization whose goal is to tend to the inhabitants of the wasteland, as well as to ensure that the horrors of the Great War are never to be repeated.<br>To that end, they serve as keepers of knowledge, a position which provides them with the skills they need to carry out their mission.<br>They don't follow a single Great Leader, but instead a handful of independent Leaders for each group."
 	description = "<b>Предназначение: Нейтральное Добро</b><br>The Followers of the Apocalypse, or simply the Followers - A post-War organization whose goal is to tend to the inhabitants of the wasteland, as well as to ensure that the horrors of the Great War are never to be repeated.<br>To that end, they serve as keepers of knowledge, a position which provides them with the skills they need to carry out their mission.<br>They don't follow a single Great Leader, but instead a handful of independent Leaders for each group."
+	preview_image = 'html/factions/followers.png'
 	preview_image = 'html/factions/followers.png'
 	head_status = "leader"
 	area = /area/f13/followers
 	karma = 10
-	welcome_text = "Ваши задачи:<br>\
-1. Вы - важная часть пустоши, без вас, эти бедолаги все помрут!<br>\
-2. Оказывайте помощь всем, кому посчитаете нужным.<br>\
-3. Да благославит вас Ремеди.<br>"
 /*
 /datum/f13_faction/vault
 	name = "Убежище"
