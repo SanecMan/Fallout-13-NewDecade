@@ -99,9 +99,8 @@
 
 			for(var/line in sortList(Lines))
 				msg += "[line]\n"
-
-		msg += "<b>Всего игроков: [length(Lines)]</b>"
-		to_chat(src, msg)
+			msg += "<b>Всего игроков: [length(Lines)]</b>"
+			to_chat(src, msg)
 /client/verb/adminwho()
 	set category = "Admin"
 	set name = "Adminwho"
