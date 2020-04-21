@@ -12,8 +12,8 @@
  * Pens
  */
 /obj/item/weapon/pen
-	desc = "Обычная черная ручка."
-	name = "ручка"
+	desc = "РћР±С‹С‡РЅР°СЏ С‡РµСЂРЅР°СЏ СЂСѓС‡РєР°."
+	name = "СЂСѓС‡РєР°"
 	icon = 'icons/fallout/objects/bureaucracy.dmi'
 	icon_state = "pen"
 	item_state = "pen"
@@ -31,7 +31,7 @@
 	return(BRUTELOSS)
 
 /obj/item/weapon/pen/marker
-	name = "черный маркер"
+	name = "С‡РµСЂРЅС‹Р№ РјР°СЂРєРµСЂ"
 	desc = "<b>For marking down the most important things.</b>"
 	icon_state = "marker"
 
@@ -56,7 +56,7 @@
 	colour = "white"
 
 /obj/item/weapon/pen/gold
-	name = "золотая ручка"
+	name = "Р·РѕР»РѕС‚Р°СЏ СЂСѓС‡РєР°"
 	desc = "It's a fancy golden pen, filled with extremely rare golden ink."
 	icon_state = "pen_gold"
 	colour = "orange"
@@ -85,9 +85,9 @@
 
 	if(!force)
 		if(M.can_inject(user, 1))
-			to_chat(user, "<span class='warning'>Вы укололи [M] ручкой.</span>")
+			to_chat(user, "<span class='warning'>Р’С‹ СѓРєРѕР»РѕР»Рё [M] СЂСѓС‡РєРѕР№.</span>")
 			if(!stealth)
-				to_chat(M, "<span class='danger'>Вы ощущаете небольной укол!</span>")
+				to_chat(M, "<span class='danger'>Р’С‹ РѕС‰СѓС‰Р°РµС‚Рµ РЅРµР±РѕР»СЊРЅРѕР№ СѓРєРѕР»!</span>")
 			. = 1
 
 		add_logs(user, M, "stabbed", src)
@@ -166,8 +166,8 @@
 //For now, these are just pens writing in grey.
 
 /obj/item/weapon/pen/pencil
-	name = "карандаш"
-	desc = "Дешевое и компактное средство для писания. Но не эффективное."
+	name = "РєР°СЂР°РЅРґР°С€"
+	desc = "Р”РµС€РµРІРѕРµ Рё РєРѕРјРїР°РєС‚РЅРѕРµ СЃСЂРµРґСЃС‚РІРѕ РґР»СЏ РїРёСЃР°РЅРёСЏ. РќРѕ РЅРµ СЌС„С„РµРєС‚РёРІРЅРѕРµ."
 	icon_state = "pencil-y"
 	colour = "grey"
 

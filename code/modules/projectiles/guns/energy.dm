@@ -77,7 +77,7 @@
 		power_supply = A
 		power_supply.forceMove(src)
 		recharge_newshot(1)
-		to_chat(user, "<span class='greenannounce'>Вы вставили новую ячейку в [src].</span>")
+		to_chat(user, "<span class='greenannounce'>Р’С‹ РІСЃС‚Р°РІРёР»Рё РЅРѕРІСѓСЋ СЏС‡РµР№РєСѓ РІ [src].</span>")
 		update_icon()
 
 		if(O)
@@ -93,7 +93,7 @@
 	if(power_supply)
 		unload_ammo(user)
 	else
-		to_chat(user, "<span class='warning'>Тут нет ячейки.</span>")
+		to_chat(user, "<span class='warning'>РўСѓС‚ РЅРµС‚ СЏС‡РµР№РєРё.</span>")
 
 /obj/item/weapon/gun/energy/proc/unload_ammo(mob/living/user)
 	if(power_supply)
@@ -101,7 +101,7 @@
 		user.put_in_hands(power_supply)
 		power_supply = null
 		update_icon()
-		to_chat(user, "<span class='notice'>Вы изъяли ячейку из [src].</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РёР·СЉСЏР»Рё СЏС‡РµР№РєСѓ РёР· [src].</span>")
 
 /obj/item/weapon/gun/energy/attack_hand(mob/living/user)
 	if(user.get_inactive_held_item() == src)

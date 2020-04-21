@@ -57,14 +57,14 @@
 	if(istype(I, /obj/item/weapon/reagent_containers) && (I.container_type & OPENCONTAINER))
 		. = 1 //no afterattack
 		if(beaker)
-			to_chat(user, "<span class='warning'>Мензурка уже вставлена в аппарат!</span>")
+			to_chat(user, "<span class='warning'>РњРµРЅР·СѓСЂРєР° СѓР¶Рµ РІСЃС‚Р°РІР»РµРЅР° РІ Р°РїРїР°СЂР°С‚!</span>")
 			return
 
 		if(!user.drop_item())
 			return
 		beaker = I
 		I.forceMove(src)
-		to_chat(user, "<span class='notice'>Вы вставляете сосуд в машину.</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РІСЃС‚Р°РІР»СЏРµС‚Рµ СЃРѕСЃСѓРґ РІ РјР°С€РёРЅСѓ.</span>")
 		icon_state = "mixer1b"
 		return
 	return ..()

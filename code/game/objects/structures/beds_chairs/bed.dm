@@ -8,7 +8,7 @@
  * Beds
  */
 /obj/structure/bed
-	name = "кровать"
+	name = "РєСЂРѕРІР°С‚СЊ"
 	desc = "This is used to lie in, sleep in or strap on."
 	icon_state = "bed"
 	icon = 'icons/fallout/objects/structures/furniture.dmi'
@@ -171,22 +171,22 @@
 	icon_state = "alienbed"
 
 /obj/structure/bed/mattress
-	name = "матрас"
+	name = "РјР°С‚СЂР°СЃ"
 	desc = "A nosy little dummy, are you?<br>A mattress is a large pad for supporting the reclining body, of course most of wasteland dwellers can't afford having a bed, so this is the most common sleeping spot around."
 	icon_state = "mattress"
 
 /obj/structure/bed/mattress/pillow
-	name = "мягкий матрас"
+	name = "РјСЏРіРєРёР№ РјР°С‚СЂР°СЃ"
 	desc = "A common soft matress.<br>Most of wasteland dwellers can't afford having a bed, so this is the most common sleeping spot around.<br>Wow, there's a soft pillow on top of it!"
 	icon_state = "mattress_pillow"
 
 /obj/structure/bed/mattress/holey
-	name = "дырявый матрас"
+	name = "РґС‹СЂСЏРІС‹Р№ РјР°С‚СЂР°СЃ"
 	desc = "A common, not that soft matress.<br>Someone or something has made a several holes in it."
 	icon_state = "mattress_holey"
 
 /obj/structure/bed/mattress/dirty/New()
 	..()
-	name = "грязный матрас"
+	name = "РіСЂСЏР·РЅС‹Р№ РјР°С‚СЂР°СЃ"
 	desc = "An awfully smelly, dirty mattress.<br>It has soaked with something foul, so now it smells worse than a ghoul's piss..."
 	icon_state = pick("mattress_dirty","mattress_bloody","mattress_dried","mattress_mossy")

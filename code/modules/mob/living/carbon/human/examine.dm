@@ -7,17 +7,17 @@
 	var/t_has = p_have()
 	var/t_is = p_are()
 
-	var/msg = "<span class='info'>*---------* Это <EM>[src.name]</EM>!\n"
+	var/msg = "<span class='info'>*---------* Р­С‚Рѕ <EM>[src.name]</EM>!\n"
 
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 	var/wielded = 0
 
-	//переводчик//
+	//РїРµСЂРµРІРѕРґС‡РёРє//
 	if(src.client && (src.client.prefs.chat_toggles & CHAT_LANGUAGE))
 		msg = "<span class='info'>*---------* This is <EM>[src.name]</EM>!\n"
 	else
-		msg = "<span class='info'>*---------* Это <EM>[src.name]</EM>!\n"
+		msg = "<span class='info'>*---------* Р­С‚Рѕ <EM>[src.name]</EM>!\n"
 
 	//uniform
 	if(w_uniform && !(slot_w_uniform in obscured))
@@ -26,40 +26,40 @@
 		if(istype(w_uniform,/obj/item/clothing/under))
 			var/obj/item/clothing/under/U = w_uniform
 			if(U.hastie)
-				tie_msg += " с [bicon(U.hastie)]  [U.hastie]"
+				tie_msg += " СЃ [bicon(U.hastie)]  [U.hastie]"
 
 		if(w_uniform.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(w_uniform)] [w_uniform.gender==PLURAL?"some":"a"] покрытую кровью [w_uniform.name][tie_msg]!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(w_uniform)] [w_uniform.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚СѓСЋ РєСЂРѕРІСЊСЋ [w_uniform.name][tie_msg]!</span>\n"
 		else
-			msg += "[t_He] [t_is] носит [bicon(w_uniform)] [w_uniform][tie_msg].\n"
+			msg += "[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(w_uniform)] [w_uniform][tie_msg].\n"
 
 	//head
 	if(head)
 		if(head.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(head)] [head.gender==PLURAL?"some":"a"] покрытую кровью [head.name] на своей голове!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(head)] [head.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚СѓСЋ РєСЂРѕРІСЊСЋ [head.name] РЅР° СЃРІРѕРµР№ РіРѕР»РѕРІРµ!</span>\n"
 		else
-			msg += "[t_He] [t_is] носит [bicon(head)] [head] на своей голове.\n"
+			msg += "[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(head)] [head] РЅР° СЃРІРѕРµР№ РіРѕР»РѕРІРµ.\n"
 
 	//suit/armor
 	if(wear_suit)
 		if(wear_suit.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(wear_suit)] [wear_suit.gender==PLURAL?"some":"a"] покрытый кровью [wear_suit.name]!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(wear_suit)] [wear_suit.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚С‹Р№ РєСЂРѕРІСЊСЋ [wear_suit.name]!</span>\n"
 		else
-			msg += "[t_He] [t_is] носит [bicon(wear_suit)] [wear_suit].\n"
+			msg += "[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(wear_suit)] [wear_suit].\n"
 
 		//suit/armor storage
 		if(s_store)
 			if(s_store.blood_DNA)
-				msg += "<span class='warning'>[t_He] [t_is] тащит [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] покрытый кровью [s_store.name] на своём [wear_suit.name]!</span>\n"
+				msg += "<span class='warning'>[t_He] [t_is] С‚Р°С‰РёС‚ [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚С‹Р№ РєСЂРѕРІСЊСЋ [s_store.name] РЅР° СЃРІРѕС‘Рј [wear_suit.name]!</span>\n"
 			else
-				msg += "[t_He] [t_is] тащит [bicon(s_store)] [s_store] на своем [wear_suit.name].\n"
+				msg += "[t_He] [t_is] С‚Р°С‰РёС‚ [bicon(s_store)] [s_store] РЅР° СЃРІРѕРµРј [wear_suit.name].\n"
 
 	//back
 	if(back)
 		if(back.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(back)] [back.gender==PLURAL?"some":"a"] покрытый кровью [back] на своей спине.</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(back)] [back.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚С‹Р№ РєСЂРѕРІСЊСЋ [back] РЅР° СЃРІРѕРµР№ СЃРїРёРЅРµ.</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(back)] [back] на своей спине.\n"
+			msg += "[t_He] [t_has] [bicon(back)] [back] РЅР° СЃРІРѕРµР№ СЃРїРёРЅРµ.\n"
 
 	//Hands
 	for(var/obj/item/I in held_items)
@@ -69,68 +69,68 @@
 				if(W.wielded)
 					wielded = 1
 			if(I.blood_DNA)
-				msg += "<span class='warning'>[t_He] [t_is] держит [bicon(I)] [I.gender==PLURAL?"some":"a"] покрытый кровью [I.name] в своих [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))]!</span>\n"
+				msg += "<span class='warning'>[t_He] [t_is] РґРµСЂР¶РёС‚ [bicon(I)] [I.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚С‹Р№ РєСЂРѕРІСЊСЋ [I.name] РІ СЃРІРѕРёС… [wielded ? "СЂСѓРєР°С…" : get_held_index_name(get_held_index_of_item(I))]!</span>\n"
 			else
-				msg += "[t_He] [t_is] держит [bicon(I)] [I] в своих [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))].\n"
+				msg += "[t_He] [t_is] РґРµСЂР¶РёС‚ [bicon(I)] [I] РІ СЃРІРѕРёС… [wielded ? "СЂСѓРєР°С…" : get_held_index_name(get_held_index_of_item(I))].\n"
 
 	//gloves
 	if(gloves && !(slot_gloves in obscured))
 		if(gloves.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(gloves)] [gloves.gender==PLURAL?"some":"a"] покрытые кровью [gloves.name] на своих руках!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(gloves)] [gloves.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚С‹Рµ РєСЂРѕРІСЊСЋ [gloves.name] РЅР° СЃРІРѕРёС… СЂСѓРєР°С…!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(gloves)]  [gloves] на своих руках.\n"
+			msg += "[t_He] [t_has] [bicon(gloves)]  [gloves] РЅР° СЃРІРѕРёС… СЂСѓРєР°С….\n"
 	else if(blood_DNA)
 		var/hand_number = get_num_arms()
 		if(hand_number)
-			msg += "<span class='warning'>[t_He] [t_has] [hand_number > 1 ? "" : ""] покрытую кровью руки!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [hand_number > 1 ? "" : ""] РїРѕРєСЂС‹С‚СѓСЋ РєСЂРѕРІСЊСЋ СЂСѓРєРё!</span>\n"
 
 	//handcuffed?
 
 	//handcuffed?
 	if(handcuffed)
 		if(istype(handcuffed, /obj/item/weapon/restraints/handcuffs/cable))
-			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] связан кабелем</span>\n"
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] СЃРІСЏР·Р°РЅ РєР°Р±РµР»РµРј</span>\n"
 		else
-			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] в наручниках!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] РІ РЅР°СЂСѓС‡РЅРёРєР°С…!</span>\n"
 
 	//belt
 	if(belt)
 		if(belt.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(belt)] [belt.gender==PLURAL?"some":"a"] покрытый кровью [belt.name] вокруг своего пояса!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(belt)] [belt.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚С‹Р№ РєСЂРѕРІСЊСЋ [belt.name] РІРѕРєСЂСѓРі СЃРІРѕРµРіРѕ РїРѕСЏСЃР°!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(belt)] [belt] вокруг [t_his] пояса.\n"
+			msg += "[t_He] [t_has] [bicon(belt)] [belt] РІРѕРєСЂСѓРі [t_his] РїРѕСЏСЃР°.\n"
 
 	//shoes
 	if(shoes && !(slot_shoes in obscured))
 		if(shoes.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] покрытые кровью [shoes.name] на своих ногах!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚С‹Рµ РєСЂРѕРІСЊСЋ [shoes.name] РЅР° СЃРІРѕРёС… РЅРѕРіР°С…!</span>\n"
 		else
-			msg += "[t_He] [t_is] носит [bicon(shoes)]  [shoes] на [t_his] ногах.\n"
+			msg += "[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(shoes)]  [shoes] РЅР° [t_his] РЅРѕРіР°С….\n"
 
 	//mask
 	if(wear_mask && !(slot_wear_mask in obscured))
 		if(wear_mask.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":"a"] покрытую кровью [wear_mask.name] на своём лице!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚СѓСЋ РєСЂРѕРІСЊСЋ [wear_mask.name] РЅР° СЃРІРѕС‘Рј Р»РёС†Рµ!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(wear_mask)]  [wear_mask] на своём лице.\n"
+			msg += "[t_He] [t_has] [bicon(wear_mask)]  [wear_mask] РЅР° СЃРІРѕС‘Рј Р»РёС†Рµ.\n"
 
 	if (wear_neck && !(slot_neck in obscured))
-		msg += "[t_He] [t_is] носит [bicon(src.wear_neck)]  [src.wear_neck] вокруг своей шеи.\n"
+		msg += "[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(src.wear_neck)]  [src.wear_neck] РІРѕРєСЂСѓРі СЃРІРѕРµР№ С€РµРё.\n"
 
 	//eyes
 	if(glasses && !(slot_glasses in obscured))
 		if(glasses.blood_DNA)
-			msg += "<span class='warning'>[t_He] [t_has] [bicon(glasses)] [glasses.gender==PLURAL?"some":"a"] покрытые кровью [glasses] скрывающие [t_his] глаза!</span>\n"
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(glasses)] [glasses.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚С‹Рµ РєСЂРѕРІСЊСЋ [glasses] СЃРєСЂС‹РІР°СЋС‰РёРµ [t_his] РіР»Р°Р·Р°!</span>\n"
 		else
-			msg += "[t_He] [t_has] [bicon(glasses)]  [glasses] скрывающие [t_his] глаза.\n"
+			msg += "[t_He] [t_has] [bicon(glasses)]  [glasses] СЃРєСЂС‹РІР°СЋС‰РёРµ [t_his] РіР»Р°Р·Р°.\n"
 
 	//ears
 	if(ears && !(slot_ears in obscured))
-		msg += "[t_He] [t_has] [bicon(ears)]  [ears] на своих ушах.\n"
+		msg += "[t_He] [t_has] [bicon(ears)]  [ears] РЅР° СЃРІРѕРёС… СѓС€Р°С….\n"
 
 	//ID
 	if(wear_id)
-		msg += "[t_He] [t_is] носит [bicon(wear_id)] [wear_id].\n"
+		msg += "[t_He] [t_is] РЅРѕСЃРёС‚ [bicon(wear_id)] [wear_id].\n"
 
 	if(src.status != "Wastelander" && !skipface)
 		var/datum/status/S = get_status_datum(src.status)
@@ -158,10 +158,10 @@
 		appears_dead = 1
 		if(getorgan(/obj/item/organ/brain))//Only perform these checks if there is no brain
 			if(suiciding)
-				msg += "<span class='warning'>[t_He] пытается совершить самоубийство... нет надежды спасти.</span>\n"
+				msg += "<span class='warning'>[t_He] РїС‹С‚Р°РµС‚СЃСЏ СЃРѕРІРµСЂС€РёС‚СЊ СЃР°РјРѕСѓР±РёР№СЃС‚РІРѕ... РЅРµС‚ РЅР°РґРµР¶РґС‹ СЃРїР°СЃС‚Рё.</span>\n"
 			if(hellbound)
-				msg += "<span class='warning'>[t_His] похоже, душа покинула [t_his] тело.  Реанимация невозможна.</span>\n"
-			msg += "<span class='deadsay'>Конечности не двигаются. Жизнь окончательно покинула это тело."
+				msg += "<span class='warning'>[t_His] РїРѕС…РѕР¶Рµ, РґСѓС€Р° РїРѕРєРёРЅСѓР»Р° [t_his] С‚РµР»Рѕ.  Р РµР°РЅРёРјР°С†РёСЏ РЅРµРІРѕР·РјРѕР¶РЅР°.</span>\n"
+			msg += "<span class='deadsay'>РљРѕРЅРµС‡РЅРѕСЃС‚Рё РЅРµ РґРІРёРіР°СЋС‚СЃСЏ. Р–РёР·РЅСЊ РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕ РїРѕРєРёРЅСѓР»Р° СЌС‚Рѕ С‚РµР»Рѕ."
 			if(!key)
 				var/foundghost = 0
 				if(mind)
@@ -172,10 +172,10 @@
 								foundghost = 0
 							break
 				if(!foundghost)
-					msg += " и [t_his] душа покинула тело"
+					msg += " Рё [t_his] РґСѓС€Р° РїРѕРєРёРЅСѓР»Р° С‚РµР»Рѕ"
 			msg += "...</span>\n"
 		else if(get_bodypart("head")) //Brain is gone, doesn't matter if they are AFK or present. Check for head first tho. Decapitation has similar message.
-			msg += "<span class='deadsay'>Похоже, что [t_his] мозг отсутствует...</span>\n"
+			msg += "<span class='deadsay'>РџРѕС…РѕР¶Рµ, С‡С‚Рѕ [t_his] РјРѕР·Рі РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚...</span>\n"
 
 	var/temp = getBruteLoss() //no need to calculate each of these twice
 
@@ -186,21 +186,21 @@
 		var/obj/item/bodypart/BP = X
 		missing -= BP.body_zone
 		for(var/obj/item/I in BP.embedded_objects)
-			msg += "<B>[t_He] [t_has] \a [bicon(I)] [I] застрял в [t_his] [BP.name]!</B>\n"
+			msg += "<B>[t_He] [t_has] \a [bicon(I)] [I] Р·Р°СЃС‚СЂСЏР» РІ [t_his] [BP.name]!</B>\n"
 
 	//stores missing limbs
 	var/l_limbs_missing = 0
 	var/r_limbs_missing = 0
 	for(var/t in missing)
 		if(t=="head")
-			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] отсутствует!</B><span class='warning'>\n"
+			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚!</B><span class='warning'>\n"
 			continue
 		if(t == "l_arm" || t == "l_leg")
 			l_limbs_missing++
 		else if(t == "r_arm" || t == "r_leg")
 			r_limbs_missing++
 
-		msg += "<B>[capitalize(t_his)] [parse_zone(t)] отсутствует!</B>\n"
+		msg += "<B>[capitalize(t_his)] [parse_zone(t)] РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚!</B>\n"
 
 	if(l_limbs_missing >= 2 && r_limbs_missing == 0)
 		msg += "[t_He] looks all right now.\n"
@@ -211,16 +211,16 @@
 
 	if(temp)
 		if(temp < 30)
-			msg += "[t_He] [t_has] небольшие подтёки крови.\n"
+			msg += "[t_He] [t_has] РЅРµР±РѕР»СЊС€РёРµ РїРѕРґС‚С‘РєРё РєСЂРѕРІРё.\n"
 		else
-			msg += "<B>[t_He] [t_has] тяжелые кровоподтёки!</B>\n"
+			msg += "<B>[t_He] [t_has] С‚СЏР¶РµР»С‹Рµ РєСЂРѕРІРѕРїРѕРґС‚С‘РєРё!</B>\n"
 
 	temp = getFireLoss()
 	if(temp)
 		if(temp < 30)
-			msg += "[t_He] [t_has] небольшие ожоги.\n"
+			msg += "[t_He] [t_has] РЅРµР±РѕР»СЊС€РёРµ РѕР¶РѕРіРё.\n"
 		else
-			msg += "<B>[t_He] [t_has] тяжелые ожоги!</B>\n"
+			msg += "<B>[t_He] [t_has] С‚СЏР¶РµР»С‹Рµ РѕР¶РѕРіРё!</B>\n"
 
 	temp = getCloneLoss()
 	if(temp)
@@ -231,35 +231,35 @@
 
 
 	if(fire_stacks > 0)
-		msg += "[t_He] [t_is] покрыт чем-то горючим.\n"
+		msg += "[t_He] [t_is] РїРѕРєСЂС‹С‚ С‡РµРј-С‚Рѕ РіРѕСЂСЋС‡РёРј.\n"
 	if(fire_stacks < 0)
 		msg += "[t_He] looks a little soaked.\n"
 
 
 	if(pulledby && pulledby.grab_state)
-		msg += "[t_He] [t_is] сдерживается хваткой [pulledby].\n"
+		msg += "[t_He] [t_is] СЃРґРµСЂР¶РёРІР°РµС‚СЃСЏ С…РІР°С‚РєРѕР№ [pulledby].\n"
 
 	if(nutrition < NUTRITION_LEVEL_STARVING - 50)
-		msg += "[t_He] [t_is] сильно истощен.\n"
+		msg += "[t_He] [t_is] СЃРёР»СЊРЅРѕ РёСЃС‚РѕС‰РµРЅ.\n"
 	else if(nutrition >= NUTRITION_LEVEL_FAT)
 		if(user.nutrition < NUTRITION_LEVEL_STARVING - 50)
 			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"
 		else
-			msg += "[t_He] [t_is] немного пухляшка.\n"
+			msg += "[t_He] [t_is] РЅРµРјРЅРѕРіРѕ РїСѓС…Р»СЏС€РєР°.\n"
 
 	if(blood_volume < BLOOD_VOLUME_SAFE)
-		msg += "[t_He] [t_has] бледную кожу.\n"
+		msg += "[t_He] [t_has] Р±Р»РµРґРЅСѓСЋ РєРѕР¶Сѓ.\n"
 
 	if(bleedsuppress)
-		msg += "[t_He] [t_is] чем-то перебинтован.\n"
+		msg += "[t_He] [t_is] С‡РµРј-С‚Рѕ РїРµСЂРµР±РёРЅС‚РѕРІР°РЅ.\n"
 	else if(bleed_rate)
 		if(reagents.has_reagent("heparin"))
-			msg += "<b>[t_He] [t_is] теряет кровь в огромных количествах!</b>\n"
+			msg += "<b>[t_He] [t_is] С‚РµСЂСЏРµС‚ РєСЂРѕРІСЊ РІ РѕРіСЂРѕРјРЅС‹С… РєРѕР»РёС‡РµСЃС‚РІР°С…!</b>\n"
 		else
-			msg += "<B>[t_He] [t_is] теряет кровь!</B>\n"
+			msg += "<B>[t_He] [t_is] С‚РµСЂСЏРµС‚ РєСЂРѕРІСЊ!</B>\n"
 
 	if(reagents.has_reagent("teslium"))
-		msg += "[t_He] излучает мягкий голубой свет!\n"
+		msg += "[t_He] РёР·Р»СѓС‡Р°РµС‚ РјСЏРіРєРёР№ РіРѕР»СѓР±РѕР№ СЃРІРµС‚!\n"
 
 	if(islist(stun_absorption))
 		for(var/i in stun_absorption)
@@ -299,9 +299,9 @@
 					var/interestdebug = auto.interest2string(auto.interest)
 					msg += "<span class='deadsay'>[t_He] [t_is] appears to be [interestdebug] and [dodebug].</span>\n"
 			else if(!key)
-				msg += "<span class='deadsay'>[t_He] [t_is] в ступоре. Стрессы жизни на Пустошах, по разному сказываются на людях. Any recovery is unlikely.</span>\n"
+				msg += "<span class='deadsay'>[t_He] [t_is] РІ СЃС‚СѓРїРѕСЂРµ. РЎС‚СЂРµСЃСЃС‹ Р¶РёР·РЅРё РЅР° РџСѓСЃС‚РѕС€Р°С…, РїРѕ СЂР°Р·РЅРѕРјСѓ СЃРєР°Р·С‹РІР°СЋС‚СЃСЏ РЅР° Р»СЋРґСЏС…. Any recovery is unlikely.</span>\n"
 			else if(!client)
-				msg += "[t_He] [t_has] пустой, безжизненный взгляд аутиста...\n"
+				msg += "[t_He] [t_has] РїСѓСЃС‚РѕР№, Р±РµР·Р¶РёР·РЅРµРЅРЅС‹Р№ РІР·РіР»СЏРґ Р°СѓС‚РёСЃС‚Р°...\n"
 
 		if(digitalcamo)
 			msg += "[t_He] [t_is] moving [t_his] body in an unnatural and blatantly inhuman manner.\n"
@@ -314,7 +314,7 @@
 			if(perpname)
 				var/datum/data/record/R = find_record("name", perpname, data_core.general)
 				if(R)
-					msg += "<span class='deptradio'>Ранг:</span> [R.fields["rank"]]<br>"
+					msg += "<span class='deptradio'>Р Р°РЅРі:</span> [R.fields["rank"]]<br>"
 					msg += "<a href='?src=\ref[src];hud=1;photo_front=1'>\[Front photo\]</a> "
 					msg += "<a href='?src=\ref[src];hud=1;photo_side=1'>\[Side photo\]</a><br>"
 				if(istype(H.glasses, /obj/item/clothing/glasses/hud/health) || istype(CIH,/obj/item/organ/cyberimp/eyes/hud/medical))
@@ -344,8 +344,8 @@
 						if(R)
 							criminal = R.fields["criminal"]
 
-						msg += "<span class='deptradio'>Криминальный статус:</span> <a href='?src=\ref[src];hud=s;status=1'>\[[criminal]\]</a>\n"
-						msg += "<span class='deptradio'>Записи СБ:</span> <a href='?src=\ref[src];hud=s;view=1'>\[View\]</a> "
+						msg += "<span class='deptradio'>РљСЂРёРјРёРЅР°Р»СЊРЅС‹Р№ СЃС‚Р°С‚СѓСЃ:</span> <a href='?src=\ref[src];hud=s;status=1'>\[[criminal]\]</a>\n"
+						msg += "<span class='deptradio'>Р—Р°РїРёСЃРё РЎР‘:</span> <a href='?src=\ref[src];hud=s;view=1'>\[View\]</a> "
 						msg += "<a href='?src=\ref[src];hud=s;add_crime=1'>\[Add crime\]</a> "
 						msg += "<a href='?src=\ref[src];hud=s;view_comment=1'>\[View comment log\]</a> "
 						msg += "<a href='?src=\ref[src];hud=s;add_comment=1'>\[Add comment\]</a>\n"

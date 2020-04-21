@@ -3,7 +3,7 @@
 	var/desc = "Empty"
 
 /datum/perk_hidden/powerArmor
-	name = "Ношение силовой брони"
+	name = "РќРѕС€РµРЅРёРµ СЃРёР»РѕРІРѕР№ Р±СЂРѕРЅРё"
 
 /datum/perk_hidden/conqueror1
 	name = "Conqueror 1"

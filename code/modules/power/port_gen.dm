@@ -214,9 +214,9 @@ display round(lastgen) and plasmatank amount
 		var/obj/item/stack/addstack = O
 		var/amount = min((max_sheets - sheets), addstack.amount)
 		if(amount < 1)
-			to_chat(user, "<span class='notice'>[src.name] полон!</span>")
+			to_chat(user, "<span class='notice'>[src.name] РїРѕР»РѕРЅ!</span>")
 			return
-		to_chat(user, "<span class='notice'>Вы добавили [amount] пластин в [src.name].</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РґРѕР±Р°РІРёР»Рё [amount] РїР»Р°СЃС‚РёРЅ РІ [src.name].</span>")
 		sheets += amount
 		addstack.use(amount)
 		updateUsrDialog()
@@ -230,11 +230,11 @@ display round(lastgen) and plasmatank amount
 
 			if(!anchored && !isinspace())
 				connect_to_network()
-				to_chat(user, "<span class='notice'>Вы закрепляете генератор на полу.</span>")
+				to_chat(user, "<span class='notice'>Р’С‹ Р·Р°РєСЂРµРїР»СЏРµС‚Рµ РіРµРЅРµСЂР°С‚РѕСЂ РЅР° РїРѕР»Сѓ.</span>")
 				anchored = 1
 			else if(anchored)
 				disconnect_from_network()
-				to_chat(user, "<span class='notice'>Вы открепили генератор от пола.</span>")
+				to_chat(user, "<span class='notice'>Р’С‹ РѕС‚РєСЂРµРїРёР»Рё РіРµРЅРµСЂР°С‚РѕСЂ РѕС‚ РїРѕР»Р°.</span>")
 				anchored = 0
 
 			playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)

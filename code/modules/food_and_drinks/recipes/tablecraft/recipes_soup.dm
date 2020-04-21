@@ -226,7 +226,7 @@
 	category = CAT_SOUP
 
 
-// суп из опилок блять
+// СЃСѓРї РёР· РѕРїРёР»РѕРє Р±Р»СЏС‚СЊ
 
 /datum/crafting_recipe/food/sawdustsoup
 	name = "Sawdust soup"

@@ -1,8 +1,8 @@
 //Fallout 13 barrels directory
 
 /obj/structure/reagent_dispensers/barrel
-	name = "бочка"
-	desc = "Металический контейнер, с чем-то внутри.<br>На первый взгляд, сделано крепко."
+	name = "Р±РѕС‡РєР°"
+	desc = "РњРµС‚Р°Р»РёС‡РµСЃРєРёР№ РєРѕРЅС‚РµР№РЅРµСЂ, СЃ С‡РµРј-С‚Рѕ РІРЅСѓС‚СЂРё.<br>РќР° РїРµСЂРІС‹Р№ РІР·РіР»СЏРґ, СЃРґРµР»Р°РЅРѕ РєСЂРµРїРєРѕ."
 	icon = 'icons/fallout/objects/structures/trash.dmi'
 	icon_state = "single"
 	tank_volume = 500
@@ -10,8 +10,8 @@
 	self_weight = 200
 
 /obj/structure/reagent_dispensers/barrel/dangerous
-	name = "бочка с отходами"
-	desc = "Подозрительная бочка, которая к тому-же не заржавеля за всё время.<br>Тут есть какой-то знак, но вы не можете понять, что он означает..."
+	name = "Р±РѕС‡РєР° СЃ РѕС‚С…РѕРґР°РјРё"
+	desc = "РџРѕРґРѕР·СЂРёС‚РµР»СЊРЅР°СЏ Р±РѕС‡РєР°, РєРѕС‚РѕСЂР°СЏ Рє С‚РѕРјСѓ-Р¶Рµ РЅРµ Р·Р°СЂР¶Р°РІРµР»СЏ Р·Р° РІСЃС‘ РІСЂРµРјСЏ.<br>РўСѓС‚ РµСЃС‚СЊ РєР°РєРѕР№-С‚Рѕ Р·РЅР°Рє, РЅРѕ РІС‹ РЅРµ РјРѕР¶РµС‚Рµ РїРѕРЅСЏС‚СЊ, С‡С‚Рѕ РѕРЅ РѕР·РЅР°С‡Р°РµС‚..."
 	icon_state = "dangerous"
 	tank_volume = 500
 	reagent_id = "radium"
@@ -26,13 +26,13 @@
 	SSradiation.processing += src
 
 /obj/structure/reagent_dispensers/barrel/boom()
-	visible_message("<span class='danger'> [src] разрывается!</span>")
+	visible_message("<span class='danger'> [src] СЂР°Р·СЂС‹РІР°РµС‚СЃСЏ!</span>")
 	chem_splash(loc, 0, list(reagents))
 	qdel(src)
 
 /obj/structure/reagent_dispensers/barrel/explosive
-	name = "взрывоопасная бочка"
-	desc = "Ржавая бочка.<br>Тут есть эмблема, на которой изображен огонь.<br>Вы очень надеетесь что тут ничего уже не осталось..."
+	name = "РІР·СЂС‹РІРѕРѕРїР°СЃРЅР°СЏ Р±РѕС‡РєР°"
+	desc = "Р Р¶Р°РІР°СЏ Р±РѕС‡РєР°.<br>РўСѓС‚ РµСЃС‚СЊ СЌРјР±Р»РµРјР°, РЅР° РєРѕС‚РѕСЂРѕР№ РёР·РѕР±СЂР°Р¶РµРЅ РѕРіРѕРЅСЊ.<br>Р’С‹ РѕС‡РµРЅСЊ РЅР°РґРµРµС‚РµСЃСЊ С‡С‚Рѕ С‚СѓС‚ РЅРёС‡РµРіРѕ СѓР¶Рµ РЅРµ РѕСЃС‚Р°Р»РѕСЃСЊ..."
 	icon_state = "explosive"
 	tank_volume = 500
 	reagent_id = "welding_fuel"
@@ -56,8 +56,8 @@
 	boom()
 
 /obj/structure/reagent_dispensers/barrel/fueltank
-	name = "бочка с топливом"
-	desc = "Бочка полная топлива! Прекрасно."
+	name = "Р±РѕС‡РєР° СЃ С‚РѕРїР»РёРІРѕРј"
+	desc = "Р‘РѕС‡РєР° РїРѕР»РЅР°СЏ С‚РѕРїР»РёРІР°! РџСЂРµРєСЂР°СЃРЅРѕ."
 	icon = 'icons/fallout/objects/structures/stationary.dmi'
 	icon_state = "barrel"
 	tank_volume = 500
@@ -82,8 +82,8 @@
 	boom()
 
 /obj/structure/reagent_dispensers/barrel/fev
-	name = "бочка с ВРЭ"
-	desc = "Бочка содержащая ВРЭ."
+	name = "Р±РѕС‡РєР° СЃ Р’Р Р­"
+	desc = "Р‘РѕС‡РєР° СЃРѕРґРµСЂР¶Р°С‰Р°СЏ Р’Р Р­."
 	icon = 'icons/fallout/objects/structures/stationary.dmi'
 	icon_state = "fev"
 	tank_volume = 500
@@ -91,7 +91,7 @@
 	self_weight = 200
 
 /obj/structure/reagent_dispensers/barrel/old
-	name = "старая бочка"
+	name = "СЃС‚Р°СЂР°СЏ Р±РѕС‡РєР°"
 	desc = "An old barrel. Oddly enough, it stands undamaged after all this time.<br>You wonder if there is anything left in it."
 	icon_state = "one_b"
 	tank_volume = 500
@@ -99,7 +99,7 @@
 	self_weight = 200
 
 /obj/structure/reagent_dispensers/barrel/two
-	name = "две старых бочки"
+	name = "РґРІРµ СЃС‚Р°СЂС‹С… Р±РѕС‡РєРё"
 	desc = "A couple of old barrels. Oddly enough, they stand undamaged after all this time.<br>You wonder if there is anything left in these."
 	icon_state = "two_b"
 	tank_volume = 1000
@@ -108,7 +108,7 @@
 	self_weight = 400
 
 /obj/structure/reagent_dispensers/barrel/three
-	name = "три старых бочки"
+	name = "С‚СЂРё СЃС‚Р°СЂС‹С… Р±РѕС‡РєРё"
 	desc = "Ancient containers with something inside of them. Or are they empty? Actually, how would you know that..."
 	icon_state = "three_b"
 	tank_volume = 1500
@@ -117,7 +117,7 @@
 	self_weight = 600
 
 /obj/structure/reagent_dispensers/barrel/four
-	name = "четыре бочки"
+	name = "С‡РµС‚С‹СЂРµ Р±РѕС‡РєРё"
 	desc = "Ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
 	icon_state = "four_b"
 	tank_volume = 800

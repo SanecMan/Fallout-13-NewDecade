@@ -259,7 +259,7 @@
 
 	// Usual checks
 	if(!fuel)
-		to_chat(user, "<span class='warning'>Нет топлива!</span>")
+		to_chat(user, "<span class='warning'>РќРµС‚ С‚РѕРїР»РёРІР°!</span>")
 		return
 	if(on)
 		return
@@ -267,7 +267,7 @@
 	. = ..()
 	// All good, turn it on.
 	if(.)
-		user.visible_message("<span class='notice'>[user] зажигает [src].</span>", "<span class='notice'>Вы зажгли [src]!</span>")
+		user.visible_message("<span class='notice'>[user] Р·Р°Р¶РёРіР°РµС‚ [src].</span>", "<span class='notice'>Р’С‹ Р·Р°Р¶РіР»Рё [src]!</span>")
 		force = on_damage
 		damtype = "fire"
 		START_PROCESSING(SSobj, src)

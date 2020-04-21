@@ -195,7 +195,7 @@ var/last_irc_status = 0
 		if (usr)
 			log_admin("[key_name(usr)] Has requested an immediate world restart via client side debugging tools")
 			message_admins("[key_name_admin(usr)] Has requested an immediate world restart via client side debugging tools")
-		to_chat(world, "<span class='boldannounce'>Перезапуск вызван хостом.</span>")
+		to_chat(world, "<span class='boldannounce'>РџРµСЂРµР·Р°РїСѓСЃРє РІС‹Р·РІР°РЅ С…РѕСЃС‚РѕРј.</span>")
 		return ..(1)
 	var/delay
 	if(time)
@@ -207,9 +207,9 @@ var/last_irc_status = 0
 			to_chat(world, "<span class='boldannounce'>Administrator delayed Round End.</span>")
 			return
 		else
-			to_chat(world, "<span class='boldannounce'>Администратор приостановил конец раунда.</span>")
+			to_chat(world, "<span class='boldannounce'>РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ РїСЂРёРѕСЃС‚Р°РЅРѕРІРёР» РєРѕРЅРµС† СЂР°СѓРЅРґР°.</span>")
 			return
-	to_chat(world, "<span class='boldannounce'>Перезапуск мира через [delay/10] [delay > 10 ? "seconds" : "second"]. [reason]</span>")
+	to_chat(world, "<span class='boldannounce'>РџРµСЂРµР·Р°РїСѓСЃРє РјРёСЂР° С‡РµСЂРµР· [delay/10] [delay > 10 ? "seconds" : "second"]. [reason]</span>")
 	var/round_end_sound_sent = FALSE
 	if(ticker.round_end_sound)
 		round_end_sound_sent = TRUE
@@ -233,7 +233,7 @@ var/last_irc_status = 0
 				Reboot("Map change timed out", time = 10)
 		return
 	feedback_set_details("[feedback_c]","[feedback_r]")
-	log_game("<span class='boldannounce'>Перезагрузка мира. [reason]</span>")
+	log_game("<span class='boldannounce'>РџРµСЂРµР·Р°РіСЂСѓР·РєР° РјРёСЂР°. [reason]</span>")
 	kick_clients_in_lobby("<span class='boldannounce'>The round came to an end with you in the lobby.</span>", 1) //second parameter ensures only afk clients are kicked
 #ifdef dellogging
 	var/log = file("data/logs/del.log")

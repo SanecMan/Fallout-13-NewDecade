@@ -9,23 +9,23 @@
 	var/msg = ""
 
 	if (handcuffed)
-		msg += "<span class='warning'>[t_He] [bicon(src.handcuffed)] в наручниках!</span>\n"
+		msg += "<span class='warning'>[t_He] [bicon(src.handcuffed)] РІ РЅР°СЂСѓС‡РЅРёРєР°С…!</span>\n"
 	if (head)
-		msg += "[t_He] носит [bicon(src.head)]  [src.head] на [t_his] голове. \n"
+		msg += "[t_He] РЅРѕСЃРёС‚ [bicon(src.head)]  [src.head] РЅР° [t_his] РіРѕР»РѕРІРµ. \n"
 	if (wear_mask)
-		msg += "[t_He] носит [bicon(src.wear_mask)]  [src.wear_mask] на [t_his] лице.\n"
+		msg += "[t_He] РЅРѕСЃРёС‚ [bicon(src.wear_mask)]  [src.wear_mask] РЅР° [t_his] Р»РёС†Рµ.\n"
 	if (wear_neck)
-		msg += "[t_He] носит [bicon(src.wear_neck)]  [src.wear_neck] вокруг [t_his] шеи.\n"
+		msg += "[t_He] РЅРѕСЃРёС‚ [bicon(src.wear_neck)]  [src.wear_neck] РІРѕРєСЂСѓРі [t_his] С€РµРё.\n"
 
 	for(var/obj/item/I in held_items)
 		if(!(I.flags & ABSTRACT))
 			if(I.blood_DNA)
-				msg += "<span class='warning'>[t_He] [t_is] держит [bicon(I)] [I.gender==PLURAL?"some":"a"] покрытый кровью [I.name] в [t_his] [get_held_index_name(get_held_index_of_item(I))]!</span>\n"
+				msg += "<span class='warning'>[t_He] [t_is] РґРµСЂР¶РёС‚ [bicon(I)] [I.gender==PLURAL?"some":"a"] РїРѕРєСЂС‹С‚С‹Р№ РєСЂРѕРІСЊСЋ [I.name] РІ [t_his] [get_held_index_name(get_held_index_of_item(I))]!</span>\n"
 			else
 				msg += "[t_He] [t_is] holding [bicon(I)] \a [I] in [t_his] [get_held_index_name(get_held_index_of_item(I))].\n"
 
 	if (back)
-		msg += "[t_He] [t_has] [bicon(src.back)] [src.back] на [t_his] спине.\n"
+		msg += "[t_He] [t_has] [bicon(src.back)] [src.back] РЅР° [t_his] СЃРїРёРЅРµ.\n"
 	var/appears_dead = 0
 	if (stat == DEAD)
 		appears_dead = 1
@@ -37,24 +37,24 @@
 	var/list/missing = get_missing_limbs()
 	for(var/t in missing)
 		if(t=="head")
-			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] отсутствует!</B></span>\n"
+			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚!</B></span>\n"
 			continue
-		msg += "<span class='warning'><B>[t_His] [parse_zone(t)] отсутствует!</B></span>\n"
+		msg += "<span class='warning'><B>[t_His] [parse_zone(t)] РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚!</B></span>\n"
 
 	msg += "<span class='warning'>"
 	var/temp = getBruteLoss()
 	if(temp)
 		if (temp < 30)
-			msg += "[t_He] имеет небольшие раны.\n"
+			msg += "[t_He] РёРјРµРµС‚ РЅРµР±РѕР»СЊС€РёРµ СЂР°РЅС‹.\n"
 		else
-			msg += "<B>[t_He] имеет огромные раны!</B>\n"
+			msg += "<B>[t_He] РёРјРµРµС‚ РѕРіСЂРѕРјРЅС‹Рµ СЂР°РЅС‹!</B>\n"
 
 	temp = getFireLoss()
 	if(temp)
 		if (temp < 30)
-			msg += "[t_He] имеет небольшие ожоги.\n"
+			msg += "[t_He] РёРјРµРµС‚ РЅРµР±РѕР»СЊС€РёРµ РѕР¶РѕРіРё.\n"
 		else
-			msg += "<B>[t_He] имеет обширные ожоги!</B>\n"
+			msg += "<B>[t_He] РёРјРµРµС‚ РѕР±С€РёСЂРЅС‹Рµ РѕР¶РѕРіРё!</B>\n"
 
 	temp = getCloneLoss()
 	if(temp)
@@ -67,9 +67,9 @@
 		msg += "[t_He] seems to be clumsy and unable to think.\n"
 
 	if(fire_stacks > 0)
-		msg += "[t_He] [t_is] покрыт чем-то горючим.\n"
+		msg += "[t_He] [t_is] РїРѕРєСЂС‹С‚ С‡РµРј-С‚Рѕ РіРѕСЂСЋС‡РёРј.\n"
 	if(fire_stacks < 0)
-		msg += "[t_He] [t_is] выглядит немного мокро.\n"
+		msg += "[t_He] [t_is] РІС‹РіР»СЏРґРёС‚ РЅРµРјРЅРѕРіРѕ РјРѕРєСЂРѕ.\n"
 
 	if(pulledby && pulledby.grab_state)
 		msg += "[t_He] [t_is] restrained by [pulledby]'s grip.\n"
@@ -78,7 +78,7 @@
 
 	if(!appears_dead)
 		if(stat == UNCONSCIOUS)
-			msg += "[t_He] похоже, не реагирует на что-либо, похоже, спит.\n"
+			msg += "[t_He] РїРѕС…РѕР¶Рµ, РЅРµ СЂРµР°РіРёСЂСѓРµС‚ РЅР° С‡С‚Рѕ-Р»РёР±Рѕ, РїРѕС…РѕР¶Рµ, СЃРїРёС‚.\n"
 
 		if(digitalcamo)
 			msg += "[t_He] [t_is] moving [t_his] body in an unnatural and blatantly unsimian manner.\n"

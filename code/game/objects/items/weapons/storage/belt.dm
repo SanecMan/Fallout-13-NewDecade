@@ -1,5 +1,5 @@
 /obj/item/weapon/storage/belt
-	name = "пояс"
+	name = "РїРѕСЏСЃ"
 	desc = "Can hold various things."
 	icon = 'icons/obj/clothing/belts.dmi'
 	icon_state = "utilitybelt"
@@ -16,8 +16,8 @@
 	..()
 
 /obj/item/weapon/storage/belt/utility
-	name = "ремень безопасности" //Carn: utility belt is nicer, but it bamboozles the text parsing.
-	desc = "Может держать инструменты."
+	name = "СЂРµРјРµРЅСЊ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё" //Carn: utility belt is nicer, but it bamboozles the text parsing.
+	desc = "РњРѕР¶РµС‚ РґРµСЂР¶Р°С‚СЊ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹."
 	icon_state = "utilitybelt"
 	item_state = "utility"
 	can_hold = list(

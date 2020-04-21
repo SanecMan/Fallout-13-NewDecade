@@ -1,7 +1,7 @@
 /mob/living/carbon/human
-	name = "Неизвестная личность"
-	real_name = "Неизвестная личность"
-	voice_name = "Неизвестная личность"
+	name = "РќРµРёР·РІРµСЃС‚РЅР°СЏ Р»РёС‡РЅРѕСЃС‚СЊ"
+	real_name = "РќРµРёР·РІРµСЃС‚РЅР°СЏ Р»РёС‡РЅРѕСЃС‚СЊ"
+	voice_name = "РќРµРёР·РІРµСЃС‚РЅР°СЏ Р»РёС‡РЅРѕСЃС‚СЊ"
 	icon = 'icons/mob/human.dmi'
 	icon_state = "caucasian_m_s"
 	self_weight = 0
@@ -54,15 +54,15 @@
 
 	..()
 
-//Ckey - именно с маленькой буквы.
+//Ckey - РёРјРµРЅРЅРѕ СЃ РјР°Р»РµРЅСЊРєРѕР№ Р±СѓРєРІС‹.
 /mob/proc/SpawnItemByCKEYs(mob/user)
 	var/turf/T = get_turf(user.loc)
 	if(user.ckey == "drnuke")
-		to_chat(user, "Спасибо что поддержали проект.")
+		to_chat(user, "РЎРїР°СЃРёР±Рѕ С‡С‚Рѕ РїРѕРґРґРµСЂР¶Р°Р»Рё РїСЂРѕРµРєС‚.")
 		new /obj/item/weapon/gun/energy/disabler/fluff/angelofmercy(T)
 		sleep(10)
 	if(user.ckey == "ladyrainicorn")
-		to_chat(user, "Спасибо что поддержали проект.")
+		to_chat(user, "РЎРїР°СЃРёР±Рѕ С‡С‚Рѕ РїРѕРґРґРµСЂР¶Р°Р»Рё РїСЂРѕРµРєС‚.")
 		new /obj/item/clothing/suit/jacket/sophie(T)
 		sleep(10)
 		new /obj/item/clothing/glasses/sunglasses(T)
@@ -154,16 +154,16 @@
 	if(istype(wear_suit, /obj/item/clothing/suit/armor/f13/power_armor))
 		var/obj/item/clothing/suit/armor/f13/power_armor/PA = wear_suit
 		if(statpanel("Status"))
-			stat("Силовая броня:")
+			stat("РЎРёР»РѕРІР°СЏ Р±СЂРѕРЅСЏ:")
 			if(PA.enabled)
-				stat("Статус: Активирована.")
+				stat("РЎС‚Р°С‚СѓСЃ: РђРєС‚РёРІРёСЂРѕРІР°РЅР°.")
 			else
-				stat("Статус: Деактивирована.")
+				stat("РЎС‚Р°С‚СѓСЃ: Р”РµР°РєС‚РёРІРёСЂРѕРІР°РЅР°.")
 
 			if(PA.power_cell)
-				stat("Питание: Заряд [round(PA.power_cell.percent())]%")
+				stat("РџРёС‚Р°РЅРёРµ: Р—Р°СЂСЏРґ [round(PA.power_cell.percent())]%")
 			else
-				stat("Питание: ..Отсутствует..")
+				stat("РџРёС‚Р°РЅРёРµ: ..РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚..")
 
 
 /mob/living/carbon/human/show_inv(mob/user)
@@ -246,7 +246,7 @@
 		dat += "<tr><td>&nbsp;&#8627;<B>ID:</B></td><td><A href='?src=\ref[src];item=[slot_wear_id]'>[(wear_id && !(wear_id.flags&ABSTRACT)) ? wear_id : "<font color=grey>Empty</font>"]</A></td></tr>"
 
 	if(handcuffed)
-		dat += "<tr><td><B>В наручниках:</B> <A href='?src=\ref[src];item=[slot_handcuffed]'>Снять</A></td></tr>"
+		dat += "<tr><td><B>Р’ РЅР°СЂСѓС‡РЅРёРєР°С…:</B> <A href='?src=\ref[src];item=[slot_handcuffed]'>РЎРЅСЏС‚СЊ</A></td></tr>"
 	if(legcuffed)
 		dat += "<tr><td><A href='?src=\ref[src];item=[slot_legcuffed]'>Legcuffed</A></td></tr>"
 
@@ -436,7 +436,7 @@
 
 
 						if(!allowed_access)
-							to_chat(H, "<span class='warning'>ОШИБКА: Не достаточно доступа</span>")
+							to_chat(H, "<span class='warning'>РћРЁРР‘РљРђ: РќРµ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРѕСЃС‚СѓРїР°</span>")
 							return
 
 						if(perpname)
@@ -459,20 +459,20 @@
 											return
 										else if(!istype(H.glasses, /obj/item/clothing/glasses/hud/security) && !istype(H.getorganslot("eye_hud"), /obj/item/organ/cyberimp/eyes/hud/security))
 											return
-											to_chat(usr, "<b>Имя:</b> [R.fields["name"]]	<b>Криминальный статус:</b> [R.fields["criminal"]]")
+											to_chat(usr, "<b>РРјСЏ:</b> [R.fields["name"]]	<b>РљСЂРёРјРёРЅР°Р»СЊРЅС‹Р№ СЃС‚Р°С‚СѓСЃ:</b> [R.fields["criminal"]]")
 										to_chat(usr, "<b>Minor Crimes:</b>")
 										for(var/datum/data/crime/c in R.fields["mi_crim"])
-											to_chat(usr, "<b>Преступление:</b> [c.crimeName]")
-											to_chat(usr, "<b>Детали:</b> [c.crimeDetails]")
+											to_chat(usr, "<b>РџСЂРµСЃС‚СѓРїР»РµРЅРёРµ:</b> [c.crimeName]")
+											to_chat(usr, "<b>Р”РµС‚Р°Р»Рё:</b> [c.crimeDetails]")
 											to_chat(usr, "Added by [c.author] at [c.time]")
 											to_chat(usr, "----------")
 										to_chat(usr, "<b>Major Crimes:</b>")
 										for(var/datum/data/crime/c in R.fields["ma_crim"])
-											to_chat(usr, "<b>Преступление:</b> [c.crimeName]")
-											to_chat(usr, "<b>Детали:</b> [c.crimeDetails]")
+											to_chat(usr, "<b>РџСЂРµСЃС‚СѓРїР»РµРЅРёРµ:</b> [c.crimeName]")
+											to_chat(usr, "<b>Р”РµС‚Р°Р»Рё:</b> [c.crimeDetails]")
 											to_chat(usr, "Added by [c.author] at [c.time]")
 											to_chat(usr, "----------")
-										to_chat(usr, "<b>Заметки:</b> [R.fields["notes"]]")
+										to_chat(usr, "<b>Р—Р°РјРµС‚РєРё:</b> [R.fields["notes"]]")
 									return
 
 								if(href_list["add_crime"])
@@ -687,13 +687,13 @@
 	CHECK_DNA_AND_SPECIES(C)
 
 	if(C.stat == DEAD || (C.status_flags & FAKEDEATH))
-		to_chat(src, "<span class='warning'>[C.name] мёртв!</span>")
+		to_chat(src, "<span class='warning'>[C.name] РјС‘СЂС‚РІ!</span>")
 		return
 	if(is_mouth_covered())
-		to_chat(src, "<span class='warning'>Снимите маску для начала!</span>")
+		to_chat(src, "<span class='warning'>РЎРЅРёРјРёС‚Рµ РјР°СЃРєСѓ РґР»СЏ РЅР°С‡Р°Р»Р°!</span>")
 		return 0
 	if(C.is_mouth_covered())
-		to_chat(src, "<span class='warning'>Снимите [p_their()] маску для начала!</span>")
+		to_chat(src, "<span class='warning'>РЎРЅРёРјРёС‚Рµ [p_their()] РјР°СЃРєСѓ РґР»СЏ РЅР°С‡Р°Р»Р°!</span>")
 		return 0
 
 	if(C.cpr_time < world.time + 30)
@@ -744,7 +744,7 @@
 
 /mob/living/carbon/human/cuff_resist(obj/item/I)
 	if(dna && dna.check_mutation(HULK))
-		say(pick("ЫЪЪА!!", "НННННЫАААААААААААА!!!", "НННЫЫЫА!!!", "ХНННГХ!", "РААРГХ!!" ))
+		say(pick("Р«РЄРЄРђ!!", "РќРќРќРќРќР«РђРђРђРђРђРђРђРђРђРђРђРђ!!!", "РќРќРќР«Р«Р«Рђ!!!", "РҐРќРќРќР“РҐ!", "Р РђРђР Р“РҐ!!" ))
 		if(..(I, cuff_break = FAST_CUFFBREAK))
 			unEquip(I)
 	else
@@ -929,8 +929,8 @@
 /mob/living/carbon/human/vomit(lost_nutrition = 10, blood = 0, stun = 1, distance = 0, message = 1, toxic = 0)
 	if(blood && (NOBLOOD in dna.species.species_traits))
 		if(message)
-			visible_message("<span class='warning'>[src] сухо хрипит!</span>", \
-							"<span class='userdanger'>Вы пытаетесь проблеваться, но вам уже нечем!</span>")
+			visible_message("<span class='warning'>[src] СЃСѓС…Рѕ С…СЂРёРїРёС‚!</span>", \
+							"<span class='userdanger'>Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РїСЂРѕР±Р»РµРІР°С‚СЊСЃСЏ, РЅРѕ РІР°Рј СѓР¶Рµ РЅРµС‡РµРј!</span>")
 		if(stun)
 			Weaken(10)
 		return 1

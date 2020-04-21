@@ -3,7 +3,7 @@ var/global/BSACooldown = 0
 
 ////////////////////////////////
 /proc/message_admins(msg)
-	msg = "<span class=\"admin\"><span class=\"prefix\">ЛОГ:</span> <span class=\"message\">[msg]</span></span>"
+	msg = "<span class=\"admin\"><span class=\"prefix\">Р›РћР“:</span> <span class=\"message\">[msg]</span></span>"
 	to_chat(admins, msg)
 
 /proc/relay_msg_admins(msg)
@@ -22,10 +22,10 @@ var/global/BSACooldown = 0
 		return
 
 	if(!isobserver(usr))
-		log_game("[key_name_admin(usr)] посмотрел панель игроков находясь в игре.")
+		log_game("[key_name_admin(usr)] РїРѕСЃРјРѕС‚СЂРµР» РїР°РЅРµР»СЊ РёРіСЂРѕРєРѕРІ РЅР°С…РѕРґСЏСЃСЊ РІ РёРіСЂРµ.")
 
 	if(!M)
-		to_chat(usr, "Похоже что выбранное существо больше не существует.")
+		to_chat(usr, "РџРѕС…РѕР¶Рµ С‡С‚Рѕ РІС‹Р±СЂР°РЅРЅРѕРµ СЃСѓС‰РµСЃС‚РІРѕ Р±РѕР»СЊС€Рµ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚.")
 		return
 
 	var/body = "<html><meta charset=UTF-8><head><title>Options for [M.key]</title></head>"
@@ -35,7 +35,7 @@ var/global/BSACooldown = 0
 		body += "\[<A href='?_src_=holder;editrights=rank;ckey=[M.ckey]'>[M.client.holder ? M.client.holder.rank : "Player"]</A>\]"
 
 	if(isnewplayer(M))
-		body += " <B>Не вошел в игру</B> "
+		body += " <B>РќРµ РІРѕС€РµР» РІ РёРіСЂСѓ</B> "
 	else
 		body += " \[<A href='?_src_=holder;revive=\ref[M]'>Heal</A>\] "
 
@@ -46,40 +46,40 @@ var/global/BSACooldown = 0
 	body += "<a href='?_src_=holder;subtlemessage=\ref[M]'>SM</a> - "
 	body += "<a href='?_src_=holder;adminplayerobservefollow=\ref[M]'>FLW</a>\] </b><br>"
 
-	body += "<b>Тип моба</b> = [M.type]<br><br>"
+	body += "<b>РўРёРї РјРѕР±Р°</b> = [M.type]<br><br>"
 
-	body += "<A href='?_src_=holder;boot2=\ref[M]'>Кикнуть</A> | "
-	body += "<A href='?_src_=holder;newban=\ref[M]'>Бан</A> | "
-	body += "<A href='?_src_=holder;jobban2=\ref[M]'>Джоббан</A> | "
-	body += "<A href='?_src_=holder;labor=\ref[M]'>На шахты!</A> | "
-	body += "<A href='?_src_=holder;appearanceban=\ref[M]'>Бан персонажа</A> | "
+	body += "<A href='?_src_=holder;boot2=\ref[M]'>РљРёРєРЅСѓС‚СЊ</A> | "
+	body += "<A href='?_src_=holder;newban=\ref[M]'>Р‘Р°РЅ</A> | "
+	body += "<A href='?_src_=holder;jobban2=\ref[M]'>Р”Р¶РѕР±Р±Р°РЅ</A> | "
+	body += "<A href='?_src_=holder;labor=\ref[M]'>РќР° С€Р°С…С‚С‹!</A> | "
+	body += "<A href='?_src_=holder;appearanceban=\ref[M]'>Р‘Р°РЅ РїРµСЂСЃРѕРЅР°Р¶Р°</A> | "
 	if(jobban_isbanned(M, "OOC"))
-		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'><font color=red>Бан ООС</font></A> | "
+		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'><font color=red>Р‘Р°РЅ РћРћРЎ</font></A> | "
 	else
-		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'>Бан ООС</A> | "
+		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'>Р‘Р°РЅ РћРћРЎ</A> | "
 	if(jobban_isbanned(M, "emote"))
-		body+= "<A href='?_src_=holder;jobban3=emote;jobban4=\ref[M]'><font color=red>Бан Эмоций</font></A> | "
+		body+= "<A href='?_src_=holder;jobban3=emote;jobban4=\ref[M]'><font color=red>Р‘Р°РЅ Р­РјРѕС†РёР№</font></A> | "
 	else
-		body+= "<A href='?_src_=holder;jobban3=emote;jobban4=\ref[M]'>Бан эмоций</A> | "
+		body+= "<A href='?_src_=holder;jobban3=emote;jobban4=\ref[M]'>Р‘Р°РЅ СЌРјРѕС†РёР№</A> | "
 
-	body += "<A href='?_src_=holder;shownoteckey=[M.ckey]'>Пометки</A> | "
+	body += "<A href='?_src_=holder;shownoteckey=[M.ckey]'>РџРѕРјРµС‚РєРё</A> | "
 	if(M.client)
 		if(M.client.check_watchlist(M.client.ckey))
-			body += "<A href='?_src_=holder;watchremove=[M.ckey]'>убрать из ЛБ</A> | "
-			body += "<A href='?_src_=holder;watchedit=[M.ckey]'>редактировать причину для ЛБ</A> "
+			body += "<A href='?_src_=holder;watchremove=[M.ckey]'>СѓР±СЂР°С‚СЊ РёР· Р›Р‘</A> | "
+			body += "<A href='?_src_=holder;watchedit=[M.ckey]'>СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РїСЂРёС‡РёРЅСѓ РґР»СЏ Р›Р‘</A> "
 		else
-			body += "<A href='?_src_=holder;watchadd=\ref[M.ckey]'>добавить в ЛБ</A> "
+			body += "<A href='?_src_=holder;watchadd=\ref[M.ckey]'>РґРѕР±Р°РІРёС‚СЊ РІ Р›Р‘</A> "
 
-		body += "| <A href='?_src_=holder;sendtoprison=\ref[M]'>Тюрьма</A> | "
-		body += "\ <A href='?_src_=holder;sendbacktolobby=\ref[M]'>Отправить в лобби</A> | "
+		body += "| <A href='?_src_=holder;sendtoprison=\ref[M]'>РўСЋСЂСЊРјР°</A> | "
+		body += "\ <A href='?_src_=holder;sendbacktolobby=\ref[M]'>РћС‚РїСЂР°РІРёС‚СЊ РІ Р»РѕР±Р±Рё</A> | "
 		var/muted = M.client.prefs.muted
-		body += "<br><b>Мут: </b> "
+		body += "<br><b>РњСѓС‚: </b> "
 		body += "\[<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_IC]'><font color='[(muted & MUTE_IC)?"red":"blue"]'>IC</font></a> | "
 		body += "<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_OOC]'><font color='[(muted & MUTE_OOC)?"red":"blue"]'>OOC</font></a> | "
 		body += "<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_PRAY]'><font color='[(muted & MUTE_PRAY)?"red":"blue"]'>PRAY</font></a> | "
 		body += "<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_ADMINHELP]'><font color='[(muted & MUTE_ADMINHELP)?"red":"blue"]'>ADMINHELP</font></a> | "
 		body += "<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_DEADCHAT]'><font color='[(muted & MUTE_DEADCHAT)?"red":"blue"]'>DEADCHAT</font></a>\]"
-		body += "(<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_ALL]'><font color='[(muted & MUTE_ALL)?"red":"blue"]'>переключить всё</font></a>)"
+		body += "(<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_ALL]'><font color='[(muted & MUTE_ALL)?"red":"blue"]'>РїРµСЂРµРєР»СЋС‡РёС‚СЊ РІСЃС‘</font></a>)"
 
 	body += "<br><br>"
 	body += "<A href='?_src_=holder;jumpto=\ref[M]'><b>Jump to</b></A> | "
@@ -87,45 +87,45 @@ var/global/BSACooldown = 0
 	body += "<A href='?_src_=holder;sendmob=\ref[M]'>Send To</A>"
 
 	body += "<br><br>"
-	body += "<A href='?_src_=holder;traitor=\ref[M]'>Панель антагонизма</A> | "
+	body += "<A href='?_src_=holder;traitor=\ref[M]'>РџР°РЅРµР»СЊ Р°РЅС‚Р°РіРѕРЅРёР·РјР°</A> | "
 	body += "<A href='?_src_=holder;narrateto=\ref[M]'>Narrate to</A> | "
-	body += "<A href='?_src_=holder;subtlemessage=\ref[M]'>Проецировать мысль</A><br><br>"
+	body += "<A href='?_src_=holder;subtlemessage=\ref[M]'>РџСЂРѕРµС†РёСЂРѕРІР°С‚СЊ РјС‹СЃР»СЊ</A><br><br>"
 
-	body += "<A href='?_src_=holder;objectives_show=\ref[M]'>Задачи</A>"
+	body += "<A href='?_src_=holder;objectives_show=\ref[M]'>Р—Р°РґР°С‡Рё</A>"
 
 	if (M.client)
 		if(!isnewplayer(M))
 			body += "<br><br>"
-			body += "<b>ТРАНСформация:</b>"
+			body += "<b>РўР РђРќРЎС„РѕСЂРјР°С†РёСЏ:</b>"
 			body += "<br>"
 
 			//Human
 			if(ishuman(M))
 				body += "<B>Human</B> | "
 			else
-				body += "<A href='?_src_=holder;humanone=\ref[M]'>Хуманизировать</A> | "
+				body += "<A href='?_src_=holder;humanone=\ref[M]'>РҐСѓРјР°РЅРёР·РёСЂРѕРІР°С‚СЊ</A> | "
 
 			//Monkey
 			if(ismonkey(M))
 				body += "<B>Monkeyized</B> | "
 			else
-				body += "<A href='?_src_=holder;monkeyone=\ref[M]'>Мартышкизировать</A> | "
+				body += "<A href='?_src_=holder;monkeyone=\ref[M]'>РњР°СЂС‚С‹С€РєРёР·РёСЂРѕРІР°С‚СЊ</A> | "
 
 			//Corgi
 			if(iscorgi(M))
 				body += "<B>Corgized</B> | "
 			else
-				body += "<A href='?_src_=holder;corgione=\ref[M]'>Коргизировать</A> | "
+				body += "<A href='?_src_=holder;corgione=\ref[M]'>РљРѕСЂРіРёР·РёСЂРѕРІР°С‚СЊ</A> | "
 
 			//AI / Cyborg
 			if(isAI(M))
 				body += "<B>Is an AI</B> "
 			else if(ishuman(M))
-				body += "<A href='?_src_=holder;makeai=\ref[M]'>Сделать ИИ</A> | "
-				body += "<A href='?_src_=holder;makerobot=\ref[M]'>Сделать Роботом</A> | "
-				body += "<A href='?_src_=holder;makealien=\ref[M]'>Сделать Чужим</A> | "
-				body += "<A href='?_src_=holder;makeslime=\ref[M]'>Сделать Слизнем</A> | "
-				body += "<A href='?_src_=holder;makeblob=\ref[M]'>Сделать Блобом</A> | "
+				body += "<A href='?_src_=holder;makeai=\ref[M]'>РЎРґРµР»Р°С‚СЊ РР</A> | "
+				body += "<A href='?_src_=holder;makerobot=\ref[M]'>РЎРґРµР»Р°С‚СЊ Р РѕР±РѕС‚РѕРј</A> | "
+				body += "<A href='?_src_=holder;makealien=\ref[M]'>РЎРґРµР»Р°С‚СЊ Р§СѓР¶РёРј</A> | "
+				body += "<A href='?_src_=holder;makeslime=\ref[M]'>РЎРґРµР»Р°С‚СЊ РЎР»РёР·РЅРµРј</A> | "
+				body += "<A href='?_src_=holder;makeblob=\ref[M]'>РЎРґРµР»Р°С‚СЊ Р‘Р»РѕР±РѕРј</A> | "
 
 			//Simple Animals
 			if(isanimal(M))
@@ -134,37 +134,37 @@ var/global/BSACooldown = 0
 				body += "<A href='?_src_=holder;makeanimal=\ref[M]'>Animalize</A> | "
 
 			body += "<br><br>"
-			body += "<b>Рудиментарная трансформация:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font><br>"
-			body += "<A href='?_src_=holder;simplemake=observer;mob=\ref[M]'>Наблюдатель</A> | "
-			body += "\[ Alien: <A href='?_src_=holder;simplemake=drone;mob=\ref[M]'>Дрон</A>, "
-			body += "<A href='?_src_=holder;simplemake=hunter;mob=\ref[M]'>Охотник</A>, "
+			body += "<b>Р СѓРґРёРјРµРЅС‚Р°СЂРЅР°СЏ С‚СЂР°РЅСЃС„РѕСЂРјР°С†РёСЏ:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font><br>"
+			body += "<A href='?_src_=holder;simplemake=observer;mob=\ref[M]'>РќР°Р±Р»СЋРґР°С‚РµР»СЊ</A> | "
+			body += "\[ Alien: <A href='?_src_=holder;simplemake=drone;mob=\ref[M]'>Р”СЂРѕРЅ</A>, "
+			body += "<A href='?_src_=holder;simplemake=hunter;mob=\ref[M]'>РћС…РѕС‚РЅРёРє</A>, "
 			body += "<A href='?_src_=holder;simplemake=sentinel;mob=\ref[M]'>Sentinel</A>, "
-			body += "<A href='?_src_=holder;simplemake=praetorian;mob=\ref[M]'>Протареанец</A>, "
-			body += "<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>Королева</A>, "
-			body += "<A href='?_src_=holder;simplemake=larva;mob=\ref[M]'>Лявра</A> \] "
-			body += "<A href='?_src_=holder;simplemake=human;mob=\ref[M]'>Человек</A> "
-			body += "\[ slime: <A href='?_src_=holder;simplemake=slime;mob=\ref[M]'>Ребенок</A>, "
-			body += "<A href='?_src_=holder;simplemake=adultslime;mob=\ref[M]'>Взрослый</A> \] "
-			body += "<A href='?_src_=holder;simplemake=monkey;mob=\ref[M]'>Мартышка</A> | "
-			body += "<A href='?_src_=holder;simplemake=robot;mob=\ref[M]'>Киборг</A> | "
-			body += "<A href='?_src_=holder;simplemake=cat;mob=\ref[M]'>Кот</A> | "
-			body += "<A href='?_src_=holder;simplemake=runtime;mob=\ref[M]'>Рантайм</A> | "
-			body += "<A href='?_src_=holder;simplemake=corgi;mob=\ref[M]'>Корги</A> | "
-			body += "<A href='?_src_=holder;simplemake=ian;mob=\ref[M]'>Йан</A> | "
-			body += "<A href='?_src_=holder;simplemake=crab;mob=\ref[M]'>Краб</A> | "
-			body += "<A href='?_src_=holder;simplemake=coffee;mob=\ref[M]'>Кофе</A> | "
+			body += "<A href='?_src_=holder;simplemake=praetorian;mob=\ref[M]'>РџСЂРѕС‚Р°СЂРµР°РЅРµС†</A>, "
+			body += "<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>РљРѕСЂРѕР»РµРІР°</A>, "
+			body += "<A href='?_src_=holder;simplemake=larva;mob=\ref[M]'>Р›СЏРІСЂР°</A> \] "
+			body += "<A href='?_src_=holder;simplemake=human;mob=\ref[M]'>Р§РµР»РѕРІРµРє</A> "
+			body += "\[ slime: <A href='?_src_=holder;simplemake=slime;mob=\ref[M]'>Р РµР±РµРЅРѕРє</A>, "
+			body += "<A href='?_src_=holder;simplemake=adultslime;mob=\ref[M]'>Р’Р·СЂРѕСЃР»С‹Р№</A> \] "
+			body += "<A href='?_src_=holder;simplemake=monkey;mob=\ref[M]'>РњР°СЂС‚С‹С€РєР°</A> | "
+			body += "<A href='?_src_=holder;simplemake=robot;mob=\ref[M]'>РљРёР±РѕСЂРі</A> | "
+			body += "<A href='?_src_=holder;simplemake=cat;mob=\ref[M]'>РљРѕС‚</A> | "
+			body += "<A href='?_src_=holder;simplemake=runtime;mob=\ref[M]'>Р Р°РЅС‚Р°Р№Рј</A> | "
+			body += "<A href='?_src_=holder;simplemake=corgi;mob=\ref[M]'>РљРѕСЂРіРё</A> | "
+			body += "<A href='?_src_=holder;simplemake=ian;mob=\ref[M]'>Р™Р°РЅ</A> | "
+			body += "<A href='?_src_=holder;simplemake=crab;mob=\ref[M]'>РљСЂР°Р±</A> | "
+			body += "<A href='?_src_=holder;simplemake=coffee;mob=\ref[M]'>РљРѕС„Рµ</A> | "
 			//body += "<A href='?_src_=holder;simplemake=parrot;mob=\ref[M]'>Parrot</A> | "
 			//body += "<A href='?_src_=holder;simplemake=polyparrot;mob=\ref[M]'>Poly</A> | "
-			body += "\[ Construct: <A href='?_src_=holder;simplemake=constructarmored;mob=\ref[M]'>Джаггернаут</A> , "
+			body += "\[ Construct: <A href='?_src_=holder;simplemake=constructarmored;mob=\ref[M]'>Р”Р¶Р°РіРіРµСЂРЅР°СѓС‚</A> , "
 			body += "<A href='?_src_=holder;simplemake=constructbuilder;mob=\ref[M]'>Artificer</A> , "
 			body += "<A href='?_src_=holder;simplemake=constructwraith;mob=\ref[M]'>Wraith</A> \] "
-			body += "<A href='?_src_=holder;simplemake=shade;mob=\ref[M]'>Тень</A>"
+			body += "<A href='?_src_=holder;simplemake=shade;mob=\ref[M]'>РўРµРЅСЊ</A>"
 			body += "<br>"
 
 		body += "<br><br>"
-		body += "<b>Остальные действия:</b>"
+		body += "<b>РћСЃС‚Р°Р»СЊРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ:</b>"
 		body += "<br>"
-		body += "<A href='?_src_=holder;forcespeech=\ref[M]'>Заставить сказать</A> | "
+		body += "<A href='?_src_=holder;forcespeech=\ref[M]'>Р—Р°СЃС‚Р°РІРёС‚СЊ СЃРєР°Р·Р°С‚СЊ</A> | "
 	if (M.client)
 		body += "<A href='?_src_=holder;tdome1=\ref[M]'>Thunderdome 1</A> | "
 		body += "<A href='?_src_=holder;tdome2=\ref[M]'>Thunderdome 2</A> | "
@@ -243,21 +243,21 @@ var/global/BSACooldown = 0
 		if(6)
 			dat+="<B><FONT COLOR='maroon'>ERROR: Could not submit Feed story to Network.</B></FONT><HR><BR>"
 			if(src.admincaster_feed_channel.channel_name=="")
-				dat+="<FONT COLOR='maroon'>В•Invalid receiving channel name.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid receiving channel name.</FONT><BR>"
 			if(src.admincaster_feed_message.returnBody(-1) == "" || src.admincaster_feed_message.returnBody(-1) == "\[REDACTED\]")
-				dat+="<FONT COLOR='maroon'>В•Invalid message body.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid message body.</FONT><BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[3]'>Return</A><BR>"
 		if(7)
 			dat+="<B><FONT COLOR='maroon'>ERROR: Could not submit Feed Channel to Network.</B></FONT><HR><BR>"
 			if(src.admincaster_feed_channel.channel_name =="" || src.admincaster_feed_channel.channel_name == "\[REDACTED\]")
-				dat+="<FONT COLOR='maroon'>В•Invalid channel name.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid channel name.</FONT><BR>"
 			var/check = 0
 			for(var/datum/newscaster/feed_channel/FC in news_network.network_channels)
 				if(FC.channel_name == src.admincaster_feed_channel.channel_name)
 					check = 1
 					break
 			if(check)
-				dat+="<FONT COLOR='maroon'>В•Channel name already in use.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>Р’вЂўChannel name already in use.</FONT><BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[2]'>Return</A><BR>"
 		if(9)
 			dat+="<B>[admincaster_feed_channel.channel_name]: </B><FONT SIZE=1>\[created by: <FONT COLOR='maroon'>[admincaster_feed_channel.returnAuthor(-1)]</FONT>\]</FONT><HR>"
@@ -358,9 +358,9 @@ var/global/BSACooldown = 0
 		if(16)
 			dat+="<B><FONT COLOR='maroon'>ERROR: Wanted Issue rejected by Network.</B></FONT><HR><BR>"
 			if(src.admincaster_wanted_message.criminal =="" || src.admincaster_wanted_message.criminal == "\[REDACTED\]")
-				dat+="<FONT COLOR='maroon'>В•Invalid name for person wanted.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid name for person wanted.</FONT><BR>"
 			if(src.admincaster_wanted_message.body == "" || src.admincaster_wanted_message.body == "\[REDACTED\]")
-				dat+="<FONT COLOR='maroon'>В•Invalid description.</FONT><BR>"
+				dat+="<FONT COLOR='maroon'>Р’вЂўInvalid description.</FONT><BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[0]'>Return</A><BR>"
 		if(17)
 			dat+="<B>Wanted Issue successfully deleted from Circulation</B><BR>"
@@ -393,13 +393,13 @@ var/global/BSACooldown = 0
 		return
 
 	var/dat = {"<meta charset="UTF-8">
-		<center><B>Cпавн панель</B></center><hr>\n
+		<center><B>CРїР°РІРЅ РїР°РЅРµР»СЊ</B></center><hr>\n
 
 		<BR>
-		<A href='?src=\ref[src];create_object=1'>Создать объект</A><br>
-		<A href='?src=\ref[src];quick_create_object=1'>Быстрое создание объекта</A><br>
-		<A href='?src=\ref[src];create_turf=1'>Создать тайл</A><br>
-		<A href='?src=\ref[src];create_mob=1'>Создать моба</A><br>
+		<A href='?src=\ref[src];create_object=1'>РЎРѕР·РґР°С‚СЊ РѕР±СЉРµРєС‚</A><br>
+		<A href='?src=\ref[src];quick_create_object=1'>Р‘С‹СЃС‚СЂРѕРµ СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р°</A><br>
+		<A href='?src=\ref[src];create_turf=1'>РЎРѕР·РґР°С‚СЊ С‚Р°Р№Р»</A><br>
+		<A href='?src=\ref[src];create_mob=1'>РЎРѕР·РґР°С‚СЊ РјРѕР±Р°</A><br>
 		"}
 
 	if(marked_datum && istype(marked_datum, /atom))
@@ -418,13 +418,13 @@ var/global/BSACooldown = 0
 	set desc="Restarts the world immediately"
 	if (!usr.client.holder)
 		return
-	var/confirm = alert("Перезапустить игровой мир?", "Рестарт", "Да", "Отмена")
-	if(confirm == "Отмена")
+	var/confirm = alert("РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚СЊ РёРіСЂРѕРІРѕР№ РјРёСЂ?", "Р РµСЃС‚Р°СЂС‚", "Р”Р°", "РћС‚РјРµРЅР°")
+	if(confirm == "РћС‚РјРµРЅР°")
 		return
-	if(confirm == "Да")
+	if(confirm == "Р”Р°")
 		ticker.delay_end = 0
 		feedback_add_details("admin_verb","R") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-		world.Reboot("Инициировано [usr.client.holder.fakekey ? "Admin" : usr.key].", "end_error", "admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]", 10)
+		world.Reboot("РРЅРёС†РёРёСЂРѕРІР°РЅРѕ [usr.client.holder.fakekey ? "Admin" : usr.key].", "end_error", "admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]", 10)
 
 /datum/admins/proc/end_round()
 	set category = "Server"
@@ -433,10 +433,10 @@ var/global/BSACooldown = 0
 
 	if (!usr.client.holder)
 		return
-	var/confirm = alert("Закончить раунд и перезапустить игровой мир?", "Завершить раунд", "Да", "Отмена")
-	if(confirm == "Отмена")
+	var/confirm = alert("Р—Р°РєРѕРЅС‡РёС‚СЊ СЂР°СѓРЅРґ Рё РїРµСЂРµР·Р°РїСѓСЃС‚РёС‚СЊ РёРіСЂРѕРІРѕР№ РјРёСЂ?", "Р—Р°РІРµСЂС€РёС‚СЊ СЂР°СѓРЅРґ", "Р”Р°", "РћС‚РјРµРЅР°")
+	if(confirm == "РћС‚РјРµРЅР°")
 		return
-	if(confirm == "Да")
+	if(confirm == "Р”Р°")
 		ticker.force_ending = 1
 		feedback_add_details("admin_verb","ER") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -452,7 +452,7 @@ var/global/BSACooldown = 0
 	if(message)
 		if(!check_rights(R_SERVER,0))
 			message = adminscrub(message,500)
-		to_chat(world, "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Объявляет:</b></span>\n \t [message]")
+		to_chat(world, "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] РћР±СЉСЏРІР»СЏРµС‚:</b></span>\n \t [message]")
 		log_admin("Announce: [key_name(usr)] : [message]")
 	feedback_add_details("admin_verb","A") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -485,7 +485,7 @@ var/global/BSACooldown = 0
 	set name="Toggle OOC"
 	toggle_ooc()
 	log_admin("[key_name(usr)] toggled OOC.")
-	message_admins("[key_name_admin(usr)] переключил OOC.")
+	message_admins("[key_name_admin(usr)] РїРµСЂРµРєР»СЋС‡РёР» OOC.")
 	feedback_add_details("admin_verb","TOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleoocdead()
@@ -513,17 +513,17 @@ var/global/BSACooldown = 0
 	set name="Start Now"
 	if(ticker.current_state == GAME_STATE_PREGAME || ticker.current_state == GAME_STATE_STARTUP)
 		ticker.start_immediately = TRUE
-		log_admin("[usr.key] принудительно запустил игру.")
+		log_admin("[usr.key] РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ Р·Р°РїСѓСЃС‚РёР» РёРіСЂСѓ.")
 		var/msg = ""
 		if(ticker.current_state == GAME_STATE_STARTUP)
-			msg = " (Сервер всё еще настраивается, но раунд начнется сразу \
-				по завершению настройки.)"
+			msg = " (РЎРµСЂРІРµСЂ РІСЃС‘ РµС‰Рµ РЅР°СЃС‚СЂР°РёРІР°РµС‚СЃСЏ, РЅРѕ СЂР°СѓРЅРґ РЅР°С‡РЅРµС‚СЃСЏ СЃСЂР°Р·Сѓ \
+				РїРѕ Р·Р°РІРµСЂС€РµРЅРёСЋ РЅР°СЃС‚СЂРѕР№РєРё.)"
 		message_admins("<font color='blue'>\
-			[usr.key] начал игру.[msg]</font>")
+			[usr.key] РЅР°С‡Р°Р» РёРіСЂСѓ.[msg]</font>")
 		feedback_add_details("admin_verb","SN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		return 1
 	else
-		to_chat(usr, "<font color='red'>Ошибка: Начать Сейчас: Игра уже начата.</font>")
+		to_chat(usr, "<font color='red'>РћС€РёР±РєР°: РќР°С‡Р°С‚СЊ РЎРµР№С‡Р°СЃ: РРіСЂР° СѓР¶Рµ РЅР°С‡Р°С‚Р°.</font>")
 
 	return 0
 
@@ -560,10 +560,10 @@ var/global/BSACooldown = 0
 	set name="Toggle Respawn"
 	abandon_allowed = !( abandon_allowed )
 	if (abandon_allowed)
-		to_chat(world, "<B>Теперь вы можете возрождаться.</B>")
+		to_chat(world, "<B>РўРµРїРµСЂСЊ РІС‹ РјРѕР¶РµС‚Рµ РІРѕР·СЂРѕР¶РґР°С‚СЊСЃСЏ.</B>")
 	else
-		to_chat(world, "<B>Теперь вы не можете возраждаться :(</B>")
-	message_admins("<span class='adminnotice'>[key_name_admin(usr)] перключил возможность респавна в состояние [abandon_allowed ? "On" : "Off"].</span>")
+		to_chat(world, "<B>РўРµРїРµСЂСЊ РІС‹ РЅРµ РјРѕР¶РµС‚Рµ РІРѕР·СЂР°Р¶РґР°С‚СЊСЃСЏ :(</B>")
+	message_admins("<span class='adminnotice'>[key_name_admin(usr)] РїРµСЂРєР»СЋС‡РёР» РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ СЂРµСЃРїР°РІРЅР° РІ СЃРѕСЃС‚РѕСЏРЅРёРµ [abandon_allowed ? "On" : "Off"].</span>")
 	log_admin("[key_name(usr)] toggled respawn to [abandon_allowed ? "On" : "Off"].")
 	world.update_status()
 	feedback_add_details("admin_verb","TR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -579,10 +579,10 @@ var/global/BSACooldown = 0
 	if(newtime)
 		ticker.timeLeft = newtime * 10
 		if(newtime < 0)
-			to_chat(world, "<b>Начало раунда было приостановленно.</b>")
+			to_chat(world, "<b>РќР°С‡Р°Р»Рѕ СЂР°СѓРЅРґР° Р±С‹Р»Рѕ РїСЂРёРѕСЃС‚Р°РЅРѕРІР»РµРЅРЅРѕ.</b>")
 			log_admin("[key_name(usr)] delayed the round start.")
 		else
-			to_chat(world, "<b>Игра начнется через [newtime] секунд.</b>")
+			to_chat(world, "<b>РРіСЂР° РЅР°С‡РЅРµС‚СЃСЏ С‡РµСЂРµР· [newtime] СЃРµРєСѓРЅРґ.</b>")
 			to_chat(world, 'sound/ai/attention.ogg')
 			log_admin("[key_name(usr)] set the pre-game delay to [newtime] seconds.")
 		feedback_add_details("admin_verb","DELAY") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -636,7 +636,7 @@ var/global/BSACooldown = 0
 		var/atom/A = new chosen(usr.loc)
 		A.admin_spawned = TRUE
 
-	log_admin("[key_name(usr)] заспавнил [chosen] в координатах ([usr.x],[usr.y],[usr.z])")
+	log_admin("[key_name(usr)] Р·Р°СЃРїР°РІРЅРёР» [chosen] РІ РєРѕРѕСЂРґРёРЅР°С‚Р°С… ([usr.x],[usr.y],[usr.z])")
 	feedback_add_details("admin_verb","SA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
@@ -823,12 +823,12 @@ var/global/BSACooldown = 0
 		var/string
 		if(logout && config && config.announce_admin_logout)
 			string = pick(
-				"Администратор вышёл: [key_name(src)]")
+				"РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ РІС‹С€С‘Р»: [key_name(src)]")
 		else if(!logout && config && config.announce_admin_login && (prefs.toggles & ANNOUNCE_LOGIN))
 			string = pick(
-				"Администратор зашёл: [key_name(src)]")
+				"РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ Р·Р°С€С‘Р»: [key_name(src)]")
 		else if(!logout && config && config.announce_admin_login && !ckey=="iWuna" && (prefs.toggles & ANNOUNCE_LOGIN))
 			string = pick(
-				"БЛЯТЬ ВУНА ЗАШЛА: [key_name(src)]")
+				"Р‘Р›РЇРўР¬ Р’РЈРќРђ Р—РђРЁР›Рђ: [key_name(src)]")
 		if(string)
 			message_admins("[string]")

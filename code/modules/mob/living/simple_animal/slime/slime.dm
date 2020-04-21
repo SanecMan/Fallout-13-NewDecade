@@ -20,11 +20,11 @@ var/list/slime_colours = list("rainbow", "grey", "purple", "metal", "orange",
 	harm_intent_damage = 5
 	icon_living = "grey baby slime"
 	icon_dead = "grey baby slime dead"
-	response_help  = "гладит"
-	response_disarm = "гонит"
-	response_harm   = "наступает на"
-	emote_see = list("дрожит", "скачет на месте")
-	speak_emote = list("телепатически хлюпает")
+	response_help  = "РіР»Р°РґРёС‚"
+	response_disarm = "РіРѕРЅРёС‚"
+	response_harm   = "РЅР°СЃС‚СѓРїР°РµС‚ РЅР°"
+	emote_see = list("РґСЂРѕР¶РёС‚", "СЃРєР°С‡РµС‚ РЅР° РјРµСЃС‚Рµ")
+	speak_emote = list("С‚РµР»РµРїР°С‚РёС‡РµСЃРєРё С…Р»СЋРїР°РµС‚")
 	bubble_icon = "slime"
 
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)

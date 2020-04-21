@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/synth
-	name = "Синт"
-	desc = "Тонкий синт. Похоже на человека, но очень стрёмного."
+	name = "РЎРёРЅС‚"
+	desc = "РўРѕРЅРєРёР№ СЃРёРЅС‚. РџРѕС…РѕР¶Рµ РЅР° С‡РµР»РѕРІРµРєР°, РЅРѕ РѕС‡РµРЅСЊ СЃС‚СЂС‘РјРЅРѕРіРѕ."
 	eng_name = "synth"
 	eng_desc = "Synth strider. Looks like weird human but it's machine."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -53,7 +53,7 @@
 	XP = 25
 
 /mob/living/simple_animal/hostile/synth/mk2
-	name = "Синт МК2"
+	name = "РЎРёРЅС‚ РњРљ2"
 	eng_name = "synth MK2"
 	icon_state = "synthmk2"
 	icon_living = "synthmk2"

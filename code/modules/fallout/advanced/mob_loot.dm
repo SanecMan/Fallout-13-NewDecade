@@ -106,7 +106,7 @@
 	looting = FALSE
 	looted = TRUE
 
-	player.visible_message("[player] достает что-то из [src].")
+	player.visible_message("[player] РґРѕСЃС‚Р°РµС‚ С‡С‚Рѕ-С‚Рѕ РёР· [src].")
 
 	// 0 LUCK = 0.3. 10 LUCK = 1.2
 	var/modifer = 0.3 + (player.special.getPoint("l") * 0.05) + (player.special.getPoint("p") * 0.15)
@@ -117,7 +117,7 @@
 
 	var/itemType = getLootObject(1 / modifer)
 	if(itemType == null)
-		player.visible_message("<span class='notice'>Пусто.</span>")
+		player.visible_message("<span class='notice'>РџСѓСЃС‚Рѕ.</span>")
 		return
 
 	var/itemTypeString = "[itemType]"

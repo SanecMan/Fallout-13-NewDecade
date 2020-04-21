@@ -29,7 +29,7 @@
 	var/nojumpsuit = 0	// this is sorta... weird. it basically lets you equip stuff that usually needs jumpsuits without one, like belts and pockets and ids
 	var/blacklisted = 0 //Flag to exclude from green slime core species.
 	var/dangerous_existence = null //A flag for transformation spells that tells them "hey if you turn a person into one of these without preperation, they'll probably die!"
-	var/say_mod = "говорит"	// affects the speech message
+	var/say_mod = "РіРѕРІРѕСЂРёС‚"	// affects the speech message
 	var/list/default_features = list() // Default mutant bodyparts for this species. Don't forget to set one for every mutant bodypart you allow this species to have.
 	var/list/mutant_bodyparts = list() 	// Parts of the body that are diferent enough from the standard human model that they cause clipping with some equipment
 	var/list/mutant_organs = list(/obj/item/organ/tongue)		//Internal organs that are unique to this race.
@@ -53,7 +53,7 @@
 	// species flags. these can be found in flags.dm
 	var/list/species_traits = list()
 
-	var/attack_verb = "бьет"	// punch-specific attack verb
+	var/attack_verb = "Р±СЊРµС‚"	// punch-specific attack verb
 	var/sound/attack_sound = 'sound/weapons/punch1.ogg'
 	var/sound/miss_sound = 'sound/weapons/punchmiss.ogg'
 
@@ -772,13 +772,13 @@
 	else if(H.nutrition > NUTRITION_LEVEL_FED && H.satiety > 80)
 		if(H.metabolism_efficiency != 1.25 && (H.dna && H.dna.species && !(NOHUNGER in H.dna.species.species_traits)))
 			if(world.time > H.last_hunger_message + 600)
-				to_chat(H, pick("<span class='notice'>Вы чувствуете себя сытым.</span>", "<span class='notice'>Вы вдоволь наелись.</span>", "<span class='notice'>Вы больше не хотите есть.</span>"))
+				to_chat(H, pick("<span class='notice'>Р’С‹ С‡СѓРІСЃС‚РІСѓРµС‚Рµ СЃРµР±СЏ СЃС‹С‚С‹Рј.</span>", "<span class='notice'>Р’С‹ РІРґРѕРІРѕР»СЊ РЅР°РµР»РёСЃСЊ.</span>", "<span class='notice'>Р’С‹ Р±РѕР»СЊС€Рµ РЅРµ С…РѕС‚РёС‚Рµ РµСЃС‚СЊ.</span>"))
 				H.last_hunger_message = world.time
 			H.metabolism_efficiency = 1.25
 	else if(H.nutrition < NUTRITION_LEVEL_STARVING + 50)
 		if(H.metabolism_efficiency != 0.8)
 			if(world.time > H.last_hunger_message + 600)
-				to_chat(H, pick("<span class='notice'>Вы чувствуете что хотите есть.</span>", "<span class='notice'>Вы ощущаете голод.</span>", "<span class='notice'>У вас урчит живот.</span>", "<span class='notice'>Вы ощущаете слабую боль в области желудка.</span>", "<span class='notice'>Найдите что-нибудь поесть.</span>"))
+				to_chat(H, pick("<span class='notice'>Р’С‹ С‡СѓРІСЃС‚РІСѓРµС‚Рµ С‡С‚Рѕ С…РѕС‚РёС‚Рµ РµСЃС‚СЊ.</span>", "<span class='notice'>Р’С‹ РѕС‰СѓС‰Р°РµС‚Рµ РіРѕР»РѕРґ.</span>", "<span class='notice'>РЈ РІР°СЃ СѓСЂС‡РёС‚ Р¶РёРІРѕС‚.</span>", "<span class='notice'>Р’С‹ РѕС‰СѓС‰Р°РµС‚Рµ СЃР»Р°Р±СѓСЋ Р±РѕР»СЊ РІ РѕР±Р»Р°СЃС‚Рё Р¶РµР»СѓРґРєР°.</span>", "<span class='notice'>РќР°Р№РґРёС‚Рµ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РїРѕРµСЃС‚СЊ.</span>"))
 				H.last_hunger_message = world.time
 			H.metabolism_efficiency = 0.8
 	else
@@ -872,25 +872,25 @@
 				if(!H.weakened)
 					H.emote("collapse")
 				H.Weaken(10)
-				to_chat(H, "<span class='danger'>Вы ощущаете слабость.</span>")
+				to_chat(H, "<span class='danger'>Р’С‹ РѕС‰СѓС‰Р°РµС‚Рµ СЃР»Р°Р±РѕСЃС‚СЊ.</span>")
 			switch(H.radiation)
 				if(50 to 75)
 					if(prob(5))
 						if(!H.weakened)
 							H.emote("collapse")
 						H.Weaken(3)
-						to_chat(H, "<span class='danger'>Вы ощущаете слабость.</span>")
+						to_chat(H, "<span class='danger'>Р’С‹ РѕС‰СѓС‰Р°РµС‚Рµ СЃР»Р°Р±РѕСЃС‚СЊ.</span>")
 
 					if(prob(15))
 						if(!( H.hair_style == "Shaved") || !(H.hair_style == "Bald") || (HAIR in species_traits))
-							to_chat(H, "<span class='danger'>Ваши волосы начали выпадать <span>")
+							to_chat(H, "<span class='danger'>Р’Р°С€Рё РІРѕР»РѕСЃС‹ РЅР°С‡Р°Р»Рё РІС‹РїР°РґР°С‚СЊ <span>")
 							addtimer(CALLBACK(src, .proc/go_bald, H), 50)
 
 				if(75 to 100)
 					if(prob(1))
-						to_chat(H, "<span class='danger'>Вы мутируете!</span>")
+						to_chat(H, "<span class='danger'>Р’С‹ РјСѓС‚РёСЂСѓРµС‚Рµ!</span>")
 						H.randmutb()
-						H.emote("задыхается")
+						H.emote("Р·Р°РґС‹С…Р°РµС‚СЃСЏ")
 						H.domutcheck()
 		return 0
 	else if ((RADREGEN in species_traits))
@@ -898,7 +898,7 @@
 			H.adjustBruteLoss(-5)
 			H.adjustFireLoss(-5)
 			H.adjustToxLoss(-5)
-			to_chat(H, "<span class='green'>Твои раны медленно регенирируют.</span>")
+			to_chat(H, "<span class='green'>РўРІРѕРё СЂР°РЅС‹ РјРµРґР»РµРЅРЅРѕ СЂРµРіРµРЅРёСЂРёСЂСѓСЋС‚.</span>")
 
 	H.radiation = 0
 	return 1
@@ -1302,7 +1302,7 @@
 		missProb = 0
 
 	if(prob(missProb))
-		H.visible_message("<font color='green'>[H] имеет большую удачу!</font>")
+		H.visible_message("<font color='green'>[H] РёРјРµРµС‚ Р±РѕР»СЊС€СѓСЋ СѓРґР°С‡Сѓ!</font>")
 		hit_percent = 0
 
 	if(!damage || hit_percent <= 0)

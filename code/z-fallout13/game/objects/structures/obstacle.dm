@@ -49,12 +49,12 @@
 		if(S.get_amount() < 2)
 			to_chat(user, "<span class='warning'>You need two sheets of metal to finish a wall!</span>")
 			return
-		to_chat(user, "<span class='notice'>Вы начали добавлять обшивку...</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РЅР°С‡Р°Р»Рё РґРѕР±Р°РІР»СЏС‚СЊ РѕР±С€РёРІРєСѓ...</span>")
 		if (do_after(user, 40, target = src))
 			if(loc == null || S.get_amount() < 2)
 				return
 			S.use(2)
-			to_chat(user, "<span class='notice'>Вы добавили обшивки.</span>")
+			to_chat(user, "<span class='notice'>Р’С‹ РґРѕР±Р°РІРёР»Рё РѕР±С€РёРІРєРё.</span>")
 			var/turf/T = get_turf(src)
 			T.ChangeTurf(/turf/closed/wall/f13/store)
 			transfer_fingerprints_to(T)
@@ -62,14 +62,14 @@
 		return
 	if(istype(S,/obj/item/stack/sheet/mineral/wood))
 		if(S.get_amount() < 2)
-			to_chat(user, "<span class='warning'>Вам необходимо еще две доски, чтобы завершить стенку!</span>")
+			to_chat(user, "<span class='warning'>Р’Р°Рј РЅРµРѕР±С…РѕРґРёРјРѕ РµС‰Рµ РґРІРµ РґРѕСЃРєРё, С‡С‚РѕР±С‹ Р·Р°РІРµСЂС€РёС‚СЊ СЃС‚РµРЅРєСѓ!</span>")
 			return
-		to_chat(user, "<span class='notice'>Вы начали добавлять обшивку...</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РЅР°С‡Р°Р»Рё РґРѕР±Р°РІР»СЏС‚СЊ РѕР±С€РёРІРєСѓ...</span>")
 		if (do_after(user, 40, target = src))
 			if(loc == null || S.get_amount() < 2)
 				return
 			S.use(2)
-			to_chat(user, "<span class='notice'>Вы добавили обшивки.</span>")
+			to_chat(user, "<span class='notice'>Р’С‹ РґРѕР±Р°РІРёР»Рё РѕР±С€РёРІРєРё.</span>")
 			var/turf/T = get_turf(src)
 			T.ChangeTurf(/turf/closed/wall/f13/wood/house)
 			transfer_fingerprints_to(T)
@@ -137,10 +137,10 @@
 				user.Move(get_step(loc, dir), dir)
 				density = TRUE
 				user.Stun(climb_stun)
-				to_chat(user, "<span class='warning'>Вы перелезли через [src].</span>")
+				to_chat(user, "<span class='warning'>Р’С‹ РїРµСЂРµР»РµР·Р»Рё С‡РµСЂРµР· [src].</span>")
 				. = 1
 			else
-				to_chat(user, "<span class='warning'>Вы не смогли перелезть через [src].</span>")
+				to_chat(user, "<span class='warning'>Р’С‹ РЅРµ СЃРјРѕРіР»Рё РїРµСЂРµР»РµР·С‚СЊ С‡РµСЂРµР· [src].</span>")
 		structureclimber = null
 	else
 		..()
@@ -176,8 +176,8 @@
 	canpass = TRUE
 
 /obj/structure/barricade/sandbags
-	name = "мешки с песком"
-	desc = "Хорошее укрутие, оно вызывает у вас флешбэки.."
+	name = "РјРµС€РєРё СЃ РїРµСЃРєРѕРј"
+	desc = "РҐРѕСЂРѕС€РµРµ СѓРєСЂСѓС‚РёРµ, РѕРЅРѕ РІС‹Р·С‹РІР°РµС‚ Сѓ РІР°СЃ С„Р»РµС€Р±СЌРєРё.."
 	icon = 'icons/Marine/barricades.dmi'
 	icon_state = "sandbag_0"
 	obj_integrity = 300
@@ -189,8 +189,8 @@
 	dirlike = TRUE
 
 /obj/structure/barricade/sandbags/metal
-	name = "металлические укрепления"
-	desc = "Гораздо прочнее и эффективнее мешков с песком."
+	name = "РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёРµ СѓРєСЂРµРїР»РµРЅРёСЏ"
+	desc = "Р“РѕСЂР°Р·РґРѕ РїСЂРѕС‡РЅРµРµ Рё СЌС„С„РµРєС‚РёРІРЅРµРµ РјРµС€РєРѕРІ СЃ РїРµСЃРєРѕРј."
 	icon = 'icons/Marine/barricades.dmi'
 	icon_state = "metal_0"
 	proj_pass_rate = 35
@@ -198,8 +198,8 @@
 	max_integrity = 500
 
 /obj/structure/barricade/sandbags/wooden
-	name = "деревянные укрепления"
-	desc = "Достаточно посредственное укрытие, но оно может спасти вам жизнь."
+	name = "РґРµСЂРµРІСЏРЅРЅС‹Рµ СѓРєСЂРµРїР»РµРЅРёСЏ"
+	desc = "Р”РѕСЃС‚Р°С‚РѕС‡РЅРѕ РїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕРµ СѓРєСЂС‹С‚РёРµ, РЅРѕ РѕРЅРѕ РјРѕР¶РµС‚ СЃРїР°СЃС‚Рё РІР°Рј Р¶РёР·РЅСЊ."
 	icon = 'icons/Marine/barricades.dmi'
 	icon_state = "wooden"
 	proj_pass_rate = 15

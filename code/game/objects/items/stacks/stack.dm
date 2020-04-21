@@ -119,7 +119,7 @@
 		if(!building_checks(R, multiplier))
 			return
 		if (R.time)
-			usr.visible_message("<span class='notice'>[usr] начинает строить [R.title].</span>", "<span class='notice'>Вы начинаете строить [R.title]...</span>")
+			usr.visible_message("<span class='notice'>[usr] РЅР°С‡РёРЅР°РµС‚ СЃС‚СЂРѕРёС‚СЊ [R.title].</span>", "<span class='notice'>Р’С‹ РЅР°С‡РёРЅР°РµС‚Рµ СЃС‚СЂРѕРёС‚СЊ [R.title]...</span>")
 			if (!do_after(usr, R.time, target = usr))
 				return
 			if(!building_checks(R, multiplier))

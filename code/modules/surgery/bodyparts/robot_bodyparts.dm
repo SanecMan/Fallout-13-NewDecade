@@ -25,7 +25,7 @@
 /obj/item/bodypart/l_leg/robot
 	name = "cyborg left leg"
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
-	attack_verb = list("пинает", "давит")
+	attack_verb = list("РїРёРЅР°РµС‚", "РґР°РІРёС‚")
 	item_state = "buildpipe"
 	icon = 'icons/obj/robot_parts.dmi'
 	flags = CONDUCT

@@ -1,8 +1,8 @@
 //Fallout 13 wolf directory
 
 /mob/living/simple_animal/hostile/wolf
-	name = "Дикая собака"
-	desc = "Собаки пережили Великую Войну и даже смогли расплодиться. Они сейчас очень похожи на волков."
+	name = "Р”РёРєР°СЏ СЃРѕР±Р°РєР°"
+	desc = "РЎРѕР±Р°РєРё РїРµСЂРµР¶РёР»Рё Р’РµР»РёРєСѓСЋ Р’РѕР№РЅСѓ Рё РґР°Р¶Рµ СЃРјРѕРіР»Рё СЂР°СЃРїР»РѕРґРёС‚СЊСЃСЏ. РћРЅРё СЃРµР№С‡Р°СЃ РѕС‡РµРЅСЊ РїРѕС…РѕР¶Рё РЅР° РІРѕР»РєРѕРІ."
 	eng_name = "feral dog"
 	eng_desc = "The dogs that survived the Great War are a larger, and tougher breed, size of a wolf.<br>This one seems to be severely malnourished and its eyes are bloody red."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -35,7 +35,7 @@
 	melee_damage_upper = 5
 	aggro_vision_range = 15
 	idle_vision_range = 7
-	attacktext = "кусает"
+	attacktext = "РєСѓСЃР°РµС‚"
 	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 2
@@ -43,8 +43,8 @@
 	XP = 7
 
 /mob/living/simple_animal/hostile/wolf/alpha
-	name = "волк"
-	desc = "Собаки пережили Великую Войну и даже смогли расплодиться. Они сейчас очень похожи на волков... Постойте, ЭТО ЖЕ И ЕСТЬ ВОЛК!"
+	name = "РІРѕР»Рє"
+	desc = "РЎРѕР±Р°РєРё РїРµСЂРµР¶РёР»Рё Р’РµР»РёРєСѓСЋ Р’РѕР№РЅСѓ Рё РґР°Р¶Рµ СЃРјРѕРіР»Рё СЂР°СЃРїР»РѕРґРёС‚СЊСЃСЏ. РћРЅРё СЃРµР№С‡Р°СЃ РѕС‡РµРЅСЊ РїРѕС…РѕР¶Рё РЅР° РІРѕР»РєРѕРІ... РџРѕСЃС‚РѕР№С‚Рµ, Р­РўРћ Р–Р• Р Р•РЎРўР¬ Р’РћР›Рљ!"
 	eng_name = "wolf"
 	eng_desc = "The dogs that survived the Great War are a larger, and tougher breed, size of a wolf.<br>Wait... This one's a wolf!"
 	icon_state = "wolf_angry"

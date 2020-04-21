@@ -2,8 +2,8 @@
 
 /datum/f13_objective
 	var
-		name = "Квест"
-		desc = "Описание квеста"
+		name = "РљРІРµСЃС‚"
+		desc = "РћРїРёСЃР°РЅРёРµ РєРІРµСЃС‚Р°"
 		points = 0
 		kind = BOTH
 		list/available_factions = list("all")
@@ -35,7 +35,7 @@
 			M.objective = holder
 			holders += holder
 
-			to_chat(M.current, "<span class='notice'>Получен новый квест: <b>[name]</b></span>")
+			to_chat(M.current, "<span class='notice'>РџРѕР»СѓС‡РµРЅ РЅРѕРІС‹Р№ РєРІРµСЃС‚: <b>[name]</b></span>")
 			to_chat(M.current, FormatText("\t<i>[desc]<i>", data))
 			if(data["custom_desc"])
 				to_chat(M.current, "\t[FormatText(data["custom_desc"],data)]")
@@ -45,7 +45,7 @@
 			F.objective = holder
 			holders += holder
 			for(var/member in F.members)
-				to_chat(member, "<span class='notice'>Текущий квест вашей <i>фракции</i>: <b>[name]</b></span>")
+				to_chat(member, "<span class='notice'>РўРµРєСѓС‰РёР№ РєРІРµСЃС‚ РІР°С€РµР№ <i>С„СЂР°РєС†РёРё</i>: <b>[name]</b></span>")
 				to_chat(member, FormatText("\t<i>[desc]<i>", data))
 				if(data["custom_desc"])
 					to_chat(member, "\t[FormatText(data["custom_desc"],data)]")

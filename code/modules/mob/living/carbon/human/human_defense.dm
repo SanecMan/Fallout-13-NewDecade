@@ -647,8 +647,8 @@
 
 	if(health >= 0)
 		if(src == M)
-			visible_message("[src] осматривает себя.", \
-				"<span class='notice'>Вы осматриваете себя на наличие ран.</span>")
+			visible_message("[src] РѕСЃРјР°С‚СЂРёРІР°РµС‚ СЃРµР±СЏ.", \
+				"<span class='notice'>Р’С‹ РѕСЃРјР°С‚СЂРёРІР°РµС‚Рµ СЃРµР±СЏ РЅР° РЅР°Р»РёС‡РёРµ СЂР°РЅ.</span>")
 
 			var/list/missing = list("head", "chest", "l_arm", "r_arm", "l_leg", "r_leg")
 			for(var/X in bodyparts)
@@ -683,19 +683,19 @@
 				to_chat(src, "\t [status == "OK" ? "\blue" : "\red"] Your [LB.name] is [status].")
 
 				for(var/obj/item/I in LB.embedded_objects)
-					to_chat(src, "\t <a href='byond://?src=\ref[src];embedded_object=\ref[I];embedded_limb=\ref[LB]'>\red Здесь [I] застрявшее в [LB.name]!</a>")
+					to_chat(src, "\t <a href='byond://?src=\ref[src];embedded_object=\ref[I];embedded_limb=\ref[LB]'>\red Р—РґРµСЃСЊ [I] Р·Р°СЃС‚СЂСЏРІС€РµРµ РІ [LB.name]!</a>")
 
 
 			for(var/t in missing)
-				to_chat(src, "<span class='boldannounce'>Ваша [parse_zone(t)] отсутствует!</span>")
+				to_chat(src, "<span class='boldannounce'>Р’Р°С€Р° [parse_zone(t)] РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚!</span>")
 
 			if(bleed_rate)
-				to_chat(src, "<span class='danger'>У вас идёт кровь!</span>")
+				to_chat(src, "<span class='danger'>РЈ РІР°СЃ РёРґС‘С‚ РєСЂРѕРІСЊ!</span>")
 			if(staminaloss)
 				if(staminaloss > 30)
-					to_chat(src, "<span class='info'>Вы полностью вымотаны.</span>")
+					to_chat(src, "<span class='info'>Р’С‹ РїРѕР»РЅРѕСЃС‚СЊСЋ РІС‹РјРѕС‚Р°РЅС‹.</span>")
 				else
-					to_chat(src, "<span class='info'>Вы чувствуете усталость.</span>")
+					to_chat(src, "<span class='info'>Р’С‹ С‡СѓРІСЃС‚РІСѓРµС‚Рµ СѓСЃС‚Р°Р»РѕСЃС‚СЊ.</span>")
 		else
 			if(wear_suit)
 				wear_suit.add_fingerprint(M)

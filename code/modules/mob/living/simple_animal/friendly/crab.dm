@@ -11,9 +11,9 @@
 	speak_chance = 1
 	turns_per_move = 5
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 1)
-	response_help  = "гладит"
-	response_disarm = "аккуратно пихает"
-	response_harm   = "пинает"
+	response_help  = "РіР»Р°РґРёС‚"
+	response_disarm = "Р°РєРєСѓСЂР°С‚РЅРѕ РїРёС…Р°РµС‚"
+	response_harm   = "РїРёРЅР°РµС‚"
 	stop_automated_movement = 1
 	friendly = "pinches"
 	ventcrawler = VENTCRAWLER_ALWAYS
@@ -40,7 +40,7 @@
 	real_name = "Coffee"
 	desc = "It's Coffee, the other pet!"
 	gender = FEMALE
-	response_help  = "гладит"
-	response_disarm = "аккуратно пихает в сторону"
-	response_harm   = "пинает"
+	response_help  = "РіР»Р°РґРёС‚"
+	response_disarm = "Р°РєРєСѓСЂР°С‚РЅРѕ РїРёС…Р°РµС‚ РІ СЃС‚РѕСЂРѕРЅСѓ"
+	response_harm   = "РїРёРЅР°РµС‚"
 	gold_core_spawnable = 0

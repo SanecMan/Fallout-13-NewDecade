@@ -21,31 +21,31 @@
 /datum/emote/living/blush
 	key = "blush"
 	key_third_person = "blushes"
-	message = "краснеет."
+	message = "РєСЂР°СЃРЅРµРµС‚."
 
 /datum/emote/living/bow
 	key = "bow"
 	key_third_person = "bows"
-	message = "делает поклон."
-	message_param = "кланяется %t."
+	message = "РґРµР»Р°РµС‚ РїРѕРєР»РѕРЅ."
+	message_param = "РєР»Р°РЅСЏРµС‚СЃСЏ %t."
 	restraint_check = TRUE
 
 /datum/emote/living/burp
 	key = "burp"
 	key_third_person = "burps"
-	message = "рыгает.."
+	message = "СЂС‹РіР°РµС‚.."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/choke
 	key = "choke"
 	key_third_person = "chokes"
-	message = "поперхнулся!"
+	message = "РїРѕРїРµСЂС…РЅСѓР»СЃСЏ!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/cross
 	key = "cross"
 	key_third_person = "crosses"
-	message = "складывает руки."
+	message = "СЃРєР»Р°РґС‹РІР°РµС‚ СЂСѓРєРё."
 	restraint_check = TRUE
 
 /datum/emote/living/chuckle
@@ -68,7 +68,7 @@
 /datum/emote/living/cough
 	key = "cough"
 	key_third_person = "coughs"
-	message = "кашляет!"
+	message = "РєР°С€Р»СЏРµС‚!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/dance
@@ -80,7 +80,7 @@
 /datum/emote/living/deathgasp
 	key = "deathgasp"
 	key_third_person = "deathgasps"
-	message = "глаза застыли в ужасе, конечности содрогнулись в последний раз..."
+	message = "РіР»Р°Р·Р° Р·Р°СЃС‚С‹Р»Рё РІ СѓР¶Р°СЃРµ, РєРѕРЅРµС‡РЅРѕСЃС‚Рё СЃРѕРґСЂРѕРіРЅСѓР»РёСЃСЊ РІ РїРѕСЃР»РµРґРЅРёР№ СЂР°Р·..."
 	message_robot = "shudders violently for a moment before falling still, its eyes slowly darkening."
 	message_AI = "lets out a flurry of sparks, its screen flickering as its systems slowly halt."
 	message_alien = "lets out a waning guttural screech, green blood bubbling from its maw..."
@@ -96,7 +96,7 @@
 /datum/emote/living/drool
 	key = "drool"
 	key_third_person = "drools"
-	message = "пускает слюни."
+	message = "РїСѓСЃРєР°РµС‚ СЃР»СЋРЅРё."
 
 /datum/emote/living/faint
 	key = "faint"
@@ -111,7 +111,7 @@
 /datum/emote/living/flap
 	key = "flap"
 	key_third_person = "flaps"
-	message = "машет крыльями."
+	message = "РјР°С€РµС‚ РєСЂС‹Р»СЊСЏРјРё."
 	var/wing_time = 20
 
 /datum/emote/living/flap/run_emote(mob/user, params)
@@ -130,7 +130,7 @@
 /datum/emote/living/flap/aflap
 	key = "aflap"
 	key_third_person = "aflaps"
-	message = "ОЧЕНЬ-ОЧЕНЬ-ОЧЕНЬ агрессивно машет крыльями!"
+	message = "РћР§Р•РќР¬-РћР§Р•РќР¬-РћР§Р•РќР¬ Р°РіСЂРµСЃСЃРёРІРЅРѕ РјР°С€РµС‚ РєСЂС‹Р»СЊСЏРјРё!"
 	wing_time = 10
 
 /datum/emote/living/flip
@@ -151,49 +151,49 @@
 /datum/emote/living/carbon/human/unspeakable/pee
 	key = "pee"
 	key_third_person = "pees"
-	message = "ссыт."
+	message = "СЃСЃС‹С‚."
 
 /datum/emote/living/carbon/human/unspeakable/poo
 	key = "poo"
 	key_third_person = "poops"
-	message = "срёт."
+	message = "СЃСЂС‘С‚."
 
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"
-	message = "пугается."
+	message = "РїСѓРіР°РµС‚СЃСЏ."
 
 /datum/emote/living/gag
 	key = "gag"
 	key_third_person = "gags"
-	message = "подавился."
+	message = "РїРѕРґР°РІРёР»СЃСЏ."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/gasp
 	key = "gasp"
 	key_third_person = "gasps"
-	message = "задыхается!"
+	message = "Р·Р°РґС‹С…Р°РµС‚СЃСЏ!"
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = UNCONSCIOUS
 
 /datum/emote/living/giggle
 	key = "giggle"
 	key_third_person = "giggles"
-	message = "смеется."
+	message = "СЃРјРµРµС‚СЃСЏ."
 	message_mime = "giggles silently!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/glare
 	key = "glare"
 	key_third_person = "glares"
-	message = "зыркает."
-	message_param = "зыркает на %t."
+	message = "Р·С‹СЂРєР°РµС‚."
+	message_param = "Р·С‹СЂРєР°РµС‚ РЅР° %t."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/grin
 	key = "grin"
 	key_third_person = "grins"
-	message = "ухмыляется."
+	message = "СѓС…РјС‹Р»СЏРµС‚СЃСЏ."
 
 /datum/emote/living/groan
 	key = "groan"
@@ -209,7 +209,7 @@
 /datum/emote/living/jump
 	key = "jump"
 	key_third_person = "jumps"
-	message = "прыгает!"
+	message = "РїСЂС‹РіР°РµС‚!"
 	restraint_check = TRUE
 
 /datum/emote/living/kiss
@@ -222,26 +222,26 @@
 /datum/emote/living/laugh
 	key = "laugh"
 	key_third_person = "laughs"
-	message = "ржёт."
+	message = "СЂР¶С‘С‚."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/look
 	key = "look"
 	key_third_person = "looks"
-	message = "смотрит."
-	message_param = "смотрит на %t."
+	message = "СЃРјРѕС‚СЂРёС‚."
+	message_param = "СЃРјРѕС‚СЂРёС‚ РЅР° %t."
 
 /datum/emote/living/nod
 	key = "nod"
 	key_third_person = "nods"
-	message = "кивает."
-	message_param = "кивает %t."
+	message = "РєРёРІР°РµС‚."
+	message_param = "РєРёРІР°РµС‚ %t."
 
 /datum/emote/living/point
 	key = "point"
 	key_third_person = "points"
-	message = "указывает."
-	message_param = "указывает на %t."
+	message = "СѓРєР°Р·С‹РІР°РµС‚."
+	message_param = "СѓРєР°Р·С‹РІР°РµС‚ РЅР° %t."
 	restraint_check = TRUE
 
 /datum/emote/living/pout
@@ -253,8 +253,8 @@
 /datum/emote/living/scream
 	key = "scream"
 	key_third_person = "screams"
-	message = "кричит."
-	message_mime = "изображает крик!"
+	message = "РєСЂРёС‡РёС‚."
+	message_mime = "РёР·РѕР±СЂР°Р¶Р°РµС‚ РєСЂРёРє!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/scowl
@@ -266,30 +266,30 @@
 /datum/emote/living/shake
 	key = "shake"
 	key_third_person = "shakes"
-	message = "вертит головой."
+	message = "РІРµСЂС‚РёС‚ РіРѕР»РѕРІРѕР№."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/shiver
 	key = "shiver"
 	key_third_person = "shiver"
-	message = "дрожит."
+	message = "РґСЂРѕР¶РёС‚."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sigh
 	key = "sigh"
 	key_third_person = "sighs"
-	message = "шмыгает."
+	message = "С€РјС‹РіР°РµС‚."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sit
 	key = "sit"
 	key_third_person = "sits"
-	message = "садится."
+	message = "СЃР°РґРёС‚СЃСЏ."
 
 /datum/emote/living/smile
 	key = "smile"
 	key_third_person = "smiles"
-	message = "улыбается."
+	message = "СѓР»С‹Р±Р°РµС‚СЃСЏ."
 
 /datum/emote/living/sneeze
 	key = "sneeze"
@@ -305,21 +305,21 @@
 /datum/emote/living/sniff
 	key = "sniff"
 	key_third_person = "sniffs"
-	message = "принюхивается."
+	message = "РїСЂРёРЅСЋС…РёРІР°РµС‚СЃСЏ."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/snore
 	key = "snore"
 	key_third_person = "snores"
-	message = "сопит."
+	message = "СЃРѕРїРёС‚."
 	message_mime = "sleeps soundly."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/stare
 	key = "stare"
 	key_third_person = "stares"
-	message = "пялится."
-	message_param = "пялится на %t."
+	message = "РїСЏР»РёС‚СЃСЏ."
+	message_param = "РїСЏР»РёС‚СЃСЏ РЅР° %t."
 
 /datum/emote/living/strech
 	key = "stretch"
@@ -334,7 +334,7 @@
 /datum/emote/living/surrender
 	key = "surrender"
 	key_third_person = "surrenders"
-	message = "поднимает руки и ложится на землю, \"сдаюсь!"
+	message = "РїРѕРґРЅРёРјР°РµС‚ СЂСѓРєРё Рё Р»РѕР¶РёС‚СЃСЏ РЅР° Р·РµРјР»СЋ, \"СЃРґР°СЋСЃСЊ!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/surrender/run_emote(mob/user, params)
@@ -350,37 +350,37 @@
 /datum/emote/living/tremble
 	key = "tremble"
 	key_third_person = "trembles"
-	message = "трясется в страхе!"
+	message = "С‚СЂСЏСЃРµС‚СЃСЏ РІ СЃС‚СЂР°С…Рµ!"
 
 /datum/emote/living/twitch
 	key = "twitch"
 	key_third_person = "twitches"
-	message = "трясется."
+	message = "С‚СЂСЏСЃРµС‚СЃСЏ."
 
 /datum/emote/living/twitch_s
 	key = "twitch_s"
-	message = "трясётся."
+	message = "С‚СЂСЏСЃС‘С‚СЃСЏ."
 
 /datum/emote/living/wave
 	key = "wave"
 	key_third_person = "waves"
-	message = "машет."
+	message = "РјР°С€РµС‚."
 
 /datum/emote/living/whimper
 	key = "whimper"
 	key_third_person = "whimpers"
-	message = "хнычит."
+	message = "С…РЅС‹С‡РёС‚."
 	message_mime = "appears hurt."
 
 /datum/emote/living/wsmile
 	key = "wsmile"
 	key_third_person = "wsmiles"
-	message = "вяло улыбается."
+	message = "РІСЏР»Рѕ СѓР»С‹Р±Р°РµС‚СЃСЏ."
 
 /datum/emote/living/yawn
 	key = "yawn"
 	key_third_person = "yawns"
-	message = "зевает."
+	message = "Р·РµРІР°РµС‚."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/custom
@@ -392,11 +392,11 @@
 	. = TRUE
 	if(copytext_char(input,1,5) == "says")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext_char(input,1,9) == "восклицает")
+	else if(copytext_char(input,1,9) == "РІРѕСЃРєР»РёС†Р°РµС‚")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext_char(input,1,6) == "вопит")
+	else if(copytext_char(input,1,6) == "РІРѕРїРёС‚")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
-	else if(copytext_char(input,1,5) == "спрашивает")
+	else if(copytext_char(input,1,5) == "СЃРїСЂР°С€РёРІР°РµС‚")
 		to_chat(user, "<span class='danger'>Invalid emote.</span>")
 	else
 		. = FALSE

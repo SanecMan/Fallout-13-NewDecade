@@ -1,6 +1,6 @@
 /obj/item/weapon/storage/f76bag
-	name = "Сумка Вест-Тек"
-	desc = "Какой-то набор вещей от компании Вест-Тек."
+	name = "РЎСѓРјРєР° Р’РµСЃС‚-РўРµРє"
+	desc = "РљР°РєРѕР№-С‚Рѕ РЅР°Р±РѕСЂ РІРµС‰РµР№ РѕС‚ РєРѕРјРїР°РЅРёРё Р’РµСЃС‚-РўРµРє."
 	icon = 'icons/fallout/objects/storage.dmi'
 	icon_state = "f76bag"
 	throw_speed = 3

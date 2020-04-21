@@ -1,8 +1,8 @@
 //Fallout 13 decorative derelict vehicles directory
 
 /obj/structure/car
-	name = "остов автомобиля"
-	desc = "Ржавый остов довоенного авто.<br>Настолько сломан, что уже не починить."
+	name = "РѕСЃС‚РѕРІ Р°РІС‚РѕРјРѕР±РёР»СЏ"
+	desc = "Р Р¶Р°РІС‹Р№ РѕСЃС‚РѕРІ РґРѕРІРѕРµРЅРЅРѕРіРѕ Р°РІС‚Рѕ.<br>РќР°СЃС‚РѕР»СЊРєРѕ СЃР»РѕРјР°РЅ, С‡С‚Рѕ СѓР¶Рµ РЅРµ РїРѕС‡РёРЅРёС‚СЊ."
 	eng_name = "derelict car"
 	eng_desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'

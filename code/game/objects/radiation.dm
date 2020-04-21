@@ -73,7 +73,7 @@
 
 		if(amount > blocked)
 			if(!silent)
-				to_chat(src, pick("<span class='warning'>Вы ощущаете как ваша кожа вскипает.</span>", "<span class='warning'>Вы ощущаете как ваша кожа жжётся.</span>", "<span class='warning'>Вы ощущаете как ваши волосы выпадают небольшими клочками.</span>"))
+				to_chat(src, pick("<span class='warning'>Р’С‹ РѕС‰СѓС‰Р°РµС‚Рµ РєР°Рє РІР°С€Р° РєРѕР¶Р° РІСЃРєРёРїР°РµС‚.</span>", "<span class='warning'>Р’С‹ РѕС‰СѓС‰Р°РµС‚Рµ РєР°Рє РІР°С€Р° РєРѕР¶Р° Р¶Р¶С‘С‚СЃСЏ.</span>", "<span class='warning'>Р’С‹ РѕС‰СѓС‰Р°РµС‚Рµ РєР°Рє РІР°С€Рё РІРѕР»РѕСЃС‹ РІС‹РїР°РґР°СЋС‚ РЅРµР±РѕР»СЊС€РёРјРё РєР»РѕС‡РєР°РјРё.</span>"))
 
 		for(var/obj/I in src) //Radiation is also applied to items held by the mob
 			I.rad_act(amount)

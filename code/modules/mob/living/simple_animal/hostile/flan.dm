@@ -54,7 +54,7 @@
 				A.do_attack_animation(A, spellanimation)
 				playsound(A, spellsound, 20, 1)
 				A.apply_damage(damage = spelldamage,damagetype = spelldamagetype, def_zone = null, blocked = 0)
-				visible_message("<span class='danger'><b>[A]</b> πΰνεν ρ [spellname]</span>")
+				visible_message("<span class='danger'><b>[A]</b> Ρ€Π°Π½ΠµΠ½ Ρ [spellname]</span>")
 				spellaftereffects(A,src)
 		ranged_cooldown = world.time + ranged_cooldown_time
 		casting = 0

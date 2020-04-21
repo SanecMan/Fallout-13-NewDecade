@@ -1,8 +1,8 @@
 //Fallout 13 radroach directory
 
 /mob/living/simple_animal/hostile/radroach
-	name = "Радтаракан"
-	desc = "Огромный Американский Таракан, но в основном их все просто называют тараканами-переростками, довоенный вид животного, подвершегося мутации."
+	name = "Р Р°РґС‚Р°СЂР°РєР°РЅ"
+	desc = "РћРіСЂРѕРјРЅС‹Р№ РђРјРµСЂРёРєР°РЅСЃРєРёР№ РўР°СЂР°РєР°РЅ, РЅРѕ РІ РѕСЃРЅРѕРІРЅРѕРј РёС… РІСЃРµ РїСЂРѕСЃС‚Рѕ РЅР°Р·С‹РІР°СЋС‚ С‚Р°СЂР°РєР°РЅР°РјРё-РїРµСЂРµСЂРѕСЃС‚РєР°РјРё, РґРѕРІРѕРµРЅРЅС‹Р№ РІРёРґ Р¶РёРІРѕС‚РЅРѕРіРѕ, РїРѕРґРІРµСЂС€РµРіРѕСЃСЏ РјСѓС‚Р°С†РёРё."
 	eng_name = "radroach"
 	eng_desc = "Great American Roach, but mostly people name them as giant roach."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -12,9 +12,9 @@
 	icon_gib = "radroach_g"
 	speak_chance = 0
 	turns_per_move = 5
-	response_help = "тыкает"
-	response_disarm = "пихает"
-	response_harm = "пинает"
+	response_help = "С‚С‹РєР°РµС‚"
+	response_disarm = "РїРёС…Р°РµС‚"
+	response_harm = "РїРёРЅР°РµС‚"
 	environment_smash = 0
 	respawn_time_of_mob = 150000000
 	move_to_delay = 2
@@ -37,7 +37,7 @@
 
 	melee_damage_lower = 5
 	melee_damage_upper = 5
-	attacktext = "кусает"
+	attacktext = "РєСѓСЃР°РµС‚"
 	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	aggro_vision_range = 10

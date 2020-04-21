@@ -1,6 +1,6 @@
 /obj/item/stack/spacecash
 	name = "Dollar"
-	desc = "Равноценно 1 крышке."
+	desc = "Р Р°РІРЅРѕС†РµРЅРЅРѕ 1 РєСЂС‹С€РєРµ."
 	singular_name = "bill"
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "spacecash"
@@ -15,35 +15,35 @@
 
 /obj/item/stack/spacecash/c10
 	icon_state = "spacecash10"
-	desc = "Равноценно 10 крышкам."
+	desc = "Р Р°РІРЅРѕС†РµРЅРЅРѕ 10 РєСЂС‹С€РєР°Рј."
 	value = 10
 
 /obj/item/stack/spacecash/c20
 	icon_state = "spacecash20"
-	desc = "Равноценно 20 крышкам."
+	desc = "Р Р°РІРЅРѕС†РµРЅРЅРѕ 20 РєСЂС‹С€РєР°Рј."
 	value = 20
 
 /obj/item/stack/spacecash/c50
 	icon_state = "spacecash50"
-	desc = "Равноценно 50 крышкам."
+	desc = "Р Р°РІРЅРѕС†РµРЅРЅРѕ 50 РєСЂС‹С€РєР°Рј."
 	value = 50
 
 /obj/item/stack/spacecash/c100
 	icon_state = "spacecash100"
-	desc = "Равноценно 100 крышкам."
+	desc = "Р Р°РІРЅРѕС†РµРЅРЅРѕ 100 РєСЂС‹С€РєР°Рј."
 	value = 100
 
 /obj/item/stack/spacecash/c200
 	icon_state = "spacecash200"
-	desc = "Равноценно 200 крышкам."
+	desc = "Р Р°РІРЅРѕС†РµРЅРЅРѕ 200 РєСЂС‹С€РєР°Рј."
 	value = 200
 
 /obj/item/stack/spacecash/c500
 	icon_state = "spacecash500"
-	desc = "Равноценно 500 крышкам."
+	desc = "Р Р°РІРЅРѕС†РµРЅРЅРѕ 500 РєСЂС‹С€РєР°Рј."
 	value = 500
 
 /obj/item/stack/spacecash/c1000
 	icon_state = "spacecash1000"
-	desc = "Равноценно 1000 крышкам."
+	desc = "Р Р°РІРЅРѕС†РµРЅРЅРѕ 1000 РєСЂС‹С€РєР°Рј."
 	value = 1000

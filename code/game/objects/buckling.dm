@@ -101,14 +101,14 @@
 	if(buckle_mob(M))
 		if(M == user)
 			M.visible_message(\
-				"<span class='notice'>[M] садится на [src].</span>",\
-				"<span class='notice'>Вы сели на [src].</span>",\
-				"<span class='italics'>Вы слышите металлический лязг.</span>")
+				"<span class='notice'>[M] СЃР°РґРёС‚СЃСЏ РЅР° [src].</span>",\
+				"<span class='notice'>Р’С‹ СЃРµР»Рё РЅР° [src].</span>",\
+				"<span class='italics'>Р’С‹ СЃР»С‹С€РёС‚Рµ РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р»СЏР·Рі.</span>")
 		else
 			M.visible_message(\
-				"<span class='warning'>[user] садит [M] на [src]!</span>",\
-				"<span class='warning'>[user] посадил вас на [src]!</span>",\
-				"<span class='italics'>Вы слышите металлический лязг.</span>")
+				"<span class='warning'>[user] СЃР°РґРёС‚ [M] РЅР° [src]!</span>",\
+				"<span class='warning'>[user] РїРѕСЃР°РґРёР» РІР°СЃ РЅР° [src]!</span>",\
+				"<span class='italics'>Р’С‹ СЃР»С‹С€РёС‚Рµ РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р»СЏР·Рі.</span>")
 		return 1
 
 
@@ -117,14 +117,14 @@
 	if(M)
 		if(M != user)
 			M.visible_message(\
-				"<span class='notice'>[user] поднимает [M] с [src].</span>",\
-				"<span class='notice'>[user] поднимает вас с [src].</span>",\
-				"<span class='italics'>Вы слышите металлический лязг.</span>")
+				"<span class='notice'>[user] РїРѕРґРЅРёРјР°РµС‚ [M] СЃ [src].</span>",\
+				"<span class='notice'>[user] РїРѕРґРЅРёРјР°РµС‚ РІР°СЃ СЃ [src].</span>",\
+				"<span class='italics'>Р’С‹ СЃР»С‹С€РёС‚Рµ РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р»СЏР·Рі.</span>")
 		else
 			M.visible_message(\
-				"<span class='notice'>[M] покидает [src].</span>",\
-				"<span class='notice'>Вы покинули [src].</span>",\
-				"<span class='italics'>Вы слышите металлический лязг.</span>")
+				"<span class='notice'>[M] РїРѕРєРёРґР°РµС‚ [src].</span>",\
+				"<span class='notice'>Р’С‹ РїРѕРєРёРЅСѓР»Рё [src].</span>",\
+				"<span class='italics'>Р’С‹ СЃР»С‹С€РёС‚Рµ РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р»СЏР·Рі.</span>")
 		add_fingerprint(user)
 	return M
 

@@ -10,7 +10,7 @@
 	status = "legate"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Цезарю"
+	supervisors = "Р¦РµР·Р°СЂСЋ"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -75,7 +75,7 @@
 	status = "centurion"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Легату"
+	supervisors = "Р›РµРіР°С‚Сѓ"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -310,4 +310,4 @@
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, /obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, /obj/item/weapon/storage/wallet=1,/obj/item/stack/medical/healingpowder=2)
 
 
-///легион принял ислам
+///Р»РµРіРёРѕРЅ РїСЂРёРЅСЏР» РёСЃР»Р°Рј

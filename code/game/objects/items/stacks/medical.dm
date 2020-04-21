@@ -23,11 +23,11 @@
 			t_him = "him"
 		else if(M.gender == FEMALE)
 			t_him = "her"
-		to_chat(user, "<span class='danger'> [M] в ином мире, вы не можете помочь [t_him]!</span>")
+		to_chat(user, "<span class='danger'> [M] РІ РёРЅРѕРј РјРёСЂРµ, РІС‹ РЅРµ РјРѕР¶РµС‚Рµ РїРѕРјРѕС‡СЊ [t_him]!</span>")
 		return
 
 	if(!istype(M, /mob/living/carbon) && !istype(M, /mob/living/simple_animal))
-		to_chat(user, "<span class='danger'>Вы не знаете как применить [src] к [M]!</span>")
+		to_chat(user, "<span class='danger'>Р’С‹ РЅРµ Р·РЅР°РµС‚Рµ РєР°Рє РїСЂРёРјРµРЅРёС‚СЊ [src] Рє [M]!</span>")
 		return 1
 
 	var/obj/item/bodypart/affecting
@@ -35,16 +35,16 @@
 		var/mob/living/carbon/C = M
 		affecting = C.get_bodypart(check_zone(user.zone_selected))
 		if(!affecting) //Missing limb?
-			to_chat(user, "<span class='warning'>[C] потерял [parse_zone(user.zone_selected)]!</span>")
+			to_chat(user, "<span class='warning'>[C] РїРѕС‚РµСЂСЏР» [parse_zone(user.zone_selected)]!</span>")
 			return
 		if(ishuman(C))
 			var/mob/living/carbon/human/H = C
 			if(stop_bleeding)
 				if(H.bleedsuppress)
-					to_chat(user, "<span class='warning'>Кровотечение [H] уже перебинтовано!</span>")
+					to_chat(user, "<span class='warning'>РљСЂРѕРІРѕС‚РµС‡РµРЅРёРµ [H] СѓР¶Рµ РїРµСЂРµР±РёРЅС‚РѕРІР°РЅРѕ!</span>")
 					return
 				else if(!H.bleed_rate)
-					to_chat(user, "<span class='warning'>[H] не кровоточит!</span>")
+					to_chat(user, "<span class='warning'>[H] РЅРµ РєСЂРѕРІРѕС‚РѕС‡РёС‚!</span>")
 					return
 
 
@@ -57,25 +57,25 @@
 			if (istype(M, /mob/living/simple_animal))
 				var/mob/living/simple_animal/critter = M
 				if (!(critter.healable))
-					to_chat(user, "<span class='notice'> Вы не можете использовать [src] на [M]!</span>")
+					to_chat(user, "<span class='notice'> Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ [src] РЅР° [M]!</span>")
 					return
 				else if (critter.health == critter.maxHealth)
-					to_chat(user, "<span class='notice'> [M] полон сил.</span>")
+					to_chat(user, "<span class='notice'> [M] РїРѕР»РѕРЅ СЃРёР».</span>")
 					return
 				else if(src.heal_brute < 1)
-					to_chat(user, "<span class='notice'> [src] не поможет [M].</span>")
+					to_chat(user, "<span class='notice'> [src] РЅРµ РїРѕРјРѕР¶РµС‚ [M].</span>")
 					return
-			user.visible_message("<span class='green'>[user] applies [src] on [M].</span>", "<span class='green'>Вы применили [src] на [M].</span>")
+			user.visible_message("<span class='green'>[user] applies [src] on [M].</span>", "<span class='green'>Р’С‹ РїСЂРёРјРµРЅРёР»Рё [src] РЅР° [M].</span>")
 		else
-			var/t_himself = "себе"
+			var/t_himself = "СЃРµР±Рµ"
 			if(user.gender == MALE)
-				t_himself = "себе"
+				t_himself = "СЃРµР±Рµ"
 			else if(user.gender == FEMALE)
-				t_himself = "себе"
-			user.visible_message("<span class='notice'>[user] начинает применение [src] на [t_himself]...</span>", "<span class='notice'>Вы начинаете применение [src] на себе...</span>")
+				t_himself = "СЃРµР±Рµ"
+			user.visible_message("<span class='notice'>[user] РЅР°С‡РёРЅР°РµС‚ РїСЂРёРјРµРЅРµРЅРёРµ [src] РЅР° [t_himself]...</span>", "<span class='notice'>Р’С‹ РЅР°С‡РёРЅР°РµС‚Рµ РїСЂРёРјРµРЅРµРЅРёРµ [src] РЅР° СЃРµР±Рµ...</span>")
 			if(!do_mob(user, M, self_delay))
 				return
-			user.visible_message("<span class='green'>[user] применил [src] на [t_himself].</span>", "<span class='green'>Вы успешно применили [src] на себе.</span>")
+			user.visible_message("<span class='green'>[user] РїСЂРёРјРµРЅРёР» [src] РЅР° [t_himself].</span>", "<span class='green'>Р’С‹ СѓСЃРїРµС€РЅРѕ РїСЂРёРјРµРЅРёР»Рё [src] РЅР° СЃРµР±Рµ.</span>")
 
 
 	if(iscarbon(M))
@@ -93,7 +93,7 @@
 			if(affecting.heal_damage(heal_brute, heal_burn))
 				C.update_damage_overlays()
 		else
-			to_chat(user, "<span class='notice'>Обычная медицина не сработает на протезе!</span>")
+			to_chat(user, "<span class='notice'>РћР±С‹С‡РЅР°СЏ РјРµРґРёС†РёРЅР° РЅРµ СЃСЂР°Р±РѕС‚Р°РµС‚ РЅР° РїСЂРѕС‚РµР·Рµ!</span>")
 	else
 		M.heal_bodypart_damage((src.heal_brute/2), (src.heal_burn/2))
 
@@ -104,7 +104,7 @@
 /obj/item/stack/medical/bruise_pack
 	name = "bruise pack"
 	singular_name = "bruise pack"
-	desc = "Гель в сочетании с бинтами, создан для лечения физического урона вроде ран."
+	desc = "Р“РµР»СЊ РІ СЃРѕС‡РµС‚Р°РЅРёРё СЃ Р±РёРЅС‚Р°РјРё, СЃРѕР·РґР°РЅ РґР»СЏ Р»РµС‡РµРЅРёСЏ С„РёР·РёС‡РµСЃРєРѕРіРѕ СѓСЂРѕРЅР° РІСЂРѕРґРµ СЂР°РЅ."
 	icon_state = "brutepack"
 	heal_brute = 40
 	origin_tech = "biotech=2"
@@ -112,7 +112,7 @@
 
 /obj/item/stack/medical/gauze
 	name = "medical gauze"
-	desc = "Моток эластичной ткани, предназначен для более эффективного остановления кровотечения, но всё еще не лечит раны."
+	desc = "РњРѕС‚РѕРє СЌР»Р°СЃС‚РёС‡РЅРѕР№ С‚РєР°РЅРё, РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ Р±РѕР»РµРµ СЌС„С„РµРєС‚РёРІРЅРѕРіРѕ РѕСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РєСЂРѕРІРѕС‚РµС‡РµРЅРёСЏ, РЅРѕ РІСЃС‘ РµС‰Рµ РЅРµ Р»РµС‡РёС‚ СЂР°РЅС‹."
 	gender = PLURAL
 	singular_name = "medical gauze"
 	icon_state = "gauze"
@@ -122,7 +122,7 @@
 /obj/item/stack/medical/gauze/improvised
 	name = "improvised gauze"
 	singular_name = "improvised gauze"
-	desc = "Моток ткани, предназначенный для остановления кровотечения, но всё-же не может вылечить раны."
+	desc = "РњРѕС‚РѕРє С‚РєР°РЅРё, РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅРЅС‹Р№ РґР»СЏ РѕСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РєСЂРѕРІРѕС‚РµС‡РµРЅРёСЏ, РЅРѕ РІСЃС‘-Р¶Рµ РЅРµ РјРѕР¶РµС‚ РІС‹Р»РµС‡РёС‚СЊ СЂР°РЅС‹."
 	stop_bleeding = 900
 
 /obj/item/stack/medical/gauze/cyborg
@@ -132,7 +132,7 @@
 
 /obj/item/stack/medical/ointment
 	name = "ointment"
-	desc = "Используйте чтобы вылечить эти бесящие ожоги."
+	desc = "РСЃРїРѕР»СЊР·СѓР№С‚Рµ С‡С‚РѕР±С‹ РІС‹Р»РµС‡РёС‚СЊ СЌС‚Рё Р±РµСЃСЏС‰РёРµ РѕР¶РѕРіРё."
 	gender = PLURAL
 	singular_name = "ointment"
 	icon_state = "ointment"

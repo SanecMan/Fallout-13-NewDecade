@@ -8,13 +8,13 @@
 	pass_flags = PASSTABLE
 	mob_size = MOB_SIZE_SMALL
 	faction = list("hostile", "crow")
-	speak = list("Кар.", "Кар?", "Кар!", "КАР.")
-	speak_emote = list("каркает")
-	emote_hear = list("каркает")
-	emote_see = list("вертит головой")
-	response_help  = "гладит"
-	response_disarm = "пихает в бок"
-	response_harm   = "бьёт"
+	speak = list("РљР°СЂ.", "РљР°СЂ?", "РљР°СЂ!", "РљРђР .")
+	speak_emote = list("РєР°СЂРєР°РµС‚")
+	emote_hear = list("РєР°СЂРєР°РµС‚")
+	emote_see = list("РІРµСЂС‚РёС‚ РіРѕР»РѕРІРѕР№")
+	response_help  = "РіР»Р°РґРёС‚"
+	response_disarm = "РїРёС…Р°РµС‚ РІ Р±РѕРє"
+	response_harm   = "Р±СЊС‘С‚"
 	maxHealth = 25
 	health = 25
 	environment_smash = 0
@@ -22,4 +22,4 @@
 	melee_damage_upper = 4
 	aggro_vision_range = 8
 	idle_vision_range = 5
-	attacktext = "клюёт"
+	attacktext = "РєР»СЋС‘С‚"

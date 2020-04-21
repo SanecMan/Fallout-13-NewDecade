@@ -9,7 +9,7 @@
 	status = "none"
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "никому"
+	supervisors = "РЅРёРєРѕРјСѓ"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()

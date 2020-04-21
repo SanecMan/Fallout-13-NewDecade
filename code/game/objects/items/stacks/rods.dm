@@ -6,7 +6,7 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 
 /obj/item/stack/rods
 	name = "metal rod"
-	desc = "Немного арматуры. Можно использовать для строительства чего-либо."
+	desc = "РќРµРјРЅРѕРіРѕ Р°СЂРјР°С‚СѓСЂС‹. РњРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР»СЏ СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІР° С‡РµРіРѕ-Р»РёР±Рѕ."
 	singular_name = "metal rod"
 	icon_state = "rods"
 	item_state = "rods"
@@ -18,7 +18,7 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 	throw_range = 7
 	materials = list(MAT_METAL=1000)
 	max_amount = 50
-	attack_verb = list("бьет", "бьет как дубинкой", "изнуренно бьет")
+	attack_verb = list("Р±СЊРµС‚", "Р±СЊРµС‚ РєР°Рє РґСѓР±РёРЅРєРѕР№", "РёР·РЅСѓСЂРµРЅРЅРѕ Р±СЊРµС‚")
 	hitsound = 'sound/weapons/grenadelaunch.ogg'
 
 /obj/item/stack/rods/New(var/loc, var/amount=null)
@@ -39,14 +39,14 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 		var/obj/item/weapon/weldingtool/WT = W
 
 		if(get_amount() < 2)
-			to_chat(user, "<span class='warning'>Вам необходимо две арматуры чтобы сделать это!</span>")
+			to_chat(user, "<span class='warning'>Р’Р°Рј РЅРµРѕР±С…РѕРґРёРјРѕ РґРІРµ Р°СЂРјР°С‚СѓСЂС‹ С‡С‚РѕР±С‹ СЃРґРµР»Р°С‚СЊ СЌС‚Рѕ!</span>")
 			return
 
 		if(WT.remove_fuel(0,user))
 			var/obj/item/stack/sheet/metal/new_item = new(usr.loc)
-			user.visible_message("[user.name] сварил лист металла из [src] с помощью сварочного аппарата.", \
-						 "<span class='notice'>Вы сварили [src] в лист метала с помощью сварочного аппарата.</span>", \
-						 "<span class='italics'>Вы слышите звук сварки.</span>")
+			user.visible_message("[user.name] СЃРІР°СЂРёР» Р»РёСЃС‚ РјРµС‚Р°Р»Р»Р° РёР· [src] СЃ РїРѕРјРѕС‰СЊСЋ СЃРІР°СЂРѕС‡РЅРѕРіРѕ Р°РїРїР°СЂР°С‚Р°.", \
+						 "<span class='notice'>Р’С‹ СЃРІР°СЂРёР»Рё [src] РІ Р»РёСЃС‚ РјРµС‚Р°Р»Р° СЃ РїРѕРјРѕС‰СЊСЋ СЃРІР°СЂРѕС‡РЅРѕРіРѕ Р°РїРїР°СЂР°С‚Р°.</span>", \
+						 "<span class='italics'>Р’С‹ СЃР»С‹С€РёС‚Рµ Р·РІСѓРє СЃРІР°СЂРєРё.</span>")
 			var/obj/item/stack/rods/R = src
 			src = null
 			var/replace = (user.get_inactive_held_item()==R)
@@ -57,9 +57,9 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 	else if(istype(W,/obj/item/weapon/reagent_containers/food/snacks))
 		var/obj/item/weapon/reagent_containers/food/snacks/S = W
 		if(amount != 1)
-			to_chat(user, "<span class='warning'>Вы должны использовать лишь одну арматуру!</span>")
+			to_chat(user, "<span class='warning'>Р’С‹ РґРѕР»Р¶РЅС‹ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р»РёС€СЊ РѕРґРЅСѓ Р°СЂРјР°С‚СѓСЂСѓ!</span>")
 		else if(S.w_class > WEIGHT_CLASS_SMALL)
-			to_chat(user, "<span class='warning'>Ингридиент слишком большой для [src]!</span>")
+			to_chat(user, "<span class='warning'>РРЅРіСЂРёРґРёРµРЅС‚ СЃР»РёС€РєРѕРј Р±РѕР»СЊС€РѕР№ РґР»СЏ [src]!</span>")
 		else
 			var/obj/item/weapon/reagent_containers/food/snacks/customizable/A = new/obj/item/weapon/reagent_containers/food/snacks/customizable/kebab(get_turf(src))
 			A.initialize_custom_food(src, S, user)

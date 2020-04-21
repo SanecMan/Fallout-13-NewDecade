@@ -1,8 +1,8 @@
 //Fallout 13 super mutants directory
 
 /mob/living/simple_animal/hostile/supermutant
-	name = "супермутант"
-	desc = "Больной, уродливый и зеленый гуманоид."
+	name = "СЃСѓРїРµСЂРјСѓС‚Р°РЅС‚"
+	desc = "Р‘РѕР»СЊРЅРѕР№, СѓСЂРѕРґР»РёРІС‹Р№ Рё Р·РµР»РµРЅС‹Р№ РіСѓРјР°РЅРѕРёРґ."
 	eng_name = "super mutant"
 	eng_desc = "A huge and ugly mutant humanoid."
 	icon = 'icons/fallout/mobs/supermutant.dmi'

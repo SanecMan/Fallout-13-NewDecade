@@ -1,6 +1,6 @@
 /obj/item/device/radio/intercom
-	name = "Интерком"
-	desc = "Вы можете говорить через него."
+	name = "РРЅС‚РµСЂРєРѕРј"
+	desc = "Р’С‹ РјРѕР¶РµС‚Рµ РіРѕРІРѕСЂРёС‚СЊ С‡РµСЂРµР· РЅРµРіРѕ."
 	icon_state = "intercom"
 	anchored = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -73,8 +73,8 @@
 
 
 /obj/item/device/radio/radio
-	name = "Старый радиоприёмник"
-	desc = "Вы можете слушать через него."
+	name = "РЎС‚Р°СЂС‹Р№ СЂР°РґРёРѕРїСЂРёС‘РјРЅРёРє"
+	desc = "Р’С‹ РјРѕР¶РµС‚Рµ СЃР»СѓС€Р°С‚СЊ С‡РµСЂРµР· РЅРµРіРѕ."
 	icon_state = "radio"
 	anchored = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -266,8 +266,8 @@
 
 
 /obj/item/device/radio/large_radio
-	name = "Винтажный радиоприёмник"
-	desc = "Вы можете послушать музыку через него."
+	name = "Р’РёРЅС‚Р°Р¶РЅС‹Р№ СЂР°РґРёРѕРїСЂРёС‘РјРЅРёРє"
+	desc = "Р’С‹ РјРѕР¶РµС‚Рµ РїРѕСЃР»СѓС€Р°С‚СЊ РјСѓР·С‹РєСѓ С‡РµСЂРµР· РЅРµРіРѕ."
 	icon_state = "large_radio"
 	anchored = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -457,5 +457,5 @@
 	return 0
 
 /obj/item/device/radio/intercom/old_mic
-	name = "Старый Микрофон"
+	name = "РЎС‚Р°СЂС‹Р№ РњРёРєСЂРѕС„РѕРЅ"
 	icon_state = "radio_mic2"

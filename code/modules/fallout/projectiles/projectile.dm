@@ -1,6 +1,6 @@
 //Plasma bolts
 /obj/item/projectile/beam/plasma
-	name = "плазмы"
+	name = "РїР»Р°Р·РјС‹"
 	damage = 35
 	irradiate = 4
 	icon_state = "plasma"
@@ -10,13 +10,13 @@
 	pass_flags = PASSTABLE | PASSGRILLE
 
 /obj/item/projectile/beam/plasma/turbo
-	name = "концентрированной плазмы"
+	name = "РєРѕРЅС†РµРЅС‚СЂРёСЂРѕРІР°РЅРЅРѕР№ РїР»Р°Р·РјС‹"
 	damage = 60
 	irradiate = 10
 
 //Bullets library
 /obj/item/projectile/bullet/F13
-	name = "пули"
+	name = "РїСѓР»Рё"
 //Bullets library: 9mm
 /obj/item/projectile/bullet/F13/c9mmBullet
 	damage = 14

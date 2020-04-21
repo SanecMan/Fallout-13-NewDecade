@@ -1,8 +1,8 @@
 //Fallout 13 gecko directory
 
 /mob/living/simple_animal/hostile/gecko
-	name = "Геккон"
-	desc = "Это Геккон. Не Г.Э.К.К."
+	name = "Р“РµРєРєРѕРЅ"
+	desc = "Р­С‚Рѕ Р“РµРєРєРѕРЅ. РќРµ Р“.Р­.Рљ.Рљ."
 	eng_name = "gecko"
 	eng_desc = "This is gecko, not an G.E.C.K."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -11,9 +11,9 @@
 	icon_dead = "gecko_dead"
 	icon_gib = "gib"
 	turns_per_move = 1
-	response_help = "тыкает"
-	response_disarm = "толкает в сторону"
-	response_harm = "пинает"
+	response_help = "С‚С‹РєР°РµС‚"
+	response_disarm = "С‚РѕР»РєР°РµС‚ РІ СЃС‚РѕСЂРѕРЅСѓ"
+	response_harm = "РїРёРЅР°РµС‚"
 	maxHealth = 50
 	health = 50
 	self_weight = 35
@@ -30,7 +30,7 @@
 	melee_damage_upper = 15
 	aggro_vision_range = 10
 	idle_vision_range = 8
-	attacktext = "кусает"
+	attacktext = "РєСѓСЃР°РµС‚"
 	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 3

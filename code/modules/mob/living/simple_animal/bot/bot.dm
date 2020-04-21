@@ -16,9 +16,9 @@
 	has_unlimited_silicon_privilege = 1
 	sentience_type = SENTIENCE_ARTIFICIAL
 	status_flags = NONE //no default canpush
-	verb_say = "ξαϊÿβλÿες"
+	verb_say = "ΠΎΠ±ΡΡΠ²Π»ΡΠµΡ‚"
 	verb_ask = "queries"
-	verb_exclaim = "ξαϊÿβλÿες"
+	verb_exclaim = "ΠΎΠ±ΡΡΠ²Π»ΡΠµΡ‚"
 	verb_yell = "alarms"
 	bubble_icon = "machine"
 

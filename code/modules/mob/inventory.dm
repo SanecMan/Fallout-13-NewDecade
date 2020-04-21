@@ -356,7 +356,7 @@
 		S.handle_item_insertion(src)
 		return TRUE
 
-	to_chat(M, "<span class='warning'>Вы не можете экипировать это!</span>")
+	to_chat(M, "<span class='warning'>Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ СЌРєРёРїРёСЂРѕРІР°С‚СЊ СЌС‚Рѕ!</span>")
 	return FALSE
 
 

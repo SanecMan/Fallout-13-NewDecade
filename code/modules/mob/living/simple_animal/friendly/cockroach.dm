@@ -12,17 +12,17 @@
 	maxbodytemp = INFINITY
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
-	response_help  = "тыкает"
-	response_disarm = "прогоняет"
-	response_harm   = "давит"
-	speak_emote = list("стрекочет")
+	response_help  = "С‚С‹РєР°РµС‚"
+	response_disarm = "РїСЂРѕРіРѕРЅСЏРµС‚"
+	response_harm   = "РґР°РІРёС‚"
+	speak_emote = list("СЃС‚СЂРµРєРѕС‡РµС‚")
 	density = 0
 	ventcrawler = VENTCRAWLER_ALWAYS
 	gold_core_spawnable = 2
-	verb_say = "стрекочет"
-	verb_ask = "вопросительно стрекочет"
-	verb_exclaim = "восклицательно стрекочет"
-	verb_yell = "громко стрекочет"
+	verb_say = "СЃС‚СЂРµРєРѕС‡РµС‚"
+	verb_ask = "РІРѕРїСЂРѕСЃРёС‚РµР»СЊРЅРѕ СЃС‚СЂРµРєРѕС‡РµС‚"
+	verb_exclaim = "РІРѕСЃРєР»РёС†Р°С‚РµР»СЊРЅРѕ СЃС‚СЂРµРєРѕС‡РµС‚"
+	verb_yell = "РіСЂРѕРјРєРѕ СЃС‚СЂРµРєРѕС‡РµС‚"
 	var/squish_chance = 50
 	del_on_death = 1
 
@@ -37,10 +37,10 @@
 			var/mob/living/A = AM
 			if(A.mob_size > MOB_SIZE_SMALL && !(A.movement_type & FLYING))
 				if(prob(squish_chance))
-					A.visible_message("<span class='notice'>[A] размазывает [src].</span>", "<span class='notice'>Вы размазали [src].</span>")
+					A.visible_message("<span class='notice'>[A] СЂР°Р·РјР°Р·С‹РІР°РµС‚ [src].</span>", "<span class='notice'>Р’С‹ СЂР°Р·РјР°Р·Р°Р»Рё [src].</span>")
 					adjustBruteLoss(1) //kills a normal cockroach
 				else
-					visible_message("<span class='notice'>[src] избегает участи быть размазанным.</span>")
+					visible_message("<span class='notice'>[src] РёР·Р±РµРіР°РµС‚ СѓС‡Р°СЃС‚Рё Р±С‹С‚СЊ СЂР°Р·РјР°Р·Р°РЅРЅС‹Рј.</span>")
 	else
 		if(istype(AM,/obj/structure))
 			if(prob(squish_chance))

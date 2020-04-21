@@ -517,20 +517,20 @@
 
 /obj/item/device/radio/examine(mob/user)
 	..()
-	to_chat(user, "Ключ шифрования [key]")
+	to_chat(user, "РљР»СЋС‡ С€РёС„СЂРѕРІР°РЅРёСЏ [key]")
 	if (b_stat)
-		to_chat(user, "<span class='notice'>[name] можно модифицировать или прикреплять к чему-либо.</span>")
+		to_chat(user, "<span class='notice'>[name] РјРѕР¶РЅРѕ РјРѕРґРёС„РёС†РёСЂРѕРІР°С‚СЊ РёР»Рё РїСЂРёРєСЂРµРїР»СЏС‚СЊ Рє С‡РµРјСѓ-Р»РёР±Рѕ.</span>")
 	else
-		to_chat(user, "<span class='notice'>[name] нельзя модифицировать или прикреплять к чему-либо.</span>")
+		to_chat(user, "<span class='notice'>[name] РЅРµР»СЊР·СЏ РјРѕРґРёС„РёС†РёСЂРѕРІР°С‚СЊ РёР»Рё РїСЂРёРєСЂРµРїР»СЏС‚СЊ Рє С‡РµРјСѓ-Р»РёР±Рѕ.</span>")
 
 /obj/item/device/radio/attackby(obj/item/weapon/W, mob/user, params)
 	add_fingerprint(user)
 	if(istype(W, /obj/item/weapon/screwdriver))
 		b_stat = !b_stat
 		if(b_stat)
-			to_chat(user, "<span class='notice'>Теперь это можно модифицировать!</span>")
+			to_chat(user, "<span class='notice'>РўРµРїРµСЂСЊ СЌС‚Рѕ РјРѕР¶РЅРѕ РјРѕРґРёС„РёС†РёСЂРѕРІР°С‚СЊ!</span>")
 		else
-			to_chat(user, "<span class='notice'>Теперь это нельзя модифицировать!</span>")
+			to_chat(user, "<span class='notice'>РўРµРїРµСЂСЊ СЌС‚Рѕ РЅРµР»СЊР·СЏ РјРѕРґРёС„РёС†РёСЂРѕРІР°С‚СЊ!</span>")
 	else
 		return ..()
 
@@ -538,7 +538,7 @@
 	emped++ //There's been an EMP; better count it
 	var/curremp = emped //Remember which EMP this was
 	if (listening && ismob(loc))	// if the radio is turned on and on someone's person they notice
-		to_chat(loc, "<span class='warning'>[src] перегружен.</span>")
+		to_chat(loc, "<span class='warning'>[src] РїРµСЂРµРіСЂСѓР¶РµРЅ.</span>")
 	broadcasting = 0
 	listening = 0
 	for (var/ch_name in channels)
@@ -585,14 +585,14 @@
 					keyslot = null
 
 			recalculateChannels()
-			to_chat(user, "<span class='notice'>Вы достали ключ шифрования.</span>")
+			to_chat(user, "<span class='notice'>Р’С‹ РґРѕСЃС‚Р°Р»Рё РєР»СЋС‡ С€РёС„СЂРѕРІР°РЅРёСЏ.</span>")
 
 		else
-			to_chat(user, "<span class='warning'>У этого радио нет ключей шифрования!</span>")
+			to_chat(user, "<span class='warning'>РЈ СЌС‚РѕРіРѕ СЂР°РґРёРѕ РЅРµС‚ РєР»СЋС‡РµР№ С€РёС„СЂРѕРІР°РЅРёСЏ!</span>")
 
 	else if(istype(W, /obj/item/device/encryptionkey/))
 		if(keyslot)
-			to_chat(user, "<span class='warning'>Радио не может содержать в себе еще один ключ!</span>")
+			to_chat(user, "<span class='warning'>Р Р°РґРёРѕ РЅРµ РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ РІ СЃРµР±Рµ РµС‰Рµ РѕРґРёРЅ РєР»СЋС‡!</span>")
 			return
 
 		if(!keyslot)

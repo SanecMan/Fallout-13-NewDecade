@@ -200,7 +200,7 @@
 /obj/examine(mob/user)
 	..()
 	if(unique_rename)
-		to_chat(user, "<span class='notice'>Используйте ручку чтобы переименовать или изменить описание предмета.</span>")
+		to_chat(user, "<span class='notice'>РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂСѓС‡РєСѓ С‡С‚РѕР±С‹ РїРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ РёР»Рё РёР·РјРµРЅРёС‚СЊ РѕРїРёСЃР°РЅРёРµ РїСЂРµРґРјРµС‚Р°.</span>")
 
 /obj/proc/rename_obj(mob/M)
 	var/input = stripped_input(M,"What do you want to name \the [name]?", ,"", MAX_NAME_LEN)

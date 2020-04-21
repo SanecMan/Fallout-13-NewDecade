@@ -97,16 +97,16 @@
 			if(lowertext(newletter)=="s")
 				newletter="ch"
 			if(lowertext(newletter)=="a")
-				newletter="‡ı"
+				newletter="–∞—Ö"
 			if(lowertext(newletter)=="u")
 				newletter="oo"
 			if(lowertext(newletter)=="c")
 				newletter="k"
 		if(rand(1,20)==20)
 			if(newletter==" ")
-				newletter="...Ó-Ó-Óı..."
+				newletter="...–æ-–æ-–æ—Ö..."
 			if(newletter==".")
-				newletter=" *–€√¿≈“*."
+				newletter=" *–†–´–ì–ê–ï–¢*."
 		switch(rand(1,20))
 			if(1)
 				newletter+="'"

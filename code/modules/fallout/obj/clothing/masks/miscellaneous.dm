@@ -20,7 +20,7 @@
 	icon_state = "legcenturion"
 
 /obj/item/clothing/mask/bandana/f13/headscarf
-	name = "‡‡Ù‡ÚÍ‡"
+	name = "–∞—Ä–∞—Ñ–∞—Ç–∫–∞"
 	desc = "A piece of cloth worn on head for a variety of purposes, such as protection of the head or hair from rain, wind, dirt, cold, warmth, for sanitation, for fashion, recognition or social distinction - with religious significance, to hide baldness, out of modesty, or other forms of social convention."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	icon_state = "headscarf"

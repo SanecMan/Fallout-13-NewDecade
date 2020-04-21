@@ -35,16 +35,16 @@
 					new /mob/living/simple_animal/chicken/rabbit(R.loc)
 
 /mob/living/simple_animal/chicken/rabbit
-	name = "кролик"
-	desc = "Боже блять, как мило!"
+	name = "РєСЂРѕР»РёРє"
+	desc = "Р‘РѕР¶Рµ Р±Р»СЏС‚СЊ, РєР°Рє РјРёР»Рѕ!"
 	icon = 'icons/mob/Easter.dmi'
 	icon_state = "rabbit_white"
 	icon_living = "rabbit_white"
 	icon_dead = "rabbit_white_dead"
 	speak = list("Hop into Easter!","Come get your eggs!","Prizes for everyone!")
-	speak_emote = list("принюхивается","водит ушками")
-	emote_hear = list("прыг.")
-	emote_see = list("прыгает вокруг","прыгает")
+	speak_emote = list("РїСЂРёРЅСЋС…РёРІР°РµС‚СЃСЏ","РІРѕРґРёС‚ СѓС€РєР°РјРё")
+	emote_hear = list("РїСЂС‹Рі.")
+	emote_see = list("РїСЂС‹РіР°РµС‚ РІРѕРєСЂСѓРі","РїСЂС‹РіР°РµС‚")
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 1)
 	egg_type = /obj/item/weapon/reagent_containers/food/snacks/egg/loaded
 	food_type = /obj/item/weapon/reagent_containers/food/snacks/grown/carrot

@@ -1,8 +1,8 @@
 //Fallout 13 - Where in the World is Carmen Sandiego?
 
 /datum/f13_objective/find
-	name = "Моя прелесть!"
-	desc = "Вы должны найти и сохранить %item_name%!"
+	name = "РњРѕСЏ РїСЂРµР»РµСЃС‚СЊ!"
+	desc = "Р’С‹ РґРѕР»Р¶РЅС‹ РЅР°Р№С‚Рё Рё СЃРѕС…СЂР°РЅРёС‚СЊ %item_name%!"
 	points = 0
 	kind = FACTION
 

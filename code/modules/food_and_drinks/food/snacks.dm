@@ -59,34 +59,34 @@
 				return 0
 
 			else if(fullness <= 50)
-				to_chat(M, "<span class='notice'>Вы жрёте [src] не оставляя ни кусочка!</span>")
+				to_chat(M, "<span class='notice'>Р’С‹ Р¶СЂС‘С‚Рµ [src] РЅРµ РѕСЃС‚Р°РІР»СЏСЏ РЅРё РєСѓСЃРѕС‡РєР°!</span>")
 			else if(fullness > 50 && fullness < 150)
-				to_chat(M, "<span class='notice'>Вы принялись жадно есть [src].</span>")
+				to_chat(M, "<span class='notice'>Р’С‹ РїСЂРёРЅСЏР»РёСЃСЊ Р¶Р°РґРЅРѕ РµСЃС‚СЊ [src].</span>")
 			else if(fullness > 150 && fullness < 500)
-				to_chat(M, "<span class='notice'>Вы едите [src].</span>")
+				to_chat(M, "<span class='notice'>Р’С‹ РµРґРёС‚Рµ [src].</span>")
 			else if(fullness > 500 && fullness < 600)
-				to_chat(M, "<span class='notice'>Вы неохотно кусаете немного [src].</span>")
+				to_chat(M, "<span class='notice'>Р’С‹ РЅРµРѕС…РѕС‚РЅРѕ РєСѓСЃР°РµС‚Рµ РЅРµРјРЅРѕРіРѕ [src].</span>")
 			else if(fullness > (900 * (1 + M.overeatduration / 2000)))	// The more you eat - the more you can eat
 				to_chat(M, "<span class='warning'>You cannot force any more of \the [src] to go down your throat!</span>")
 				return 0
 		else
 			if(!isbrain(M))		//If you're feeding it to someone else.
 				if(fullness <= (600 * (1 + M.overeatduration / 1000)))
-					M.visible_message("<span class='danger'>[user] пытается накормить [M] [src].</span>", \
-										"<span class='userdanger'>[user] пытается накормить [M] [src].</span>")
+					M.visible_message("<span class='danger'>[user] РїС‹С‚Р°РµС‚СЃСЏ РЅР°РєРѕСЂРјРёС‚СЊ [M] [src].</span>", \
+										"<span class='userdanger'>[user] РїС‹С‚Р°РµС‚СЃСЏ РЅР°РєРѕСЂРјРёС‚СЊ [M] [src].</span>")
 				else
-					M.visible_message("<span class='warning'>[user] не может больше затолкать [src] в глотку [M]!</span>", \
-										"<span class='warning'>[user] не может больше затолкать [src] в глотку [M]!</span>")
+					M.visible_message("<span class='warning'>[user] РЅРµ РјРѕР¶РµС‚ Р±РѕР»СЊС€Рµ Р·Р°С‚РѕР»РєР°С‚СЊ [src] РІ РіР»РѕС‚РєСѓ [M]!</span>", \
+										"<span class='warning'>[user] РЅРµ РјРѕР¶РµС‚ Р±РѕР»СЊС€Рµ Р·Р°С‚РѕР»РєР°С‚СЊ [src] РІ РіР»РѕС‚РєСѓ [M]!</span>")
 					return 0
 
 				if(!do_mob(user, M))
 					return
 				add_logs(user, M, "fed", reagentlist(src))
-				M.visible_message("<span class='danger'>[user] пропихивает в глотку [M] [src].</span>", \
-									"<span class='userdanger'>[user] кормит [M] [src].</span>")
+				M.visible_message("<span class='danger'>[user] РїСЂРѕРїРёС…РёРІР°РµС‚ РІ РіР»РѕС‚РєСѓ [M] [src].</span>", \
+									"<span class='userdanger'>[user] РєРѕСЂРјРёС‚ [M] [src].</span>")
 
 			else
-				to_chat(user, "<span class='warning'>[M] а где рот...</span>")
+				to_chat(user, "<span class='warning'>[M] Р° РіРґРµ СЂРѕС‚...</span>")
 				return
 
 		if(reagents)								//Handle ingestion of the reagent.

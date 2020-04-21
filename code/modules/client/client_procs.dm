@@ -175,7 +175,7 @@ var/next_external_rsc = 0
 	connection_timeofday = world.timeofday
 
 	if (byond_version < config.client_error_version)		//Out of date client.
-		to_chat(src, "<span class='danger'><b>Обновите ваш BYOND:</b></span>")
+		to_chat(src, "<span class='danger'><b>РћР±РЅРѕРІРёС‚Рµ РІР°С€ BYOND:</b></span>")
 		to_chat(src, config.client_error_message)
 		to_chat(src, "Your version: [byond_version]")
 		to_chat(src, "Required version: [config.client_error_version] or later")
@@ -231,7 +231,7 @@ var/next_external_rsc = 0
 			return 0
 
 		if (config.notify_new_player_age >= 0)
-			message_admins("Новый пользователь: [key_name_admin(src)] подключается впервые.")
+			message_admins("РќРѕРІС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ: [key_name_admin(src)] РїРѕРґРєР»СЋС‡Р°РµС‚СЃСЏ РІРїРµСЂРІС‹Рµ.")
 			if (config.irc_first_connection_alert)
 				send2irc_adminless_only("New-user", "[key_name(src)] is connecting for the first time!")
 
@@ -256,7 +256,7 @@ var/next_external_rsc = 0
 
 /*
 	if(prefs.lastchangelog != changelog_hash) //bolds the changelog button on the interface so we know there are updates.
-		to_chat(src, "<span class='info'>Вы не прочли список обновлений.</span>")
+		to_chat(src, "<span class='info'>Р’С‹ РЅРµ РїСЂРѕС‡Р»Рё СЃРїРёСЃРѕРє РѕР±РЅРѕРІР»РµРЅРёР№.</span>")
 		if(config.aggressive_changelog)
 			changelog()
 		else
@@ -354,7 +354,7 @@ var/next_external_rsc = 0
 	var/watchreason = check_watchlist(sql_ckey)
 	if(watchreason)
 		current_watchlist[sql_ckey] = watchreason
-		message_admins("<font color='red'><B>ВАЖНО: </B></font><font color='blue'>[key_name_admin(src)] находится в списке надзора, по следующей причине: [watchreason]</font>")
+		message_admins("<font color='red'><B>Р’РђР–РќРћ: </B></font><font color='blue'>[key_name_admin(src)] РЅР°С…РѕРґРёС‚СЃСЏ РІ СЃРїРёСЃРєРµ РЅР°РґР·РѕСЂР°, РїРѕ СЃР»РµРґСѓСЋС‰РµР№ РїСЂРёС‡РёРЅРµ: [watchreason]</font>")
 		send2irc_adminless_only("Watchlist", "[key_name(src)] is on the watchlist and has just connected - Reason: [watchreason]")
 
 	var/sql_ip = sanitizeSQL(src.address)

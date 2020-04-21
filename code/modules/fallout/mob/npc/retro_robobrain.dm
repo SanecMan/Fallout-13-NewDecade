@@ -1,8 +1,8 @@
 //Fallout 13 protectron directory
 
 /mob/living/simple_animal/hostile/retro_robobrain
-	name = "Робомозг"
-	desc = "Довоенный вид робомогов.<br> Очень опасная машина."
+	name = "Р РѕР±РѕРјРѕР·Рі"
+	desc = "Р”РѕРІРѕРµРЅРЅС‹Р№ РІРёРґ СЂРѕР±РѕРјРѕРіРѕРІ.<br> РћС‡РµРЅСЊ РѕРїР°СЃРЅР°СЏ РјР°С€РёРЅР°."
 	eng_name = "robobrain"
 	eng_desc = "A pre-War type of robobrain.<br>Extremely dangerous machine."
 	icon = 'icons/fallout/mobs/animal.dmi'

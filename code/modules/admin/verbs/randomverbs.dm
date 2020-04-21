@@ -29,19 +29,19 @@
 		to_chat(src, "Only administrators may use this command.")
 		return
 
-	message_admins("[key_name_admin(src)] начинает отвечать на молитву [key_name(M.key, 0, 0)].")
-	var/msg = input("Сообщение:", text("Ответ на молитву для [M.key]")) as text
+	message_admins("[key_name_admin(src)] РЅР°С‡РёРЅР°РµС‚ РѕС‚РІРµС‡Р°С‚СЊ РЅР° РјРѕР»РёС‚РІСѓ [key_name(M.key, 0, 0)].")
+	var/msg = input("РЎРѕРѕР±С‰РµРЅРёРµ:", text("РћС‚РІРµС‚ РЅР° РјРѕР»РёС‚РІСѓ РґР»СЏ [M.key]")) as text
 
 	if (!msg)
-		message_admins("[key_name_admin(src)] решает не отвечать на молитву [key_name(M.key, 0, 0)]")
+		message_admins("[key_name_admin(src)] СЂРµС€Р°РµС‚ РЅРµ РѕС‚РІРµС‡Р°С‚СЊ РЅР° РјРѕР»РёС‚РІСѓ [key_name(M.key, 0, 0)]")
 		return
 	if(usr)
 		if (usr.client)
 			if(usr.client.holder)
-				to_chat(M, "<i>Вы слышите голос в своей голове...<b>[msg]</i></b>")
+				to_chat(M, "<i>Р’С‹ СЃР»С‹С€РёС‚Рµ РіРѕР»РѕСЃ РІ СЃРІРѕРµР№ РіРѕР»РѕРІРµ...<b>[msg]</i></b>")
 
 	log_admin("SubtlePM: [key_name(usr)] -> [key_name(M)] : [msg]")
-	message_admins("<span class='adminnotice'><b> Ответ на молитву: [key_name_admin(usr)] -> [key_name_admin(M)] :</b> [msg]</span>")
+	message_admins("<span class='adminnotice'><b> РћС‚РІРµС‚ РЅР° РјРѕР»РёС‚РІСѓ: [key_name_admin(usr)] -> [key_name_admin(M)] :</b> [msg]</span>")
 	feedback_add_details("admin_verb","SMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_world_narrate()
@@ -458,7 +458,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	M.revive(full_heal = 1, admin_revive = 1)
 
 	log_admin("[key_name(usr)] healed / revived [key_name(M)]")
-	message_admins("<span class='danger'>Администратор [key_name_admin(usr)] излечил / оживил [key_name_admin(M)]!</span>")
+	message_admins("<span class='danger'>РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ [key_name_admin(usr)] РёР·Р»РµС‡РёР» / РѕР¶РёРІРёР» [key_name_admin(M)]!</span>")
 	feedback_add_details("admin_verb","REJU") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_create_centcom_report()
@@ -504,9 +504,9 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		to_chat(src, "Only administrators may use this command.")
 		return
 
-	if (alert(src, "Вы уверены что хотите удалить:\n[O]\nв ([O.x], [O.y], [O.z])?", "Подтвердите", "Да", "Нет") == "Да")
-		log_admin("[key_name(usr)] удаляет [O] в ([O.x],[O.y],[O.z])")
-		message_admins("[key_name_admin(usr)] удаляет [O] на координатах ([O.x],[O.y],[O.z])")
+	if (alert(src, "Р’С‹ СѓРІРµСЂРµРЅС‹ С‡С‚Рѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ:\n[O]\nРІ ([O.x], [O.y], [O.z])?", "РџРѕРґС‚РІРµСЂРґРёС‚Рµ", "Р”Р°", "РќРµС‚") == "Р”Р°")
+		log_admin("[key_name(usr)] СѓРґР°Р»СЏРµС‚ [O] РІ ([O.x],[O.y],[O.z])")
+		message_admins("[key_name_admin(usr)] СѓРґР°Р»СЏРµС‚ [O] РЅР° РєРѕРѕСЂРґРёРЅР°С‚Р°С… ([O.x],[O.y],[O.z])")
 		feedback_add_details("admin_verb","DEL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		qdel(O)
 

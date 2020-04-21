@@ -1,8 +1,8 @@
 //Fallout 13 cazador directory
 
 /mob/living/simple_animal/hostile/cazador
-	name = "Касадор"
-	desc = "Большая, уродливая, летающая штука."
+	name = "РљР°СЃР°РґРѕСЂ"
+	desc = "Р‘РѕР»СЊС€Р°СЏ, СѓСЂРѕРґР»РёРІР°СЏ, Р»РµС‚Р°СЋС‰Р°СЏ С€С‚СѓРєР°."
 	eng_name = "cazador"
 	eng_desc = "A big and ugly flying thing."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -42,7 +42,7 @@
 	harm_intent_damage = 10
 	melee_damage_lower = 20
 	melee_damage_upper = 30
-	attacktext = "жалит"
+	attacktext = "Р¶Р°Р»РёС‚"
 	eng_attacktext = "stings"
 	attack_sound = 'sound/weapons/bite.ogg'
 

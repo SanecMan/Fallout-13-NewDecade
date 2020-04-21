@@ -9,7 +9,7 @@
  * First Aid Kits
  */
 /obj/item/weapon/storage/firstaid
-	name = "Аптечка Первой Помощи"
+	name = "РђРїС‚РµС‡РєР° РџРµСЂРІРѕР№ РџРѕРјРѕС‰Рё"
 	desc = "It's an emergency medical kit for those serious boo-boos."
 	icon_state = "firstaid_1"
 	throw_speed = 3
@@ -34,7 +34,7 @@
 	return
 
 /obj/item/weapon/storage/firstaid/fire
-	name = "Аптечка Первой Помощи при ожогах"
+	name = "РђРїС‚РµС‡РєР° РџРµСЂРІРѕР№ РџРѕРјРѕС‰Рё РїСЂРё РѕР¶РѕРіР°С…"
 	desc = "A specialized medical kit for when the toxins lab <i>-spontaneously-</i> burns down."
 	icon_state = "burn_1"
 	item_state = "firstaid-ointment"
@@ -69,7 +69,7 @@
 	return
 
 /obj/item/weapon/storage/firstaid/o2
-	name = "Аптечка Первой Помощи при кислородном голодании"
+	name = "РђРїС‚РµС‡РєР° РџРµСЂРІРѕР№ РџРѕРјРѕС‰Рё РїСЂРё РєРёСЃР»РѕСЂРѕРґРЅРѕРј РіРѕР»РѕРґР°РЅРёРё"
 	desc = "A box full of oxygen goodies."
 	icon_state = "oxygen_1"
 	item_state = "firstaid-o2"
@@ -86,7 +86,7 @@
 	return
 
 /obj/item/weapon/storage/firstaid/brute
-	name = "Аптечка Первой Помощи при физическом повреждении"
+	name = "РђРїС‚РµС‡РєР° РџРµСЂРІРѕР№ РџРѕРјРѕС‰Рё РїСЂРё С„РёР·РёС‡РµСЃРєРѕРј РїРѕРІСЂРµР¶РґРµРЅРёРё"
 	desc = "A first aid kit for when you get toolboxed."
 	icon_state = "brute"
 	item_state = "firstaid-brute"
@@ -126,7 +126,7 @@
  * Pill Bottles
  */
 /obj/item/weapon/storage/pill_bottle
-	name = "баночка для таблеток"
+	name = "Р±Р°РЅРѕС‡РєР° РґР»СЏ С‚Р°Р±Р»РµС‚РѕРє"
 	desc = "It's an airtight container for storing medication."
 	icon_state = "pill_canister"
 	icon = 'icons/obj/chemical.dmi'

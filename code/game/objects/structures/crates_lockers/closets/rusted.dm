@@ -1,4 +1,4 @@
 /obj/structure/closet/rusted
-	name = "шкафчик"
-	desc = "Обычный ржавый шкаф."
+	name = "С€РєР°С„С‡РёРє"
+	desc = "РћР±С‹С‡РЅС‹Р№ СЂР¶Р°РІС‹Р№ С€РєР°С„."
 	icon_state = "rusted"

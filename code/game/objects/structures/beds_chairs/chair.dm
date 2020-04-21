@@ -1,5 +1,5 @@
 /obj/structure/chair
-	name = "стул"
+	name = "СЃС‚СѓР»"
 	desc = "You sit in this. Either by will or force.\n<span class='notice'>Drag your sprite to sit in the chair. Alt-click to rotate it clockwise.</span>"
 	icon = 'icons/fallout/objects/structures/furniture.dmi'
 	icon_state = "chair"
@@ -111,7 +111,7 @@
 // Chair types
 /obj/structure/chair/wood
 	icon_state = "wooden_chair_settler"
-	name = "деревянный стул"
+	name = "РґРµСЂРµРІСЏРЅРЅС‹Р№ СЃС‚СѓР»"
 	desc = "A chair built from scavenged wood.<br>A work was done by a carpentering amateur - the wasteland settler."
 	resistance_flags = FLAMMABLE
 	obj_integrity = 70
@@ -133,17 +133,17 @@
 
 /obj/structure/chair/wood/fancy
 	icon_state = "wooden_chair_fancy"
-	name = "опртяный деревянный стул"
+	name = "РѕРїСЂС‚СЏРЅС‹Р№ РґРµСЂРµРІСЏРЅРЅС‹Р№ СЃС‚СѓР»"
 	desc = "An elegant chair made of luxurious wood."
 
 /obj/structure/chair/wood/stal
 	icon = 'icons/fallout/objects/structures/furniture.dmi'
 	icon_state = "chair_stalker"
-	name = "деревянный стул"
-	desc = "Деревянный стул. Покрылся пылью уже."
+	name = "РґРµСЂРµРІСЏРЅРЅС‹Р№ СЃС‚СѓР»"
+	desc = "Р”РµСЂРµРІСЏРЅРЅС‹Р№ СЃС‚СѓР». РџРѕРєСЂС‹Р»СЃСЏ РїС‹Р»СЊСЋ СѓР¶Рµ."
 
 /obj/structure/chair/comfy
-	name = "комфортное кресло"
+	name = "РєРѕРјС„РѕСЂС‚РЅРѕРµ РєСЂРµСЃР»Рѕ"
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
 	icon_state = "comfychair"
 	color = rgb(255,255,255)
@@ -208,7 +208,7 @@
 //Stool
 
 /obj/structure/chair/stool
-	name = "стул"
+	name = "СЃС‚СѓР»"
 	desc = "Apply butt."
 	icon_state = "stool"
 	can_buckle = 0
@@ -232,27 +232,27 @@
 		qdel(src)
 
 /obj/structure/chair/stool/red
-	name = "красный стул"
+	name = "РєСЂР°СЃРЅС‹Р№ СЃС‚СѓР»"
 	desc = "Apply butt."
 	icon_state = "stool_r"
 
 /obj/structure/chair/stool/yellow
-	name = "жёлтый стул"
+	name = "Р¶С‘Р»С‚С‹Р№ СЃС‚СѓР»"
 	desc = "Apply butt."
 	icon_state = "stool_y"
 
 /obj/structure/chair/stool/green
-	name = "зеленый стул"
+	name = "Р·РµР»РµРЅС‹Р№ СЃС‚СѓР»"
 	desc = "Apply butt."
 	icon_state = "stool_g"
 
 /obj/structure/chair/stool/blue
-	name = "голубой стул"
+	name = "РіРѕР»СѓР±РѕР№ СЃС‚СѓР»"
 	desc = "Apply butt."
 	icon_state = "stool_b"
 
 /obj/structure/chair/stool/bar
-	name = "стул"
+	name = "СЃС‚СѓР»"
 	desc = "It has some unsavory stains on it..."
 	icon_state = "bar"
 	item_chair = /obj/item/chair/stool/bar

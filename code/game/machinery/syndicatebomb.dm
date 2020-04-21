@@ -224,7 +224,7 @@
 			var/turf/bombturf = get_turf(src)
 			var/area/A = get_area(bombturf)
 			if(payload && !istype(payload, /obj/item/weapon/bombcore/training))
-				message_admins("[ADMIN_LOOKUPFLW(user)] активирует детонацию [name] ([payload]) в [A.name] [ADMIN_JMP(bombturf)]</a>.")
+				message_admins("[ADMIN_LOOKUPFLW(user)] Р°РєС‚РёРІРёСЂСѓРµС‚ РґРµС‚РѕРЅР°С†РёСЋ [name] ([payload]) РІ [A.name] [ADMIN_JMP(bombturf)]</a>.")
 				log_game("[key_name(user)] has primed a [name] ([payload]) for detonation at [A.name][COORD(bombturf)]")
 				payload.adminlog = "The [src.name] that [key_name(user)] had primed detonated!"
 

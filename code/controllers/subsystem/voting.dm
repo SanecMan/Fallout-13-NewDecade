@@ -31,7 +31,7 @@ var/datum/subsystem/vote/SSvote
 		else
 			var/datum/browser/client_popup
 			for(var/client/C in voting)
-				client_popup = new(C, "vote", "ПАНЕЛЬ ГОЛОСОВАНИЯ")
+				client_popup = new(C, "vote", "РџРђРќР•Р›Р¬ Р“РћР›РћРЎРћР’РђРќРРЇ")
 				client_popup.set_window_options("can_close=0")
 				client_popup.set_content(interface(C))
 				client_popup.open(0)
@@ -91,7 +91,7 @@ var/datum/subsystem/vote/SSvote
 		if(question)
 			text += "<b>[question]</b>"
 		else
-			text += "<b>[capitalize(mode)] голосование</b>"
+			text += "<b>[capitalize(mode)] РіРѕР»РѕСЃРѕРІР°РЅРёРµ</b>"
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			if(!votes)
@@ -99,13 +99,13 @@ var/datum/subsystem/vote/SSvote
 			text += "\n<b>[choices[i]]:</b> [votes]"
 		if(mode != "custom")
 			if(winners.len > 1)
-				text = "\n<b>Голоса разделились между:</b>"
+				text = "\n<b>Р“РѕР»РѕСЃР° СЂР°Р·РґРµР»РёР»РёСЃСЊ РјРµР¶РґСѓ:</b>"
 				for(var/option in winners)
 					text += "\n\t[option]"
 			. = pick(winners)
-			text += "\n<b>Результат голосования: [.]</b>"
+			text += "\n<b>Р РµР·СѓР»СЊС‚Р°С‚ РіРѕР»РѕСЃРѕРІР°РЅРёСЏ: [.]</b>"
 		else
-			text += "\n<b>Воздержалось:</b> [clients.len-voted.len]"
+			text += "\n<b>Р’РѕР·РґРµСЂР¶Р°Р»РѕСЃСЊ:</b> [clients.len-voted.len]"
 	else
 		text += "<b>Vote Result: Inconclusive - No Votes!</b>"
 	log_vote(text)
@@ -119,7 +119,7 @@ var/datum/subsystem/vote/SSvote
 	if(.)
 		switch(mode)
 			if("restart")
-				if(. == "Завершить раунд")
+				if(. == "Р—Р°РІРµСЂС€РёС‚СЊ СЂР°СѓРЅРґ")
 					restart = 1
 			if("gamemode")
 				if(master_mode != .)
@@ -137,8 +137,8 @@ var/datum/subsystem/vote/SSvote
 		if(!active_admins)
 			ticker.force_ending = 1
 		else
-			to_chat(world, "<span style='boldannounce'>Примечание: Перезапуск не состоится пока активный администратор не нажмет кнопку.</span>")
-			message_admins("Голосование о перезапуске завершено, но на сервере имеется администратор с флагом +server который должен решить окончательно.")
+			to_chat(world, "<span style='boldannounce'>РџСЂРёРјРµС‡Р°РЅРёРµ: РџРµСЂРµР·Р°РїСѓСЃРє РЅРµ СЃРѕСЃС‚РѕРёС‚СЃСЏ РїРѕРєР° Р°РєС‚РёРІРЅС‹Р№ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ РЅРµ РЅР°Р¶РјРµС‚ РєРЅРѕРїРєСѓ.</span>")
+			message_admins("Р“РѕР»РѕСЃРѕРІР°РЅРёРµ Рѕ РїРµСЂРµР·Р°РїСѓСЃРєРµ Р·Р°РІРµСЂС€РµРЅРѕ, РЅРѕ РЅР° СЃРµСЂРІРµСЂРµ РёРјРµРµС‚СЃСЏ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ СЃ С„Р»Р°РіРѕРј +server РєРѕС‚РѕСЂС‹Р№ РґРѕР»Р¶РµРЅ СЂРµС€РёС‚СЊ РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕ.")
 
 	return .
 
@@ -173,15 +173,15 @@ var/datum/subsystem/vote/SSvote
 		reset()
 		switch(vote_type)
 			if("restart")
-				choices.Add("Завершить раунд","Продолжить раунд")
+				choices.Add("Р—Р°РІРµСЂС€РёС‚СЊ СЂР°СѓРЅРґ","РџСЂРѕРґРѕР»Р¶РёС‚СЊ СЂР°СѓРЅРґ")
 			if("gamemode")
 				choices.Add(config.votable_modes)
 			if("custom")
-				question = stripped_input(usr,"О чём это голосование?")
+				question = stripped_input(usr,"Рћ С‡С‘Рј СЌС‚Рѕ РіРѕР»РѕСЃРѕРІР°РЅРёРµ?")
 				if(!question)
 					return 0
 				for(var/i=1,i<=10,i++)
-					var/option = capitalize(stripped_input(usr,"Введите вариант ответа или оставьте поле пустым чтобы продолжить"))
+					var/option = capitalize(stripped_input(usr,"Р’РІРµРґРёС‚Рµ РІР°СЂРёР°РЅС‚ РѕС‚РІРµС‚Р° РёР»Рё РѕСЃС‚Р°РІСЊС‚Рµ РїРѕР»Рµ РїСѓСЃС‚С‹Рј С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ"))
 					if(!option || mode || !usr.client)
 						break
 					choices.Add(option)
@@ -190,19 +190,19 @@ var/datum/subsystem/vote/SSvote
 		mode = vote_type
 		initiator = initiator_key
 		started_time = world.time
-		var/text = "[capitalize(mode)] голосование запущено [initiator]."
+		var/text = "[capitalize(mode)] РіРѕР»РѕСЃРѕРІР°РЅРёРµ Р·Р°РїСѓС‰РµРЅРѕ [initiator]."
 		if(mode == "custom")
 			text += "\n[question]"
 		if(mode == "restart")
-			text += " Перезапуск?"
+			text += " РџРµСЂРµР·Р°РїСѓСЃРє?"
 		log_vote(text)
-		to_chat(world, "\n<font color='purple'><b>[text]</b>\nПропишите <b>vote</b> или кликните <a href='?src=\ref[src]'>СЮДА</a> чтобы проголосовать.\nУ вас [config.vote_period/10] секунд чтобы проголосовать.</font>")
+		to_chat(world, "\n<font color='purple'><b>[text]</b>\nРџСЂРѕРїРёС€РёС‚Рµ <b>vote</b> РёР»Рё РєР»РёРєРЅРёС‚Рµ <a href='?src=\ref[src]'>РЎР®Р”Рђ</a> С‡С‚РѕР±С‹ РїСЂРѕРіРѕР»РѕСЃРѕРІР°С‚СЊ.\nРЈ РІР°СЃ [config.vote_period/10] СЃРµРєСѓРЅРґ С‡С‚РѕР±С‹ РїСЂРѕРіРѕР»РѕСЃРѕРІР°С‚СЊ.</font>")
 		time_remaining = round(config.vote_period/10)
 		for(var/c in clients)
 			var/client/C = c
 			var/datum/action/vote/V = new
 			if(question)
-				V.name = "Голосование: [question]"
+				V.name = "Р“РѕР»РѕСЃРѕРІР°РЅРёРµ: [question]"
 			V.Grant(C.mob)
 			generated_actions += V
 		return 1
@@ -221,42 +221,42 @@ var/datum/subsystem/vote/SSvote
 
 	if(mode)
 		if(question)
-			. += "<h2>Голосование: '[question]'</h2>"
+			. += "<h2>Р“РѕР»РѕСЃРѕРІР°РЅРёРµ: '[question]'</h2>"
 		else
-			. += "<h2>Голосованите: [capitalize(mode)]</h2>"
-		. += " Осталось времени: [time_remaining] секунд<hr><ul>"
+			. += "<h2>Р“РѕР»РѕСЃРѕРІР°РЅРёС‚Рµ: [capitalize(mode)]</h2>"
+		. += " РћСЃС‚Р°Р»РѕСЃСЊ РІСЂРµРјРµРЅРё: [time_remaining] СЃРµРєСѓРЅРґ<hr><ul>"
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			if(!votes)
 				votes = 0
-			. += "<li><a href='?src=\ref[src];vote=[i]'>[choices[i]]</a> ([votes] голосов)</li>"
+			. += "<li><a href='?src=\ref[src];vote=[i]'>[choices[i]]</a> ([votes] РіРѕР»РѕСЃРѕРІ)</li>"
 		. += "</ul><hr>"
 		if(admin)
-			. += "(<a href='?src=\ref[src];vote=cancel'>Отменить голосование</a>) "
+			. += "(<a href='?src=\ref[src];vote=cancel'>РћС‚РјРµРЅРёС‚СЊ РіРѕР»РѕСЃРѕРІР°РЅРёРµ</a>) "
 	else
-		. += "<h2>Начать голосование:</h2><hr><ul><li>"
+		. += "<h2>РќР°С‡Р°С‚СЊ РіРѕР»РѕСЃРѕРІР°РЅРёРµ:</h2><hr><ul><li>"
 		//restart
 		if(trialmin || config.allow_vote_restart)
-			. += "<a href='?src=\ref[src];vote=restart'>Перезапуск</a>"
+			. += "<a href='?src=\ref[src];vote=restart'>РџРµСЂРµР·Р°РїСѓСЃРє</a>"
 		else
-			. += "<font color='grey'>Перезапуск (Запрещен)</font>"
+			. += "<font color='grey'>РџРµСЂРµР·Р°РїСѓСЃРє (Р—Р°РїСЂРµС‰РµРЅ)</font>"
 		if(trialmin)
 			. += "\t(<a href='?src=\ref[src];vote=toggle_restart'>[config.allow_vote_restart?"Allowed":"Disallowed"]</a>)"
 		. += "</li><li>"
 		//gamemode
 		if(trialmin || config.allow_vote_mode)
-			. += "<a href='?src=\ref[src];vote=gamemode'>Игровой Режим</a>"
+			. += "<a href='?src=\ref[src];vote=gamemode'>РРіСЂРѕРІРѕР№ Р РµР¶РёРј</a>"
 		else
-			. += "<font color='grey'>Игровой режим (Запрещен)</font>"
+			. += "<font color='grey'>РРіСЂРѕРІРѕР№ СЂРµР¶РёРј (Р—Р°РїСЂРµС‰РµРЅ)</font>"
 		if(trialmin)
 			. += "\t(<a href='?src=\ref[src];vote=toggle_gamemode'>[config.allow_vote_mode?"Allowed":"Disallowed"]</a>)"
 
 		. += "</li>"
 		//custom
 		if(trialmin)
-			. += "<li><a href='?src=\ref[src];vote=custom'>Настраиваемый</a></li>"
+			. += "<li><a href='?src=\ref[src];vote=custom'>РќР°СЃС‚СЂР°РёРІР°РµРјС‹Р№</a></li>"
 		. += "</ul><hr>"
-	. += "<a href='?src=\ref[src];vote=close' style='position:absolute;right:50px'>Закрыть</a>"
+	. += "<a href='?src=\ref[src];vote=close' style='position:absolute;right:50px'>Р—Р°РєСЂС‹С‚СЊ</a>"
 	return .
 
 
@@ -304,7 +304,7 @@ var/datum/subsystem/vote/SSvote
 	set category = "OOC"
 	set name = "Vote"
 
-	var/datum/browser/popup = new(src, "vote", "ПАНЕЛЬ ГОЛОСОВАНИЯ")
+	var/datum/browser/popup = new(src, "vote", "РџРђРќР•Р›Р¬ Р“РћР›РћРЎРћР’РђРќРРЇ")
 	popup.set_window_options("can_close=0")
 	popup.set_content(SSvote.interface(client))
 	popup.open(0)

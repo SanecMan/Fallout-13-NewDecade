@@ -1,8 +1,8 @@
 //Fallout 13 rubish decoration
 
 /obj/structure/car/rubish1
-	name = "остов автомобиля"
-	desc = "Ржавый каркас автомобиля.<br>Нет, это уже нельзя починить."
+	name = "РѕСЃС‚РѕРІ Р°РІС‚РѕРјРѕР±РёР»СЏ"
+	desc = "Р Р¶Р°РІС‹Р№ РєР°СЂРєР°СЃ Р°РІС‚РѕРјРѕР±РёР»СЏ.<br>РќРµС‚, СЌС‚Рѕ СѓР¶Рµ РЅРµР»СЊР·СЏ РїРѕС‡РёРЅРёС‚СЊ."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "car_rubish1"
 	anchored = 1
@@ -32,8 +32,8 @@
 	S.verbs.Cut()
 
 /obj/structure/car/rubish2
-	name = "остов автомобиля"
-	desc = "Ржавый каркас автомобиля.<br>Нет, это уже нельзя починить."
+	name = "РѕСЃС‚РѕРІ Р°РІС‚РѕРјРѕР±РёР»СЏ"
+	desc = "Р Р¶Р°РІС‹Р№ РєР°СЂРєР°СЃ Р°РІС‚РѕРјРѕР±РёР»СЏ.<br>РќРµС‚, СЌС‚Рѕ СѓР¶Рµ РЅРµР»СЊР·СЏ РїРѕС‡РёРЅРёС‚СЊ."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "car_rubish2"
 	anchored = 1
@@ -63,8 +63,8 @@
 	S.verbs.Cut()
 
 /obj/structure/car/rubish3
-	name = "остов автомобиля"
-	desc = "Ржавый каркас автомобиля.<br>Нет, это уже нельзя починить."
+	name = "РѕСЃС‚РѕРІ Р°РІС‚РѕРјРѕР±РёР»СЏ"
+	desc = "Р Р¶Р°РІС‹Р№ РєР°СЂРєР°СЃ Р°РІС‚РѕРјРѕР±РёР»СЏ.<br>РќРµС‚, СЌС‚Рѕ СѓР¶Рµ РЅРµР»СЊР·СЏ РїРѕС‡РёРЅРёС‚СЊ."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "car_rubish3"
 	anchored = 1
@@ -125,8 +125,8 @@
 	S.verbs.Cut()
 
 /obj/structure/debris/v1
-	name = "обломки зданий"
-	desc = "Куча мусора, когда-то было зданием."
+	name = "РѕР±Р»РѕРјРєРё Р·РґР°РЅРёР№"
+	desc = "РљСѓС‡Р° РјСѓСЃРѕСЂР°, РєРѕРіРґР°-С‚Рѕ Р±С‹Р»Рѕ Р·РґР°РЅРёРµРј."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "debris1"
 	anchored = 1
@@ -156,8 +156,8 @@
 	S.verbs.Cut()
 
 /obj/structure/debris/v2
-	name = "обломки зданий"
-	desc = "Куча мусора, когда-то было зданием."
+	name = "РѕР±Р»РѕРјРєРё Р·РґР°РЅРёР№"
+	desc = "РљСѓС‡Р° РјСѓСЃРѕСЂР°, РєРѕРіРґР°-С‚Рѕ Р±С‹Р»Рѕ Р·РґР°РЅРёРµРј."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "debris2"
 	anchored = 1
@@ -187,8 +187,8 @@
 	S.verbs.Cut()
 
 /obj/structure/debris/v3
-	name = "обломки зданий"
-	desc = "Куча мусора, когда-то было зданием."
+	name = "РѕР±Р»РѕРјРєРё Р·РґР°РЅРёР№"
+	desc = "РљСѓС‡Р° РјСѓСЃРѕСЂР°, РєРѕРіРґР°-С‚Рѕ Р±С‹Р»Рѕ Р·РґР°РЅРёРµРј."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "debris3"
 	anchored = 1
@@ -218,8 +218,8 @@
 	S.verbs.Cut()
 
 /obj/structure/debris/v4
-	name = "обломки зданий"
-	desc = "Куча мусора, когда-то было зданием."
+	name = "РѕР±Р»РѕРјРєРё Р·РґР°РЅРёР№"
+	desc = "РљСѓС‡Р° РјСѓСЃРѕСЂР°, РєРѕРіРґР°-С‚Рѕ Р±С‹Р»Рѕ Р·РґР°РЅРёРµРј."
 	icon = 'icons/fallout/objects/structures/rubish.dmi'
 	icon_state = "debris4"
 	anchored = 1
@@ -249,8 +249,8 @@
 	S.verbs.Cut()
 
 /obj/structure/statue_fal
-	name = "статуя Рейнджера"
-	desc = "Огромная статуя Рейнджера НКР."
+	name = "СЃС‚Р°С‚СѓСЏ Р РµР№РЅРґР¶РµСЂР°"
+	desc = "РћРіСЂРѕРјРЅР°СЏ СЃС‚Р°С‚СѓСЏ Р РµР№РЅРґР¶РµСЂР° РќРљР ."
 	icon = 'icons/fallout/objects/structures/statue.dmi'
 	icon_state = "statue1"
 	anchored = 1

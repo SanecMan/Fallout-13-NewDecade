@@ -1,5 +1,5 @@
 /*
-Опилки. Пока что не сьедобны.
+РћРїРёР»РєРё. РџРѕРєР° С‡С‚Рѕ РЅРµ СЃСЊРµРґРѕР±РЅС‹.
 
 
 /obj/item/weapon/sawdust
@@ -11,7 +11,7 @@
 	resistance_flags = FLAMMABLE
 
 
-//а можно спрайт по лучше?
+//Р° РјРѕР¶РЅРѕ СЃРїСЂР°Р№С‚ РїРѕ Р»СѓС‡С€Рµ?
 
 /obj/item/weapon/sawdust/New()
 	icon_state = "sawdust_[rand(1, 4)]"
@@ -19,8 +19,8 @@
 */
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/sawdust
-	name = "Опилки"
-	desc = "Пища для истинных трудяг. Возможно немного радиоактивны..."
+	name = "РћРїРёР»РєРё"
+	desc = "РџРёС‰Р° РґР»СЏ РёСЃС‚РёРЅРЅС‹С… С‚СЂСѓРґСЏРі. Р’РѕР·РјРѕР¶РЅРѕ РЅРµРјРЅРѕРіРѕ СЂР°РґРёРѕР°РєС‚РёРІРЅС‹..."
 	icon = 'icons/fallout/flora/flora.dmi'
 	icon_state = "sawdust"
 	bonus_reagents = list("radium" = 0.5, "vitamin" = 1)

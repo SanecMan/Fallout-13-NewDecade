@@ -16,7 +16,7 @@
 			to_chat(user, "Eyebot already under control!")
 			return
 		else
-			to_chat(user, "Робоглаз уже управляется кем-то!")
+			to_chat(user, "Р РѕР±РѕРіР»Р°Р· СѓР¶Рµ СѓРїСЂР°РІР»СЏРµС‚СЃСЏ РєРµРј-С‚Рѕ!")
 			return
 
 	pilot = user

@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/armor/f13/radist_armor
 	name = "radist plate carrier"
-	desc = "Плитник радиста Анклава."
+	desc = "РџР»РёС‚РЅРёРє СЂР°РґРёСЃС‚Р° РђРЅРєР»Р°РІР°."
 	icon_state = "unit_carrier"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 65, bullet = 50, laser = 20, energy = 10, bomb = 45, bio = 0, rad = 0, fire = 10, acid = 0)
@@ -11,7 +11,7 @@
 
 /obj/item/clothing/head/helmet/f13/radist
 	name = "radist combat helmet"
-	desc = "Каска с обозначениями Анклава."
+	desc = "РљР°СЃРєР° СЃ РѕР±РѕР·РЅР°С‡РµРЅРёСЏРјРё РђРЅРєР»Р°РІР°."
 	icon_state = "unit_helm"
 	item_state = "marine"
 	armor = list(melee = 65, bullet = 60, laser = 25, energy = 15, bomb = 30, bio = 0, rad = 0, fire = 30, acid = 30)
@@ -23,7 +23,7 @@
 
 /obj/item/clothing/under/f13/j12
 	name = "J-12 uniform"
-	desc = "Ж-12, мы гордимся тобой."
+	desc = "Р–-12, РјС‹ РіРѕСЂРґРёРјСЃСЏ С‚РѕР±РѕР№."
 	icon_state = "j12"
 	item_state = "bl_suit"
 	item_color = "j12"
@@ -34,7 +34,7 @@
 
 /obj/item/clothing/under/f13/radist_bs
 	name = "old radist uniform"
-	desc = "Практичная форма радиста."
+	desc = "РџСЂР°РєС‚РёС‡РЅР°СЏ С„РѕСЂРјР° СЂР°РґРёСЃС‚Р°."
 	icon_state = "bs_radist"
 	item_state = "bl_suit"
 	item_color = "bs_radist"

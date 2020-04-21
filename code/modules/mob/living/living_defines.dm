@@ -76,7 +76,7 @@
 
 	var/list/implants = null
 
-	var/murder = null // Дворецкий
+	var/murder = null // Р”РІРѕСЂРµС†РєРёР№
 
 	var/datum/experience/experience
 	var/datum/perkController/perks

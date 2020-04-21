@@ -1,7 +1,7 @@
 /datum/weather_controller/fog
-	name = "туман"
+	name = "С‚СѓРјР°РЅ"
 	id = "fog"
-	desc = "Просто туман."
+	desc = "РџСЂРѕСЃС‚Рѕ С‚СѓРјР°РЅ."
 
 	overlay = "fog"
 	chance = 25

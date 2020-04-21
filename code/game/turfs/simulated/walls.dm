@@ -127,7 +127,7 @@
 
 /turf/closed/wall/attack_hand(mob/user)
 	user.changeNext_move(CLICK_CD_MELEE)
-	to_chat(user, "<span class='notice'>Вы давите на стену, но ничего не происходит!</span>")
+	to_chat(user, "<span class='notice'>Р’С‹ РґР°РІРёС‚Рµ РЅР° СЃС‚РµРЅСѓ, РЅРѕ РЅРёС‡РµРіРѕ РЅРµ РїСЂРѕРёСЃС…РѕРґРёС‚!</span>")
 	playsound(src, 'sound/weapons/Genhit.ogg', 25, 1)
 	src.add_fingerprint(user)
 	..()

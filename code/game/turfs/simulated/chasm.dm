@@ -113,8 +113,8 @@
 /turf/open/chasm/straight_down/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 
-//КОД ПОЕЗДА
-//КОСТЫЛЬ ПРОШУ УБРАТЬ
+//РљРћР” РџРћР•Р—Р”Рђ
+//РљРћРЎРўР«Р›Р¬ РџР РћРЁРЈ РЈР‘Р РђРўР¬
 //#poezd
 
 /* /turf/open/chasm/straight_down/train/
@@ -126,19 +126,19 @@
 					drop_y = rand(99,103)
 						drop_z = 2
 
-//Движущиеся покрытие
+//Р”РІРёР¶СѓС‰РёРµСЃСЏ РїРѕРєСЂС‹С‚РёРµ
 /turf/open/chasm/straight_down/train/openground
 	baseturf = /turf/open/chasm/straight_down/train/openground
-	name = 'Дорожное покрытие'
-	desc = 'Не прыгай!'
+	name = 'Р”РѕСЂРѕР¶РЅРѕРµ РїРѕРєСЂС‹С‚РёРµ'
+	desc = 'РќРµ РїСЂС‹РіР°Р№!'
 	icon = 'icons/fallout/turfs/train.dmi'
 	icon_state = "openground"
 
-//Движущиеся рельсы
+//Р”РІРёР¶СѓС‰РёРµСЃСЏ СЂРµР»СЊСЃС‹
 /turf/open/chasm/straight_down/train/openrail
 	baseturf = /turf/open/chasm/straight_down/train/openrail
-	name = 'Рельсы'
-	desc = 'Не прыгай!'
+	name = 'Р РµР»СЊСЃС‹'
+	desc = 'РќРµ РїСЂС‹РіР°Р№!'
 	icon = 'icons/fallout/turfs/train.dmi'
 	icon_state = "openwall" */
 

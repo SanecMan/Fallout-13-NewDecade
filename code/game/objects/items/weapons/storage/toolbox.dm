@@ -1,6 +1,6 @@
 /obj/item/weapon/storage/toolbox
-	name = "Ящик для инструментов"
-	desc = "Опасно. Очень Робустный."
+	name = "РЇС‰РёРє РґР»СЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ"
+	desc = "РћРїР°СЃРЅРѕ. РћС‡РµРЅСЊ Р РѕР±СѓСЃС‚РЅС‹Р№."
 	icon_state = "red"
 	item_state = "toolbox_red"
 	flags = CONDUCT
@@ -19,7 +19,7 @@
 	return (BRUTELOSS)
 
 /obj/item/weapon/storage/toolbox/emergency
-	name = "Ящик для инструментов"
+	name = "РЇС‰РёРє РґР»СЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ"
 	icon_state = "red"
 	item_state = "toolbox_red"
 
@@ -35,7 +35,7 @@
 	new /obj/item/device/radio/off(src)
 
 /obj/item/weapon/storage/toolbox/mechanical
-	name = "Ящик для инструментов механика"
+	name = "РЇС‰РёРє РґР»СЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ РјРµС…Р°РЅРёРєР°"
 	icon_state = "blue"
 	item_state = "toolbox_blue"
 
@@ -48,7 +48,7 @@
 	new /obj/item/weapon/wirecutters(src)
 
 /obj/item/weapon/storage/toolbox/electrical
-	name = "Ящик для инструментов электрика"
+	name = "РЇС‰РёРє РґР»СЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ СЌР»РµРєС‚СЂРёРєР°"
 	icon_state = "yellow"
 	item_state = "toolbox_yellow"
 
@@ -66,7 +66,7 @@
 		new /obj/item/stack/cable_coil(src,30,pickedcolor)
 
 /obj/item/weapon/storage/toolbox/syndicate
-	name = "Подозрительно выглядящий ящик для инструметов"
+	name = "РџРѕРґРѕР·СЂРёС‚РµР»СЊРЅРѕ РІС‹РіР»СЏРґСЏС‰РёР№ СЏС‰РёРє РґР»СЏ РёРЅСЃС‚СЂСѓРјРµС‚РѕРІ"
 	icon_state = "syndicate"
 	item_state = "toolbox_syndi"
 	origin_tech = "combat=2;syndicate=1;engineering=2"
@@ -134,13 +134,13 @@
 	proselytizer_type = /obj/item/clockwork/clockwork_proselytizer/scarab/debug
 
 /obj/item/weapon/storage/toolbox/rusty
-	name = "ржавый ящик для инструментов"
-	desc = "Опасно. Очень ржавый."
+	name = "СЂР¶Р°РІС‹Р№ СЏС‰РёРє РґР»СЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ"
+	desc = "РћРїР°СЃРЅРѕ. РћС‡РµРЅСЊ СЂР¶Р°РІС‹Р№."
 	icon_state = "toolbox_rusty"
 	item_state = "toolbox_rusty"
 	materials = list(MAT_METAL = 300)
 	origin_tech = "combat=1;engineering=1"
-	attack_verb = list("огревает ящиком")
+	attack_verb = list("РѕРіСЂРµРІР°РµС‚ СЏС‰РёРєРѕРј")
 
 /obj/item/weapon/storage/toolbox/rusty/New()
 	..()

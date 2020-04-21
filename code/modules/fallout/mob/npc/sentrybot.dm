@@ -1,8 +1,8 @@
 //Fallout 13 protectron directory
 
 /mob/living/simple_animal/hostile/sentrybot
-	name = "Робот-Охранник"
-	desc = "Довоенный Робот-Охранник.<br>Очень грозная машина."
+	name = "Р РѕР±РѕС‚-РћС…СЂР°РЅРЅРёРє"
+	desc = "Р”РѕРІРѕРµРЅРЅС‹Р№ Р РѕР±РѕС‚-РћС…СЂР°РЅРЅРёРє.<br>РћС‡РµРЅСЊ РіСЂРѕР·РЅР°СЏ РјР°С€РёРЅР°."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
@@ -13,7 +13,7 @@
 	environment_smash = 0
 	response_help = "pokes"
 	response_disarm = "shoves"
-	response_harm = "бьет"
+	response_harm = "Р±СЊРµС‚"
 	move_to_delay = 2
 	stat_attack = 1
 	robust_searching = 1
@@ -37,7 +37,7 @@
 	melee_damage_upper = 35
 	minimum_distance = 2
 	retreat_distance = 4
-	attacktext = "бьет"
+	attacktext = "Р±СЊРµС‚"
 	attack_sound = "punch"
 	a_intent = "harm"
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -57,7 +57,7 @@
 
 /mob/living/simple_animal/hostile/sentrybot/proc/do_death_beep()
 	playsound(src, 'sound/machines/triple_beep.ogg', 75, TRUE)
-	visible_message("<span class='warning'>Вы слышите частый бип-бип из [src]!</span>", "<span class='warning'>Вы слышите частый бип!</span>")
+	visible_message("<span class='warning'>Р’С‹ СЃР»С‹С€РёС‚Рµ С‡Р°СЃС‚С‹Р№ Р±РёРї-Р±РёРї РёР· [src]!</span>", "<span class='warning'>Р’С‹ СЃР»С‹С€РёС‚Рµ С‡Р°СЃС‚С‹Р№ Р±РёРї!</span>")
 
 /mob/living/simple_animal/hostile/sentrybot/proc/self_destruct()
 	explosion(src,1,2,4,4)
@@ -75,7 +75,7 @@
 	summon_backup(10)
 
 /mob/living/simple_animal/hostile/assaultron
-	name = "штурмотрон"
+	name = "С€С‚СѓСЂРјРѕС‚СЂРѕРЅ"
 	desc = "A deadly close combat robot developed by RobCo.  Their head laser is absolutely devastating."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "assaultron"
@@ -86,6 +86,6 @@
 	melee_damage_lower = 20
 	melee_damage_upper = 30
 	speed = 0
-	attacktext = "избивает своими клешнями"
+	attacktext = "РёР·Р±РёРІР°РµС‚ СЃРІРѕРёРјРё РєР»РµС€РЅСЏРјРё"
 	faction = list("hostile", "robot")
 	XP = 35

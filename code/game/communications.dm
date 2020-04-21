@@ -124,7 +124,7 @@ On the map:
 */
 
 var/list/radiochannels = list(
-	"Общий" = 1459,
+	"РћР±С‰РёР№" = 1459,
 	"Science" = 1351,
 	"Command" = 1353,
 	"Medical" = 1355,
@@ -136,11 +136,11 @@ var/list/radiochannels = list(
 	"Service" = 1349,
 	"AI Private" = 1447,
 	//crc
-	"Новости" = 1475
+	"РќРѕРІРѕСЃС‚Рё" = 1475
 )
 
 var/list/radiochannelsreverse = list(
-	"1459" = "Общий",
+	"1459" = "РћР±С‰РёР№",
 	"1351" = "Science",
 	"1353" = "Command",
 	"1355" = "Medical",
@@ -152,7 +152,7 @@ var/list/radiochannelsreverse = list(
 	"1349" = "Service",
 	"1447" = "AI Private",
 	//crc
-	"1475" = "Новости"
+	"1475" = "РќРѕРІРѕСЃС‚Рё"
 )
 
 //depenging helpers

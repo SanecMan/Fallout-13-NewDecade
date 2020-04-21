@@ -162,40 +162,40 @@
 	icon = 'icons/fallout/turfs/walls.dmi'
 	icon_state = "matrix"
 
-//ЧАСТЬ КОДА ПОЕЗДА
-//ПРОШУ БУДУЩИХ КОДЕРОВ ИСПРАВИТЬ МОЮ ОШИБКУ #poezd
+//Р§РђРЎРўР¬ РљРћР”Рђ РџРћР•Р—Р”Рђ
+//РџР РћРЁРЈ Р‘РЈР”РЈР©РРҐ РљРћР”Р•Р РћР’ РРЎРџР РђР’РРўР¬ РњРћР® РћРЁРР‘РљРЈ #poezd
 
-//Начало кода #poezd
-//Защита от любителей изучить
+//РќР°С‡Р°Р»Рѕ РєРѕРґР° #poezd
+//Р—Р°С‰РёС‚Р° РѕС‚ Р»СЋР±РёС‚РµР»РµР№ РёР·СѓС‡РёС‚СЊ
 /turf/closed/indestructible/f13/train
 	icon = 'icons/effects/effects.dmi'
 	opacity = 0
 
-//Защитный щит
+//Р—Р°С‰РёС‚РЅС‹Р№ С‰РёС‚
 /turf/closed/indestructible/f13/train/shield
-	name = "Защитное поле"
-	desc = "Непробиваемое защитное поле, которое ограждает тебя от путешествий вглубь."
+	name = "Р—Р°С‰РёС‚РЅРѕРµ РїРѕР»Рµ"
+	desc = "РќРµРїСЂРѕР±РёРІР°РµРјРѕРµ Р·Р°С‰РёС‚РЅРѕРµ РїРѕР»Рµ, РєРѕС‚РѕСЂРѕРµ РѕРіСЂР°Р¶РґР°РµС‚ С‚РµР±СЏ РѕС‚ РїСѓС‚РµС€РµСЃС‚РІРёР№ РІРіР»СѓР±СЊ."
 	icon_state = "shieldwall"
 
-//Движущеися стены ИХ КОД НЕ ЮЗАТЬ ЕГО В ИГРЕ ПРОСТО БЛЯДЬ ЮЗАЙ TOP И DOWN НАХУЙ.
+//Р”РІРёР¶СѓС‰РµРёСЃСЏ СЃС‚РµРЅС‹ РРҐ РљРћР” РќР• Р®Р—РђРўР¬ Р•Р“Рћ Р’ РР“Р Р• РџР РћРЎРўРћ Р‘Р›РЇР”Р¬ Р®Р—РђР™ TOP Р DOWN РќРђРҐРЈР™.
 /turf/closed/indestructible/f13/train/openwall/top
-	name = "Стена"
-	desc = "Ничего необычного."
+	name = "РЎС‚РµРЅР°"
+	desc = "РќРёС‡РµРіРѕ РЅРµРѕР±С‹С‡РЅРѕРіРѕ."
 	icon = 'icons/fallout/turfs/train.dmi'
 
 
-//Движущеися стены вверху
+//Р”РІРёР¶СѓС‰РµРёСЃСЏ СЃС‚РµРЅС‹ РІРІРµСЂС…Сѓ
 /turf/closed/indestructible/f13/train/openwall/top
-	name = "Стена"
-	desc = "Ничего необычного."
+	name = "РЎС‚РµРЅР°"
+	desc = "РќРёС‡РµРіРѕ РЅРµРѕР±С‹С‡РЅРѕРіРѕ."
 	icon_state = "topopenwall"
 
-//Движущеися стены внизу
+//Р”РІРёР¶СѓС‰РµРёСЃСЏ СЃС‚РµРЅС‹ РІРЅРёР·Сѓ
 /turf/closed/indestructible/f13/train/openwall/down
-	name = "Стена"
-	desc = "Ничего необычного."
+	name = "РЎС‚РµРЅР°"
+	desc = "РќРёС‡РµРіРѕ РЅРµРѕР±С‹С‡РЅРѕРіРѕ."
 	icon_state = "downopenwall"
-//Конец кода поезда #poezd
+//РљРѕРЅРµС† РєРѕРґР° РїРѕРµР·РґР° #poezd
 
 /turf/closed/indestructible/f13/subway
 	name = "tunnel wall"
@@ -270,7 +270,7 @@ turf/closed/indestructible/f13/splashscreen/proc/ticker()
 	while(src && istype(src,/turf/closed/indestructible/f13/splashscreen))
 		//src.swapImage()
 		sleep(src.tickerPeriod)
-	to_chat(world, "Администрация-долбоебы, которые удалили экран лобби.<br>ЩИТСПАВНЕРЫ!!!")
+	to_chat(world, "РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ-РґРѕР»Р±РѕРµР±С‹, РєРѕС‚РѕСЂС‹Рµ СѓРґР°Р»РёР»Рё СЌРєСЂР°РЅ Р»РѕР±Р±Рё.<br>Р©РРўРЎРџРђР’РќР•Р Р«!!!")
 	return
 
 //Change the time to determine how short/long the fading animation is.

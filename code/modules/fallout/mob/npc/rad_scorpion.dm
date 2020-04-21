@@ -1,8 +1,8 @@
 //Fallout 13 rad scorpion directory
 
 /mob/living/simple_animal/hostile/rad_scorpion
-	name = "рад скорпион"
-	desc = "Гигантский мутировавший скорпион с голубым панцирем."
+	name = "СЂР°Рґ СЃРєРѕСЂРїРёРѕРЅ"
+	desc = "Р“РёРіР°РЅС‚СЃРєРёР№ РјСѓС‚РёСЂРѕРІР°РІС€РёР№ СЃРєРѕСЂРїРёРѕРЅ СЃ РіРѕР»СѓР±С‹Рј РїР°РЅС†РёСЂРµРј."
 	eng_name = "giant rad scorpion"
 	eng_desc = "A giant irradiated scorpion with a blue exoskeleton. Its appearance makes you shudder.<br>This one has a razor sharp stinger with lethal venom inside."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -44,8 +44,8 @@
 	XP = 13
 
 /mob/living/simple_animal/hostile/rad_scorpion/black
-	name = "рад скорпион"
-	desc = "Гигантский мутировавший скорпион с черным панцирем. Этот выглядит немного... больше."
+	name = "СЂР°Рґ СЃРєРѕСЂРїРёРѕРЅ"
+	desc = "Р“РёРіР°РЅС‚СЃРєРёР№ РјСѓС‚РёСЂРѕРІР°РІС€РёР№ СЃРєРѕСЂРїРёРѕРЅ СЃ С‡РµСЂРЅС‹Рј РїР°РЅС†РёСЂРµРј. Р­С‚РѕС‚ РІС‹РіР»СЏРґРёС‚ РЅРµРјРЅРѕРіРѕ... Р±РѕР»СЊС€Рµ."
 	eng_name = "giant rad scorpion"
 	eng_desc = "A giant irradiated scorpion with a black exoskeleton. Its appearance makes you shudder in fear.<br>This one has giant pincers."
 	icon_state = "radscorpion_black"

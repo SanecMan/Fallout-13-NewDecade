@@ -10,7 +10,7 @@
 	status = "elder"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "центральному штабу Братства Стали"
+	supervisors = "С†РµРЅС‚СЂР°Р»СЊРЅРѕРјСѓ С€С‚Р°Р±Сѓ Р‘СЂР°С‚СЃС‚РІР° РЎС‚Р°Р»Рё"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1
@@ -75,7 +75,7 @@
 	status = "paladin"
 	total_positions = 1
 	spawn_positions = 2
-	supervisors = "Старейшине"
+	supervisors = "РЎС‚Р°СЂРµР№С€РёРЅРµ"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1
@@ -138,7 +138,7 @@
 	status = "knight"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "Старейшине и Паладинам"
+	supervisors = "РЎС‚Р°СЂРµР№С€РёРЅРµ Рё РџР°Р»Р°РґРёРЅР°Рј"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1
@@ -199,7 +199,7 @@
 	status = "scriber"
 	total_positions = 2
 	spawn_positions = 7
-	supervisors = "Старейшине"
+	supervisors = "РЎС‚Р°СЂРµР№С€РёРЅРµ"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1
@@ -251,7 +251,7 @@
 	status = "paladin_r"
 	total_positions = 2
 	spawn_positions = 1
-	supervisors = "Старейшине и Паладинам"
+	supervisors = "РЎС‚Р°СЂРµР№С€РёРЅРµ Рё РџР°Р»Р°РґРёРЅР°Рј"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1

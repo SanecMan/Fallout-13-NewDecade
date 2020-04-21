@@ -2,14 +2,14 @@
 
 /datum/job/mayor
 	title = "Mayor"
-	desc = "Неоспоримый авторитет.<br>Вас избрали для того, чтобы вы привели их к лучшему завтра."
+	desc = "РќРµРѕСЃРїРѕСЂРёРјС‹Р№ Р°РІС‚РѕСЂРёС‚РµС‚.<br>Р’Р°СЃ РёР·Р±СЂР°Р»Рё РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ РІС‹ РїСЂРёРІРµР»Рё РёС… Рє Р»СѓС‡С€РµРјСѓ Р·Р°РІС‚СЂР°."
 	flag = MAYOR
 	department_flag = WASTELAND
 	faction = "city"
 	status = "mayor"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "никому"
+	supervisors = "РЅРёРєРѕРјСѓ"
 	selection_color = "#804B00"
 	access = list()
 	minimal_access = list()
@@ -72,14 +72,14 @@
 
 /datum/job/sheriff
 	title = "Sheriff"
-	desc = "Бесстрашный хранитель закона.<br>Вас избрали чтобы Вы защищали это место."
+	desc = "Р‘РµСЃСЃС‚СЂР°С€РЅС‹Р№ С…СЂР°РЅРёС‚РµР»СЊ Р·Р°РєРѕРЅР°.<br>Р’Р°СЃ РёР·Р±СЂР°Р»Рё С‡С‚РѕР±С‹ Р’С‹ Р·Р°С‰РёС‰Р°Р»Рё СЌС‚Рѕ РјРµСЃС‚Рѕ."
 	flag = SHERIFF
 	department_flag = WASTELAND
 	faction = "city"
 	status = "sheriff"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Мэру"
+	supervisors = "РњСЌСЂСѓ"
 	selection_color = "#804B00"
 	access = list()
 	minimal_access = list()
@@ -132,12 +132,12 @@
 	title = "Citizen"
 	flag = CITIZEN
 	department_flag = ENGSEC
-	desc = "Житель города.<br>Ваша жизнь намного лучше, чем у любого другого бедолаги на пустошах."
+	desc = "Р–РёС‚РµР»СЊ РіРѕСЂРѕРґР°.<br>Р’Р°С€Р° Р¶РёР·РЅСЊ РЅР°РјРЅРѕРіРѕ Р»СѓС‡С€Рµ, С‡РµРј Сѓ Р»СЋР±РѕРіРѕ РґСЂСѓРіРѕРіРѕ Р±РµРґРѕР»Р°РіРё РЅР° РїСѓСЃС‚РѕС€Р°С…."
 	faction = "city"
 	status = "member"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "никому"
+	supervisors = "РЅРёРєРѕРјСѓ"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
@@ -176,12 +176,12 @@
 	title = "Trader"
 	flag = TRADER
 	department_flag = ENGSEC
-	desc = "Торговец.<br>Вы живёте в достатке, пока у вас есть товар."
+	desc = "РўРѕСЂРіРѕРІРµС†.<br>Р’С‹ Р¶РёРІС‘С‚Рµ РІ РґРѕСЃС‚Р°С‚РєРµ, РїРѕРєР° Сѓ РІР°СЃ РµСЃС‚СЊ С‚РѕРІР°СЂ."
 	faction = "city"
 	status = "trader"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "никому"
+	supervisors = "РЅРёРєРѕРјСѓ"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()

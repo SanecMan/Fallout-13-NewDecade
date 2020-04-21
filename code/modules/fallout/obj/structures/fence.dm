@@ -109,7 +109,7 @@
 
 
 /obj/structure/fence/broken
-	name = "сломанный металлический забор"
+	name = "СЃР»РѕРјР°РЅРЅС‹Р№ РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р·Р°Р±РѕСЂ"
 	density = 0
 	icon_state = "metal_fence3-broken-alt"
 

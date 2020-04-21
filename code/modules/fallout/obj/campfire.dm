@@ -1,8 +1,8 @@
 //Fallout 13 campfire directory
 
 /obj/structure/campfire
-	name = "костёр"
-	desc = "Тёплый и яркий. Что может быть лучше костра? Еда конечно."
+	name = "РєРѕСЃС‚С‘СЂ"
+	desc = "РўС‘РїР»С‹Р№ Рё СЏСЂРєРёР№. Р§С‚Рѕ РјРѕР¶РµС‚ Р±С‹С‚СЊ Р»СѓС‡С€Рµ РєРѕСЃС‚СЂР°? Р•РґР° РєРѕРЅРµС‡РЅРѕ."
 	eng_name = "campfire"
 	eng_desc = "A warm, bright, and hopeful fire source - when it's burning, of course."
 	icon = 'icons/fallout/objects/structures/campfire.dmi'
@@ -113,8 +113,8 @@
 	..()
 
 /obj/structure/campfire/extinguish()
-	name = "потухший костёр"
-	desc = "Потух и осталась лишь кучка пепла..."
+	name = "РїРѕС‚СѓС…С€РёР№ РєРѕСЃС‚С‘СЂ"
+	desc = "РџРѕС‚СѓС… Рё РѕСЃС‚Р°Р»Р°СЃСЊ Р»РёС€СЊ РєСѓС‡РєР° РїРµРїР»Р°..."
 	eng_name = "burned campfire"
 	eng_desc = "It has burned to ashes..."
 	icon_state = "campfire0"
@@ -126,8 +126,8 @@
 	update_icon()
 
 /obj/structure/burnbarrel
-	name = "бочка"
-	desc = "Теплый и яркий источник огня в бочке. Мило."
+	name = "Р±РѕС‡РєР°"
+	desc = "РўРµРїР»С‹Р№ Рё СЏСЂРєРёР№ РёСЃС‚РѕС‡РЅРёРє РѕРіРЅСЏ РІ Р±РѕС‡РєРµ. РњРёР»Рѕ."
 	eng_name = "burnbarrel"
 	eng_desc = "A warm, bright, and hopeful fire source - when it's burning, of course."
 	icon = 'icons/fallout/objects/structures/stationary.dmi'
@@ -234,8 +234,8 @@
 	..()
 
 /obj/structure/burnbarrel/extinguish()
-	name = "бочка"
-	desc = "Теплый и яркий источник огня в бочке. Мило."
+	name = "Р±РѕС‡РєР°"
+	desc = "РўРµРїР»С‹Р№ Рё СЏСЂРєРёР№ РёСЃС‚РѕС‡РЅРёРє РѕРіРЅСЏ РІ Р±РѕС‡РєРµ. РњРёР»Рѕ."
 	eng_name = "burnbarrel"
 	eng_desc = "A warm, bright, and hopeful fire source - when it's burning, of course."
 	icon_state = "burnbarrel"

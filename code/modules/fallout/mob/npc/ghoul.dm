@@ -1,8 +1,8 @@
 //Fallout 13 npc ghouls directory
 
 /mob/living/simple_animal/hostile/ghoul
-	name = "Дикий гуль"
-	desc = "Вы видели когда-нибудь живого гуля?<br>Гули, это практически мертвые люди, гниющие и плохо пахнущие, прямо как зомби."
+	name = "Р”РёРєРёР№ РіСѓР»СЊ"
+	desc = "Р’С‹ РІРёРґРµР»Рё РєРѕРіРґР°-РЅРёР±СѓРґСЊ Р¶РёРІРѕРіРѕ РіСѓР»СЏ?<br>Р“СѓР»Рё, СЌС‚Рѕ РїСЂР°РєС‚РёС‡РµСЃРєРё РјРµСЂС‚РІС‹Рµ Р»СЋРґРё, РіРЅРёСЋС‰РёРµ Рё РїР»РѕС…Рѕ РїР°С…РЅСѓС‰РёРµ, РїСЂСЏРјРѕ РєР°Рє Р·РѕРјР±Рё."
 	eng_name = "feral ghoul"
 	eng_desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -37,7 +37,7 @@
 	melee_damage_upper = 35
 	aggro_vision_range = 10
 	idle_vision_range = 7
-	attacktext = "царапает"
+	attacktext = "С†Р°СЂР°РїР°РµС‚"
 	eng_attacktext = "scratches"
 	attack_sound = "punch"
 
@@ -57,12 +57,12 @@
 	. = ..()
 	if(!.)
 		if(prob(0.1))
-			visible_message("<span class='notice'>Тело [src] разлагается!</span>")
+			visible_message("<span class='notice'>РўРµР»Рѕ [src] СЂР°Р·Р»Р°РіР°РµС‚СЃСЏ!</span>")
 			gib(FALSE, FALSE, FALSE, TRUE)
 
 /mob/living/simple_animal/hostile/ghoul/aggressive
-	name = "Дикий гуль"
-	desc = "Вы видели когда-нибудь живого очень голодного гуля?<br>Чтож, скорее всего, это последнее что вы видите теперь."
+	name = "Р”РёРєРёР№ РіСѓР»СЊ"
+	desc = "Р’С‹ РІРёРґРµР»Рё РєРѕРіРґР°-РЅРёР±СѓРґСЊ Р¶РёРІРѕРіРѕ РѕС‡РµРЅСЊ РіРѕР»РѕРґРЅРѕРіРѕ РіСѓР»СЏ?<br>Р§С‚РѕР¶, СЃРєРѕСЂРµРµ РІСЃРµРіРѕ, СЌС‚Рѕ РїРѕСЃР»РµРґРЅРµРµ С‡С‚Рѕ РІС‹ РІРёРґРёС‚Рµ С‚РµРїРµСЂСЊ."
 	eng_name = "feral ghoul"
 	eng_desc = "Have you ever seen a hungry ghoul before?<br>Similar to other feral ghouls, it's more aggressive and confident about the fact that you are the best food around.<br>It is missing a left arm."
 	icon_state = "angry_ghoul"
@@ -75,11 +75,11 @@
 	melee_damage_upper = 25
 	aggro_vision_range = 15
 	idle_vision_range = 10
-	attacktext = "жует"
+	attacktext = "Р¶СѓРµС‚"
 	eng_attacktext = "chomps"
 
 /mob/living/simple_animal/hostile/ghoul/glowing
-	name = "Светящийся гуль"
+	name = "РЎРІРµС‚СЏС‰РёР№СЃСЏ РіСѓР»СЊ"
 	desc = "Have you ever seen a glowing ghoul before?<br>Glowing ghouls are necrotic post-humans - rotting, zombie-like mutants, who are so irradiated they actually glow in the dark."
 	icon_state = "retro_glowghoul"
 	icon_living = "retro_glowghoul"
@@ -98,7 +98,7 @@
 	SSradiation.processing += src
 
 /mob/living/simple_animal/hostile/ghoul/soldier
-	name = "Дикий гуль"
+	name = "Р”РёРєРёР№ РіСѓР»СЊ"
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "soldier_ghoul"
 	icon_living = "soldier_ghoul"
@@ -108,7 +108,7 @@
 	health = 90
 
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
-	name = "Бронированный дикий гуль"
+	name = "Р‘СЂРѕРЅРёСЂРѕРІР°РЅРЅС‹Р№ РґРёРєРёР№ РіСѓР»СЊ"
 	eng_name = "armored feral ghoul"
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "soldier_ghoul_a"
@@ -119,8 +119,8 @@
 	health = 100
 
 /mob/living/simple_animal/hostile/ghoul/scorched
-	name = "Горелый"
-	desc = "В дополнение к сморщенной, обгоревшей коже, типичной для гулей, горелые обладают зелеными ультрацитовыми наростами по всему телу, пронизывающими их кожу нерегулярными узорами. Причины образования и предназначение этих ростков неизвестны, но, согласно предварительным исследованиям на местах, проводимым смотрительницей Убежища 76, горелые — это бывшие люди, которые заразились «чумой горелых», распространяемой зверожогами.."
+	name = "Р“РѕСЂРµР»С‹Р№"
+	desc = "Р’ РґРѕРїРѕР»РЅРµРЅРёРµ Рє СЃРјРѕСЂС‰РµРЅРЅРѕР№, РѕР±РіРѕСЂРµРІС€РµР№ РєРѕР¶Рµ, С‚РёРїРёС‡РЅРѕР№ РґР»СЏ РіСѓР»РµР№, РіРѕСЂРµР»С‹Рµ РѕР±Р»Р°РґР°СЋС‚ Р·РµР»РµРЅС‹РјРё СѓР»СЊС‚СЂР°С†РёС‚РѕРІС‹РјРё РЅР°СЂРѕСЃС‚Р°РјРё РїРѕ РІСЃРµРјСѓ С‚РµР»Сѓ, РїСЂРѕРЅРёР·С‹РІР°СЋС‰РёРјРё РёС… РєРѕР¶Сѓ РЅРµСЂРµРіСѓР»СЏСЂРЅС‹РјРё СѓР·РѕСЂР°РјРё. РџСЂРёС‡РёРЅС‹ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ Рё РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅРёРµ СЌС‚РёС… СЂРѕСЃС‚РєРѕРІ РЅРµРёР·РІРµСЃС‚РЅС‹, РЅРѕ, СЃРѕРіР»Р°СЃРЅРѕ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹Рј РёСЃСЃР»РµРґРѕРІР°РЅРёСЏРј РЅР° РјРµСЃС‚Р°С…, РїСЂРѕРІРѕРґРёРјС‹Рј СЃРјРѕС‚СЂРёС‚РµР»СЊРЅРёС†РµР№ РЈР±РµР¶РёС‰Р° 76, РіРѕСЂРµР»С‹Рµ вЂ” СЌС‚Рѕ Р±С‹РІС€РёРµ Р»СЋРґРё, РєРѕС‚РѕСЂС‹Рµ Р·Р°СЂР°Р·РёР»РёСЃСЊ В«С‡СѓРјРѕР№ РіРѕСЂРµР»С‹С…В», СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅСЏРµРјРѕР№ Р·РІРµСЂРѕР¶РѕРіР°РјРё.."
 	eng_name = "scorched"
 	eng_desc = "It's like ghoul, but... not ghoul. What is this?"
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -135,7 +135,7 @@
 	response_disarm = "pushes aside"
 	response_harm = "hits"
 	eng_attacktext = "sliced"
-	attacktext = "режет"
+	attacktext = "СЂРµР¶РµС‚"
 	move_to_delay = 4
 	respawn_time_of_mob = 500000000
 	maxHealth = 80
@@ -160,8 +160,8 @@
 	XP = 10
 
 /mob/living/simple_animal/hostile/ghoul/scorched/ranged
-	name = "Горелый"
-	desc = "В дополнение к сморщенной, обгоревшей коже, типичной для гулей, горелые обладают зелеными ультрацитовыми наростами по всему телу, пронизывающими их кожу нерегулярными узорами. Причины образования и предназначение этих ростков неизвестны, но, согласно предварительным исследованиям на местах, проводимым смотрительницей Убежища 76, горелые — это бывшие люди, которые заразились «чумой горелых», распространяемой зверожогами.."
+	name = "Р“РѕСЂРµР»С‹Р№"
+	desc = "Р’ РґРѕРїРѕР»РЅРµРЅРёРµ Рє СЃРјРѕСЂС‰РµРЅРЅРѕР№, РѕР±РіРѕСЂРµРІС€РµР№ РєРѕР¶Рµ, С‚РёРїРёС‡РЅРѕР№ РґР»СЏ РіСѓР»РµР№, РіРѕСЂРµР»С‹Рµ РѕР±Р»Р°РґР°СЋС‚ Р·РµР»РµРЅС‹РјРё СѓР»СЊС‚СЂР°С†РёС‚РѕРІС‹РјРё РЅР°СЂРѕСЃС‚Р°РјРё РїРѕ РІСЃРµРјСѓ С‚РµР»Сѓ, РїСЂРѕРЅРёР·С‹РІР°СЋС‰РёРјРё РёС… РєРѕР¶Сѓ РЅРµСЂРµРіСѓР»СЏСЂРЅС‹РјРё СѓР·РѕСЂР°РјРё. РџСЂРёС‡РёРЅС‹ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ Рё РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅРёРµ СЌС‚РёС… СЂРѕСЃС‚РєРѕРІ РЅРµРёР·РІРµСЃС‚РЅС‹, РЅРѕ, СЃРѕРіР»Р°СЃРЅРѕ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹Рј РёСЃСЃР»РµРґРѕРІР°РЅРёСЏРј РЅР° РјРµСЃС‚Р°С…, РїСЂРѕРІРѕРґРёРјС‹Рј СЃРјРѕС‚СЂРёС‚РµР»СЊРЅРёС†РµР№ РЈР±РµР¶РёС‰Р° 76, РіРѕСЂРµР»С‹Рµ вЂ” СЌС‚Рѕ Р±С‹РІС€РёРµ Р»СЋРґРё, РєРѕС‚РѕСЂС‹Рµ Р·Р°СЂР°Р·РёР»РёСЃСЊ В«С‡СѓРјРѕР№ РіРѕСЂРµР»С‹С…В», СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅСЏРµРјРѕР№ Р·РІРµСЂРѕР¶РѕРіР°РјРё.."
 	eng_name = "scorched"
 	eng_desc = "It's like ghoul, but now ghoul. Oh wait, it's... rifle?"
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -174,7 +174,7 @@
 	environment_smash = 0
 	response_help = "hugs"
 	response_disarm = "pushes aside"
-	response_harm = "бьёт"
+	response_harm = "Р±СЊС‘С‚"
 	move_to_delay = 4
 	respawn_time_of_mob = 500000000
 	maxHealth = 80
@@ -199,7 +199,7 @@
 	melee_damage_upper = 20
 	aggro_vision_range = 10
 	idle_vision_range = 7
-	attacktext = "царапает"
+	attacktext = "С†Р°СЂР°РїР°РµС‚"
 	eng_attacktext = "hits"
 	attack_sound = "punch"
 	XP = 15

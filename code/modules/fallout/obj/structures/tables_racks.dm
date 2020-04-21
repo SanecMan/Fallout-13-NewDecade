@@ -384,8 +384,8 @@
  */
 
 /obj/structure/table/optable
-	name = "операционный стол"
-	desc = "Стол, предназначенный для проведения операций."
+	name = "РѕРїРµСЂР°С†РёРѕРЅРЅС‹Р№ СЃС‚РѕР»"
+	desc = "РЎС‚РѕР», РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅРЅС‹Р№ РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РѕРїРµСЂР°С†РёР№."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "optable"
 	buildstack = /obj/item/stack/sheet/mineral/silver
@@ -428,8 +428,8 @@
  * Racks
  */
 /obj/structure/rack
-	name = "стеллаж"
-	desc = "обычный стеллаж для хранения всяких вещей."
+	name = "СЃС‚РµР»Р»Р°Р¶"
+	desc = "РѕР±С‹С‡РЅС‹Р№ СЃС‚РµР»Р»Р°Р¶ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РІСЃСЏРєРёС… РІРµС‰РµР№."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "rack"
 	density = 1
@@ -482,7 +482,7 @@
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	user.do_attack_animation(src, ATTACK_EFFECT_KICK)
-	user.visible_message("<span class='danger'>[user] пинает [src].</span>", null, null, COMBAT_MESSAGE_RANGE)
+	user.visible_message("<span class='danger'>[user] РїРёРЅР°РµС‚ [src].</span>", null, null, COMBAT_MESSAGE_RANGE)
 	take_damage(rand(4,8), BRUTE, "melee", 1)
 
 
@@ -513,8 +513,8 @@
  */
 
 /obj/item/weapon/rack_parts
-	name = "детали для сборки стеллажа"
-	desc = "Набор разнообразных деталей для сборки стеллажа."
+	name = "РґРµС‚Р°Р»Рё РґР»СЏ СЃР±РѕСЂРєРё СЃС‚РµР»Р»Р°Р¶Р°"
+	desc = "РќР°Р±РѕСЂ СЂР°Р·РЅРѕРѕР±СЂР°Р·РЅС‹С… РґРµС‚Р°Р»РµР№ РґР»СЏ СЃР±РѕСЂРєРё СЃС‚РµР»Р»Р°Р¶Р°."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "rack_parts"
 	flags = CONDUCT
@@ -528,12 +528,12 @@
 		. = ..()
 
 /obj/item/weapon/rack_parts/attack_self(mob/user)
-	to_chat(user, "<span class='notice'>Вы начинаете собирать стеллаж...</span>")
+	to_chat(user, "<span class='notice'>Р’С‹ РЅР°С‡РёРЅР°РµС‚Рµ СЃРѕР±РёСЂР°С‚СЊ СЃС‚РµР»Р»Р°Р¶...</span>")
 	if(do_after(user, 50, target = src, progress=TRUE))
 		if(!user.drop_item())
 			return
 		var/obj/structure/rack/R = new /obj/structure/rack(user.loc)
-		user.visible_message("<span class='notice'>[user] собирает [R].\
-			</span>", "<span class='notice'>Вы собрали [R].</span>")
+		user.visible_message("<span class='notice'>[user] СЃРѕР±РёСЂР°РµС‚ [R].\
+			</span>", "<span class='notice'>Р’С‹ СЃРѕР±СЂР°Р»Рё [R].</span>")
 		R.add_fingerprint(user)
 		qdel(src)

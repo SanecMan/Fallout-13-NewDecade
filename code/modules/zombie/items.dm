@@ -97,5 +97,5 @@
 		user.visible_message("<span class='suicide'>[user] appears to have found new spirit.</span>")
 		return SHAME
 	else
-		user.visible_message("<span class='suicide'>[user] перестает двигаться.</span>")
+		user.visible_message("<span class='suicide'>[user] РїРµСЂРµСЃС‚Р°РµС‚ РґРІРёРіР°С‚СЊСЃСЏ.</span>")
 		return OXYLOSS

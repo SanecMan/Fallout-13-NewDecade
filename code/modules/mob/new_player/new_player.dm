@@ -28,7 +28,7 @@
 	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
 	else
-		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Настройка персонажа</A></p>"
+		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>РќР°СЃС‚СЂРѕР№РєР° РїРµСЂСЃРѕРЅР°Р¶Р°</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
@@ -36,22 +36,22 @@
 				output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Un-Ready</a> \]</p>"
 				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 			else
-				output += "<p>\[ <b>Готов</b> | <a href='byond://?src=\ref[src];ready=0'>Не готов</a> \]</p>"
-				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
+				output += "<p>\[ <b>Р“РѕС‚РѕРІ</b> | <a href='byond://?src=\ref[src];ready=0'>РќРµ РіРѕС‚РѕРІ</a> \]</p>"
+				output += "<p><a href='byond://?src=\ref[src];show_content=1'>РљСѓРїРёС‚СЊ РєРѕРЅС‚РµРЅС‚!</a></p>"
 		else
 			if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Un-Ready</b> \]</p>"
 				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 			else
-				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Готов</a> | <b>Не готов</b> \]</p>"
-				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
+				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Р“РѕС‚РѕРІ</a> | <b>РќРµ РіРѕС‚РѕРІ</b> \]</p>"
+				output += "<p><a href='byond://?src=\ref[src];show_content=1'>РљСѓРїРёС‚СЊ РєРѕРЅС‚РµРЅС‚!</a></p>"
 	else
 		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
 			output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 		else
-			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Присоедениться!</A></p>"
-			output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
+			output += "<p><a href='byond://?src=\ref[src];late_join=1'>РџСЂРёСЃРѕРµРґРµРЅРёС‚СЊСЃСЏ!</A></p>"
+			output += "<p><a href='byond://?src=\ref[src];show_content=1'>РљСѓРїРёС‚СЊ РєРѕРЅС‚РµРЅС‚!</a></p>"
 
 
 /*
@@ -90,7 +90,7 @@
 		popup.open(0)
 		return
 	else
-		var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Добро пожаловать!</div>", 220, 265)
+		var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!</div>", 220, 265)
 		popup.set_window_options("can_close=0")
 		popup.set_content(output)
 		popup.open(0)
@@ -447,7 +447,7 @@
 	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
 		dat += "<div class='notice'>Round duration: [round(hours)]h [round(mins)]m</div>"
 	else
-		dat += "<div class='notice'>Длительность раунда: [round(hours)]ч [round(mins)]м</div>"
+		dat += "<div class='notice'>Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ СЂР°СѓРЅРґР°: [round(hours)]С‡ [round(mins)]Рј</div>"
 
 	var/available_job_count = 0
 	for(var/datum/job/job in SSjob.occupations)
@@ -458,7 +458,7 @@
 		dat += "<div class='clearBoth'>Choose your role:</div><br>"
 		dat += "<div class='jobs'><div class='jobsColumn'>"
 	else
-		dat += "<div class='clearBoth'>Выберите одну из доступных ролей:</div><br>"
+		dat += "<div class='clearBoth'>Р’С‹Р±РµСЂРёС‚Рµ РѕРґРЅСѓ РёР· РґРѕСЃС‚СѓРїРЅС‹С… СЂРѕР»РµР№:</div><br>"
 		dat += "<div class='jobs'><div class='jobsColumn'>"
 
 	var/job_count = 0
@@ -488,7 +488,7 @@
 		popup.set_content(dat)
 		popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
 	else
-		var/datum/browser/popup = new(src, "latechoices", "Выберите роль", 440, 500)
+		var/datum/browser/popup = new(src, "latechoices", "Р’С‹Р±РµСЂРёС‚Рµ СЂРѕР»СЊ", 440, 500)
 		popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 		popup.set_content(dat)
 		popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc

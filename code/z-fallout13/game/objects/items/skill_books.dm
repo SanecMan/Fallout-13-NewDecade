@@ -1,6 +1,6 @@
 /obj/item/skill_book
-	name = "довоенный учебник о силовой броне"
-	desc = "Время не пощадило эту книгу, её страницы и переплет крайне хрупки, а текст еле читаем. Кажется если вы прочтете её, она рассыплется в прах."
+	name = "РґРѕРІРѕРµРЅРЅС‹Р№ СѓС‡РµР±РЅРёРє Рѕ СЃРёР»РѕРІРѕР№ Р±СЂРѕРЅРµ"
+	desc = "Р’СЂРµРјСЏ РЅРµ РїРѕС‰Р°РґРёР»Рѕ СЌС‚Сѓ РєРЅРёРіСѓ, РµС‘ СЃС‚СЂР°РЅРёС†С‹ Рё РїРµСЂРµРїР»РµС‚ РєСЂР°Р№РЅРµ С…СЂСѓРїРєРё, Р° С‚РµРєСЃС‚ РµР»Рµ С‡РёС‚Р°РµРј. РљР°Р¶РµС‚СЃСЏ РµСЃР»Рё РІС‹ РїСЂРѕС‡С‚РµС‚Рµ РµС‘, РѕРЅР° СЂР°СЃСЃС‹РїР»РµС‚СЃСЏ РІ РїСЂР°С…."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "pa_manual"
 
@@ -13,22 +13,22 @@
 		return
 
 	if(user.special.getPoint("i") < intelligence_required)
-		to_chat(user, "<span class='warning'>Вы слишком тупы, чтобы понять хоть слово из \"[src]\"!</span>")
+		to_chat(user, "<span class='warning'>Р’С‹ СЃР»РёС€РєРѕРј С‚СѓРїС‹, С‡С‚РѕР±С‹ РїРѕРЅСЏС‚СЊ С…РѕС‚СЊ СЃР»РѕРІРѕ РёР· \"[src]\"!</span>")
 		return
 
 	spam_protect_time = 15 + world.time
-	to_chat(user, "<span class='notice'>Вы начали читать [src].</span>")
+	to_chat(user, "<span class='notice'>Р’С‹ РЅР°С‡Р°Р»Рё С‡РёС‚Р°С‚СЊ [src].</span>")
 	if(do_after(user, 30, target = user))
 		var/datum/perk_hidden/perk = new book_perk()
 		if(!user.perks.have(book_perk))
 			user.perks.add(book_perk)
-			to_chat(user, "<span class='green'>Теперь вы владеете навыком \"[perk.name]\"!")
+			to_chat(user, "<span class='green'>РўРµРїРµСЂСЊ РІС‹ РІР»Р°РґРµРµС‚Рµ РЅР°РІС‹РєРѕРј \"[perk.name]\"!")
 		else
-			to_chat(user, "<span class='warning'>Вы вы уже владеете навыком \"[perk.name]\"!")
-		to_chat(user, "<span class='warning'>[src] рассыпается в прах у вас на руках!</span>")
+			to_chat(user, "<span class='warning'>Р’С‹ РІС‹ СѓР¶Рµ РІР»Р°РґРµРµС‚Рµ РЅР°РІС‹РєРѕРј \"[perk.name]\"!")
+		to_chat(user, "<span class='warning'>[src] СЂР°СЃСЃС‹РїР°РµС‚СЃСЏ РІ РїСЂР°С… Сѓ РІР°СЃ РЅР° СЂСѓРєР°С…!</span>")
 
 		new /obj/effect/decal/cleanable/ash/large(get_turf(src))
 		qdel(perk)
 		qdel(src)
 
-///спасибо господи///
+///СЃРїР°СЃРёР±Рѕ РіРѕСЃРїРѕРґРё///

@@ -59,13 +59,13 @@
 	watching  -= eavesdropping
 
 	var/rendered
-	whispers = critical ? "прошептал что-то издав последний вздох." : "что-то шепчет."
+	whispers = critical ? "РїСЂРѕС€РµРїС‚Р°Р» С‡С‚Рѕ-С‚Рѕ РёР·РґР°РІ РїРѕСЃР»РµРґРЅРёР№ РІР·РґРѕС…." : "С‡С‚Рѕ-С‚Рѕ С€РµРїС‡РµС‚."
 	rendered = "<span class='game say'><span class='name'>[src.name]</span> [whispers]</span>"
 	for(var/mob/M in watching)
 		M.show_message(rendered, 2)
 
 	var/spans = list(SPAN_ITALICS)
-	whispers = critical ? "прошептал что-то издав последний вздох." : "шепчет"
+	whispers = critical ? "РїСЂРѕС€РµРїС‚Р°Р» С‡С‚Рѕ-С‚Рѕ РёР·РґР°РІ РїРѕСЃР»РµРґРЅРёР№ РІР·РґРѕС…." : "С€РµРїС‡РµС‚"
 	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(message, spans)]\"</span></span>"
 
 	for(var/atom/movable/AM in listening)

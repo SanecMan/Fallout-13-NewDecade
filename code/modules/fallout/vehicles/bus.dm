@@ -1,8 +1,8 @@
 //Fallout 13 ambush bus directory
 
 /obj/structure/closet/bus
-	name = "старый остов автобуса"
-	desc = "Древний автобус, принадлежавшей Городской Сети Линейных Автобусов.<br>Спустя целые декады с последнего пользования, внутри он выглядит еще сносно."
+	name = "СЃС‚Р°СЂС‹Р№ РѕСЃС‚РѕРІ Р°РІС‚РѕР±СѓСЃР°"
+	desc = "Р”СЂРµРІРЅРёР№ Р°РІС‚РѕР±СѓСЃ, РїСЂРёРЅР°РґР»РµР¶Р°РІС€РµР№ Р“РѕСЂРѕРґСЃРєРѕР№ РЎРµС‚Рё Р›РёРЅРµР№РЅС‹С… РђРІС‚РѕР±СѓСЃРѕРІ.<br>РЎРїСѓСЃС‚СЏ С†РµР»С‹Рµ РґРµРєР°РґС‹ СЃ РїРѕСЃР»РµРґРЅРµРіРѕ РїРѕР»СЊР·РѕРІР°РЅРёСЏ, РІРЅСѓС‚СЂРё РѕРЅ РІС‹РіР»СЏРґРёС‚ РµС‰Рµ СЃРЅРѕСЃРЅРѕ."
 	eng_name = "\proper ancient City Liner bus"
 	eng_desc = "A derelict bus that belonged to a City Liner network.<br>Despite all the decades it has spent out in the open, the exterior looks more or less intact."
 	icon_state = "bus"
@@ -84,8 +84,8 @@
 	playsound(src, 'sound/effects/meteorimpact.ogg', rand(50,100), 1)
 
 /obj/structure/bus_door
-	name = "сломанная дверь автобуса"
-	desc = "Когда-то, это было частью автобуса."
+	name = "СЃР»РѕРјР°РЅРЅР°СЏ РґРІРµСЂСЊ Р°РІС‚РѕР±СѓСЃР°"
+	desc = "РљРѕРіРґР°-С‚Рѕ, СЌС‚Рѕ Р±С‹Р»Рѕ С‡Р°СЃС‚СЊСЋ Р°РІС‚РѕР±СѓСЃР°."
 	eng_name = "broken bus door"
 	eng_desc = "Long time ago, it was part of the bus."
 	icon = 'icons/fallout/objects/structures/trash.dmi'

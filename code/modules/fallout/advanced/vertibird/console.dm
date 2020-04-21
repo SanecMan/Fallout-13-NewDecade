@@ -1,6 +1,6 @@
 /obj/machinery/computer/vertibird_console
-	name = "пульт управления винтокрылом"
-	desc = "Используется для управления Винтокрылом."
+	name = "РїСѓР»СЊС‚ СѓРїСЂР°РІР»РµРЅРёСЏ РІРёРЅС‚РѕРєСЂС‹Р»РѕРј"
+	desc = "РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ Р’РёРЅС‚РѕРєСЂС‹Р»РѕРј."
 	eng_name = "Vertibird control"
 	eng_desc = "This can be used for vertibird control."
 	icon = 'icons/fallout/machines/terminals.dmi'

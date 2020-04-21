@@ -119,7 +119,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	//Loading a disk into it.
 	if(istype(D, /obj/item/weapon/disk))
 		if(t_disk || d_disk)
-			to_chat(user, "Диск уже вставлен в этот аппарат.")
+			to_chat(user, "Р”РёСЃРє СѓР¶Рµ РІСЃС‚Р°РІР»РµРЅ РІ СЌС‚РѕС‚ Р°РїРїР°СЂР°С‚.")
 			return
 
 		if(istype(D, /obj/item/weapon/disk/tech_disk))
@@ -132,7 +132,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		if(!user.drop_item())
 			return
 		D.forceMove(src)
-		to_chat(user, "<span class='notice'>Вы вставили диск в аппарат!</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РІСЃС‚Р°РІРёР»Рё РґРёСЃРє РІ Р°РїРїР°СЂР°С‚!</span>")
 	else if(!(linked_destroy && linked_destroy.busy) && !(linked_lathe && linked_lathe.busy) && !(linked_imprinter && linked_imprinter.busy))
 		. = ..()
 	updateUsrDialog()

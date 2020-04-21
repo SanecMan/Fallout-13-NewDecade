@@ -9,7 +9,7 @@
 	status = "gangleader"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "íèêîìó"
+	supervisors = "Ğ½Ğ¸ĞºĞ¾Ğ¼Ñƒ"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
@@ -173,7 +173,7 @@
 
 /datum/job/prisoner
 	title = "NUCLEAR WINTER PRISONER"
-	desc = "ÊĞÎÂÜ ÓÁÈÉÑÒÂÀ ÀÄ È ĞÀÇÂĞÀÒ!."
+	desc = "ĞšĞ ĞĞ’Ğ¬ Ğ£Ğ‘Ğ˜Ğ™Ğ¡Ğ¢Ğ’Ğ ĞĞ” Ğ˜ Ğ ĞĞ—Ğ’Ğ ĞĞ¢!."
 	flag = RAIDER
 	department_head = list("gangleader")
 	department_flag = WASTELAND

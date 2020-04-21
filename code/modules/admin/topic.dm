@@ -1519,7 +1519,7 @@
 			return
 
 		L.revive(full_heal = 1, admin_revive = 1)
-		message_admins("<span class='danger'>Администратор [key_name_admin(usr)] излечил / оживил [key_name_admin(L)]!</span>")
+		message_admins("<span class='danger'>РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ [key_name_admin(usr)] РёР·Р»РµС‡РёР» / РѕР¶РёРІРёР» [key_name_admin(L)]!</span>")
 		log_admin("[key_name(usr)] healed / Revived [key_name(L)].")
 
 	else if(href_list["makeai"])
@@ -1660,7 +1660,7 @@
 
 		//Job + antagonist
 		if(M.mind)
-			special_role_description = "Роль: <b>[M.mind.assigned_role]</b>; Антагонист: <font color='red'><b>[M.mind.special_role]</b></font>"
+			special_role_description = "Р РѕР»СЊ: <b>[M.mind.assigned_role]</b>; РђРЅС‚Р°РіРѕРЅРёСЃС‚: <font color='red'><b>[M.mind.special_role]</b></font>"
 		else
 			special_role_description = "Role: <i>Mind datum missing</i> Antagonist: <i>Mind datum missing</i>"
 
@@ -1687,10 +1687,10 @@
 			else
 				gender_description = "<font color='red'><b>[M.gender]</b></font>"
 
-		to_chat(src.owner, "<b>Информация об: [M.name]:</b> ")
-		to_chat(src.owner, "Тип моба = [M.type]; Пол = [gender_description] Урон = [health_description]")
-		to_chat(src.owner, "Имя = <b>[M.name]</b>; Настоящее имя = [M.real_name]; Имя разума = [M.mind?"[M.mind.name]":""]; Никнейм = <b>[M.key]</b>;")
-		to_chat(src.owner, "Местоположение = [location_description];")
+		to_chat(src.owner, "<b>РРЅС„РѕСЂРјР°С†РёСЏ РѕР±: [M.name]:</b> ")
+		to_chat(src.owner, "РўРёРї РјРѕР±Р° = [M.type]; РџРѕР» = [gender_description] РЈСЂРѕРЅ = [health_description]")
+		to_chat(src.owner, "РРјСЏ = <b>[M.name]</b>; РќР°СЃС‚РѕСЏС‰РµРµ РёРјСЏ = [M.real_name]; РРјСЏ СЂР°Р·СѓРјР° = [M.mind?"[M.mind.name]":""]; РќРёРєРЅРµР№Рј = <b>[M.key]</b>;")
+		to_chat(src.owner, "РњРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ = [location_description];")
 		to_chat(src.owner, "[special_role_description]")
 		to_chat(src.owner, "(<a href='?priv_msg=[M.ckey]'>PM</a>) (<A HREF='?src=\ref[src];adminplayeropts=\ref[M]'>PP</A>) (<A HREF='?_src_=vars;Vars=\ref[M]'>VV</A>) (<A HREF='?src=\ref[src];subtlemessage=\ref[M]'>SM</A>) (<A HREF='?src=\ref[src];adminplayerobservefollow=\ref[M]'>FLW</A>) (<A HREF='?src=\ref[src];secrets=check_antagonist'>CA</A>)")
 
@@ -1766,9 +1766,9 @@
 			return
 
 		log_admin("[key_name(H)] got their cookie, spawned by [key_name(src.owner)].")
-		message_admins("[key_name(H)] получает печеньку, выданную [key_name(src.owner)].")
+		message_admins("[key_name(H)] РїРѕР»СѓС‡Р°РµС‚ РїРµС‡РµРЅСЊРєСѓ, РІС‹РґР°РЅРЅСѓСЋ [key_name(src.owner)].")
 		feedback_inc("admin_cookies_spawned",1)
-		to_chat(H, "<span class='adminnotice'>Ваши мольбы услышаны!! Вкусите эту <b>ПЕЧЕНЬКУ</b>!</span>")
+		to_chat(H, "<span class='adminnotice'>Р’Р°С€Рё РјРѕР»СЊР±С‹ СѓСЃР»С‹С€Р°РЅС‹!! Р’РєСѓСЃРёС‚Рµ СЌС‚Сѓ <b>РџР•Р§Р•РќР¬РљРЈ</b>!</span>")
 		to_chat(H, 'sound/effects/pray_chaplain.ogg')
 
 	else if(href_list["BlueSpaceArtillery"])

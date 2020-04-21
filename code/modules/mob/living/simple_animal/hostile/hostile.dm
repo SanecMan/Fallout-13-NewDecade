@@ -30,7 +30,7 @@
 	/obj/structure/fence,
 	/obj/structure/simple_door) //turned into a typecache in New()
 
-	var/ranged_message = "стреляет" //Fluff text for ranged mobs
+	var/ranged_message = "СЃС‚СЂРµР»СЏРµС‚" //Fluff text for ranged mobs
 	var/ranged_cooldown = 0 //What the current cooldown on ranged attacks is, generally world.time + ranged_cooldown_time
 	var/ranged_cooldown_time = 30 //How long, in deciseconds, the cooldown of ranged attacks is
 	var/ranged_ignores_vision = FALSE //if it'll fire ranged attacks even if it lacks vision on its target, only works with environment smash
@@ -345,7 +345,7 @@
 					continue
 				if(faction_check(L) && !attack_same)
 					return
-	visible_message("<span class='danger'><b>[src]</b> [ranged_message] в [A]!</span>")
+	visible_message("<span class='danger'><b>[src]</b> [ranged_message] РІ [A]!</span>")
 
 	if(rapid)
 		spawn(1)

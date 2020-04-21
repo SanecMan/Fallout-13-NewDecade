@@ -13,17 +13,17 @@
 	var/output = {"<!DOCTYPE html>
 <html><meta charset=UTF-8>
 <head>
-<title>Панель Прав</title>
+<title>РџР°РЅРµР»СЊ РџСЂР°РІ</title>
 <script type='text/javascript' src='search.js'></script>
 <link rel='stylesheet' type='text/css' href='panels.css'>
 </head>
 <body onload='selectTextField();updateSearch();'>
 <div id='main'><table id='searchable' cellspacing='0'>
 <tr class='title'>
-<th style='width:125px;text-align:right;'>СИКЕЙ <a class='small' href='?src=\ref[src];editrights=add'>\[+\]</a></th>
-<th style='width:125px;'>РАНГ</th>
-<th style='width:375px;'>ПРАВА</th>
-<th style='width:100%;'>VERB-ПЕРЕЗАПИСЬ</th>
+<th style='width:125px;text-align:right;'>РЎРРљР•Р™ <a class='small' href='?src=\ref[src];editrights=add'>\[+\]</a></th>
+<th style='width:125px;'>Р РђРќР“</th>
+<th style='width:375px;'>РџР РђР’Рђ</th>
+<th style='width:100%;'>VERB-РџР•Р Р•Р—РђРџРРЎР¬</th>
 </tr>
 "}
 
@@ -91,7 +91,7 @@
 		insert_query.Execute()
 		var/DBQuery/log_query = dbcon.NewQuery("INSERT INTO `[format_table_name("admin_log")]` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Added new admin [adm_ckey] to rank [new_rank]');")
 		log_query.Execute()
-		to_chat(usr, "<span class='adminnotice'>Добавлен новый администратор.</span>")
+		to_chat(usr, "<span class='adminnotice'>Р”РѕР±Р°РІР»РµРЅ РЅРѕРІС‹Р№ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ.</span>")
 	else
 		if(!isnull(admin_id) && isnum(admin_id))
 			var/DBQuery/insert_query = dbcon.NewQuery("UPDATE `[format_table_name("admin")]` SET rank = '[new_rank]' WHERE id = [admin_id]")

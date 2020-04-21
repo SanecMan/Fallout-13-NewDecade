@@ -54,41 +54,41 @@
 
 
 /obj/item/clothing/suit/armor/f13/power_armor/verb/onOffPA()
-	set name = "Вкл./Выкл. Силовую броню"
-	set category = "Силовая Броня"
+	set name = "Р’РєР»./Р’С‹РєР». РЎРёР»РѕРІСѓСЋ Р±СЂРѕРЅСЋ"
+	set category = "РЎРёР»РѕРІР°СЏ Р‘СЂРѕРЅСЏ"
 	set src in view(1)
 
 	if(istype(usr, /mob/living/carbon))
 		var/mob/living/carbon/C = usr
 		if(C.special.getPoint("i") < 6 && !C.perks.have(/datum/perk_hidden/powerArmor))
-			to_chat(usr, "<span class='boldwarning'>Три кнопки на силовой броне вгоняют вас в ступор, вы нажимаете одну из кнопок и ничего не происходит..</span>")
+			to_chat(usr, "<span class='boldwarning'>РўСЂРё РєРЅРѕРїРєРё РЅР° СЃРёР»РѕРІРѕР№ Р±СЂРѕРЅРµ РІРіРѕРЅСЏСЋС‚ РІР°СЃ РІ СЃС‚СѓРїРѕСЂ, РІС‹ РЅР°Р¶РёРјР°РµС‚Рµ РѕРґРЅСѓ РёР· РєРЅРѕРїРѕРє Рё РЅРёС‡РµРіРѕ РЅРµ РїСЂРѕРёСЃС…РѕРґРёС‚..</span>")
 			playsound(src.loc, 'sound/f13items/lighter_off.ogg', 40, 0, 0)
 			return
 
 	if(!power_cell || power_cell.charge <= 0)
-		to_chat(usr, "<span class='userdanger'>Питание отсутствует.</span>")
+		to_chat(usr, "<span class='userdanger'>РџРёС‚Р°РЅРёРµ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚.</span>")
 		return
 
 	enabled = !enabled
 	if(enabled)
-		to_chat(usr, "<span class='green'>Силовая броня активирована.</span>")
+		to_chat(usr, "<span class='green'>РЎРёР»РѕРІР°СЏ Р±СЂРѕРЅСЏ Р°РєС‚РёРІРёСЂРѕРІР°РЅР°.</span>")
 		powerControl()
 	else
-		to_chat(usr, "<span class='notice'>Силовая броня деактивирована.</span>")
+		to_chat(usr, "<span class='notice'>РЎРёР»РѕРІР°СЏ Р±СЂРѕРЅСЏ РґРµР°РєС‚РёРІРёСЂРѕРІР°РЅР°.</span>")
 
 /obj/item/clothing/suit/armor/f13/power_armor/verb/ejectInsertCell()
-	set name = "Изъять/Вставить Ядерную ячейку"
-	set category = "Силовая Броня"
+	set name = "РР·СЉСЏС‚СЊ/Р’СЃС‚Р°РІРёС‚СЊ РЇРґРµСЂРЅСѓСЋ СЏС‡РµР№РєСѓ"
+	set category = "РЎРёР»РѕРІР°СЏ Р‘СЂРѕРЅСЏ"
 	set src in view(1)
 
 	if(istype(usr, /mob/living/carbon))
 		var/mob/living/carbon/C = usr
 		if(C.special.getPoint("i") < 3 && !C.perks.have(/datum/perk_hidden/powerArmor))
-			to_chat(usr, "<span class='boldwarning'>Эта дырка для батарейка вы-ыглядеть СЛИШКАМ сложна.</span>")
+			to_chat(usr, "<span class='boldwarning'>Р­С‚Р° РґС‹СЂРєР° РґР»СЏ Р±Р°С‚Р°СЂРµР№РєР° РІС‹-С‹РіР»СЏРґРµС‚СЊ РЎР›РРЁРљРђРњ СЃР»РѕР¶РЅР°.</span>")
 			playsound(src.loc, 'sound/f13effects/bruh.ogg', 40, 0, 0)
 			return
 	else
-		to_chat(usr, "Иди нахуй, животное")
+		to_chat(usr, "РРґРё РЅР°С…СѓР№, Р¶РёРІРѕС‚РЅРѕРµ")
 		return
 
 	if(!power_cell)
@@ -97,13 +97,13 @@
 			usr.drop_item()
 			power_cell.forceMove(src)
 			powerControl()
-			to_chat(usr, "<span class='notice'>Вы подключили [power_cell.name] к [src].</span>")
+			to_chat(usr, "<span class='notice'>Р’С‹ РїРѕРґРєР»СЋС‡РёР»Рё [power_cell.name] Рє [src].</span>")
 			playsound(src.loc, 'sound/weapons/selector.ogg', 40, 0, 0)
 			return
-		to_chat(usr, "<span class='warning'>Ядерный блок отсутствует!</span>")
+		to_chat(usr, "<span class='warning'>РЇРґРµСЂРЅС‹Р№ Р±Р»РѕРє РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚!</span>")
 		return
 	else
-		to_chat(usr, "<span class='green'>Вы извлекли ядерный блок из [src].</span>")
+		to_chat(usr, "<span class='green'>Р’С‹ РёР·РІР»РµРєР»Рё СЏРґРµСЂРЅС‹Р№ Р±Р»РѕРє РёР· [src].</span>")
 		playsound(src.loc, 'sound/weapons/selector.ogg', 40, 0, 0)
 		usr.put_in_hands(power_cell)
 		power_cell = null
@@ -134,7 +134,7 @@
 	if(!power_cell || !power_cell.use(current_power_usage) || !enabled)
 		enabled = FALSE
 		STOP_PROCESSING(SSobj, src)
-		to_chat(usr, "<span class='boldwarning'>[src] отключилась!.</span>")
+		to_chat(usr, "<span class='boldwarning'>[src] РѕС‚РєР»СЋС‡РёР»Р°СЃСЊ!.</span>")
 
 
 /obj/item/clothing/suit/armor/f13/power_armor/sierra

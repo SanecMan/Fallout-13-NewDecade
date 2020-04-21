@@ -1,7 +1,7 @@
 //Fallout 13 general drinks directory
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/sunset //Howdy, pardner!
-	name = "Сансет Саспарилла"
+	name = "РЎР°РЅСЃРµС‚ РЎР°СЃРїР°СЂРёР»Р»Р°"
 	desc = "A traditional radiation-free carbonated beverage of a root-beer-type.<br>Tastes like sunshine!"
 	icon_state = "sunset"
 	item_state = "beer"
@@ -11,7 +11,7 @@
 	price = 50
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola //It's actually a coffee...
-	name = "Ядер-Кола"
+	name = "РЇРґРµСЂ-РљРѕР»Р°"
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state."
 	icon_state = "cola_full"
 	item_state = "beer"
@@ -30,7 +30,7 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/oldnukacola //It's actually a coffee...
-	name = "Ядер-Кола"
+	name = "РЇРґРµСЂ-РљРѕР»Р°"
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state."
 	icon_state = "nukacola"
 	item_state = "beer"
@@ -50,7 +50,7 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/fusioncola //It's actually a coffee...
-	name = "Ядер-Кола \"сплав\""
+	name = "РЇРґРµСЂ-РљРѕР»Р° \"СЃРїР»Р°РІ\""
 	desc = "Phil, the Nuka-Cola dude, had the thankless job of riding around the Wasteland with his bike and refilling all of the Nuka-Cola machines that littered it. It was a tradition passed down (rather stupidly) from generation to generation. Phil was not impressed and doesn't like Nuka-Cola that much. It is rumored that he had something called Fusion Nuka-Cola, a unique, unknown taste which was created by fusing together some Nuka-Cola dregs into a concentrated essence."
 	icon_state = "fusioncola"
 	item_state = "beer"
@@ -70,7 +70,7 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cherrycola //It's actually a coffee...
-	name = "Вишневая Ядер-Кола"
+	name = "Р’РёС€РЅРµРІР°СЏ РЇРґРµСЂ-РљРѕР»Р°"
 	desc = "Cherry Nuka-Cola is a variation of regular Nuka-Cola. After it was introduced, it turned out that nobody liked the taste. This resulted in a marketing disaster for the company, which quickly attempted to save the brand by introducing the Classic Nuka-Cola, tasting exactly like the original, but in a new bottle. The story of its introduction, rejection, and replacement by Classic Nuka-Cola mimics that of New Coke."
 	icon_state = "cherrycola"
 	item_state = "beer"
@@ -90,7 +90,7 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/yellowcola //It's actually a coffee...
-	name = "Желтая Ядер-Кола"
+	name = "Р–РµР»С‚Р°СЏ РЇРґРµСЂ-РљРѕР»Р°"
 	desc = "Yellow Nuka-Cola is a variation of regular Nuka-Cola, both yellow in color and with an interesting smell. In Chicago, during the Brotherhood of Steel's reign, there were reports of this strange yellow Nuka-Cola. However, it was quickly identified as a substance designed by a mad naked man who made water. Considering this, and the fact that it's poisonous to anyone naive enough to actually drink it, it is apparent that the so-called cola is in fact a generous helping of urine."
 	icon_state = "yellowcola"
 	item_state = "beer"
@@ -110,7 +110,7 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/victorycola //It's actually a coffee...
-	name = "Ядер-Кола Виктория"
+	name = "РЇРґРµСЂ-РљРѕР»Р° Р’РёРєС‚РѕСЂРёСЏ"
 	desc = "Nuka-Cola Victory is another flavor of Nuka-Cola. It is colored orange, giving it a distinct look, much like Nuka-Cola Quantum."
 	icon_state = "victorycola"
 	item_state = "beer"
@@ -130,7 +130,7 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/quantumcola //It's actually a coffee...
-	name = "Квантовая Ядер-Кола"
+	name = "РљРІР°РЅС‚РѕРІР°СЏ РЇРґРµСЂ-РљРѕР»Р°"
 	desc = "In 2077, a new version called Nuka-Cola Quantum was introduced. According to the advertisements, it had twice the calories, twice the carbohydrates, twice the caffeine and twice the taste. To make it stand out more on the shelves and to give it an extra kick, the Quantum included a mild radioactive strontium isotope (and an eighteenth fruit flavor - pomegranate). The effect was a drink that not only boosted your energy, but also glowed with a bright blue light. While no ill effects were recorded by the Food and Drug Administration, the isotope also caused the drinker's urine to glow for almost a week."
 	icon_state = "quantumcola"
 	item_state = "beer"
@@ -151,7 +151,7 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/quartzcola //It's actually a coffee...
-	name = "Ядер-Кола Кварц"
+	name = "РЇРґРµСЂ-РљРѕР»Р° РљРІР°СЂС†"
 	desc = "Nuka-Cola Quartz is a flavor of Nuka-Cola. In a similar sort of situation to Nuka-Cola Quantum. It is a clear drink with a white tint and glow. This version of the soft drink also gives the drinker low-light vision, much like the effects given after taking Cateye. The Nuka-Cola Corporation had a trademark battle with Vim! Pop Incorporated over the Quartz trademark, since Vim was also selling a drink known as Vim Quartz. Nuka-Cola won the battle."
 	icon_state = "quartzcola"
 	item_state = "beer"
@@ -173,8 +173,8 @@
 
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vim //It's actually a coffee...
-	name = "Вим!"
-	desc = "Освежающий лимонад, не настолько популярный, как Ядер-кола. Производится с 1931 года Корпорацией «Вим!»"
+	name = "Р’РёРј!"
+	desc = "РћСЃРІРµР¶Р°СЋС‰РёР№ Р»РёРјРѕРЅР°Рґ, РЅРµ РЅР°СЃС‚РѕР»СЊРєРѕ РїРѕРїСѓР»СЏСЂРЅС‹Р№, РєР°Рє РЇРґРµСЂ-РєРѕР»Р°. РџСЂРѕРёР·РІРѕРґРёС‚СЃСЏ СЃ 1931 РіРѕРґР° РљРѕСЂРїРѕСЂР°С†РёРµР№ В«Р’РёРј!В»"
 	icon_state = "vim"
 	item_state = "beer"
 	materials = list(MAT_GLASS=500)
@@ -193,8 +193,8 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vimquartz //It's actually a coffee...
-	name = "Вим! Кварц"
-	desc = "Напиток светло-жёлтого цвета, светящийся в темноте, обладает более сладким вкусом, вероятно потому, что в состав входят жевательная резинка и морковь."
+	name = "Р’РёРј! РљРІР°СЂС†"
+	desc = "РќР°РїРёС‚РѕРє СЃРІРµС‚Р»Рѕ-Р¶С‘Р»С‚РѕРіРѕ С†РІРµС‚Р°, СЃРІРµС‚СЏС‰РёР№СЃСЏ РІ С‚РµРјРЅРѕС‚Рµ, РѕР±Р»Р°РґР°РµС‚ Р±РѕР»РµРµ СЃР»Р°РґРєРёРј РІРєСѓСЃРѕРј, РІРµСЂРѕСЏС‚РЅРѕ РїРѕС‚РѕРјСѓ, С‡С‚Рѕ РІ СЃРѕСЃС‚Р°РІ РІС…РѕРґСЏС‚ Р¶РµРІР°С‚РµР»СЊРЅР°СЏ СЂРµР·РёРЅРєР° Рё РјРѕСЂРєРѕРІСЊ."
 	icon_state = "vimquartz"
 	item_state = "beer"
 	materials = list(MAT_GLASS=500)
@@ -214,8 +214,8 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vimnuclear //It's actually a coffee...
-	name = "Вим! Капитанский коктейль"
-	desc = "Ужасный рыбный привкус, из чего он вообще сделан?"
+	name = "Р’РёРј! РљР°РїРёС‚Р°РЅСЃРєРёР№ РєРѕРєС‚РµР№Р»СЊ"
+	desc = "РЈР¶Р°СЃРЅС‹Р№ СЂС‹Р±РЅС‹Р№ РїСЂРёРІРєСѓСЃ, РёР· С‡РµРіРѕ РѕРЅ РІРѕРѕР±С‰Рµ СЃРґРµР»Р°РЅ?"
 	icon_state = "vimnuclear"
 	item_state = "beer"
 	materials = list(MAT_GLASS=500)
@@ -235,8 +235,8 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vimdreams //It's actually a coffee...
-	name = "Вим! Свежесть"
-	desc = "Одна из разновидностей «Вим!». Обладает освежающим яблочным вкусом благодаря входящим в состав ингредиентам. Отличается от «Вим!» этикеткой зелёного цвета. Напиток желто-зелёного цвета, светящийся в темноте."
+	name = "Р’РёРј! РЎРІРµР¶РµСЃС‚СЊ"
+	desc = "РћРґРЅР° РёР· СЂР°Р·РЅРѕРІРёРґРЅРѕСЃС‚РµР№ В«Р’РёРј!В». РћР±Р»Р°РґР°РµС‚ РѕСЃРІРµР¶Р°СЋС‰РёРј СЏР±Р»РѕС‡РЅС‹Рј РІРєСѓСЃРѕРј Р±Р»Р°РіРѕРґР°СЂСЏ РІС…РѕРґСЏС‰РёРј РІ СЃРѕСЃС‚Р°РІ РёРЅРіСЂРµРґРёРµРЅС‚Р°Рј. РћС‚Р»РёС‡Р°РµС‚СЃСЏ РѕС‚ В«Р’РёРј!В» СЌС‚РёРєРµС‚РєРѕР№ Р·РµР»С‘РЅРѕРіРѕ С†РІРµС‚Р°. РќР°РїРёС‚РѕРє Р¶РµР»С‚Рѕ-Р·РµР»С‘РЅРѕРіРѕ С†РІРµС‚Р°, СЃРІРµС‚СЏС‰РёР№СЃСЏ РІ С‚РµРјРЅРѕС‚Рµ."
 	icon_state = "vimdreams"
 	item_state = "beer"
 	materials = list(MAT_GLASS=500)
@@ -255,7 +255,7 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vimdark //It's actually a coffee...
-	name = "Вим! Тёмный"
+	name = "Р’РёРј! РўС‘РјРЅС‹Р№"
 	desc = "Vim Dark looks the same as regular Vim but with a black color and a cofee wedge design on the label. Rarer than Vim, it can be found in Vim machines."
 	icon_state = "vimdark"
 	item_state = "beer"
@@ -289,24 +289,24 @@
 	self_weight = 0.3
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/survival
-	name = "фляга"
+	name = "С„Р»СЏРіР°"
 	desc = "A metallic liquid container. Essential for survival out in the wastes."
 	list_reagents = list("water" = 40, "silver_sulfadiazine" = 10)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vault13
-	name = "фляга убежища 13"
+	name = "С„Р»СЏРіР° СѓР±РµР¶РёС‰Р° 13"
 	desc = "Take a sip from your trusty Vault 13 canteen."
 	icon_state = "flask13"
 	list_reagents = list("water" = 30, "silver_sulfadiazine" = 10, "charcoal" = 20)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vault113
-	name = "фляга убежища 113"
+	name = "С„Р»СЏРіР° СѓР±РµР¶РёС‰Р° 113"
 	desc = "See this large yellow number? It means it's a Vault 113 canteen. Never forget."
 	icon_state = "flask113"
 	list_reagents = list("water" = 30, "radium" = 10)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/ss13
-	name = "фляга"
+	name = "С„Р»СЏРіР°"
 	desc = "A strange metal flask with some meaningless letters engraved on the side."
 	icon_state = "flaskss13"
 	list_reagents = list("tricordrazine" = 40, "adminordrazine" = 10)

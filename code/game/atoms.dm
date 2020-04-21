@@ -201,12 +201,12 @@
 			f_name = "some "
 		else
 			f_name = ""
-		f_name += "<span class='danger'>в крови</span> [name]!"
+		f_name += "<span class='danger'>РІ РєСЂРѕРІРё</span> [name]!"
 
 	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
 		to_chat(user, "[bicon(src)] This is [eng_f_name]")
 	else
-		to_chat(user, "[bicon(src)] Это [f_name]")
+		to_chat(user, "[bicon(src)] Р­С‚Рѕ [f_name]")
 
 	if(desc)
 		if(eng_desc && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
@@ -217,18 +217,18 @@
 //	to_chat(user, "[name]: Dn:[density] dir:[dir] cont:[contents] icon:[icon] is:[icon_state] loc:[loc]")
 
 	if(reagents && (is_open_container() || is_transparent())) //is_open_container() isn't really the right proc for this, but w/e
-		to_chat(user, "Содержит:")
+		to_chat(user, "РЎРѕРґРµСЂР¶РёС‚:")
 		if(reagents.reagent_list.len)
 			if(user.can_see_reagents()) //Show each individual reagent
 				for(var/datum/reagent/R in reagents.reagent_list)
-					to_chat(user, "[R.volume] едениц [R.name]")
+					to_chat(user, "[R.volume] РµРґРµРЅРёС† [R.name]")
 			else //Otherwise, just show the total volume
 				var/total_volume = 0
 				for(var/datum/reagent/R in reagents.reagent_list)
 					total_volume += R.volume
-				to_chat(user, "[total_volume] едениц разных реагентов")
+				to_chat(user, "[total_volume] РµРґРµРЅРёС† СЂР°Р·РЅС‹С… СЂРµР°РіРµРЅС‚РѕРІ")
 		else
-			to_chat(user, "Ничего.")
+			to_chat(user, "РќРёС‡РµРіРѕ.")
 
 /atom/proc/relaymove()
 	return

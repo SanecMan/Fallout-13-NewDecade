@@ -105,8 +105,8 @@
 			target = pick(possible_targets)
 		discharge = 1
 	if(!discharge)
-		user.visible_message("<span class='danger'>[user] стреляет из [src]!</span>", \
-				    		 "<span class='danger'>Вы стреляете из [src]!</span>")
+		user.visible_message("<span class='danger'>[user] СЃС‚СЂРµР»СЏРµС‚ РёР· [src]!</span>", \
+				    		 "<span class='danger'>Р’С‹ СЃС‚СЂРµР»СЏРµС‚Рµ РёР· [src]!</span>")
 	add_logs(user, target, "fired at", src)
 	playsound(src.loc, 'sound/weapons/sonic_jackhammer.ogg', 50, 1)
 	for(var/obj/item/ITD in loadedItems) //Item To Discharge

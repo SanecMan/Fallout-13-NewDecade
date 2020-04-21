@@ -1,6 +1,6 @@
 /obj/machinery/modular_computer/console
-	name = "терминал"
-	desc = "Громоздкий терминал, производства РобКо, вещь на века."
+	name = "С‚РµСЂРјРёРЅР°Р»"
+	desc = "Р“СЂРѕРјРѕР·РґРєРёР№ С‚РµСЂРјРёРЅР°Р», РїСЂРѕРёР·РІРѕРґСЃС‚РІР° Р РѕР±РљРѕ, РІРµС‰СЊ РЅР° РІРµРєР°."
 
 	icon = 'icons/obj/modular_console.dmi'
 	icon_state = "console"

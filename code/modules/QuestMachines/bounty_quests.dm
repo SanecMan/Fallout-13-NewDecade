@@ -32,125 +32,125 @@
 	return text2path("[employer_icon_folder][employer_icon]")
 
 /datum/bounty_quest/faction/wasteland/qst_0
-	name = "Проблемы с био материалом"
-	desc = "Надеюсь нас кто слышит! У нас прорыв в исследовании радиации! Гули... их разум... В общем у нас закончился био материал и мы заплатим за 5 туш гулей, живых или мертвых."
-	employer = "Ученые Наваро"
+	name = "РџСЂРѕР±Р»РµРјС‹ СЃ Р±РёРѕ РјР°С‚РµСЂРёР°Р»РѕРј"
+	desc = "РќР°РґРµСЋСЃСЊ РЅР°СЃ РєС‚Рѕ СЃР»С‹С€РёС‚! РЈ РЅР°СЃ РїСЂРѕСЂС‹РІ РІ РёСЃСЃР»РµРґРѕРІР°РЅРёРё СЂР°РґРёР°С†РёРё! Р“СѓР»Рё... РёС… СЂР°Р·СѓРј... Р’ РѕР±С‰РµРј Сѓ РЅР°СЃ Р·Р°РєРѕРЅС‡РёР»СЃСЏ Р±РёРѕ РјР°С‚РµСЂРёР°Р» Рё РјС‹ Р·Р°РїР»Р°С‚РёРј Р·Р° 5 С‚СѓС€ РіСѓР»РµР№, Р¶РёРІС‹С… РёР»Рё РјРµСЂС‚РІС‹С…."
+	employer = "РЈС‡РµРЅС‹Рµ РќР°РІР°СЂРѕ"
 	employer_icon = "employer_00.png"
-	need_message = "5 гулей"
-	end_message = "Отлично! Прекрасные образцы! Отправляем вам ваши деньги."
+	need_message = "5 РіСѓР»РµР№"
+	end_message = "РћС‚Р»РёС‡РЅРѕ! РџСЂРµРєСЂР°СЃРЅС‹Рµ РѕР±СЂР°Р·С†С‹! РћС‚РїСЂР°РІР»СЏРµРј РІР°Рј РІР°С€Рё РґРµРЅСЊРіРё."
 	target_items = list(/mob/living/simple_animal/hostile/ghoul = 5)
 	caps_reward = 226
 
 /datum/bounty_quest/faction/wasteland/qst_1
-	employer = "Лаборатория токсичных отходов"
-	need_message = "Бочка с химикатами - 1 шт."
+	employer = "Р›Р°Р±РѕСЂР°С‚РѕСЂРёСЏ С‚РѕРєСЃРёС‡РЅС‹С… РѕС‚С…РѕРґРѕРІ"
+	need_message = "Р‘РѕС‡РєР° СЃ С…РёРјРёРєР°С‚Р°РјРё - 1 С€С‚."
 	target_items = list(/obj/structure/reagent_dispensers/barrel/dangerous = 1)
 	caps_reward = 100
 
 /datum/bounty_quest/faction/wasteland/qst_2
-	employer = "Биологи Анклава"
-	need_message = "Крысы - 2 шт."
+	employer = "Р‘РёРѕР»РѕРіРё РђРЅРєР»Р°РІР°"
+	need_message = "РљСЂС‹СЃС‹ - 2 С€С‚."
 	target_items = list(/mob/living/simple_animal/hostile/molerat = 2)
 	caps_reward = 60
 
 /datum/bounty_quest/faction/wasteland/qst_3
-	employer = "Ученые Наваро"
-	need_message = "Гуль - 1 шт."
+	employer = "РЈС‡РµРЅС‹Рµ РќР°РІР°СЂРѕ"
+	need_message = "Р“СѓР»СЊ - 1 С€С‚."
 	target_items = list(/mob/living/simple_animal/hostile/ghoul = 1)
 	caps_reward = 51
 
 /datum/bounty_quest/faction/wasteland/qst_4
-	employer = "Джо"
-	need_message = "Человеческие языки - 3 шт."
+	employer = "Р”Р¶Рѕ"
+	need_message = "Р§РµР»РѕРІРµС‡РµСЃРєРёРµ СЏР·С‹РєРё - 3 С€С‚."
 	target_items = list(/obj/item/organ/tongue = 3)
 	caps_reward = 127
 
 /datum/bounty_quest/faction/wasteland/qst_5
-	employer = "Ученые Братства"
-	need_message = "Коготь смерти - 1 шт."
+	employer = "РЈС‡РµРЅС‹Рµ Р‘СЂР°С‚СЃС‚РІР°"
+	need_message = "РљРѕРіРѕС‚СЊ СЃРјРµСЂС‚Рё - 1 С€С‚."
 	target_items = list(/mob/living/simple_animal/hostile/deathclaw = 1)
 	caps_reward = 304
 
 /datum/bounty_quest/faction/wasteland/qst_6
-	employer = "Приют Тетушки Какеетам"
-	need_message = "Шкуры животных - 5 шт."
+	employer = "РџСЂРёСЋС‚ РўРµС‚СѓС€РєРё РљР°РєРµРµС‚Р°Рј"
+	need_message = "РЁРєСѓСЂС‹ Р¶РёРІРѕС‚РЅС‹С… - 5 С€С‚."
 	target_items = list(/obj/item/stack/sheet/animalhide = 5)
 	caps_reward = 103
 
 /datum/bounty_quest/faction/wasteland/qst_7
 	employer = "ERP-75"
-	need_message = "Человеческие тела - 5 шт."
+	need_message = "Р§РµР»РѕРІРµС‡РµСЃРєРёРµ С‚РµР»Р° - 5 С€С‚."
 	target_items = list(/mob/living/carbon/human = 5)
 	caps_reward = 324
 
 /datum/bounty_quest/faction/wasteland/qst_8
-	employer = "Ученые Братства"
-	need_message = "Коготь смерти - 2 шт."
+	employer = "РЈС‡РµРЅС‹Рµ Р‘СЂР°С‚СЃС‚РІР°"
+	need_message = "РљРѕРіРѕС‚СЊ СЃРјРµСЂС‚Рё - 2 С€С‚."
 	target_items = list(/mob/living/simple_animal/hostile/deathclaw = 2)
 	caps_reward = 712
 
 /datum/bounty_quest/faction/wasteland/qst_9
-	employer = "Школа гулей"
-	need_message = "Листы бумаги - 20 шт."
+	employer = "РЁРєРѕР»Р° РіСѓР»РµР№"
+	need_message = "Р›РёСЃС‚С‹ Р±СѓРјР°РіРё - 20 С€С‚."
 	target_items = list(/obj/item/weapon/paper = 20)
 	caps_reward = 78
 
 /datum/bounty_quest/faction/wasteland/qst_10
-	employer = "Беженцы"
-	need_message = "Кукуруза - 10 шт."
+	employer = "Р‘РµР¶РµРЅС†С‹"
+	need_message = "РљСѓРєСѓСЂСѓР·Р° - 10 С€С‚."
 	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/corn = 10)
 	caps_reward = 59
 
 /datum/bounty_quest/faction/wasteland/qst_11
-	employer = "Беженцы"
-	need_message = "Кукуруза - 30 шт."
+	employer = "Р‘РµР¶РµРЅС†С‹"
+	need_message = "РљСѓРєСѓСЂСѓР·Р° - 30 С€С‚."
 	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/corn = 30)
 	caps_reward = 204
 
 /datum/bounty_quest/faction/wasteland/qst_12
-	employer = "Беженцы"
-	need_message = "Морковка - 10 шт."
+	employer = "Р‘РµР¶РµРЅС†С‹"
+	need_message = "РњРѕСЂРєРѕРІРєР° - 10 С€С‚."
 	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = 10)
 	caps_reward = 75
 
 /datum/bounty_quest/faction/wasteland/qst_13
-	employer = "Беженцы"
-	need_message = "Морковка - 30 шт."
+	employer = "Р‘РµР¶РµРЅС†С‹"
+	need_message = "РњРѕСЂРєРѕРІРєР° - 30 С€С‚."
 	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = 30)
 	caps_reward = 302
 
 /datum/bounty_quest/faction/wasteland/qst_14
-	employer = "Приют Юный Рейдер"
-	need_message = "Лист Канабиса - 10 шт."
+	employer = "РџСЂРёСЋС‚ Р®РЅС‹Р№ Р РµР№РґРµСЂ"
+	need_message = "Р›РёСЃС‚ РљР°РЅР°Р±РёСЃР° - 10 С€С‚."
 	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cannabis = 10)
 	caps_reward = 302
 
 /datum/bounty_quest/faction/wasteland/qst_15
-	employer = "Приют Юный Рейдер"
-	need_message = "Лист Канабиса - 30 шт."
+	employer = "РџСЂРёСЋС‚ Р®РЅС‹Р№ Р РµР№РґРµСЂ"
+	need_message = "Р›РёСЃС‚ РљР°РЅР°Р±РёСЃР° - 30 С€С‚."
 	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/cannabis = 30)
 	caps_reward = 1203
 
 /datum/bounty_quest/faction/wasteland/qst_16
-	employer = "Приют Юный Рейдер"
-	need_message = "Лист Табака - 10 шт."
+	employer = "РџСЂРёСЋС‚ Р®РЅС‹Р№ Р РµР№РґРµСЂ"
+	need_message = "Р›РёСЃС‚ РўР°Р±Р°РєР° - 10 С€С‚."
 	target_items = list(/obj/item/weapon/reagent_containers/food/snacks/grown/tobacco = 10)
 	caps_reward = 167
 
 /datum/bounty_quest/faction/wasteland/qst_17
-	employer = "Утилизаторы"
-	need_message = "Волк - 3 шт."
+	employer = "РЈС‚РёР»РёР·Р°С‚РѕСЂС‹"
+	need_message = "Р’РѕР»Рє - 3 С€С‚."
 	target_items = list(/mob/living/simple_animal/hostile/wolf = 3)
 	caps_reward = 164
 
 /datum/bounty_quest/faction/wasteland/qst_18
-	employer = "Мусорщики"
-	need_message = "Осколки стекла - 10 шт."
+	employer = "РњСѓСЃРѕСЂС‰РёРєРё"
+	need_message = "РћСЃРєРѕР»РєРё СЃС‚РµРєР»Р° - 10 С€С‚."
 	target_items = list(/obj/item/weapon/shard = 10)
 	caps_reward = 91
 
 /datum/bounty_quest/faction/wasteland/qst_19
-	employer = "Врачи Наваро"
-	need_message = "Скорпионы - 2 шт."
+	employer = "Р’СЂР°С‡Рё РќР°РІР°СЂРѕ"
+	need_message = "РЎРєРѕСЂРїРёРѕРЅС‹ - 2 С€С‚."
 	target_items = list(/mob/living/simple_animal/hostile/rad_scorpion/black  = 2)
 	caps_reward = 152

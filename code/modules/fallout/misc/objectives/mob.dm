@@ -40,7 +40,7 @@
 		mind_data += {"
 		<tr [!m_objective ? "style='visibility:none'" : ""]>
 			<td>
-				[objective_completed_ind] Квест профессии:
+				[objective_completed_ind] РљРІРµСЃС‚ РїСЂРѕС„РµСЃСЃРёРё:
 			</td>
 			<td>
 				<b>[mind.objective.parent.name]</b><br>
@@ -61,9 +61,9 @@
 
 	var/title
 	if(user == src)
-		title = "<div align='center'>Квесты</div>"
+		title = "<div align='center'>РљРІРµСЃС‚С‹</div>"
 	else
-		title = "<div align='center'>Квесты [src]</div>"
+		title = "<div align='center'>РљРІРµСЃС‚С‹ [src]</div>"
 
 	var/datum/browser/popup = new(user, "objectives", title, 500, 200)
 	popup.set_content(html)

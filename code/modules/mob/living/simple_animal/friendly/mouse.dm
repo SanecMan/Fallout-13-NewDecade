@@ -1,22 +1,22 @@
 /mob/living/simple_animal/mouse
-	name = "мышь"
-	desc = "Маленькая, милая мышка. А так-же разносчик всякой заразы."
+	name = "РјС‹С€СЊ"
+	desc = "РњР°Р»РµРЅСЊРєР°СЏ, РјРёР»Р°СЏ РјС‹С€РєР°. Рђ С‚Р°Рє-Р¶Рµ СЂР°Р·РЅРѕСЃС‡РёРє РІСЃСЏРєРѕР№ Р·Р°СЂР°Р·С‹."
 	icon_state = "mouse_gray"
 	icon_living = "mouse_gray"
 	icon_dead = "mouse_gray_dead"
-	speak = list("Скви!","СКВИ!","Скви?")
-	speak_emote = list("пищит")
-	emote_hear = list("пищит.")
-	emote_see = list("бегает кругами.", "трясётся.")
+	speak = list("РЎРєРІРё!","РЎРљР’Р!","РЎРєРІРё?")
+	speak_emote = list("РїРёС‰РёС‚")
+	emote_hear = list("РїРёС‰РёС‚.")
+	emote_see = list("Р±РµРіР°РµС‚ РєСЂСѓРіР°РјРё.", "С‚СЂСЏСЃС‘С‚СЃСЏ.")
 	speak_chance = 1
 	turns_per_move = 5
 	see_in_dark = 6
 	maxHealth = 5
 	health = 5
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 1)
-	response_help  = "гладит"
-	response_disarm = "аккуратно отталкивает"
-	response_harm   = "давит"
+	response_help  = "РіР»Р°РґРёС‚"
+	response_disarm = "Р°РєРєСѓСЂР°С‚РЅРѕ РѕС‚С‚Р°Р»РєРёРІР°РµС‚"
+	response_harm   = "РґР°РІРёС‚"
 	density = 0
 	ventcrawler = VENTCRAWLER_ALWAYS
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
@@ -56,7 +56,7 @@
 	if( ishuman(AM) )
 		if(!stat)
 			var/mob/M = AM
-			to_chat(M, "<span class='notice'>[bicon(src)] Скви!</span>")
+			to_chat(M, "<span class='notice'>[bicon(src)] РЎРєРІРё!</span>")
 			playsound(src, 'sound/effects/mousesqueek.ogg', 100, 1)
 	..()
 
@@ -67,13 +67,13 @@
 			var/obj/structure/cable/C = locate() in F
 			if(C && prob(15))
 				if(C.avail())
-					visible_message("<span class='warning'>[src] грызёт [C]. Зажарилась падла!</span>")
+					visible_message("<span class='warning'>[src] РіСЂС‹Р·С‘С‚ [C]. Р—Р°Р¶Р°СЂРёР»Р°СЃСЊ РїР°РґР»Р°!</span>")
 					playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
 					C.deconstruct()
 					death(toast=1)
 				else
 					C.deconstruct()
-					visible_message("<span class='warning'>[src] грызёт [C].</span>")
+					visible_message("<span class='warning'>[src] РіСЂС‹Р·С‘С‚ [C].</span>")
 
 /*
  * Mouse types

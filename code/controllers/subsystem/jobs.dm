@@ -435,7 +435,7 @@ var/datum/subsystem/job/SSjob
 			H = new_mob
 
 //	to_chat(H, "<b>You are the [job.title].</b>")
-	to_chat(H, "<b>Как [job.title] вы подчиняетесь [job.supervisors].</b>")
+	to_chat(H, "<b>РљР°Рє [job.title] РІС‹ РїРѕРґС‡РёРЅСЏРµС‚РµСЃСЊ [job.supervisors].</b>")
 	if(job && H)
 		job.after_spawn(H)
 

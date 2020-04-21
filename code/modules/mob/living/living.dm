@@ -218,7 +218,7 @@
 		return 0
 	if(!..())
 		return 0
-	visible_message("<b>[src]</b> указывает на [A]")
+	visible_message("<b>[src]</b> СѓРєР°Р·С‹РІР°РµС‚ РЅР° [A]")
 	return 1
 
 /mob/living/verb/die()
@@ -288,10 +288,10 @@
 	set category = "IC"
 
 	if(sleeping)
-		to_chat(src, "<span class='notice'>Вы уже спите.</span>")
+		to_chat(src, "<span class='notice'>Р’С‹ СѓР¶Рµ СЃРїРёС‚Рµ.</span>")
 		return
 	else
-		if(alert(src, "Вы уверены что хотите немного поспать?", "Sleep", "Yes", "No") == "Yes")
+		if(alert(src, "Р’С‹ СѓРІРµСЂРµРЅС‹ С‡С‚Рѕ С…РѕС‚РёС‚Рµ РЅРµРјРЅРѕРіРѕ РїРѕСЃРїР°С‚СЊ?", "Sleep", "Yes", "No") == "Yes")
 			SetSleeping(20) //Short nap
 	update_canmove()
 
@@ -306,13 +306,13 @@
 
 	if(!under_object)
 		resting = !resting
-		to_chat(src, "<span class='notice'>Теперь вы [resting ? "лежите" : "встаете"].</span>")
+		to_chat(src, "<span class='notice'>РўРµРїРµСЂСЊ РІС‹ [resting ? "Р»РµР¶РёС‚Рµ" : "РІСЃС‚Р°РµС‚Рµ"].</span>")
 		update_canmove()
 	else
 		playsound(loc, pick('sound/f13weapons/pan.ogg', 'sound/items/trayhit2.ogg', 'sound/items/trayhit1.ogg'), 50, 1)
 		Stun(1)
 		apply_damage(5, BRUTE, get_bodypart("head"))
-		to_chat(src, "<span class='danger'>Когда вы попытались встать, вы ударились о [under_object] своей головой!<br>Ай!</span>")
+		to_chat(src, "<span class='danger'>РљРѕРіРґР° РІС‹ РїРѕРїС‹С‚Р°Р»РёСЃСЊ РІСЃС‚Р°С‚СЊ, РІС‹ СѓРґР°СЂРёР»РёСЃСЊ Рѕ [under_object] СЃРІРѕРµР№ РіРѕР»РѕРІРѕР№!<br>РђР№!</span>")
 
 /mob/living/proc/surrender()
 	set name = "Surrender"
@@ -323,7 +323,7 @@
 			lay_down()
 
 		Stun(5)
-		visible_message("<b>[src] сдаётся!</b>")
+		visible_message("<b>[src] СЃРґР°С‘С‚СЃСЏ!</b>")
 		playsound(src.loc, 'sound/f13effects/surrender.ogg', 50, 1)
 
 
@@ -437,7 +437,7 @@
 
 	if(config.allow_Metadata)
 		if(client)
-			to_chat(src, "[src]'s Метаинформация:<br>[client.prefs.metadata]")
+			to_chat(src, "[src]'s РњРµС‚Р°РёРЅС„РѕСЂРјР°С†РёСЏ:<br>[client.prefs.metadata]")
 		else
 			to_chat(src, "[src] does not have any stored infomation!")
 	else
@@ -580,7 +580,7 @@
 
 	//resisting grabs (as if it helps anyone...)
 	if(!restrained(ignore_grab = 1) && pulledby)
-		visible_message("<span class='danger'>[src] пытается вырваться из хватки [pulledby]!</span>")
+		visible_message("<span class='danger'>[src] РїС‹С‚Р°РµС‚СЃСЏ РІС‹СЂРІР°С‚СЊСЃСЏ РёР· С…РІР°С‚РєРё [pulledby]!</span>")
 		resist_grab()
 		return
 
@@ -615,7 +615,7 @@
 	. = 1
 	if(pulledby.grab_state)
 		if(prob(30/pulledby.grab_state))
-			visible_message("<span class='danger'>[src] вырывается из хватки [pulledby]!</span>")
+			visible_message("<span class='danger'>[src] РІС‹СЂС‹РІР°РµС‚СЃСЏ РёР· С…РІР°С‚РєРё [pulledby]!</span>")
 			pulledby.stop_pulling()
 			return 0
 		if(moving_resist && client) //we resisted by trying to move
@@ -670,8 +670,8 @@
 
 	var/mob/living/carbon/user = src
 	if(!(user.perks.have(/datum/perk/thief)))
-		who.visible_message("<span class='danger'>[src] пытается снять [what.name] c [who].</span>", \
-			"<span class='userdanger'>[src] пытается снять [what.name] c [who].</span>")
+		who.visible_message("<span class='danger'>[src] РїС‹С‚Р°РµС‚СЃСЏ СЃРЅСЏС‚СЊ [what.name] c [who].</span>", \
+			"<span class='userdanger'>[src] РїС‹С‚Р°РµС‚СЃСЏ СЃРЅСЏС‚СЊ [what.name] c [who].</span>")
 
 	what.add_fingerprint(src)
 	if(do_mob(src, who, what.strip_delay))
@@ -698,20 +698,20 @@
 /mob/living/stripPanelEquip(obj/item/what, mob/who, where)
 	what = src.get_active_held_item()
 	if(what && (what.flags & NODROP))
-		to_chat(src, "<span class='warning'>Вы не можете поместить [what.name] на [who], это застряло у вас в руках!</span>")
+		to_chat(src, "<span class='warning'>Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ РїРѕРјРµСЃС‚РёС‚СЊ [what.name] РЅР° [who], СЌС‚Рѕ Р·Р°СЃС‚СЂСЏР»Рѕ Сѓ РІР°СЃ РІ СЂСѓРєР°С…!</span>")
 		return
 	if(what)
 		var/list/where_list
 		if(islist(where))
 			where_list = where
 			if(!what.mob_can_equip(who, src, where[1], 1))
-				to_chat(src, "<span class='warning'>[what.name] не помещается сюда!</span>")
+				to_chat(src, "<span class='warning'>[what.name] РЅРµ РїРѕРјРµС‰Р°РµС‚СЃСЏ СЃСЋРґР°!</span>")
 				return
 		else
 			if(!what.mob_can_equip(who, src, where, 1))
-				to_chat(src, "<span class='warning'>[what.name] не помещается сюда!</span>")
+				to_chat(src, "<span class='warning'>[what.name] РЅРµ РїРѕРјРµС‰Р°РµС‚СЃСЏ СЃСЋРґР°!</span>")
 				return
-		visible_message("<span class='notice'>[src] пытается надеть [what] на [who].</span>")
+		visible_message("<span class='notice'>[src] РїС‹С‚Р°РµС‚СЃСЏ РЅР°РґРµС‚СЊ [what] РЅР° [who].</span>")
 		if(do_mob(src, who, what.put_on_delay))
 			if(what && Adjacent(who))
 				unEquip(what)
@@ -841,11 +841,11 @@
 		if(be_close && in_range(M, src))
 			return 1
 	else
-		to_chat(src, "<span class='warning'>У вас недостаточно мозгов чтобы сделать это!</span>")
+		to_chat(src, "<span class='warning'>РЈ РІР°СЃ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РјРѕР·РіРѕРІ С‡С‚РѕР±С‹ СЃРґРµР»Р°С‚СЊ СЌС‚Рѕ!</span>")
 	return
 /mob/living/proc/can_use_guns(var/obj/item/weapon/gun/G)
 	if (G.trigger_guard != TRIGGER_GUARD_ALLOW_ALL && !IsAdvancedToolUser())
-		to_chat(src, "<span class='warning'>У вас недостаточно мозгов чтобы сделать это!</span>")
+		to_chat(src, "<span class='warning'>РЈ РІР°СЃ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РјРѕР·РіРѕРІ С‡С‚РѕР±С‹ СЃРґРµР»Р°С‚СЊ СЌС‚Рѕ!</span>")
 		return 0
 	return 1
 
@@ -856,7 +856,7 @@
 	if(staminaloss)
 		var/total_health = (health - staminaloss)
 		if(total_health <= HEALTH_THRESHOLD_CRIT && !stat)
-			to_chat(src, "<span class='notice'>Вы слишком устали чтобы продолжать...</span>")
+			to_chat(src, "<span class='notice'>Р’С‹ СЃР»РёС€РєРѕРј СѓСЃС‚Р°Р»Рё С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ...</span>")
 			Weaken(5)
 			setStaminaLoss(health - 2)
 	update_health_hud()
@@ -927,8 +927,8 @@
 /mob/living/proc/IgniteMob()
 	if(fire_stacks > 0 && !on_fire)
 		on_fire = 1
-		src.visible_message("<span class='warning'>[src] горит!</span>", \
-						"<span class='userdanger'>Вы горите!</span>")
+		src.visible_message("<span class='warning'>[src] РіРѕСЂРёС‚!</span>", \
+						"<span class='userdanger'>Р’С‹ РіРѕСЂРёС‚Рµ!</span>")
 		set_light(3)
 		throw_alert("fire", /obj/screen/alert/fire)
 		update_fire()
@@ -964,7 +964,7 @@
 		fire_stacks /= 2
 		L.fire_stacks += fire_stacks
 		if(L.IgniteMob())
-			log_game("[key_name(src)] врезается в [key_name(L)] и поджигает")
+			log_game("[key_name(src)] РІСЂРµР·Р°РµС‚СЃСЏ РІ [key_name(L)] Рё РїРѕРґР¶РёРіР°РµС‚")
 
 	if(L_old_on_fire) //Only ignite us and gain their stacks if they were onfire before we bumped them
 		L.fire_stacks /= 2

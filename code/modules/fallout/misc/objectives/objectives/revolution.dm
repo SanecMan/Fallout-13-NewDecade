@@ -1,8 +1,8 @@
 //Fallout 13 - Hasta siempre, Comandante
 
 /datum/f13_objective/revolution
-	name = "Революция всё спишет!"
-	desc = "Пора захватить мир, или вашу фракцию!<br>Станьте %status_name%."
+	name = "Р РµРІРѕР»СЋС†РёСЏ РІСЃС‘ СЃРїРёС€РµС‚!"
+	desc = "РџРѕСЂР° Р·Р°С…РІР°С‚РёС‚СЊ РјРёСЂ, РёР»Рё РІР°С€Сѓ С„СЂР°РєС†РёСЋ!<br>РЎС‚Р°РЅСЊС‚Рµ %status_name%."
 	points = 0
 	kind = INDIVIDUAL
 

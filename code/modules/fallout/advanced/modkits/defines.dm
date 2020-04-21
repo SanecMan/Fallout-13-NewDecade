@@ -15,7 +15,7 @@
 		if(modificationsNames.len == 0)
 			return
 
-		to_chat(user, "Модуль установлен:")
+		to_chat(user, "РњРѕРґСѓР»СЊ СѓСЃС‚Р°РЅРѕРІР»РµРЅ:")
 	for(var/S in modificationsNames)
 		to_chat(user, S)
 
@@ -27,7 +27,7 @@
 			to_chat(user, "You have no skills, to do this.")
 			return
 		else
-			to_chat(user, "У вас не хватает навыхов, чтобы поставить улучшение.")
+			to_chat(user, "РЈ РІР°СЃ РЅРµ С…РІР°С‚Р°РµС‚ РЅР°РІС‹С…РѕРІ, С‡С‚РѕР±С‹ РїРѕСЃС‚Р°РІРёС‚СЊ СѓР»СѓС‡С€РµРЅРёРµ.")
 			return
 
 	if(istype(W, /obj/item/kit))

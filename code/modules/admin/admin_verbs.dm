@@ -389,7 +389,7 @@ var/list/admin_verbs_hideable = list(
 	else
 		//ghostize
 		log_admin("[key_name(usr)] admin ghosted.")
-		message_admins("[key_name_admin(usr)] входит в режим обозрения.")
+		message_admins("[key_name_admin(usr)] РІС…РѕРґРёС‚ РІ СЂРµР¶РёРј РѕР±РѕР·СЂРµРЅРёСЏ.")
 		var/mob/body = mob
 		body.ghostize(1)
 		if(body && !body.key)
@@ -404,10 +404,10 @@ var/list/admin_verbs_hideable = list(
 	if(holder && mob)
 		if(mob.invisibility == INVISIBILITY_OBSERVER)
 			mob.invisibility = initial(mob.invisibility)
-			to_chat(mob, "<span class='boldannounce'>Невидимость отключена.</span>")
+			to_chat(mob, "<span class='boldannounce'>РќРµРІРёРґРёРјРѕСЃС‚СЊ РѕС‚РєР»СЋС‡РµРЅР°.</span>")
 		else
 			mob.invisibility = INVISIBILITY_OBSERVER
-			to_chat(mob, "<span class='adminnotice'><b>Невидимость включена. Теперь вы невидимы словно призрак.</b></span>")
+			to_chat(mob, "<span class='adminnotice'><b>РќРµРІРёРґРёРјРѕСЃС‚СЊ РІРєР»СЋС‡РµРЅР°. РўРµРїРµСЂСЊ РІС‹ РЅРµРІРёРґРёРјС‹ СЃР»РѕРІРЅРѕ РїСЂРёР·СЂР°Рє.</b></span>")
 
 /client/proc/player_panel_new()
 	set name = "Player Panel"
@@ -693,7 +693,7 @@ var/list/admin_verbs_hideable = list(
 
 	to_chat(src, "<span class='interface'>You are now a normal player.</span>")
 	log_admin("[src] deadmined themself.")
-	message_admins("[src] снимает свои администраторские полномочия.")
+	message_admins("[src] СЃРЅРёРјР°РµС‚ СЃРІРѕРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСЃРєРёРµ РїРѕР»РЅРѕРјРѕС‡РёСЏ.")
 	feedback_add_details("admin_verb","DAS")
 
 /client/proc/readmin()
@@ -710,7 +710,7 @@ var/list/admin_verbs_hideable = list(
 	verbs -= /client/proc/readmin
 
 	to_chat(src, "<span class='interface'>You are now an admin.</span>")
-	message_admins("[src] возвращает себе администраторские полномочия.")
+	message_admins("[src] РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРµР±Рµ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСЃРєРёРµ РїРѕР»РЅРѕРјРѕС‡РёСЏ.")
 	log_admin("[src] re-adminned themselves.")
 	feedback_add_details("admin_verb","RAS")
 

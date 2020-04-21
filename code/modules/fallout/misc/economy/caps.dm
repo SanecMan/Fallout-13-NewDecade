@@ -1,8 +1,8 @@
 //Fallout 13 base of Wasteland economics
 
 /obj/item/stack/caps
-	name = "крышки"
-	desc = "Пост-Апокалиптические деньги. <br>ALT + Click чтобы разделить."
+	name = "РєСЂС‹С€РєРё"
+	desc = "РџРѕСЃС‚-РђРїРѕРєР°Р»РёРїС‚РёС‡РµСЃРєРёРµ РґРµРЅСЊРіРё. <br>ALT + Click С‡С‚РѕР±С‹ СЂР°Р·РґРµР»РёС‚СЊ."
 	eng_name = "caps"
 	eng_desc = "Post-Apocalyptic money. <br>ALT + Click to split them."
 	singular_name = "cap"

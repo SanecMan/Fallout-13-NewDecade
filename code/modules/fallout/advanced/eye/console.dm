@@ -1,6 +1,6 @@
 /obj/machinery/computer/eyebots
-	name = "консоль управления робоглазами"
-	desc = "Используется для управления робоглазами."
+	name = "РєРѕРЅСЃРѕР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ СЂРѕР±РѕРіР»Р°Р·Р°РјРё"
+	desc = "РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ СЂРѕР±РѕРіР»Р°Р·Р°РјРё."
 	eng_desc = "Used to access eyebots."
 	eng_name = "eyebot console"
 	icon = 'icons/fallout/machines/terminals.dmi'

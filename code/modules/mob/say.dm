@@ -64,7 +64,7 @@
 		K = src.key
 
 	message = src.say_quote(message, get_spans())
-	var/rendered = "<span class='game deadsay'><span class='prefix'>̨���:</span> <span class='name'>[name]</span>[alt_name] <span class='message'>[message]</span></span>"
+	var/rendered = "<span class='game deadsay'><span class='prefix'>МЁРТВ:</span> <span class='name'>[name]</span>[alt_name] <span class='message'>[message]</span></span>"
 
 	deadchat_broadcast(rendered, follow_target = src, speaker_key = K)
 

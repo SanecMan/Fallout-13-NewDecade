@@ -1,8 +1,8 @@
 //Fallout 13 molerat directory
 
 /mob/living/simple_animal/hostile/molerat
-	name = "Кротокрыс"
-	desc = "Гигантская крыса. Или крот?"
+	name = "РљСЂРѕС‚РѕРєСЂС‹СЃ"
+	desc = "Р“РёРіР°РЅС‚СЃРєР°СЏ РєСЂС‹СЃР°. РР»Рё РєСЂРѕС‚?"
 	eng_name = "molerat"
 	eng_desc = "Giant rat! Or mole?..."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -11,9 +11,9 @@
 	icon_dead = "mole_rat_dead"
 	icon_gib = "gib"
 	turns_per_move = 1
-	response_help = "гладит"
-	response_disarm = "пихает в бок"
-	response_harm = "пинает"
+	response_help = "РіР»Р°РґРёС‚"
+	response_disarm = "РїРёС…Р°РµС‚ РІ Р±РѕРє"
+	response_harm = "РїРёРЅР°РµС‚"
 	butcher_results = list(/obj/item/stack/sheet/animalhide/molerat = 1, \
 	/obj/item/weapon/reagent_containers/food/snacks/meat/slab/molerat = 1)
 	maxHealth = 65
@@ -35,7 +35,7 @@
 	melee_damage_upper = 20
 	aggro_vision_range = 12 //I SEE EVERYTHING
 	idle_vision_range = 10
-	attacktext = "кусает"
+	attacktext = "РєСѓСЃР°РµС‚"
 	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 3

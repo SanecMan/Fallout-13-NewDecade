@@ -35,7 +35,7 @@
 	status = "none"
 	total_positions = -1
 	spawn_positions = -1 //does not matter for late join
-	supervisors = "никому"
+	supervisors = "РЅРёРєРѕРјСѓ"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
@@ -89,7 +89,7 @@
 	status = "none"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "никому"
+	supervisors = "РЅРёРєРѕРјСѓ"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()

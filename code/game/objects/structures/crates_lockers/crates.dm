@@ -1,5 +1,5 @@
 /obj/structure/closet/crate
-	name = "ящик"
+	name = "СЏС‰РёРє"
 	desc = "A rectangular steel crate."
 	icon = 'icons/obj/crates.dmi'
 	icon_state = "crate"
@@ -63,43 +63,43 @@
 	update_icon()
 
 /obj/structure/closet/crate/vault_blue
-	name = "голубой ящик Волт-Тек"
+	name = "РіРѕР»СѓР±РѕР№ СЏС‰РёРє Р’РѕР»С‚-РўРµРє"
 	desc = "A rectangular blue steel vault crate."
 	icon = 'icons/fallout/objects/crates.dmi'
 	icon_state = "vault_blue"
 
 /obj/structure/closet/crate/vault_yellow
-	name = "жёлтый ящик Волт-Тек"
+	name = "Р¶С‘Р»С‚С‹Р№ СЏС‰РёРє Р’РѕР»С‚-РўРµРє"
 	desc = "A rectangular yellow steel vault crate."
 	icon = 'icons/fallout/objects/crates.dmi'
 	icon_state = "vault_yellow"
 
 /obj/structure/closet/crate/orange
-	name = "оранжевый ящик"
+	name = "РѕСЂР°РЅР¶РµРІС‹Р№ СЏС‰РёРє"
 	desc = "A rectangular orange steel crate."
 	icon = 'icons/fallout/objects/crates.dmi'
 	icon_state = "orange"
 
 /obj/structure/closet/crate/mil_crate
-	name = "военный ящик"
+	name = "РІРѕРµРЅРЅС‹Р№ СЏС‰РёРє"
 	desc = "A rectangular mil steel crate."
 	icon = 'icons/fallout/objects/crates.dmi'
 	icon_state = "mil_crate"
 
 /obj/structure/closet/crate/blue
-	name = "голубой ящик"
+	name = "РіРѕР»СѓР±РѕР№ СЏС‰РёРє"
 	desc = "A rectangular blue steel crate."
 	icon = 'icons/fallout/objects/crates.dmi'
 	icon_state = "blue"
 
 /obj/structure/closet/crate/handmadecrate
-	name = "самодельный ящик"
+	name = "СЃР°РјРѕРґРµР»СЊРЅС‹Р№ СЏС‰РёРє"
 	desc = "A rectangular handmade steel crate."
 	icon = 'icons/fallout/objects/crates.dmi'
 	icon_state = "handmadecrate"
 
 /obj/structure/closet/crate/cratebloody
-	name = "окровавленный ящик"
+	name = "РѕРєСЂРѕРІР°РІР»РµРЅРЅС‹Р№ СЏС‰РёРє"
 	desc = "A rectangular bloody steel crate."
 	icon = 'icons/fallout/objects/crates.dmi'
 	icon_state = "cratebloody"
@@ -115,12 +115,12 @@
 	icon_state = "trashcart"
 
 /obj/structure/closet/crate/medical
-	desc = "медициский ящик."
+	desc = "РјРµРґРёС†РёСЃРєРёР№ СЏС‰РёРє."
 	name = "medical crate"
 	icon_state = "medicalcrate"
 
 /obj/structure/closet/crate/freezer/blood
-	name = "холодильник для крови"
+	name = "С…РѕР»РѕРґРёР»СЊРЅРёРє РґР»СЏ РєСЂРѕРІРё"
 	desc = "A freezer containing packs of blood."
 
 /obj/structure/closet/crate/freezer/blood/New()
@@ -138,7 +138,7 @@
 
 /obj/structure/closet/crate/radiation
 	desc = "A crate with a radiation sign on it."
-	name = "ящик для опасных материалов"
+	name = "СЏС‰РёРє РґР»СЏ РѕРїР°СЃРЅС‹С… РјР°С‚РµСЂРёР°Р»РѕРІ"
 	icon_state = "radiation"
 
 /obj/structure/closet/crate/hydroponics
@@ -147,7 +147,7 @@
 	icon_state = "hydrocrate"
 
 /obj/structure/closet/crate/engineering
-	name = "инженерный ящик"
+	name = "РёРЅР¶РµРЅРµСЂРЅС‹Р№ СЏС‰РёРє"
 	icon_state = "engi_crate"
 
 /obj/structure/closet/crate/engineering/electrical

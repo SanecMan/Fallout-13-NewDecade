@@ -1,20 +1,20 @@
 /mob/living/simple_animal/hostile/mrhandy
-	name = "Мистер Помощник"
-	desc = "Эти летающие на реактивном двигателе роботы с несколькими манипуляторами были разработаны компанией «Дженерал Атомикс Интернешнл»; их основной функцией было ведение домашнего хозяйства, например, приготовление пищи или выгуливание собаки. Удивительно во что они превратились сейчас."
+	name = "РњРёСЃС‚РµСЂ РџРѕРјРѕС‰РЅРёРє"
+	desc = "Р­С‚Рё Р»РµС‚Р°СЋС‰РёРµ РЅР° СЂРµР°РєС‚РёРІРЅРѕРј РґРІРёРіР°С‚РµР»Рµ СЂРѕР±РѕС‚С‹ СЃ РЅРµСЃРєРѕР»СЊРєРёРјРё РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°РјРё Р±С‹Р»Рё СЂР°Р·СЂР°Р±РѕС‚Р°РЅС‹ РєРѕРјРїР°РЅРёРµР№ В«Р”Р¶РµРЅРµСЂР°Р» РђС‚РѕРјРёРєСЃ РРЅС‚РµСЂРЅРµС€РЅР»В»; РёС… РѕСЃРЅРѕРІРЅРѕР№ С„СѓРЅРєС†РёРµР№ Р±С‹Р»Рѕ РІРµРґРµРЅРёРµ РґРѕРјР°С€РЅРµРіРѕ С…РѕР·СЏР№СЃС‚РІР°, РЅР°РїСЂРёРјРµСЂ, РїСЂРёРіРѕС‚РѕРІР»РµРЅРёРµ РїРёС‰Рё РёР»Рё РІС‹РіСѓР»РёРІР°РЅРёРµ СЃРѕР±Р°РєРё. РЈРґРёРІРёС‚РµР»СЊРЅРѕ РІРѕ С‡С‚Рѕ РѕРЅРё РїСЂРµРІСЂР°С‚РёР»РёСЃСЊ СЃРµР№С‡Р°СЃ."
 	eng_name = "Mr.Handy"
-	eng_desc = "Those flying robots with manipulators, was developed by «General Atomics International»; Their main function was... helping with home stuff, like a garden or walking with dog."
+	eng_desc = "Those flying robots with manipulators, was developed by В«General Atomics InternationalВ»; Their main function was... helping with home stuff, like a garden or walking with dog."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "handy"
 	icon_living = "handy"
 	icon_dead = "handy_d"
 	icon_gib = "handy_d"
 	speak_chance = 30
-	speak = list("Ой, смотрите! Два человека избивают друг друга до смерти монтировками. Так держать, человечество! МОЖНО Я ВАМ ПОМОГУ?","Подумать только, все это время люди боялись восстания роботов. А в итоге сами себя прекрасно уничтожили, без нашей помощи...","Служить вам — радость для меня.")
+	speak = list("РћР№, СЃРјРѕС‚СЂРёС‚Рµ! Р”РІР° С‡РµР»РѕРІРµРєР° РёР·Р±РёРІР°СЋС‚ РґСЂСѓРі РґСЂСѓРіР° РґРѕ СЃРјРµСЂС‚Рё РјРѕРЅС‚РёСЂРѕРІРєР°РјРё. РўР°Рє РґРµСЂР¶Р°С‚СЊ, С‡РµР»РѕРІРµС‡РµСЃС‚РІРѕ! РњРћР–РќРћ РЇ Р’РђРњ РџРћРњРћР“РЈ?","РџРѕРґСѓРјР°С‚СЊ С‚РѕР»СЊРєРѕ, РІСЃРµ СЌС‚Рѕ РІСЂРµРјСЏ Р»СЋРґРё Р±РѕСЏР»РёСЃСЊ РІРѕСЃСЃС‚Р°РЅРёСЏ СЂРѕР±РѕС‚РѕРІ. Рђ РІ РёС‚РѕРіРµ СЃР°РјРё СЃРµР±СЏ РїСЂРµРєСЂР°СЃРЅРѕ СѓРЅРёС‡С‚РѕР¶РёР»Рё, Р±РµР· РЅР°С€РµР№ РїРѕРјРѕС‰Рё...","РЎР»СѓР¶РёС‚СЊ РІР°Рј вЂ” СЂР°РґРѕСЃС‚СЊ РґР»СЏ РјРµРЅСЏ.")
 	turns_per_move = 5
 	environment_smash = 0
-	response_help = "тыкает"
-	response_disarm = "пихает"
-	response_harm = "бьёт"
+	response_help = "С‚С‹РєР°РµС‚"
+	response_disarm = "РїРёС…Р°РµС‚"
+	response_harm = "Р±СЊС‘С‚"
 	move_to_delay = 5
 	stat_attack = 1
 	robust_searching = 1
@@ -29,7 +29,7 @@
 	melee_damage_upper = 20
 	minimum_distance = 4
 	retreat_distance = 7
-	attacktext = "режет"
+	attacktext = "СЂРµР¶РµС‚"
 	attack_sound = "punch"
 	a_intent = "harm"
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -45,7 +45,7 @@
 	XP = 14
 
 /mob/living/simple_animal/hostile/mrhandy/gutsy
-	name = "Мистер Храбрец"
+	name = "РњРёСЃС‚РµСЂ РҐСЂР°Р±СЂРµС†"
 	eng_name = "Mr.Gutsy"
 	icon_state = "gutsy"
 	icon_living = "gutsy"

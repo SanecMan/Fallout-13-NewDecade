@@ -78,7 +78,7 @@ var/list/freqtospan = list(
 
 			return "[en_verb_say], \"[input]\""
 		else
-			return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+			return "РіРѕРІРѕСЂРёС‚, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 			var/ending = copytext_char(input, length(input))
 			if(copytext_char(input, length(input) - 1) == "!!")
 				spans |= SPAN_YELL

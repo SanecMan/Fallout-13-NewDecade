@@ -1,6 +1,6 @@
 /obj/item/door_key
-	name = "неиспользованный ключ"
-	desc = "Маленький серый ключ."
+	name = "РЅРµРёСЃРїРѕР»СЊР·РѕРІР°РЅРЅС‹Р№ РєР»СЋС‡"
+	desc = "РњР°Р»РµРЅСЊРєРёР№ СЃРµСЂС‹Р№ РєР»СЋС‡."
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "empty_key"
 	w_class = WEIGHT_CLASS_TINY
@@ -83,8 +83,8 @@
 
 
 /obj/item/lock
-	name = "неиспользованный замок"
-	desc = "Маленький серый замок."
+	name = "РЅРµРёСЃРїРѕР»СЊР·РѕРІР°РЅРЅС‹Р№ Р·Р°РјРѕРє"
+	desc = "РњР°Р»РµРЅСЊРєРёР№ СЃРµСЂС‹Р№ Р·Р°РјРѕРє."
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "closed_lock"
 	w_class = WEIGHT_CLASS_TINY
@@ -115,13 +115,13 @@
 		var/obj/item/door_key/K = W
 		if(id)
 			if(id == K.id)
-				to_chat(user, "<span class='notice'>Вы начинаете [open ? "закрывать" : "открывать"] замок.</span>")
+				to_chat(user, "<span class='notice'>Р’С‹ РЅР°С‡РёРЅР°РµС‚Рµ [open ? "Р·Р°РєСЂС‹РІР°С‚СЊ" : "РѕС‚РєСЂС‹РІР°С‚СЊ"] Р·Р°РјРѕРє.</span>")
 				if(do_after(user, 15, target = loc))
 					if(!open && jammed)
-						to_chat(user, "<span class='userdanger'>Ключ туго проворачивается в замке, похоже кто-то пытался его взломать!</span>")
+						to_chat(user, "<span class='userdanger'>РљР»СЋС‡ С‚СѓРіРѕ РїСЂРѕРІРѕСЂР°С‡РёРІР°РµС‚СЃСЏ РІ Р·Р°РјРєРµ, РїРѕС…РѕР¶Рµ РєС‚Рѕ-С‚Рѕ РїС‹С‚Р°Р»СЃСЏ РµРіРѕ РІР·Р»РѕРјР°С‚СЊ!</span>")
 					toogle()
 			else
-				to_chat(user, "<span class='warning'>Неверный ключ!</span>")
+				to_chat(user, "<span class='warning'>РќРµРІРµСЂРЅС‹Р№ РєР»СЋС‡!</span>")
 		else
 			if(K.id)
 				attach_id(K.id)
@@ -136,11 +136,11 @@
 
 	if(istype(W,/obj/item/lockpick))
 		if(jammed)
-			to_chat(user, "<span class='warning'>Этот замок заклинил, теперь его можно открыть только ключом.</span>")
+			to_chat(user, "<span class='warning'>Р­С‚РѕС‚ Р·Р°РјРѕРє Р·Р°РєР»РёРЅРёР», С‚РµРїРµСЂСЊ РµРіРѕ РјРѕР¶РЅРѕ РѕС‚РєСЂС‹С‚СЊ С‚РѕР»СЊРєРѕ РєР»СЋС‡РѕРј.</span>")
 			return
 
 		if(world.time < spam_protect_time)
-			to_chat(user, "<span class='warning'>Вам нужно немного времени, чтобы сконцентрироваться.</span>")
+			to_chat(user, "<span class='warning'>Р’Р°Рј РЅСѓР¶РЅРѕ РЅРµРјРЅРѕРіРѕ РІСЂРµРјРµРЅРё, С‡С‚РѕР±С‹ СЃРєРѕРЅС†РµРЅС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ.</span>")
 			return
 
 		var/obj/item/lockpick/L = W
@@ -151,20 +151,20 @@
 		var/duration = C.skills.skillSpeedMod("lockpick", L.lockpicking_time)
 		if(id && !open)
 			spam_protect_time = duration + world.time
-			to_chat(user, "<span class='warning'>Вы начинаете вскрывать замок.</span>")
+			to_chat(user, "<span class='warning'>Р’С‹ РЅР°С‡РёРЅР°РµС‚Рµ РІСЃРєСЂС‹РІР°С‚СЊ Р·Р°РјРѕРє.</span>")
 			if(do_after(user, duration, target = loc))
 				if(prob(C.skills.skillSuccessChance("lockpick")))
 					toogle()
-					to_chat(user, "<span class='green'>Вы вскрыли замок!.</span>")
+					to_chat(user, "<span class='green'>Р’С‹ РІСЃРєСЂС‹Р»Рё Р·Р°РјРѕРє!.</span>")
 					return
 				else
 					if(prob(jammed_chance))
 						jammed = TRUE
-						to_chat(user, "<span class='userdanger'>Замок заклинило!</span>")
+						to_chat(user, "<span class='userdanger'>Р—Р°РјРѕРє Р·Р°РєР»РёРЅРёР»Рѕ!</span>")
 					else
-						to_chat(user, "<span class='warning'>Вам не удалось взломать замок!</span>")
+						to_chat(user, "<span class='warning'>Р’Р°Рј РЅРµ СѓРґР°Р»РѕСЃСЊ РІР·Р»РѕРјР°С‚СЊ Р·Р°РјРѕРє!</span>")
 				if(prob(L.broken_chance))
-					to_chat(user, "<span class='warning'>[L.name] сломалась!</span>")
+					to_chat(user, "<span class='warning'>[L.name] СЃР»РѕРјР°Р»Р°СЃСЊ!</span>")
 					qdel(L)
 	. = ..()
 
@@ -184,8 +184,8 @@
   ////////////
  //LOCKPICK//
 /obj/item/lockpick
-	name = "заколка"
-	desc = "Обычная заколка для волоc, однако в умелых руках может выступать в роли отмычки."
+	name = "Р·Р°РєРѕР»РєР°"
+	desc = "РћР±С‹С‡РЅР°СЏ Р·Р°РєРѕР»РєР° РґР»СЏ РІРѕР»Рѕc, РѕРґРЅР°РєРѕ РІ СѓРјРµР»С‹С… СЂСѓРєР°С… РјРѕР¶РµС‚ РІС‹СЃС‚СѓРїР°С‚СЊ РІ СЂРѕР»Рё РѕС‚РјС‹С‡РєРё."
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "Hairpin"
 	self_weight = 0.1
@@ -195,8 +195,8 @@
 	var/broken_chance = 50
 
 /obj/item/lockpick/pro
-	name = "отмычка"
-	desc = "Профессиональный инструмент медвежатника."
+	name = "РѕС‚РјС‹С‡РєР°"
+	desc = "РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РјРµРґРІРµР¶Р°С‚РЅРёРєР°."
 	icon_state = "Professional_lockpick_kit"
 
 	lockpicking_time = 50
@@ -211,8 +211,8 @@
   ////////////////
  //LOCKPICK BOX//
 /obj/item/weapon/storage/bag/lockpicks
-	name = "коробок шпилек"
-	desc = "Маленькая довоенная коробочка со шпильками."
+	name = "РєРѕСЂРѕР±РѕРє С€РїРёР»РµРє"
+	desc = "РњР°Р»РµРЅСЊРєР°СЏ РґРѕРІРѕРµРЅРЅР°СЏ РєРѕСЂРѕР±РѕС‡РєР° СЃРѕ С€РїРёР»СЊРєР°РјРё."
 	icon = 'icons/fallout/objects/storage.dmi'
 	icon_state = "lockpickbox_closed"
 	item_state = "zippo"

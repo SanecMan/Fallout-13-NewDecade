@@ -87,7 +87,7 @@
 	H.set_status(status)
 	var/datum/f13_faction/F = get_faction_datum(H.social_faction)
 	if(F && F.flags & HAVE_FREQ)
-		H.add_memory("[F.name] используют частоту ([F.freq]) а их ключ шифрования ([F.encryption_key])")
+		H.add_memory("[F.name] РёСЃРїРѕР»СЊР·СѓСЋС‚ С‡Р°СЃС‚РѕС‚Сѓ ([F.freq]) Р° РёС… РєР»СЋС‡ С€РёС„СЂРѕРІР°РЅРёСЏ ([F.encryption_key])")
 		for(var/obj/item/device/radio/R in H.get_contents())
 			R.set_frequency(F.freq)
 			R.set_encryption(F.encryption_key)

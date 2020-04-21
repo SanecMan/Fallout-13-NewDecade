@@ -95,8 +95,8 @@
 	var/armor = ML.run_armor_check(affecting, "melee")
 	if(prob(75))
 		ML.apply_damage(rand(1,3), BRUTE, affecting, armor)
-		ML.visible_message("<span class='danger'>[name] кусает [ML]!</span>", \
-						"<span class='userdanger'>[name] кусает [ML]!</span>")
+		ML.visible_message("<span class='danger'>[name] РєСѓСЃР°РµС‚ [ML]!</span>", \
+						"<span class='userdanger'>[name] РєСѓСЃР°РµС‚ [ML]!</span>")
 		if(armor >= 2)
 			return
 		for(var/datum/disease/D in viruses)

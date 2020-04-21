@@ -32,7 +32,7 @@
 
 /obj/item/weapon/twohanded/baseball
 	name = "baseball bat"
-	desc = "Деревянный источник боли и веселья."
+	desc = "Р”РµСЂРµРІСЏРЅРЅС‹Р№ РёСЃС‚РѕС‡РЅРёРє Р±РѕР»Рё Рё РІРµСЃРµР»СЊСЏ."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "baseball0"
 	force = 5
@@ -154,7 +154,7 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/harpoon
-	name = "гарпун"
+	name = "РіР°СЂРїСѓРЅ"
 	desc = "A rusty spear-like instrument previously used in fishing, whaling and sealing - now used for robbing, raiding and manhunting."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "harpoon"
@@ -194,7 +194,7 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/twohanded/tribal_spear
-	name = "племенное копьё"
+	name = "РїР»РµРјРµРЅРЅРѕРµ РєРѕРїСЊС‘"
 	desc = "A haphazardly-constructed, yet still deadly weapon of an ancient design."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "tribalspear0"
@@ -209,7 +209,7 @@
 	armour_penetration = 10
 	materials = list(MAT_METAL=1150, MAT_WOOD=2075)
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	attack_verb = list("атакует", "тыкает", "протыкает", "режет")
+	attack_verb = list("Р°С‚Р°РєСѓРµС‚", "С‚С‹РєР°РµС‚", "РїСЂРѕС‚С‹РєР°РµС‚", "СЂРµР¶РµС‚")
 	sharpness = IS_SHARP
 	obj_integrity = 200
 	max_integrity = 200
@@ -237,7 +237,7 @@
 
 /obj/item/weapon/spear
 	name = "throwing spear"
-	desc = "Крайне смертоносное оружие, с допотопным дизайном."
+	desc = "РљСЂР°Р№РЅРµ СЃРјРµСЂС‚РѕРЅРѕСЃРЅРѕРµ РѕСЂСѓР¶РёРµ, СЃ РґРѕРїРѕС‚РѕРїРЅС‹Рј РґРёР·Р°Р№РЅРѕРј."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "spear"
 	force = 10
@@ -269,7 +269,7 @@
 	w_class = 2
 
 /obj/item/weapon/hammer
-	name = "молоток"
+	name = "РјРѕР»РѕС‚РѕРє"
 	desc = "A simple construction tool, that can also be used to bring the revenge upon those who kidnapped you and kept you in the basement for several years." //Old Boy (2003)
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "hammer"
@@ -298,7 +298,7 @@
 
 /obj/item/weapon/twohanded/largehammer
 	name = "large sledgehammer"
-	desc = "Большое, сильное, оружие РАЗРУШЕНИЯ."
+	desc = "Р‘РѕР»СЊС€РѕРµ, СЃРёР»СЊРЅРѕРµ, РѕСЂСѓР¶РёРµ Р РђР—Р РЈРЁР•РќРРЇ."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "largesledgehammer0"
 	flags = CONDUCT
@@ -314,7 +314,7 @@
 
 /obj/item/weapon/twohanded/superhammer
 	name = "super sledge"
-	desc = "Суперкувалда - Братство разработало эту хреновину.<br>Это снаряжено небольшим генератором для ускорения импулься."
+	desc = "РЎСѓРїРµСЂРєСѓРІР°Р»РґР° - Р‘СЂР°С‚СЃС‚РІРѕ СЂР°Р·СЂР°Р±РѕС‚Р°Р»Рѕ СЌС‚Сѓ С…СЂРµРЅРѕРІРёРЅСѓ.<br>Р­С‚Рѕ СЃРЅР°СЂСЏР¶РµРЅРѕ РЅРµР±РѕР»СЊС€РёРј РіРµРЅРµСЂР°С‚РѕСЂРѕРј РґР»СЏ СѓСЃРєРѕСЂРµРЅРёСЏ РёРјРїСѓР»СЊСЃСЏ."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "supersledgehammer0"
 	flags = CONDUCT
@@ -332,9 +332,9 @@
 	var/datum/effect_system/lightning_spread/s = new /datum/effect_system/lightning_spread
 	s.set_up(5, 1, target.loc)
 	s.start()
-	target.visible_message("<span class='danger'>[target.name] оглушен [src.name]!</span>", \
-		"<span class='userdanger'>Вы ощущаете мощный разряд прошедший через ваше тело и отправивший Вас в полёт!</span>", \
-		"<span class='italics'>Вы слышите электрический стрекот!</span>")
+	target.visible_message("<span class='danger'>[target.name] РѕРіР»СѓС€РµРЅ [src.name]!</span>", \
+		"<span class='userdanger'>Р’С‹ РѕС‰СѓС‰Р°РµС‚Рµ РјРѕС‰РЅС‹Р№ СЂР°Р·СЂСЏРґ РїСЂРѕС€РµРґС€РёР№ С‡РµСЂРµР· РІР°С€Рµ С‚РµР»Рѕ Рё РѕС‚РїСЂР°РІРёРІС€РёР№ Р’Р°СЃ РІ РїРѕР»С‘С‚!</span>", \
+		"<span class='italics'>Р’С‹ СЃР»С‹С€РёС‚Рµ СЌР»РµРєС‚СЂРёС‡РµСЃРєРёР№ СЃС‚СЂРµРєРѕС‚!</span>")
 	var/atom/throw_target = get_edge_target_turf(target, get_dir(src, get_step_away(target, src)))
 	target.throw_at(throw_target, 200, 4)
 	charged = 0
@@ -359,8 +359,8 @@
 		shock(L)
 
 /obj/item/weapon/pickaxe/rust
-	name = "ржавая кирка"
-	desc = "Эта кирка знала лучшие дни."
+	name = "СЂР¶Р°РІР°СЏ РєРёСЂРєР°"
+	desc = "Р­С‚Р° РєРёСЂРєР° Р·РЅР°Р»Р° Р»СѓС‡С€РёРµ РґРЅРё."
 	eng_name = "rusted pickaxe"
 	eng_desc = "This pickaxe looks a bit... rusty."
 	icon = 'icons/obj/mining.dmi'

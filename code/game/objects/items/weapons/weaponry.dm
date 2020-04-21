@@ -43,7 +43,7 @@
 	return SHAME
 
 /obj/item/weapon/claymore
-	name = "клеймор"
+	name = "РєР»РµР№РјРѕСЂ"
 	desc = "What are you standing around staring at this for? Get to killing!"
 	icon_state = "claymore"
 	item_state = "claymore"
@@ -178,8 +178,8 @@ var/highlander_claymores = 0
 	playsound(user, 'sound/items/Screwdriver2.ogg', 50, 1)
 
 /obj/item/weapon/katana
-	name = "японский меч"
-	desc = "Лезвие, дошедшее до нас через века, лезвие, которое идеально режет сыр."
+	name = "СЏРїРѕРЅСЃРєРёР№ РјРµС‡"
+	desc = "Р›РµР·РІРёРµ, РґРѕС€РµРґС€РµРµ РґРѕ РЅР°СЃ С‡РµСЂРµР· РІРµРєР°, Р»РµР·РІРёРµ, РєРѕС‚РѕСЂРѕРµ РёРґРµР°Р»СЊРЅРѕ СЂРµР¶РµС‚ СЃС‹СЂ."
 	icon_state = "katana"
 	item_state = "katana"
 	icon = 'icons/fallout/objects/melee.dmi'
@@ -198,7 +198,7 @@ var/highlander_claymores = 0
 	resistance_flags = FIRE_PROOF
 
 /obj/item/weapon/katana/chinese
-	name = "меч китайского офицера"
+	name = "РјРµС‡ РєРёС‚Р°Р№СЃРєРѕРіРѕ РѕС„РёС†РµСЂР°"
 	desc = "A grimy Chinese straight sword with a leather and bronze hilt. It was wielded by Chinese officers before the Great War."
 	icon_state = "chinese"
 	icon = 'icons/fallout/objects/melee.dmi'
@@ -213,8 +213,8 @@ var/highlander_claymores = 0
 	return(BRUTELOSS)
 
 /obj/item/weapon/wirerod
-	name = "арматура с проводами"
-	desc = "Арматура обмотанная проводами красного цвета."
+	name = "Р°СЂРјР°С‚СѓСЂР° СЃ РїСЂРѕРІРѕРґР°РјРё"
+	desc = "РђСЂРјР°С‚СѓСЂР° РѕР±РјРѕС‚Р°РЅРЅР°СЏ РїСЂРѕРІРѕРґР°РјРё РєСЂР°СЃРЅРѕРіРѕ С†РІРµС‚Р°."
 	icon_state = "wiredrod"
 	item_state = "rods"
 	flags = CONDUCT
@@ -253,7 +253,7 @@ var/highlander_claymores = 0
 
 
 /obj/item/weapon/throwing_star
-	name = "сюрикен"
+	name = "СЃСЋСЂРёРєРµРЅ"
 	desc = "An ancient weapon still used to this day due to it's ease of lodging itself into victim's body parts"
 	icon_state = "throwingstar"
 	item_state = "eshield0"
@@ -271,7 +271,7 @@ var/highlander_claymores = 0
 
 
 /obj/item/weapon/switchblade
-	name = "выкидной нож"
+	name = "РІС‹РєРёРґРЅРѕР№ РЅРѕР¶"
 	icon_state = "switchblade"
 	desc = "A sharp, concealable, spring-loaded knife."
 	icon = 'icons/fallout/objects/melee.dmi'
@@ -333,7 +333,7 @@ var/highlander_claymores = 0
 	return(OXYLOSS)
 
 /obj/item/weapon/cane
-	name = "трость"
+	name = "С‚СЂРѕСЃС‚СЊ"
 	desc = "A cane used by a true gentleman. Or a clown."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "cane"
@@ -359,14 +359,14 @@ var/highlander_claymores = 0
 	resistance_flags = FLAMMABLE
 
 /obj/item/weapon/staff/broom
-	name = "метла"
+	name = "РјРµС‚Р»Р°"
 	desc = "Used for sweeping, and flying into the night while cackling. Black cat not included."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "broom"
 	resistance_flags = FLAMMABLE
 
 /obj/item/weapon/staff/stick
-	name = "палка"
+	name = "РїР°Р»РєР°"
 	desc = "A great tool to drag someone else's drinks across the bar."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "stick"
@@ -409,7 +409,7 @@ var/highlander_claymores = 0
 	qdel(src)
 
 /obj/item/weapon/statuebust
-	name = "бюст"
+	name = "Р±СЋСЃС‚"
 	desc = "A priceless ancient marble bust, the kind that belongs in a museum." //or you can hit people with it
 	icon = 'icons/obj/statue.dmi'
 	icon_state = "bust"
@@ -451,7 +451,7 @@ var/highlander_claymores = 0
 	qdel(src)
 
 /obj/item/weapon/melee/baseball_bat
-	name = "биток"
+	name = "Р±РёС‚РѕРє"
 	desc = "There ain't a skull in the league that can withstand a swatter."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "baseball_bat"
@@ -464,7 +464,7 @@ var/highlander_claymores = 0
 	var/homerun_able = 0
 
 /obj/item/weapon/melee/baseball_bat/barbedbat
-	name = "биток с колючкой"
+	name = "Р±РёС‚РѕРє СЃ РєРѕР»СЋС‡РєРѕР№"
 	desc = "This is a long, smooth wooden bat, typically made of ash, for use in the sport of baseball. Under MLB regulations, a baseball bat cannot exceed 2.61 inches in diameter at the widest point, can be no longer than 42 inches, and must be a single solid piece. Bats found in the Commonwealth have a base weight of three pounds, approaching the weight of bats used in the early 20th century by players like Babe Ruth."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "barbedbat"
@@ -472,7 +472,7 @@ var/highlander_claymores = 0
 	throwforce = 16
 
 /obj/item/weapon/melee/baseball_bat/spikedbat
-	name = "биток с шипами"
+	name = "Р±РёС‚РѕРє СЃ С€РёРїР°РјРё"
 	desc = "This is a long, smooth wooden bat, typically made of ash, for use in the sport of baseball. Under MLB regulations, a baseball bat cannot exceed 2.61 inches in diameter at the widest point, can be no longer than 42 inches, and must be a single solid piece. Bats found in the Commonwealth have a base weight of three pounds, approaching the weight of bats used in the early 20th century by players like Babe Ruth."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "spikedbat"
@@ -480,7 +480,7 @@ var/highlander_claymores = 0
 	throwforce = 16
 
 /obj/item/weapon/melee/baseball_bat/bladedbat
-	name = "биток с лезвием"
+	name = "Р±РёС‚РѕРє СЃ Р»РµР·РІРёРµРј"
 	desc = "This is a long, smooth wooden bat, typically made of ash, for use in the sport of baseball. Under MLB regulations, a baseball bat cannot exceed 2.61 inches in diameter at the widest point, can be no longer than 42 inches, and must be a single solid piece. Bats found in the Commonwealth have a base weight of three pounds, approaching the weight of bats used in the early 20th century by players like Babe Ruth."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "bladedbat"
@@ -488,7 +488,7 @@ var/highlander_claymores = 0
 	throwforce = 20
 
 /obj/item/weapon/melee/baseball_bat/homerun
-	name = "особый биток"
+	name = "РѕСЃРѕР±С‹Р№ Р±РёС‚РѕРє"
 	desc = "This thing looks dangerous... Dangerously good at baseball, that is."
 	homerun_able = 1
 
@@ -521,7 +521,7 @@ var/highlander_claymores = 0
 		target.throw_at(throw_target, rand(1,2), 7, user)
 
 /obj/item/weapon/melee/baseball_bat/ablative
-	name = "металлический биток"
+	name = "РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р±РёС‚РѕРє"
 	desc = "This bat is made of highly reflective, highly armored material."
 	icon_state = "baseball_bat_metal"
 	item_state = "baseball_bat_metal"
@@ -538,37 +538,37 @@ var/highlander_claymores = 0
 	return 1
 
 /obj/item/weapon/melee/baseball_bat/roped
-	name = "биток с веревкой"
+	name = "Р±РёС‚РѕРє СЃ РІРµСЂРµРІРєРѕР№"
 	slot_flags = SLOT_BACK
 	icon_state = "baseball_bat_roped"
 
 /obj/item/weapon/melee/baseball_bat/ablative/roped
-	name = "металлический биток с веревкой"
+	name = "РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р±РёС‚РѕРє СЃ РІРµСЂРµРІРєРѕР№"
 	icon_state = "baseball_bat_metal_roped"
 	slot_flags = SLOT_BACK
 
 /obj/item/weapon/melee/baseball_bat/barbedbat/roped
-	name = "биток с колючкой и веревкой"
+	name = "Р±РёС‚РѕРє СЃ РєРѕР»СЋС‡РєРѕР№ Рё РІРµСЂРµРІРєРѕР№"
 	icon_state = "barbedbat_rope"
 	slot_flags = SLOT_BACK
 
 /obj/item/weapon/melee/baseball_bat/bladedbat/roped
-	name = "биток с лезвием и веревкой"
+	name = "Р±РёС‚РѕРє СЃ Р»РµР·РІРёРµРј Рё РІРµСЂРµРІРєРѕР№"
 	icon_state = "bladedbat_rope"
 	slot_flags = SLOT_BACK
 
 /obj/item/weapon/melee/baseball_bat/spikedbat/roped
-	name = "биток с шипами и веревкой"
+	name = "Р±РёС‚РѕРє СЃ С€РёРїР°РјРё Рё РІРµСЂРµРІРєРѕР№"
 	icon_state = "spikedbat_rope"
 	slot_flags = SLOT_BACK
 
 /obj/item/weapon/melee/baseball_bat/homerun/roped
-	name = "особый биток с веревкой"
+	name = "РѕСЃРѕР±С‹Р№ Р±РёС‚РѕРє СЃ РІРµСЂРµРІРєРѕР№"
 	icon_state = "baseball_bat_roped"
 	slot_flags = SLOT_BACK
 
 /obj/item/weapon/melee/flyswatter
-	name = "мухобойка"
+	name = "РјСѓС…РѕР±РѕР№РєР°"
 	desc = "Useful for killing insects of all sizes."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "flyswatter"

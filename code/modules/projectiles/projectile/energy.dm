@@ -1,5 +1,5 @@
 /obj/item/projectile/energy
-	name = "энергии"
+	name = "СЌРЅРµСЂРіРёРё"
 	icon_state = "spark"
 	damage = 0
 	damage_type = BURN
@@ -7,7 +7,7 @@
 
 
 /obj/item/projectile/energy/electrode
-	name = "электричества"
+	name = "СЌР»РµРєС‚СЂРёС‡РµСЃС‚РІР°"
 	icon_state = "spark"
 	color = "#FFFF00"
 	nodamage = 1

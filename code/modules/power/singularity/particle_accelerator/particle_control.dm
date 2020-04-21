@@ -288,14 +288,14 @@
 			else if(istype(W, /obj/item/stack/cable_coil))
 				var/obj/item/stack/cable_coil/CC = W
 				if(CC.use(1))
-					user.visible_message("[user.name] добавляет провода в [name].", \
-						"Вы добавили проводов.")
+					user.visible_message("[user.name] РґРѕР±Р°РІР»СЏРµС‚ РїСЂРѕРІРѕРґР° РІ [name].", \
+						"Р’С‹ РґРѕР±Р°РІРёР»Рё РїСЂРѕРІРѕРґРѕРІ.")
 					construction_state = PA_CONSTRUCTION_PANEL_OPEN
 					did_something = TRUE
 		if(PA_CONSTRUCTION_PANEL_OPEN)
 			if(istype(W, /obj/item/weapon/wirecutters))//TODO:Shock user if its on?
-				user.visible_message("[user.name] достает провода из [name].", \
-					"Вы достали провода.")
+				user.visible_message("[user.name] РґРѕСЃС‚Р°РµС‚ РїСЂРѕРІРѕРґР° РёР· [name].", \
+					"Р’С‹ РґРѕСЃС‚Р°Р»Рё РїСЂРѕРІРѕРґР°.")
 				construction_state = PA_CONSTRUCTION_UNWIRED
 				did_something = TRUE
 			else if(istype(W, /obj/item/weapon/screwdriver))

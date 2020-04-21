@@ -3,35 +3,35 @@
 #define CUM_TARGET_ANUS "anus"
 //god abondoned us
 /mob/living/simple_animal/hostile/deathclaw/funclaw
-	name = "Еблёготь"
-	desc = "Огромная рептилия с огромными мускулами и бритвенно острыми когтями. Очень агрессивное. Эй, почему оно так смотрит на мою задницу?"
+	name = "Р•Р±Р»С‘РіРѕС‚СЊ"
+	desc = "РћРіСЂРѕРјРЅР°СЏ СЂРµРїС‚РёР»РёСЏ СЃ РѕРіСЂРѕРјРЅС‹РјРё РјСѓСЃРєСѓР»Р°РјРё Рё Р±СЂРёС‚РІРµРЅРЅРѕ РѕСЃС‚СЂС‹РјРё РєРѕРіС‚СЏРјРё. РћС‡РµРЅСЊ Р°РіСЂРµСЃСЃРёРІРЅРѕРµ. Р­Р№, РїРѕС‡РµРјСѓ РѕРЅРѕ С‚Р°Рє СЃРјРѕС‚СЂРёС‚ РЅР° РјРѕСЋ Р·Р°РґРЅРёС†Сѓ?"
 	eng_name = "Fuckclaw"
 	eng_desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one seems to have a strange look in its eyes.."
 	var/pound_cooldown = 0
 	var/chosen_hole
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/bossraider
-	name = "Супер-Рейдер"
-	desc = "ВАЛЕРА ЕЖОВ!"
+	name = "РЎСѓРїРµСЂ-Р РµР№РґРµСЂ"
+	desc = "Р’РђР›Р•Р Рђ Р•Р–РћР’!"
 	eng_name = "Super-Raider"
 	eng_desc = "Valery Ejov!"
 	icon = 'icons/mob/raiderboss.dmi'
 	icon_state = "raider"
 	icon_dead = "raider_d"
-	attacktext = "бьёт с размаху"
+	attacktext = "Р±СЊС‘С‚ СЃ СЂР°Р·РјР°С…Сѓ"
 	eng_attacktext = "slashed"
 	maxHealth = 800
 	health = 800
 	speak_chance = 30
 	faction = list("raiders")
-	speak = list("ТЫ НЕ САПРЯЧЕШЬСЯ СКОТИНА!", "ГЛАЗ НА ЖОПУ НАТЯНУ!", "УМРИ! УМРИ!", "Я ХОЧУ ЖРАТЬ!", "Я ВЫЕБУ ТЕБЯ И ТВОЮ СЕМЬЮ, ПАСКУДА!", "ТВОЕЙ ЗАДНИЦЕ ПРИШЕЛ ПИЗДЕЦ!")
-	speak_emote = list("орёт", "кричит")
+	speak = list("РўР« РќР• РЎРђРџР РЇР§Р•РЁР¬РЎРЇ РЎРљРћРўРРќРђ!", "Р“Р›РђР— РќРђ Р–РћРџРЈ РќРђРўРЇРќРЈ!", "РЈРњР Р! РЈРњР Р!", "РЇ РҐРћР§РЈ Р–Р РђРўР¬!", "РЇ Р’Р«Р•Р‘РЈ РўР•Р‘РЇ Р РўР’РћР® РЎР•РњР¬Р®, РџРђРЎРљРЈР”Рђ!", "РўР’РћР•Р™ Р—РђР”РќРР¦Р• РџР РРЁР•Р› РџРР—Р”Р•Р¦!")
+	speak_emote = list("РѕСЂС‘С‚", "РєСЂРёС‡РёС‚")
 	loot = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 3, /obj/effect/gibspawner/human = 1)
 	XP = 25
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/bossraider/karlik
-	name = "Рейдер-Карлик"
-	desc = "ЯРОШ КРУШИТЬ!"
+	name = "Р РµР№РґРµСЂ-РљР°СЂР»РёРє"
+	desc = "РЇР РћРЁ РљР РЈРЁРРўР¬!"
 	icon_state = "karlik"
 	icon_dead = "raider_d"
 	maxHealth = 600
@@ -120,24 +120,24 @@
 	switch(chosen_hole)
 		if(CUM_TARGET_THROAT)
 			if(M.has_mouth() && M.mouth_is_free())
-				message = "просовывает свой огромный ящерский член в глотку [M] и кончает."
+				message = "РїСЂРѕСЃРѕРІС‹РІР°РµС‚ СЃРІРѕР№ РѕРіСЂРѕРјРЅС‹Р№ СЏС‰РµСЂСЃРєРёР№ С‡Р»РµРЅ РІ РіР»РѕС‚РєСѓ [M] Рё РєРѕРЅС‡Р°РµС‚."
 				M.reagents.add_reagent("cum", rand(9,15))
 			else
-				message = "кончает на лицо [M]."
+				message = "РєРѕРЅС‡Р°РµС‚ РЅР° Р»РёС†Рѕ [M]."
 		if(CUM_TARGET_VAGINA)
 			if(M.has_vagina())
-				message = "пробивает писечку [M] и заполняет её спермой."
+				message = "РїСЂРѕР±РёРІР°РµС‚ РїРёСЃРµС‡РєСѓ [M] Рё Р·Р°РїРѕР»РЅСЏРµС‚ РµС‘ СЃРїРµСЂРјРѕР№."
 				M.reagents.add_reagent("cum", rand(8,12))
 			else
-				message = "кончает на живот [M]."
+				message = "РєРѕРЅС‡Р°РµС‚ РЅР° Р¶РёРІРѕС‚ [M]."
 		if(CUM_TARGET_ANUS)
 			if(M.has_anus())
-				message = "трахает своим сочным членом [M] в жопу и наполняет её густой спермой Когтя Смерти."
+				message = "С‚СЂР°С…Р°РµС‚ СЃРІРѕРёРј СЃРѕС‡РЅС‹Рј С‡Р»РµРЅРѕРј [M] РІ Р¶РѕРїСѓ Рё РЅР°РїРѕР»РЅСЏРµС‚ РµС‘ РіСѓСЃС‚РѕР№ СЃРїРµСЂРјРѕР№ РљРѕРіС‚СЏ РЎРјРµСЂС‚Рё."
 				M.reagents.add_reagent("cum", rand(8,12))
 			else
-				message = "кончает на попку [M]."
+				message = "РєРѕРЅС‡Р°РµС‚ РЅР° РїРѕРїРєСѓ [M]."
 		else
-			message = "кончает на пол!"
+			message = "РєРѕРЅС‡Р°РµС‚ РЅР° РїРѕР»!"
 
 	playsound(loc, "honk/sound/interactions/clawcum[rand(1, 2)].ogg", 70, 1, -1)
 	visible_message("<font color=purple><b>\[src]</b> [message]</font>")
@@ -150,16 +150,16 @@
 
 	sleep(20)
 	playsound(loc, "honk/sound/interactions/slap.ogg", 70, 1, -1)
-	visible_message("<span class='danger'>\The [src]</b> шлёпает [M] по заднице!</span>", \
-			"<span class='userdanger'>\The [src]</b> шлёпает [M] по заднице!</span>", null, COMBAT_MESSAGE_RANGE)
+	visible_message("<span class='danger'>\The [src]</b> С€Р»С‘РїР°РµС‚ [M] РїРѕ Р·Р°РґРЅРёС†Рµ!</span>", \
+			"<span class='userdanger'>\The [src]</b> С€Р»С‘РїР°РµС‚ [M] РїРѕ Р·Р°РґРЅРёС†Рµ!</span>", null, COMBAT_MESSAGE_RANGE)
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/proc/tearSlot(mob/living/M, slot)
 	var/obj/item/W = M.get_item_by_slot(slot)
 	if(W)
 		M.drop_item_v(W)
 		playsound(loc, "sound/items/poster_ripped.ogg", 70, 1, -1)
-		visible_message("<span class='danger'>[src]</b> рвёт одежду на [M]!</span>", \
-				"<span class='userdanger'>\The [src]</b> рвёт одежду на [M]!</span>", null, COMBAT_MESSAGE_RANGE)
+		visible_message("<span class='danger'>[src]</b> СЂРІС‘С‚ РѕРґРµР¶РґСѓ РЅР° [M]!</span>", \
+				"<span class='userdanger'>\The [src]</b> СЂРІС‘С‚ РѕРґРµР¶РґСѓ РЅР° [M]!</span>", null, COMBAT_MESSAGE_RANGE)
 		return TRUE
 	return FALSE
 
@@ -177,24 +177,24 @@
 	switch(chosen_hole)
 		if(CUM_TARGET_THROAT)
 			if(M.has_mouth() && M.mouth_is_free())
-				message = "просовывает свой огромный клоунский член в глотку [M] и кончает."
+				message = "РїСЂРѕСЃРѕРІС‹РІР°РµС‚ СЃРІРѕР№ РѕРіСЂРѕРјРЅС‹Р№ РєР»РѕСѓРЅСЃРєРёР№ С‡Р»РµРЅ РІ РіР»РѕС‚РєСѓ [M] Рё РєРѕРЅС‡Р°РµС‚."
 				M.reagents.add_reagent("cum", rand(9,15))
 			else
-				message = "кончает на лицо [M]."
+				message = "РєРѕРЅС‡Р°РµС‚ РЅР° Р»РёС†Рѕ [M]."
 		if(CUM_TARGET_VAGINA)
 			if(M.has_vagina())
-				message = "пробивает писечку [M] и заполняет её спермой."
+				message = "РїСЂРѕР±РёРІР°РµС‚ РїРёСЃРµС‡РєСѓ [M] Рё Р·Р°РїРѕР»РЅСЏРµС‚ РµС‘ СЃРїРµСЂРјРѕР№."
 				M.reagents.add_reagent("cum", rand(8,12))
 			else
-				message = "кончает на живот [M]."
+				message = "РєРѕРЅС‡Р°РµС‚ РЅР° Р¶РёРІРѕС‚ [M]."
 		if(CUM_TARGET_ANUS)
 			if(M.has_anus())
-				message = "трахает своим сочным членом [M] в жопу и наполняет её густой спермой Клоуна. ХОНК."
+				message = "С‚СЂР°С…Р°РµС‚ СЃРІРѕРёРј СЃРѕС‡РЅС‹Рј С‡Р»РµРЅРѕРј [M] РІ Р¶РѕРїСѓ Рё РЅР°РїРѕР»РЅСЏРµС‚ РµС‘ РіСѓСЃС‚РѕР№ СЃРїРµСЂРјРѕР№ РљР»РѕСѓРЅР°. РҐРћРќРљ."
 				M.reagents.add_reagent("cum", rand(8,12))
 			else
-				message = "кончает на попку [M]."
+				message = "РєРѕРЅС‡Р°РµС‚ РЅР° РїРѕРїРєСѓ [M]."
 		else
-			message = "кончает на пол!"
+			message = "РєРѕРЅС‡Р°РµС‚ РЅР° РїРѕР»!"
 
 	playsound(loc, "honk/sound/interactions/clawcum[rand(1, 2)].ogg", 70, 1, -1)
 	visible_message("<font color=purple><b>\[src]</b> [message]</font>")
@@ -207,5 +207,5 @@
 
 	sleep(20)
 	playsound(loc, "honk/sound/interactions/slap.ogg", 70, 1, -1)
-	visible_message("<span class='danger'>\The [src]</b> шлёпает [M] по заднице!</span>", \
-			"<span class='userdanger'>\The [src]</b> шлёпает [M] по заднице!</span>", null, COMBAT_MESSAGE_RANGE)
+	visible_message("<span class='danger'>\The [src]</b> С€Р»С‘РїР°РµС‚ [M] РїРѕ Р·Р°РґРЅРёС†Рµ!</span>", \
+			"<span class='userdanger'>\The [src]</b> С€Р»С‘РїР°РµС‚ [M] РїРѕ Р·Р°РґРЅРёС†Рµ!</span>", null, COMBAT_MESSAGE_RANGE)

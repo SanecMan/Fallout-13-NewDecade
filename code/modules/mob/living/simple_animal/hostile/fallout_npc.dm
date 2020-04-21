@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/vault
-	name = "житель убежища"
-	desc = "Просто житель убежища."
+	name = "Р¶РёС‚РµР»СЊ СѓР±РµР¶РёС‰Р°"
+	desc = "РџСЂРѕСЃС‚Рѕ Р¶РёС‚РµР»СЊ СѓР±РµР¶РёС‰Р°."
 	eng_name = "Vault Dweller"
 	eng_desc = "Just a Vault Dweller"
 	icon_state = "vault_dweller"
@@ -21,7 +21,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "бьёт"
+	attacktext = "Р±СЊС‘С‚"
 	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
@@ -32,8 +32,8 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("Агась!", "Я хочу кушац!", "Смотритель мудень!", "Будешь ядерку?")
-	speak_emote = "говорит,"
+	speak = list("РђРіР°СЃСЊ!", "РЇ С…РѕС‡Сѓ РєСѓС€Р°С†!", "РЎРјРѕС‚СЂРёС‚РµР»СЊ РјСѓРґРµРЅСЊ!", "Р‘СѓРґРµС€СЊ СЏРґРµСЂРєСѓ?")
+	speak_emote = "РіРѕРІРѕСЂРёС‚,"
 	speak_chance = 1
 	XP = 10
 
@@ -68,7 +68,7 @@
 /mob/living/simple_animal/hostile/vault/dweller/Aggro()
 	..()
 	summon_backup(15)
-	say("ПОМОГИТЕ!!")
+	say("РџРћРњРћР“РРўР•!!")
 
 /mob/living/simple_animal/hostile/vault/dweller/dweller1
 	icon_state = "vault_dweller1"
@@ -101,8 +101,8 @@
 	icon_gib = "vault_dweller5"
 
 /mob/living/simple_animal/hostile/vault/security
-	name = "охрана убежища"
-	desc = "Грозный мужик с дубинкой."
+	name = "РѕС…СЂР°РЅР° СѓР±РµР¶РёС‰Р°"
+	desc = "Р“СЂРѕР·РЅС‹Р№ РјСѓР¶РёРє СЃ РґСѓР±РёРЅРєРѕР№."
 	eng_name = "Vault Security"
 	eng_desc = "Just a Vault Security"
 	icon_state = "vault_dweller_sec"
@@ -120,15 +120,15 @@
 	rapid = 1
 	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
-	speak = list("Как же хочется на поверхность...", "Смотритель наше спасение!", "Скоро конец смены...", "Смотритель всегда прав. Так говорят.")
-	speak_emote = "говорит,"
+	speak = list("РљР°Рє Р¶Рµ С…РѕС‡РµС‚СЃСЏ РЅР° РїРѕРІРµСЂС…РЅРѕСЃС‚СЊ...", "РЎРјРѕС‚СЂРёС‚РµР»СЊ РЅР°С€Рµ СЃРїР°СЃРµРЅРёРµ!", "РЎРєРѕСЂРѕ РєРѕРЅРµС† СЃРјРµРЅС‹...", "РЎРјРѕС‚СЂРёС‚РµР»СЊ РІСЃРµРіРґР° РїСЂР°РІ. РўР°Рє РіРѕРІРѕСЂСЏС‚.")
+	speak_emote = "РіРѕРІРѕСЂРёС‚,"
 	speak_chance = 1
 	XP = 20
 
 /mob/living/simple_animal/hostile/vault/security/Aggro()
 	..()
 	summon_backup(15)
-	say("ОТРЯД СМЕНЫ БРАВО СРОЧНО КО МНЕ!")
+	say("РћРўР РЇР” РЎРњР•РќР« Р‘Р РђР’Рћ РЎР РћР§РќРћ РљРћ РњРќР•!")
 
 /obj/effect/mob_spawn/human/corpse/vault/security
 	name = "Vault Security"
@@ -145,7 +145,7 @@
 
 /mob/living/simple_animal/hostile/enclave
 	name = "Enclave"
-	desc = "Кто эти люди?"
+	desc = "РљС‚Рѕ СЌС‚Рё Р»СЋРґРё?"
 	eng_desc = "Just an Enclave"
 	icon_state = "enclave_scientist"
 	icon_living = "enclave_scientist"
@@ -156,7 +156,7 @@
 	respawn_time_of_mob = 900000000
 	response_help = "pokes"
 	response_disarm = "shoves"
-	response_harm = "бьет"
+	response_harm = "Р±СЊРµС‚"
 	speed = 1
 	stat_attack = 1
 	robust_searching = 1
@@ -165,7 +165,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "бьет"
+	attacktext = "Р±СЊРµС‚"
 	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
@@ -176,8 +176,8 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("Агась!", "Где ваша силовая броня!", "ДЕБИЛ!", "И-ДИ-ОТ!")
-	speak_emote = "говорит,"
+	speak = list("РђРіР°СЃСЊ!", "Р“РґРµ РІР°С€Р° СЃРёР»РѕРІР°СЏ Р±СЂРѕРЅСЏ!", "Р”Р•Р‘РР›!", "Р-Р”Р-РћРў!")
+	speak_emote = "РіРѕРІРѕСЂРёС‚,"
 	speak_chance = 1
 	XP = 15
 
@@ -191,7 +191,7 @@
 	..()
 
 /obj/effect/mob_spawn/human/corpse/enclave
-	name = "учёный анклава"
+	name = "СѓС‡С‘РЅС‹Р№ Р°РЅРєР»Р°РІР°"
 	eng_name = "Enclave scientist"
 	uniform = /obj/item/clothing/under/f13/enclave_officer
 	suit = /obj/item/clothing/suit/radiation/enclave
@@ -204,8 +204,8 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/enclave/scientist
-	name = "учёный анклава"
-	desc = "Просто учёный."
+	name = "СѓС‡С‘РЅС‹Р№ Р°РЅРєР»Р°РІР°"
+	desc = "РџСЂРѕСЃС‚Рѕ СѓС‡С‘РЅС‹Р№."
 	eng_name = "Enclave scientist"
 	eng_desc = "Just an Enclave scientist"
 	minimum_distance = 10
@@ -216,11 +216,11 @@
 /mob/living/simple_animal/hostile/enclave/scientist/Aggro()
 	..()
 	summon_backup(15)
-	say("ПОМОГИТЕ!!")
+	say("РџРћРњРћР“РРўР•!!")
 
 /mob/living/simple_animal/hostile/enclave/soldier
-	name = "патрульный анклава"
-	desc = "Выглядит очень грозно!"
+	name = "РїР°С‚СЂСѓР»СЊРЅС‹Р№ Р°РЅРєР»Р°РІР°"
+	desc = "Р’С‹РіР»СЏРґРёС‚ РѕС‡РµРЅСЊ РіСЂРѕР·РЅРѕ!"
 	eng_name = "Enclave Soldier"
 	eng_desc = "Just a Enclave Soldier"
 	icon_state = "enclave_soldier"
@@ -241,8 +241,8 @@
 	XP = 80
 
 /mob/living/simple_animal/hostile/enclave/soldier_ca
-	name = "рядовой анклава"
-	desc = "Это судя по всему, рядовой."
+	name = "СЂСЏРґРѕРІРѕР№ Р°РЅРєР»Р°РІР°"
+	desc = "Р­С‚Рѕ СЃСѓРґСЏ РїРѕ РІСЃРµРјСѓ, СЂСЏРґРѕРІРѕР№."
 	eng_name = "Enclave Private Soldier"
 	eng_desc = "Just a Enclave Soldier"
 	icon_state = "enclave_soldier_ca"
@@ -285,7 +285,7 @@
 
 /mob/living/simple_animal/hostile/bs
 	name = "BS"
-	desc = "Вы уверены, будь у вас Тостер, он бы догнал и трахнул вас, чтобы заполучить его."
+	desc = "Р’С‹ СѓРІРµСЂРµРЅС‹, Р±СѓРґСЊ Сѓ РІР°СЃ РўРѕСЃС‚РµСЂ, РѕРЅ Р±С‹ РґРѕРіРЅР°Р» Рё С‚СЂР°С…РЅСѓР» РІР°СЃ, С‡С‚РѕР±С‹ Р·Р°РїРѕР»СѓС‡РёС‚СЊ РµРіРѕ."
 	eng_desc = "You sure, if you have toaster, he will fuck you, to take it from your dead body."
 	icon_state = "bs_knight"
 	icon_living = "bs_knight"
@@ -307,7 +307,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "бьет"
+	attacktext = "Р±СЊРµС‚"
 	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
@@ -318,8 +318,8 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("Все знают как управлять людьми, но не каждая обезьяна знает как собрать плазменную винтовку.", "Semper Invicta!", "Да прибудет с тобой сталь!")
-	speak_emote = "говорит,"
+	speak = list("Р’СЃРµ Р·РЅР°СЋС‚ РєР°Рє СѓРїСЂР°РІР»СЏС‚СЊ Р»СЋРґСЊРјРё, РЅРѕ РЅРµ РєР°Р¶РґР°СЏ РѕР±РµР·СЊСЏРЅР° Р·РЅР°РµС‚ РєР°Рє СЃРѕР±СЂР°С‚СЊ РїР»Р°Р·РјРµРЅРЅСѓСЋ РІРёРЅС‚РѕРІРєСѓ.", "Semper Invicta!", "Р”Р° РїСЂРёР±СѓРґРµС‚ СЃ С‚РѕР±РѕР№ СЃС‚Р°Р»СЊ!")
+	speak_emote = "РіРѕРІРѕСЂРёС‚,"
 	speak_chance = 1
 	XP = 30
 
@@ -333,7 +333,7 @@
 	..()
 
 /obj/effect/mob_spawn/human/corpse/bs
-	name = "рыцарь братства"
+	name = "СЂС‹С†Р°СЂСЊ Р±СЂР°С‚СЃС‚РІР°"
 	eng_name = "Brotherhood Knight"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/brotherhood_armor
@@ -346,8 +346,8 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/bs/knight
-	name = "рыцарь братства"
-	desc = "Рыцарь братства. Бесполезный и медлительный идиот."
+	name = "СЂС‹С†Р°СЂСЊ Р±СЂР°С‚СЃС‚РІР°"
+	desc = "Р С‹С†Р°СЂСЊ Р±СЂР°С‚СЃС‚РІР°. Р‘РµСЃРїРѕР»РµР·РЅС‹Р№ Рё РјРµРґР»РёС‚РµР»СЊРЅС‹Р№ РёРґРёРѕС‚."
 	eng_desc = "Just a BS Knight"
 	eng_name = "Brotherhood Knight"
 	icon_state = "bs_knight"
@@ -366,8 +366,8 @@
 	XP = 30
 
 /mob/living/simple_animal/hostile/bs/paladin
-	name = "паладин братства"
-	desc = "Чуть более опаснее рыцаря."
+	name = "РїР°Р»Р°РґРёРЅ Р±СЂР°С‚СЃС‚РІР°"
+	desc = "Р§СѓС‚СЊ Р±РѕР»РµРµ РѕРїР°СЃРЅРµРµ СЂС‹С†Р°СЂСЏ."
 	eng_name = "BS Paladin"
 	eng_desc = "Just a BS Paladin"
 	icon_state = "bs_paladin"
@@ -388,7 +388,7 @@
 	XP = 70
 
 /obj/effect/mob_spawn/human/corpse/bs/paladin
-	name = "паладин братства"
+	name = "РїР°Р»Р°РґРёРЅ Р±СЂР°С‚СЃС‚РІР°"
 	eng_name = "BS Paladin"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
@@ -421,7 +421,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "бьет"
+	attacktext = "Р±СЊРµС‚"
 	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
@@ -535,7 +535,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "бьет"
+	attacktext = "Р±СЊРµС‚"
 	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
@@ -547,7 +547,7 @@
 	status_flags = CANPUSH
 	del_on_death = 1
 	speak = list("Ave, true to Caesar.", "True to Caesar.", "Ave, Amicus.", "The new slave girls are quite beautiful.", "Give me cause, Profligate.", "Degenerates like you belong on a cross.")
-	speak_emote = "говорит,"
+	speak_emote = "РіРѕРІРѕСЂРёС‚,"
 	speak_chance = 1
 	XP = 20
 
@@ -565,8 +565,8 @@
 	..()
 
 /obj/effect/mob_spawn/human/corpse/legion
-	name = "прайм легиона"
-	desc = "Просто типа умны дегенерат."
+	name = "РїСЂР°Р№Рј Р»РµРіРёРѕРЅР°"
+	desc = "РџСЂРѕСЃС‚Рѕ С‚РёРїР° СѓРјРЅС‹ РґРµРіРµРЅРµСЂР°С‚."
 	eng_name = "Legion Prime"
 	eng_desc = "Just a Legion Prime"
 	uniform = /obj/item/clothing/under/f13/rag
@@ -580,8 +580,8 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/legion/prime
-	name = "прайм легиона"
-	desc = "Просто типа умны дегенерат."
+	name = "РїСЂР°Р№Рј Р»РµРіРёРѕРЅР°"
+	desc = "РџСЂРѕСЃС‚Рѕ С‚РёРїР° СѓРјРЅС‹ РґРµРіРµРЅРµСЂР°С‚."
 	eng_name = "Legion Prime"
 	eng_desc = "Just a Legion Prime"
 	icon_state = "legion_prime"
@@ -601,7 +601,7 @@
 	XP = 20
 
 /mob/living/simple_animal/hostile/legion/decan
-	name = "декан легиона"
+	name = "РґРµРєР°РЅ Р»РµРіРёРѕРЅР°"
 	eng_name = "Legion Decan"
 	desc = "Just a Legion Decan"
 	icon_state = "legion_decan"
@@ -623,7 +623,7 @@
 	XP = 30
 
 /obj/effect/mob_spawn/human/corpse/legion/decan
-	name = "декан легиона"
+	name = "РґРµРєР°РЅ Р»РµРіРёРѕРЅР°"
 	eng_name = "Legion Decan"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
@@ -636,8 +636,8 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/raider
-	name = "Неизвестная личность (Рейдер)"
-	desc = "Просто тупой рейдер."
+	name = "РќРµРёР·РІРµСЃС‚РЅР°СЏ Р»РёС‡РЅРѕСЃС‚СЊ (Р РµР№РґРµСЂ)"
+	desc = "РџСЂРѕСЃС‚Рѕ С‚СѓРїРѕР№ СЂРµР№РґРµСЂ."
 	eng_name = "Unknown (Raider)"
 	eng_desc = "Yet another stupid raider."
 	icon_state = "firefighter_raider"
@@ -662,7 +662,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 20
 	melee_damage_upper = 30
-	attacktext = "наносит удар"
+	attacktext = "РЅР°РЅРѕСЃРёС‚ СѓРґР°СЂ"
 	eng_attacktext = "hits"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
@@ -673,8 +673,8 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("ЭЙ, СУКА, СЮДА ИДИ!", "Испугался? ДА ТОЧНО ИСПУГАЛСЯ!.", "ДОЛБОЕБИНА, СЮДА ИДИ!", "Я МОГУ ДЕЛАТЬ ЭТО ВЕСЬ СУКА ДЕНЬ!", "Я делал это сотни раз, думаешь этот будет иначе?")
-	speak_emote = list("орёт", "кричит")
+	speak = list("Р­Р™, РЎРЈРљРђ, РЎР®Р”Рђ РР”Р!", "РСЃРїСѓРіР°Р»СЃСЏ? Р”Рђ РўРћР§РќРћ РРЎРџРЈР“РђР›РЎРЇ!.", "Р”РћР›Р‘РћР•Р‘РРќРђ, РЎР®Р”Рђ РР”Р!", "РЇ РњРћР“РЈ Р”Р•Р›РђРўР¬ Р­РўРћ Р’Р•РЎР¬ РЎРЈРљРђ Р”Р•РќР¬!", "РЇ РґРµР»Р°Р» СЌС‚Рѕ СЃРѕС‚РЅРё СЂР°Р·, РґСѓРјР°РµС€СЊ СЌС‚РѕС‚ Р±СѓРґРµС‚ РёРЅР°С‡Рµ?")
+	speak_emote = list("РѕСЂС‘С‚", "РєСЂРёС‡РёС‚")
 	speak_chance = 2
 	XP = 15
 
@@ -692,7 +692,7 @@
 	..()
 
 /obj/effect/mob_spawn/human/corpse/raider
-	name = "Рейдер"
+	name = "Р РµР№РґРµСЂ"
 	eng_name = "raider"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/tribal
@@ -710,7 +710,7 @@
 	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
 		say("DIE, DIE, DIE!!!")
 	else
-		say("УМРИ, УМРИ, УМРИ!!!")
+		say("РЈРњР Р, РЈРњР Р, РЈРњР Р!!!")
 
 /mob/living/simple_animal/hostile/raider/firefighter
 	icon_state = "firefighter_raider"

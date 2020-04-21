@@ -101,7 +101,7 @@ Note: Must be placed west/left of and R&D console to function.
 			return 1
 
 		var/obj/item/stack/sheet/stack = O
-		var/amount = round(input("Сколько пластин материала вы хотите вставить?") as num)//No decimals
+		var/amount = round(input("РЎРєРѕР»СЊРєРѕ РїР»Р°СЃС‚РёРЅ РјР°С‚РµСЂРёР°Р»Р° РІС‹ С…РѕС‚РёС‚Рµ РІСЃС‚Р°РІРёС‚СЊ?") as num)//No decimals
 		if(!in_range(src, stack) || !user.Adjacent(src))
 			return
 		var/amount_inserted = materials.insert_stack(O,amount)
@@ -111,7 +111,7 @@ Note: Must be placed west/left of and R&D console to function.
 			var/stack_name = stack.name
 			busy = 1
 			use_power(max(1000, (MINERAL_MATERIAL_AMOUNT*amount_inserted/10)))
-			to_chat(user, "<span class='notice'>Вы добавили [amount_inserted] пластин в [src.name].</span>")
+			to_chat(user, "<span class='notice'>Р’С‹ РґРѕР±Р°РІРёР»Рё [amount_inserted] РїР»Р°СЃС‚РёРЅ РІ [src.name].</span>")
 			add_overlay("protolathe_[stack_name]")
 			sleep(10)
 			overlays -= "protolathe_[stack_name]"
@@ -119,7 +119,7 @@ Note: Must be placed west/left of and R&D console to function.
 		updateUsrDialog()
 
 	else if(user.a_intent != INTENT_HARM)
-		to_chat(user, "<span class='warning'>Вы не можете вставить этот предмет в [name]!</span>")
+		to_chat(user, "<span class='warning'>Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ РІСЃС‚Р°РІРёС‚СЊ СЌС‚РѕС‚ РїСЂРµРґРјРµС‚ РІ [name]!</span>")
 		return 1
 	else
 		return 0

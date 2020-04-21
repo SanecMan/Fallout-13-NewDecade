@@ -1,6 +1,6 @@
 /obj/structure/decoration_f13/pole
-	name = "столб"
-	desc = "Длинный столб с проводами..."
+	name = "СЃС‚РѕР»Р±"
+	desc = "Р”Р»РёРЅРЅС‹Р№ СЃС‚РѕР»Р± СЃ РїСЂРѕРІРѕРґР°РјРё..."
 	eng_desc = "Tall pole with wires..."
 	icon = 'icons/fallout/machines/64x96.dmi'
 	icon_state = "pole"

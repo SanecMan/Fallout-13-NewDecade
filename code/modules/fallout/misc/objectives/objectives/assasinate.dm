@@ -1,8 +1,8 @@
 //Fallout 13 - We work in the dark, to serve the light. We are Assassins.
 
 /datum/f13_objective/assassinate
-	name = "Убийство в большом городе"
-	desc = "Вас наняли, чтобы разобраться с одной персоной. Вам не сказали причин, лишь имя."
+	name = "РЈР±РёР№СЃС‚РІРѕ РІ Р±РѕР»СЊС€РѕРј РіРѕСЂРѕРґРµ"
+	desc = "Р’Р°СЃ РЅР°РЅСЏР»Рё, С‡С‚РѕР±С‹ СЂР°Р·РѕР±СЂР°С‚СЊСЃСЏ СЃ РѕРґРЅРѕР№ РїРµСЂСЃРѕРЅРѕР№. Р’Р°Рј РЅРµ СЃРєР°Р·Р°Р»Рё РїСЂРёС‡РёРЅ, Р»РёС€СЊ РёРјСЏ."
 	kind = BOTH
 
 	check_mob(mob/living/carbon/human/H)
@@ -31,7 +31,7 @@
 			CRASH("Same minds for assassinate objective")
 		data["target"] = target
 		data["target_rank"] = target.assigned_role
-		data["custom_desc"] = "Ваша цель <b>%target%</b>, по профессии <b>%target_rank%</b>"
+		data["custom_desc"] = "Р’Р°С€Р° С†РµР»СЊ <b>%target%</b>, РїРѕ РїСЂРѕС„РµСЃСЃРёРё <b>%target_rank%</b>"
 		..()
 
 	assignto_faction(datum/f13_faction/F, var/list/data = list())
@@ -42,7 +42,7 @@
 		var/datum/mind/target = mob.mind
 		data["target"] = target
 		data["target_rank"] = target.assigned_role
-		data["custom_desc"] = "Ваша цель <b>%target%</b>, по профессии <b>%target_rank%</b>"
+		data["custom_desc"] = "Р’Р°С€Р° С†РµР»СЊ <b>%target%</b>, РїРѕ РїСЂРѕС„РµСЃСЃРёРё <b>%target_rank%</b>"
 		..()
 
 	check_complete(var/datum/objective_holder/holder)

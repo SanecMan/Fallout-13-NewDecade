@@ -1,6 +1,6 @@
 /*
   /////////////////////////////////////////////////////////////////////
- //Ебал я лопатить вам всю систему стрельбы, так что пока будет так //
+ //Р•Р±Р°Р» СЏ Р»РѕРїР°С‚РёС‚СЊ РІР°Рј РІСЃСЋ СЃРёСЃС‚РµРјСѓ СЃС‚СЂРµР»СЊР±С‹, С‚Р°Рє С‡С‚Рѕ РїРѕРєР° Р±СѓРґРµС‚ С‚Р°Рє //
 /obj/item/weapon/gun/ballistic/shotgun/attackby(obj/item/A, mob/user, params)
 	if(istype(A, /obj/item/ammo_casing/shotgun))
 		if(magazine.attackby(A, user, params, 1))

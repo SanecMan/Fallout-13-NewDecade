@@ -1,7 +1,7 @@
 //Fallout 13 primary vehicle
 
 /obj/vehicle/fuel/motorcycle
-	name = "мотоцикл"
+	name = "РјРѕС‚РѕС†РёРєР»"
 	desc = "Wanderer Motors LLC."
 	eng_name = "motorcycle"
 	eng_desc = "Wanderer Motors LLC."
@@ -43,8 +43,8 @@
 	cover.layer = ABOVE_MOB_LAYER
 
 /obj/item/key/motorcycle
-	name = "ключи от мотоцикла"
-	desc = "Кольцо с ключиком.<br>При осмотре, вы понимаете что это ключ от мотоцикла."
+	name = "РєР»СЋС‡Рё РѕС‚ РјРѕС‚РѕС†РёРєР»Р°"
+	desc = "РљРѕР»СЊС†Рѕ СЃ РєР»СЋС‡РёРєРѕРј.<br>РџСЂРё РѕСЃРјРѕС‚СЂРµ, РІС‹ РїРѕРЅРёРјР°РµС‚Рµ С‡С‚Рѕ СЌС‚Рѕ РєР»СЋС‡ РѕС‚ РјРѕС‚РѕС†РёРєР»Р°."
 	eng_name = "motorcycle key"
 	eng_desc = "A keyring with a small steel key.<br>By the look of the key cuts it likely belongs to a motorcycle."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
@@ -56,30 +56,30 @@
 //Motorcycle subtypes with different skins
 
 /obj/vehicle/fuel/motorcycle/rusty
-	name = "ржавый мотоцикл"
-	desc = "Очень старый и очень ржавый мотоцикл. <br>Однако, он еще на ходу."
+	name = "СЂР¶Р°РІС‹Р№ РјРѕС‚РѕС†РёРєР»"
+	desc = "РћС‡РµРЅСЊ СЃС‚Р°СЂС‹Р№ Рё РѕС‡РµРЅСЊ СЂР¶Р°РІС‹Р№ РјРѕС‚РѕС†РёРєР». <br>РћРґРЅР°РєРѕ, РѕРЅ РµС‰Рµ РЅР° С…РѕРґСѓ."
 	eng_name = "rusty motorcycle"
 	eng_desc = "A very old, weathered motorcycle.<br>Somehow the engine is still intact."
 	icon_state = "bike_rust_med"
 	datum_type = /datum/riding/motorcycle/slow
 
 /obj/vehicle/fuel/motorcycle/green
-	name = "зеленый мотоцикл"
-	desc = "Военный зеленый мотоцикл старых времен.<br>Удивительно, но он в прекрасном состоянии. Черт, Армия всегда имеет всё самое лучшее."
+	name = "Р·РµР»РµРЅС‹Р№ РјРѕС‚РѕС†РёРєР»"
+	desc = "Р’РѕРµРЅРЅС‹Р№ Р·РµР»РµРЅС‹Р№ РјРѕС‚РѕС†РёРєР» СЃС‚Р°СЂС‹С… РІСЂРµРјРµРЅ.<br>РЈРґРёРІРёС‚РµР»СЊРЅРѕ, РЅРѕ РѕРЅ РІ РїСЂРµРєСЂР°СЃРЅРѕРј СЃРѕСЃС‚РѕСЏРЅРёРё. Р§РµСЂС‚, РђСЂРјРёСЏ РІСЃРµРіРґР° РёРјРµРµС‚ РІСЃС‘ СЃР°РјРѕРµ Р»СѓС‡С€РµРµ."
 	eng_name = "green motorcycle"
 	eng_desc = "A military motorcycle from the old days.<br>Oddly enough it's still in pristine condition. The Army always had all the top-quality stuff."
 	icon_state = "bike_green"
 
 /obj/vehicle/fuel/motorcycle/flamy
-	name = "черный мотоцикл"
-	desc = "Винтажный, черный мотоцикл.<br>Он очень хорошо покрашен в черный, а еще он сияет.<br>В дополнение ко всему, он еще имеет языки пламени на бензобаке."
+	name = "С‡РµСЂРЅС‹Р№ РјРѕС‚РѕС†РёРєР»"
+	desc = "Р’РёРЅС‚Р°Р¶РЅС‹Р№, С‡РµСЂРЅС‹Р№ РјРѕС‚РѕС†РёРєР».<br>РћРЅ РѕС‡РµРЅСЊ С…РѕСЂРѕС€Рѕ РїРѕРєСЂР°С€РµРЅ РІ С‡РµСЂРЅС‹Р№, Р° РµС‰Рµ РѕРЅ СЃРёСЏРµС‚.<br>Р’ РґРѕРїРѕР»РЅРµРЅРёРµ РєРѕ РІСЃРµРјСѓ, РѕРЅ РµС‰Рµ РёРјРµРµС‚ СЏР·С‹РєРё РїР»Р°РјРµРЅРё РЅР° Р±РµРЅР·РѕР±Р°РєРµ."
 	eng_name = "flamy motorcycle"
 	eng_desc = "A vintage motorcycle from the old days.<br>It's extremely well maintained, jet black, and very shiny.<br>Topping it all off, it has badass flames painted on the fuel tank."
 	icon_state = "bike_flamy"
 
 /obj/vehicle/fuel/motorcycle/scrambler
-	name = "мотобайк"
-	desc = "Этот мотобайк когда-то учавствовал в гонках.<br> Он чертовски быстрый."
+	name = "РјРѕС‚РѕР±Р°Р№Рє"
+	desc = "Р­С‚РѕС‚ РјРѕС‚РѕР±Р°Р№Рє РєРѕРіРґР°-С‚Рѕ СѓС‡Р°РІСЃС‚РІРѕРІР°Р» РІ РіРѕРЅРєР°С….<br> РћРЅ С‡РµСЂС‚РѕРІСЃРєРё Р±С‹СЃС‚СЂС‹Р№."
 	eng_name = "scrambler motorbike"
 	eng_desc = "Scrambler is an old term for a dirt bike with a powerful engine that raced on dirt tracks with low jumps.<br>Something tells you it's better not to mess around with its owner."
 	icon_state = "bike_scrambler"

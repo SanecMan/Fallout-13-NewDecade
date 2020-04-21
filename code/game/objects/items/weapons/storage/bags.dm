@@ -27,7 +27,7 @@
 //          Trash bag
 // -----------------------------
 /obj/item/weapon/storage/bag/trash
-	name = "Мешок для мусора"
+	name = "РњРµС€РѕРє РґР»СЏ РјСѓСЃРѕСЂР°"
 	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!"
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "trashbag"
@@ -41,7 +41,7 @@
 	cant_hold = list(/obj/item/weapon/disk/nuclear)
 
 /obj/item/weapon/storage/bag/trash/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] надевает [src] на голову [user.p_their()]  и начинает душить. Ужасно!</span>")
+	user.visible_message("<span class='suicide'>[user] РЅР°РґРµРІР°РµС‚ [src] РЅР° РіРѕР»РѕРІСѓ [user.p_their()]  Рё РЅР°С‡РёРЅР°РµС‚ РґСѓС€РёС‚СЊ. РЈР¶Р°СЃРЅРѕ!</span>")
 	playsound(loc, 'sound/items/eatfood.ogg', 50, 1, -1)
 	return (TOXLOSS)
 
@@ -65,7 +65,7 @@
 	return
 
 /obj/item/weapon/storage/bag/trash/bluespace
-	name = "мешок для мусора с пространственным преобразователем"
+	name = "РјРµС€РѕРє РґР»СЏ РјСѓСЃРѕСЂР° СЃ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµРЅРЅС‹Рј РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚РµР»РµРј"
 	desc = "The latest and greatest in custodial convenience, a trashbag that is capable of holding vast quantities of garbage."
 	icon_state = "bluetrashbag"
 	origin_tech = "materials=4;bluespace=4;engineering=4;plasmatech=3"
@@ -77,7 +77,7 @@
 // -----------------------------
 
 /obj/item/weapon/storage/bag/ore
-	name = "сумка шахтёра"
+	name = "СЃСѓРјРєР° С€Р°С…С‚С‘СЂР°"
 	desc = "This little bugger can be used to store and transport ores."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "satchel"
@@ -105,7 +105,7 @@
 // -----------------------------
 
 /obj/item/weapon/storage/bag/plants
-	name = "Сумка садовода"
+	name = "РЎСѓРјРєР° СЃР°РґРѕРІРѕРґР°"
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "plantbag"
 	storage_slots = 100; //the number of plant pieces it can carry.

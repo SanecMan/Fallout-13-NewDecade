@@ -1,8 +1,8 @@
 //Fallout 13 - Come with me if you want to live
 
 /datum/f13_objective/protect
-	name = "Ангел Хранитель"
-	desc = "Вас наняли чтобы вы защищали кое-кого. Вам обещали заплатить достаточно много, чтобы вы хотели рисковать ради этого!"
+	name = "РђРЅРіРµР» РҐСЂР°РЅРёС‚РµР»СЊ"
+	desc = "Р’Р°СЃ РЅР°РЅСЏР»Рё С‡С‚РѕР±С‹ РІС‹ Р·Р°С‰РёС‰Р°Р»Рё РєРѕРµ-РєРѕРіРѕ. Р’Р°Рј РѕР±РµС‰Р°Р»Рё Р·Р°РїР»Р°С‚РёС‚СЊ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РјРЅРѕРіРѕ, С‡С‚РѕР±С‹ РІС‹ С…РѕС‚РµР»Рё СЂРёСЃРєРѕРІР°С‚СЊ СЂР°РґРё СЌС‚РѕРіРѕ!"
 	kind = BOTH
 	available_factions = list("city", "none", "brotherhood")
 
@@ -30,7 +30,7 @@
 				break
 		data["target"] = target
 		data["target_rank"] = target.assigned_role
-		data["custom_desc"] = "Ваша цель <b>%target%</b>, роль: <b>%target_rank%</b>"
+		data["custom_desc"] = "Р’Р°С€Р° С†РµР»СЊ <b>%target%</b>, СЂРѕР»СЊ: <b>%target_rank%</b>"
 		..()
 
 	check_complete(var/datum/objective_holder/holder)

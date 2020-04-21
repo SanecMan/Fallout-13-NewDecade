@@ -60,9 +60,9 @@
 
 /datum/dog_fashion/head/kitty
 	name = "Runtime"
-	emote_see = list("выкашлял комок шерсти", "скребется")
-	emote_hear = list("мурчит")
-	speak = list("Мурчит", "Мяу!", "МЯЯЯЯУ!", "ХСССС", "МИИИИИУ!")
+	emote_see = list("РІС‹РєР°С€Р»СЏР» РєРѕРјРѕРє С€РµСЂСЃС‚Рё", "СЃРєСЂРµР±РµС‚СЃСЏ")
+	emote_hear = list("РјСѓСЂС‡РёС‚")
+	speak = list("РњСѓСЂС‡РёС‚", "РњСЏСѓ!", "РњРЇРЇРЇРЇРЈ!", "РҐРЎРЎРЎРЎ", "РњРРРРРРЈ!")
 	desc = "It's a cute little kitty-cat! ... wait ... what the hell?"
 
 /datum/dog_fashion/head/rabbit

@@ -6,22 +6,22 @@
 
 /obj/item/trash/f13/bubblegum
 	name = "Bubblegum wrap"
-	desc = "Пустая упаковка из под Big Pops - довоенной брендовой жвачки."
+	desc = "РџСѓСЃС‚Р°СЏ СѓРїР°РєРѕРІРєР° РёР· РїРѕРґ Big Pops - РґРѕРІРѕРµРЅРЅРѕР№ Р±СЂРµРЅРґРѕРІРѕР№ Р¶РІР°С‡РєРё."
 	icon_state = "bubblegum"
 
 /obj/item/trash/f13/bubblegum_large
 	name = "big Bubblegum wrap"
-	desc = "Пустая упаковка из под \"Extra\" Big Pops - довоенной брендовой жвачки."
+	desc = "РџСѓСЃС‚Р°СЏ СѓРїР°РєРѕРІРєР° РёР· РїРѕРґ \"Extra\" Big Pops - РґРѕРІРѕРµРЅРЅРѕР№ Р±СЂРµРЅРґРѕРІРѕР№ Р¶РІР°С‡РєРё."
 	icon_state = "bubblegum_large"
 
 /obj/item/trash/f13/cram
 	name = "\proper empty Cram packaging"
-	desc = "Пустая упаковка из под Cram - довоенной бич-еды."
+	desc = "РџСѓСЃС‚Р°СЏ СѓРїР°РєРѕРІРєР° РёР· РїРѕРґ Cram - РґРѕРІРѕРµРЅРЅРѕР№ Р±РёС‡-РµРґС‹."
 	icon_state = "cram"
 
 /obj/item/trash/f13/cram_large
 	name = "\proper big empty Cram packaging"
-	desc = "Пустая упаковка из под Cram - довоенной бич-еды. Эта большая."
+	desc = "РџСѓСЃС‚Р°СЏ СѓРїР°РєРѕРІРєР° РёР· РїРѕРґ Cram - РґРѕРІРѕРµРЅРЅРѕР№ Р±РёС‡-РµРґС‹. Р­С‚Р° Р±РѕР»СЊС€Р°СЏ."
 	icon_state = "cram_large"
 
 /obj/item/trash/f13/yumyum
@@ -31,7 +31,7 @@
 
 /obj/item/trash/f13/fancylads
 	name = "\proper empty Fancy Lads package"
-	desc = "Пустая упаковка из под Fancy Lands - довоенной вкусняшки."
+	desc = "РџСѓСЃС‚Р°СЏ СѓРїР°РєРѕРІРєР° РёР· РїРѕРґ Fancy Lands - РґРѕРІРѕРµРЅРЅРѕР№ РІРєСѓСЃРЅСЏС€РєРё."
 	icon_state = "fancylads"
 
 /obj/item/trash/f13/sugarbombs
@@ -41,7 +41,7 @@
 
 /obj/item/trash/f13/crisps
 	name = "\proper empty box of Crisps"
-	desc = "Пустая упаковка из под Картофельных чипсов - довоенной бич-еды."
+	desc = "РџСѓСЃС‚Р°СЏ СѓРїР°РєРѕРІРєР° РёР· РїРѕРґ РљР°СЂС‚РѕС„РµР»СЊРЅС‹С… С‡РёРїСЃРѕРІ - РґРѕРІРѕРµРЅРЅРѕР№ Р±РёС‡-РµРґС‹."
 	icon_state = "crisps"
 
 /obj/item/trash/f13/steak
@@ -101,12 +101,12 @@
 
 /obj/item/trash/f13/rotten
 	name = "rotten food"
-	desc = "Тарелка ужасно пахнущей еды. Оно похоже сгнило!"
+	desc = "РўР°СЂРµР»РєР° СѓР¶Р°СЃРЅРѕ РїР°С…РЅСѓС‰РµР№ РµРґС‹. РћРЅРѕ РїРѕС…РѕР¶Рµ СЃРіРЅРёР»Рѕ!"
 	icon_state = "rotten"
 
 /obj/item/trash/f13/tin
 	name = "tin can"
-	desc = "Ржавая, пустая консервная банка."
+	desc = "Р Р¶Р°РІР°СЏ, РїСѓСЃС‚Р°СЏ РєРѕРЅСЃРµСЂРІРЅР°СЏ Р±Р°РЅРєР°."
 	icon_state = "tin"
 
 /obj/item/trash/f13/tin_large

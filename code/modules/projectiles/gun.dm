@@ -129,7 +129,7 @@
 
 
 /obj/item/weapon/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
-	to_chat(user, "<span class='danger'>*клик*</span>")
+	to_chat(user, "<span class='danger'>*РєР»РёРє*</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 
 
@@ -143,9 +143,9 @@
 		playsound(user, fire_sound, 50, 1)
 		if(message)
 			if(pointblank)
-				user.visible_message("<span class='danger'>[user] стреляет из [src] в упор [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				user.visible_message("<span class='danger'>[user] СЃС‚СЂРµР»СЏРµС‚ РёР· [src] РІ СѓРїРѕСЂ [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
 			else
-				user.visible_message("<span class='danger'>[user] стреляет из [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				user.visible_message("<span class='danger'>[user] СЃС‚СЂРµР»СЏРµС‚ РёР· [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
 
 /obj/item/weapon/gun/emp_act(severity)
 	for(var/obj/O in contents)
@@ -245,20 +245,20 @@
 		return
 
 	if(condition == 0)
-		to_chat(usr, "<span class='info'>С таким оружием ты можешь убить лишь себя.</span>")
+		to_chat(usr, "<span class='info'>РЎ С‚Р°РєРёРј РѕСЂСѓР¶РёРµРј С‚С‹ РјРѕР¶РµС€СЊ СѓР±РёС‚СЊ Р»РёС€СЊ СЃРµР±СЏ.</span>")
 		return
 
 	if(jammed)
 		if(jam_fixing)
 			return
 
-		usr.visible_message("<span class='warning'>[usr] пытается исправить осечку!<span class='warning'>")
+		usr.visible_message("<span class='warning'>[usr] РїС‹С‚Р°РµС‚СЃСЏ РёСЃРїСЂР°РІРёС‚СЊ РѕСЃРµС‡РєСѓ!<span class='warning'>")
 		jam_fixing = TRUE
 		if(do_mob(usr, usr, JAM_FIXTIME))
 			jammed = FALSE
-			to_chat(usr, "<span class='green'>Исправлено!</span>")
+			to_chat(usr, "<span class='green'>РСЃРїСЂР°РІР»РµРЅРѕ!</span>")
 		else
-			to_chat(usr, "<span class='warning'>Придётся подождать!</span>")
+			to_chat(usr, "<span class='warning'>РџСЂРёРґС‘С‚СЃСЏ РїРѕРґРѕР¶РґР°С‚СЊ!</span>")
 
 		jam_fixing = FALSE
 		return
@@ -628,11 +628,11 @@
 	if(istype(I, /obj/item/crafting/weapon_repair_kit))
 		if(condition < 90)
 			if(do_after(user, 20, target = src))
-				to_chat(user, "<span class='notice'>Вы починили оружие.</span>")
+				to_chat(user, "<span class='notice'>Р’С‹ РїРѕС‡РёРЅРёР»Рё РѕСЂСѓР¶РёРµ.</span>")
 				condition = min(100, condition + 40)
 				qdel(I)
 		else
-			to_chat(user, "<span class='notice'>Не требуется. оружие в прекрасном состоянии.</span>")
+			to_chat(user, "<span class='notice'>РќРµ С‚СЂРµР±СѓРµС‚СЃСЏ. РѕСЂСѓР¶РёРµ РІ РїСЂРµРєСЂР°СЃРЅРѕРј СЃРѕСЃС‚РѕСЏРЅРёРё.</span>")
 
 	if(can_flashlight)
 		if(istype(I, /obj/item/device/flashlight/seclite))

@@ -86,7 +86,7 @@
 		if(craftobj == 32)
 			CC = new/obj/item/weaponcrafting/handle/rifle(user.loc)
 
-		to_chat(user, "<span class='notice'>Вы разгребли кучу и достали немного материалов из [src].</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ СЂР°Р·РіСЂРµР±Р»Рё РєСѓС‡Сѓ Рё РґРѕСЃС‚Р°Р»Рё РЅРµРјРЅРѕРіРѕ РјР°С‚РµСЂРёР°Р»РѕРІ РёР· [src].</span>")
 		craftnumber = craftnumber - 1
 	else
 		if(iscyborg(user) || isalien(user))
@@ -157,7 +157,7 @@
 			CC = new/obj/item/weaponcrafting/handle/pistol(user.loc)
 		if(craftobj == 32)
 			CC = new/obj/item/weaponcrafting/handle/rifle(user.loc)
-		to_chat(user, "<span class='notice'>Вы достали последний полезный материал из этой кучи.</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РґРѕСЃС‚Р°Р»Рё РїРѕСЃР»РµРґРЅРёР№ РїРѕР»РµР·РЅС‹Р№ РјР°С‚РµСЂРёР°Р» РёР· СЌС‚РѕР№ РєСѓС‡Рё.</span>")
 		qdel(src)
 
 /obj/structure/garbage/garbage2

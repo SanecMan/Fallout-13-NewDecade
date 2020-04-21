@@ -5,25 +5,25 @@
 	self_weight = 0.3
 
 /obj/item/clothing/under/pants/f13/ghoul
-	name = "порванные штаны"
+	name = "РїРѕСЂРІР°РЅРЅС‹Рµ С€С‚Р°РЅС‹"
 	desc = "A pair of ripped pants that were not washed for over a hundred years.<br>Thanks to these you don't get to see ghouls genitals too often.<br><i>You can also wear these, to pretend you are a feral ghoul, just saying...</i>"
 	icon_state = "ghoul"
 	item_color = "ghoul"
 
 /obj/item/clothing/under/pants/f13/cloth
-	name = "штаны из тряпья"
+	name = "С€С‚Р°РЅС‹ РёР· С‚СЂСЏРїСЊСЏ"
 	desc = "A pair of worn dusty cloth pants made of various textile pieces.<br>Commonly found all over the wasteland."
 	icon_state = "cloth"
 	item_color = "cloth"
 
 /obj/item/clothing/under/pants/f13/caravan //Caravanner - someone who travels with caravan. Caravaneer - caravan leader.
-	name = "штаны караванщика"
+	name = "С€С‚Р°РЅС‹ РєР°СЂР°РІР°РЅС‰РёРєР°"
 	desc = "A pair of wide dusty cargo pants.<br>Commonly worn by caravanners or caravan robbers."
 	icon_state = "caravan"
 	item_color = "caravan"
 
 /obj/item/clothing/under/pants/f13/khan
-	name = "штаны Великих Ханов"
+	name = "С€С‚Р°РЅС‹ Р’РµР»РёРєРёС… РҐР°РЅРѕРІ"
 	desc = "A cloth pants with leather armor pads attached on sides.<br>These are commonly worn by the Great Khans raiders."
 	icon_state = "khan"
 	item_color = "khan"
@@ -32,7 +32,7 @@
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/pants/f13/warboy //Mad Max 4 2015 babe!
-	name = "кожанные штаны"
+	name = "РєРѕР¶Р°РЅРЅС‹Рµ С€С‚Р°РЅС‹"
 	desc = "A pair of dark brown pants, perfect for the one who grabs the sun, riding to Valhalla."
 	icon_state = "warboy"
 	item_color = "warboy"
@@ -41,8 +41,8 @@
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 20)
 
 /obj/item/clothing/under/pants/f13/doom
-	name = "зеленые штаны"
-	desc = "Стрёмные штаны сделанные из синтетики."
+	name = "Р·РµР»РµРЅС‹Рµ С€С‚Р°РЅС‹"
+	desc = "РЎС‚СЂС‘РјРЅС‹Рµ С€С‚Р°РЅС‹ СЃРґРµР»Р°РЅРЅС‹Рµ РёР· СЃРёРЅС‚РµС‚РёРєРё."
 	icon_state = "green"
 	item_color = "green"
 	flags = THICKMATERIAL

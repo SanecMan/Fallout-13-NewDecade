@@ -1,8 +1,8 @@
 //Fallout 13 decorative derelict vehicles directory
 
 /obj/structure/cargocrate
-	name = "контейнер"
-	desc = "Ржавый контейнер."
+	name = "РєРѕРЅС‚РµР№РЅРµСЂ"
+	desc = "Р Р¶Р°РІС‹Р№ РєРѕРЅС‚РµР№РЅРµСЂ."
 	eng_name = "cargo crate"
 	eng_desc = "A rusty cargo crate."
 	icon = 'icons/fallout/cargocrate.dmi'

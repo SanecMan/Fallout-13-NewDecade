@@ -13,8 +13,8 @@
 	origin_tech = "materials=1"
 
 /obj/item/weapon/kitchen/fork
-	name = "вилка"
-	desc = "Острая."
+	name = "РІРёР»РєР°"
+	desc = "РћСЃС‚СЂР°СЏ."
 	icon_state = "fork"
 	force = 5
 	w_class = WEIGHT_CLASS_TINY
@@ -51,9 +51,9 @@
 
 
 /obj/item/weapon/kitchen/knife
-	name = "кухонный нож"
+	name = "РєСѓС…РѕРЅРЅС‹Р№ РЅРѕР¶"
 	icon_state = "knife"
-	desc = "Обычный кухонный нож. Отлично режет овощи, мясо и людей."
+	desc = "РћР±С‹С‡РЅС‹Р№ РєСѓС…РѕРЅРЅС‹Р№ РЅРѕР¶. РћС‚Р»РёС‡РЅРѕ СЂРµР¶РµС‚ РѕРІРѕС‰Рё, РјСЏСЃРѕ Рё Р»СЋРґРµР№."
 	flags = CONDUCT
 	force = 10
 	w_class = WEIGHT_CLASS_SMALL
@@ -81,16 +81,16 @@
 	return (BRUTELOSS)
 
 /obj/item/weapon/kitchen/knife/ritual
-	name = "ритуальный нож"
+	name = "СЂРёС‚СѓР°Р»СЊРЅС‹Р№ РЅРѕР¶"
 	desc = "The unearthly energies that once powered this blade are now dormant."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "render"
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/kitchen/knife/butcher
-	name = "тесак"
+	name = "С‚РµСЃР°Рє"
 	icon_state = "butch"
-	desc = "Идеальное орудие для нарезки мяса, рубки костей, а вот кого, решать уже вам."
+	desc = "РРґРµР°Р»СЊРЅРѕРµ РѕСЂСѓРґРёРµ РґР»СЏ РЅР°СЂРµР·РєРё РјСЏСЃР°, СЂСѓР±РєРё РєРѕСЃС‚РµР№, Р° РІРѕС‚ РєРѕРіРѕ, СЂРµС€Р°С‚СЊ СѓР¶Рµ РІР°Рј."
 	flags = CONDUCT
 	force = 15
 	throwforce = 10
@@ -99,27 +99,27 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/kitchen/knife/combat
-	name = "боевой нож"
+	name = "Р±РѕРµРІРѕР№ РЅРѕР¶"
 	icon_state = "buckknife"
 	item_state = "knife"
-	desc = "Стандартный боевой нож."
+	desc = "РЎС‚Р°РЅРґР°СЂС‚РЅС‹Р№ Р±РѕРµРІРѕР№ РЅРѕР¶."
 	force = 20
 	throwforce = 20
 	origin_tech = "materials=3;combat=4"
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
 
 /obj/item/weapon/kitchen/knife/combat/survival
-	name = "нож для выживания"
+	name = "РЅРѕР¶ РґР»СЏ РІС‹Р¶РёРІР°РЅРёСЏ"
 	icon_state = "survivalknife"
-	desc = "Охотничий нож. Красивый."
+	desc = "РћС…РѕС‚РЅРёС‡РёР№ РЅРѕР¶. РљСЂР°СЃРёРІС‹Р№."
 	force = 12
 	throwforce = 10
 
 /obj/item/weapon/kitchen/knife/combat/bone
-	name = "нож из костей"
+	name = "РЅРѕР¶ РёР· РєРѕСЃС‚РµР№"
 	item_state = "bone_dagger"
 	icon_state = "bone_dagger"
-	desc = "Обточенная кость. Самый минимум для выживания."
+	desc = "РћР±С‚РѕС‡РµРЅРЅР°СЏ РєРѕСЃС‚СЊ. РЎР°РјС‹Р№ РјРёРЅРёРјСѓРј РґР»СЏ РІС‹Р¶РёРІР°РЅРёСЏ."
 	force = 15
 	throwforce = 15
 	materials = list()
@@ -132,10 +132,10 @@
 	origin_tech = null
 
 /obj/item/weapon/kitchen/knife/carrotshiv
-	name = "заточка из маркови"
+	name = "Р·Р°С‚РѕС‡РєР° РёР· РјР°СЂРєРѕРІРё"
 	icon_state = "carrotshiv"
 	item_state = "carrotshiv"
-	desc = "Кто вообще до этого додумался?"
+	desc = "РљС‚Рѕ РІРѕРѕР±С‰Рµ РґРѕ СЌС‚РѕРіРѕ РґРѕРґСѓРјР°Р»СЃСЏ?"
 	force = 8
 	throwforce = 12//fuck git
 	materials = list()
@@ -144,8 +144,8 @@
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/weapon/kitchen/rollingpin
-	name = "скалка"
-	desc = "Бейте ей людей по голове. Ну или катайте тесто."
+	name = "СЃРєР°Р»РєР°"
+	desc = "Р‘РµР№С‚Рµ РµР№ Р»СЋРґРµР№ РїРѕ РіРѕР»РѕРІРµ. РќСѓ РёР»Рё РєР°С‚Р°Р№С‚Рµ С‚РµСЃС‚Рѕ."
 	icon_state = "rolling_pin"
 	force = 8
 	throwforce = 5
@@ -157,7 +157,7 @@
 /* Trays  moved to /obj/item/weapon/storage/bag */
 
 /obj/item/weapon/kitchen/knife/cosmicknife
-	name = "космический нож"
+	name = "РєРѕСЃРјРёС‡РµСЃРєРёР№ РЅРѕР¶"
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "cosmicknife"
 	item_state = "cosmicknife"
@@ -170,7 +170,7 @@
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
 
 /obj/item/weapon/kitchen/knife/heatcosmicknife
-	name = "нагретый космический нож"
+	name = "РЅР°РіСЂРµС‚С‹Р№ РєРѕСЃРјРёС‡РµСЃРєРёР№ РЅРѕР¶"
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "heatcosmicknife"
 	item_state = "heatcosmicknife"
@@ -180,4 +180,4 @@
 	embed_chance = 100
 	armour_penetration = 45
 	origin_tech = "materials=3;combat=4"
-	attack_verb = list("slashed", "тыкает", "нарезает", "разрезает", "ripped", "режет")
+	attack_verb = list("slashed", "С‚С‹РєР°РµС‚", "РЅР°СЂРµР·Р°РµС‚", "СЂР°Р·СЂРµР·Р°РµС‚", "ripped", "СЂРµР¶РµС‚")

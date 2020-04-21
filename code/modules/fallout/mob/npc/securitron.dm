@@ -1,8 +1,8 @@
 //Fallout 13 securitron directory
 
 /mob/living/simple_animal/hostile/securitron
-	name = "секьюрититрон МК1"
-	desc = "Довоенный вид секьюрититронов.<br>Очень опасная машина."
+	name = "СЃРµРєСЊСЋСЂРёС‚РёС‚СЂРѕРЅ РњРљ1"
+	desc = "Р”РѕРІРѕРµРЅРЅС‹Р№ РІРёРґ СЃРµРєСЊСЋСЂРёС‚РёС‚СЂРѕРЅРѕРІ.<br>РћС‡РµРЅСЊ РѕРїР°СЃРЅР°СЏ РјР°С€РёРЅР°."
 	eng_name = "securitron MK1"
 	eng_desc = "A pre-War type of securitron.<br>Extremely dangerous machine."
 	icon = 'icons/fallout/mobs/robots.dmi'
@@ -27,7 +27,7 @@
 	faction = list("neutral", "city", "ncr")
 
 	emote_hear = list("winks.")
-	speak = list("Уот так уот!","Представьте! Целых 510 лет! Мы столько не живем.", "Руки вверх, вы арестованы! Ха-ха, шутка.")
+	speak = list("РЈРѕС‚ С‚Р°Рє СѓРѕС‚!","РџСЂРµРґСЃС‚Р°РІСЊС‚Рµ! Р¦РµР»С‹С… 510 Р»РµС‚! РњС‹ СЃС‚РѕР»СЊРєРѕ РЅРµ Р¶РёРІРµРј.", "Р СѓРєРё РІРІРµСЂС…, РІС‹ Р°СЂРµСЃС‚РѕРІР°РЅС‹! РҐР°-С…Р°, С€СѓС‚РєР°.")
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/robot_charge1.ogg','sound/f13npc/robot_charge2.ogg','sound/f13npc/robot_charge3.ogg')
 

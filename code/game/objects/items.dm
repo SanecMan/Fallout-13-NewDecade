@@ -164,14 +164,14 @@ var/global/image/fire_overlay = image("icon" = 'icons/effects/fire.dmi', "icon_s
 			pronoun = "This is"
 	else
 		if(src.gender == PLURAL)
-			pronoun = "Они"
+			pronoun = "РћРЅРё"
 		else
-			pronoun = "Это"
+			pronoun = "Р­С‚Рѕ"
 	var/size = weightclass2text(src.w_class)
 	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
 		to_chat(user, "[pronoun] [size] item.")//e.g. They are a small item. or It is a bulky item.
 	else
-		to_chat(user, "[pronoun] [size] предмет.")
+		to_chat(user, "[pronoun] [size] РїСЂРµРґРјРµС‚.")
 
 
 	if(user.research_scanner) //Mob has a research scanner active.

@@ -1,7 +1,7 @@
 //Fallout 13 decorative billboards directory
 
 /obj/structure/flag
-	name = "флаг"
+	name = "С„Р»Р°Рі"
 	desc = "Shitspawn detected!<br>Please report the admin abuse immediately!<br>Just kidding, nevermind."
 	icon_state = "emptyflag"
 	density = 1
@@ -20,7 +20,7 @@
 	S.verbs.Cut()
 
 /obj/structure/flag/empty_flag
-	name = "Пустой флаг"
+	name = "РџСѓСЃС‚РѕР№ С„Р»Р°Рі"
 	desc = "Just empty flag."
 	icon_state = "emptyflag"
 
@@ -29,7 +29,7 @@
 	icon_state = pick("emptyflag")
 
 /obj/structure/flag/ncr_flag
-	name = "флаг НКР"
+	name = "С„Р»Р°Рі РќРљР "
 	desc = "Just NCR flag."
 	icon_state = "ncrflag"
 
@@ -38,7 +38,7 @@
 	icon_state = pick("ncrflag")
 
 /obj/structure/flag/legion_flag
-	name = "флаг Легиона"
+	name = "С„Р»Р°Рі Р›РµРіРёРѕРЅР°"
 	desc = "Just Legion flag."
 	icon_state = "legionflag"
 
@@ -47,7 +47,7 @@
 	icon_state = pick("legionflag")
 
 /obj/structure/flag/tribal_totem
-	name = "тотем"
+	name = "С‚РѕС‚РµРј"
 	desc = "Just Tribal totem."
 	icon_state = "totem"
 

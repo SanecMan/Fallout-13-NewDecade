@@ -1,9 +1,9 @@
-////говнокод раций////
+////РіРѕРІРЅРѕРєРѕРґ СЂР°С†РёР№////
 
 /obj/item/device/radio/prc
 	icon = 'icons/obj/prc.dmi'
 	name = "PRC-68"
-	desc = "Такие рации использовали еще до войны..."
+	desc = "РўР°РєРёРµ СЂР°С†РёРё РёСЃРїРѕР»СЊР·РѕРІР°Р»Рё РµС‰Рµ РґРѕ РІРѕР№РЅС‹..."
 	icon_state = "prc"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
@@ -21,7 +21,7 @@
 /obj/item/device/radio/prc/bs
 	icon = 'icons/obj/prc.dmi'
 	name = "R-105"
-	desc = "Где вообще можно было нарыть этот древний кусок дерьма?"
+	desc = "Р“РґРµ РІРѕРѕР±С‰Рµ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РЅР°СЂС‹С‚СЊ СЌС‚РѕС‚ РґСЂРµРІРЅРёР№ РєСѓСЃРѕРє РґРµСЂСЊРјР°?"
 	icon_state = "r105"
 	frequency = 1919
 	key = 1501

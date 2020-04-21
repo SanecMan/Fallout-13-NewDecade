@@ -72,13 +72,13 @@
 /obj/machinery/magazine/human
 	var/product_slogans = ""
 	icon = 'icons/mob/animal.dmi'
-	name = "Человек"
+	name = "Р§РµР»РѕРІРµРє"
 	icon_state = "marauder1"
 
 /obj/machinery/magazine/human/trader
-	name = "Джонатан Милсбрук"
+	name = "Р”Р¶РѕРЅР°С‚Р°РЅ РњРёР»СЃР±СЂСѓРє"
 	icon_state = "trader"
-	product_slogans = "Эй! Не хочешь прикупить себе новую пушку?; Оружие! Медикаменты! Подходим берём!; Не желаете чего-нибудь приобрести?; У меня как в греции, всё есть!"
+	product_slogans = "Р­Р№! РќРµ С…РѕС‡РµС€СЊ РїСЂРёРєСѓРїРёС‚СЊ СЃРµР±Рµ РЅРѕРІСѓСЋ РїСѓС€РєСѓ?; РћСЂСѓР¶РёРµ! РњРµРґРёРєР°РјРµРЅС‚С‹! РџРѕРґС…РѕРґРёРј Р±РµСЂС‘Рј!; РќРµ Р¶РµР»Р°РµС‚Рµ С‡РµРіРѕ-РЅРёР±СѓРґСЊ РїСЂРёРѕР±СЂРµСЃС‚Рё?; РЈ РјРµРЅСЏ РєР°Рє РІ РіСЂРµС†РёРё, РІСЃС‘ РµСЃС‚СЊ!"
 	shipment = list (
 	/obj/item/weapon/gun/energy/laser/pistol,
 	/obj/item/weapon/gun/ballistic/automatic/pistol/n99,

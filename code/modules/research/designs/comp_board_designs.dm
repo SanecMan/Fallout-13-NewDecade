@@ -1,7 +1,7 @@
 ///////////////////Computer Boards///////////////////////////////////
 
 /datum/design/board
-	name = "Плата компьютера (Аркадный Автомат)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РђСЂРєР°РґРЅС‹Р№ РђРІС‚РѕРјР°С‚)"
 	desc = "Allows for the construction of circuit boards used to build a new arcade machine."
 	id = "arcade_battle"
 	req_tech = list("programming" = 1)
@@ -12,7 +12,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/orion_trail
-	name = "Плата компьютера (Аркадный Автомат \"Путь Ориона\")"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РђСЂРєР°РґРЅС‹Р№ РђРІС‚РѕРјР°С‚ \"РџСѓС‚СЊ РћСЂРёРѕРЅР°\")"
 	desc = "Allows for the construction of circuit boards used to build a new Orion Trail machine."
 	id = "arcade_orion"
 	req_tech = list("programming" = 1)
@@ -22,7 +22,7 @@
 
 
 /datum/design/board/seccamera
-	name = "Плата компьютера (Камеры наблюдения)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РљР°РјРµСЂС‹ РЅР°Р±Р»СЋРґРµРЅРёСЏ)"
 	desc = "Allows for the construction of circuit boards used to build security camera computers."
 	id = "seccamera"
 	req_tech = list("programming" = 2, "combat" = 2)
@@ -31,7 +31,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/aiupload
-	name = "Плата компьютера (Загрузка ИскИн)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Р—Р°РіСЂСѓР·РєР° РСЃРєРРЅ)"
 	desc = "Allows for the construction of circuit boards used to build an AI Upload Console."
 	id = "aiupload"
 	req_tech = list("programming" = 4, "engineering" = 4)
@@ -40,7 +40,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/borgupload
-	name = "Плата компьютера (Cyborg Upload)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Cyborg Upload)"
 	desc = "Allows for the construction of circuit boards used to build a Cyborg Upload Console."
 	id = "borgupload"
 	req_tech = list("programming" = 4, "engineering" = 4)
@@ -49,7 +49,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/med_data
-	name = "Плата компьютера (Медицинские записи)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РњРµРґРёС†РёРЅСЃРєРёРµ Р·Р°РїРёСЃРё)"
 	desc = "Allows for the construction of circuit boards used to build a medical records console."
 	id = "med_data"
 	req_tech = list("programming" = 2, "biotech" = 2)
@@ -58,7 +58,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/operating
-	name = "Плата компьютера (Ассистент в операциях)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РђСЃСЃРёСЃС‚РµРЅС‚ РІ РѕРїРµСЂР°С†РёСЏС…)"
 	desc = "Allows for the construction of circuit boards used to build an operating computer console."
 	id = "operating"
 	req_tech = list("programming" = 2, "biotech" = 3)
@@ -67,7 +67,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/pandemic
-	name = "Плата компьютера (PanD.E.M.I.C. 2200)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (PanD.E.M.I.C. 2200)"
 	desc = "Allows for the construction of circuit boards used to build a PanD.E.M.I.C. 2200 console."
 	id = "pandemic"
 	req_tech = list("programming" = 3, "biotech" = 3)
@@ -76,7 +76,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/scan_console
-	name = "Плата компьютера (Сканирование ДНК)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РЎРєР°РЅРёСЂРѕРІР°РЅРёРµ Р”РќРљ)"
 	desc = "Allows for the construction of circuit boards used to build a new DNA scanning console."
 	id = "scan_console"
 	req_tech = list("programming" = 2, "biotech" = 2)
@@ -85,7 +85,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/comconsole
-	name = "Плата компьютера (Коммуникации)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РљРѕРјРјСѓРЅРёРєР°С†РёРё)"
 	desc = "Allows for the construction of circuit boards used to build a communications console."
 	id = "comconsole"
 	req_tech = list("programming" = 3, "magnets" = 3)
@@ -94,7 +94,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/idcardconsole
-	name = "Плата компьютера (Консоль изменения доступа)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РљРѕРЅСЃРѕР»СЊ РёР·РјРµРЅРµРЅРёСЏ РґРѕСЃС‚СѓРїР°)"
 	desc = "Allows for the construction of circuit boards used to build an ID computer."
 	id = "idcardconsole"
 	req_tech = list("programming" = 3)
@@ -103,7 +103,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/crewconsole
-	name = "Плата компьютера (Crew monitoring computer)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Crew monitoring computer)"
 	desc = "Allows for the construction of circuit boards used to build a Crew monitoring computer."
 	id = "crewconsole"
 	req_tech = list("programming" = 3, "magnets" = 2, "biotech" = 2)
@@ -112,7 +112,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/secdata
-	name = "Плата компьютера (Записи Службы Безопасности)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Р—Р°РїРёСЃРё РЎР»СѓР¶Р±С‹ Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚Рё)"
 	desc = "Allows for the construction of circuit boards used to build a security records console."
 	id = "secdata"
 	req_tech = list("programming" = 2, "combat" = 2)
@@ -121,7 +121,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/atmosalerts
-	name = "Плата компьютера (Atmosphere Alert)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Atmosphere Alert)"
 	desc = "Allows for the construction of circuit boards used to build an atmosphere alert console."
 	id = "atmosalerts"
 	req_tech = list("programming" = 2)
@@ -130,7 +130,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/atmos_control
-	name = "Плата компьютера (Atmospheric Monitor)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Atmospheric Monitor)"
 	desc = "Allows for the construction of circuit boards used to build an Atmospheric Monitor."
 	id = "atmos_control"
 	req_tech = list("programming" = 2)
@@ -139,7 +139,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/robocontrol
-	name = "Плата компьютера (Robotics Control Console)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Robotics Control Console)"
 	desc = "Allows for the construction of circuit boards used to build a Robotics Control console."
 	id = "robocontrol"
 	req_tech = list("programming" = 4)
@@ -148,7 +148,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/slot_machine
-	name = "Плата компьютера (Однорукий бандит)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РћРґРЅРѕСЂСѓРєРёР№ Р±Р°РЅРґРёС‚)"
 	desc = "Allows for the construction of circuit boards used to build a new slot machine."
 	id = "slotmachine"
 	req_tech = list("programming" = 1)
@@ -157,7 +157,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/powermonitor
-	name = "Плата компьютера (Мониторинг питания)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РњРѕРЅРёС‚РѕСЂРёРЅРі РїРёС‚Р°РЅРёСЏ)"
 	desc = "Allows for the construction of circuit boards used to build a new power monitor."
 	id = "powermonitor"
 	req_tech = list("programming" = 2, "powerstorage" = 2)
@@ -166,7 +166,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/solarcontrol
-	name = "Плата компьютера (Консоль управления Солнечными Панелями)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РљРѕРЅСЃРѕР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ РЎРѕР»РЅРµС‡РЅС‹РјРё РџР°РЅРµР»СЏРјРё)"
 	desc = "Allows for the construction of circuit boards used to build a solar control console."
 	id = "solarcontrol"
 	req_tech = list("programming" = 2, "powerstorage" = 2)
@@ -175,7 +175,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/prisonmanage
-	name = "Плата компьютера (Prisoner Management Console)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Prisoner Management Console)"
 	desc = "Allows for the construction of circuit boards used to build a prisoner management console."
 	id = "prisonmanage"
 	req_tech = list("programming" = 2)
@@ -184,7 +184,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/mechacontrol
-	name = "Плата компьютера (Exosuit Control Console)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Exosuit Control Console)"
 	desc = "Allows for the construction of circuit boards used to build an exosuit control console."
 	id = "mechacontrol"
 	req_tech = list("programming" = 3)
@@ -193,7 +193,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/mechapower
-	name = "Плата компьютера (Mech Bay Power Control Console)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Mech Bay Power Control Console)"
 	desc = "Allows for the construction of circuit boards used to build a mech bay power control console."
 	id = "mechapower"
 	req_tech = list("programming" = 3, "powerstorage" = 3)
@@ -202,7 +202,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/rdconsole
-	name = "Плата компьютера (Научная Консоль)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РќР°СѓС‡РЅР°СЏ РљРѕРЅСЃРѕР»СЊ)"
 	desc = "Allows for the construction of circuit boards used to build a new R&D console."
 	id = "rdconsole"
 	req_tech = list("programming" = 4)
@@ -211,7 +211,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/cargo
-	name = "Плата компьютера (Supply Console)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Supply Console)"
 	desc = "Allows for the construction of circuit boards used to build a Supply Console."
 	id = "cargo"
 	req_tech = list("programming" = 3)
@@ -220,7 +220,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/cargorequest
-	name = "Плата компьютера (Supply Request Console)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Supply Request Console)"
 	desc = "Allows for the construction of circuit boards used to build a Supply Request Console."
 	id = "cargorequest"
 	req_tech = list("programming" = 2)
@@ -229,7 +229,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/mining
-	name = "Плата компьютера (Outpost Status Display)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Outpost Status Display)"
 	desc = "Allows for the construction of circuit boards used to build an outpost status display console."
 	id = "mining"
 	req_tech = list("programming" = 2)
@@ -238,7 +238,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/comm_monitor
-	name = "Плата компьютера (Хаб Мониторинга Телекомунникаций)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РҐР°Р± РњРѕРЅРёС‚РѕСЂРёРЅРіР° РўРµР»РµРєРѕРјСѓРЅРЅРёРєР°С†РёР№)"
 	desc = "Allows for the construction of circuit boards used to build a telecommunications monitor."
 	id = "comm_monitor"
 	req_tech = list("programming" = 3, "magnets" = 3, "bluespace" = 2)
@@ -247,7 +247,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/comm_server
-	name = "Плата компьютера (Хаб Мониторинга Сервера Телекомунникаций)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РҐР°Р± РњРѕРЅРёС‚РѕСЂРёРЅРіР° РЎРµСЂРІРµСЂР° РўРµР»РµРєРѕРјСѓРЅРЅРёРєР°С†РёР№)"
 	desc = "Allows for the construction of circuit boards used to build a telecommunication server browser and monitor."
 	id = "comm_server"
 	req_tech = list("programming" = 3, "magnets" = 3, "bluespace" = 2)
@@ -256,7 +256,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/message_monitor
-	name = "Плата компьютера (Хаб Мониторинга Сообщений)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (РҐР°Р± РњРѕРЅРёС‚РѕСЂРёРЅРіР° РЎРѕРѕР±С‰РµРЅРёР№)"
 	desc = "Allows for the construction of circuit boards used to build a messaging monitor console."
 	id = "message_monitor"
 	req_tech = list("programming" = 4)
@@ -265,7 +265,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/aifixer
-	name = "Плата компьютера (Восстановление ИскИн)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РСЃРєРРЅ)"
 	desc = "Allows for the construction of circuit boards used to build an AI Integrity Restorer."
 	id = "aifixer"
 	req_tech = list("programming" = 4, "magnets" = 3)
@@ -274,7 +274,7 @@
 	build_type = IMPRINTER
 
 /datum/design/board/libraryconsole
-	name = "Плата компьютера (Библиотечная консоль)"
+	name = "РџР»Р°С‚Р° РєРѕРјРїСЊСЋС‚РµСЂР° (Р‘РёР±Р»РёРѕС‚РµС‡РЅР°СЏ РєРѕРЅСЃРѕР»СЊ)"
 	desc = "Allows for the construction of circuit boards used to build a new library console."
 	id = "libraryconsole"
 	req_tech = list("programming" = 1)

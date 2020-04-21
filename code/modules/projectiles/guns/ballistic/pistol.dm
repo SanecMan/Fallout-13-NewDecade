@@ -18,7 +18,7 @@
 	return
 
 /obj/item/weapon/gun/ballistic/automatic/pistol/m1911
-	name = "Ì1911"
+	name = "Ðœ1911"
 	desc = "A classic .45 handgun with a small magazine capacity."
 	icon_state = "m1911"
 	w_class = WEIGHT_CLASS_NORMAL

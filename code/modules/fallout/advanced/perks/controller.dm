@@ -57,7 +57,7 @@
 			to_chat(usr, "You need more experience to do this!")
 			return
 		else
-			to_chat(usr, "Вам необходимо больше опыта для этого!")
+			to_chat(usr, "Р’Р°Рј РЅРµРѕР±С…РѕРґРёРјРѕ Р±РѕР»СЊС€Рµ РѕРїС‹С‚Р° РґР»СЏ СЌС‚РѕРіРѕ!")
 			return
 
 	if(perkPool.len == 0)
@@ -125,8 +125,8 @@
 			<tr><td><img src='[first.icon_state].png' class='center'></td><td><img src='[second.icon_state].png' class='center'></td></tr>
 			<tr><td>[first.description]</td><td>[second.description]</td></tr>
 			<tr>
-				<td><a href='?src=\ref[src];perk=1'>Выбрать</a></td>
-				<td><a href='?src=\ref[src];perk=2'>Выбрать</a></td>
+				<td><a href='?src=\ref[src];perk=1'>Р’С‹Р±СЂР°С‚СЊ</a></td>
+				<td><a href='?src=\ref[src];perk=2'>Р’С‹Р±СЂР°С‚СЊ</a></td>
 			</tr>
 		</table'>"}
 

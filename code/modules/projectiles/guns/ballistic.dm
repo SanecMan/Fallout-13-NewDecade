@@ -140,10 +140,10 @@
 		AC.loc = get_turf(src)
 		AC.SpinAnimation(10, 1)
 		chambered = null
-		to_chat(user, "<span class='notice'>Вы достали патрон из [src].</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РґРѕСЃС‚Р°Р»Рё РїР°С‚СЂРѕРЅ РёР· [src].</span>")
 		playsound(loc, chamber_sound, 25)
 	else
-		to_chat(user, "<span class='notice'>В [src] нет обоймы.</span>")
+		to_chat(user, "<span class='notice'>Р’ [src] РЅРµС‚ РѕР±РѕР№РјС‹.</span>")
 	update_icon()
 	return
 
@@ -154,7 +154,7 @@
 			user.put_in_hands(magazine)
 			magazine.update_icon()
 			magazine = null
-			to_chat(user, "<span class='notice'>Вы изъяли обойму из [src].</span>")
+			to_chat(user, "<span class='notice'>Р’С‹ РёР·СЉСЏР»Рё РѕР±РѕР№РјСѓ РёР· [src].</span>")
 			playsound(loc, mag_unload_sound, 25)
 			update_icon()
 
@@ -170,7 +170,7 @@
 
 /obj/item/weapon/gun/ballistic/examine(mob/user)
 	..()
-	to_chat(user, "Осталось [get_ammo()] патронов.")
+	to_chat(user, "РћСЃС‚Р°Р»РѕСЃСЊ [get_ammo()] РїР°С‚СЂРѕРЅРѕРІ.")
 
 /obj/item/weapon/gun/ballistic/proc/get_ammo(countchambered = 1)
 	var/boolets = 0 //mature var names for mature people
@@ -229,7 +229,7 @@
 	. = 0
 
 /obj/item/weapon/suppressor
-	name = "глушитель"
+	name = "РіР»СѓС€РёС‚РµР»СЊ"
 	desc = "A universal syndicate small-arms suppressor for maximum espionage."
 	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "suppressor"
@@ -239,7 +239,7 @@
 
 
 /obj/item/weapon/suppressor/specialoffer
-	name = "дешёвый глушитель"
+	name = "РґРµС€С‘РІС‹Р№ РіР»СѓС€РёС‚РµР»СЊ"
 	desc = "A foreign knock-off suppressor, it feels flimsy, cheap, and brittle. Still fits all weapons."
 	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "suppressor"

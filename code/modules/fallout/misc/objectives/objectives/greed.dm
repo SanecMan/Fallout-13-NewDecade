@@ -1,8 +1,8 @@
 //Fallout 13 - We had two bags of grass, seventy-five pellets of mescaline, five sheets of high-powered blotter acid, a saltshaker half-full of cocaine, and a whole galaxy of multi-colored uppers, downers, screamers, laughers...
 
 /datum/f13_objective/greed
-	name = "Скрудж"
-	desc = "Вы жили в бедности, перебирались на помойках а ваши родные умерли от голода, вы решили прервать черту бедности вашего рода.<br>Наберите %count% крышек, чтобы наконец выбраться из долгов."
+	name = "РЎРєСЂСѓРґР¶"
+	desc = "Р’С‹ Р¶РёР»Рё РІ Р±РµРґРЅРѕСЃС‚Рё, РїРµСЂРµР±РёСЂР°Р»РёСЃСЊ РЅР° РїРѕРјРѕР№РєР°С… Р° РІР°С€Рё СЂРѕРґРЅС‹Рµ СѓРјРµСЂР»Рё РѕС‚ РіРѕР»РѕРґР°, РІС‹ СЂРµС€РёР»Рё РїСЂРµСЂРІР°С‚СЊ С‡РµСЂС‚Сѓ Р±РµРґРЅРѕСЃС‚Рё РІР°С€РµРіРѕ СЂРѕРґР°.<br>РќР°Р±РµСЂРёС‚Рµ %count% РєСЂС‹С€РµРє, С‡С‚РѕР±С‹ РЅР°РєРѕРЅРµС† РІС‹Р±СЂР°С‚СЊСЃСЏ РёР· РґРѕР»РіРѕРІ."
 	kind = INDIVIDUAL
 
 	assignto_mind(datum/mind/M, var/list/data = list())

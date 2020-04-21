@@ -76,7 +76,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/obj/item/clothing/mask/cigarette/cig = help_light_cig(M)
 	if(lit && cig && user.a_intent == INTENT_HELP)
 		if(cig.lit)
-			to_chat(user, "<span class='notice'>[cig.name] уже зажжена.</span>")
+			to_chat(user, "<span class='notice'>[cig.name] СѓР¶Рµ Р·Р°Р¶Р¶РµРЅР°.</span>")
 		if(M == user)
 			cig.attackby(src, user)
 		else
@@ -140,12 +140,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(istype(glass))	//you can dip cigarettes into beakers
 		var/transfered = glass.reagents.trans_to(src, chem_volume)
 		if(transfered)	//if reagents were transfered, show the message
-			to_chat(user, "<span class='notice'>Вы мпотушили [src] в [glass].</span>")
+			to_chat(user, "<span class='notice'>Р’С‹ РјРїРѕС‚СѓС€РёР»Рё [src] РІ [glass].</span>")
 		else			//if not, either the beaker was empty, or the cigarette was full
 			if(!glass.reagents.total_volume)
-				to_chat(user, "<span class='notice'>[glass] пуста.</span>")
+				to_chat(user, "<span class='notice'>[glass] РїСѓСЃС‚Р°.</span>")
 			else
-				to_chat(user, "<span class='notice'>[src] полна.</span>")
+				to_chat(user, "<span class='notice'>[src] РїРѕР»РЅР°.</span>")
 
 
 /obj/item/clothing/mask/cigarette/proc/light(flavor_text = null)
@@ -210,7 +210,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(smoketime < 1)
 		new type_butt(location)
 		if(ismob(loc))
-			to_chat(M, "<span class='notice'>Ваша [name] выгорела.</span>")
+			to_chat(M, "<span class='notice'>Р’Р°С€Р° [name] РІС‹РіРѕСЂРµР»Р°.</span>")
 		qdel(src)
 		return
 	open_flame()
@@ -231,7 +231,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/obj/item/clothing/mask/cigarette/cig = help_light_cig(M)
 	if(lit && cig && user.a_intent == INTENT_HELP)
 		if(cig.lit)
-			to_chat(user, "<span class='notice'>[cig.name] уже зажжена.</span>")
+			to_chat(user, "<span class='notice'>[cig.name] СѓР¶Рµ Р·Р°Р¶Р¶РµРЅР°.</span>")
 		if(M == user)
 			cig.attackby(src, user)
 		else
@@ -405,7 +405,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		STOP_PROCESSING(SSobj, src)
 		return
 	if(!lit && smoketime > 0)
-		to_chat(user, "<span class='notice'>Вы опустошили [src] в [location].</span>")
+		to_chat(user, "<span class='notice'>Р’С‹ РѕРїСѓСЃС‚РѕС€РёР»Рё [src] РІ [location].</span>")
 		new /obj/effect/decal/cleanable/ash(location)
 		packeditem = 0
 		smoketime = 0
@@ -487,10 +487,10 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	add_overlay(I)
 
 /obj/item/weapon/lighter/greyscale/ignition_effect(atom/A, mob/user)
-	. = "<span class='notice'>После нескольких попыток, [user], успешно зажигает [A] с помощью [src].</span>"
+	. = "<span class='notice'>РџРѕСЃР»Рµ РЅРµСЃРєРѕР»СЊРєРёС… РїРѕРїС‹С‚РѕРє, [user], СѓСЃРїРµС€РЅРѕ Р·Р°Р¶РёРіР°РµС‚ [A] СЃ РїРѕРјРѕС‰СЊСЋ [src].</span>"
 
 /obj/item/weapon/lighter/ignition_effect(atom/A, mob/user)
-	. = "<span class='rose'>С первого раза, [user] зажигает [A] с помощью [src]. Чёрт, [user.p_theyre()] жжёт.</span>"
+	. = "<span class='rose'>РЎ РїРµСЂРІРѕРіРѕ СЂР°Р·Р°, [user] Р·Р°Р¶РёРіР°РµС‚ [A] СЃ РїРѕРјРѕС‰СЊСЋ [src]. Р§С‘СЂС‚, [user.p_theyre()] Р¶Р¶С‘С‚.</span>"
 
 /obj/item/weapon/lighter/update_icon()
 	icon_state = lit ? "[icon_state]_on" : "[initial(icon_state)]"
@@ -535,9 +535,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			force = 0
 			attack_verb = null //human_defense.dm takes care of it
 			if(!istype(src, /obj/item/weapon/lighter/greyscale))
-				user.visible_message("Вы услышали тихий щелчок, когда [user] тушит [src] не глядя на зажигалку. Охрененно!", "<span class='notice'>Вы деликатно потушили [src] даже не смотря на неё. Охрененно!</span>")
+				user.visible_message("Р’С‹ СѓСЃР»С‹С€Р°Р»Рё С‚РёС…РёР№ С‰РµР»С‡РѕРє, РєРѕРіРґР° [user] С‚СѓС€РёС‚ [src] РЅРµ РіР»СЏРґСЏ РЅР° Р·Р°Р¶РёРіР°Р»РєСѓ. РћС…СЂРµРЅРµРЅРЅРѕ!", "<span class='notice'>Р’С‹ РґРµР»РёРєР°С‚РЅРѕ РїРѕС‚СѓС€РёР»Рё [src] РґР°Р¶Рµ РЅРµ СЃРјРѕС‚СЂСЏ РЅР° РЅРµС‘. РћС…СЂРµРЅРµРЅРЅРѕ!</span>")
 			else
-				user.visible_message("[user] тихо тушит [src].", "<span class='notice'>Вы тихо потушили [src].")
+				user.visible_message("[user] С‚РёС…Рѕ С‚СѓС€РёС‚ [src].", "<span class='notice'>Р’С‹ С‚РёС…Рѕ РїРѕС‚СѓС€РёР»Рё [src].")
 			if(offsound)
 				playsound(user, offsound, 50, 0)
 			set_light(0)
@@ -547,12 +547,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/weapon/lighter/attack(mob/living/carbon/M, mob/living/carbon/user)
 	if(lit && M.IgniteMob())
-		message_admins("[key_name_admin(user)] поджёг [key_name_admin(M)]")
+		message_admins("[key_name_admin(user)] РїРѕРґР¶С‘Рі [key_name_admin(M)]")
 		log_game("[key_name(user)] set [key_name(M)] on fire")
 	var/obj/item/clothing/mask/cigarette/cig = help_light_cig(M)
 	if(lit && cig && user.a_intent == INTENT_HELP)
 		if(cig.lit)
-			to_chat(user, "<span class='notice'>[cig.name] уже зажжена.</span>")
+			to_chat(user, "<span class='notice'>[cig.name] СѓР¶Рµ Р·Р°Р¶Р¶РµРЅР°.</span>")
 		if(M == user)
 			cig.attackby(src, user)
 		else

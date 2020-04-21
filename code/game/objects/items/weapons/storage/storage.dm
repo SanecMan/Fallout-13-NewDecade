@@ -23,7 +23,7 @@
 	var/allow_quick_empty	//Set this variable to allow the object to have the 'empty' verb, which dumps all the contents on the floor.
 	var/allow_quick_gather	//Set this variable to allow the object to have the 'toggle mode' verb, which quickly collects all items from a tile.
 	var/collection_mode = 1;  //0 = pick one at a time, 1 = pick all on tile, 2 = pick all of a type
-	var/preposition = "в" // You put things 'in' a bag, but trays need 'on'.
+	var/preposition = "РІ" // You put things 'in' a bag, but trays need 'on'.
 	var/rustle_jimmies = TRUE	//Play the rustle sound on insertion
 
 
@@ -256,23 +256,23 @@
 		return 0 //Means the item is already in the storage item
 	if(contents.len >= storage_slots)
 		if(!stop_messages)
-			to_chat(usr, "<span class='warning'>[src] полон, освободите место!</span>")
+			to_chat(usr, "<span class='warning'>[src] РїРѕР»РѕРЅ, РѕСЃРІРѕР±РѕРґРёС‚Рµ РјРµСЃС‚Рѕ!</span>")
 		return 0 //Storage item is full
 
 	if(can_hold.len)
 		if(!is_type_in_typecache(W, can_hold))
 			if(!stop_messages)
-				to_chat(usr, "<span class='warning'>[src] не может содержать [W]!</span>")
+				to_chat(usr, "<span class='warning'>[src] РЅРµ РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ [W]!</span>")
 			return 0
 
 	if(is_type_in_typecache(W, cant_hold)) //Check for specific items which this container can't hold.
 		if(!stop_messages)
-			to_chat(usr, "<span class='warning'>[src] не может содержать [W]!</span>")
+			to_chat(usr, "<span class='warning'>[src] РЅРµ РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ [W]!</span>")
 		return 0
 
 	if(W.w_class > max_w_class)
 		if(!stop_messages)
-			to_chat(usr, "<span class='warning'>[W] слишком большое для [src]!</span>")
+			to_chat(usr, "<span class='warning'>[W] СЃР»РёС€РєРѕРј Р±РѕР»СЊС€РѕРµ РґР»СЏ [src]!</span>")
 		return 0
 
 	var/sum_w_class = W.w_class
@@ -281,13 +281,13 @@
 
 	if(sum_w_class > max_combined_w_class)
 		if(!stop_messages)
-			to_chat(usr, "<span class='warning'>[W] не влазит в [src], освободите немного места!</span>")
+			to_chat(usr, "<span class='warning'>[W] РЅРµ РІР»Р°Р·РёС‚ РІ [src], РѕСЃРІРѕР±РѕРґРёС‚Рµ РЅРµРјРЅРѕРіРѕ РјРµСЃС‚Р°!</span>")
 		return 0
 
 	if(W.w_class >= w_class && (istype(W, /obj/item/weapon/storage)))
 		if(!istype(src, /obj/item/weapon/storage/backpack/holding))	//bohs should be able to hold backpacks again. The override for putting a boh in a boh is in backpack.dm.
 			if(!stop_messages)
-				to_chat(usr, "<span class='warning'>[src] не может содержать [W] так как это контейнер того-же размера!</span>")
+				to_chat(usr, "<span class='warning'>[src] РЅРµ РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ [W] С‚Р°Рє РєР°Рє СЌС‚Рѕ РєРѕРЅС‚РµР№РЅРµСЂ С‚РѕРіРѕ-Р¶Рµ СЂР°Р·РјРµСЂР°!</span>")
 			return 0 //To prevent the stacking of same sized storage items.
 
 	if(W.flags & NODROP) //SHOULD be handled in unEquip, but better safe than sorry.
@@ -328,11 +328,11 @@
 		if(!prevent_warning)
 			for(var/mob/M in viewers(usr, null))
 				if(M == usr)
-					to_chat(usr, "<span class='notice'>Вы кладёте [W] в [src].</span>")
+					to_chat(usr, "<span class='notice'>Р’С‹ РєР»Р°РґС‘С‚Рµ [W] РІ [src].</span>")
 				else if(in_range(M, usr)) //If someone is standing close enough, they can tell what it is...
-					M.show_message("<span class='notice'>[usr] кладёт [W] в [src].</span>", 1)
+					M.show_message("<span class='notice'>[usr] РєР»Р°РґС‘С‚ [W] РІ [src].</span>", 1)
 				else if(W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...
-					M.show_message("<span class='notice'>[usr] кладёт [W] в [src].</span>", 1)
+					M.show_message("<span class='notice'>[usr] РєР»Р°РґС‘С‚ [W] РІ [src].</span>", 1)
 
 		orient2hud(usr)
 		for(var/mob/M in can_see_contents())

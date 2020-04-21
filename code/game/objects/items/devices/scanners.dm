@@ -169,16 +169,16 @@ MASS SPECTROMETER
 	// Species and body temperature
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		to_chat(user, "<span class='info'>Раса: [H.dna.species.name]</span>")
-	to_chat(user, "<span class='info'>Температура тела: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>")
+		to_chat(user, "<span class='info'>Р Р°СЃР°: [H.dna.species.name]</span>")
+	to_chat(user, "<span class='info'>РўРµРјРїРµСЂР°С‚СѓСЂР° С‚РµР»Р°: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>")
 
 	// Time of death
 	if(M.tod && (M.stat == DEAD || (M.status_flags & FAKEDEATH)))
-		to_chat(user, "<span class='info'>Время смерти:</span> [M.tod]")
+		to_chat(user, "<span class='info'>Р’СЂРµРјСЏ СЃРјРµСЂС‚Рё:</span> [M.tod]")
 		var/tdelta = round(world.time - M.timeofdeath)
 		if(tdelta < (DEFIB_TIME_LIMIT * 10))
-			to_chat(user, "<span class='danger'>Субъект умер [tdelta / 10] секунд \
-				назад, дефибрилляция еще возможна!</span>")
+			to_chat(user, "<span class='danger'>РЎСѓР±СЉРµРєС‚ СѓРјРµСЂ [tdelta / 10] СЃРµРєСѓРЅРґ \
+				РЅР°Р·Р°Рґ, РґРµС„РёР±СЂРёР»Р»СЏС†РёСЏ РµС‰Рµ РІРѕР·РјРѕР¶РЅР°!</span>")
 
 	for(var/datum/disease/D in M.viruses)
 		if(!(D.visibility_flags & HIDDEN_SCANNER))

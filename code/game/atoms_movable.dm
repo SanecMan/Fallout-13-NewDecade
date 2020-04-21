@@ -8,10 +8,10 @@
 	var/mob/pulledby = null
 	var/languages_spoken = 0 //For say() and Hear()
 	var/languages_understood = 0
-	var/verb_say = "говорит"
-	var/verb_ask = "спрашивает"
-	var/verb_exclaim = "восклицает"
-	var/verb_yell = "вопит"
+	var/verb_say = "РіРѕРІРѕСЂРёС‚"
+	var/verb_ask = "СЃРїСЂР°С€РёРІР°РµС‚"
+	var/verb_exclaim = "РІРѕСЃРєР»РёС†Р°РµС‚"
+	var/verb_yell = "РІРѕРїРёС‚"
 	var/en_verb_say = "says"
 	var/en_verb_ask = "asks"
 	var/en_verb_exclaim = "exclaims"

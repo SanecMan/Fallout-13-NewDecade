@@ -536,9 +536,9 @@
 	if(message)
 		message = replacetext_char(message,"w","v")
 		message = replacetext_char(message,"j","y")
-		message = replacetext_char(message,"a",pick("å","ä","æ","a"))
+		message = replacetext_char(message,"a",pick("Ðµ","Ð´","Ð¶","a"))
 		message = replacetext_char(message,"bo","bjo")
-		message = replacetext_char(message,"o",pick("ö","ø","o"))
+		message = replacetext_char(message,"o",pick("Ñ†","Ñˆ","o"))
 		if(prob(30))
 			message += " Bork[pick("",", bork",", bork, bork")]!"
 	return message

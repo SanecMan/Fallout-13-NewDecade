@@ -2,7 +2,7 @@
 //Here we get the basic mechanics as coded by WB! Praise him and other Unknown coder for this.
 
 /obj/item/weapon/holodisk
-	name = "голозапись"
+	name = "РіРѕР»РѕР·Р°РїРёСЃСЊ"
 	desc = "A durable laser-readable storage device produced by Wattz Electronics.<br>Based on tape holography technology, it can store information safely for extended periods of time."
 	eng_name = "holodisk"
 	eng_desc = "A durable laser-readable storage device produced by Wattz Electronics.<br>Based on tape holography technology, it can store information safely for extended periods of time."
@@ -105,8 +105,8 @@
 //Music box is based of holodisk
 
 /obj/item/weapon/holodisk/musicbox
-	name = "музыкальная шкатулка"
-	desc = "Довоенное напоминание о былом человечестве и его искусстве..."
+	name = "РјСѓР·С‹РєР°Р»СЊРЅР°СЏ С€РєР°С‚СѓР»РєР°"
+	desc = "Р”РѕРІРѕРµРЅРЅРѕРµ РЅР°РїРѕРјРёРЅР°РЅРёРµ Рѕ Р±С‹Р»РѕРј С‡РµР»РѕРІРµС‡РµСЃС‚РІРµ Рё РµРіРѕ РёСЃРєСѓСЃСЃС‚РІРµ..."
 	eng_name = "music box"
 	eng_desc = "A pre-War music box - remainder of humanity from the good old days."
 	icon = 'icons/fallout/objects/items.dmi'

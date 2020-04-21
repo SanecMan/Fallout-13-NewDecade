@@ -5,22 +5,22 @@
 /datum/emote/slime/bounce
 	key = "bounce"
 	key_third_person = "bounces"
-	message = "скачет на месте."
+	message = "СЃРєР°С‡РµС‚ РЅР° РјРµСЃС‚Рµ."
 
 /datum/emote/slime/jiggle
 	key = "jiggle"
 	key_third_person = "jiggles"
-	message = "дрожит!"
+	message = "РґСЂРѕР¶РёС‚!"
 
 /datum/emote/slime/light
 	key = "light"
 	key_third_person = "lights"
-	message = "приподнимается немного а затем опускается."
+	message = "РїСЂРёРїРѕРґРЅРёРјР°РµС‚СЃСЏ РЅРµРјРЅРѕРіРѕ Р° Р·Р°С‚РµРј РѕРїСѓСЃРєР°РµС‚СЃСЏ."
 
 /datum/emote/slime/vibrate
 	key = "vibrate"
 	key_third_person = "vibrates"
-	message = "вибрирует!"
+	message = "РІРёР±СЂРёСЂСѓРµС‚!"
 
 /datum/emote/slime/mood
 	key = "moodnone"

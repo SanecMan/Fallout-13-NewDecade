@@ -49,7 +49,7 @@
 	if(iscyborg(user))
 		to_chat(user, "<span class='notice'>You free up your module.</span>")
 	else
-		user.visible_message("<span class='warning'>[user] освобождает свою вторую руку.")
+		user.visible_message("<span class='warning'>[user] РѕСЃРІРѕР±РѕР¶РґР°РµС‚ СЃРІРѕСЋ РІС‚РѕСЂСѓСЋ СЂСѓРєСѓ.")
 	if(unwieldsound)
 		playsound(loc, unwieldsound, 50, 1)
 	var/obj/item/weapon/twohanded/offhand/O = user.get_inactive_held_item()
@@ -81,7 +81,7 @@
 	if(iscyborg(user))
 		user.visible_message("<span class='warning'>[user] dedicates a module to the [initial(name)]s.")
 	else
-		user.visible_message("<span class='warning'>[user] хватает [initial(name)] обеими руками.")
+		user.visible_message("<span class='warning'>[user] С…РІР°С‚Р°РµС‚ [initial(name)] РѕР±РµРёРјРё СЂСѓРєР°РјРё.")
 	if(wieldsound)
 		playsound(loc, wieldsound, 50, 1)
 	var/obj/item/weapon/twohanded/offhand/O = new(user) ////Let's reserve his other hand~

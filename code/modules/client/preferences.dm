@@ -154,56 +154,48 @@ var/list/preferences_datums = list()
 	//	CHECK_TICK
 	var/dat = {"<meta charset="UTF-8">"}
 	dat += "<center>"
-
 	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
 		dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Character Setup</a> "
 		dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Game Preferences</a> "
 		dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>Skills</a> "
 		dat += "<a href='?_src_=prefs;preference=tab;tab=3' [current_tab == 3 ? "class='linkOn'" : ""]>S.P.E.C.I.A.L</a>"
-	else
-		dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Настройки Персонажа</a> "
-		dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Настройки Игры</a> "
-		dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>Навыки</a> "
-		dat += "<a href='?_src_=prefs;preference=tab;tab=3' [current_tab == 3 ? "class='linkOn'" : ""]>S.P.E.C.I.A.L</a>"
 
-	if(!path)
-		dat += "<div class='notice'>Please create an account to save your preferences</div>"
+		if(!path)
+			dat += "<div class='notice'>Please create an account to save your preferences</div>"
 
-	dat += "</center>"
+		dat += "</center>"
 
-	dat += "<HR>"
+		dat += "<HR>"
 
-	switch(current_tab)
-		if (0) // Character Settings#
-			return ShowCharacterSetup(user)
-		if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		switch(current_tab)
+			if (0) // Character Settings#
+				return ShowCharacterSetup(user)
 			if (1) // Game Preferences
-				dat += "<center><h2>Main preferences</h2></center>"
+				dat += "<center><h2>Default Preferences</h2></center>"
 				dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 				dat += "<b>UI style:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
-				dat += "<b>Hotkeys:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "Hotkeys" : "Default"]</a><br>"
-				dat += "<b>TGUI style:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
-				dat += "<b>TGUI Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
-				dat += "<b>Play ADmin MIDIs:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Yes" : "No"]</a><br>"
-				dat += "<b>Play Lobby Music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Yes" : "No"]</a><br>"
-				dat += "<b>Ghost ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "All Speech" : "Nearest Creatures"]</a><br>"
-				dat += "<b>Ghost sight:</b> <a href='?_src_=prefs;preference=ghost_sight'>[(chat_toggles & CHAT_GHOSTSIGHT) ? "All Emotes" : "Nearest Creatures"]</a><br>"
-				dat += "<b>Ghost whispers:</b> <a href='?_src_=prefs;preference=ghost_whispers'>[(chat_toggles & CHAT_GHOSTWHISPER) ? "All Speech" : "Nearest Creatures"]</a><br>"
+				dat += "<b>Keyboard:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "Hotkeys" : "Default"]</a><br>"
+				dat += "<b>tgui style:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
+				dat += "<b>tgui Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
+				dat += "<b>Play Admin MIDI:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Yes" : "No"]</a><br>"
+				dat += "<b>Play Lobbi Music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Yes" : "No"]</a><br>"
+				dat += "<b>Ghost ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "All" : "Nearest"]</a><br>"
+				dat += "<b>Ghost sight:</b> <a href='?_src_=prefs;preference=ghost_sight'>[(chat_toggles & CHAT_GHOSTSIGHT) ? "All" : "Nearest"]</a><br>"
+				dat += "<b>Ghost whispers:</b> <a href='?_src_=prefs;preference=ghost_whispers'>[(chat_toggles & CHAT_GHOSTWHISPER) ? "All" : "Nearest"]</a><br>"
 				dat += "<b>Ghost radio:</b> <a href='?_src_=prefs;preference=ghost_radio'>[(chat_toggles & CHAT_GHOSTRADIO) ? "Yes" : "No"]</a><br>"
 
 				dat += "</td><td width='300px' height='300px' valign='top'>"
 
-				dat += "<b>Ghost pda:</b> <a href='?_src_=prefs;preference=ghost_pda'>[(chat_toggles & CHAT_GHOSTPDA) ? "All Messages" : "Nearest Creatures"]</a><br>"
+				dat += "<b>Ghost pda:</b> <a href='?_src_=prefs;preference=ghost_pda'>[(chat_toggles & CHAT_GHOSTPDA) ? "Р’СЃРµ СЃРѕРѕР±С‰РµРЅРёСЏ" : "Nearest"]</a><br>"
 				dat += "<b>Pull requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Yes" : "No"]</a><br>"
 				dat += "<b>Midround Antagonist:</b> <a href='?_src_=prefs;preference=allow_midround_antag'>[(toggles & MIDROUND_ANTAG) ? "Yes" : "No"]</a><br>"
-				dat += "<b>Game language:</b> <a href='?_src_=prefs;preference=change_language'>[(chat_toggles & CHAT_LANGUAGE) ? "English" : "Russian"]</a><br>"
 				if(config.allow_Metadata)
-					dat += "<b>OOC Notes:</b> <a href='?_src_=prefs;preference=metadata;task=input'>Edit </a><br>"
+					dat += "<b>OOC Notes:</b> <a href='?_src_=prefs;preference=metadata;task=input'>Edit</a><br>"
 
 				if(user.client)
 					if(user.client.holder)
-						dat += "<b>Adminhelp Sound:</b> <a href='?_src_=prefs;preference=hear_adminhelps'>[(toggles & SOUND_ADMINHELP)?"On":"Off"]</a><br>"
-						dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"On":"Off"]</a><br>"
+						dat += "<b>Adminhelp Sound:</b> <a href='?_src_=prefs;preference=hear_adminhelps'>[(toggles & SOUND_ADMINHELP)?"Р’РєР»СЋС‡РёС‚СЊ":"Р’С‹РєР»СЋС‡РёС‚СЊ"]</a><br>"
+						dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"Р’РєР»СЋС‡РёС‚СЊ":"Р’С‹РєР»СЋС‡РёС‚СЊ"]</a><br>"
 
 					if(unlock_content || check_rights_for(user.client, R_ADMIN))
 						dat += "<b>OOC:</b> <span style='border: 1px solid #161616; background-color: [ooccolor ? ooccolor : normal_ooc_colour];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=ooccolor;task=input'>Change</a><br>"
@@ -259,7 +251,7 @@ var/list/preferences_datums = list()
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=small_guns'>Small Guns</a> <br>"
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Big Guns</a> <br>"
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Barter</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Energy Weapons</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Energy Weapon</a> <br>"
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Explosives</a> <br>"
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Lockpick</a> <br>"
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>Medicine</a> <br>"
@@ -269,7 +261,7 @@ var/list/preferences_datums = list()
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=speech'>Speech</a> <br>"
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=unarmed'>Unarmed</a> <br>"
 					dat += "<a href='?_src_=prefs;preference=skills;skill_type=science'>Science</a> <br>"
-					dat += "<br><a href='?_src_=prefs;preference=skills;removeall=1'>Clear all</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=skills;removeall=1'>Clear All</a> <br>"
 				else
 					dat += "<br><a href='?_src_=prefs;preference=skills;back=1'>Back</a> <br>"
 					dat += "<center>"
@@ -293,7 +285,7 @@ var/list/preferences_datums = list()
 					dat += "<a href='?_src_=prefs;preference=specials;special=i'>Intelligence</a> <br>"
 					dat += "<a href='?_src_=prefs;preference=specials;special=a'>Agility</a> <br>"
 					dat += "<a href='?_src_=prefs;preference=specials;special=l'>Luck</a> <br>"
-					dat += "<br><a href='?_src_=prefs;preference=specials;removeall=1'>Clear all</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=specials;removeall=1'>Clear All</a> <br>"
 				else
 					dat += "<br><a href='?_src_=prefs;preference=specials;back=1'>Back</a> <br>"
 					dat += "<center>"
@@ -309,45 +301,48 @@ var/list/preferences_datums = list()
 					for (var/w = 1, w < 11, w++)
 						dat += "<a href='?_src_=prefs;preference=specials;special=[skill_type];num=[w]'>[w]</a>"
 		dat += "<hr><center>"
+	else
+		dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>РќР°СЃС‚СЂРѕР№РєРё РџРµСЂСЃРѕРЅР°Р¶Р°</a> "
+		dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>РќР°СЃС‚СЂРѕР№РєРё РРіСЂС‹</a> "
+		dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>РќР°РІС‹РєРё</a> "
+		dat += "<a href='?_src_=prefs;preference=tab;tab=3' [current_tab == 3 ? "class='linkOn'" : ""]>S.P.E.C.I.A.L</a>"
 
-		if(!IsGuestKey(user.key))
-			dat += "<a href='?_src_=prefs;preference=load'>Cancel</a> "
-			dat += "<a href='?_src_=prefs;preference=save'>Save setup</a> "
+		if(!path)
+			dat += "<div class='notice'>Please create an account to save your preferences</div>"
 
-		dat += "<a href='?_src_=prefs;preference=reset_all'>Clear</a>"
 		dat += "</center>"
 
-		var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 750)
-		popup.set_content(dat)
-		popup.open(0)
-		else
+		dat += "<HR>"
+
+		switch(current_tab)
+			if (0) // Character Settings#
+				return ShowCharacterSetup(user)
 			if (1) // Game Preferences
-				dat += "<center><h2>Основные Настройки</h2></center>"
+				dat += "<center><h2>РћСЃРЅРѕРІРЅС‹Рµ РќР°СЃС‚СЂРѕР№РєРё</h2></center>"
 				dat += "<table><tr><td width='340px' height='300px' valign='top'>"
-				dat += "<b>Стиль УИ:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
-				dat += "<b>Настройки клавиш:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "Хоткеи" : "Обычные"]</a><br>"
-				dat += "<b>Стиль ТГУИ:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
+				dat += "<b>РЎС‚РёР»СЊ РЈР:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
+				dat += "<b>РќР°СЃС‚СЂРѕР№РєРё РєР»Р°РІРёС€:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "РҐРѕС‚РєРµРё" : "РћР±С‹С‡РЅС‹Рµ"]</a><br>"
+				dat += "<b>РЎС‚РёР»СЊ РўР“РЈР:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
 				dat += "<b>tgui Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
-				dat += "<b>Проигрывать Админсккие Миди:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Да" : "Нет"]</a><br>"
-				dat += "<b>Проигрывать Музыку в Лобби:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Да" : "Нет"]</a><br>"
-				dat += "<b>Ghost ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "Все разговоры" : "Только ближайшие"]</a><br>"
-				dat += "<b>Ghost sight:</b> <a href='?_src_=prefs;preference=ghost_sight'>[(chat_toggles & CHAT_GHOSTSIGHT) ? "Все эмоции" : "Только ближайшие"]</a><br>"
-				dat += "<b>Ghost whispers:</b> <a href='?_src_=prefs;preference=ghost_whispers'>[(chat_toggles & CHAT_GHOSTWHISPER) ? "Все разговоры" : "Только ближайшие"]</a><br>"
-				dat += "<b>Ghost radio:</b> <a href='?_src_=prefs;preference=ghost_radio'>[(chat_toggles & CHAT_GHOSTRADIO) ? "Да" : "Нет"]</a><br>"
+				dat += "<b>РџСЂРѕРёРіСЂС‹РІР°С‚СЊ РђРґРјРёРЅСЃРєРєРёРµ РњРёРґРё:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Р”Р°" : "РќРµС‚"]</a><br>"
+				dat += "<b>РџСЂРѕРёРіСЂС‹РІР°С‚СЊ РњСѓР·С‹РєСѓ РІ Р›РѕР±Р±Рё:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Р”Р°" : "РќРµС‚"]</a><br>"
+				dat += "<b>Ghost ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "Р’СЃРµ СЂР°Р·РіРѕРІРѕСЂС‹" : "РўРѕР»СЊРєРѕ Р±Р»РёР¶Р°Р№С€РёРµ"]</a><br>"
+				dat += "<b>Ghost sight:</b> <a href='?_src_=prefs;preference=ghost_sight'>[(chat_toggles & CHAT_GHOSTSIGHT) ? "Р’СЃРµ СЌРјРѕС†РёРё" : "РўРѕР»СЊРєРѕ Р±Р»РёР¶Р°Р№С€РёРµ"]</a><br>"
+				dat += "<b>Ghost whispers:</b> <a href='?_src_=prefs;preference=ghost_whispers'>[(chat_toggles & CHAT_GHOSTWHISPER) ? "Р’СЃРµ СЂР°Р·РіРѕРІРѕСЂС‹" : "РўРѕР»СЊРєРѕ Р±Р»РёР¶Р°Р№С€РёРµ"]</a><br>"
+				dat += "<b>Ghost radio:</b> <a href='?_src_=prefs;preference=ghost_radio'>[(chat_toggles & CHAT_GHOSTRADIO) ? "Р”Р°" : "РќРµС‚"]</a><br>"
 
 				dat += "</td><td width='300px' height='300px' valign='top'>"
 
-				dat += "<b>Ghost pda:</b> <a href='?_src_=prefs;preference=ghost_pda'>[(chat_toggles & CHAT_GHOSTPDA) ? "Все сообщения" : "Только ближайшие"]</a><br>"
-				dat += "<b>Pull requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Да" : "Нет"]</a><br>"
-				dat += "<b>Midround Antagonist:</b> <a href='?_src_=prefs;preference=allow_midround_antag'>[(toggles & MIDROUND_ANTAG) ? "Да" : "Нет"]</a><br>"
-				dat += "<b>Game language:</b> <a href='?_src_=prefs;preference=change_language'>[(chat_toggles & CHAT_LANGUAGE) ? "English" : "Русский"]</a><br>"
+				dat += "<b>Ghost pda:</b> <a href='?_src_=prefs;preference=ghost_pda'>[(chat_toggles & CHAT_GHOSTPDA) ? "Р’СЃРµ СЃРѕРѕР±С‰РµРЅРёСЏ" : "РўРѕР»СЊРєРѕ Р±Р»РёР¶Р°Р№С€РёРµ"]</a><br>"
+				dat += "<b>Pull requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Р”Р°" : "РќРµС‚"]</a><br>"
+				dat += "<b>Midround Antagonist:</b> <a href='?_src_=prefs;preference=allow_midround_antag'>[(toggles & MIDROUND_ANTAG) ? "Р”Р°" : "РќРµС‚"]</a><br>"
 				if(config.allow_Metadata)
-					dat += "<b>OOC Заметки:</b> <a href='?_src_=prefs;preference=metadata;task=input'>Изменить </a><br>"
+					dat += "<b>OOC Р—Р°РјРµС‚РєРё:</b> <a href='?_src_=prefs;preference=metadata;task=input'>РР·РјРµРЅРёС‚СЊ </a><br>"
 
 				if(user.client)
 					if(user.client.holder)
-						dat += "<b>Adminhelp Sound:</b> <a href='?_src_=prefs;preference=hear_adminhelps'>[(toggles & SOUND_ADMINHELP)?"Включить":"Выключить"]</a><br>"
-						dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"Включить":"Выключить"]</a><br>"
+						dat += "<b>Adminhelp Sound:</b> <a href='?_src_=prefs;preference=hear_adminhelps'>[(toggles & SOUND_ADMINHELP)?"Р’РєР»СЋС‡РёС‚СЊ":"Р’С‹РєР»СЋС‡РёС‚СЊ"]</a><br>"
+						dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"Р’РєР»СЋС‡РёС‚СЊ":"Р’С‹РєР»СЋС‡РёС‚СЊ"]</a><br>"
 
 					if(unlock_content || check_rights_for(user.client, R_ADMIN))
 						dat += "<b>OOC:</b> <span style='border: 1px solid #161616; background-color: [ooccolor ? ooccolor : normal_ooc_colour];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=ooccolor;task=input'>Change</a><br>"
@@ -400,22 +395,22 @@ var/list/preferences_datums = list()
 				dat += "</td></tr></table>"
 			if(2)
 				if(skill_type == "")
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=small_guns'>Маленькие Пушки</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Большие Пушки</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Бартер</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Энергооружие</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Взрывчатка</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Взлом</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>Медицина</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=melee_weapons'>Ближний бой</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=repair'>Ремонт</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=sneak'>Скрытность</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=speech'>Красноречие</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=unarmed'>Без оружия</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=science'>Наука</a> <br>"
-					dat += "<br><a href='?_src_=prefs;preference=skills;removeall=1'>Сбросить всё</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=small_guns'>РњР°Р»РµРЅСЊРєРёРµ РџСѓС€РєРё</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Р‘РѕР»СЊС€РёРµ РџСѓС€РєРё</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Р‘Р°СЂС‚РµСЂ</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Р­РЅРµСЂРіРѕРѕСЂСѓР¶РёРµ</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Р’Р·СЂС‹РІС‡Р°С‚РєР°</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Р’Р·Р»РѕРј</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>РњРµРґРёС†РёРЅР°</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=melee_weapons'>Р‘Р»РёР¶РЅРёР№ Р±РѕР№</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=repair'>Р РµРјРѕРЅС‚</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=sneak'>РЎРєСЂС‹С‚РЅРѕСЃС‚СЊ</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=speech'>РљСЂР°СЃРЅРѕСЂРµС‡РёРµ</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=unarmed'>Р‘РµР· РѕСЂСѓР¶РёСЏ</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=science'>РќР°СѓРєР°</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=skills;removeall=1'>РЎР±СЂРѕСЃРёС‚СЊ РІСЃС‘</a> <br>"
 				else
-					dat += "<br><a href='?_src_=prefs;preference=skills;back=1'>Назад</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=skills;back=1'>РќР°Р·Р°Рґ</a> <br>"
 					dat += "<center>"
 					usr.browse_rsc_icon("icons/special/special.dmi", "skills_[skill_type]")
 					dat += "<img src='skills_[skill_type].png' class='center'> <br>"
@@ -424,22 +419,22 @@ var/list/preferences_datums = list()
 					var/current = SKILLS.getPoint(skill_type, TRUE)
 					var/left = max(0, SKILLS_POINTS - SKILLS.getSpentPoints())
 
-					dat += "<br>Сейчас: [current] (осталось [left -1])<br>"
+					dat += "<br>РЎРµР№С‡Р°СЃ: [current] (РѕСЃС‚Р°Р»РѕСЃСЊ [left -1])<br>"
 
 					for (var/i = 1, i < 11, i++)
 						dat += "<a href='?_src_=prefs;preference=skills;skill_type=[skill_type];num=[i]'>[i]</a>"
 			if(3)
 				if(skill_type == "")
-					dat += "<a href='?_src_=prefs;preference=specials;special=s'>Сила</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=specials;special=p'>Восприятие</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=specials;special=e'>Выносливость</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=specials;special=c'>Харизма</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=specials;special=i'>Интеллект</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=specials;special=a'>Ловкость</a> <br>"
-					dat += "<a href='?_src_=prefs;preference=specials;special=l'>Удача</a> <br>"
-					dat += "<br><a href='?_src_=prefs;preference=specials;removeall=1'>Сбросить всё</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=s'>РЎРёР»Р°</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=p'>Р’РѕСЃРїСЂРёСЏС‚РёРµ</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=e'>Р’С‹РЅРѕСЃР»РёРІРѕСЃС‚СЊ</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=c'>РҐР°СЂРёР·РјР°</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=i'>РРЅС‚РµР»Р»РµРєС‚</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=a'>Р›РѕРІРєРѕСЃС‚СЊ</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=l'>РЈРґР°С‡Р°</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=specials;removeall=1'>РЎР±СЂРѕСЃРёС‚СЊ РІСЃС‘</a> <br>"
 				else
-					dat += "<br><a href='?_src_=prefs;preference=specials;back=1'>Назад</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=specials;back=1'>РќР°Р·Р°Рґ</a> <br>"
 					dat += "<center>"
 					usr.browse_rsc_icon("icons/special/special.dmi", "special_[skill_type]")
 					dat += "<img src='special_[skill_type].png' class='center'> <br>"
@@ -448,20 +443,33 @@ var/list/preferences_datums = list()
 					var/current = SPEC.getPoint(skill_type, TRUE)
 					var/left = max(0, SPECIAL_POINTS - SPEC.getSpentPoints())
 
-					dat += "<br>Сейчас: [current] (осталось [left -1])<br>"
+					dat += "<br>РЎРµР№С‡Р°СЃ: [current] (РѕСЃС‚Р°Р»РѕСЃСЊ [left -1])<br>"
 
 					for (var/w = 1, w < 11, w++)
 						dat += "<a href='?_src_=prefs;preference=specials;special=[skill_type];num=[w]'>[w]</a>"
 		dat += "<hr><center>"
 
-		if(!IsGuestKey(user.key))
-			dat += "<a href='?_src_=prefs;preference=load'>Отмена</a> "
-			dat += "<a href='?_src_=prefs;preference=save'>Сохранить настройки</a> "
+	if(!IsGuestKey(user.key))
+		if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			dat += "<a href='?_src_=prefs;preference=load'>Cancel</a> "
+			dat += "<a href='?_src_=prefs;preference=save'>Save Setup</a> "
+		else
+			dat += "<a href='?_src_=prefs;preference=load'>РћС‚РјРµРЅР°</a> "
+			dat += "<a href='?_src_=prefs;preference=save'>РЎРѕС…СЂР°РЅРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё</a> "
 
-		dat += "<a href='?_src_=prefs;preference=reset_all'>Сбросить настройки</a>"
+	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		dat += "<a href='?_src_=prefs;preference=reset_all'>Clear</a>"
+		dat += "</center>"
+	else
+		dat += "<a href='?_src_=prefs;preference=reset_all'>РЎР±СЂРѕСЃРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё</a>"
 		dat += "</center>"
 
-		var/datum/browser/popup = new(user, "preferences", "<div align='center'>Настройки Персонажа</div>", 640, 750)
+	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 750)
+		popup.set_content(dat)
+		popup.open(0)
+	else
+		var/datum/browser/popup = new(user, "preferences", "<div align='center'>РќР°СЃС‚СЂРѕР№РєРё РџРµСЂСЃРѕРЅР°Р¶Р°</div>", 640, 750)
 		popup.set_content(dat)
 		popup.open(0)
 
@@ -479,7 +487,7 @@ var/list/preferences_datums = list()
 	var/HTML = "<center>"
 	if(SSjob.occupations.len <= 0)
 		HTML += "The job ticker is not yet finished creating jobs, please try again later"
-		HTML += "<center><a href='?_src_=prefs;preference=job;task=close'>Готово</a></center><br>" // Easier to press up here.
+		HTML += "<center><a href='?_src_=prefs;preference=job;task=close'>Р“РѕС‚РѕРІРѕ</a></center><br>" // Easier to press up here.
 	else
 		HTML += "<b>Choose occupation chances</b><br>"
 		HTML += "<div align='center'>Left-click to raise an occupation preference, right-click to lower it.<br></div>"
@@ -789,9 +797,9 @@ var/list/preferences_datums = list()
 		if(href_list["buy"])
 			var/datum/content_pack/pack = SScontent.get_pack(href_list["buy"])
 			if(pack.id in parent.content_packs)
-				to_chat(user, "<span class='warning'>У вас уже есть [pack.name]!</span>")
+				to_chat(user, "<span class='warning'>РЈ РІР°СЃ СѓР¶Рµ РµСЃС‚СЊ [pack.name]!</span>")
 			else if(parent.donate_money < pack.price)
-				to_chat(user, "<span class='warning'>Недостаточно денег!</span>")
+				to_chat(user, "<span class='warning'>РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРµРЅРµРі!</span>")
 			else if(SScontent.buy_pack(parent.ckey, pack.id, pack.price))
 				to_chat(user, "You get \"[pack.name]\".")
 				parent.update_content_data(TRUE)

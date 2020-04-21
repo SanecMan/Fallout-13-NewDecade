@@ -105,7 +105,7 @@
 		key = W
 		user.drop_item()
 		key.loc = src
-		user.visible_message("[user] вставляет ключи в [src].", "Вы вставляете ключи в [src].")
+		user.visible_message("[user] РІСЃС‚Р°РІР»СЏРµС‚ РєР»СЋС‡Рё РІ [src].", "Р’С‹ РІСЃС‚Р°РІР»СЏРµС‚Рµ РєР»СЋС‡Рё РІ [src].")
 		src.verbs += /obj/vehicle/proc/RemoveKey
 		return 1
 	return ..()
@@ -147,7 +147,7 @@
 	src.verbs -= /obj/vehicle/proc/StopEngine
 
 	if(usr)
-		usr.visible_message("[usr] выключает двигатель [src].", "Вы выключили двигатель.")
+		usr.visible_message("[usr] РІС‹РєР»СЋС‡Р°РµС‚ РґРІРёРіР°С‚РµР»СЊ [src].", "Р’С‹ РІС‹РєР»СЋС‡РёР»Рё РґРІРёРіР°С‚РµР»СЊ.")
 
 	engine_on = FALSE
 
@@ -155,22 +155,22 @@
 
 /obj/vehicle/proc/start_engine()
 	if(!riding_datum)
-		usr.visible_message("<span class = 'notice'>Сядьте в [src] чтобы делать это.</span>")
+		usr.visible_message("<span class = 'notice'>РЎСЏРґСЊС‚Рµ РІ [src] С‡С‚РѕР±С‹ РґРµР»Р°С‚СЊ СЌС‚Рѕ.</span>")
 		return
 
 	if(!key)
-		usr.visible_message("<span class = 'notice'>Тут нет ключа.</span>")
+		usr.visible_message("<span class = 'notice'>РўСѓС‚ РЅРµС‚ РєР»СЋС‡Р°.</span>")
 		return
 
 	if(!istype(key, riding_datum.keytype))
-		usr.visible_message("<span class = 'notice'>Не тот ключ.</span>")
+		usr.visible_message("<span class = 'notice'>РќРµ С‚РѕС‚ РєР»СЋС‡.</span>")
 		return
 
 	src.verbs += /obj/vehicle/proc/StopEngine
 	src.verbs -= /obj/vehicle/proc/StartEngine
 
 	if(usr)
-		usr.visible_message("[usr] запускает двигатель [src].", "Вы запустили двигатель.")
+		usr.visible_message("[usr] Р·Р°РїСѓСЃРєР°РµС‚ РґРІРёРіР°С‚РµР»СЊ [src].", "Р’С‹ Р·Р°РїСѓСЃС‚РёР»Рё РґРІРёРіР°С‚РµР»СЊ.")
 
 	engine_on = TRUE
 	if(engine_on_sound)
@@ -186,14 +186,14 @@
 	..()
 	if(!(resistance_flags & INDESTRUCTIBLE))
 		if(resistance_flags & ON_FIRE)
-			to_chat(user, "<span class='warning'>В огне!</span>")
+			to_chat(user, "<span class='warning'>Р’ РѕРіРЅРµ!</span>")
 		var/healthpercent = (obj_integrity/max_integrity) * 100
 		switch(healthpercent)
 			if(100 to INFINITY)
-				to_chat(user, "Выглядит не поврежденным.")
+				to_chat(user, "Р’С‹РіР»СЏРґРёС‚ РЅРµ РїРѕРІСЂРµР¶РґРµРЅРЅС‹Рј.")
 			if(50 to 100)
-				to_chat(user, "Выглядит немного поврежденным.")
+				to_chat(user, "Р’С‹РіР»СЏРґРёС‚ РЅРµРјРЅРѕРіРѕ РїРѕРІСЂРµР¶РґРµРЅРЅС‹Рј.")
 			if(25 to 50)
-				to_chat(user, "Выглядит тяжело поврежденным.")
+				to_chat(user, "Р’С‹РіР»СЏРґРёС‚ С‚СЏР¶РµР»Рѕ РїРѕРІСЂРµР¶РґРµРЅРЅС‹Рј.")
 			if(0 to 25)
-				to_chat(user, "<span class='warning'>Разваливается на части!</span>")
+				to_chat(user, "<span class='warning'>Р Р°Р·РІР°Р»РёРІР°РµС‚СЃСЏ РЅР° С‡Р°СЃС‚Рё!</span>")

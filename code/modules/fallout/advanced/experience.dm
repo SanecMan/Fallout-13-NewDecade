@@ -34,7 +34,7 @@
 	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
 		to_chat(owner, "<font color='blue'>You get [XP] xp! ([toNextLevel()] to next level remain)</font>")
 	else
-		to_chat(owner, "<font color='blue'>Вы получили [XP] опыта! ([toNextLevel()] осталось до следующего уровня)</font>")
+		to_chat(owner, "<font color='blue'>Р’С‹ РїРѕР»СѓС‡РёР»Рё [XP] РѕРїС‹С‚Р°! ([toNextLevel()] РѕСЃС‚Р°Р»РѕСЃСЊ РґРѕ СЃР»РµРґСѓСЋС‰РµРіРѕ СѓСЂРѕРІРЅСЏ)</font>")
 
 	if(toNextLevel() > 0)
 		playsound(owner, "sound/f13effects/xp_add.ogg", 50)
@@ -47,7 +47,7 @@
 	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
 		to_chat(owner, "<font color='blue'>Level up! [level]!</font>")
 	else
-		to_chat(owner, "<font color='blue'>Вы получили уровень [level]!</font>")
+		to_chat(owner, "<font color='blue'>Р’С‹ РїРѕР»СѓС‡РёР»Рё СѓСЂРѕРІРµРЅСЊ [level]!</font>")
 
 	playsound(owner, "sound/f13effects/xp_newLevel.ogg", 50)
 

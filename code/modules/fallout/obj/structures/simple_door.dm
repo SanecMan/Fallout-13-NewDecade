@@ -7,8 +7,8 @@
 //  - maxyo
 
 /obj/structure/simple_door
-	name = "деревянная дверь"
-	desc = "Открывается и закрывается! Скучно..."
+	name = "РґРµСЂРµРІСЏРЅРЅР°СЏ РґРІРµСЂСЊ"
+	desc = "РћС‚РєСЂС‹РІР°РµС‚СЃСЏ Рё Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ! РЎРєСѓС‡РЅРѕ..."
 	icon = 'icons/fallout/objects/structures/doors.dmi'
 	icon_state = "house"
 	opacity = 1
@@ -167,7 +167,7 @@
 	if(isliving(user))
 		var/mob/living/M = user
 		if(/obj/structure/barricade in src.loc)
-			M << "Не двигается!"
+			M << "РќРµ РґРІРёРіР°РµС‚СЃСЏ!"
 			return 0
 		if(M.client)
 			if(iscarbon(M))
@@ -233,8 +233,8 @@
 // Fallout 13 general doors directory
 
 /obj/structure/simple_door/manhole
-	name = "канализационный люк"
-	desc = "Небольшой люк, дающий доступ к канализации."
+	name = "РєР°РЅР°Р»РёР·Р°С†РёРѕРЅРЅС‹Р№ Р»СЋРє"
+	desc = "РќРµР±РѕР»СЊС€РѕР№ Р»СЋРє, РґР°СЋС‰РёР№ РґРѕСЃС‚СѓРї Рє РєР°РЅР°Р»РёР·Р°С†РёРё."
 	icon_state = "manhole"
 	door_type = "manhole"
 	opacity = 0
@@ -266,7 +266,7 @@
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/dirtyglass
-	desc = "Окно настолько грязное, что ничего не разглядеть."
+	desc = "РћРєРЅРѕ РЅР°СЃС‚РѕР»СЊРєРѕ РіСЂСЏР·РЅРѕРµ, С‡С‚Рѕ РЅРёС‡РµРіРѕ РЅРµ СЂР°Р·РіР»СЏРґРµС‚СЊ."
 	icon_state = "dirtyglass"
 	door_type = "dirtyglass"
 	can_hold_padlock = TRUE
@@ -307,7 +307,7 @@
 	explosion_block = 2
 
 /obj/structure/simple_door/metal/dirtystore
-	desc = "Металлическая дверь, тут есть окошко, но оно настолько покрыто грязью, что ничего не разглядеть."
+	desc = "РњРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ РґРІРµСЂСЊ, С‚СѓС‚ РµСЃС‚СЊ РѕРєРѕС€РєРѕ, РЅРѕ РѕРЅРѕ РЅР°СЃС‚РѕР»СЊРєРѕ РїРѕРєСЂС‹С‚Рѕ РіСЂСЏР·СЊСЋ, С‡С‚Рѕ РЅРёС‡РµРіРѕ РЅРµ СЂР°Р·РіР»СЏРґРµС‚СЊ."
 	icon_state = "dirtystore"
 	door_type = "dirtystore"
 	can_hold_padlock = TRUE
@@ -320,8 +320,8 @@
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/metal/barred
-	name = "решетчатая дверь"
-	desc = "Решетки. Не важно с какой стороны ты за ними, ты же всегда за РЕШЕТКОЙ?"
+	name = "СЂРµС€РµС‚С‡Р°С‚Р°СЏ РґРІРµСЂСЊ"
+	desc = "Р РµС€РµС‚РєРё. РќРµ РІР°Р¶РЅРѕ СЃ РєР°РєРѕР№ СЃС‚РѕСЂРѕРЅС‹ С‚С‹ Р·Р° РЅРёРјРё, С‚С‹ Р¶Рµ РІСЃРµРіРґР° Р·Р° Р Р•РЁР•РўРљРћР™?"
 	icon_state = "barred"
 	door_type = "barred"
 	open_sound = "sound/f13machines/doorchainlink_open.ogg"
@@ -330,8 +330,8 @@
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/metal/ventilation
-	name = "вентиляционный люк"
-	desc = "Приглядевшись, вы замечаете рукоятку, возможно если её дёрнуть, можно будет попасть туда?"
+	name = "РІРµРЅС‚РёР»СЏС†РёРѕРЅРЅС‹Р№ Р»СЋРє"
+	desc = "РџСЂРёРіР»СЏРґРµРІС€РёСЃСЊ, РІС‹ Р·Р°РјРµС‡Р°РµС‚Рµ СЂСѓРєРѕСЏС‚РєСѓ, РІРѕР·РјРѕР¶РЅРѕ РµСЃР»Рё РµС‘ РґС‘СЂРЅСѓС‚СЊ, РјРѕР¶РЅРѕ Р±СѓРґРµС‚ РїРѕРїР°СЃС‚СЊ С‚СѓРґР°?"
 	icon_state = "ventilation"
 	door_type = "ventilation"
 	open_sound = "sound/f13machines/doorhidden_open.ogg"
@@ -359,8 +359,8 @@
 	close_sound = "sound/f13items/flashlight_off.ogg"
 
 /obj/structure/simple_door/blast
-	name = "гермозатвор"
-	desc = "Гермозатвор, создан специально чтобы выдерживать множественные взрывы. Выглядит грозно."
+	name = "РіРµСЂРјРѕР·Р°С‚РІРѕСЂ"
+	desc = "Р“РµСЂРјРѕР·Р°С‚РІРѕСЂ, СЃРѕР·РґР°РЅ СЃРїРµС†РёР°Р»СЊРЅРѕ С‡С‚РѕР±С‹ РІС‹РґРµСЂР¶РёРІР°С‚СЊ РјРЅРѕР¶РµСЃС‚РІРµРЅРЅС‹Рµ РІР·СЂС‹РІС‹. Р’С‹РіР»СЏРґРёС‚ РіСЂРѕР·РЅРѕ."
 	icon_state = "blastdoor"
 	door_type = "blastdoor"
 	material_type = /obj/item/stack/sheet/plasteel
@@ -372,7 +372,7 @@
 	closing_time = 20
 
 /obj/structure/simple_door/bunker
-	name = "шлюз"
+	name = "С€Р»СЋР·"
 	desc = "An olive green painted airlock.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
 	icon_state = "bunker"
 	door_type = "bunker"
@@ -383,7 +383,7 @@
 	hard_open = 0
 
 /obj/structure/simple_door/bunker/vault
-	desc = "шлюз бункера."
+	desc = "С€Р»СЋР· Р±СѓРЅРєРµСЂР°."
 	icon_state = "vault"
 	door_type = "vault"
 	explosion_block = 8
@@ -396,7 +396,7 @@
 	opaque = 0
 
 /obj/structure/simple_door/bunker/glass/vault
-	desc = "шлюз бункера с окошком."
+	desc = "С€Р»СЋР· Р±СѓРЅРєРµСЂР° СЃ РѕРєРѕС€РєРѕРј."
 	icon_state = "vault_glass"
 	door_type = "vault_glass"
 	explosion_block = 7 //A glass window in it, reduces the resistance, am I right?

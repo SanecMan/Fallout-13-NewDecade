@@ -29,7 +29,7 @@
 /obj/item/weapon/reagent_containers/food/condiment/attack(mob/M, mob/user, def_zone)
 
 	if(!reagents || !reagents.total_volume)
-		to_chat(user, "<span class='warning'>Ничего не осталось от [src]!</span>")
+		to_chat(user, "<span class='warning'>РќРёС‡РµРіРѕ РЅРµ РѕСЃС‚Р°Р»РѕСЃСЊ РѕС‚ [src]!</span>")
 		return 0
 
 	if(!canconsume(M, user))
@@ -38,7 +38,7 @@
 	if(M == user)
 		to_chat(M, "<span class='notice'>You swallow some of contents of \the [src].</span>")
 	else
-		user.visible_message("<span class='warning'>[user] пытается напоить [M] из [src].</span>")
+		user.visible_message("<span class='warning'>[user] РїС‹С‚Р°РµС‚СЃСЏ РЅР°РїРѕРёС‚СЊ [M] РёР· [src].</span>")
 		if(!do_mob(user, M))
 			return
 		if(!reagents || !reagents.total_volume)

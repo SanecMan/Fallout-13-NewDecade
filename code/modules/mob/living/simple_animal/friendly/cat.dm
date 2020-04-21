@@ -44,7 +44,7 @@
 
 
 /mob/living/simple_animal/pet/cat/space
-	name = "Космический Кот"
+	name = "РљРѕСЃРјРёС‡РµСЃРєРёР№ РљРѕС‚"
 	desc = "It's a cat... in space!"
 	icon_state = "spacecat"
 	icon_living = "spacecat"
@@ -62,7 +62,7 @@
 	icon_dead = "original_dead"
 
 /mob/living/simple_animal/pet/cat/kitten
-	name = "Котёнок"
+	name = "РљРѕС‚С‘РЅРѕРє"
 	desc = "D'aaawwww."
 	icon_state = "kitten"
 	icon_living = "kitten"
@@ -73,7 +73,7 @@
 
 //RUNTIME IS ALIVE! SQUEEEEEEEE~
 /mob/living/simple_animal/pet/cat/Runtime
-	name = "Рантайм"
+	name = "Р Р°РЅС‚Р°Р№Рј"
 	desc = "GCAT"
 	icon_state = "cat"
 	icon_living = "cat"
@@ -147,23 +147,23 @@
 /mob/living/simple_animal/pet/cat/Life()
 	if(!stat && !buckled && !client)
 		if(prob(1))
-			emote("me", 1, pick("чешет пузико.", "машет хвостиком.", "ложится."))
+			emote("me", 1, pick("С‡РµС€РµС‚ РїСѓР·РёРєРѕ.", "РјР°С€РµС‚ С…РІРѕСЃС‚РёРєРѕРј.", "Р»РѕР¶РёС‚СЃСЏ."))
 			icon_state = "[icon_living]_rest"
 			resting = 1
 			update_canmove()
 		else if (prob(1))
-			emote("me", 1, pick("садится.", "ложится на лапки.", "выглядит настороженно."))
+			emote("me", 1, pick("СЃР°РґРёС‚СЃСЏ.", "Р»РѕР¶РёС‚СЃСЏ РЅР° Р»Р°РїРєРё.", "РІС‹РіР»СЏРґРёС‚ РЅР°СЃС‚РѕСЂРѕР¶РµРЅРЅРѕ."))
 			icon_state = "[icon_living]_sit"
 			resting = 1
 			update_canmove()
 		else if (prob(1))
 			if (resting)
-				emote("me", 1, pick("встает и мяукает.", "ходит на месте.", "перестает отдыхать."))
+				emote("me", 1, pick("РІСЃС‚Р°РµС‚ Рё РјСЏСѓРєР°РµС‚.", "С…РѕРґРёС‚ РЅР° РјРµСЃС‚Рµ.", "РїРµСЂРµСЃС‚Р°РµС‚ РѕС‚РґС‹С…Р°С‚СЊ."))
 				icon_state = "[icon_living]"
 				resting = 0
 				update_canmove()
 			else
-				emote("me", 1, pick("вылизывает шерстку.", "машет усиками.", "встряхнулся."))
+				emote("me", 1, pick("РІС‹Р»РёР·С‹РІР°РµС‚ С€РµСЂСЃС‚РєСѓ.", "РјР°С€РµС‚ СѓСЃРёРєР°РјРё.", "РІСЃС‚СЂСЏС…РЅСѓР»СЃСЏ."))
 
 	//MICE!
 	if((src.loc) && isturf(src.loc))
@@ -216,10 +216,10 @@
 		if(change > 0)
 			if(M && stat != DEAD)
 				flick_overlay(image('icons/mob/animal.dmi', src, "heart-ani2", ABOVE_MOB_LAYER), list(M.client), 20)
-				emote("me", 1, "мурчит!")
+				emote("me", 1, "РјСѓСЂС‡РёС‚!")
 		else
 			if(M && stat != DEAD)
-				emote("me", 1, "шипит!")
+				emote("me", 1, "С€РёРїРёС‚!")
 
 /mob/living/simple_animal/pet/cat/cak //I told you I'd do it, Remie
 	name = "Keeki"

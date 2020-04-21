@@ -1,8 +1,8 @@
 //Fallout 13 Centaur directory
 
 /mob/living/simple_animal/hostile/centaur
-	name = "кентавр"
-	desc = "Кентавры, как ни странно, это мутанты. Они, это результат Вируса Рукотворной Эволюции."
+	name = "РєРµРЅС‚Р°РІСЂ"
+	desc = "РљРµРЅС‚Р°РІСЂС‹, РєР°Рє РЅРё СЃС‚СЂР°РЅРЅРѕ, СЌС‚Рѕ РјСѓС‚Р°РЅС‚С‹. РћРЅРё, СЌС‚Рѕ СЂРµР·СѓР»СЊС‚Р°С‚ Р’РёСЂСѓСЃР° Р СѓРєРѕС‚РІРѕСЂРЅРѕР№ Р­РІРѕР»СЋС†РёРё."
 	eng_name = "centaur"
 	eng_desc = "Centaurs are mutated creatures. They are a result of infection by the Forced Evolutionary Virus gone horribly wrong."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -40,7 +40,7 @@
 	death_sound = 'sound/f13npc/Npc_centaur_death_01.ogg'
 
 	damage_coeff = list(BRUTE = 0.6, BURN = 1, TOX = 0.2, CLONE = 0, STAMINA = 1, OXY = 0)
-	attacktext = "кусает"
+	attacktext = "РєСѓСЃР°РµС‚"
 	eng_attacktext = "bites"
 	attack_sound = 'sound/f13npc/Npc_centaur_attackspit_03.ogg'
 

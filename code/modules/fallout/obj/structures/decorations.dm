@@ -7,29 +7,29 @@
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/structure/decoration_f13/panel
-	name = "прибор"
-	desc = "Какой-то военный прибор.  Не работает."
+	name = "РїСЂРёР±РѕСЂ"
+	desc = "РљР°РєРѕР№-С‚Рѕ РІРѕРµРЅРЅС‹Р№ РїСЂРёР±РѕСЂ.  РќРµ СЂР°Р±РѕС‚Р°РµС‚."
 	icon_state = "panel_1"
 
 /obj/structure/decoration_f13/panel/v2
 	icon_state = "panel_2"
 
 /obj/structure/decoration_f13/stove
-	name = "плита"
-	desc = "Довоенная плита, ржавая, старая и нерабочая."
+	name = "РїР»РёС‚Р°"
+	desc = "Р”РѕРІРѕРµРЅРЅР°СЏ РїР»РёС‚Р°, СЂР¶Р°РІР°СЏ, СЃС‚Р°СЂР°СЏ Рё РЅРµСЂР°Р±РѕС‡Р°СЏ."
 	icon_state = "gasstove"
 	pass_flags = LETPASSTHROW
 
 /obj/structure/decoration_f13/radiator
-	name = "радиатор"
-	desc = "Большие ржавые трубы, когда-то служившие системой отопления..."
+	name = "СЂР°РґРёР°С‚РѕСЂ"
+	desc = "Р‘РѕР»СЊС€РёРµ СЂР¶Р°РІС‹Рµ С‚СЂСѓР±С‹, РєРѕРіРґР°-С‚Рѕ СЃР»СѓР¶РёРІС€РёРµ СЃРёСЃС‚РµРјРѕР№ РѕС‚РѕРїР»РµРЅРёСЏ..."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "radiator"
 	layer = 3.2
 	density = 0
 
 /obj/structure/decoration_f13/dresser
-	name = "шкаф для одежды"
+	name = "С€РєР°С„ РґР»СЏ РѕРґРµР¶РґС‹"
 	desc = "A nicely-crafted wooden dresser. It's filled with lots of undies."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "wardrobe"
@@ -70,8 +70,8 @@
 	density = 0
 
 /obj/structure/decoration_f13/decal/blood
-	name = "кровь"
-	desc = "Кровь... Много мать её крови. Целое художество."
+	name = "РєСЂРѕРІСЊ"
+	desc = "РљСЂРѕРІСЊ... РњРЅРѕРіРѕ РјР°С‚СЊ РµС‘ РєСЂРѕРІРё. Р¦РµР»РѕРµ С…СѓРґРѕР¶РµСЃС‚РІРѕ."
 	icon_state = "blood_pic_2"
 
 /obj/structure/decoration_f13/decal/blood/hands
@@ -96,8 +96,8 @@
 	icon_state = "blood_pic_9"
 
 /obj/structure/decoration_f13/decal/hole
-	name = "дырка от пули"
-	desc = "Походе, кто-то вёл тут ожесточенную перестрелку... Когда-то."
+	name = "РґС‹СЂРєР° РѕС‚ РїСѓР»Рё"
+	desc = "РџРѕС…РѕРґРµ, РєС‚Рѕ-С‚Рѕ РІС‘Р» С‚СѓС‚ РѕР¶РµСЃС‚РѕС‡РµРЅРЅСѓСЋ РїРµСЂРµСЃС‚СЂРµР»РєСѓ... РљРѕРіРґР°-С‚Рѕ."
 	icon_state = "bhole-small"
 
 /obj/structure/decoration_f13/decal/hole/medium
@@ -107,8 +107,8 @@
 	icon_state = "bhole-large"
 
 /obj/structure/decoration_f13/poster
-	name = "постер"
-	desc = "Просто постер."
+	name = "РїРѕСЃС‚РµСЂ"
+	desc = "РџСЂРѕСЃС‚Рѕ РїРѕСЃС‚РµСЂ."
 	icon = 'icons/obj/contraband.dmi'
 	icon_state = "rolled_poster"
 	anchored = 1
@@ -147,8 +147,8 @@
 	icon_state = "poster20_legit"
 
 /obj/structure/decoration_f13/poster/pinup
-	name = "пинап"
-	desc = "постер с красивой женщиной, раньше их называли пинапами..."
+	name = "РїРёРЅР°Рї"
+	desc = "РїРѕСЃС‚РµСЂ СЃ РєСЂР°СЃРёРІРѕР№ Р¶РµРЅС‰РёРЅРѕР№, СЂР°РЅСЊС€Рµ РёС… РЅР°Р·С‹РІР°Р»Рё РїРёРЅР°РїР°РјРё..."
 	icon_state = "poster4"
 
 /obj/structure/decoration_f13/poster/pinup/v2

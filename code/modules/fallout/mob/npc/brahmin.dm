@@ -1,8 +1,8 @@
 //Fallout 13 brahmin directory
 
 /mob/living/simple_animal/cow/brahmin
-	name = "Брамин"
-	desc = "Брамин, это мутировавшая корова, с двумя головами. А еще она имеет два вымени.<br>Популярны за своё молоко."
+	name = "Р‘СЂР°РјРёРЅ"
+	desc = "Р‘СЂР°РјРёРЅ, СЌС‚Рѕ РјСѓС‚РёСЂРѕРІР°РІС€Р°СЏ РєРѕСЂРѕРІР°, СЃ РґРІСѓРјСЏ РіРѕР»РѕРІР°РјРё. Рђ РµС‰Рµ РѕРЅР° РёРјРµРµС‚ РґРІР° РІС‹РјРµРЅРё.<br>РџРѕРїСѓР»СЏСЂРЅС‹ Р·Р° СЃРІРѕС‘ РјРѕР»РѕРєРѕ."
 	eng_name = "brahmin"
 	eng_desc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -12,8 +12,8 @@
 	icon_gib = "brahmin_g"
 	speak = list("Moo.","Moo?","Moo!","MOOOOOO","Moo, I say.","Heeey brooo!","Heeey yooou!") //Original Brahmin from Fallout
 	speak_emote = list("moos","moos hauntingly")
-	emote_hear = list("мычит.")
-	emote_see = list("мотает головами.")
+	emote_hear = list("РјС‹С‡РёС‚.")
+	emote_see = list("РјРѕС‚Р°РµС‚ РіРѕР»РѕРІР°РјРё.")
 	speed = 4
 	self_weight = 150
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 6, /obj/item/stack/sheet/animalhide/generic=2)

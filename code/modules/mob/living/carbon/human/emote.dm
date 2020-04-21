@@ -4,7 +4,7 @@
 /datum/emote/living/carbon/human/cry
 	key = "cry"
 	key_third_person = "cries"
-	message = "плачет."
+	message = "РїР»Р°С‡РµС‚."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/human/dap
@@ -16,7 +16,7 @@
 
 /datum/emote/living/carbon/human/eyebrow
 	key = "eyebrow"
-	message = "поднимает бровь."
+	message = "РїРѕРґРЅРёРјР°РµС‚ Р±СЂРѕРІСЊ."
 
 /datum/emote/living/carbon/human/grumble
 	key = "grumble"
@@ -26,16 +26,16 @@
 
 /datum/emote/living/carbon/human/handshake
 	key = "handshake"
-	message = "жмёт собственную руку."
-	message_param = "жмёт руку %t."
+	message = "Р¶РјС‘С‚ СЃРѕР±СЃС‚РІРµРЅРЅСѓСЋ СЂСѓРєСѓ."
+	message_param = "Р¶РјС‘С‚ СЂСѓРєСѓ %t."
 	restraint_check = TRUE
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/human/hug
 	key = "hug"
 	key_third_person = "hugs"
-	message = "обнимает самого себя."
-	message_param = "обнимает %t."
+	message = "РѕР±РЅРёРјР°РµС‚ СЃР°РјРѕРіРѕ СЃРµР±СЏ."
+	message_param = "РѕР±РЅРёРјР°РµС‚ %t."
 	restraint_check = TRUE
 	emote_type = EMOTE_AUDIBLE
 
@@ -47,30 +47,30 @@
 
 /datum/emote/living/carbon/human/pale
 	key = "pale"
-	message = "побледнел."
+	message = "РїРѕР±Р»РµРґРЅРµР»."
 
 /datum/emote/living/carbon/human/raise
 	key = "raise"
 	key_third_person = "raises"
-	message = "поднимает куру."
+	message = "РїРѕРґРЅРёРјР°РµС‚ РєСѓСЂСѓ."
 	restraint_check = TRUE
 
 /datum/emote/living/carbon/human/salute
 	key = "salute"
 	key_third_person = "salutes"
-	message = "салютует."
-	message_param = "салютует %t."
+	message = "СЃР°Р»СЋС‚СѓРµС‚."
+	message_param = "СЃР°Р»СЋС‚СѓРµС‚ %t."
 	restraint_check = TRUE
 
 /datum/emote/living/carbon/human/shrug
 	key = "shrug"
 	key_third_person = "shrugs"
-	message = "пожимает плечами."
+	message = "РїРѕР¶РёРјР°РµС‚ РїР»РµС‡Р°РјРё."
 
 /datum/emote/living/carbon/human/wag
 	key = "wag"
 	key_third_person = "wags"
-	message = "виляет хвостом."
+	message = "РІРёР»СЏРµС‚ С…РІРѕСЃС‚РѕРј."
 
 /datum/emote/living/carbon/human/wag/run_emote(mob/user, params)
 	. = ..()
@@ -96,7 +96,7 @@
 /datum/emote/living/carbon/human/wing
 	key = "wing"
 	key_third_person = "wings"
-	message = "машет своими крыльями."
+	message = "РјР°С€РµС‚ СЃРІРѕРёРјРё РєСЂС‹Р»СЊСЏРјРё."
 
 /datum/emote/living/carbon/human/wing/run_emote(mob/user, params)
 	. = ..()

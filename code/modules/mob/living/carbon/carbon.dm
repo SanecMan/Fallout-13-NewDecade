@@ -1,9 +1,9 @@
 /mob/living/carbon
 	blood_volume = BLOOD_VOLUME_NORMAL
-	verb_say = "говорит"
-	verb_ask = "спрашивает"
-	verb_exclaim = "восклицает"
-	verb_yell = "вопит"
+	verb_say = "РіРѕРІРѕСЂРёС‚"
+	verb_ask = "СЃРїСЂР°С€РёРІР°РµС‚"
+	verb_exclaim = "РІРѕСЃРєР»РёС†Р°РµС‚"
+	verb_yell = "РІРѕРїРёС‚"
 	var/datum/special/special
 	var/datum/skills/skills
 
@@ -174,7 +174,7 @@
 		unEquip(I)
 
 	if(thrown_thing)
-		visible_message("<span class='danger'>[src] кинул [thrown_thing].</span>")
+		visible_message("<span class='danger'>[src] РєРёРЅСѓР» [thrown_thing].</span>")
 		newtonian_move(get_dir(target, src))
 		playsound(src, 'sound/effects/throw.ogg', 50, 1)
 		thrown_thing.throw_at(target, thrown_thing.throw_range, thrown_thing.throw_speed, src)
@@ -193,27 +193,27 @@
 	<HR>
 	<B><FONT size=3>[name]</FONT></B>
 	<HR>
-	<BR><B>Head:</B> <A href='?src=\ref[src];item=[slot_head]'>				[(head && !(head.flags&ABSTRACT)) 			? head 		: "Ничего"]</A>
-	<BR><B>Mask:</B> <A href='?src=\ref[src];item=[slot_wear_mask]'>		[(wear_mask && !(wear_mask.flags&ABSTRACT))	? wear_mask	: "Ничего"]</A>
+	<BR><B>Head:</B> <A href='?src=\ref[src];item=[slot_head]'>				[(head && !(head.flags&ABSTRACT)) 			? head 		: "РќРёС‡РµРіРѕ"]</A>
+	<BR><B>Mask:</B> <A href='?src=\ref[src];item=[slot_wear_mask]'>		[(wear_mask && !(wear_mask.flags&ABSTRACT))	? wear_mask	: "РќРёС‡РµРіРѕ"]</A>
 	<BR><B>Neck:</B> <A href='?src=\ref[src];item=[slot_neck]'>		[(wear_neck && !(wear_neck.flags&ABSTRACT))	? wear_neck	: "Nothing"]</A>"}
 
 	for(var/i in 1 to held_items.len)
 		var/obj/item/I = get_item_for_held_index(i)
-		dat += "<BR><B>[get_held_index_name(i)]:</B></td><td><A href='?src=\ref[src];item=[slot_hands];hand_index=[i]'>[(I && !(I.flags & ABSTRACT)) ? I : "Ничего"]</a>"
+		dat += "<BR><B>[get_held_index_name(i)]:</B></td><td><A href='?src=\ref[src];item=[slot_hands];hand_index=[i]'>[(I && !(I.flags & ABSTRACT)) ? I : "РќРёС‡РµРіРѕ"]</a>"
 
-	dat += "<BR><B>Back:</B> <A href='?src=\ref[src];item=[slot_back]'>[back ? back : "Ничего"]</A>"
+	dat += "<BR><B>Back:</B> <A href='?src=\ref[src];item=[slot_back]'>[back ? back : "РќРёС‡РµРіРѕ"]</A>"
 
 	if(istype(wear_mask, /obj/item/clothing/mask) && istype(back, /obj/item/weapon/tank))
-		dat += "<BR><A href='?src=\ref[src];internal=1'>[internal ? "Переключить" : "Переключить"]</A>"
+		dat += "<BR><A href='?src=\ref[src];internal=1'>[internal ? "РџРµСЂРµРєР»СЋС‡РёС‚СЊ" : "РџРµСЂРµРєР»СЋС‡РёС‚СЊ"]</A>"
 
 	if(handcuffed)
-		dat += "<BR><A href='?src=\ref[src];item=[slot_handcuffed]'>в наручниках</A>"
+		dat += "<BR><A href='?src=\ref[src];item=[slot_handcuffed]'>РІ РЅР°СЂСѓС‡РЅРёРєР°С…</A>"
 	if(legcuffed)
-		dat += "<BR><A href='?src=\ref[src];item=[slot_legcuffed]'>в манжете для ног</A>"
+		dat += "<BR><A href='?src=\ref[src];item=[slot_legcuffed]'>РІ РјР°РЅР¶РµС‚Рµ РґР»СЏ РЅРѕРі</A>"
 
 	dat += {"
 	<BR>
-	<BR><A href='?src=\ref[user];mach_close=mob\ref[src]'>Закрыть</A>
+	<BR><A href='?src=\ref[user];mach_close=mob\ref[src]'>Р—Р°РєСЂС‹С‚СЊ</A>
 	"}
 	user << browse(dat, "window=mob\ref[src];size=325x500")
 	onclose(user, "mob\ref[src]")
@@ -237,8 +237,8 @@
 							internal = ITEM
 							update_internals_hud_icon(1)
 
-					visible_message("<span class='danger'>[usr] [internal ? "открывает" : "закрывает"] the valve on [src]'s [ITEM].</span>", \
-									"<span class='userdanger'>[usr] [internal ? "открывает" : "закрывает"] the valve on [src]'s [ITEM].</span>")
+					visible_message("<span class='danger'>[usr] [internal ? "РѕС‚РєСЂС‹РІР°РµС‚" : "Р·Р°РєСЂС‹РІР°РµС‚"] the valve on [src]'s [ITEM].</span>", \
+									"<span class='userdanger'>[usr] [internal ? "РѕС‚РєСЂС‹РІР°РµС‚" : "Р·Р°РєСЂС‹РІР°РµС‚"] the valve on [src]'s [ITEM].</span>")
 
 
 /mob/living/carbon/fall(forced)
@@ -269,15 +269,15 @@
 	if(restrained())
 		changeNext_move(CLICK_CD_BREAKOUT)
 		last_special = world.time + CLICK_CD_BREAKOUT
-		visible_message("<span class='warning'>[src] пытается встать самостоятельно!</span>", \
-					"<span class='notice'>Вы пытаетесь встать... (Это займет около минуты.)</span>")
+		visible_message("<span class='warning'>[src] РїС‹С‚Р°РµС‚СЃСЏ РІСЃС‚Р°С‚СЊ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ!</span>", \
+					"<span class='notice'>Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ РІСЃС‚Р°С‚СЊ... (Р­С‚Рѕ Р·Р°Р№РјРµС‚ РѕРєРѕР»Рѕ РјРёРЅСѓС‚С‹.)</span>")
 		if(do_after(src, 600, 0, target = src))
 			if(!buckled)
 				return
 			buckled.user_unbuckle_mob(src,src)
 		else
 			if(src && buckled)
-				to_chat(src, "<span class='warning'>Вы не смогли встать!</span>")
+				to_chat(src, "<span class='warning'>Р’С‹ РЅРµ СЃРјРѕРіР»Рё РІСЃС‚Р°С‚СЊ!</span>")
 	else
 		buckled.user_unbuckle_mob(src,src)
 
@@ -285,12 +285,12 @@
 	fire_stacks -= 5
 	Weaken(3, 1, 1)
 	spin(32,2)
-	visible_message("<span class='danger'>[src] пытается потушить самого себя!</span>", \
-		"<span class='notice'>Вы остановились, упали и начали вертеться!</span>")
+	visible_message("<span class='danger'>[src] РїС‹С‚Р°РµС‚СЃСЏ РїРѕС‚СѓС€РёС‚СЊ СЃР°РјРѕРіРѕ СЃРµР±СЏ!</span>", \
+		"<span class='notice'>Р’С‹ РѕСЃС‚Р°РЅРѕРІРёР»РёСЃСЊ, СѓРїР°Р»Рё Рё РЅР°С‡Р°Р»Рё РІРµСЂС‚РµС‚СЊСЃСЏ!</span>")
 	sleep(30)
 	if(fire_stacks <= 0)
-		visible_message("<span class='danger'>[src] успешно потушил себя!</span>", \
-			"<span class='notice'>Вы потушили себя.</span>")
+		visible_message("<span class='danger'>[src] СѓСЃРїРµС€РЅРѕ РїРѕС‚СѓС€РёР» СЃРµР±СЏ!</span>", \
+			"<span class='notice'>Р’С‹ РїРѕС‚СѓС€РёР»Рё СЃРµР±СЏ.</span>")
 		ExtinguishMob()
 	return
 
@@ -310,12 +310,12 @@
 	breakouttime = I.breakouttime
 	var/displaytime = breakouttime / 600
 	if(!cuff_break)
-		visible_message("<span class='warning'>[src] пытается снять [I]!</span>")
-		to_chat(src, "<span class='notice'>Вы пытаетесь снять [I]... (Это займет около [displaytime] минут и вы должны стоять.)</span>")
+		visible_message("<span class='warning'>[src] РїС‹С‚Р°РµС‚СЃСЏ СЃРЅСЏС‚СЊ [I]!</span>")
+		to_chat(src, "<span class='notice'>Р’С‹ РїС‹С‚Р°РµС‚РµСЃСЊ СЃРЅСЏС‚СЊ [I]... (Р­С‚Рѕ Р·Р°Р№РјРµС‚ РѕРєРѕР»Рѕ [displaytime] РјРёРЅСѓС‚ Рё РІС‹ РґРѕР»Р¶РЅС‹ СЃС‚РѕСЏС‚СЊ.)</span>")
 		if(do_after(src, breakouttime, 0, target = src))
 			clear_cuffs(I, cuff_break)
 		else
-			to_chat(src, "<span class='warning'>Вы не смогли снять [I]!</span>")
+			to_chat(src, "<span class='warning'>Р’С‹ РЅРµ СЃРјРѕРіР»Рё СЃРЅСЏС‚СЊ [I]!</span>")
 
 	else if(cuff_break == FAST_CUFFBREAK)
 		breakouttime = 50
@@ -360,8 +360,8 @@
 /mob/living/carbon/proc/clear_cuffs(obj/item/I, cuff_break)
 	if(!I.loc || buckled)
 		return
-	visible_message("<span class='danger'>[src] успешно [cuff_break ? "сломал" : "снял"] [I]!</span>")
-	to_chat(src, "<span class='notice'>Вы успешно [cuff_break ? "сломали" : "сняли"] [I].</span>")
+	visible_message("<span class='danger'>[src] СѓСЃРїРµС€РЅРѕ [cuff_break ? "СЃР»РѕРјР°Р»" : "СЃРЅСЏР»"] [I]!</span>")
+	to_chat(src, "<span class='notice'>Р’С‹ СѓСЃРїРµС€РЅРѕ [cuff_break ? "СЃР»РѕРјР°Р»Рё" : "СЃРЅСЏР»Рё"] [I].</span>")
 
 	if(cuff_break)
 		qdel(I)
@@ -481,12 +481,12 @@
 
 	if(is_mouth_covered()) //make this add a blood/vomit overlay later it'll be hilarious
 		if(message)
-			visible_message("<span class='danger'>[src] проблевался на себя!</span>", \
+			visible_message("<span class='danger'>[src] РїСЂРѕР±Р»РµРІР°Р»СЃСЏ РЅР° СЃРµР±СЏ!</span>", \
 							"<span class='userdanger'>You throw up all over yourself!</span>")
 		distance = 0
 	else
 		if(message)
-			visible_message("<span class='danger'>[src] блевнул!</span>", "<span class='userdanger'>Вы блевнули!</span>")
+			visible_message("<span class='danger'>[src] Р±Р»РµРІРЅСѓР»!</span>", "<span class='userdanger'>Р’С‹ Р±Р»РµРІРЅСѓР»Рё!</span>")
 
 	if(stun)
 		Stun(4)
@@ -687,9 +687,9 @@
 	if(handcuffed)
 		drop_all_held_items()
 		stop_pulling()
-		throw_alert("в наручниках", /obj/screen/alert/restrained/handcuffed, new_master = src.handcuffed)
+		throw_alert("РІ РЅР°СЂСѓС‡РЅРёРєР°С…", /obj/screen/alert/restrained/handcuffed, new_master = src.handcuffed)
 	else
-		clear_alert("в наручниках")
+		clear_alert("РІ РЅР°СЂСѓС‡РЅРёРєР°С…")
 	update_action_buttons_icon() //some of our action buttons might be unusable when we're handcuffed.
 	update_inv_handcuffed()
 	update_hud_handcuffed()

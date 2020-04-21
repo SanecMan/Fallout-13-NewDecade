@@ -1,5 +1,5 @@
 /obj/machinery/magazine
-	name = "торговый автомат"
+	name = "С‚РѕСЂРіРѕРІС‹Р№ Р°РІС‚РѕРјР°С‚"
 	desc = "It's time to spent your caps!"
 	icon = 'icons/obj/vending.dmi'
 	icon_state = "sec"
@@ -36,8 +36,8 @@
 			usr.browse_rsc_icon(product_icon, product_icon_state)
 	else
 		infoGet(shipment[product_index])
-		. += "Покупка [product_name].<br> Ожидание [product_price] крышек.<br>"
-		. += "<a href='byond://?src=\ref[src];back=1'>Назад</a><br>"
+		. += "РџРѕРєСѓРїРєР° [product_name].<br> РћР¶РёРґР°РЅРёРµ [product_price] РєСЂС‹С€РµРє.<br>"
+		. += "<a href='byond://?src=\ref[src];back=1'>РќР°Р·Р°Рґ</a><br>"
 	//html = .
 
 	return .

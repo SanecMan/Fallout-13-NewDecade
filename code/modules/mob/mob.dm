@@ -82,7 +82,7 @@ var/next_mob_id = 0
 	// voice muffling
 	if(stat == UNCONSCIOUS)
 		if(type & 2) //audio
-			to_chat(src, "<I>... Вы не можете разобрать слов ...</I>")
+			to_chat(src, "<I>... Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ СЂР°Р·РѕР±СЂР°С‚СЊ СЃР»РѕРІ ...</I>")
 	else
 		to_chat(src, msg)
 
@@ -198,7 +198,7 @@ var/next_mob_id = 0
 			qdel(W)
 		else
 			if(!disable_warning)
-				to_chat(src, "<span class='warning'>Вы не можете экипировать это!</span>")//Only print if qdel_on_fail is false
+				to_chat(src, "<span class='warning'>Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ СЌРєРёРїРёСЂРѕРІР°С‚СЊ СЌС‚Рѕ!</span>")//Only print if qdel_on_fail is false
 
 		return 0
 	equip_to_slot(W, slot, redraw_mob) //This proc should not ever fail.
@@ -341,7 +341,7 @@ var/next_mob_id = 0
 	if(ismob(AM))
 		var/mob/M = AM
 		if(!supress_message)
-			visible_message("<span class='warning'>[src] хватает [M] пассивно!</span>")
+			visible_message("<span class='warning'>[src] С…РІР°С‚Р°РµС‚ [M] РїР°СЃСЃРёРІРЅРѕ!</span>")
 		if(!iscarbon(src))
 			M.LAssailant = null
 		else
@@ -426,7 +426,7 @@ var/next_mob_id = 0
 	if (!( abandon_allowed ))
 		return
 	if ((stat != 2 || !( ticker )))
-		to_chat(usr, "<span class='boldnotice'>Вы должны умереть чтобы использовать это!</span>")
+		to_chat(usr, "<span class='boldnotice'>Р’С‹ РґРѕР»Р¶РЅС‹ СѓРјРµСЂРµС‚СЊ С‡С‚РѕР±С‹ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЌС‚Рѕ!</span>")
 		return
 
 	if(jobban_isbanned(src, "labor"))

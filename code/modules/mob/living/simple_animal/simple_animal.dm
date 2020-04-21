@@ -51,7 +51,7 @@
 	var/armour_penetration = 0 //How much armour they ignore, as a flat reduction from the targets armour value
 	var/melee_damage_type = BRUTE //Damage type of a simple mob's melee attack, should it do damage.
 	var/list/damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1) // 1 for full damage , 0 for none , -1 for 1:1 heal from that source
-	var/attacktext = "атакует"
+	var/attacktext = "Р°С‚Р°РєСѓРµС‚"
 	var/eng_attacktext = "attacks"
 	var/attack_sound = null
 	var/friendly = "nuzzles" //If the mob does no damage with it's attack
@@ -363,7 +363,7 @@
 		if(deathmessage)
 			visible_message("<span class='danger'>[src] [deathmessage]</span>")
 		else if(!del_on_death)
-			visible_message("<span class='danger'>[src] перестает двигаться...</span>")
+			visible_message("<span class='danger'>[src] РїРµСЂРµСЃС‚Р°РµС‚ РґРІРёРіР°С‚СЊСЃСЏ...</span>")
 	if(del_on_death)
 		ghostize()
 		//Prevent infinite loops if the mob Destroy() is overriden in such

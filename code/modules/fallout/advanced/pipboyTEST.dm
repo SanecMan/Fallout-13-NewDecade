@@ -1,6 +1,6 @@
 /obj/item/device/pipboy
 	name = "My lovely Pipboy"
-	desc = "Наручный компьютер. А дум запустить выйдет?"
+	desc = "РќР°СЂСѓС‡РЅС‹Р№ РєРѕРјРїСЊСЋС‚РµСЂ. Рђ РґСѓРј Р·Р°РїСѓСЃС‚РёС‚СЊ РІС‹Р№РґРµС‚?"
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pda"
 	item_state = "electronic"

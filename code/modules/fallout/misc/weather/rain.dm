@@ -1,7 +1,7 @@
 #define RAIN_CHANNEL 15
 
 /datum/weather_controller/rain
-	name = "Дождь"
+	name = "Р”РѕР¶РґСЊ"
 	id = "Rain_acid"
 	desc = "Simple rain."
 

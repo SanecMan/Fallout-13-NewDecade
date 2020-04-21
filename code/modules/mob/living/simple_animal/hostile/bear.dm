@@ -15,9 +15,9 @@
 	turns_per_move = 5
 	see_in_dark = 6
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear = 5, /obj/item/clothing/head/bearpelt = 1)
-	response_help  = "гладит"
-	response_disarm = "аккуратно пихает в сторону"
-	response_harm   = "бьёт"
+	response_help  = "РіР»Р°РґРёС‚"
+	response_disarm = "Р°РєРєСѓСЂР°С‚РЅРѕ РїРёС…Р°РµС‚ РІ СЃС‚РѕСЂРѕРЅСѓ"
+	response_harm   = "Р±СЊС‘С‚"
 	maxHealth = 60
 	health = 60
 	var/armored = FALSE
@@ -38,7 +38,7 @@
 	gold_core_spawnable = 1
 
 /mob/living/simple_animal/hostile/bear/yaoi
-	name = "Яо-Гай"
+	name = "РЇРѕ-Р“Р°Р№"
 	maxHealth = 120
 	health = 120
 

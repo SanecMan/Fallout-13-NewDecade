@@ -33,16 +33,16 @@
 			reagents.clear_reagents()
 		else
 			if(M != user)
-				M.visible_message("<span class='danger'>[user] пытается напоить чем-то [M].</span>", \
-							"<span class='userdanger'>[user] пытается напоить вас чем-то.</span>")
+				M.visible_message("<span class='danger'>[user] РїС‹С‚Р°РµС‚СЃСЏ РЅР°РїРѕРёС‚СЊ С‡РµРј-С‚Рѕ [M].</span>", \
+							"<span class='userdanger'>[user] РїС‹С‚Р°РµС‚СЃСЏ РЅР°РїРѕРёС‚СЊ РІР°СЃ С‡РµРј-С‚Рѕ.</span>")
 				if(!do_mob(user, M))
 					return
 				if(!reagents || !reagents.total_volume)
 					return // The drink might be empty after the delay, such as by spam-feeding
-				M.visible_message("<span class='danger'>[user] поит [M] чем-то.</span>", "<span class='userdanger'>[user] поит вас чем-то.</span>")
+				M.visible_message("<span class='danger'>[user] РїРѕРёС‚ [M] С‡РµРј-С‚Рѕ.</span>", "<span class='userdanger'>[user] РїРѕРёС‚ РІР°СЃ С‡РµРј-С‚Рѕ.</span>")
 				add_logs(user, M, "fed", reagentlist(src))
 			else
-				to_chat(user, "<span class='notice'>Вы сглотнули немного [src].</span>")
+				to_chat(user, "<span class='notice'>Р’С‹ СЃРіР»РѕС‚РЅСѓР»Рё РЅРµРјРЅРѕРіРѕ [src].</span>")
 			var/fraction = min(5/reagents.total_volume, 1)
 			reagents.reaction(M, INGEST, fraction)
 			spawn(5)

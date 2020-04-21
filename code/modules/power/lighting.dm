@@ -51,11 +51,11 @@
 	..()
 	switch(src.stage)
 		if(1)
-			to_chat(user, "Это пустая оболочка.")
+			to_chat(user, "Р­С‚Рѕ РїСѓСЃС‚Р°СЏ РѕР±РѕР»РѕС‡РєР°.")
 		if(2)
-			to_chat(user, "Тут есть проводка.")
+			to_chat(user, "РўСѓС‚ РµСЃС‚СЊ РїСЂРѕРІРѕРґРєР°.")
 		if(3)
-			to_chat(user, "Крышка закрыта.")
+			to_chat(user, "РљСЂС‹С€РєР° Р·Р°РєСЂС‹С‚Р°.")
 
 /obj/structure/light_construct/attackby(obj/item/weapon/W, mob/user, params)
 	add_fingerprint(user)
@@ -82,14 +82,14 @@
 						if("bulb")
 							icon_state = "bulb-construct-stage2"
 					stage = 2
-					user.visible_message("[user.name] добавляет провода в [src].", \
-						"<span class='notice'>Вы добавили провода в [src].</span>")
+					user.visible_message("[user.name] РґРѕР±Р°РІР»СЏРµС‚ РїСЂРѕРІРѕРґР° РІ [src].", \
+						"<span class='notice'>Р’С‹ РґРѕР±Р°РІРёР»Рё РїСЂРѕРІРѕРґР° РІ [src].</span>")
 				else
-					to_chat(user, "<span class='warning'>Вам необходимо найти кабель по-больше для [src]!</span>")
+					to_chat(user, "<span class='warning'>Р’Р°Рј РЅРµРѕР±С…РѕРґРёРјРѕ РЅР°Р№С‚Рё РєР°Р±РµР»СЊ РїРѕ-Р±РѕР»СЊС€Рµ РґР»СЏ [src]!</span>")
 				return
 		if(2)
 			if(istype(W, /obj/item/weapon/wrench))
-				to_chat(usr, "<span class='warning'>Для начала уберите провода!</span>")
+				to_chat(usr, "<span class='warning'>Р”Р»СЏ РЅР°С‡Р°Р»Р° СѓР±РµСЂРёС‚Рµ РїСЂРѕРІРѕРґР°!</span>")
 				return
 
 			if(istype(W, /obj/item/weapon/wirecutters))
@@ -100,14 +100,14 @@
 					if("bulb")
 						icon_state = "bulb-construct-stage1"
 				new /obj/item/stack/cable_coil(get_turf(loc), 1, "red")
-				user.visible_message("[user.name] убирает проводку из [src].", \
-					"<span class='notice'>Вы убрали проводку из [src].</span>", "<span class='italics'>Вы слышите щелчки.</span>")
+				user.visible_message("[user.name] СѓР±РёСЂР°РµС‚ РїСЂРѕРІРѕРґРєСѓ РёР· [src].", \
+					"<span class='notice'>Р’С‹ СѓР±СЂР°Р»Рё РїСЂРѕРІРѕРґРєСѓ РёР· [src].</span>", "<span class='italics'>Р’С‹ СЃР»С‹С€РёС‚Рµ С‰РµР»С‡РєРё.</span>")
 				playsound(loc, W.usesound, 100, 1)
 				return
 
 			if(istype(W, /obj/item/weapon/screwdriver))
-				user.visible_message("[user.name] закрывает крышку [src].", \
-					"<span class='notice'>Вы закрыли крышку [src].</span>", "<span class='italics'>Вы слышите как кто-то что-то закручивает.</span>")
+				user.visible_message("[user.name] Р·Р°РєСЂС‹РІР°РµС‚ РєСЂС‹С€РєСѓ [src].", \
+					"<span class='notice'>Р’С‹ Р·Р°РєСЂС‹Р»Рё РєСЂС‹С€РєСѓ [src].</span>", "<span class='italics'>Р’С‹ СЃР»С‹С€РёС‚Рµ РєР°Рє РєС‚Рѕ-С‚Рѕ С‡С‚Рѕ-С‚Рѕ Р·Р°РєСЂСѓС‡РёРІР°РµС‚.</span>")
 				playsound(loc, W.usesound, 75, 1)
 				switch(fixture_type)
 					if("tube")
@@ -485,11 +485,11 @@
 			prot = 1
 
 		if(prot > 0)
-			to_chat(user, "<span class='notice'>Вы изъяли [fitting].</span>")
+			to_chat(user, "<span class='notice'>Р’С‹ РёР·СЉСЏР»Рё [fitting].</span>")
 		else if(istype(user) && user.dna.check_mutation(TK))
-			to_chat(user, "<span class='notice'>Вы телекинетически изъяли [fitting].</span>")
+			to_chat(user, "<span class='notice'>Р’С‹ С‚РµР»РµРєРёРЅРµС‚РёС‡РµСЃРєРё РёР·СЉСЏР»Рё [fitting].</span>")
 		else
-			to_chat(user, "<span class='warning'>Вы попытались изъять [fitting], но обожглись!</span>")
+			to_chat(user, "<span class='warning'>Р’С‹ РїРѕРїС‹С‚Р°Р»РёСЃСЊ РёР·СЉСЏС‚СЊ [fitting], РЅРѕ РѕР±РѕР¶РіР»РёСЃСЊ!</span>")
 
 			var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
 			if(affecting && affecting.receive_damage( 0, 5 ))		// 5 burn damage

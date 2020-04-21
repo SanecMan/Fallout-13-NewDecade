@@ -1,8 +1,8 @@
 //Fallout 13 npc ghouls directory
 
 /mob/living/simple_animal/hostile/ghost_man
-	name = "призрак"
-	desc = "Существо в химзащитном костюме, из глаз идет зеленоватое свечение."
+	name = "РїСЂРёР·СЂР°Рє"
+	desc = "РЎСѓС‰РµСЃС‚РІРѕ РІ С…РёРјР·Р°С‰РёС‚РЅРѕРј РєРѕСЃС‚СЋРјРµ, РёР· РіР»Р°Р· РёРґРµС‚ Р·РµР»РµРЅРѕРІР°С‚РѕРµ СЃРІРµС‡РµРЅРёРµ."
 	eng_name = "Ghost Man"
 	eng_desc = "I'd sooner ask what makes me an undying son of a bitch than spend any thought as to why they crawled to life here."
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -36,7 +36,7 @@
 	melee_damage_upper = 35
 	aggro_vision_range = 10
 	idle_vision_range = 5
-	attacktext = "царапает"
+	attacktext = "С†Р°СЂР°РїР°РµС‚"
 	eng_attacktext = "scratches"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
@@ -81,7 +81,7 @@
 	melee_damage_upper = 45
 	aggro_vision_range = 10
 	idle_vision_range = 5
-	attacktext = "царапает"
+	attacktext = "С†Р°СЂР°РїР°РµС‚"
 	eng_attacktext = "scratches"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
@@ -133,7 +133,7 @@
 	melee_damage_upper = 35
 	aggro_vision_range = 10
 	idle_vision_range = 5
-	attacktext = "царапает"
+	attacktext = "С†Р°СЂР°РїР°РµС‚"
 	eng_attacktext = "scratches"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN

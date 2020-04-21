@@ -1,8 +1,8 @@
 //Fallout 13 deathclaw directory
 
 /mob/living/simple_animal/hostile/deathclaw
-	name = "Коготь Смерти"
-	desc = "БЕГИ БЛЯТЬ."
+	name = "РљРѕРіРѕС‚СЊ РЎРјРµСЂС‚Рё"
+	desc = "Р‘Р•Р“Р Р‘Р›РЇРўР¬."
 	eng_name = "deathclaw"
 	eng_desc = "FUCK, RUN!"
 	icon = 'icons/fallout/mobs/deathclaw.dmi'
@@ -43,7 +43,7 @@
 	idle_vision_range = 7
 	pixel_w = -16
 	mob_size = MOB_SIZE_LARGE
-	attacktext = "бьёт с размаху"
+	attacktext = "Р±СЊС‘С‚ СЃ СЂР°Р·РјР°С…Сѓ"
 	eng_attacktext = "slashes"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	XP = 65

@@ -51,14 +51,14 @@
 	var/turf/T = get_turf(src)
 	if(mind && mind.name && mind.active && (T.z != ZLEVEL_CENTCOM))
 		var/area/A = get_area(T)
-		var/rendered = "<span class='deadsay'><b>[mind.name]</b> умер в локации <b>[A.name]</b>.</span>"
+		var/rendered = "<span class='deadsay'><b>[mind.name]</b> СѓРјРµСЂ РІ Р»РѕРєР°С†РёРё <b>[A.name]</b>.</span>"
 		deadchat_broadcast(rendered, follow_target = src, message_type=DEADCHAT_DEATHRATTLE)
 	if(mind)
-		mind.store_memory("Время смерти: [tod]", 0)
+		mind.store_memory("Р’СЂРµРјСЏ СЃРјРµСЂС‚Рё: [tod]", 0)
 	living_mob_list -= src
 	if(!gibbed)
 		dead_mob_list += src
-	to_chat(src, "Ожидайте респавна. OOC -> Respawn.")
+	to_chat(src, "РћР¶РёРґР°Р№С‚Рµ СЂРµСЃРїР°РІРЅР°. OOC -> Respawn.")
 	paralysis = 0
 	stunned = 0
 	weakened = 0

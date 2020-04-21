@@ -1,7 +1,7 @@
 /datum/weather_controller
-	var/name = "Контроль погоды"
+	var/name = "РљРѕРЅС‚СЂРѕР»СЊ РїРѕРіРѕРґС‹"
 	var/id = "weather_id"
-	var/desc = "Контроллирует погоду."
+	var/desc = "РљРѕРЅС‚СЂРѕР»Р»РёСЂСѓРµС‚ РїРѕРіРѕРґСѓ."
 
 	var/overlay
 	var/chance = 0		//chance to weather apply
@@ -59,7 +59,7 @@
 					M.apply_damage(damage = 50,damagetype = BURN)
 					shake_camera(M, 5, 4)
 				else
-					M.visible_message("<font color='green'>[M] имеет большую удачу!</font>")
+					M.visible_message("<font color='green'>[M] РёРјРµРµС‚ Р±РѕР»СЊС€СѓСЋ СѓРґР°С‡Сѓ!</font>")
 			else if(istype(A, /mob/living/carbon))
 				var/mob/living/M = A
 				M.apply_damage(damage = 150,damagetype = BURN)

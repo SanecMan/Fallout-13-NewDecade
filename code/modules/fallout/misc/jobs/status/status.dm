@@ -82,7 +82,7 @@ mob/proc/set_status(var/status)
 			text += "<br>[S.eng_welcome_text]"
 		to_chat(src, text)
 	else
-		text += "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>"
+		text += "<span class='notice'>РўРµРїРµСЂСЊ РІС‹ <span style='color: [S.color];'>[S.name]</span>.</span>"
 		if(S.welcome_text)
 			text += "<br>[S.welcome_text]"
 		to_chat(src, text)
@@ -99,11 +99,11 @@ mob/proc/set_status(var/status)
 	set category = "Faction"
 	if(status == "none")
 		return
-	if(alert("Вы уверены что хотите покинуть фракцию?",,"Yes","No")=="No")
+	if(alert("Р’С‹ СѓРІРµСЂРµРЅС‹ С‡С‚Рѕ С…РѕС‚РёС‚Рµ РїРѕРєРёРЅСѓС‚СЊ С„СЂР°РєС†РёСЋ?",,"Yes","No")=="No")
 		return
 
 	if(jobban_isbanned(src, "labor"))
-		to_chat(usr, "<span class='warning'>Вы в бане!</span>")
+		to_chat(usr, "<span class='warning'>Р’С‹ РІ Р±Р°РЅРµ!</span>")
 		return
 
 	set_status("none")
@@ -116,16 +116,16 @@ mob/proc/set_status(var/status)
 		return
 	if(M.status == status)
 		return
-	if(alert(M, "[src] приглашает вас быть [status].",,"Yes","No")=="No")
-		to_chat(src, "<span class='warning'>[M.name] отказался вступать во фракцию.</span>")
+	if(alert(M, "[src] РїСЂРёРіР»Р°С€Р°РµС‚ РІР°СЃ Р±С‹С‚СЊ [status].",,"Yes","No")=="No")
+		to_chat(src, "<span class='warning'>[M.name] РѕС‚РєР°Р·Р°Р»СЃСЏ РІСЃС‚СѓРїР°С‚СЊ РІРѕ С„СЂР°РєС†РёСЋ.</span>")
 		return
 	else
-		to_chat(src, "<span class='notice'>[M.name] принял запрос на вступление во фракцию.</span>")
+		to_chat(src, "<span class='notice'>[M.name] РїСЂРёРЅСЏР» Р·Р°РїСЂРѕСЃ РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ РІРѕ С„СЂР°РєС†РёСЋ.</span>")
 	var/datum/status/S = get_status_datum(status)
 	if(S && S.change_faction && M.social_faction != src.social_faction)
 		M.set_faction(src.social_faction)
 		var/datum/f13_faction/F = get_faction_datum(src.social_faction)
-		to_chat(M, "<span class='notice'>Вы присоеденились к <span style='color: [F.color];'>[F.name]</span> faction.</span>")
+		to_chat(M, "<span class='notice'>Р’С‹ РїСЂРёСЃРѕРµРґРµРЅРёР»РёСЃСЊ Рє <span style='color: [F.color];'>[F.name]</span> faction.</span>")
 		if(F.welcome_text)
 			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
 				to_chat(M, "<br>[F.eng_welcome_text]")
@@ -134,7 +134,7 @@ mob/proc/set_status(var/status)
 			else
 				to_chat(M, "<br>[F.welcome_text]")
 				M.set_status(status)
-				to_chat(M, "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>")
+				to_chat(M, "<span class='notice'>РўРµРїРµСЂСЊ РІС‹ <span style='color: [S.color];'>[S.name]</span>.</span>")
 	if(S.welcome_text)
 		to_chat(M, "<br>[S.welcome_text]")
 
@@ -145,25 +145,25 @@ mob/proc/set_status(var/status)
 //***Status***
 
 /datum/status/recruit
-	name = "Рекруты"
+	name = "Р РµРєСЂСѓС‚С‹"
 	id = "recruit"
 	change_faction = 1
 
 /datum/status/prime
-	name = "Прайм"
+	name = "РџСЂР°Р№Рј"
 	id = "prime"
 	change_faction = 1
 	color = "#A6423B"
 
 /datum/status/decanus
-	name = "Декан"
+	name = "Р”РµРєР°РЅ"
 	id = "decanus"
 	change_faction = 1
 	can_invite_to = list("recruit", "prime")
 	color = "#A6423B"
 
 /datum/status/vexillarius
-	name = "Вексиларий"
+	name = "Р’РµРєСЃРёР»Р°СЂРёР№"
 	id = "vexillarius"
 	change_faction = 1
 	can_invite_to = list("recruit", "prime", "decanus")
@@ -171,7 +171,7 @@ mob/proc/set_status(var/status)
 	color = "#983C36"
 
 /datum/status/centurion
-	name = "Центурион"
+	name = "Р¦РµРЅС‚СѓСЂРёРѕРЅ"
 	id = "centurion"
 	change_faction = 1
 	can_invite_to = list("recruit", "prime", "decanus", "vexillarius")
@@ -179,7 +179,7 @@ mob/proc/set_status(var/status)
 	color = "#8D3731"
 
 /datum/status/legate
-	name = "Легат"
+	name = "Р›РµРіР°С‚"
 	id = "legate"
 	change_faction = 1
 	can_invite_to = list("recruit", "prime", "decanus", "vexillarius", "centurion")
@@ -188,50 +188,50 @@ mob/proc/set_status(var/status)
 	color = "#7A302A"
 
 /datum/status/vranger
-	name = "Рейнджер Ветеран"
+	name = "Р РµР№РЅРґР¶РµСЂ Р’РµС‚РµСЂР°РЅ"
 	id = "vranger"
 	change_faction = 1
 	color = "#020070"
 
 /datum/status/ncr_general
-	name = "Генерал"
+	name = "Р“РµРЅРµСЂР°Р»"
 	id = "ncr_general"
 	change_faction = 1
 	can_invite_to = list("recruit", "trooper", "ncr_sergeant")
 	color = "#02005C"
 
 /datum/status/ncr_sergeant
-	name = "Сержант"
+	name = "РЎРµСЂР¶Р°РЅС‚"
 	id = "ncr_sergeant"
 	change_faction = 1
 	color = "#02005C"
 
 /datum/status/trooper
-	name = "Пехотинец"
+	name = "РџРµС…РѕС‚РёРЅРµС†"
 	id = "trooper"
 	change_faction = 1
 	color = "#02005C"
 
 /datum/status/elite_trooper
-	name = "Элитный Пехотинец"
+	name = "Р­Р»РёС‚РЅС‹Р№ РџРµС…РѕС‚РёРЅРµС†"
 	id = "etrooper"
 	change_faction = 1
 	color = "#02005C"
 
 /datum/status/slaver
-	name = "Работорговец"
+	name = "Р Р°Р±РѕС‚РѕСЂРіРѕРІРµС†"
 	id = "slaver"
 	purge_faction = "raiders"
 	color = "#FF0000"
 
 /datum/status/raider
-	name = "Рейдер"
+	name = "Р РµР№РґРµСЂ"
 	id = "raider"
 	purge_faction = "raiders"
 	color = "#FF0000"
 
 /datum/status/gangleader
-	name = "Лидер Банды"
+	name = "Р›РёРґРµСЂ Р‘Р°РЅРґС‹"
 	id = "gangleader"
 	purge_faction = "raiders"
 	can_invite_to = list("raider")
@@ -241,36 +241,36 @@ mob/proc/set_status(var/status)
 	/datum/table_recipe/raider_supafly_helmet, /datum/table_recipe/raider_yankee_helmet)
 
 /datum/status/neutral
-	name = "Нейтрал"
+	name = "РќРµР№С‚СЂР°Р»"
 	id = "none"
 	purge_faction = "none"
 
 /datum/status/member
-	name = "Житель"
+	name = "Р–РёС‚РµР»СЊ"
 	id = "member"
 	change_faction = 1
 
 /datum/status/trader
-	name = "Торговец"
+	name = "РўРѕСЂРіРѕРІРµС†"
 	id = "trader"
 	color = "#704200"
 
 /datum/status/sheriff
-	name = "Шериф"
+	name = "РЁРµСЂРёС„"
 	id = "sheriff"
 	can_invite_to = list("member")
 	purge_faction = "city"
 	color = "#704200"
 
 /datum/status/mayor
-	name = "Мэр"
+	name = "РњСЌСЂ"
 	id = "mayor"
 	can_invite_to = list("member", "sheriff")
 	purge_faction = "city"
 	color = "#704200"
 
 /datum/status/overseer
-	name = "Смотритель"
+	name = "РЎРјРѕС‚СЂРёС‚РµР»СЊ"
 	id = "overseer"
 	can_invite_to = list("member")
 	purge_faction = "vault"
@@ -300,14 +300,14 @@ mob/proc/set_status(var/status)
 //Vault
 
 /datum/status/overseer
-	name = "Смотритель"
+	name = "РЎРјРѕС‚СЂРёС‚РµР»СЊ"
 	id = "overseer"
 	can_invite_to = list("dweller")
 	purge_faction = "vault"
 	color = "#005A20"
 
 /datum/status/dweller
-	name = "Выходец из Убежища"
+	name = "Р’С‹С…РѕРґРµС† РёР· РЈР±РµР¶РёС‰Р°"
 	id = "dweller"
 	purge_faction = "vault"
 	color = "#005A20"
@@ -315,32 +315,32 @@ mob/proc/set_status(var/status)
 //Enclave
 
 /datum/status/colonel
-	name = "Полковник"
+	name = "РџРѕР»РєРѕРІРЅРёРє"
 	id = "colonel"
 	can_invite_to = list("enclave_sergeant", "private", "volunteer")
 	purge_faction = "enclave"
 	color = "#000"
 
 /datum/status/enclave_sergeant
-	name = "Сержант"
+	name = "РЎРµСЂР¶Р°РЅС‚"
 	id = "enclave_sergeant"
 	purge_faction = "enclave"
 	color = "#000"
 
 /datum/status/private
-	name = "Рядовой"
+	name = "Р СЏРґРѕРІРѕР№"
 	id = "enclave_private"
 	purge_faction = "enclave"
 	color = "#000"
 
 /datum/status/radist_bs
-	name = "Рядовой связист"
+	name = "Р СЏРґРѕРІРѕР№ СЃРІСЏР·РёСЃС‚"
 	id = "private_radist"
 	purge_faction = "enclave"
 	color = "#000"
 
 /datum/status/volunteer
-	name = "Волонтёр"
+	name = "Р’РѕР»РѕРЅС‚С‘СЂ"
 	id = "volunteer"
 	purge_faction = "enclave"
 	color = "#000"
@@ -348,59 +348,59 @@ mob/proc/set_status(var/status)
 //Brotherhood
 
 /datum/status/elder
-	name = "Старейшина"
+	name = "РЎС‚Р°СЂРµР№С€РёРЅР°"
 	id = "elder"
 	can_invite_to = list("paladin", "knight", "scriber", "initiate")
 	purge_faction = "bs"
 	color = "#13306d"
 
 /datum/status/paladin
-	name = "Паладин"
+	name = "РџР°Р»Р°РґРёРЅ"
 	id = "paladin"
 	purge_faction = "bs"
 	color = "#13306d"
 
 /datum/status/knight
-	name = "Рыцарь"
+	name = "Р С‹С†Р°СЂСЊ"
 	id = "knight"
 	purge_faction = "bs"
 	color = "#13306d"
 
 /datum/status/scriber
-	name = "Писец"
+	name = "РџРёСЃРµС†"
 	id = "scriber"
 	purge_faction = "bs"
 	color = "#13306d"
 
 /datum/status/paladin
-	name = "Рыцарь связист"
+	name = "Р С‹С†Р°СЂСЊ СЃРІСЏР·РёСЃС‚"
 	id = "paladin_r"
 	purge_faction = "bs"
 	color = "#13306d"
 
 /datum/status/initiate
-	name = "Послушник"
+	name = "РџРѕСЃР»СѓС€РЅРёРє"
 	id = "initiate"
 	purge_faction = "bs"
 	color = "#13306d"
 
 // FOA
 /datum/status/follower
-	name = "Последователь"
+	name = "РџРѕСЃР»РµРґРѕРІР°С‚РµР»СЊ"
 	id = "follower"
 	purge_faction = "followers"
 	color = "#000"
 
 // FOB
 /datum/status/overseer
-	name = "Смотритель"
+	name = "РЎРјРѕС‚СЂРёС‚РµР»СЊ"
 	id = "overseer"
 	can_invite_to = list("dweller")
 	purge_faction = "vault"
 	color = "#005A20"
 
 /datum/status/dweller
-	name = "Выходец из убежища"
+	name = "Р’С‹С…РѕРґРµС† РёР· СѓР±РµР¶РёС‰Р°"
 	id = "dweller"
 	purge_faction = "vault"
 	color = "#005A20"
@@ -420,7 +420,7 @@ mob/proc/set_status(var/status)
 	color = "#005A20"
 
 /datum/status/supermutant
-	name = "Супермутант"
+	name = "РЎСѓРїРµСЂРјСѓС‚Р°РЅС‚"
 	id = "supermutant"
 	purge_faction = "coc"
 	color = "#005A20"

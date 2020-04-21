@@ -1,6 +1,6 @@
 /obj/machinery/door/poddoor/gate
 	name = "city gate"
-	desc = "Большие механические ворота."
+	desc = "Р‘РѕР»СЊС€РёРµ РјРµС…Р°РЅРёС‡РµСЃРєРёРµ РІРѕСЂРѕС‚Р°."
 	icon = 'icons/fallout/objects/structures/city_gate.dmi'
 	icon_state = "closed"
 	id = 333
@@ -39,7 +39,7 @@
 
 /obj/machinery/door/poddoor/gate/heavy
 	name = "heavy gate"
-	desc = "Большие ворота, которые выдержат почти что угодно."
+	desc = "Р‘РѕР»СЊС€РёРµ РІРѕСЂРѕС‚Р°, РєРѕС‚РѕСЂС‹Рµ РІС‹РґРµСЂР¶Р°С‚ РїРѕС‡С‚Рё С‡С‚Рѕ СѓРіРѕРґРЅРѕ."
 	icon = 'icons/fallout/objects/structures/brotherhood_gate.dmi'
 	icon_state = "closed"
 	id = "heavydoor"
@@ -77,7 +77,7 @@
 
 /obj/machinery/door/poddoor/gate/heavy/vertical
 	name = "heavy gate"
-	desc = "Большие ворота, которые выдержат почти что угодно."
+	desc = "Р‘РѕР»СЊС€РёРµ РІРѕСЂРѕС‚Р°, РєРѕС‚РѕСЂС‹Рµ РІС‹РґРµСЂР¶Р°С‚ РїРѕС‡С‚Рё С‡С‚Рѕ СѓРіРѕРґРЅРѕ."
 	icon = 'icons/fallout/objects/structures/heavygatevertical.dmi'
 	icon_state = "closed"
 	id = "heavydoor"

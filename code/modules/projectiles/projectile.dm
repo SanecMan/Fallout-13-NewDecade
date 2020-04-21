@@ -102,7 +102,7 @@
 		var/organ_hit_text = ""
 		var/limb_hit = L.check_limb_hit(def_zone)//to get the correct message info.
 		if(limb_hit)
-			organ_hit_text = " в [parse_zone(limb_hit)]"
+			organ_hit_text = " РІ [parse_zone(limb_hit)]"
 		if(suppressed)
 			playsound(loc, hitsound, 5, 1, -1)
 			to_chat(L, "<span class='userdanger'>You're shot by \a [src][organ_hit_text]!</span>")
@@ -110,8 +110,8 @@
 			if(hitsound)
 				var/volume = vol_by_damage()
 				playsound(loc, hitsound, volume, 1, -1)
-			L.visible_message("<span class='danger'>[L] получает урон от [src][organ_hit_text]!</span>", \
-					"<span class='userdanger'>[L] получает урон от [src][organ_hit_text]!</span>", null, COMBAT_MESSAGE_RANGE)
+			L.visible_message("<span class='danger'>[L] РїРѕР»СѓС‡Р°РµС‚ СѓСЂРѕРЅ РѕС‚ [src][organ_hit_text]!</span>", \
+					"<span class='userdanger'>[L] РїРѕР»СѓС‡Р°РµС‚ СѓСЂРѕРЅ РѕС‚ [src][organ_hit_text]!</span>", null, COMBAT_MESSAGE_RANGE)
 		L.on_hit(src)
 
 	var/reagent_note

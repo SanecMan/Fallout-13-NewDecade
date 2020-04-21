@@ -1,6 +1,6 @@
 /obj/structure/closet
-	name = "шкафчик"
-	desc = "Обычный шкаф."
+	name = "С€РєР°С„С‡РёРє"
+	desc = "РћР±С‹С‡РЅС‹Р№ С€РєР°С„."
 	icon = 'icons/obj/closet.dmi'
 	icon_state = "generic"
 	density = 1
@@ -84,9 +84,9 @@
 	if(anchored)
 		to_chat(user, "It is anchored to the ground.")
 	if(broken)
-		to_chat(user, "<span class='notice'>Похоже что он поврежден.</span>")
+		to_chat(user, "<span class='notice'>РџРѕС…РѕР¶Рµ С‡С‚Рѕ РѕРЅ РїРѕРІСЂРµР¶РґРµРЅ.</span>")
 	else if(secure && !opened)
-		to_chat(user, "<span class='notice'>Alt-click чтобы [locked ? "отпереть" : "запереть"].</span>")
+		to_chat(user, "<span class='notice'>Alt-click С‡С‚РѕР±С‹ [locked ? "РѕС‚РїРµСЂРµС‚СЊ" : "Р·Р°РїРµСЂРµС‚СЊ"].</span>")
 
 /obj/structure/closet/CanPass(atom/movable/mover, turf/target, height=0)
 	if(height == 0 || wall_mounted)

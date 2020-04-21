@@ -19,7 +19,7 @@
 
 	var/image/cross = image('icons/obj/storage.dmi',"bible")
 	var/font_color = "purple"
-	var/prayer_type = "ÃŒÀﬂŸ»…—ﬂ"
+	var/prayer_type = "–ú–û–õ–Ø–©–ò–ô–°–Ø"
 	var/deity
 	if(usr.job == "Chaplain")
 		cross = image('icons/obj/storage.dmi',"kingyellow")

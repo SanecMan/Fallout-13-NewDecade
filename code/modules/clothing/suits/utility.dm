@@ -10,8 +10,8 @@
  */
 
 /obj/item/clothing/suit/fire
-	name = "костюм пожарного"
-	desc = "Костюм разработанный для защиты от жара и пламени."
+	name = "РєРѕСЃС‚СЋРј РїРѕР¶Р°СЂРЅРѕРіРѕ"
+	desc = "РљРѕСЃС‚СЋРј СЂР°Р·СЂР°Р±РѕС‚Р°РЅРЅС‹Р№ РґР»СЏ Р·Р°С‰РёС‚С‹ РѕС‚ Р¶Р°СЂР° Рё РїР»Р°РјРµРЅРё."
 	icon_state = "fire"
 	item_state = "ro_suit"
 	w_class = WEIGHT_CLASS_BULKY
@@ -36,15 +36,15 @@
 
 
 /obj/item/clothing/suit/fire/heavy
-	name = "тяжёлый костюм пожарного"
-	desc = "Старый и громоздкий костюм пожарного."
+	name = "С‚СЏР¶С‘Р»С‹Р№ РєРѕСЃС‚СЋРј РїРѕР¶Р°СЂРЅРѕРіРѕ"
+	desc = "РЎС‚Р°СЂС‹Р№ Рё РіСЂРѕРјРѕР·РґРєРёР№ РєРѕСЃС‚СЋРј РїРѕР¶Р°СЂРЅРѕРіРѕ."
 	icon_state = "thermal"
 	item_state = "ro_suit"
 	slowdown = 1.5
 
 /obj/item/clothing/suit/fire/atmos
-	name = "костюм пожарного"
-	desc = "Очень дорогой костюм, созданный для вылазок в самые жаркие места."
+	name = "РєРѕСЃС‚СЋРј РїРѕР¶Р°СЂРЅРѕРіРѕ"
+	desc = "РћС‡РµРЅСЊ РґРѕСЂРѕРіРѕР№ РєРѕСЃС‚СЋРј, СЃРѕР·РґР°РЅРЅС‹Р№ РґР»СЏ РІС‹Р»Р°Р·РѕРє РІ СЃР°РјС‹Рµ Р¶Р°СЂРєРёРµ РјРµСЃС‚Р°."
 	icon_state = "atmos_firesuit"
 	item_state = "firesuit_atmos"
 	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
