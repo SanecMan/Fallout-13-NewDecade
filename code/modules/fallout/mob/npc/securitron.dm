@@ -2,7 +2,9 @@
 
 /mob/living/simple_animal/hostile/securitron
 	name = "секьюрититрон МК1"
-	desc = "A pre-War type of securitron.<br>Extremely dangerous machine."
+	desc = "Довоенный вид секьюрититронов.<br>Очень опасная машина."
+	eng_name = "securitron MK1"
+	eng_desc = "A pre-War type of securitron.<br>Extremely dangerous machine."
 	icon = 'icons/fallout/mobs/robots.dmi'
 	icon_state = "Securitron"
 	icon_living = "Securitron"
@@ -24,7 +26,7 @@
 
 	faction = list("neutral", "city", "ncr")
 
-	emote_hear = list("подмигнул.")
+	emote_hear = list("winks.")
 	speak = list("Уот так уот!","Представьте! Целых 510 лет! Мы столько не живем.", "Руки вверх, вы арестованы! Ха-ха, шутка.")
 	sound_speak_chance = 5
 	sound_speak = list('sound/f13npc/robot_charge1.ogg','sound/f13npc/robot_charge2.ogg','sound/f13npc/robot_charge3.ogg')

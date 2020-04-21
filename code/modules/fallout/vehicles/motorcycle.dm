@@ -3,6 +3,8 @@
 /obj/vehicle/fuel/motorcycle
 	name = "мотоцикл"
 	desc = "Wanderer Motors LLC."
+	eng_name = "motorcycle"
+	eng_desc = "Wanderer Motors LLC."
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
 	icon_state = "bike"
 	pixel_x = -16
@@ -42,7 +44,9 @@
 
 /obj/item/key/motorcycle
 	name = "ключи от мотоцикла"
-	desc = "A keyring with a small steel key.<br>By the look of the key cuts it likely belongs to a motorcycle."
+	desc = "Кольцо с ключиком.<br>При осмотре, вы понимаете что это ключ от мотоцикла."
+	eng_name = "motorcycle key"
+	eng_desc = "A keyring with a small steel key.<br>By the look of the key cuts it likely belongs to a motorcycle."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
 
 /obj/item/key/motorcycle/New()
@@ -53,23 +57,31 @@
 
 /obj/vehicle/fuel/motorcycle/rusty
 	name = "ржавый мотоцикл"
-	desc = "A very old, weathered motorcycle.<br>Somehow the engine is still intact."
+	desc = "Очень старый и очень ржавый мотоцикл. <br>Однако, он еще на ходу."
+	eng_name = "rusty motorcycle"
+	eng_desc = "A very old, weathered motorcycle.<br>Somehow the engine is still intact."
 	icon_state = "bike_rust_med"
 	datum_type = /datum/riding/motorcycle/slow
 
 /obj/vehicle/fuel/motorcycle/green
 	name = "зеленый мотоцикл"
-	desc = "A military motorcycle from the old days.<br>Oddly enough it's still in pristine condition. The Army always had all the top-quality stuff."
+	desc = "Военный зеленый мотоцикл старых времен.<br>Удивительно, но он в прекрасном состоянии. Черт, Армия всегда имеет всё самое лучшее."
+	eng_name = "green motorcycle"
+	eng_desc = "A military motorcycle from the old days.<br>Oddly enough it's still in pristine condition. The Army always had all the top-quality stuff."
 	icon_state = "bike_green"
 
 /obj/vehicle/fuel/motorcycle/flamy
 	name = "черный мотоцикл"
-	desc = "A vintage motorcycle from the old days.<br>It's extremely well maintained, jet black, and very shiny.<br>Topping it all off, it has badass flames painted on the fuel tank."
+	desc = "Винтажный, черный мотоцикл.<br>Он очень хорошо покрашен в черный, а еще он сияет.<br>В дополнение ко всему, он еще имеет языки пламени на бензобаке."
+	eng_name = "flamy motorcycle"
+	eng_desc = "A vintage motorcycle from the old days.<br>It's extremely well maintained, jet black, and very shiny.<br>Topping it all off, it has badass flames painted on the fuel tank."
 	icon_state = "bike_flamy"
 
 /obj/vehicle/fuel/motorcycle/scrambler
-	name = "scrambler motorbike"
-	desc = "Scrambler is an old term for a dirt bike with a powerful engine that raced on dirt tracks with low jumps.<br>Something tells you it's better not to mess around with its owner."
+	name = "мотобайк"
+	desc = "Этот мотобайк когда-то учавствовал в гонках.<br> Он чертовски быстрый."
+	eng_name = "scrambler motorbike"
+	eng_desc = "Scrambler is an old term for a dirt bike with a powerful engine that raced on dirt tracks with low jumps.<br>Something tells you it's better not to mess around with its owner."
 	icon_state = "bike_scrambler"
 	datum_type = /datum/riding/motorcycle/fast
 

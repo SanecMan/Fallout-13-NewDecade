@@ -186,6 +186,9 @@ var/last_irc_status = 0
 		else
 			return ircadminwho()
 
+#define CHAT_LANGUAGE 	1024
+#define TOGGLES_DEFAULT_CHAT (CHAT_LANGUAGE)
+
 
 /world/Reboot(var/reason, var/feedback_c, var/feedback_r, var/time)
 	if (reason == 1) //special reboot, do none of the normal stuff
@@ -200,8 +203,12 @@ var/last_irc_status = 0
 	else
 		delay = config.round_end_countdown * 10
 	if(ticker.delay_end)
-		to_chat(world, "<span class='boldannounce'>Администратор приостановил конец раунда.</span>")
-		return
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			to_chat(world, "<span class='boldannounce'>Administrator delayed Round End.</span>")
+			return
+		else
+			to_chat(world, "<span class='boldannounce'>Администратор приостановил конец раунда.</span>")
+			return
 	to_chat(world, "<span class='boldannounce'>Перезапуск мира через [delay/10] [delay > 10 ? "seconds" : "second"]. [reason]</span>")
 	var/round_end_sound_sent = FALSE
 	if(ticker.round_end_sound)
@@ -259,6 +266,8 @@ var/last_irc_status = 0
 		if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 			C << link("byond://[config.server]")
 
+#undef CHAT_LANGUAGE
+#undef TOGGLES_DEFAULT_CHAT
 
 //Testing
 	if(config.shell_reboot)

@@ -3,6 +3,8 @@
 /mob/living/simple_animal/hostile/protectron
 	name = "Протектрон"
 	desc = "Довоенный вид протектронов.<br>Очень опасная машина."
+	eng_name = "protectron"
+	eng_desc = "pre-war type of protectrons. <br> Very dangerous machine."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "protectron_old"
 	icon_living = "protectron_old"

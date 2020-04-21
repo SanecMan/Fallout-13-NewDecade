@@ -1,8 +1,10 @@
 //Fallout 13 super mutants directory
 
 /mob/living/simple_animal/hostile/supermutant
-	name = "super mutant"
-	desc = "A huge and ugly mutant humanoid."
+	name = "супермутант"
+	desc = "Больной, уродливый и зеленый гуманоид."
+	eng_name = "super mutant"
+	eng_desc = "A huge and ugly mutant humanoid."
 	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "hulk_113_s"
 	icon_living = "hulk_113_s"

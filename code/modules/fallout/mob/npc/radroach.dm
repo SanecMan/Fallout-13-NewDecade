@@ -3,6 +3,8 @@
 /mob/living/simple_animal/hostile/radroach
 	name = "–адтаракан"
 	desc = "ќгромный јмериканский “аракан, но в основном их все просто называют тараканами-переростками, довоенный вид животного, подвершегос€ мутации."
+	eng_name = "radroach"
+	eng_desc = "Great American Roach, but mostly people name them as giant roach."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "radroach"
 	icon_living = "radroach"
@@ -36,6 +38,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 5
 	attacktext = "кусает"
+	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	aggro_vision_range = 10
 	idle_vision_range = 5

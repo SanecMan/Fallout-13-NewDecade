@@ -1,6 +1,8 @@
 /mob/living/simple_animal/hostile/vault
-	name = "Vault Dweller"
-	desc = "Just a Vault Dweller"
+	name = "житель убежища"
+	desc = "Просто житель убежища."
+	eng_name = "Vault Dweller"
+	eng_desc = "Just a Vault Dweller"
 	icon_state = "vault_dweller"
 	icon_living = "vault_dweller"
 	icon_dead = "vault_dweller"
@@ -19,7 +21,8 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "punches"
+	attacktext = "бьёт"
+	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/vault)
@@ -98,8 +101,10 @@
 	icon_gib = "vault_dweller5"
 
 /mob/living/simple_animal/hostile/vault/security
-	name = "Vault Security"
-	desc = "Just a Vault Security"
+	name = "охрана убежища"
+	desc = "Грозный мужик с дубинкой."
+	eng_name = "Vault Security"
+	eng_desc = "Just a Vault Security"
 	icon_state = "vault_dweller_sec"
 	icon_living = "vault_dweller_sec"
 	icon_dead = "vault_dweller_sec"
@@ -140,7 +145,8 @@
 
 /mob/living/simple_animal/hostile/enclave
 	name = "Enclave"
-	desc = "Just an Enclave"
+	desc = "Кто эти люди?"
+	eng_desc = "Just an Enclave"
 	icon_state = "enclave_scientist"
 	icon_living = "enclave_scientist"
 	icon_dead = "enclave_scientist"
@@ -160,6 +166,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attacktext = "бьет"
+	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave)
@@ -184,7 +191,8 @@
 	..()
 
 /obj/effect/mob_spawn/human/corpse/enclave
-	name = "Enclave scientist"
+	name = "учёный анклава"
+	eng_name = "Enclave scientist"
 	uniform = /obj/item/clothing/under/f13/enclave_officer
 	suit = /obj/item/clothing/suit/radiation/enclave
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -196,8 +204,10 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/enclave/scientist
-	name = "Enclave scientist"
-	desc = "Just an Enclave scientist"
+	name = "учёный анклава"
+	desc = "Просто учёный."
+	eng_name = "Enclave scientist"
+	eng_desc = "Just an Enclave scientist"
 	minimum_distance = 10
 	retreat_distance = 10
 	obj_damage = 0
@@ -209,8 +219,10 @@
 	say("ПОМОГИТЕ!!")
 
 /mob/living/simple_animal/hostile/enclave/soldier
-	name = "Enclave Soldier"
-	desc = "Just a Enclave Soldier"
+	name = "патрульный анклава"
+	desc = "Выглядит очень грозно!"
+	eng_name = "Enclave Soldier"
+	eng_desc = "Just a Enclave Soldier"
 	icon_state = "enclave_soldier"
 	icon_living = "enclave_soldier"
 	icon_dead = "enclave_soldier"
@@ -229,8 +241,10 @@
 	XP = 80
 
 /mob/living/simple_animal/hostile/enclave/soldier_ca
-	name = "Enclave Private Soldier"
-	desc = "Just a Enclave Soldier"
+	name = "рядовой анклава"
+	desc = "Это судя по всему, рядовой."
+	eng_name = "Enclave Private Soldier"
+	eng_desc = "Just a Enclave Soldier"
 	icon_state = "enclave_soldier_ca"
 	icon_living = "enclave_soldier_ca"
 	icon_dead = "enclave_soldier_ca"
@@ -272,6 +286,7 @@
 /mob/living/simple_animal/hostile/bs
 	name = "BS"
 	desc = "Вы уверены, будь у вас Тостер, он бы догнал и трахнул вас, чтобы заполучить его."
+	eng_desc = "You sure, if you have toaster, he will fuck you, to take it from your dead body."
 	icon_state = "bs_knight"
 	icon_living = "bs_knight"
 	icon_dead = "bs_knight"
@@ -293,6 +308,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attacktext = "бьет"
+	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/bs)
@@ -317,7 +333,8 @@
 	..()
 
 /obj/effect/mob_spawn/human/corpse/bs
-	name = "BS Knight"
+	name = "рыцарь братства"
+	eng_name = "Brotherhood Knight"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/brotherhood_armor
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -329,8 +346,10 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/bs/knight
-	name = "BS Knight"
-	desc = "Just a BS Knight"
+	name = "рыцарь братства"
+	desc = "Рыцарь братства. Бесполезный и медлительный идиот."
+	eng_desc = "Just a BS Knight"
+	eng_name = "Brotherhood Knight"
 	icon_state = "bs_knight"
 	icon_living = "bs_knight"
 	icon_dead = "bs_knight"
@@ -347,8 +366,10 @@
 	XP = 30
 
 /mob/living/simple_animal/hostile/bs/paladin
-	name = "BS Paladin"
-	desc = "Just a BS Paladin"
+	name = "паладин братства"
+	desc = "Чуть более опаснее рыцаря."
+	eng_name = "BS Paladin"
+	eng_desc = "Just a BS Paladin"
 	icon_state = "bs_paladin"
 	icon_living = "bs_paladin"
 	icon_dead = "bs_paladin"
@@ -367,7 +388,8 @@
 	XP = 70
 
 /obj/effect/mob_spawn/human/corpse/bs/paladin
-	name = "BS Paladin"
+	name = "паладин братства"
+	eng_name = "BS Paladin"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -400,6 +422,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attacktext = "бьет"
+	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
@@ -513,6 +536,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attacktext = "бьет"
+	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/legion)
@@ -541,7 +565,10 @@
 	..()
 
 /obj/effect/mob_spawn/human/corpse/legion
-	name = "Legion Prime"
+	name = "прайм легиона"
+	desc = "Просто типа умны дегенерат."
+	eng_name = "Legion Prime"
+	eng_desc = "Just a Legion Prime"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
@@ -553,8 +580,10 @@
 	has_id = 0
 
 /mob/living/simple_animal/hostile/legion/prime
-	name = "Legion Prime"
-	desc = "Just a Legion Prime"
+	name = "прайм легиона"
+	desc = "Просто типа умны дегенерат."
+	eng_name = "Legion Prime"
+	eng_desc = "Just a Legion Prime"
 	icon_state = "legion_prime"
 	icon_living = "legion_prime"
 	icon_dead = "legion_prime"
@@ -572,7 +601,8 @@
 	XP = 20
 
 /mob/living/simple_animal/hostile/legion/decan
-	name = "Legion Decan"
+	name = "декан легиона"
+	eng_name = "Legion Decan"
 	desc = "Just a Legion Decan"
 	icon_state = "legion_decan"
 	icon_living = "legion_decan"
@@ -593,7 +623,8 @@
 	XP = 30
 
 /obj/effect/mob_spawn/human/corpse/legion/decan
-	name = "Legion Decan"
+	name = "декан легиона"
+	eng_name = "Legion Decan"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/legrecruit
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
@@ -607,6 +638,8 @@
 /mob/living/simple_animal/hostile/raider
 	name = "Неизвестная личность (Рейдер)"
 	desc = "Просто тупой рейдер."
+	eng_name = "Unknown (Raider)"
+	eng_desc = "Yet another stupid raider."
 	icon_state = "firefighter_raider"
 	icon_living = "firefighter_raider"
 	icon_dead = "firefighter_raider"
@@ -630,6 +663,7 @@
 	melee_damage_lower = 20
 	melee_damage_upper = 30
 	attacktext = "наносит удар"
+	eng_attacktext = "hits"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/raider)
@@ -659,6 +693,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Рейдер"
+	eng_name = "raider"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/tribal
 	shoes = /obj/item/clothing/shoes/f13/rag
@@ -672,7 +707,10 @@
 /mob/living/simple_animal/hostile/raider/Aggro()
 	..()
 	summon_backup(15)
-	say("УМРИ, УМРИ, УМРИ!!!")
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		say("DIE, DIE, DIE!!!")
+	else
+		say("УМРИ, УМРИ, УМРИ!!!")
 
 /mob/living/simple_animal/hostile/raider/firefighter
 	icon_state = "firefighter_raider"

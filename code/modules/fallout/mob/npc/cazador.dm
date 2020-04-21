@@ -2,7 +2,9 @@
 
 /mob/living/simple_animal/hostile/cazador
 	name = "Касадор"
-	desc = "A big and ugly flying thing."
+	desc = "Большая, уродливая, летающая штука."
+	eng_name = "cazador"
+	eng_desc = "A big and ugly flying thing."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "cazador"
 	icon_living = "cazador"
@@ -41,6 +43,7 @@
 	melee_damage_lower = 20
 	melee_damage_upper = 30
 	attacktext = "жалит"
+	eng_attacktext = "stings"
 	attack_sound = 'sound/weapons/bite.ogg'
 
 	XP = 7

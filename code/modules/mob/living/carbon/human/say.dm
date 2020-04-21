@@ -1,10 +1,17 @@
 /mob/living/carbon/human/say_quote(input, spans)
 	if(!input)
-		return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			return "says, \"...\""
+		else
+			return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 	verb_say = dna.species.say_mod
 	if(src.slurring)
-		input = attach_spans(input, spans)
-		return "несвязно, \"[input]\""
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			input = attach_spans(input, spans)
+			return "slurs, \"[input]\""
+		else
+			input = attach_spans(input, spans)
+			return "несвязно, \"[input]\""
 
 	return ..()
 

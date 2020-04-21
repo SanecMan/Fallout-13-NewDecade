@@ -1,6 +1,8 @@
 /mob/living/simple_animal/hostile/alien_fallout
 	name = "Чужой"
-	desc = "An Alien."
+	desc = "Серый гуманоид..."
+	eng_name = "alien"
+	eng_desc = "Grey humanoid..."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "grey_gun"
 	icon_living = "grey_gun"

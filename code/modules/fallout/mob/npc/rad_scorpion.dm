@@ -2,7 +2,9 @@
 
 /mob/living/simple_animal/hostile/rad_scorpion
 	name = "рад скорпион"
-	desc = "A giant irradiated scorpion with a blue exoskeleton. Its appearance makes you shudder.<br>This one has a razor sharp stinger with lethal venom inside."
+	desc = "Гигантский мутировавший скорпион с голубым панцирем."
+	eng_name = "giant rad scorpion"
+	eng_desc = "A giant irradiated scorpion with a blue exoskeleton. Its appearance makes you shudder.<br>This one has a razor sharp stinger with lethal venom inside."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "radscorpion"
 	icon_living = "radscorpion"
@@ -42,8 +44,10 @@
 	XP = 13
 
 /mob/living/simple_animal/hostile/rad_scorpion/black
-	name = "giant rad scorpion"
-	desc = "A giant irradiated scorpion with a black exoskeleton. Its appearance makes you shudder in fear.<br>This one has giant pincers."
+	name = "рад скорпион"
+	desc = "Гигантский мутировавший скорпион с черным панцирем. Этот выглядит немного... больше."
+	eng_name = "giant rad scorpion"
+	eng_desc = "A giant irradiated scorpion with a black exoskeleton. Its appearance makes you shudder in fear.<br>This one has giant pincers."
 	icon_state = "radscorpion_black"
 	icon_living = "radscorpion_black"
 	icon_dead = "radscorpion_black_d"

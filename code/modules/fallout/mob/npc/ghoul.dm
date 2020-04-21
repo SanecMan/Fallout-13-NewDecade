@@ -2,7 +2,9 @@
 
 /mob/living/simple_animal/hostile/ghoul
 	name = "Дикий гуль"
-	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	desc = "Вы видели когда-нибудь живого гуля?<br>Гули, это практически мертвые люди, гниющие и плохо пахнущие, прямо как зомби."
+	eng_name = "feral ghoul"
+	eng_desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "retro_ghoul"
 	icon_living = "retro_ghoul"
@@ -36,6 +38,7 @@
 	aggro_vision_range = 10
 	idle_vision_range = 7
 	attacktext = "царапает"
+	eng_attacktext = "scratches"
 	attack_sound = "punch"
 
 	XP = 7
@@ -59,7 +62,9 @@
 
 /mob/living/simple_animal/hostile/ghoul/aggressive
 	name = "Дикий гуль"
-	desc = "Have you ever seen a hungry ghoul before?<br>Similar to other feral ghouls, it's more aggressive and confident about the fact that you are the best food around.<br>It is missing a left arm."
+	desc = "Вы видели когда-нибудь живого очень голодного гуля?<br>Чтож, скорее всего, это последнее что вы видите теперь."
+	eng_name = "feral ghoul"
+	eng_desc = "Have you ever seen a hungry ghoul before?<br>Similar to other feral ghouls, it's more aggressive and confident about the fact that you are the best food around.<br>It is missing a left arm."
 	icon_state = "angry_ghoul"
 	icon_living = "angry_ghoul"
 	icon_dead = "angry_ghoul_d"
@@ -70,7 +75,8 @@
 	melee_damage_upper = 25
 	aggro_vision_range = 15
 	idle_vision_range = 10
-	attacktext = "chomps"
+	attacktext = "жует"
+	eng_attacktext = "chomps"
 
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "Светящийся гуль"
@@ -93,7 +99,6 @@
 
 /mob/living/simple_animal/hostile/ghoul/soldier
 	name = "Дикий гуль"
-	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "soldier_ghoul"
 	icon_living = "soldier_ghoul"
@@ -104,7 +109,7 @@
 
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
 	name = "Бронированный дикий гуль"
-	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
+	eng_name = "armored feral ghoul"
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "soldier_ghoul_a"
 	icon_living = "soldier_ghoul_a"
@@ -116,6 +121,8 @@
 /mob/living/simple_animal/hostile/ghoul/scorched
 	name = "Горелый"
 	desc = "В дополнение к сморщенной, обгоревшей коже, типичной для гулей, горелые обладают зелеными ультрацитовыми наростами по всему телу, пронизывающими их кожу нерегулярными узорами. Причины образования и предназначение этих ростков неизвестны, но, согласно предварительным исследованиям на местах, проводимым смотрительницей Убежища 76, горелые — это бывшие люди, которые заразились «чумой горелых», распространяемой зверожогами.."
+	eng_name = "scorched"
+	eng_desc = "It's like ghoul, but... not ghoul. What is this?"
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "scorched_m"
 	icon_living = "scorched_m"
@@ -126,7 +133,9 @@
 	environment_smash = 0
 	response_help = "hugs"
 	response_disarm = "pushes aside"
-	response_harm = "режет"
+	response_harm = "hits"
+	eng_attacktext = "sliced"
+	attacktext = "режет"
 	move_to_delay = 4
 	respawn_time_of_mob = 500000000
 	maxHealth = 80
@@ -147,13 +156,14 @@
 	melee_damage_upper = 20
 	aggro_vision_range = 10
 	idle_vision_range = 7
-	attacktext = "царапает"
 	attack_sound = "punch"
 	XP = 10
 
 /mob/living/simple_animal/hostile/ghoul/scorched/ranged
 	name = "Горелый"
 	desc = "В дополнение к сморщенной, обгоревшей коже, типичной для гулей, горелые обладают зелеными ультрацитовыми наростами по всему телу, пронизывающими их кожу нерегулярными узорами. Причины образования и предназначение этих ростков неизвестны, но, согласно предварительным исследованиям на местах, проводимым смотрительницей Убежища 76, горелые — это бывшие люди, которые заразились «чумой горелых», распространяемой зверожогами.."
+	eng_name = "scorched"
+	eng_desc = "It's like ghoul, but now ghoul. Oh wait, it's... rifle?"
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "scorched_r"
 	icon_living = "scorched_r"
@@ -190,5 +200,6 @@
 	aggro_vision_range = 10
 	idle_vision_range = 7
 	attacktext = "царапает"
+	eng_attacktext = "hits"
 	attack_sound = "punch"
 	XP = 15

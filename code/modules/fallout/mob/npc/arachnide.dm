@@ -1,6 +1,8 @@
 /mob/living/simple_animal/hostile/arachnide
 	name = "јрахнид"
 	desc = "Ѕ≈√» ЅЋя“№."
+	eng_name = "arachnide"
+	eng_desc = "FUCK, RUN!"
 	icon = 'icons/fallout/mobs/arachnid.dmi'
 	icon_state = "arachnid"
 	icon_living = "arachnid"
@@ -40,5 +42,6 @@
 	pixel_w = -16
 	mob_size = MOB_SIZE_LARGE
 	attacktext = "бьЄт клешн€ми"
+	eng_attacktext = "attacks with claws"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	XP = 50

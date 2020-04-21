@@ -3,23 +3,44 @@
 	var/armor = getarmor(def_zone, attack_flag)
 
 	//the if "armor" check is because this is used for everything on /living, including humans
-	if(armor && armour_penetration)
-		armor = max(0, armor - armour_penetration)
-		if(penetrated_text)
-			to_chat(src, "<span class='userdanger'>[penetrated_text]</span>")
-		else
-			to_chat(src, "<span class='userdanger'>¬аша брон€ пробита!</span>")
-	else if(armor >= 100)
-		if(absorb_text)
-			to_chat(src, "<span class='userdanger'>[absorb_text]</span>")
-		else
-			to_chat(src, "<span class='userdanger'>¬аша брон€ поглотила урон!</span>")
-	else if(armor > 0)
-		if(soften_text)
-			to_chat(src, "<span class='userdanger'>[soften_text]</span>")
-		else
-			to_chat(src, "<span class='userdanger'>¬аша брон€ см€гчила урон!</span>")
-	return armor
+	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(armor && armour_penetration)
+			armor = max(0, armor - armour_penetration)
+			if(penetrated_text)
+				if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+					to_chat(src, "<span class='userdanger'>[penetrated_text]</span>")
+				else
+					to_chat(src, "<span class='userdanger'>Your armor was penetrated!</span>")
+		else if(armor >= 100)
+			if(absorb_text)
+				to_chat(src, "<span class='userdanger'>[absorb_text]</span>")
+			else
+				to_chat(src, "<span class='userdanger'>Your armor absorbs the blow!</span>")
+		else if(armor > 0)
+			if(soften_text)
+				to_chat(src, "<span class='userdanger'>[soften_text]</span>")
+			else
+				to_chat(src, "<span class='userdanger'>Your armor softens the blow!</span>")
+		return armor
+	else
+		if(armor && armour_penetration)
+			armor = max(0, armor - armour_penetration)
+			if(penetrated_text)
+				to_chat(src, "<span class='userdanger'>[penetrated_text]</span>")
+			else
+				to_chat(src, "<span class='userdanger'>¬аша брон€ пробита!</span>")
+		else if(armor >= 100)
+			if(absorb_text)
+				to_chat(src, "<span class='userdanger'>[absorb_text]</span>")
+			else
+				to_chat(src, "<span class='userdanger'>¬аша брон€ поглотила урон!</span>")
+		else if(armor > 0)
+			if(soften_text)
+				to_chat(src, "<span class='userdanger'>[soften_text]</span>")
+			else
+				to_chat(src, "<span class='userdanger'>¬аша брон€ см€гчила урон!</span>")
+		return armor
+
 
 
 /mob/living/proc/getarmor(def_zone, type)
@@ -96,8 +117,12 @@
 		if(!I.throwforce)// Otherwise, if the item's throwforce is 0...
 			playsound(loc, 'sound/weapons/throwtap.ogg', 1, volume, -1)//...play throwtap.ogg.
 		if(!blocked)
-			visible_message("<span class='danger'>[src] ранен [I].</span>", \
-							"<span class='userdanger'>[src] ранен с [I].</span>")
+			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+				visible_message("<span class='danger'>[src] has been hit by [I].</span>", \
+								"<span class='userdanger'>[src] has been hit by [I].</span>")
+			else
+				visible_message("<span class='danger'>[src] ранен [I].</span>", \
+								"<span class='userdanger'>[src] ранен с [I].</span>")
 			var/armor = run_armor_check(zone, "melee", "Your armor has protected your [parse_zone(zone)].", "Your armor has softened hit to your [parse_zone(zone)].",I.armour_penetration)
 
 			//crc
@@ -157,8 +182,12 @@
 				return
 		updatehealth()
 		attacked_trigger(M)
-		visible_message("<span class='danger'>[M.name] бьЄт [src]!</span>", \
-						"<span class='userdanger'>[M.name] бьЄт [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			visible_message("<span class='danger'>[M.name] has hit [src]!</span>", \
+							"<span class='userdanger'>[M.name] has hit [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+		else
+			visible_message("<span class='danger'>[M.name] бьЄт [src]!</span>", \
+							"<span class='userdanger'>[M.name] бьЄт [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 		add_logs(M.occupant, src, "attacked", M, "(INTENT: [uppertext(M.occupant.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
 	else
 		step_away(src,M)
@@ -190,8 +219,12 @@
 		if(user.grab_state) //only the first upgrade is instantaneous
 			var/old_grab_state = user.grab_state
 			var/grab_upgrade_time = 30
-			visible_message("<span class='danger'>[user] начинает усиливать свой захват на шее [src]!</span>", \
-				"<span class='userdanger'>[user] начинает усиливать свой захват на твоей шее!</span>")
+			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+				visible_message("<span class='danger'>[user] starts tighten his grab on [src] neck!</span>", \
+					"<span class='userdanger'>[user] starts tighten his grab on your neck!</span>")
+			else
+				visible_message("<span class='danger'>[user] начинает усиливать свой захват на шее [src]!</span>", \
+					"<span class='userdanger'>[user] начинает усиливать свой захват на твоей шее!</span>")
 			if(!do_mob(user, src, grab_upgrade_time))
 				return 0
 			if(!user.pulling || user.pulling != src || user.grab_state != old_grab_state || user.a_intent != INTENT_GRAB)
@@ -200,19 +233,31 @@
 		switch(user.grab_state)
 			if(GRAB_AGGRESSIVE)
 				add_logs(user, src, "grabbed", addition="aggressively")
-				visible_message("<span class='danger'>[user] хватает [src] агрессивнее!</span>", \
-								"<span class='userdanger'>[user] хватает [src] агрессивнее!</span>")
+				if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+					visible_message("<span class='danger'>[user] grabbed [src] more aggressively!</span>", \
+									"<span class='userdanger'>[user] grabbed [src] more aggressively!</span>")
+				else
+					visible_message("<span class='danger'>[user] хватает [src] агрессивнее!</span>", \
+									"<span class='userdanger'>[user] хватает [src] агрессивнее!</span>")
 				drop_all_held_items()
 				stop_pulling()
 			if(GRAB_NECK)
-				visible_message("<span class='danger'>[user] хватает [src] за шею!</span>",\
-								"<span class='userdanger'>[user] хватает вас за шею!</span>")
+				if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+					visible_message("<span class='danger'>[user] grabbed [src] by neck!</span>",\
+									"<span class='userdanger'>[user] grabbed your neck!</span>")
+				else
+					visible_message("<span class='danger'>[user] хватает [src] за шею!</span>",\
+									"<span class='userdanger'>[user] хватает вас за шею!</span>")
 				update_canmove() //we fall down
 				if(!buckled && !density)
 					Move(user.loc)
 			if(GRAB_KILL)
-				visible_message("<span class='danger'>[user] душит [src]!</span>", \
-								"<span class='userdanger'>[user] душит вас!</span>")
+				if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+					visible_message("<span class='danger'>[user] chokes [src]!</span>", \
+									"<span class='userdanger'>[user] chokes you!</span>")
+				else
+					visible_message("<span class='danger'>[user] душит [src]!</span>", \
+									"<span class='userdanger'>[user] душит вас!</span>")
 				update_canmove() //we fall down
 				if(!buckled && !density)
 					Move(user.loc)
@@ -247,8 +292,12 @@
 		if(M.attack_sound)
 			playsound(loc, M.attack_sound, 50, 1, 1)
 		M.do_attack_animation(src)
-		visible_message("<span class='danger'>\The [M] [M.attacktext] [src]!</span>", \
-						"<span class='userdanger'>\The [M] [M.attacktext] [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			visible_message("<span class='danger'>\The [M.eng_name] [M.eng_attacktext] [src]!</span>", \
+							"<span class='userdanger'>\The [M.eng_name] [M.eng_attacktext] [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+		else
+			visible_message("<span class='danger'>\The [M.name] [M.attacktext] [src]!</span>", \
+							"<span class='userdanger'>\The [M.name] [M.attacktext] [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 		add_logs(M, src, "attacked")
 		return 1
 
@@ -267,12 +316,20 @@
 		if (prob(75))
 			add_logs(M, src, "attacked")
 			playsound(loc, 'sound/weapons/bite.ogg', 50, 1, -1)
-			visible_message("<span class='danger'>[M.name] кусает [src]!</span>", \
-					"<span class='userdanger'>[M.name] кусает [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+				visible_message("<span class='danger'>[M.eng_name] bites [src]!</span>", \
+						"<span class='userdanger'>[M.eng_name] bites [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+			else
+				visible_message("<span class='danger'>[M.name] кусает [src]!</span>", \
+						"<span class='userdanger'>[M.name] кусает [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 			return 1
 		else
-			visible_message("<span class='danger'>[M.name] пытаетс€ укусить [src]!</span>", \
-				"<span class='userdanger'>[M.name] неудачно пытаетс€ укусить [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+				visible_message("<span class='danger'>[M.eng_name] has attempted to bite [src]!</span>", \
+					"<span class='userdanger'>[M.eng_name] has attempted to bite [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+			else
+				visible_message("<span class='danger'>[M.name] пытаетс€ укусить [src]!</span>", \
+					"<span class='userdanger'>[M.name] неудачно пытаетс€ укусить [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 	return 0
 
 /mob/living/attack_larva(mob/living/carbon/alien/larva/L)

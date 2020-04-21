@@ -1,8 +1,10 @@
 //Fallout 13 npc ghouls directory
 
 /mob/living/simple_animal/hostile/ghost_man
-	name = "Ghost Man"
-	desc = "I'd sooner ask what makes me an undying son of a bitch than spend any thought as to why they crawled to life here."
+	name = "призрак"
+	desc = "Существо в химзащитном костюме, из глаз идет зеленоватое свечение."
+	eng_name = "Ghost Man"
+	eng_desc = "I'd sooner ask what makes me an undying son of a bitch than spend any thought as to why they crawled to life here."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "ghost_man"
 	icon_living = "ghost_man"
@@ -35,6 +37,7 @@
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	attacktext = "царапает"
+	eng_attacktext = "scratches"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1
@@ -79,6 +82,7 @@
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	attacktext = "царапает"
+	eng_attacktext = "scratches"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1
@@ -130,6 +134,7 @@
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	attacktext = "царапает"
+	eng_attacktext = "scratches"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1

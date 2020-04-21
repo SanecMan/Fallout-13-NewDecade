@@ -29,7 +29,8 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "punches"
+	attacktext = "бьёт"
+	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/syndicatesoldier)
@@ -48,7 +49,8 @@
 	icon_state = "syndicatemelee"
 	icon_living = "syndicatemelee"
 	loot = list(/obj/effect/gibspawner/human)
-	attacktext = "slashes"
+	attacktext = "режет"
+	eng_attacktext = "slashes"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	armour_penetration = 28
 	status_flags = 0
@@ -149,7 +151,8 @@
 	melee_damage_upper = 15
 	obj_damage = 0
 	environment_smash = 0
-	attacktext = "cuts"
+	eng_attacktext = "cuts"
+	attacktext = "наносит порезы"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	faction = list("syndicate")
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)

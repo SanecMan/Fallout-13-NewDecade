@@ -2,7 +2,9 @@
 
 /obj/structure/car
 	name = "остов автомобил€"
-	desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
+	desc = "–жавый остов довоенного авто.<br>Ќастолько сломан, что уже не починить."
+	eng_name = "derelict car"
+	eng_desc = "A rusty pre-War automobile carcass.<br>This car is damaged beyond repair."
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
 	icon_state = "derelict"
 	anchored = 1
