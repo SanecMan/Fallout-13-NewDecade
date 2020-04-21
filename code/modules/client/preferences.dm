@@ -176,150 +176,294 @@ var/list/preferences_datums = list()
 	switch(current_tab)
 		if (0) // Character Settings#
 			return ShowCharacterSetup(user)
+		if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			if (1) // Game Preferences
+				dat += "<center><h2>Main preferences</h2></center>"
+				dat += "<table><tr><td width='340px' height='300px' valign='top'>"
+				dat += "<b>UI style:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
+				dat += "<b>Hotkeys:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "Hotkeys" : "Default"]</a><br>"
+				dat += "<b>TGUI style:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
+				dat += "<b>TGUI Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
+				dat += "<b>Play ADmin MIDIs:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Yes" : "No"]</a><br>"
+				dat += "<b>Play Lobby Music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Yes" : "No"]</a><br>"
+				dat += "<b>Ghost ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "All Speech" : "Nearest Creatures"]</a><br>"
+				dat += "<b>Ghost sight:</b> <a href='?_src_=prefs;preference=ghost_sight'>[(chat_toggles & CHAT_GHOSTSIGHT) ? "All Emotes" : "Nearest Creatures"]</a><br>"
+				dat += "<b>Ghost whispers:</b> <a href='?_src_=prefs;preference=ghost_whispers'>[(chat_toggles & CHAT_GHOSTWHISPER) ? "All Speech" : "Nearest Creatures"]</a><br>"
+				dat += "<b>Ghost radio:</b> <a href='?_src_=prefs;preference=ghost_radio'>[(chat_toggles & CHAT_GHOSTRADIO) ? "Yes" : "No"]</a><br>"
 
-		if (1) // Game Preferences
-			dat += "<center><h2>Основные Настройки</h2></center>"
-			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
-			dat += "<b>Стиль УИ:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
-			dat += "<b>Настройки клавиш:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "Hotkeys" : "Default"]</a><br>"
-			dat += "<b>Стиль ТГУИ:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
-			dat += "<b>tgui Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
-			dat += "<b>Проигрывать Админсккие Миди:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Yes" : "No"]</a><br>"
-			dat += "<b>Проигрывать Музыку в Лобби:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Yes" : "No"]</a><br>"
-			dat += "<b>Ghost ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "All Speech" : "Nearest Creatures"]</a><br>"
-			dat += "<b>Ghost sight:</b> <a href='?_src_=prefs;preference=ghost_sight'>[(chat_toggles & CHAT_GHOSTSIGHT) ? "All Emotes" : "Nearest Creatures"]</a><br>"
-			dat += "<b>Ghost whispers:</b> <a href='?_src_=prefs;preference=ghost_whispers'>[(chat_toggles & CHAT_GHOSTWHISPER) ? "All Speech" : "Nearest Creatures"]</a><br>"
-			dat += "<b>Ghost radio:</b> <a href='?_src_=prefs;preference=ghost_radio'>[(chat_toggles & CHAT_GHOSTRADIO) ? "Yes" : "No"]</a><br>"
+				dat += "</td><td width='300px' height='300px' valign='top'>"
 
-			dat += "</td><td width='300px' height='300px' valign='top'>"
+				dat += "<b>Ghost pda:</b> <a href='?_src_=prefs;preference=ghost_pda'>[(chat_toggles & CHAT_GHOSTPDA) ? "All Messages" : "Nearest Creatures"]</a><br>"
+				dat += "<b>Pull requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Yes" : "No"]</a><br>"
+				dat += "<b>Midround Antagonist:</b> <a href='?_src_=prefs;preference=allow_midround_antag'>[(toggles & MIDROUND_ANTAG) ? "Yes" : "No"]</a><br>"
+				dat += "<b>Game language:</b> <a href='?_src_=prefs;preference=change_language'>[(chat_toggles & CHAT_LANGUAGE) ? "English" : "Russian"]</a><br>"
+				if(config.allow_Metadata)
+					dat += "<b>OOC Notes:</b> <a href='?_src_=prefs;preference=metadata;task=input'>Edit </a><br>"
 
-			dat += "<b>Ghost pda:</b> <a href='?_src_=prefs;preference=ghost_pda'>[(chat_toggles & CHAT_GHOSTPDA) ? "All Messages" : "Nearest Creatures"]</a><br>"
-			dat += "<b>Pull requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Yes" : "No"]</a><br>"
-			dat += "<b>Midround Antagonist:</b> <a href='?_src_=prefs;preference=allow_midround_antag'>[(toggles & MIDROUND_ANTAG) ? "Yes" : "No"]</a><br>"
-			dat += "<b>Game language:</b> <a href='?_src_=prefs;preference=change_language'>[(chat_toggles & CHAT_LANGUAGE) ? "English" : "Russian"]</a><br>"
-			if(config.allow_Metadata)
-				dat += "<b>OOC Notes:</b> <a href='?_src_=prefs;preference=metadata;task=input'>Edit </a><br>"
+				if(user.client)
+					if(user.client.holder)
+						dat += "<b>Adminhelp Sound:</b> <a href='?_src_=prefs;preference=hear_adminhelps'>[(toggles & SOUND_ADMINHELP)?"On":"Off"]</a><br>"
+						dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"On":"Off"]</a><br>"
 
-			if(user.client)
-				if(user.client.holder)
-					dat += "<b>Adminhelp Sound:</b> <a href='?_src_=prefs;preference=hear_adminhelps'>[(toggles & SOUND_ADMINHELP)?"On":"Off"]</a><br>"
-					dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"On":"Off"]</a><br>"
+					if(unlock_content || check_rights_for(user.client, R_ADMIN))
+						dat += "<b>OOC:</b> <span style='border: 1px solid #161616; background-color: [ooccolor ? ooccolor : normal_ooc_colour];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=ooccolor;task=input'>Change</a><br>"
 
-				if(unlock_content || check_rights_for(user.client, R_ADMIN))
-					dat += "<b>OOC:</b> <span style='border: 1px solid #161616; background-color: [ooccolor ? ooccolor : normal_ooc_colour];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=ooccolor;task=input'>Change</a><br>"
+					if(unlock_content)
+						dat += "<b>BYOND Membership Publicity:</b> <a href='?_src_=prefs;preference=publicity'>[(toggles & MEMBER_PUBLIC) ? "Public" : "Hidden"]</a><br>"
+						dat += "<b>Ghost Form:</b> <a href='?_src_=prefs;task=input;preference=ghostform'>[ghost_form]</a><br>"
+						dat += "<B>Ghost Orbit: </B> <a href='?_src_=prefs;task=input;preference=ghostorbit'>[ghost_orbit]</a><br>"
 
-				if(unlock_content)
-					dat += "<b>BYOND Membership Publicity:</b> <a href='?_src_=prefs;preference=publicity'>[(toggles & MEMBER_PUBLIC) ? "Public" : "Hidden"]</a><br>"
-					dat += "<b>Ghost Form:</b> <a href='?_src_=prefs;task=input;preference=ghostform'>[ghost_form]</a><br>"
-					dat += "<B>Ghost Orbit: </B> <a href='?_src_=prefs;task=input;preference=ghostorbit'>[ghost_orbit]</a><br>"
+				var/button_name = "If you see this something went wrong."
+				switch(ghost_accs)
+					if(GHOST_ACCS_FULL)
+						button_name = GHOST_ACCS_FULL_NAME
+					if(GHOST_ACCS_DIR)
+						button_name = GHOST_ACCS_DIR_NAME
+					if(GHOST_ACCS_NONE)
+						button_name = GHOST_ACCS_NONE_NAME
 
-			var/button_name = "If you see this something went wrong."
-			switch(ghost_accs)
-				if(GHOST_ACCS_FULL)
-					button_name = GHOST_ACCS_FULL_NAME
-				if(GHOST_ACCS_DIR)
-					button_name = GHOST_ACCS_DIR_NAME
-				if(GHOST_ACCS_NONE)
-					button_name = GHOST_ACCS_NONE_NAME
+				dat += "<b>Ghost Accessories:</b> <a href='?_src_=prefs;task=input;preference=ghostaccs'>[button_name]</a><br>"
 
-			dat += "<b>Ghost Accessories:</b> <a href='?_src_=prefs;task=input;preference=ghostaccs'>[button_name]</a><br>"
+				switch(ghost_others)
+					if(GHOST_OTHERS_THEIR_SETTING)
+						button_name = GHOST_OTHERS_THEIR_SETTING_NAME
+					if(GHOST_OTHERS_DEFAULT_SPRITE)
+						button_name = GHOST_OTHERS_DEFAULT_SPRITE_NAME
+					if(GHOST_OTHERS_SIMPLE)
+						button_name = GHOST_OTHERS_SIMPLE_NAME
 
-			switch(ghost_others)
-				if(GHOST_OTHERS_THEIR_SETTING)
-					button_name = GHOST_OTHERS_THEIR_SETTING_NAME
-				if(GHOST_OTHERS_DEFAULT_SPRITE)
-					button_name = GHOST_OTHERS_DEFAULT_SPRITE_NAME
-				if(GHOST_OTHERS_SIMPLE)
-					button_name = GHOST_OTHERS_SIMPLE_NAME
+				dat += "<b>Ghosts of Others:</b> <a href='?_src_=prefs;task=input;preference=ghostothers'>[button_name]</a><br>"
 
-			dat += "<b>Ghosts of Others:</b> <a href='?_src_=prefs;task=input;preference=ghostothers'>[button_name]</a><br>"
-
-			if (SERVERTOOLS && config.maprotation)
-				var/p_map = preferred_map
-				if (!p_map)
-					p_map = "Default"
-					if (config.defaultmap)
-						p_map += " ([config.defaultmap.friendlyname])"
-				else
-					if (p_map in config.maplist)
-						var/datum/votablemap/VM = config.maplist[p_map]
-						if (!VM)
-							p_map += " (No longer exists)"
-						else
-							p_map = VM.friendlyname
+				if (SERVERTOOLS && config.maprotation)
+					var/p_map = preferred_map
+					if (!p_map)
+						p_map = "Default"
+						if (config.defaultmap)
+							p_map += " ([config.defaultmap.friendlyname])"
 					else
-						p_map += " (No longer exists)"
-				dat += "<b>Preferred Map:</b> <a href='?_src_=prefs;preference=preferred_map;task=input'>[p_map]</a><br>"
+						if (p_map in config.maplist)
+							var/datum/votablemap/VM = config.maplist[p_map]
+							if (!VM)
+								p_map += " (No longer exists)"
+							else
+								p_map = VM.friendlyname
+						else
+							p_map += " (No longer exists)"
+					dat += "<b>Preferred Map:</b> <a href='?_src_=prefs;preference=preferred_map;task=input'>[p_map]</a><br>"
 
-			dat += "<b>FPS:</b> <a href='?_src_=prefs;preference=clientfps;task=input'>[clientfps]</a><br>"
+				dat += "<b>FPS:</b> <a href='?_src_=prefs;preference=clientfps;task=input'>[clientfps]</a><br>"
 
-			dat += "</td></tr></table>"
-		if(2)
-			if(skill_type == "")
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=small_guns'>Маленькие Пушки</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Большие Пушки</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Бартер</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Энергооружие</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Взрывчатка</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Взлом</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>Медицина</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=melee_weapons'>Ближний бой</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=repair'>Ремонт</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=sneak'>Скрытность</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=speech'>Красноречие</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=unarmed'>Без оружия</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=skills;skill_type=science'>Наука</a> <br>"
-				dat += "<br><a href='?_src_=prefs;preference=skills;removeall=1'>Сбросить всё</a> <br>"
-			else
-				dat += "<br><a href='?_src_=prefs;preference=skills;back=1'>Назад</a> <br>"
-				dat += "<center>"
-				usr.browse_rsc_icon("icons/special/special.dmi", "skills_[skill_type]")
-				dat += "<img src='skills_[skill_type].png' class='center'> <br>"
-				dat += "</center>"
-				dat += SKILLS.getPointDescription(skill_type)
-				var/current = SKILLS.getPoint(skill_type, TRUE)
-				var/left = max(0, SKILLS_POINTS - SKILLS.getSpentPoints())
+				dat += "</td></tr></table>"
+			if(2)
+				if(skill_type == "")
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=small_guns'>Small Guns</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Big Guns</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Barter</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Energy Weapons</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Explosives</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Lockpick</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>Medicine</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=melee_weapons'>Melee Weapons</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=repair'>Repair</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=sneak'>Sneak</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=speech'>Speech</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=unarmed'>Unarmed</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=science'>Science</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=skills;removeall=1'>Clear all</a> <br>"
+				else
+					dat += "<br><a href='?_src_=prefs;preference=skills;back=1'>Back</a> <br>"
+					dat += "<center>"
+					usr.browse_rsc_icon("icons/special/special.dmi", "skills_[skill_type]")
+					dat += "<img src='skills_[skill_type].png' class='center'> <br>"
+					dat += "</center>"
+					dat += SKILLS.getPointDescription(skill_type)
+					var/current = SKILLS.getPoint(skill_type, TRUE)
+					var/left = max(0, SKILLS_POINTS - SKILLS.getSpentPoints())
 
-				dat += "<br>Сейчас: [current] (осталось [left -1])<br>"
+					dat += "<br>Current: [current] (left [left -1])<br>"
 
-				for (var/i = 1, i < 11, i++)
-					dat += "<a href='?_src_=prefs;preference=skills;skill_type=[skill_type];num=[i]'>[i]</a>"
-		if(3)
-			if(skill_type == "")
-				dat += "<a href='?_src_=prefs;preference=specials;special=s'>Сила</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=p'>Восприятие</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=e'>Выносливость</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=c'>Харизма</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=i'>Интеллект</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=a'>Ловкость</a> <br>"
-				dat += "<a href='?_src_=prefs;preference=specials;special=l'>Удача</a> <br>"
-				dat += "<br><a href='?_src_=prefs;preference=specials;removeall=1'>Сбросить всё</a> <br>"
-			else
-				dat += "<br><a href='?_src_=prefs;preference=specials;back=1'>Назад</a> <br>"
-				dat += "<center>"
-				usr.browse_rsc_icon("icons/special/special.dmi", "special_[skill_type]")
-				dat += "<img src='special_[skill_type].png' class='center'> <br>"
-				dat += "</center>"
-				dat += SPEC.getPointDescription(skill_type)
-				var/current = SPEC.getPoint(skill_type, TRUE)
-				var/left = max(0, SPECIAL_POINTS - SPEC.getSpentPoints())
+					for (var/i = 1, i < 11, i++)
+						dat += "<a href='?_src_=prefs;preference=skills;skill_type=[skill_type];num=[i]'>[i]</a>"
+			if(3)
+				if(skill_type == "")
+					dat += "<a href='?_src_=prefs;preference=specials;special=s'>Strength</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=p'>Perception</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=e'>Endurance</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=c'>Charisma</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=i'>Intelligence</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=a'>Agility</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=l'>Luck</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=specials;removeall=1'>Clear all</a> <br>"
+				else
+					dat += "<br><a href='?_src_=prefs;preference=specials;back=1'>Back</a> <br>"
+					dat += "<center>"
+					usr.browse_rsc_icon("icons/special/special.dmi", "special_[skill_type]")
+					dat += "<img src='special_[skill_type].png' class='center'> <br>"
+					dat += "</center>"
+					dat += SPEC.getPointDescription(skill_type)
+					var/current = SPEC.getPoint(skill_type, TRUE)
+					var/left = max(0, SPECIAL_POINTS - SPEC.getSpentPoints())
 
-				dat += "<br>Сейчас: [current] (осталось [left -1])<br>"
+					dat += "<br>Current: [current] (left [left -1])<br>"
 
-				for (var/w = 1, w < 11, w++)
-					dat += "<a href='?_src_=prefs;preference=specials;special=[skill_type];num=[w]'>[w]</a>"
-	dat += "<hr><center>"
+					for (var/w = 1, w < 11, w++)
+						dat += "<a href='?_src_=prefs;preference=specials;special=[skill_type];num=[w]'>[w]</a>"
+		dat += "<hr><center>"
 
-	if(!IsGuestKey(user.key))
-		dat += "<a href='?_src_=prefs;preference=load'>Отмена</a> "
-		dat += "<a href='?_src_=prefs;preference=save'>Сохранить настройки</a> "
+		if(!IsGuestKey(user.key))
+			dat += "<a href='?_src_=prefs;preference=load'>Cancel</a> "
+			dat += "<a href='?_src_=prefs;preference=save'>Save setup</a> "
 
-	dat += "<a href='?_src_=prefs;preference=reset_all'>Сбросить настройки</a>"
-	dat += "</center>"
+		dat += "<a href='?_src_=prefs;preference=reset_all'>Clear</a>"
+		dat += "</center>"
 
-	var/datum/browser/popup = new(user, "preferences", "<div align='center'>Настройки Персонажа</div>", 640, 750)
-	popup.set_content(dat)
-	popup.open(0)
+		var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 750)
+		popup.set_content(dat)
+		popup.open(0)
+		else
+			if (1) // Game Preferences
+				dat += "<center><h2>Основные Настройки</h2></center>"
+				dat += "<table><tr><td width='340px' height='300px' valign='top'>"
+				dat += "<b>Стиль УИ:</b> <a href='?_src_=prefs;task=input;preference=ui'>[UI_style]</a><br>"
+				dat += "<b>Настройки клавиш:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "Хоткеи" : "Обычные"]</a><br>"
+				dat += "<b>Стиль ТГУИ:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
+				dat += "<b>tgui Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
+				dat += "<b>Проигрывать Админсккие Миди:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Да" : "Нет"]</a><br>"
+				dat += "<b>Проигрывать Музыку в Лобби:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Да" : "Нет"]</a><br>"
+				dat += "<b>Ghost ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "Все разговоры" : "Только ближайшие"]</a><br>"
+				dat += "<b>Ghost sight:</b> <a href='?_src_=prefs;preference=ghost_sight'>[(chat_toggles & CHAT_GHOSTSIGHT) ? "Все эмоции" : "Только ближайшие"]</a><br>"
+				dat += "<b>Ghost whispers:</b> <a href='?_src_=prefs;preference=ghost_whispers'>[(chat_toggles & CHAT_GHOSTWHISPER) ? "Все разговоры" : "Только ближайшие"]</a><br>"
+				dat += "<b>Ghost radio:</b> <a href='?_src_=prefs;preference=ghost_radio'>[(chat_toggles & CHAT_GHOSTRADIO) ? "Да" : "Нет"]</a><br>"
+
+				dat += "</td><td width='300px' height='300px' valign='top'>"
+
+				dat += "<b>Ghost pda:</b> <a href='?_src_=prefs;preference=ghost_pda'>[(chat_toggles & CHAT_GHOSTPDA) ? "Все сообщения" : "Только ближайшие"]</a><br>"
+				dat += "<b>Pull requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Да" : "Нет"]</a><br>"
+				dat += "<b>Midround Antagonist:</b> <a href='?_src_=prefs;preference=allow_midround_antag'>[(toggles & MIDROUND_ANTAG) ? "Да" : "Нет"]</a><br>"
+				dat += "<b>Game language:</b> <a href='?_src_=prefs;preference=change_language'>[(chat_toggles & CHAT_LANGUAGE) ? "English" : "Русский"]</a><br>"
+				if(config.allow_Metadata)
+					dat += "<b>OOC Заметки:</b> <a href='?_src_=prefs;preference=metadata;task=input'>Изменить </a><br>"
+
+				if(user.client)
+					if(user.client.holder)
+						dat += "<b>Adminhelp Sound:</b> <a href='?_src_=prefs;preference=hear_adminhelps'>[(toggles & SOUND_ADMINHELP)?"Включить":"Выключить"]</a><br>"
+						dat += "<b>Announce Login:</b> <a href='?_src_=prefs;preference=announce_login'>[(toggles & ANNOUNCE_LOGIN)?"Включить":"Выключить"]</a><br>"
+
+					if(unlock_content || check_rights_for(user.client, R_ADMIN))
+						dat += "<b>OOC:</b> <span style='border: 1px solid #161616; background-color: [ooccolor ? ooccolor : normal_ooc_colour];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=ooccolor;task=input'>Change</a><br>"
+
+					if(unlock_content)
+						dat += "<b>BYOND Membership Publicity:</b> <a href='?_src_=prefs;preference=publicity'>[(toggles & MEMBER_PUBLIC) ? "Public" : "Hidden"]</a><br>"
+						dat += "<b>Ghost Form:</b> <a href='?_src_=prefs;task=input;preference=ghostform'>[ghost_form]</a><br>"
+						dat += "<B>Ghost Orbit: </B> <a href='?_src_=prefs;task=input;preference=ghostorbit'>[ghost_orbit]</a><br>"
+
+				var/button_name = "If you see this something went wrong."
+				switch(ghost_accs)
+					if(GHOST_ACCS_FULL)
+						button_name = GHOST_ACCS_FULL_NAME
+					if(GHOST_ACCS_DIR)
+						button_name = GHOST_ACCS_DIR_NAME
+					if(GHOST_ACCS_NONE)
+						button_name = GHOST_ACCS_NONE_NAME
+
+				dat += "<b>Ghost Accessories:</b> <a href='?_src_=prefs;task=input;preference=ghostaccs'>[button_name]</a><br>"
+
+				switch(ghost_others)
+					if(GHOST_OTHERS_THEIR_SETTING)
+						button_name = GHOST_OTHERS_THEIR_SETTING_NAME
+					if(GHOST_OTHERS_DEFAULT_SPRITE)
+						button_name = GHOST_OTHERS_DEFAULT_SPRITE_NAME
+					if(GHOST_OTHERS_SIMPLE)
+						button_name = GHOST_OTHERS_SIMPLE_NAME
+
+				dat += "<b>Ghosts of Others:</b> <a href='?_src_=prefs;task=input;preference=ghostothers'>[button_name]</a><br>"
+
+				if (SERVERTOOLS && config.maprotation)
+					var/p_map = preferred_map
+					if (!p_map)
+						p_map = "Default"
+						if (config.defaultmap)
+							p_map += " ([config.defaultmap.friendlyname])"
+					else
+						if (p_map in config.maplist)
+							var/datum/votablemap/VM = config.maplist[p_map]
+							if (!VM)
+								p_map += " (No longer exists)"
+							else
+								p_map = VM.friendlyname
+						else
+							p_map += " (No longer exists)"
+					dat += "<b>Preferred Map:</b> <a href='?_src_=prefs;preference=preferred_map;task=input'>[p_map]</a><br>"
+
+				dat += "<b>FPS:</b> <a href='?_src_=prefs;preference=clientfps;task=input'>[clientfps]</a><br>"
+
+				dat += "</td></tr></table>"
+			if(2)
+				if(skill_type == "")
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=small_guns'>Маленькие Пушки</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=big_guns'>Большие Пушки</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=barter'>Бартер</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=energy_weapons'>Энергооружие</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=explosives'>Взрывчатка</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=lockpick'>Взлом</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=medicine'>Медицина</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=melee_weapons'>Ближний бой</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=repair'>Ремонт</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=sneak'>Скрытность</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=speech'>Красноречие</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=unarmed'>Без оружия</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=skills;skill_type=science'>Наука</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=skills;removeall=1'>Сбросить всё</a> <br>"
+				else
+					dat += "<br><a href='?_src_=prefs;preference=skills;back=1'>Назад</a> <br>"
+					dat += "<center>"
+					usr.browse_rsc_icon("icons/special/special.dmi", "skills_[skill_type]")
+					dat += "<img src='skills_[skill_type].png' class='center'> <br>"
+					dat += "</center>"
+					dat += SKILLS.getPointDescription(skill_type)
+					var/current = SKILLS.getPoint(skill_type, TRUE)
+					var/left = max(0, SKILLS_POINTS - SKILLS.getSpentPoints())
+
+					dat += "<br>Сейчас: [current] (осталось [left -1])<br>"
+
+					for (var/i = 1, i < 11, i++)
+						dat += "<a href='?_src_=prefs;preference=skills;skill_type=[skill_type];num=[i]'>[i]</a>"
+			if(3)
+				if(skill_type == "")
+					dat += "<a href='?_src_=prefs;preference=specials;special=s'>Сила</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=p'>Восприятие</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=e'>Выносливость</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=c'>Харизма</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=i'>Интеллект</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=a'>Ловкость</a> <br>"
+					dat += "<a href='?_src_=prefs;preference=specials;special=l'>Удача</a> <br>"
+					dat += "<br><a href='?_src_=prefs;preference=specials;removeall=1'>Сбросить всё</a> <br>"
+				else
+					dat += "<br><a href='?_src_=prefs;preference=specials;back=1'>Назад</a> <br>"
+					dat += "<center>"
+					usr.browse_rsc_icon("icons/special/special.dmi", "special_[skill_type]")
+					dat += "<img src='special_[skill_type].png' class='center'> <br>"
+					dat += "</center>"
+					dat += SPEC.getPointDescription(skill_type)
+					var/current = SPEC.getPoint(skill_type, TRUE)
+					var/left = max(0, SPECIAL_POINTS - SPEC.getSpentPoints())
+
+					dat += "<br>Сейчас: [current] (осталось [left -1])<br>"
+
+					for (var/w = 1, w < 11, w++)
+						dat += "<a href='?_src_=prefs;preference=specials;special=[skill_type];num=[w]'>[w]</a>"
+		dat += "<hr><center>"
+
+		if(!IsGuestKey(user.key))
+			dat += "<a href='?_src_=prefs;preference=load'>Отмена</a> "
+			dat += "<a href='?_src_=prefs;preference=save'>Сохранить настройки</a> "
+
+		dat += "<a href='?_src_=prefs;preference=reset_all'>Сбросить настройки</a>"
+		dat += "</center>"
+
+		var/datum/browser/popup = new(user, "preferences", "<div align='center'>Настройки Персонажа</div>", 640, 750)
+		popup.set_content(dat)
+		popup.open(0)
 
 /datum/preferences/proc/SetChoices(mob/user, limit = 17, list/splitJobs = list("Chief Engineer"), widthPerColumn = 295, height = 620)
 	if(!SSjob)

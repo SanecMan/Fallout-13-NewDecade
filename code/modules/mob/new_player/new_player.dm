@@ -84,13 +84,13 @@
 
 	//src << browse(output,"window=playersetup;size=210x240;can_close=0")
 	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
-		var/datum/browser/popup = new(src, "playersetup", "<div align='center'>New character create</div>", 220, 265)
+		var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Welcome!</div>", 220, 265)
 		popup.set_window_options("can_close=0")
 		popup.set_content(output)
 		popup.open(0)
 		return
 	else
-		var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Настройки нового персонажа</div>", 220, 265)
+		var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Добро пожаловать!</div>", 220, 265)
 		popup.set_window_options("can_close=0")
 		popup.set_content(output)
 		popup.open(0)
