@@ -224,8 +224,8 @@
 	icon_state = "wonderglue[rand(1,2)]"
 
 /obj/item/crafting/turpentine
-	name = "турпентин? Саня, переведи это, что это нахуй?"
-	desc = "тут тоже переведи."
+	name = "скипидар" //Используется для обработки древесины и я сам неебу что это
+	desc = "Горючяя жидкость, перегнанная из сосновой смолы. Используется как растворитель."
 	eng_name = "turpentine"
 	eng_desc = "A flammable liquid distilled from pine resin, used as a solvent."
 	icon_state = "turpentine"

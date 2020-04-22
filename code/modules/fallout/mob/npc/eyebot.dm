@@ -69,8 +69,10 @@
 		builtInCamera.c_tag = name
 
 /mob/living/simple_animal/hostile/eyebot/floatingeye
-	name = "floating eyebot"
-	desc = "A quick-observation robot commonly found in pre-War military installations.<br>The floating eyebot uses a powerful taser to keep intruders in line."
+	name = "Парящий робоглаз"
+	desc = "Быстрый разведовательный робот, чаще всего находящихся на послевоенных военных объектах. <br> Парящий робоглаз использует мощный тазер чтобы держать нарушителей в строю."
+	eng_name = "floating eyebot"
+	eng_desc = "A quick-observation robot commonly found in pre-War military installations.<br>The floating eyebot uses a powerful taser to keep intruders in line."
 	icon_state = "floatingeye"
 	icon_living = "floatingeye"
 	icon_dead = "floatingeye_d"

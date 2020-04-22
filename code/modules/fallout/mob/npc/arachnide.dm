@@ -12,7 +12,7 @@
 	turns_per_move = 4
 	response_help = "touches"
 	response_disarm = "tries to grab the arachnid by its large"
-	response_harm = "hits the deathclaw right in its large"
+	response_harm = "hits the arachnide right in its large"
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw = 5, /obj/item/stack/sheet/animalhide/deathclaw=3)
 	maxHealth = 1000
 	health = 1000

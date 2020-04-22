@@ -62,7 +62,7 @@
 
 /mob/living/simple_animal/hostile/ghoul/aggressive
 	name = "Дикий гуль"
-	desc = "Вы видели когда-нибудь живого очень голодного гуля?<br>Чтож, скорее всего, это последнее что вы видите теперь."
+	desc = "Вы видели когда-нибудь голодного гуля?<br>Аналогично другим диким гулям, этот более агрессивен и уверенен в том, что ты являешься отличной едой. <br> У него отсутствует левая рука."
 	eng_name = "feral ghoul"
 	eng_desc = "Have you ever seen a hungry ghoul before?<br>Similar to other feral ghouls, it's more aggressive and confident about the fact that you are the best food around.<br>It is missing a left arm."
 	icon_state = "angry_ghoul"
@@ -80,7 +80,9 @@
 
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "Светящийся гуль"
-	desc = "Have you ever seen a glowing ghoul before?<br>Glowing ghouls are necrotic post-humans - rotting, zombie-like mutants, who are so irradiated they actually glow in the dark."
+	desc = "Вы видели когда-нибудь светящегося гуля??<br>Светящиеся гули, это практически мёртвые люди, гниющие и плохо пахнущие, прямо как зомби, и настолько облучённые что стали светиться в темноте."
+	eng_name = "glowing ghoul"
+	eng_desc = "Have you ever seen a glowing ghoul before?<br>Glowing ghouls are necrotic post-humans - rotting, zombie-like mutants, who are so irradiated they actually glow in the dark."
 	icon_state = "retro_glowghoul"
 	icon_living = "retro_glowghoul"
 	icon_dead = "retro_glowghoul_d"
@@ -98,7 +100,8 @@
 	SSradiation.processing += src
 
 /mob/living/simple_animal/hostile/ghoul/soldier
-	name = "Дикий гуль"
+	name = "Дикий гуль-солдат"
+	eng_name = "armored feral soldier ghoul"
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "soldier_ghoul"
 	icon_living = "soldier_ghoul"
@@ -108,8 +111,8 @@
 	health = 90
 
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
-	name = "Бронированный дикий гуль"
-	eng_name = "armored feral ghoul"
+	name = "Бронированный дикий гуль-солдат"
+	eng_name = "armored feral soldier ghoul"
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "soldier_ghoul_a"
 	icon_living = "soldier_ghoul_a"
@@ -137,7 +140,7 @@
 	eng_attacktext = "sliced"
 	attacktext = "режет"
 	move_to_delay = 4
-	respawn_time_of_mob = 500000000
+	respawn_time_of_mob = 500000000 //Stalkeros: Чё так много? // iWuna: Надо.
 	maxHealth = 80
 	health = 80
 	self_weight = 45
@@ -176,7 +179,6 @@
 	response_disarm = "pushes aside"
 	response_harm = "бьёт"
 	move_to_delay = 4
-	respawn_time_of_mob = 500000000
 	maxHealth = 80
 	health = 80
 	self_weight = 45

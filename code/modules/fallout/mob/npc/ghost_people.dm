@@ -48,8 +48,10 @@
 	XP = 5
 
 /mob/living/simple_animal/hostile/ghost_man_bear_trap
-	name = "Ghost trapper"
-	desc = "Where there's a bear trap, Ghost People aren't far behind."
+	name = "Призрак-охотник"
+	eng_name = "Ghost trapper"
+	desc = "Если видише медвежий капкан, значит, призраки неподалёку."
+	eng_desc = "Where there's a bear trap, Ghost People aren't far behind."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "ghost_man_bear_trap"
 	icon_living = "ghost_man_bear_trap"
@@ -93,8 +95,10 @@
 	XP = 5
 
 /mob/living/simple_animal/hostile/ghost_man_spear
-	name = "Ghost harvester"
-	desc = "Ghost harvesters are the most common variant of ghost people. They are the smallest variant and are easily distinguished by their hoods and smaller gas masks."
+	name = "Призрак-жнец"
+	eng_name = "Ghost harvester"
+	desc = "Призраки-жнецы - самый распространённый вид людей-призраков. Они наименьшие в своём роде и легко различимы по своим капюшонам и меньшим противогазам."
+	eng_desc = "Ghost harvesters are the most common variant of ghost people. They are the smallest variant and are easily distinguished by their hoods and smaller gas masks."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "ghost_man_spear"
 	icon_living = "ghost_man_spear"

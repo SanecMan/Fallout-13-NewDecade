@@ -213,7 +213,7 @@
 //	to_chat(user, "[name]: Dn:[density] dir:[dir] cont:[contents] icon:[icon] is:[icon_state] loc:[loc]")
 
 	if(reagents && (is_open_container() || is_transparent())) //is_open_container() isn't really the right proc for this, but w/e
-		to_chat(user, user.client.select_lang("Contains:", "Содержит:"))
+		to_chat(user, user.client.select_lang("Содержит:", "Contains:"))
 		if(reagents.reagent_list.len)
 			if(user.can_see_reagents()) //Show each individual reagent
 				for(var/datum/reagent/R in reagents.reagent_list)
@@ -224,7 +224,7 @@
 					total_volume += R.volume
 				to_chat(user, user.client.select_lang("[total_volume] units of various reagents", "[total_volume] едениц разных реагентов"))
 		else
-			to_chat(user, user.client.select_lang("Nothing", "Ничего."))
+			to_chat(user, user.client.select_lang("Ничего.", "Nothing"))
 
 /atom/proc/relaymove()
 	return

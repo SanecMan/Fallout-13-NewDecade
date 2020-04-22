@@ -13,7 +13,9 @@
  */
 /obj/item/weapon/pen
 	desc = "Обычная черная ручка."
+	eng_desc = "Simple black pen."
 	name = "ручка"
+	eng_name = "pen"
 	icon = 'icons/fallout/objects/bureaucracy.dmi'
 	icon_state = "pen"
 	item_state = "pen"
@@ -167,7 +169,9 @@
 
 /obj/item/weapon/pen/pencil
 	name = "карандаш"
+	eng_name = "pencil"
 	desc = "Дешевое и компактное средство для писания. Но не эффективное."
+	eng_desc = "Cheap and compact writing device. But ineffective."
 	icon_state = "pencil-y"
 	colour = "grey"
 
