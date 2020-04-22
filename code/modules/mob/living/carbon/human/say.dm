@@ -1,18 +1,10 @@
 /mob/living/carbon/human/say_quote(input, spans)
 	if(!input)
-		if(usr.client && usr.client.language == "English")
-			return "says, \"...\""
-		else
-			return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+		return src.client.select_lang("says, \"...\"", "говорит, \"...\"")
 	verb_say = dna.species.say_mod
 	if(src.slurring)
-		if(usr.client && usr.client.language == "English")
-			input = attach_spans(input, spans)
-			return "slurs, \"[input]\""
-		else
-			input = attach_spans(input, spans)
-			return "несвязно, \"[input]\""
-
+		input = attach_spans(input, spans)
+		return src.client.select_lang("slurs, \"[input]\"", "несвязно, \"[input]\"")
 	return ..()
 
 /mob/living/carbon/human/treat_message(message)

@@ -9,7 +9,7 @@
 			return
 		mob.hud_used.maptext.maptext = "<span style='font-family: Arial; font-size: 12px; text-align: center;text-shadow: 1px 1px 2px black;'>[obj_name]</span>"
 
-/obj/screen/fullscreen/maptext
+/obj/screen/fullscreen/maptext //eh
     screen_loc = "NORTH:14,WEST"
     plane = 20
     layer = 20

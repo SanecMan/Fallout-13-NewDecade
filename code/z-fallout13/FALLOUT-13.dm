@@ -1,5 +1,5 @@
 //!!!!!!!!!!!!!!!!!!! DO NOT CHECK ANY FILE UNDER z-fallout13 DIRECTORY EXCEPT THIS FILE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
-
+//Now UTF-8                                                                    //
 /////////////////////////////////////////////////////////////////////////////////
 //Fallout13 will be split into separate modules.                               //
 //At the moment there are only Fallout13 module, which adds some Fallout stuff.//

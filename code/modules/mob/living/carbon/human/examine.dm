@@ -7,13 +7,11 @@
 	var/t_has = p_have()
 	var/t_is = p_are()
 
-	var/msg = "<span class='info'>*---------* Это <EM>[src.name]</EM>!\n"
-
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 	var/wielded = 0
 
-	msg = user.client.select_lang("<span class='info'>*---------* This is <EM>[src.name]</EM>!\n", "<span class='info'>*---------* Это <EM>[src.name]</EM>!\n")
+	var/msg = user.client.select_lang("<span class='info'>*---------* Это <EM>[name]</EM>!\n", "<span class='info'>*---------* This is <EM>[name]</EM>!\n")
 
 	//uniform
 	if(w_uniform && !(slot_w_uniform in obscured))

@@ -64,32 +64,18 @@ var/list/freqtospan = list(
 
 /atom/movable/proc/say_quote(input, list/spans=list())
 	if(!input)
-		if(usr.client && usr.client.language == "English")
-			return "says, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
-			var/ending = copytext_char(input, length(input))
-			if(copytext_char(input, length(input) - 1) == "!!")
-				spans |= SPAN_YELL
-				return "[en_verb_yell], \"[attach_spans(input, spans)]\""
-			input = attach_spans(input, spans)
-			if(ending == "?")
-				return "[en_verb_ask], \"[input]\""
-			if(ending == "!")
-				return "[en_verb_exclaim], \"[input]\""
+		return "says, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+	var/ending = copytext(input, length(input))
+	if(copytext(input, length(input) - 1) == "!!")
+		spans |= SPAN_YELL
+		return usr.client.select_lang("[verb_yell], \"[attach_spans(input, spans)]\"", "[en_verb_yell], \"[attach_spans(input, spans)]\"")
+	input = attach_spans(input, spans)
+	if(ending == "?")
+		return usr.client.select_lang("[verb_ask], \"[input]\"", "[en_verb_ask], \"[input]\"")
+	if(ending == "!")
+		return usr.client.select_lang("[verb_exclaim], \"[input]\"", "[en_verb_exclaim], \"[input]\"")
 
-			return "[en_verb_say], \"[input]\""
-		else
-			return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
-			var/ending = copytext_char(input, length(input))
-			if(copytext_char(input, length(input) - 1) == "!!")
-				spans |= SPAN_YELL
-				return "[verb_yell], \"[attach_spans(input, spans)]\""
-			input = attach_spans(input, spans)
-			if(ending == "?")
-				return "[verb_ask], \"[input]\""
-			if(ending == "!")
-				return "[verb_exclaim], \"[input]\""
-
-			return "[verb_say], \"[input]\""
+	return usr.client.select_lang("[verb_say], \"[input]\"", "[en_verb_say], \"[input]\"")
 
 /atom/movable/proc/lang_treat(atom/movable/speaker, message_langs, raw_message, list/spans)
 	if(languages_understood & message_langs)
@@ -139,7 +125,7 @@ var/list/freqtospan = list(
 	var/returntext = radiochannelsreverse["[freq]"]
 	if(returntext)
 		return returntext
-	return "[copytext_char("[freq]", 1, 4)].[copytext_char("[freq]", 4, 5)]"
+	return "[copytext("[freq]", 1, 4)].[copytext("[freq]", 4, 5)]"
 
 /proc/attach_spans(input, list/spans)
 	return "[message_spans_start(spans)][input]</span>"
@@ -152,7 +138,7 @@ var/list/freqtospan = list(
 	return output
 
 /proc/say_test(text)
-	var/ending = copytext_char(text, length(text))
+	var/ending = copytext(text, length(text))
 	if (ending == "?")
 		return "1"
 	else if (ending == "!")
@@ -190,4 +176,3 @@ var/list/freqtospan = list(
 
 /atom/movable/virtualspeaker/GetRadio()
 	return radio
-
