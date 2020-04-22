@@ -43,7 +43,7 @@
 		return name_override
 	if(face_name)
 		if(id_name && (id_name != face_name))
-			return client.select_lang("[face_name] (как [id_name])","[face_name] (as [id_name])")
+			return client.select_lang("[face_name]","[face_name]")
 		return face_name
 	if(id_name)
 		return id_name
@@ -66,7 +66,7 @@
 //Useful when player is being seen by other mobs
 /mob/living/carbon/human/proc/get_id_name(if_no_id = "Неизвестная личность")
 	if(client)
-		if_no_id = client.select_lang("Неизвестная личность","Unknown")
+		if_no_id = client.select_lang("Неизвестная личность", "Unknown")
 	var/obj/item/weapon/storage/wallet/wallet = wear_id
 	var/obj/item/device/pda/pda = wear_id
 	var/obj/item/weapon/card/id/id = wear_id
