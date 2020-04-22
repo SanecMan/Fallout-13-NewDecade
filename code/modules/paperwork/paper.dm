@@ -148,12 +148,12 @@
 			break
 
 	if(links)
-		var/before = copytext(info_links, 1, textindex)
-		var/after = copytext(info_links, textindex)
+		var/before = copytext_char(info_links, 1, textindex)
+		var/after = copytext_char(info_links, textindex)
 		info_links = before + text + after
 	else
-		var/before = copytext(info, 1, textindex)
-		var/after = copytext(info, textindex)
+		var/before = copytext_char(info, 1, textindex)
+		var/after = copytext_char(info, textindex)
 		info = before + text + after
 		updateinfolinks()
 
@@ -179,44 +179,44 @@
 	if(length(t) < 1)		//No input means nothing needs to be parsed
 		return
 
-//	t = copytext(sanitize(t),1,MAX_MESSAGE_LEN)
+//	t = copytext_char(sanitize(t),1,MAX_MESSAGE_LEN)
 
-	t = replacetext(t, "\[center\]", "<center>")
-	t = replacetext(t, "\[/center\]", "</center>")
-	t = replacetext(t, "\[br\]", "<BR>")
-	t = replacetext(t, "\[b\]", "<B>")
-	t = replacetext(t, "\[/b\]", "</B>")
-	t = replacetext(t, "\[i\]", "<I>")
-	t = replacetext(t, "\[/i\]", "</I>")
-	t = replacetext(t, "\[u\]", "<U>")
-	t = replacetext(t, "\[/u\]", "</U>")
-	t = replacetext(t, "\[large\]", "<font size=\"4\">")
-	t = replacetext(t, "\[/large\]", "</font>")
-	t = replacetext(t, "\[sign\]", "<font face=\"[SIGNFONT]\"><i>[user.real_name]</i></font>")
-	t = replacetext(t, "\[field\]", "<span class=\"paper_field\"></span>")
-	t = replacetext(t, "\[tab\]", "&nbsp;")
+	t = replacetext_char(t, "\[center\]", "<center>")
+	t = replacetext_char(t, "\[/center\]", "</center>")
+	t = replacetext_char(t, "\[br\]", "<BR>")
+	t = replacetext_char(t, "\[b\]", "<B>")
+	t = replacetext_char(t, "\[/b\]", "</B>")
+	t = replacetext_char(t, "\[i\]", "<I>")
+	t = replacetext_char(t, "\[/i\]", "</I>")
+	t = replacetext_char(t, "\[u\]", "<U>")
+	t = replacetext_char(t, "\[/u\]", "</U>")
+	t = replacetext_char(t, "\[large\]", "<font size=\"4\">")
+	t = replacetext_char(t, "\[/large\]", "</font>")
+	t = replacetext_char(t, "\[sign\]", "<font face=\"[SIGNFONT]\"><i>[user.real_name]</i></font>")
+	t = replacetext_char(t, "\[field\]", "<span class=\"paper_field\"></span>")
+	t = replacetext_char(t, "\[tab\]", "&nbsp;")
 
 	if(!iscrayon)
-		t = replacetext(t, "\[*\]", "<li>")
-		t = replacetext(t, "\[hr\]", "<HR>")
-		t = replacetext(t, "\[small\]", "<font size = \"1\">")
-		t = replacetext(t, "\[/small\]", "</font>")
-		t = replacetext(t, "\[list\]", "<ul>")
-		t = replacetext(t, "\[/list\]", "</ul>")
+		t = replacetext_char(t, "\[*\]", "<li>")
+		t = replacetext_char(t, "\[hr\]", "<HR>")
+		t = replacetext_char(t, "\[small\]", "<font size = \"1\">")
+		t = replacetext_char(t, "\[/small\]", "</font>")
+		t = replacetext_char(t, "\[list\]", "<ul>")
+		t = replacetext_char(t, "\[/list\]", "</ul>")
 
 		t = "<font face=\"[PEN_FONT]\" color=[P.colour]>[t]</font>"
 	else // If it is a crayon, and he still tries to use these, make them empty!
 		var/obj/item/toy/crayon/C = P
-		t = replacetext(t, "\[*\]", "")
-		t = replacetext(t, "\[hr\]", "")
-		t = replacetext(t, "\[small\]", "")
-		t = replacetext(t, "\[/small\]", "")
-		t = replacetext(t, "\[list\]", "")
-		t = replacetext(t, "\[/list\]", "")
+		t = replacetext_char(t, "\[*\]", "")
+		t = replacetext_char(t, "\[hr\]", "")
+		t = replacetext_char(t, "\[small\]", "")
+		t = replacetext_char(t, "\[/small\]", "")
+		t = replacetext_char(t, "\[list\]", "")
+		t = replacetext_char(t, "\[/list\]", "")
 
 		t = "<font face=\"[CRAYON_FONT]\" color=[C.paint_color]><b>[t]</b></font>"
 
-//	t = replacetext(t, "#", "") // Junk converted to nothing!
+//	t = replacetext_char(t, "#", "") // Junk converted to nothing!
 
 //Count the fields
 	var/laststart = 1

@@ -45,11 +45,11 @@
 	var/area/A = get_area(src)
 	// Attempts to set this console's tag according to our area. Since some areas have stuff like "XX - YY" in their names we try to remove that too.
 	if(A && console_department)
-		network_card.identification_string = replacetext(replacetext(replacetext("[A.name] [console_department] Console", " ", "_"), "-", ""), "__", "_") // Replace spaces with "_"
+		network_card.identification_string = replacetext_char(replacetext_char(replacetext_char("[A.name] [console_department] Console", " ", "_"), "-", ""), "__", "_") // Replace spaces with "_"
 	else if(A)
-		network_card.identification_string = replacetext(replacetext(replacetext("[A.name] Console", " ", "_"), "-", ""), "__", "_")
+		network_card.identification_string = replacetext_char(replacetext_char(replacetext_char("[A.name] Console", " ", "_"), "-", ""), "__", "_")
 	else if(console_department)
-		network_card.identification_string = replacetext(replacetext(replacetext("[console_department] Console", " ", "_"), "-", ""), "__", "_")
+		network_card.identification_string = replacetext_char(replacetext_char(replacetext_char("[console_department] Console", " ", "_"), "-", ""), "__", "_")
 	else
 		network_card.identification_string = "Unknown Console"
 	if(cpu)

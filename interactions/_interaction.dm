@@ -108,8 +108,8 @@ var/list/interactions
 
 /datum/interaction/proc/display_interaction(var/mob/user, var/mob/target)
 	if(simple_message)
-		var/use_message = replacetext(simple_message, "USER", "\the [user]")
-		use_message = replacetext(use_message, "TARGET", "\the [target]")
+		var/use_message = replacetext_char(simple_message, "USER", "\the [user]")
+		use_message = replacetext_char(use_message, "TARGET", "\the [target]")
 		user.visible_message("<span class='[simple_style]'>[capitalize(use_message)]</span>")
 
 /datum/interaction/proc/post_interaction(var/mob/user, var/mob/target)

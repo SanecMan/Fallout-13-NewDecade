@@ -127,9 +127,9 @@ RCD
 		accesses += "<td style='width:14%' valign='top'>"
 		for(var/A in get_region_accesses(i))
 			if(A in conf_access)
-				accesses += "<a href='?src=\ref[src];access=[A]'><font color=\"red\">[replacetext(get_access_desc(A), " ", "&nbsp")]</font></a> "
+				accesses += "<a href='?src=\ref[src];access=[A]'><font color=\"red\">[replacetext_char(get_access_desc(A), " ", "&nbsp")]</font></a> "
 			else
-				accesses += "<a href='?src=\ref[src];access=[A]'>[replacetext(get_access_desc(A), " ", "&nbsp")]</a> "
+				accesses += "<a href='?src=\ref[src];access=[A]'>[replacetext_char(get_access_desc(A), " ", "&nbsp")]</a> "
 			accesses += "<br>"
 		accesses += "</td>"
 	accesses += "</tr></table>"

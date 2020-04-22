@@ -260,7 +260,7 @@
 		shortname = pick_n_take(removals)
 
 	var/list/final_fullname = list()
-	for(var/word in splittext(fullname, " "))
+	for(var/word in splittext_char(fullname, " "))
 		if(prob(chance))
 			word = pick_n_take(removals)
 		final_fullname += word

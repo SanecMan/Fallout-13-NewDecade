@@ -46,7 +46,7 @@
 /datum/stockMarket/proc/generateDesignation(var/name)
 	if (length(name) <= 4)
 		return uppertext(name)
-	var/list/w = splittext(name, " ")
+	var/list/w = splittext_char(name, " ")
 	if (w.len >= 2)
 		var/d = ""
 		for(var/i in 1 to min(5, w.len))

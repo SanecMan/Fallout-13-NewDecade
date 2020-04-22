@@ -5,10 +5,10 @@
 	return pick("A", "E", "I", "O", "U")
 
 /proc/ucfirst(var/S)
-	return "[uppertext(ascii2text(text2ascii(S, 1)))][copytext(S, 2)]"
+	return "[uppertext(ascii2text(text2ascii(S, 1)))][copytext_char(S, 2)]"
 
 /proc/ucfirsts(var/S)
-	var/list/L = splittext(S, " ")
+	var/list/L = splittext_char(S, " ")
 	var/list/M = list()
 	for (var/P in L)
 		M += ucfirst(P)
@@ -121,5 +121,5 @@ var/global/list/FrozenAccounts = list()
 	for (var/I in product_tokens)
 		T_list[I] = list(product_tokens[I])
 	for (var/I in T_list)
-		token_string = replacetext(token_string, "%[I]%", pick(T_list[I]))
+		token_string = replacetext_char(token_string, "%[I]%", pick(T_list[I]))
 	return ucfirst(token_string)

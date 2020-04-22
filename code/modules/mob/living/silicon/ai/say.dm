@@ -24,7 +24,7 @@
 	..()
 
 /mob/living/silicon/ai/get_message_mode(message)
-	if(copytext(message, 1, 3) in list(":h", ":H", ".h", ".H", "#h", "#H"))
+	if(copytext_char(message, 1, 3) in list(":h", ":H", ".h", ".H", "#h", "#H"))
 		return MODE_HOLOPAD
 	else
 		return ..()
@@ -111,7 +111,7 @@ var/const/VOX_DELAY = 600
 		to_chat(src, "<span class='notice'>Wireless interface disabled, unable to interact with announcement PA.</span>")
 		return
 
-	var/list/words = splittext(trim(message), " ")
+	var/list/words = splittext_char(trim(message), " ")
 	var/list/incorrect_words = list()
 
 	if(words.len > 30)

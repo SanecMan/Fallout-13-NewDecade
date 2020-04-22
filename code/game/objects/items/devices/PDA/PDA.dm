@@ -429,7 +429,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 							U << browse(null, "window=pda")
 							src.mode = 0
 						else
-							t = copytext(sanitize(t), 1, 20)
+							t = copytext_char(sanitize(t), 1, 20)
 							ttone = t
 				else
 					U << browse(null, "window=pda")
@@ -870,10 +870,10 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			to_chat(user, "<span class='warning'>Unable to scan! Paper is blank.</span>")
 			return
 		notehtml = PP.info
-		note = replacetext(notehtml, "<BR>", "\[br\]")
-		note = replacetext(note, "<li>", "\[*\]")
-		note = replacetext(note, "<ul>", "\[list\]")
-		note = replacetext(note, "</ul>", "\[/list\]")
+		note = replacetext_char(notehtml, "<BR>", "\[br\]")
+		note = replacetext_char(note, "<li>", "\[*\]")
+		note = replacetext_char(note, "<ul>", "\[list\]")
+		note = replacetext_char(note, "</ul>", "\[/list\]")
 		note = html_encode(note)
 		notescanned = 1
 		to_chat(user, "<span class='notice'>Paper scanned. Saved to PDA's notekeeper.</span>")//concept of scanning paper copyright brainoblivion 2009

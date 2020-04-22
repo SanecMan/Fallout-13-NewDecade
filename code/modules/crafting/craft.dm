@@ -366,19 +366,19 @@ proc/get_craft_recipe(craft_type)
 		//Also these are typepaths so sadly we can't just do "[a]"
 		var/atom/A = a
 		req_text += " [R.reqs[A]] [initial(A.name)],"
-	req_text = replacetext(req_text,",","",-1)
+	req_text = replacetext_char(req_text,",","",-1)
 	data["req_text"] = req_text
 
 	for(var/a in R.chem_catalysts)
 		var/atom/A = a //cheat-typecast
 		catalyst_text += " [R.chem_catalysts[A]] [initial(A.name)],"
-	catalyst_text = replacetext(catalyst_text,",","",-1)
+	catalyst_text = replacetext_char(catalyst_text,",","",-1)
 	data["catalyst_text"] = catalyst_text
 
 	for(var/a in R.tools)
 		var/atom/A = a //cheat-typecast
 		tool_text += " [R.tools[A]] [initial(A.name)],"
-	tool_text = replacetext(tool_text,",","",-1)
+	tool_text = replacetext_char(tool_text,",","",-1)
 	data["tool_text"] = tool_text
 
 	data["is_default"] = R.default

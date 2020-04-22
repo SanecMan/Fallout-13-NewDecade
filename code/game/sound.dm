@@ -76,7 +76,7 @@
 			// Find the player's view resolution and set the falloff point to the edge
 			// of the client's screen.
 			var/x = findtext_char(world.view, "x")
-			S.falloff = x ? copytext(world.view, 1, x) : world.view
+			S.falloff = x ? copytext_char(world.view, 1, x) : world.view
 
 			// Change 'layer' to another variable if an altitude variable is used.
 			S.x = T.x - src.x

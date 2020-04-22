@@ -73,7 +73,7 @@
 
 //Splits the text of a file at seperator and returns them in a list.
 /proc/file2list(filename, seperator="\n")
-	return splittext(return_file_text(filename),seperator)
+	return splittext_char(return_file_text(filename),seperator)
 
 
 //Turns a direction into text
@@ -504,18 +504,18 @@ for(var/t in test_times)
 		//Find var names
 
 		// "A dog said hi [name]!"
-		// splittext() --> list("A dog said hi ","name]!"
+		// splittext_char() --> list("A dog said hi ","name]!"
 		// jointext() --> "A dog said hi name]!"
-		// splittext() --> list("A","dog","said","hi","name]!")
+		// splittext_char() --> list("A","dog","said","hi","name]!")
 
-		t_string = replacetext(t_string,"\[","\[ ")//Necessary to resolve "word[var_name]" scenarios
-		var/list/list_value = splittext(t_string,"\[")
+		t_string = replacetext_char(t_string,"\[","\[ ")//Necessary to resolve "word[var_name]" scenarios
+		var/list/list_value = splittext_char(t_string,"\[")
 		var/intermediate_stage = jointext(list_value, null)
 
-		list_value = splittext(intermediate_stage," ")
+		list_value = splittext_char(intermediate_stage," ")
 		for(var/value in list_value)
 			if(findtext_char(value,"]"))
-				value = splittext(value,"]") //"name]!" --> list("name","!")
+				value = splittext_char(value,"]") //"name]!" --> list("name","!")
 				for(var/A in value)
 					if(var_source.vars.Find(A))
 						. += A
@@ -524,9 +524,9 @@ for(var/t in test_times)
 /proc/color_hex2num(A)
 	if(!A)
 		return 0
-	var/R = hex2num(copytext(A,2,4))
-	var/G = hex2num(copytext(A,4,6))
-	var/B = hex2num(copytext(A,6,0))
+	var/R = hex2num(copytext_char(A,2,4))
+	var/G = hex2num(copytext_char(A,4,6))
+	var/B = hex2num(copytext_char(A,6,0))
 	return R+G+B
 
 //word of warning: using a matrix like this as a color value will simplify it back to a string after being set
@@ -534,12 +534,12 @@ for(var/t in test_times)
 	var/length = length(string)
 	if(length != 7 && length != 9)
 		return color_matrix_identity()
-	var/r = hex2num(copytext(string, 2, 4))/255
-	var/g = hex2num(copytext(string, 4, 6))/255
-	var/b = hex2num(copytext(string, 6, 8))/255
+	var/r = hex2num(copytext_char(string, 2, 4))/255
+	var/g = hex2num(copytext_char(string, 4, 6))/255
+	var/b = hex2num(copytext_char(string, 6, 8))/255
 	var/a = 1
 	if(length == 9)
-		a = hex2num(copytext(string, 8, 10))/255
+		a = hex2num(copytext_char(string, 8, 10))/255
 	if(!isnum(r) || !isnum(g) || !isnum(b) || !isnum(a))
 		return color_matrix_identity()
 	return list(r,0,0,0, 0,g,0,0, 0,0,b,0, 0,0,0,a, 0,0,0,0)

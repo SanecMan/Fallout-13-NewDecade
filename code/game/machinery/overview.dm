@@ -332,13 +332,13 @@
 		return
 
 /proc/getr(col)
-	return hex2num( copytext(col, 2,4))
+	return hex2num( copytext_char(col, 2,4))
 
 /proc/getg(col)
-	return hex2num( copytext(col, 4,6))
+	return hex2num( copytext_char(col, 4,6))
 
 /proc/getb(col)
-	return hex2num( copytext(col, 6))
+	return hex2num( copytext_char(col, 6))
 
 
 /mob/proc/clearmap()

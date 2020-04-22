@@ -155,8 +155,8 @@
 		to_chat(src, "Missing Input")
 		return
 
-	var/list/startCoords = splittext(startInput, ";")
-	var/list/endCoords = splittext(endInput, ";")
+	var/list/startCoords = splittext_char(startInput, ";")
+	var/list/endCoords = splittext_char(endInput, ";")
 	if(!startCoords || !endCoords)
 		to_chat(src, "Invalid Coords")
 		to_chat(src, "Start Input: [startInput]")

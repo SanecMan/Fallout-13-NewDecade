@@ -24,7 +24,7 @@ proc/parse_phrase(text, name)
 		return 1
 	if(name in phrases_storage)
 		var/names = phrases_storage[name]
-		names = splittext(names,",")
+		names = splittext_char(names,",")
 		for(var/N in names)
 			if(findtext_char(text,"[N]"))
 				return 1

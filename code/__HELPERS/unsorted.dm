@@ -14,9 +14,9 @@
 		if (length(HTMLstring) != 7)
 			CRASH("Given non-HTML argument!")
 			return
-	var/textr = copytext(HTMLstring, 2, 4)
-	var/textg = copytext(HTMLstring, 4, 6)
-	var/textb = copytext(HTMLstring, 6, 8)
+	var/textr = copytext_char(HTMLstring, 2, 4)
+	var/textg = copytext_char(HTMLstring, 4, 6)
+	var/textb = copytext_char(HTMLstring, 6, 8)
 	var/r = hex2num(textr)
 	var/g = hex2num(textg)
 	var/b = hex2num(textb)
@@ -826,7 +826,7 @@ var/list/WALLITEMS_INVERSE = typecacheof(list(
 	return 0
 
 /proc/format_text(text)
-	return replacetext(replacetext(text,"\proper ",""),"\improper ","")
+	return replacetext_char(replacetext_char(text,"\proper ",""),"\improper ","")
 
 /obj/proc/atmosanalyzer_scan(datum/gas_mixture/air_contents, mob/user, obj/target = src)
 	var/obj/icon = target
@@ -893,11 +893,11 @@ var/list/WALLITEMS_INVERSE = typecacheof(list(
 /proc/params2turf(scr_loc, turf/origin)
 	if(!scr_loc)
 		return null
-	var/tX = splittext(scr_loc, ",")
-	var/tY = splittext(tX[2], ":")
+	var/tX = splittext_char(scr_loc, ",")
+	var/tY = splittext_char(tX[2], ":")
 	var/tZ = origin.z
 	tY = tY[1]
-	tX = splittext(tX[1], ":")
+	tX = splittext_char(tX[1], ":")
 	tX = tX[1]
 	tX = Clamp(origin.x + text2num(tX) - world.view - 1, 1, world.maxx)
 	tY = Clamp(origin.y + text2num(tY) - world.view - 1, 1, world.maxy)
@@ -906,10 +906,10 @@ var/list/WALLITEMS_INVERSE = typecacheof(list(
 /proc/screen_loc2turf(text, turf/origin)
 	if(!text)
 		return null
-	var/tZ = splittext(text, ",")
-	var/tX = splittext(tZ[1], "-")
+	var/tZ = splittext_char(text, ",")
+	var/tX = splittext_char(tZ[1], "-")
 	var/tY = text2num(tX[2])
-	tX = splittext(tZ[2], "-")
+	tX = splittext_char(tZ[2], "-")
 	tX = text2num(tX[2])
 	tZ = origin.z
 	tX = Clamp(origin.x + 7 - tX, 1, world.maxx)

@@ -16,5 +16,5 @@
 /proc/format_encryption_key(key)
 	key = text2num(key)
 	if(length(key) > 4)
-		key = copytext(key,1,5)
+		key = copytext_char(key,1,5)
 	return key

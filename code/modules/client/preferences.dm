@@ -970,7 +970,7 @@ var/list/preferences_datums = list()
 				if("metadata")
 					var/new_metadata = input(user, "Enter any information you'd like others to see, such as Roleplay-preferences:", "Game Preference" , metadata)  as message|null
 					if(new_metadata)
-						metadata = sanitize(copytext(new_metadata,1,MAX_MESSAGE_LEN))
+						metadata = sanitize(copytext_char(new_metadata,1,MAX_MESSAGE_LEN))
 
 				if("hair")
 					var/new_hair = input(user, "Choose your character's hair colour:", "Character Preference") as null|color

@@ -77,7 +77,7 @@
 	//t = checkhtml(t)
 	t = sanitize(t, list("\n"="\[br\]")) //"?"=LETTER_255
 
-	//t = replacetext(t, "\n", "<BR>")
+	//t = replacetext_char(t, "\n", "<BR>")
 	t = parsepencode(t) // Encode everything from pencode to html
 
 	if(!t)
@@ -143,22 +143,22 @@
 
 /obj/structure/chalkboard/proc/parsepencode(var/t)
 
-	t = replacetext(t, "\[center\]", "<center>")
-	t = replacetext(t, "\[/center\]", "</center>")
-	t = replacetext(t, "\[br\]", "<BR>")
-	t = replacetext(t, "\[b\]", "<B>")
-	t = replacetext(t, "\[/b\]", "</B>")
-	t = replacetext(t, "\[i\]", "<I>")
-	t = replacetext(t, "\[/i\]", "</I>")
-	t = replacetext(t, "\[u\]", "<U>")
-	t = replacetext(t, "\[/u\]", "</U>")
-	t = replacetext(t, "\[large\]", "<font size=\"4\">")
-	t = replacetext(t, "\[/large\]", "</font>")
-	t = replacetext(t, "\[*\]", "<li>")
-	t = replacetext(t, "\[small\]", "<font size = \"1\">")
-	t = replacetext(t, "\[/small\]", "</font>")
-	t = replacetext(t, "\[list\]", "<ul>")
-	t = replacetext(t, "\[/list\]", "</ul>")
+	t = replacetext_char(t, "\[center\]", "<center>")
+	t = replacetext_char(t, "\[/center\]", "</center>")
+	t = replacetext_char(t, "\[br\]", "<BR>")
+	t = replacetext_char(t, "\[b\]", "<B>")
+	t = replacetext_char(t, "\[/b\]", "</B>")
+	t = replacetext_char(t, "\[i\]", "<I>")
+	t = replacetext_char(t, "\[/i\]", "</I>")
+	t = replacetext_char(t, "\[u\]", "<U>")
+	t = replacetext_char(t, "\[/u\]", "</U>")
+	t = replacetext_char(t, "\[large\]", "<font size=\"4\">")
+	t = replacetext_char(t, "\[/large\]", "</font>")
+	t = replacetext_char(t, "\[*\]", "<li>")
+	t = replacetext_char(t, "\[small\]", "<font size = \"1\">")
+	t = replacetext_char(t, "\[/small\]", "</font>")
+	t = replacetext_char(t, "\[list\]", "<ul>")
+	t = replacetext_char(t, "\[/list\]", "</ul>")
 
 	return t
 

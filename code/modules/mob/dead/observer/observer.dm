@@ -215,13 +215,13 @@ var/list/image/ghost_images_simple = list() //this is a list of all ghost images
 	var/g_val
 	var/color_format = length(input_color)
 	if(color_format == 3)
-		r_val = hex2num(copytext(input_color, 1, 2))*16
-		g_val = hex2num(copytext(input_color, 2, 3))*16
-		b_val = hex2num(copytext(input_color, 3, 0))*16
+		r_val = hex2num(copytext_char(input_color, 1, 2))*16
+		g_val = hex2num(copytext_char(input_color, 2, 3))*16
+		b_val = hex2num(copytext_char(input_color, 3, 0))*16
 	else if(color_format == 6)
-		r_val = hex2num(copytext(input_color, 1, 3))
-		g_val = hex2num(copytext(input_color, 3, 5))
-		b_val = hex2num(copytext(input_color, 5, 0))
+		r_val = hex2num(copytext_char(input_color, 1, 3))
+		g_val = hex2num(copytext_char(input_color, 3, 5))
+		b_val = hex2num(copytext_char(input_color, 5, 0))
 	else
 		return 0 //If the color format is not 3 or 6, you're using an unexpected way to represent a color.
 
@@ -244,7 +244,7 @@ Works together with spawning an observer, noted above.
 
 /mob/proc/ghostize(can_reenter_corpse = 1)
 	if(key && client.holder)
-		if(!cmptext(copytext(key,1,2),"@")) // Skip aghosts.
+		if(!cmptext(copytext_char(key,1,2),"@")) // Skip aghosts.
 			var/mob/dead/observer/ghost = new(src)	// Transfer safety to observer spawning proc.
 			SStgui.on_transfer(src, ghost) // Transfer NanoUIs.
 			ghost.can_reenter_corpse = can_reenter_corpse
@@ -324,7 +324,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!can_reenter_corpse)
 		to_chat(src, "<span class='warning'>You cannot re-enter your body.</span>")
 		return
-	if(mind.current.key && copytext(mind.current.key,1,2)!="@")	//makes sure we don't accidentally kick any clients
+	if(mind.current.key && copytext_char(mind.current.key,1,2)!="@")	//makes sure we don't accidentally kick any clients
 		to_chat(usr, "<span class='warning'>Another consciousness is in your body...It is resisting you.</span>")
 		return
 	SStgui.on_transfer(src, mind.current) // Transfer NanoUIs.
