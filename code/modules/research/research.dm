@@ -129,7 +129,7 @@ research holder datum.
 		else
 			return FALSE
 
-/datum/research/proc/Find_charDesignByID(id)
+/datum/research/proc/FindDesignByID(id)
 	return known_designs[id]
 
 

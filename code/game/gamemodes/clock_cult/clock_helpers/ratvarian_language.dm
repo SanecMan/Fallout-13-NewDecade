@@ -67,27 +67,27 @@ List of nuances:
 
 
 /proc/text2ratvar(text) //Takes english and applies ratvarian styling rules (and rot13) to it
-	var/ratvarian 	= replacetext_char(text, 		RATVAR_OF_MATCH, 		RATVAR_OF_REPLACEMENT)
-	ratvarian 		= replacetext_char(ratvarian,	RATVAR_GUA_MATCH, 		RATVAR_GUA_REPLACEMENT)
-	ratvarian 		= replacetext_char(ratvarian,	RATVAR_TH_MATCH, 		RATVAR_TH_REPLACEMENT)
-	ratvarian 		= replacetext_char(ratvarian,	RATVAR_TI_MATCH, 		RATVAR_TI_REPLACEMENT)
-	ratvarian 		= replacetext_char(ratvarian, 	RATVAR_ET_MATCH, 		RATVAR_ET_REPLACEMENT)
-	ratvarian 		= replacetext_char(ratvarian, 	RATVAR_TE_MATCH, 		RATVAR_TE_REPLACEMENT)
-	ratvarian 		= replacetext_char(ratvarian, 	RATVAR_PRE_AND_MATCH,	RATVAR_PRE_AND_REPLACEMENT)
-	ratvarian 		= replacetext_char(ratvarian, 	RATVAR_POST_AND_MATCH,	RATVAR_POST_AND_REPLACEMENT)
-	ratvarian 		= replacetext_char(ratvarian, 	RATVAR_TO_MATCH, 		RATVAR_TO_REPLACEMENT)
-	ratvarian 		= replacetext_char(ratvarian, 	RATVAR_MY_MATCH, 		RATVAR_MY_REPLACEMENT)
+	var/ratvarian 	= replacetext(text, 		RATVAR_OF_MATCH, 		RATVAR_OF_REPLACEMENT)
+	ratvarian 		= replacetext(ratvarian,	RATVAR_GUA_MATCH, 		RATVAR_GUA_REPLACEMENT)
+	ratvarian 		= replacetext(ratvarian,	RATVAR_TH_MATCH, 		RATVAR_TH_REPLACEMENT)
+	ratvarian 		= replacetext(ratvarian,	RATVAR_TI_MATCH, 		RATVAR_TI_REPLACEMENT)
+	ratvarian 		= replacetext(ratvarian, 	RATVAR_ET_MATCH, 		RATVAR_ET_REPLACEMENT)
+	ratvarian 		= replacetext(ratvarian, 	RATVAR_TE_MATCH, 		RATVAR_TE_REPLACEMENT)
+	ratvarian 		= replacetext(ratvarian, 	RATVAR_PRE_AND_MATCH,	RATVAR_PRE_AND_REPLACEMENT)
+	ratvarian 		= replacetext(ratvarian, 	RATVAR_POST_AND_MATCH,	RATVAR_POST_AND_REPLACEMENT)
+	ratvarian 		= replacetext(ratvarian, 	RATVAR_TO_MATCH, 		RATVAR_TO_REPLACEMENT)
+	ratvarian 		= replacetext(ratvarian, 	RATVAR_MY_MATCH, 		RATVAR_MY_REPLACEMENT)
 
 
 /proc/ratvar2text(ratvarian) //Reverts ravarian styling and rot13 in text.
-	var/text 	= replacetext_char(ratvarian, "`",								 		"")
-	text 		= replacetext_char(text, 			REVERSE_RATVAR_HYPHEN_GUA_MATCH,	 		REVERSE_RATVAR_HYPHEN_GUA_REPLACEMENT)
-	text 		= replacetext_char(text, 			REVERSE_RATVAR_HYPHEN_PRE_AND_MATCH,	 	REVERSE_RATVAR_HYPHEN_PRE_AND_REPLACEMENT)
-	text 		= replacetext_char(text, 			REVERSE_RATVAR_HYPHEN_POST_AND_MATCH,	 	REVERSE_RATVAR_HYPHEN_POST_AND_REPLACEMENT)
-	text 		= replacetext_char(text, 			REVERSE_RATVAR_HYPHEN_TO_MY_MATCH,			REVERSE_RATVAR_HYPHEN_TO_MY_REPLACEMENT)
-	text 		= replacetext_char(text, 			REVERSE_RATVAR_HYPHEN_TE_MATCH,				REVERSE_RATVAR_HYPHEN_TE_REPLACEMENT)
-	text 		= replacetext_char(text, 			REVERSE_RATVAR_HYPHEN_ET_MATCH,				REVERSE_RATVAR_HYPHEN_ET_REPLACEMENT)
-	text 		= replacetext_char(text, 			REVERSE_RATVAR_HYPHEN_OF_MATCH,				REVERSE_RATVAR_HYPHEN_OF_REPLACEMENT)
+	var/text 	= replacetext(ratvarian, "`",								 		"")
+	text 		= replacetext(text, 			REVERSE_RATVAR_HYPHEN_GUA_MATCH,	 		REVERSE_RATVAR_HYPHEN_GUA_REPLACEMENT)
+	text 		= replacetext(text, 			REVERSE_RATVAR_HYPHEN_PRE_AND_MATCH,	 	REVERSE_RATVAR_HYPHEN_PRE_AND_REPLACEMENT)
+	text 		= replacetext(text, 			REVERSE_RATVAR_HYPHEN_POST_AND_MATCH,	 	REVERSE_RATVAR_HYPHEN_POST_AND_REPLACEMENT)
+	text 		= replacetext(text, 			REVERSE_RATVAR_HYPHEN_TO_MY_MATCH,			REVERSE_RATVAR_HYPHEN_TO_MY_REPLACEMENT)
+	text 		= replacetext(text, 			REVERSE_RATVAR_HYPHEN_TE_MATCH,				REVERSE_RATVAR_HYPHEN_TE_REPLACEMENT)
+	text 		= replacetext(text, 			REVERSE_RATVAR_HYPHEN_ET_MATCH,				REVERSE_RATVAR_HYPHEN_ET_REPLACEMENT)
+	text 		= replacetext(text, 			REVERSE_RATVAR_HYPHEN_OF_MATCH,				REVERSE_RATVAR_HYPHEN_OF_REPLACEMENT)
 	return text
 
 //Causes the mob or AM in question to speak a message; it assumes that the message is already translated to ratvar speech using text2ratvar()

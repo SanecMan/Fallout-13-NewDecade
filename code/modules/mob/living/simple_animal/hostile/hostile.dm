@@ -96,7 +96,7 @@
 			targets += murder
 
 	if(stat == CONSCIOUS && !target && AIStatus != AI_OFF && !client && user)
-		Find_charTarget(list(user), 1)
+		FindTarget(list(user), 1)
 	return ..()
 
 /mob/living/simple_animal/hostile/bullet_act(obj/item/projectile/P)
@@ -105,7 +105,7 @@
 
 	if(stat == CONSCIOUS && !target && AIStatus != AI_OFF && !client)
 		if(P.firer && get_dist(src, P.firer) <= aggro_vision_range)
-			Find_charTarget(list(P.firer), 1)
+			FindTarget(list(P.firer), 1)
 		Goto(P.starting, move_to_delay, 3)
 	return ..()
 
@@ -129,7 +129,7 @@
 		var/list/Objects = oview(vision_range, targets_from)
 		. += Objects
 
-/mob/living/simple_animal/hostile/proc/Find_charTarget(var/list/possible_targets, var/HasTargetsList = 0)//Step 2, filter down possible targets to things we actually care about
+/mob/living/simple_animal/hostile/proc/FindTarget(var/list/possible_targets, var/HasTargetsList = 0)//Step 2, filter down possible targets to things we actually care about
 	. = list()
 	if(!HasTargetsList)
 		possible_targets = ListTargets()
@@ -270,10 +270,10 @@
 				OpenFire(target)
 			if(environment_smash >= 2) //If we're capable of smashing through walls, forget about vision completely after finding our target
 				Goto(target,move_to_delay,minimum_distance)
-				Find_charHidden()
+				FindHidden()
 				return 1
 			else
-				if(Find_charHidden())
+				if(FindHidden())
 					return 1
 	LoseTarget()
 	return 0
@@ -289,9 +289,9 @@
 			LoseSearchObjects()
 		if(AIStatus == AI_IDLE)
 			AIStatus = AI_ON
-			Find_charTarget()
+			FindTarget()
 		else if(target != null && prob(40))//No more pulling a mob forever and having a second player attack it, it can switch targets now if it finds a more suitable one
-			Find_charTarget()
+			FindTarget()
 
 
 /mob/living/simple_animal/hostile/proc/AttackingTarget()
@@ -405,7 +405,7 @@
 		A.attack_animal(src)//Bang on it till we get out
 
 
-/mob/living/simple_animal/hostile/proc/Find_charHidden()
+/mob/living/simple_animal/hostile/proc/FindHidden()
 	if(istype(target.loc, /obj/structure/closet) || istype(target.loc, /obj/machinery/disposal) || istype(target.loc, /obj/machinery/sleeper))
 		var/atom/A = target.loc
 		Goto(A,move_to_delay,minimum_distance)
@@ -427,14 +427,14 @@
 		if(AI_ON)
 			. = 1
 		if(AI_IDLE)
-			if(Find_charTarget(possible_targets, 1))
+			if(FindTarget(possible_targets, 1))
 				. = 1
 				AIStatus = AI_ON //Wake up for more than one Life() cycle.
 			else
 				. = 0
 
 /mob/living/simple_animal/hostile/proc/AIShouldSleep(var/list/possible_targets)
-	return !Find_charTarget(possible_targets, 1)
+	return !FindTarget(possible_targets, 1)
 
 
 //These two procs handle losing our target if we've failed to attack them for

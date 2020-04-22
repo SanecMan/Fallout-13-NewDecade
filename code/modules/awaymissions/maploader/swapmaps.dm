@@ -44,7 +44,7 @@
 	PROCS:
 
 	SwapMaps_Find(id)
-		Find_char a map by its id
+		Find a map by its id
 	SwapMaps_Load(id)
 		Load a map by its id
 	SwapMaps_Save(id)
@@ -301,7 +301,7 @@ swapmap
 		qdel(areas)
 
 	/*
-		Find_char an empty block on the world map in which to load this map.
+		Find an empty block on the world map in which to load this map.
 		If no space is found, increase world.maxz as necessary. (If the
 		map is greater in x,y size than the current world, expand
 		world.maxx and world.maxy too.)

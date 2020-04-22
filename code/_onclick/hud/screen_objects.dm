@@ -54,7 +54,8 @@
 	return 1
 
 /obj/screen/craft
-	name = "crafting menu"
+	name = "меню крафта"
+	eng_name = "crafting menu"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "craft"
 	screen_loc = ui_crafting
@@ -66,7 +67,8 @@
 	M.OpenCraftingMenu()
 
 /obj/screen/wield
-	name = "wield"
+	name = "взять в обе руки"
+	eng_name = "wield"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "wield"
 	screen_loc = ui_wield
@@ -79,7 +81,8 @@
 
 
 /obj/screen/area_creator
-	name = "create new area"
+	name = "создать новую зону"
+	eng_name = "create new area"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "area_edit"
 	screen_loc = ui_building
@@ -192,7 +195,8 @@
 
 
 /obj/screen/drop
-	name = "drop"
+	name = "бросить"
+	eng_name = "drop"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "act_drop"
 	layer = HUD_LAYER
@@ -202,7 +206,8 @@
 	usr.drop_item_v()
 
 /obj/screen/act_intent
-	name = "intent"
+	name = "взаимодействие"
+	eng_name = "intent"
 	icon_state = "help"
 	screen_loc = ui_acti
 
@@ -236,7 +241,8 @@
 	screen_loc = ui_borg_intents
 
 /obj/screen/internals
-	name = "toggle internals"
+	name = "переключить"
+	eng_name = "toggle internals"
 	icon_state = "internal0"
 	screen_loc = ui_internal
 
@@ -296,7 +302,8 @@
 	C.update_action_buttons_icon()
 
 /obj/screen/mov_intent
-	name = "run/walk toggle"
+	name = "бег/ходьба"
+	eng_name = "run/walk toggle"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "running"
 
@@ -316,7 +323,8 @@
 	user.update_icons()
 
 /obj/screen/pull
-	name = "stop pulling"
+	name = "перестать тащить"
+	eng_name = "stop pulling"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "pull"
 
@@ -333,7 +341,8 @@
 		icon_state = "pull0"
 
 /obj/screen/resist
-	name = "resist"
+	name = "сопротивляться"
+	eng_name = "resist"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "act_resist"
 	layer = HUD_LAYER
@@ -345,7 +354,8 @@
 		L.resist()
 
 /obj/screen/storage
-	name = "storage"
+	name = "хранилище"
+	eng_name = "storage"
 
 /obj/screen/storage/Click(location, control, params)
 	if(world.time <= usr.next_move)
@@ -361,7 +371,8 @@
 	return 1
 
 /obj/screen/throw_catch
-	name = "throw/catch"
+	name = "кинуть/поймать"
+	eng_name = "throw/catch"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "act_throw_off"
 
@@ -371,7 +382,8 @@
 		C.toggle_throw_mode()
 
 /obj/screen/zone_sel
-	name = "damage zone"
+	name = "зона урона"
+	eng_name = "damage zone"
 	icon_state = "zone_sel"
 	screen_loc = ui_zonesel
 	var/selecting = "chest"
@@ -475,7 +487,8 @@
 	plane = FULLSCREEN_PLANE
 
 /obj/screen/healths
-	name = "health"
+	name = "здоровье"
+	eng_name = "health"
 	icon_state = "health0"
 	screen_loc = ui_health
 
@@ -540,7 +553,8 @@
 
 
 /obj/screen/wheel
-	name = "wheel"
+	name = "колесо"
+	eng_name = "wheel"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
 	icon_state = ""
@@ -618,7 +632,8 @@
 
 
 /obj/screen/wheel/talk
-	name = "talk wheel"
+	name = "разговорное колесо"
+	eng_name = "talk wheel"
 	icon_state = "talk_wheel"
 	screen_loc = "11:6,2:-11"
 	wheel_buttons_type = /obj/screen/wheel_button/talk
@@ -636,7 +651,8 @@
 
 
 /obj/screen/wheel_button
-	name = "default wheel button"
+	name = "базовое колесо"
+	eng_name = "default wheel button"
 	screen_loc = "8,8"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
@@ -648,7 +664,8 @@
 	return ..()
 
 /obj/screen/wheel_button/close_wheel
-	name = "close wheel"
+	name = "закрыть колесо"
+	eng_name = "close wheel"
 	icon_state = "radialclose"
 
 /obj/screen/wheel_button/close_wheel/Click()
@@ -659,7 +676,8 @@
 
 
 /obj/screen/wheel_button/talk
-	name = "talk option"
+	name = "опция разговора"
+	eng_name = "talk option"
 	icon_state = "talk_help"
 	var/talk_cooldown = 0
 	var/list/word_messages = list()

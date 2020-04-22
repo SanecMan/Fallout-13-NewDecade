@@ -223,7 +223,7 @@ var/datum/sortInstance/sortInstance = new()
 		runBases.Cut(i+1, i+2)
 
 
-		//Find_char where the first element of run2 goes in run1.
+		//Find where the first element of run2 goes in run1.
 		//Prior elements in run1 can be ignored (because they're already in place)
 		var/k = gallopRight(fetchElement(L,base2), base1, len1, 0)
 		//ASSERT(k >= 0)
@@ -232,7 +232,7 @@ var/datum/sortInstance/sortInstance = new()
 		if(len1 == 0)
 			return
 
-		//Find_char where the last element of run1 goes in run2.
+		//Find where the last element of run1 goes in run2.
 		//Subsequent elements in run2 can be ignored (because they're already in place)
 		len2 = gallopLeft(fetchElement(L,base1 + len1 - 1), base2, len2, len2-1)
 		//ASSERT(len2 >= 0)

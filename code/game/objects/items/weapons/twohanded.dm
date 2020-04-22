@@ -41,7 +41,7 @@
 		force = (force / 1.5)
 	var/sf = findtext_char(name," (Wielded)")
 	if(sf)
-		name = copytext_char(name,1,sf)
+		name = copytext(name,1,sf)
 	else //something wrong
 		name = "[initial(name)]"
 	update_unwield_icon()

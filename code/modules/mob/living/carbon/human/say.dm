@@ -11,7 +11,7 @@
 	message = dna.species.handle_speech(message,src)
 	if(viruses.len)
 		for(var/datum/disease/pierrot_throat/D in viruses)
-			var/list/temp_message = splittext_char(message, " ") //List each word in the message
+			var/list/temp_message = splittext(message, " ") //List each word in the message
 			var/list/pick_list = list()
 			for(var/i = 1, i <= temp_message.len, i++) //Create a second list for excluding words down the line
 				pick_list += i
@@ -121,18 +121,18 @@
 			var/temp = winget(client, "input", "text")
 			if(findtextEx_char(temp, "Say \"", 1, 7) && length(temp) > 5)	//"case sensitive means
 
-				temp = replacetext_char(temp, ";", "")	//general radio
+				temp = replacetext(temp, ";", "")	//general radio
 
 				if(findtext_char(trim_left(temp), ":", 6, 7))	//dept radio
-					temp = copytext_char(trim_left(temp), 8)
+					temp = copytext(trim_left(temp), 8)
 					virgin = 0
 
 				if(virgin)
-					temp = copytext_char(trim_left(temp), 6)	//normal speech
+					temp = copytext(trim_left(temp), 6)	//normal speech
 					virgin = 0
 
 				while(findtext_char(trim_left(temp), ":", 1, 2))	//dept radio again (necessary)
-					temp = copytext_char(trim_left(temp), 3)
+					temp = copytext(trim_left(temp), 3)
 
 				if(findtext_char(temp, "*", 1, 2))	//emotes
 					return

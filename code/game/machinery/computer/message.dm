@@ -266,7 +266,7 @@
 		//Turn the server on/off.
 		if (href_list["active"])
 			if(auth) linkedServer.active = !linkedServer.active
-		//Find_char a server
+		//Find a server
 		if (href_list["find"])
 			if(message_servers && message_servers.len > 1)
 				src.linkedServer = input(usr,"Please select a server.", "Select a server.", null) as null|anything in message_servers

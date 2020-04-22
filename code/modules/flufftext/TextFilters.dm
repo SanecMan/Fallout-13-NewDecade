@@ -4,7 +4,7 @@
 /proc/NewStutter(phrase,stunned)
 	phrase = html_decode(phrase)
 
-	var/list/split_phrase = splittext_char(phrase," ") //Split it up into words.
+	var/list/split_phrase = splittext(phrase," ") //Split it up into words.
 
 	var/list/unstuttered_words = split_phrase.Copy()
 	var/i = rand(1,3)
@@ -15,11 +15,11 @@
 			break
 		var/word = pick(unstuttered_words)
 		unstuttered_words -= word //Remove from unstuttered words so we don't stutter it again.
-		var/index = split_phrase.Find(word) //Find_char the word in the split phrase so we can replace it.
+		var/index = split_phrase.Find(word) //Find the word in the split phrase so we can replace it.
 
 		//Search for dipthongs (two letters that make one sound.)
-		var/first_sound = copytext_char(word,1,3)
-		var/first_letter = copytext_char(word,1,2)
+		var/first_sound = copytext(word,1,3)
+		var/first_letter = copytext(word,1,2)
 		if(lowertext(first_sound) in list("ch","th","sh"))
 			first_letter = first_sound
 
@@ -45,7 +45,7 @@
 	if(chance >= 100) return original_msg
 
 	var/list
-		words = splittext_char(original_msg," ")
+		words = splittext(original_msg," ")
 		new_words = list()
 
 	var/new_msg = ""

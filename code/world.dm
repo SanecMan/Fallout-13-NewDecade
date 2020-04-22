@@ -287,7 +287,7 @@ var/inerror = 0
 
 	//this is done this way rather then replace text to pave the way for processing the runtime reports more thoroughly
 	//	(and because runtimes end with a newline, and we don't want to basically print an empty time stamp)
-	var/list/split = splittext_char(e.desc, "\n")
+	var/list/split = splittext(e.desc, "\n")
 	for (var/i in 1 to split.len)
 		if (split[i] != "")
 			split[i] = "\[[time2text(world.timeofday,"hh:mm:ss")]\][split[i]]"

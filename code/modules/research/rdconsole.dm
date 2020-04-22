@@ -61,7 +61,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	return "ERROR: Report This"
 
 /proc/CallMaterialName(ID)
-	if (copytext_char(ID, 1, 2) == "$" && materials_list[ID])
+	if (copytext(ID, 1, 2) == "$" && materials_list[ID])
 		var/datum/material/material = materials_list[ID]
 		return material.name
 

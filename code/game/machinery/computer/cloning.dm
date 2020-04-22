@@ -408,7 +408,7 @@
 		R.fields["mrace"] = rando_race.type
 	R.fields["ckey"] = subject.ckey
 	R.fields["name"] = subject.real_name
-	R.fields["id"] = copytext_char(md5(subject.real_name), 2, 6)
+	R.fields["id"] = copytext(md5(subject.real_name), 2, 6)
 	R.fields["UE"] = subject.dna.unique_enzymes
 	R.fields["UI"] = subject.dna.uni_identity
 	R.fields["SE"] = subject.dna.struc_enzymes

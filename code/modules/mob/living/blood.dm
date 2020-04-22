@@ -153,7 +153,7 @@
 		for(var/datum/disease/D in viruses)
 			blood_data["viruses"] += D.Copy()
 
-		blood_data["blood_DNA"] = copytext_char(dna.unique_enzymes,1,0)
+		blood_data["blood_DNA"] = copytext(dna.unique_enzymes,1,0)
 		if(resistances && resistances.len)
 			blood_data["resistances"] = resistances.Copy()
 		var/list/temp_chem = list()
@@ -171,7 +171,7 @@
 
 		if(!suiciding)
 			blood_data["cloneable"] = 1
-		blood_data["blood_type"] = copytext_char(dna.blood_type,1,0)
+		blood_data["blood_type"] = copytext(dna.blood_type,1,0)
 		blood_data["gender"] = gender
 		blood_data["real_name"] = real_name
 		blood_data["features"] = dna.features
@@ -250,7 +250,7 @@
 			drop.transfer_mob_blood_dna(src)
 			return
 
-	// Find_char a blood decal or create a new one.
+	// Find a blood decal or create a new one.
 	var/obj/effect/decal/cleanable/blood/B = locate() in T
 	if(!B)
 		B = new /obj/effect/decal/cleanable/blood/splatter(T)

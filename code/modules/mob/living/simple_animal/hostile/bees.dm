@@ -164,7 +164,7 @@
 		target = null
 		return
 
-	target = null //so we pick a new hydro tray next Find_charTarget(), instead of loving the same plant for eternity
+	target = null //so we pick a new hydro tray next FindTarget(), instead of loving the same plant for eternity
 	wanted_objects -= typecacheof(/obj/machinery/hydroponics) //so we only hunt them while they're alive/seeded/not visisted
 	Hydro.recent_bee_visit = TRUE
 	spawn(BEE_TRAY_RECENT_VISIT)
@@ -199,7 +199,7 @@
 		else
 			idle = max(0, --idle)
 			if(idle <= BEE_IDLE_GOHOME && prob(BEE_PROB_GOHOME))
-				if(!Find_charTarget())
+				if(!FindTarget())
 					wanted_objects |= typecacheof(/obj/structure/beebox) //so we don't attack beeboxes when not going home
 					target = beehome
 	if(!beehome) //add outselves to a beebox (of the same reagent) if we have no home

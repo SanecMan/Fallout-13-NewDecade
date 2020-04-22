@@ -501,10 +501,10 @@ proc/has_density(var/atom)
 	winset(client_or_usr, "mainwindow", "flash=5")
 
 /proc/GetRedPart(hexa)
-	return hex2num(copytext_char(hexa, 2, 4))
+	return hex2num(copytext(hexa, 2, 4))
 
 /proc/GetGreenPart(hexa)
-	return hex2num(copytext_char(hexa, 4, 6))
+	return hex2num(copytext(hexa, 4, 6))
 
 /proc/GetBluePart(hexa)
-	return hex2num(copytext_char(hexa, 6, 8))
+	return hex2num(copytext(hexa, 6, 8))

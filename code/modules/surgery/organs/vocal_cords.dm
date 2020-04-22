@@ -167,7 +167,7 @@ var/static/regex/multispin_words = regex("like a record baby")
 			listeners = list(L) //let's be honest you're never going to find two devils with the same name
 			power_multiplier *= 5 //if you're a devil and god himself addressed you, you fucked up
 			//Cut out the name so it doesn't trigger commands
-			message = copytext_char(message, 0, start)+copytext_char(message, start + length(L.mind.devilinfo.truename), length(message) + 1)
+			message = copytext(message, 0, start)+copytext(message, start + length(L.mind.devilinfo.truename), length(message) + 1)
 			break
 		else if(findtext_char(message, L.real_name) == 1)
 			specific_listeners += L //focus on those with the specified name
@@ -182,7 +182,7 @@ var/static/regex/multispin_words = regex("like a record baby")
 	if(specific_listeners.len)
 		listeners = specific_listeners
 		power_multiplier *= (1 + (1/specific_listeners.len)) //2x on a single guy, 1.5x on two and so on
-		message = copytext_char(message, 0, 1)+copytext_char(message, 1 + length(found_string), length(message) + 1)
+		message = copytext(message, 0, 1)+copytext(message, 1 + length(found_string), length(message) + 1)
 
 	//STUN
 	if(findtext_char(message, stun_words))

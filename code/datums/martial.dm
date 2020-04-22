@@ -26,7 +26,7 @@
 		restraining = 0
 	streak = streak+element
 	if(length(streak) > max_streak_length)
-		streak = copytext_char(streak,2)
+		streak = copytext(streak,2)
 	return
 
 /datum/martial_art/proc/basic_hit(mob/living/carbon/human/A,mob/living/carbon/human/D)
@@ -159,15 +159,15 @@
 
 
 /datum/martial_art/plasma_fist/proc/check_streak(mob/living/carbon/human/A, mob/living/carbon/human/D)
-	if(findtext_char(streak,TORNADO_COMBO))
+	if(findtext(streak,TORNADO_COMBO))
 		streak = ""
 		Tornado(A,D)
 		return 1
-	if(findtext_char(streak,THROWBACK_COMBO))
+	if(findtext(streak,THROWBACK_COMBO))
 		streak = ""
 		Throwback(A,D)
 		return 1
-	if(findtext_char(streak,PLASMA_COMBO))
+	if(findtext(streak,PLASMA_COMBO))
 		streak = ""
 		Plasma(A,D)
 		return 1
@@ -251,23 +251,23 @@
 	help_verb = /mob/living/carbon/human/proc/sleeping_carp_help
 
 /datum/martial_art/the_sleeping_carp/proc/check_streak(mob/living/carbon/human/A, mob/living/carbon/human/D)
-	if(findtext_char(streak,WRIST_WRENCH_COMBO))
+	if(findtext(streak,WRIST_WRENCH_COMBO))
 		streak = ""
 		wristWrench(A,D)
 		return 1
-	if(findtext_char(streak,BACK_KICK_COMBO))
+	if(findtext(streak,BACK_KICK_COMBO))
 		streak = ""
 		backKick(A,D)
 		return 1
-	if(findtext_char(streak,STOMACH_KNEE_COMBO))
+	if(findtext(streak,STOMACH_KNEE_COMBO))
 		streak = ""
 		kneeStomach(A,D)
 		return 1
-	if(findtext_char(streak,HEAD_KICK_COMBO))
+	if(findtext(streak,HEAD_KICK_COMBO))
 		streak = ""
 		headKick(A,D)
 		return 1
-	if(findtext_char(streak,ELBOW_DROP_COMBO))
+	if(findtext(streak,ELBOW_DROP_COMBO))
 		streak = ""
 		elbowDrop(A,D)
 		return 1
@@ -408,23 +408,23 @@
 	restraining = 0
 
 /datum/martial_art/cqc/proc/check_streak(mob/living/carbon/human/A, mob/living/carbon/human/D)
-	if(findtext_char(streak,SLAM_COMBO))
+	if(findtext(streak,SLAM_COMBO))
 		streak = ""
 		Slam(A,D)
 		return 1
-	if(findtext_char(streak,KICK_COMBO))
+	if(findtext(streak,KICK_COMBO))
 		streak = ""
 		Kick(A,D)
 		return 1
-	if(findtext_char(streak,RESTRAIN_COMBO))
+	if(findtext(streak,RESTRAIN_COMBO))
 		streak = ""
 		Restrain(A,D)
 		return 1
-	if(findtext_char(streak,PRESSURE_COMBO))
+	if(findtext(streak,PRESSURE_COMBO))
 		streak = ""
 		Pressure(A,D)
 		return 1
-	if(findtext_char(streak,CONSECUTIVE_COMBO))
+	if(findtext(streak,CONSECUTIVE_COMBO))
 		streak = ""
 		Consecutive(A,D)
 	return 0

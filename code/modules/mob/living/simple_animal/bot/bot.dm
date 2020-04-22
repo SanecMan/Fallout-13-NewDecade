@@ -550,7 +550,7 @@ Pass a positive integer as an argument to override a bot's default speed.
 
 	if(patrol_target)		// has patrol target
 		spawn(0)
-			calc_path()		// Find_char a route to it
+			calc_path()		// Find a route to it
 			if(path.len == 0)
 				patrol_target = null
 				return
@@ -569,7 +569,7 @@ Pass a positive integer as an argument to override a bot's default speed.
 		return
 
 	if(loc == patrol_target)		// reached target
-		//Find_char the next beacon matching the target.
+		//Find the next beacon matching the target.
 		if(!get_next_patrol_target())
 			find_patrol_target() //If it fails, look for the nearest one instead.
 		return

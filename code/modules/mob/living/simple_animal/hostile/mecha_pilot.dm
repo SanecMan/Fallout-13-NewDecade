@@ -100,7 +100,7 @@
 	allow_movement_on_non_turfs = FALSE
 	targets_from = src
 
-	//Find_char a new mecha
+	//Find a new mecha
 	wanted_objects = typecacheof(/obj/mecha/combat, ignore_root_path=TRUE)
 	var/search_aggressiveness = 2
 	for(var/obj/mecha/combat/C in range(vision_range,src))

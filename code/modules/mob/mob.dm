@@ -61,7 +61,7 @@ var/next_mob_id = 0
 	if(!client)
 		return
 
-	msg = copytext_char(msg, 1, MAX_MESSAGE_LEN)
+	msg = copytext(msg, 1, MAX_MESSAGE_LEN)
 
 	if(type)
 		if(type & 1 && eye_blind )//Vision related
@@ -411,7 +411,7 @@ var/next_mob_id = 0
 	set name = "Add Note"
 	set category = "IC"
 
-	msg = copytext_char(msg, 1, MAX_MESSAGE_LEN)
+	msg = copytext(msg, 1, MAX_MESSAGE_LEN)
 	msg = sanitize(msg)
 
 	if(mind)

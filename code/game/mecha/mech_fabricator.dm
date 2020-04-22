@@ -463,4 +463,4 @@
 		return ..()
 
 /obj/machinery/mecha_part_fabricator/proc/material2name(ID)
-	return copytext_char(ID,2)
+	return copytext(ID,2)

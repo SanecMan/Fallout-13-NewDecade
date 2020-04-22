@@ -4,7 +4,7 @@
 	if(!T) //hoooooouaah!
 		var/regex/tongueless_lower = new("\[gdntke]+", "g")
 		var/regex/tongueless_upper = new("\[GDNTKE]+", "g")
-		if(copytext_char(message, 1, 2) != "*")
+		if(copytext(message, 1, 2) != "*")
 			message = tongueless_lower.Replace_char(message, pick("aa","oo","'"))
 			message = tongueless_upper.Replace_char(message, pick("AA","OO","'"))
 	else

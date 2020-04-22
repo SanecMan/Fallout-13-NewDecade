@@ -206,15 +206,15 @@
 		return null
 	. = params2list(ban)
 	if (.["keys"])
-		var/keys = splittext_char(.["keys"], ",")
+		var/keys = splittext(.["keys"], ",")
 		var/ckeys = list()
 		for (var/key in keys)
 			var/ckey = ckey(key)
 			ckeys[ckey] = ckey //to make searching faster.
 		.["keys"] = ckeys
-	.["type"] = splittext_char(.["type"], ",")
-	.["IP"] = splittext_char(.["IP"], ",")
-	.["computer_id"] = splittext_char(.["computer_id"], ",")
+	.["type"] = splittext(.["type"], ",")
+	.["IP"] = splittext(.["IP"], ",")
+	.["computer_id"] = splittext(.["computer_id"], ",")
 
 
 /proc/list2stickyban(var/list/ban)

@@ -107,7 +107,7 @@ var/datum/subsystem/job/SSjob
 	return 0
 
 
-/datum/subsystem/job/proc/Find_charOccupationCandidates(datum/job/job, level, flag)
+/datum/subsystem/job/proc/FindOccupationCandidates(datum/job/job, level, flag)
 	Debug("Running FOC, Job: [job], Level: [level], Flag: [flag]")
 	var/list/candidates = list()
 	for(var/mob/new_player/player in unassigned)
@@ -198,7 +198,7 @@ var/datum/subsystem/job/SSjob
 				continue
 			if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 				continue
-			var/list/candidates = Find_charOccupationCandidates(job, level)
+			var/list/candidates = FindOccupationCandidates(job, level)
 			if(!candidates.len)
 				continue
 			var/mob/new_player/candidate = pick(candidates)
@@ -216,7 +216,7 @@ var/datum/subsystem/job/SSjob
 			continue
 		if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 			continue
-		var/list/candidates = Find_charOccupationCandidates(job, level)
+		var/list/candidates = FindOccupationCandidates(job, level)
 		if(!candidates.len)
 			continue
 		var/mob/new_player/candidate = pick(candidates)
@@ -232,7 +232,7 @@ var/datum/subsystem/job/SSjob
 	for(var/i = job.total_positions, i > 0, i--)
 		for(var/level = 1 to 3)
 			var/list/candidates = list()
-			candidates = Find_charOccupationCandidates(job, level)
+			candidates = FindOccupationCandidates(job, level)
 			if(candidates.len)
 				var/mob/new_player/candidate = pick(candidates)
 				if(AssignRole(candidate, "AI"))
@@ -286,7 +286,7 @@ var/datum/subsystem/job/SSjob
 	//People who wants to be assistants, sure, go on.
 	Debug("DO, Running Assistant Check 1")
 	var/datum/job/assist = new /datum/job/assistant()
-	var/list/assistant_candidates = Find_charOccupationCandidates(assist, 3)
+	var/list/assistant_candidates = FindOccupationCandidates(assist, 3)
 	Debug("AC1, Candidates: [assistant_candidates.len]")
 	for(var/mob/new_player/player in assistant_candidates)
 		Debug("AC1 pass, Player: [player]")

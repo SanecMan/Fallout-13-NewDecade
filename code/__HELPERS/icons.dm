@@ -763,7 +763,7 @@ The _flatIcons list is a cache for generated icon files.
 				add = getFlatIcon(image(I), curdir, curicon, curstate, curblend, FALSE, no_anim)
 			if(!add)
 				continue
-			// Find_char the new dimensions of the flat icon to fit the added overlay
+			// Find the new dimensions of the flat icon to fit the added overlay
 			add_size = list(
 				min(flatX1, I.pixel_x+1),
 				max(flatX2, I.pixel_x+add.Width()),
@@ -897,7 +897,7 @@ The _flatIcons list is a cache for generated icon files.
 	var/icon/atom_icon = new(A.icon, A.icon_state)
 
 	if(!letter)
-		letter = copytext_char(A.name, 1, 2)
+		letter = copytext(A.name, 1, 2)
 		if(uppercase == 1)
 			letter = uppertext(letter)
 		else if(uppercase == -1)
@@ -936,7 +936,7 @@ var/global/list/friendly_animal_types = list()
 	final_image.text = initial(SA.name)
 	return final_image
 
-//Find_char's the average colour of the icon
+//Find's the average colour of the icon
 //By vg's ComicIronic
 /proc/AverageColour(icon/I)
 	var/list/colours = list()
@@ -1072,5 +1072,5 @@ var/list/freeze_item_icons = list()
 //Assumes already frozed
 obj/proc/make_unfrozen()
 	icon = initial(icon)
-	name = replacetext_char(name, "frozen ", "")
+	name = replacetext(name, "frozen ", "")
 	is_frozen = FALSE

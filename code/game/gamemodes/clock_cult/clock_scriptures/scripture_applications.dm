@@ -47,7 +47,7 @@
 	quickbind_desc = "Creates a Vitality Matrix, which drains non-Servants on it to heal Servants that cross it."
 
 
-//Memory Allocation: Find_chars a willing ghost and makes them into a clockwork marauders for the invoker.
+//Memory Allocation: Find a willing ghost and makes them into a clockwork marauders for the invoker.
 /datum/clockwork_scripture/memory_allocation
 	descname = "Guardian"
 	name = "Memory Allocation"

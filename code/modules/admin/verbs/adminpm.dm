@@ -41,7 +41,7 @@
 		return
 	var/client/C
 	if(istext(whom))
-		if(cmptext(copytext_char(whom,1,2),"@"))
+		if(cmptext(copytext(whom,1,2),"@"))
 			whom = findStealthKey(whom)
 		C = directory[whom]
 	else if(istype(whom,/client))
@@ -67,7 +67,7 @@
 	var/client/C
 	var/irc = 0
 	if(istext(whom))
-		if(cmptext(copytext_char(whom,1,2),"@"))
+		if(cmptext(copytext(whom,1,2),"@"))
 			whom = findStealthKey(whom)
 		if(whom == "IRCKEY")
 			irc = 1
@@ -119,7 +119,7 @@
 
 	//clean the message if it's not sent by a high-rank admin
 //	if(!check_rights(R_SERVER|R_DEBUG,0)||irc)//no sending html to the poor bots
-	msg = sanitize(copytext_char(msg,1,MAX_MESSAGE_LEN))
+	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
 	if(!msg)
 		return
 
@@ -205,7 +205,7 @@
 	if(!stealthkey)
 		stealthkey = GenIrcStealthKey()
 
-	msg = sanitize(copytext_char(msg,1,MAX_MESSAGE_LEN))
+	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
 	if(!msg)
 		return "No message"
 

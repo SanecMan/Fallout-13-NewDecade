@@ -58,7 +58,7 @@
 		return ..()
 	return ..(1)
 
-/mob/living/simple_animal/hostile/mimic/crate/Find_charTarget()
+/mob/living/simple_animal/hostile/mimic/crate/FindTarget()
 	. = ..()
 	if(.)
 		trigger()

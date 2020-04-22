@@ -410,7 +410,7 @@
 		playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 60, 1)
 		src.showUI(user)
 
-/* Find_char item by name and price in content and return type */
+/* Find item by name and price in content and return type */
 /obj/machinery/trading_machine/proc/find_item(var/item_name, var/item_price)
 	for(var/obj/item/Itm in content)
 		if(content[Itm] == item_price && Itm.name == item_name)

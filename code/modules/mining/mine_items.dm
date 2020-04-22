@@ -553,7 +553,7 @@ interface with the mining shuttle at the landing site if a mobile beacon is also
 		var/colony_radius = max(width, height)*0.5
 		var/list/area_counter = get_areas_in_range(colony_radius, T)
 		if(area_counter.len > 1) //Avoid smashing ruins unless you are inside a really big one
-			to_chat(user, "Unable to acquire a targeting lock. Find_char an area clear of stuctures or entirely within one.")
+			to_chat(user, "Unable to acquire a targeting lock. Find an area clear of stuctures or entirely within one.")
 			return
 
 	to_chat(user, "<span class='notice'>You begin setting the landing zone parameters...</span>")

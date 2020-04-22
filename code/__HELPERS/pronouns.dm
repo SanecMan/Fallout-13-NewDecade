@@ -28,10 +28,10 @@
 	. = "делает"
 
 /datum/proc/p_theyve(capitalized, temp_gender)
-	. = p_they(capitalized, temp_gender) + "'" + copytext_char(p_have(temp_gender), 3)
+	. = p_they(capitalized, temp_gender) + "'" + copytext(p_have(temp_gender), 3)
 
 /datum/proc/p_theyre(capitalized, temp_gender)
-	. = p_they(capitalized, temp_gender) + "'" + copytext_char(p_are(temp_gender), 2)
+	. = p_they(capitalized, temp_gender) + "'" + copytext(p_are(temp_gender), 2)
 
 /datum/proc/p_s(temp_gender) //is this a descriptive proc name, or what?
 	. = "s"
@@ -43,9 +43,9 @@
 	. = "они"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "она"
+			. = usr.client.select_lang("она", "she")
 		if(MALE)
-			. = "он"
+			. = usr.client.select_lang("он", "he")
 	if(capitalized)
 		. = capitalize(.)
 
@@ -114,11 +114,11 @@
 	. = "it"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "она"
+			. = usr.client.select_lang("она", "she")
 		if(MALE)
-			. = "он"
+			. = usr.client.select_lang("он", "he")
 		if(PLURAL)
-			. = "это"
+			. = usr.client.select_lang("это", "it")
 	if(capitalized)
 		. = capitalize(.)
 
@@ -128,11 +128,11 @@
 	. = "это"
 	switch(temp_gender)
 		if(FEMALE)
-			. = "её"
+			. = usr.client.select_lang("её", "her")
 		if(MALE)
-			. = "его"
+			. = usr.client.select_lang("его", "his")
 		if(PLURAL)
-			. = "их"
+			. = usr.client.select_lang("их", "their")
 	if(capitalized)
 		. = capitalize(.)
 

@@ -197,7 +197,7 @@
 			process_type = HULL_BREACH //Ensures the floorbot does not try to "fix" space areas or shuttle docking zones.
 			target = scan(/turf/open/space)
 
-		if(!target && placetiles) //Find_chars a floor without a tile and gives it one.
+		if(!target && placetiles) //Find a floor without a tile and gives it one.
 			process_type = PLACE_TILE //The target must be the floor and not a tile. The floor must not already have a floortile.
 			target = scan(/turf/open/floor)
 

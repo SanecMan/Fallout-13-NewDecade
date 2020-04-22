@@ -36,11 +36,11 @@ var/global/list/emote_list = list()
 	if(params && message_param)
 		msg = select_param(user, params)
 	if(findtext_char(msg, "their"))
-		msg = replacetext_char(msg, "their", user.p_their())
+		msg = replacetext(msg, "their", user.p_their())
 	if(findtext_char(msg, "them"))
-		msg = replacetext_char(msg, "them", user.p_them())
+		msg = replacetext(msg, "them", user.p_them())
 	if(findtext_char(msg, "%s"))
-		msg = replacetext_char(msg, "%s", user.p_s())
+		msg = replacetext(msg, "%s", user.p_s())
 
 	var/mob/living/L = user
 	for(var/obj/item/weapon/implant/I in L.implants)
@@ -82,7 +82,7 @@ var/global/list/emote_list = list()
 		. = message_monkey
 
 /datum/emote/proc/select_param(mob/user, params)
-	return replacetext_char(message_param, "%t", params)
+	return replacetext(message_param, "%t", params)
 
 /datum/emote/proc/can_run_emote(mob/user, help_check)
 	. = TRUE

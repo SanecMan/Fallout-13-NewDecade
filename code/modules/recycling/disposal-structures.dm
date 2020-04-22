@@ -450,7 +450,7 @@
 		if(isnum(sortType))
 			sortTypes |= sortType
 		else if(istext(sortType))
-			var/list/sorts = splittext_char(sortType,";")
+			var/list/sorts = splittext(sortType,";")
 			for(var/x in sorts)
 				var/n = text2num(x)
 				if(n)

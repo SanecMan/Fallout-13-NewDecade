@@ -62,7 +62,7 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 
 /mob/living/say(message, bubble_type,var/list/spans = list(), sanitize = TRUE)
 	if(sanitize)
-		message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
+		message = trim(copytext(sanitize(message), 1, MAX_MESSAGE_LEN))
 	if(!message || message == "")
 		return
 
@@ -83,11 +83,11 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 		return
 
 	if(message_mode == MODE_HEADSET || message_mode == MODE_ROBOT)
-		message = copytext_char(message, 2)
+		message = copytext(message, 2)
 	else if(message_mode)
-		message = copytext_char(message, 3)
+		message = copytext(message, 3)
 	if(findtext_char(message, " ", 1, 2))
-		message = copytext_char(message, 2)
+		message = copytext(message, 2)
 
 	if(handle_inherent_channels(message, message_mode)) //Hiveminds, binary chat & holopad.
 		return
@@ -195,15 +195,15 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 	return 1
 
 /mob/living/proc/check_emote(message)
-	if(copytext_char(message, 1, 2) == "*")
-		emote(copytext_char(message, 2))
+	if(copytext(message, 1, 2) == "*")
+		emote(copytext(message, 2))
 		return 1
 
 /mob/living/proc/get_message_mode(message)
-	if(copytext_char(message, 1, 2) == ";")
+	if(copytext(message, 1, 2) == ";")
 		return MODE_HEADSET
 	else if(length(message) > 2)
-		return department_radio_keys[copytext_char(message, 1, 3)]
+		return department_radio_keys[copytext(message, 1, 3)]
 
 /mob/living/proc/handle_inherent_channels(message, message_mode)
 	if(message_mode == MODE_CHANGELING)

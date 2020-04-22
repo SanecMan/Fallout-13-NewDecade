@@ -235,7 +235,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 
 /datum/proc/find_refs()
 	set category = "Debug"
-	set name = "Find_char References"
+	set name = "Find References"
 	set background = 1
 	set src in world
 
@@ -254,7 +254,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 			return
 
 		if(!skip_alert)
-			if(alert("Running this will lock everything up for about 5 minutes.  Would you like to begin the search?", "Find_char References", "Yes", "No") == "No")
+			if(alert("Running this will lock everything up for about 5 minutes.  Would you like to begin the search?", "Find References", "Yes", "No") == "No")
 				running_find_references = null
 				return
 
@@ -296,7 +296,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 
 /datum/proc/qdel_then_find_references()
 	set category = "Debug"
-	set name = "qdel() then Find_char References"
+	set name = "qdel() then Find References"
 	set background = 1
 	set src in world
 

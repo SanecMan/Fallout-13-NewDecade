@@ -117,7 +117,7 @@
 				want to revive fallen comrades. Growing pod people is easy, but prone to disaster.
 				<p>
 				<ol>
-				<li>Find_char a dead person who is in need of cloning. </li>
+				<li>Find a dead person who is in need of cloning. </li>
 				<li>Take a blood sample with a syringe. </li>
 				<li>Inject a seed pack with the blood sample. </li>
 				<li>Plant the seeds. </li>
@@ -311,7 +311,7 @@
 		<h2>BASIC PROCESS</h2>
 		The usage of the E.X.P.E.R.I-MENTOR is quite simple:
 		<ol>
-			<li>Find_char an item with a technological background</li>
+			<li>Find an item with a technological background</li>
 			<li>Insert the item into the E.X.P.E.R.I-MENTOR</li>
 			<li>Cycle through each processing method of the device.</li>
 			<li>Stand back, even in case of a successful experiment, as the machine might produce undesired behaviour.</li>
@@ -569,7 +569,7 @@
 				  <ol>
 				    Option 1: Robotics console
 				    <li>Use the Robotics console in the RD's office</li>
-				    <li>Find_char the entry for your Cyborg</li>
+				    <li>Find the entry for your Cyborg</li>
 				    <li>Press the Lockdown button on the Robotics console</li>
 				  </ol>
 				  <ol>

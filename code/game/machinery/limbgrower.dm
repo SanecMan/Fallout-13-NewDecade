@@ -109,7 +109,7 @@
 
 			/////////////////
 			//href protection
-			being_built = files.Find_charDesignByID(href_list["make"]) //check if it's a valid design
+			being_built = files.FindDesignByID(href_list["make"]) //check if it's a valid design
 			if(!being_built)
 				return
 

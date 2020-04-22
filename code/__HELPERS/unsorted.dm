@@ -14,9 +14,9 @@
 		if (length(HTMLstring) != 7)
 			CRASH("Given non-HTML argument!")
 			return
-	var/textr = copytext_char(HTMLstring, 2, 4)
-	var/textg = copytext_char(HTMLstring, 4, 6)
-	var/textb = copytext_char(HTMLstring, 6, 8)
+	var/textr = copytext(HTMLstring, 2, 4)
+	var/textg = copytext(HTMLstring, 4, 6)
+	var/textb = copytext(HTMLstring, 6, 8)
 	var/r = hex2num(textr)
 	var/g = hex2num(textg)
 	var/b = hex2num(textb)
@@ -252,7 +252,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		. += A
 	return .
 
-//Find_char an active ai with the least borgs. VERBOSE PROCNAME HUH!
+//Find an active ai with the least borgs. VERBOSE PROCNAME HUH!
 /proc/select_active_ai_with_fewest_borgs()
 	var/mob/living/silicon/ai/selected
 	var/list/active = active_ais()
@@ -714,7 +714,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	if(!istype(AM))
 		return
 
-	//Find_char AM's matrix so we can use it's X/Y pixel shifts
+	//Find AM's matrix so we can use it's X/Y pixel shifts
 	var/matrix/M = matrix(AM.transform)
 
 	var/pixel_x_offset = AM.pixel_x + M.get_x_shift()
@@ -731,7 +731,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	var/rough_x = round(round(pixel_x_offset,world.icon_size)/world.icon_size)
 	var/rough_y = round(round(pixel_y_offset,world.icon_size)/world.icon_size)
 
-	//Find_char coordinates
+	//Find coordinates
 	var/turf/T = get_turf(AM) //use AM's turfs, as it's coords are the same as AM's AND AM's coords are lost if it is inside another atom
 	var/final_x = T.x + rough_x
 	var/final_y = T.y + rough_y
@@ -739,7 +739,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	if(final_x || final_y)
 		return locate(final_x, final_y, T.z)
 
-//Find_chars the distance between two atoms, in pixels
+//Finds the distance between two atoms, in pixels
 //centered = 0 counts from turf edge to edge
 //centered = 1 counts from turf center to turf center
 //of course mathematically this is just adding world.icon_size on again
@@ -826,7 +826,7 @@ var/list/WALLITEMS_INVERSE = typecacheof(list(
 	return 0
 
 /proc/format_text(text)
-	return replacetext_char(replacetext_char(text,"\proper ",""),"\improper ","")
+	return replacetext(replacetext(text,"\proper ",""),"\improper ","")
 
 /obj/proc/atmosanalyzer_scan(datum/gas_mixture/air_contents, mob/user, obj/target = src)
 	var/obj/icon = target
@@ -893,11 +893,11 @@ var/list/WALLITEMS_INVERSE = typecacheof(list(
 /proc/params2turf(scr_loc, turf/origin)
 	if(!scr_loc)
 		return null
-	var/tX = splittext_char(scr_loc, ",")
-	var/tY = splittext_char(tX[2], ":")
+	var/tX = splittext(scr_loc, ",")
+	var/tY = splittext(tX[2], ":")
 	var/tZ = origin.z
 	tY = tY[1]
-	tX = splittext_char(tX[1], ":")
+	tX = splittext(tX[1], ":")
 	tX = tX[1]
 	tX = Clamp(origin.x + text2num(tX) - world.view - 1, 1, world.maxx)
 	tY = Clamp(origin.y + text2num(tY) - world.view - 1, 1, world.maxy)
@@ -906,10 +906,10 @@ var/list/WALLITEMS_INVERSE = typecacheof(list(
 /proc/screen_loc2turf(text, turf/origin)
 	if(!text)
 		return null
-	var/tZ = splittext_char(text, ",")
-	var/tX = splittext_char(tZ[1], "-")
+	var/tZ = splittext(text, ",")
+	var/tX = splittext(tZ[1], "-")
 	var/tY = text2num(tX[2])
-	tX = splittext_char(tZ[2], "-")
+	tX = splittext(tZ[2], "-")
 	tX = text2num(tX[2])
 	tZ = origin.z
 	tX = Clamp(origin.x + 7 - tX, 1, world.maxx)

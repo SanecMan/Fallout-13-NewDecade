@@ -551,7 +551,7 @@
 /obj/item/organ/tongue/lizard/TongueSpeech(var/message)
 	var/regex/lizard_hiss = new("s+", "g")
 	var/regex/lizard_hiSS = new("S+", "g")
-	if(copytext_char(message, 1, 2) != "*")
+	if(copytext(message, 1, 2) != "*")
 		message = lizard_hiss.Replace_char(message, "sss")
 		message = lizard_hiSS.Replace_char(message, "SSS")
 	return message
@@ -565,7 +565,7 @@
 /obj/item/organ/tongue/fly/TongueSpeech(var/message)
 	var/regex/fly_buzz = new("z+", "g")
 	var/regex/fly_buZZ = new("Z+", "g")
-	if(copytext_char(message, 1, 2) != "*")
+	if(copytext(message, 1, 2) != "*")
 		message = fly_buzz.Replace_char(message, "zzz")
 		message = fly_buZZ.Replace_char(message, "ZZZ")
 	return message
@@ -602,14 +602,14 @@
 	say_mod = "moans"
 
 /obj/item/organ/tongue/zombie/TongueSpeech(var/message)
-	var/list/message_list = splittext_char(message, " ")
+	var/list/message_list = splittext(message, " ")
 	var/maxchanges = max(round(message_list.len / 1.5), 2)
 
 	for(var/i = rand(maxchanges / 2, maxchanges), i > 0, i--)
 		var/insertpos = rand(1, message_list.len - 1)
 		var/inserttext = message_list[insertpos]
 
-		if(!(copytext_char(inserttext, length(inserttext) - 2) == "..."))
+		if(!(copytext(inserttext, length(inserttext) - 2) == "..."))
 			message_list[insertpos] = inserttext + "..."
 
 		if(prob(20) && message_list.len > 3)

@@ -79,7 +79,7 @@ var/global/dmm_suite/preloader/_preloader = new
 			bounds[MAP_MINZ] = min(bounds[MAP_MINZ], zcrd)
 			bounds[MAP_MAXZ] = max(bounds[MAP_MAXZ], zcrd)
 
-			var/list/gridLines = splittext_char(dmmRegex.group[6], "\n")
+			var/list/gridLines = splittext(dmmRegex.group[6], "\n")
 
 			var/leadingBlanks = 0
 			while(leadingBlanks < gridLines.len && gridLines[++leadingBlanks] == "")
@@ -118,7 +118,7 @@ var/global/dmm_suite/preloader/_preloader = new
 									world.maxx = xcrd
 
 							if(xcrd >= 1)
-								var/model_key = copytext_char(line, tpos, tpos + key_len)
+								var/model_key = copytext(line, tpos, tpos + key_len)
 								if(!grid_models[model_key])
 									throw EXCEPTION("Undefined model key in DMM.")
 								parse_grid(grid_models[model_key], xcrd, ycrd, zcrd)
@@ -190,9 +190,9 @@ var/global/dmm_suite/preloader/_preloader = new
 			//finding next member (e.g /turf/unsimulated/wall{icon_state = "rock"} or /area/mine/explored)
 			dpos = find_next_delimiter_position(model, old_position, ",", "{", "}") //find next delimiter (comma here) that's not within {...}
 
-			var/full_def = trim_text(copytext_char(model, old_position, dpos)) //full definition, e.g : /obj/foo/bar{variables=derp}
+			var/full_def = trim_text(copytext(model, old_position, dpos)) //full definition, e.g : /obj/foo/bar{variables=derp}
 			var/variables_start = findtext_char(full_def, "{")
-			var/atom_def = text2path(trim_text(copytext_char(full_def, 1, variables_start))) //path definition, e.g /obj/foo/bar
+			var/atom_def = text2path(trim_text(copytext(full_def, 1, variables_start))) //path definition, e.g /obj/foo/bar
 			old_position = dpos + 1
 
 			if(!atom_def) // Skip the item if the path does not exist.  Fix your crap, mappers!
@@ -203,7 +203,7 @@ var/global/dmm_suite/preloader/_preloader = new
 			var/list/fields = list()
 
 			if(variables_start)//if there's any variable
-				full_def = copytext_char(full_def,variables_start+1,length(full_def))//removing the last '}'
+				full_def = copytext(full_def,variables_start+1,length(full_def))//removing the last '}'
 				fields = readlist(full_def, ";")
 
 			//then fill the members_attributes list with the corresponding variables
@@ -323,15 +323,15 @@ var/global/dmm_suite/preloader/_preloader = new
 		//check if this is a simple variable (as in list(var1, var2)) or an associative one (as in list(var1="foo",var2=7))
 		var/equal_position = findtext_char(text,"=",old_position, position)
 
-		var/trim_left = trim_text(copytext_char(text,old_position,(equal_position ? equal_position : position)),1)//the name of the variable, must trim quotes to build a BYOND compliant associatives list
+		var/trim_left = trim_text(copytext(text,old_position,(equal_position ? equal_position : position)),1)//the name of the variable, must trim quotes to build a BYOND compliant associatives list
 		old_position = position + 1
 
 		if(equal_position)//associative var, so do the association
-			var/trim_right = trim_text(copytext_char(text,equal_position+1,position))//the content of the variable
+			var/trim_right = trim_text(copytext(text,equal_position+1,position))//the content of the variable
 
 			//Check for string
 			if(findtext_char(trim_right,quote,1,2))
-				trim_right = copytext_char(trim_right,2,findtext_char(trim_right,quote,3,0))
+				trim_right = copytext(trim_right,2,findtext_char(trim_right,quote,3,0))
 
 			//Check for number
 			else if(isnum(text2num(trim_right)))
@@ -342,12 +342,12 @@ var/global/dmm_suite/preloader/_preloader = new
 				trim_right = null
 
 			//Check for list
-			else if(copytext_char(trim_right,1,5) == "list")
-				trim_right = readlist(copytext_char(trim_right,6,length(trim_right)))
+			else if(copytext(trim_right,1,5) == "list")
+				trim_right = readlist(copytext(trim_right,6,length(trim_right)))
 
 			//Check for file
-			else if(copytext_char(trim_right,1,2) == "'")
-				trim_right = file(copytext_char(trim_right,2,length(trim_right)))
+			else if(copytext(trim_right,1,2) == "'")
+				trim_right = file(copytext(trim_right,2,length(trim_right)))
 
 			//Check for path
 			else if(ispath(text2path(trim_right)))
