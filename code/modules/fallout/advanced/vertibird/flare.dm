@@ -1,6 +1,6 @@
 /obj/item/vertibird_flare
-	name = "СЃРёРіРЅР°Р»СЊРЅС‹Р№ РѕРіРѕРЅСЊ"
-	desc = "Р—Р°РїСЂР°С€РёРІР°СЋ СЌРІР°РєСѓР°С†РёСЋ!"
+	name = "сигнальный огонь"
+	desc = "Запрашиваю эвакуацию!"
 	eng_name = "Vertibird emergency flare"
 	eng_desc = "REQUESTING MED-EVAC!"
 	icon = 'icons/obj/lighting.dmi'

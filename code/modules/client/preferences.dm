@@ -154,7 +154,7 @@ var/list/preferences_datums = list()
 	//	CHECK_TICK
 	var/dat = {"<meta charset="UTF-8">"}
 	dat += "<center>"
-	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(user.client.language == "English")
 		dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Character Setup</a> "
 		dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Game Preferences</a> "
 		dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>Skills</a> "
@@ -450,21 +450,21 @@ var/list/preferences_datums = list()
 		dat += "<hr><center>"
 
 	if(!IsGuestKey(user.key))
-		if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(user.client && user.client.language == "English")
 			dat += "<a href='?_src_=prefs;preference=load'>Cancel</a> "
 			dat += "<a href='?_src_=prefs;preference=save'>Save Setup</a> "
 		else
 			dat += "<a href='?_src_=prefs;preference=load'>Отмена</a> "
 			dat += "<a href='?_src_=prefs;preference=save'>Сохранить настройки</a> "
 
-	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(user.client && user.client.language == "English")
 		dat += "<a href='?_src_=prefs;preference=reset_all'>Clear</a>"
 		dat += "</center>"
 	else
 		dat += "<a href='?_src_=prefs;preference=reset_all'>Сбросить настройки</a>"
 		dat += "</center>"
 
-	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(user.client && user.client.language == "English")
 		var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 750)
 		popup.set_content(dat)
 		popup.open(0)
@@ -1280,8 +1280,7 @@ var/list/preferences_datums = list()
 				if("allow_midround_antag")
 					toggles ^= MIDROUND_ANTAG
 
-				if("change_language")
-					chat_toggles ^= CHAT_LANGUAGE
+//there should be language toggle -->
 
 				if("save")
 					save_preferences()

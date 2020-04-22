@@ -16,7 +16,7 @@
 	response_harm   = "smacks"
 	melee_damage_lower = 8
 	melee_damage_upper = 12
-	attacktext = "РєСѓСЃР°РµС‚"
+	attacktext = "кусает"
 	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	ventcrawler = VENTCRAWLER_ALWAYS

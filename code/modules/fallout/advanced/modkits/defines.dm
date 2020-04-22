@@ -6,7 +6,7 @@
 /obj/item/weapon/gun/examine(mob/user)
 	..()
 
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(usr.client && usr.client.language == "English")
 		if(modificationsNames.len == 0)
 			return
 
@@ -23,7 +23,7 @@
 	..()
 
 	if(user.special.getPoint("i") + user.skills.getPoint("repair") <= 12)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(usr.client && usr.client.language == "English")
 			to_chat(user, "You have no skills, to do this.")
 			return
 		else

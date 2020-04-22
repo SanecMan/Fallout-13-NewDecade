@@ -21,8 +21,8 @@
 
 /obj/item/clothing/mask/luchador/speechModification(message)
 	if(copytext_char(message, 1, 2) != "*")
-		message = replacetext_char(message, "captain", "CAPITГЃN")
-		message = replacetext_char(message, "station", "ESTACIГ“N")
+		message = replacetext_char(message, "captain", "capitano-eblano")
+		message = replacetext_char(message, "station", "statione")
 		message = replacetext_char(message, "sir", "SEГ‘OR")
 		message = replacetext_char(message, "the ", "el ")
 		message = replacetext_char(message, "my ", "mi ")

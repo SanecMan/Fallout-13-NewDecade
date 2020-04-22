@@ -203,7 +203,7 @@ var/last_irc_status = 0
 	else
 		delay = config.round_end_countdown * 10
 	if(ticker.delay_end)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(usr.client && usr.client.language == "English")
 			to_chat(world, "<span class='boldannounce'>Administrator delayed Round End.</span>")
 			return
 		else

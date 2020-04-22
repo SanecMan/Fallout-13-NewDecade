@@ -76,7 +76,7 @@ mob/proc/set_status(var/status)
 
 	src.status = S.id
 	var/text
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(usr.client && usr.client.language == "English")
 		text += "<span class='notice'>Now you're <span style='color: [S.color];'>[S.name]</span>.</span>"
 		if(S.welcome_text)
 			text += "<br>[S.eng_welcome_text]"
@@ -127,7 +127,7 @@ mob/proc/set_status(var/status)
 		var/datum/f13_faction/F = get_faction_datum(src.social_faction)
 		to_chat(M, "<span class='notice'>Вы присоеденились к <span style='color: [F.color];'>[F.name]</span> faction.</span>")
 		if(F.welcome_text)
-			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			if(usr.client && usr.client.language == "English")
 				to_chat(M, "<br>[F.eng_welcome_text]")
 				M.set_status(status)
 				to_chat(M, "<span class='notice'>Now you're <span style='color: [S.color];'>[S.name]</span>.</span>")

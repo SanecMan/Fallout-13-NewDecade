@@ -33,20 +33,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 //Data of factions. Taking all available factions of this world and showing them as list (once can show 4 max).
 	var/factions_data
 	if(parent && parent.allowed_factions)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
-			for(var/i = choiced_faction_index to choiced_faction_index + 3)
-				if(i > parent.allowed_factions.len)
-					break
-				var/datum/f13_faction/faction = parent.allowed_factions[i]
-				factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.eng_full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.eng_name]</a>"
-		else
-			for(var/i = choiced_faction_index to choiced_faction_index + 3)
-				if(i > parent.allowed_factions.len)
-					break
-				var/datum/f13_faction/faction = parent.allowed_factions[i]
-				factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>"
+		for(var/i = choiced_faction_index to choiced_faction_index + 3)
+			if(i > parent.allowed_factions.len)
+				break
+			var/datum/f13_faction/faction = parent.allowed_factions[i]
+			factions_data += user.client.select_lang("<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.eng_full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.eng_name]</a>","<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>")
 		if(!factions_data)
-			factions_data = "<center>Нет доступных фракций</center>"
+			factions_data = user.client.select_lang("<center>No factions available</center>", "<center>Нет доступных фракций</center>")
 
 
 // Roles data. Showing all jobs of selected faction and showing priorities.
@@ -203,7 +196,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 	)
 	CHECK_TICK
 
-	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(usr.client.language == "English")
 		var/html = {"<center>
 		<a href='?_src_=prefs;preference=tab;tab=0' class='linkOn'>Character Setup</a> <a href='?_src_=prefs;preference=tab;tab=1' >Game Preferences</a> <a href='?_src_=prefs;preference=tab;tab=2' >Skills</a> <a href='?_src_=prefs;preference=tab;tab=3' >S.P.E.C.I.A.L</a>
 		</center>

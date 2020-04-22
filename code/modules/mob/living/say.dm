@@ -41,21 +41,21 @@ var/list/department_radio_keys = list(
 
 	  //kinda localization -- rastaf0
 	  //same keys as above, but on russian keyboard layout. This file uses cp1251 as encoding.
-	  ":Р“Р„" = "right hand",	"#Р“Р„" = "right hand",	".Р“Р„" = "right hand",
-	  ":Р“В¤" = "left hand",	"#Р“В¤" = "left hand",		".Р“В¤" = "left hand",
-	  ":Р“С‘" = "intercom",	"#Р“С‘" = "intercom",		".Р“С‘" = "intercom",
-	  ":Р“В°" = "department",	"#Р“В°" = "department",	".Р“В°" = "department",
-	  ":Р“В±" = "Command",		"#Р“В±" = "Command",		".Р“В±" = "Command",
-	  ":Р“Р†" = "Science",		"#Р“Р†" = "Science",		".Р“Р†" = "Science",
-	  ":Р“С" = "Medical",		"#Р“С" = "Medical",		".Р“С" = "Medical",
-	  ":Р“С–" = "Engineering",	"#Р“С–" = "Engineering",	".Р“С–" = "Engineering",
-	  ":Р“В»" = "Security",	"#Р“В»" = "Security",		".Р“В»" = "Security",
-	  ":Р“В¶" = "whisper",		"#Р“В¶" = "whisper",		".Р“В¶" = "whisper",
-	  ":Р“РЃ" = "binary",		"#Р“РЃ" = "binary",		".Р“РЃ" = "binary",
-	  ":Р“Т‘" = "alientalk",	"#Р“Т‘" = "alientalk",		".Р“Т‘" = "alientalk",
-	  ":Р“Тђ" = "Syndicate",	"#Р“Тђ" = "Syndicate",		".Р“Тђ" = "Syndicate",
-	  ":Р“В©" = "Supply",		"#Р“В©" = "Supply",		".Р“В©" = "Supply",
-	  ":Р“Р‡" = "changeling",	"#Р“Р‡" = "changeling",	".Р“Р‡" = "changeling"
+	  ":к" = "right hand",	"#к" = "right hand",	".к" = "right hand",
+	  ":д" = "left hand",	"#д" = "left hand",		".д" = "left hand",
+	  ":ш" = "intercom",	"#ш" = "intercom",		".ш" = "intercom",
+	  ":р" = "department",	"#р" = "department",	".р" = "department",
+	  ":с" = "Command",		"#с" = "Command",		".с" = "Command",
+	  ":т" = "Science",		"#т" = "Science",		".т" = "Science",
+	  ":ь" = "Medical",	"#ь" = "Medical",		".ь" = "Medical",
+	  ":у" = "Engineering",	"#у" = "Engineering",	".у" = "Engineering",
+	  ":ы" = "Security",	"#ы" = "Security",		".ы" = "Security",
+	  ":ц" = "whisper",		"#ц" = "whisper",		".ц" = "whisper",
+	  ":и" = "binary",		"#и" = "binary",		".и" = "binary",
+	  ":ф" = "alientalk",	"#ф" = "alientalk",		".ф" = "alientalk",
+	  ":е" = "Syndicate",	"#е" = "Syndicate",		".у" = "Syndicate",
+	  ":г" = "Supply",		"#г" = "Supply",		".г" = "Supply",
+	  ":п" = "changeling",	"#п" = "changeling",	".п" = "changeling"
 )
 
 var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
@@ -135,10 +135,10 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 	var/deaf_type
 	if(speaker != src)
 		if(!radio_freq) //These checks have to be seperate, else people talking on the radio will make "You can't hear yourself!" appear when hearing people over the radio while deaf.
-			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] С‡С‚Рѕ-С‚Рѕ, РЅРѕ РІС‹ РЅРµ СЃР»С‹С€РёС‚Рµ."
+			deaf_message = usr.client.select_lang("<span class='name'>[speaker]</span> [speaker.verb_say] something but you cannot hear.", "<span class='name'>[speaker]</span> [speaker.verb_say] говорит что-то, но вы не слышите.")
 			deaf_type = 1
 	else
-		deaf_message = "<span class='notice'>Р’С‹ РЅРµ СЃР»С‹С€РёС‚Рµ СЃР°РјРѕРіРѕ СЃРµР±СЏ!</span>"
+		deaf_message = usr.client.select_lang("<span class='notice'>You can't hear yourself!</span>", "<span class='notice'>Вы не слышите себя!</span>")
 		deaf_type = 2 // Since you should be able to hear yourself without looking
 	if(!(message_langs & languages_understood) || force_compose) //force_compose is so AIs don't end up without their hrefs.
 		message = compose_message(speaker, message_langs, raw_message, radio_freq, spans)
@@ -313,7 +313,7 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 /mob/living/say_quote(input, list/spans)
 	var/tempinput = attach_spans(input, spans)
 	if (stuttering)
-		return "Р·Р°РёРєР°РµС‚СЃСЏ, \"[tempinput]\""
+		return "заикается, \"[tempinput]\""
 	if (getBrainLoss() >= 60)
-		return "РјСЏРјР»РёС‚, \"[tempinput]\""
+		return "говорит, \"[tempinput]\""
 	return ..()

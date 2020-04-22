@@ -3,8 +3,10 @@
 /datum/content_pack
 	var
 		name = "Чего блять?"
+		eng_name = "what?"
 		id = "shit"
-		desc = "Something is wrong! Maybe you already have this content pack?"
+		desc = "Что-то пошло не так..."
+		eng_desc = "Something is wrong! Maybe you already have this content pack?"
 		list/items = list()
 		list/sorted_items = list()
 		list/roles = list()

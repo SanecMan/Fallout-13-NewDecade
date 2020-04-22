@@ -21,7 +21,7 @@
 	obj_damage = 0
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "Р±СЊС‘С‚"
+	attacktext = "бьёт"
 	eng_attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM

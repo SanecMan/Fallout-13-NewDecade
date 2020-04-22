@@ -13,11 +13,7 @@
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 	var/wielded = 0
 
-	//переводчик//
-	if(src.client && (src.client.prefs.chat_toggles & CHAT_LANGUAGE))
-		msg = "<span class='info'>*---------* This is <EM>[src.name]</EM>!\n"
-	else
-		msg = "<span class='info'>*---------* Это <EM>[src.name]</EM>!\n"
+	msg = user.client.select_lang("<span class='info'>*---------* This is <EM>[src.name]</EM>!\n", "<span class='info'>*---------* Это <EM>[src.name]</EM>!\n")
 
 	//uniform
 	if(w_uniform && !(slot_w_uniform in obscured))

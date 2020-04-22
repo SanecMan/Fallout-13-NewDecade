@@ -7,7 +7,7 @@
 // хз насколько вообще актуально этим пользоваться
 //#ifndef TRAVIS_MASS_MAP_BUILD
 
-		///#include "map_files\debug\wasteland.dmm"
+		//#include "map_files\debug\turbo_wasteland.dmm"
 		///#include "map_files\TexasWasteland\navarro.dmm"
 		///#include "map_files\TexasWasteland\fartexas.dmm"
         ///#include "map_files\TexasWasteland\z3.dmm"

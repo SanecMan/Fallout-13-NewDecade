@@ -91,7 +91,7 @@ var/datum/subsystem/vote/SSvote
 		if(question)
 			text += "<b>[question]</b>"
 		else
-			text += "<b>[capitalize(mode)] голосование</b>"
+			text += usr.client.select_lang("<b>[capitalize(mode)] voting</b>", "<b>[capitalize(mode)] голосование</b>")
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			if(!votes)
@@ -99,13 +99,13 @@ var/datum/subsystem/vote/SSvote
 			text += "\n<b>[choices[i]]:</b> [votes]"
 		if(mode != "custom")
 			if(winners.len > 1)
-				text = "\n<b>Голоса разделились между:</b>"
+				text = usr.client.select_lang("\n<b>Votes split between:</b>", "\n<b>Голоса разделились между:</b>")
 				for(var/option in winners)
 					text += "\n\t[option]"
 			. = pick(winners)
-			text += "\n<b>Результат голосования: [.]</b>"
+			text += usr.client.select_lang("\n<b>Vote result: [.]</b>", "\n<b>Результат голосования: [.]</b>")
 		else
-			text += "\n<b>Воздержалось:</b> [clients.len-voted.len]"
+			text += usr.client.select_lang("\n<b>Did not vote:</b> [clients.len-voted.len]", "\n<b>Воздержалось:</b> [clients.len-voted.len]")
 	else
 		text += "<b>Vote Result: Inconclusive - No Votes!</b>"
 	log_vote(text)
@@ -137,7 +137,7 @@ var/datum/subsystem/vote/SSvote
 		if(!active_admins)
 			ticker.force_ending = 1
 		else
-			to_chat(world, "<span style='boldannounce'>Примечание: Перезапуск не состоится пока активный администратор не нажмет кнопку.</span>")
+			to_chat(world, usr.client.select_lang("<span style='boldannounce'>Notice: Restart after admin press button. Call some one of them.</span>", "<span style='boldannounce'>Примечание: Перезапуск не состоится пока активный администратор не нажмет кнопку.</span>"))
 			message_admins("Голосование о перезапуске завершено, но на сервере имеется администратор с флагом +server который должен решить окончательно.")
 
 	return .

@@ -9,12 +9,13 @@
 		return eng_msg
 
 /client/verb/change_lang()
-    set name = "Change Language"
-    set category = "OOC"
+	set name = "Change Language"
+	set category = "OOC"
+	set desc = "Changes game language."
 
-    if(user.client.language == "English")
-        user.client.language = "Russian"
-        user << "Теперь ваш язык Русский"
-    else if(user.client.language == "Russian")
-        user.client.language = "English"
-        user << "Now your language is English"
+	if(usr.client.language == "English")
+		usr.client.language = "Russian"
+		to_chat(src, "<span class='notice'>Теперь ваш язык Русский</span>")
+	else if(usr.client.language == "Russian")
+		usr.client.language = "English"
+		to_chat(src, "<span class='notice'>Now your language is English</span>")

@@ -356,7 +356,7 @@ var/datum/subsystem/ticker/ticker
 
 /datum/subsystem/ticker/proc/declare_completion()
 
-	to_chat(world, "<BR><BR><BR><FONT size=3><B>Раунд завершен.</B></FONT>")
+	to_chat(world, usr.client.select_lang("<BR><BR><BR><FONT size=3><B>Round ended.</B></FONT>","<BR><BR><BR><FONT size=3><B>Раунд завершен.</B></FONT>"))
 
 	SSobjectives.on_roundend()
 

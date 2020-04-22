@@ -12,12 +12,8 @@
 
 /mob/living/simple_animal/hostile/eyebot/virtual/proc/enter(var/mob/user)
 	if(ckey)
-		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
-			to_chat(user, "Eyebot already under control!")
-			return
-		else
-			to_chat(user, "Р РѕР±РѕРіР»Р°Р· СѓР¶Рµ СѓРїСЂР°РІР»СЏРµС‚СЃСЏ РєРµРј-С‚Рѕ!")
-			return
+		to_chat(user, user.client.select_lang("Eyebot already under control!", "Робоглаз уже управляется кем-то!"))
+		return
 
 	pilot = user
 	ckey = user.ckey

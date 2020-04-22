@@ -1,4 +1,4 @@
-## Server name: This appears at the top of the screen in-game. Remove the # infront of SERVERNAME and replace 'tgstation' with the name of your choice
+﻿## Server name: This appears at the top of the screen in-game. Remove the # infront of SERVERNAME and replace 'tgstation' with the name of your choice
 SERVERNAME [RU]Fallout 13 - CBET ATOMA
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.

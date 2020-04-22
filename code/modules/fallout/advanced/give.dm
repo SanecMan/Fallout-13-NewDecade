@@ -8,7 +8,7 @@
 		return
 
 	if(!ismonkey(src)&&!ishuman(src) || isalien(src) || src.stat || usr.stat || !src.client)
-		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(client && client.language == "English")
 			to_chat(usr,"<span class='warning'>[src.name] can't hold anything</span>")
 		else
 			to_chat(usr,"<span class='warning'>[src.name] не может взять что-либо</span>")
@@ -16,7 +16,7 @@
 
 	var/obj/item/I = usr.get_active_held_item()
 	if(!I)
-		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(client && client.language == "English")
 			to_chat(usr,"<span class='warning'>You have nothing for [src].</span>")
 		else
 			to_chat(usr,"<span class='warning'>У вас нет ничего что вы бы могли дать [src].</span>")
@@ -27,12 +27,12 @@
 
 	var/list/empty_hands = get_empty_held_indexes()
 	if(!empty_hands.len)
-		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(client && client.language == "English")
 			to_chat(usr,"<span class='warning'>Hands of [src] are busy.</span>")
 		else
 			to_chat(usr,"<span class='warning'>Руки [src] полны.</span>")
 			return
-	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(client && client.language == "English")
 		switch(alert(src,"[usr] хочет передать вам [I]?",,"Yes","No"))
 			if("Yes")
 				if(!I || !usr)

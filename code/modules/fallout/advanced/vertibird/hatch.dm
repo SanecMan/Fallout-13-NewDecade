@@ -11,7 +11,7 @@
 		return
 
 	if(istype(I, /obj/vertibird_exit_door))
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(usr.client && usr.client.language == "English")
 			to_chat(usr, "Nice try.")
 			return
 		else
@@ -19,7 +19,7 @@
 			return
 
 	if(vertibird:locked)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(usr.client && usr.client.language == "English")
 			to_chat(usr, "Locked!")
 			return
 		else
@@ -27,7 +27,7 @@
 			return
 
 	if(vertibird:inFly)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(usr.client && usr.client.language == "English")
 			to_chat(usr, "YOU CAN'T GO OUT WHILE FLYING!")
 			return
 		else

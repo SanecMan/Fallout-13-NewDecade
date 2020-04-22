@@ -64,7 +64,7 @@ var/list/freqtospan = list(
 
 /atom/movable/proc/say_quote(input, list/spans=list())
 	if(!input)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(usr.client && usr.client.language == "English")
 			return "says, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 			var/ending = copytext_char(input, length(input))
 			if(copytext_char(input, length(input) - 1) == "!!")
@@ -78,7 +78,7 @@ var/list/freqtospan = list(
 
 			return "[en_verb_say], \"[input]\""
 		else
-			return "РіРѕРІРѕСЂРёС‚, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+			return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 			var/ending = copytext_char(input, length(input))
 			if(copytext_char(input, length(input) - 1) == "!!")
 				spans |= SPAN_YELL

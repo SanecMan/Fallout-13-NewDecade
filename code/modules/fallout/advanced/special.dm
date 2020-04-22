@@ -102,7 +102,7 @@
 
 /datum/special/proc/getPointDescription(type)
 	var/description
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(usr.client && usr.client.language == "English")
 		switch(type)
 			if("s")
 				description = "Rough physical power. Affects your carry weight, melee and unarmed damage, also slightly improves heavy weapon handling. (Upgrades/degrades: Melee damage, carry weight and weapon skills)"

@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/tree
-	name = "РµР»СЊ"
-	desc = "РџРѕС…РѕР¶РµРµ РЅР° РµР»СЊ СЃСѓС‰РµСЃС‚РІРѕ. РџРѕС…РѕР¶Рµ, РѕРЅРѕ РЅРµ Р»СЋР±РёС‚ РЅРѕРІС‹Р№ РіРѕРґ..."
+	name = "ель"
+	desc = "Похожее на ель существо. Похоже, оно не любит новый год..."
 	eng_name = "pine tree"
 	eng_desc = "A pissed off tree-like alien. It seems annoyed with the festivities..."
 	icon = 'icons/obj/flora/pinetrees.dmi'
@@ -24,7 +24,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 8
 	melee_damage_upper = 12
-	attacktext = "РєСѓСЃР°РµС‚"
+	attacktext = "кусает"
 	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	speak_emote = list("pines")

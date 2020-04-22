@@ -707,7 +707,7 @@
 /mob/living/simple_animal/hostile/raider/Aggro()
 	..()
 	summon_backup(15)
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(usr.client && usr.client.language == "English")
 		say("DIE, DIE, DIE!!!")
 	else
 		say("УМРИ, УМРИ, УМРИ!!!")

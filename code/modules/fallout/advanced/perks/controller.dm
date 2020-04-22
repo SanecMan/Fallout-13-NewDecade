@@ -53,7 +53,7 @@
 
 /datum/perkController/proc/uiChoose()
 	if(count == 0)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(usr.client && usr.client.language == "English")
 			to_chat(usr, "You need more experience to do this!")
 			return
 		else
@@ -98,7 +98,7 @@
 	owner.browse_rsc_icon("icons/perks.dmi", "[first.icon_state]")
 	owner.browse_rsc_icon("icons/perks.dmi", "[second.icon_state]")
 
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(usr.client && usr.client.language == "English")
 		html += {"
 		<style>table tr { text-align: center }</style>
 

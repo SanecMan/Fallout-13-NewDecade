@@ -25,28 +25,28 @@
 
 /mob/new_player/proc/new_player_panel()
 	var/output = ""
-	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(client && client.language == "English")
 		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
 	else
 		output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Настройка персонажа</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+			if(client && client.language == "English")
 				output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Un-Ready</a> \]</p>"
 				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 			else
 				output += "<p>\[ <b>Готов</b> | <a href='byond://?src=\ref[src];ready=0'>Не готов</a> \]</p>"
 				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
 		else
-			if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+			if(client && client.language == "English")
 				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Un-Ready</b> \]</p>"
 				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 			else
 				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Готов</a> | <b>Не готов</b> \]</p>"
 				output += "<p><a href='byond://?src=\ref[src];show_content=1'>Купить контент!</a></p>"
 	else
-		if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(client && client.language == "English")
 			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
 			output += "<p><a href='byond://?src=\ref[src];show_content=1'>Atom Shop!</a></p>"
 		else
@@ -83,7 +83,7 @@
 	output += "</center>"
 
 	//src << browse(output,"window=playersetup;size=210x240;can_close=0")
-	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(client && client.language == "English")
 		var/datum/browser/popup = new(src, "playersetup", "<div align='center'>Welcome!</div>", 220, 265)
 		popup.set_window_options("can_close=0")
 		popup.set_content(output)
@@ -444,7 +444,7 @@
 	var/hours = mills / 36000
 
 	var/dat = {"<meta charset="UTF-8">"}
-	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(client && client.language == "English")
 		dat += "<div class='notice'>Round duration: [round(hours)]h [round(mins)]m</div>"
 	else
 		dat += "<div class='notice'>Длительность раунда: [round(hours)]ч [round(mins)]м</div>"
@@ -454,7 +454,7 @@
 		if(job && IsJobAvailable(job.title))
 			available_job_count++;
 
-	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(client && client.language == "English")
 		dat += "<div class='clearBoth'>Choose your role:</div><br>"
 		dat += "<div class='jobs'><div class='jobsColumn'>"
 	else
@@ -482,7 +482,7 @@
 	//src << browse(dat, "window=latechoices;size=300x640;can_close=1")
 
 	// Added the new browser window method
-	if(client && (client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(client && client.language == "English")
 		var/datum/browser/popup = new(src, "latechoices", "Choose Role", 440, 500)
 		popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 		popup.set_content(dat)

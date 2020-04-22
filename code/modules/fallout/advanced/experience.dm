@@ -20,22 +20,13 @@
 /datum/experience/proc/add(XP)
 	if(!XP)
 		return
-
 	XP *= 2
-
 	XP *= 0.5 + (owner.special.getPoint("i") / 10)
-
 	if(owner.perks)
 		if(owner.perks.have(/datum/perk/daddyboy))
 			XP *= 1.1
-
 	current += XP
-
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
-		to_chat(owner, "<font color='blue'>You get [XP] xp! ([toNextLevel()] to next level remain)</font>")
-	else
-		to_chat(owner, "<font color='blue'>Вы получили [XP] опыта! ([toNextLevel()] осталось до следующего уровня)</font>")
-
+	to_chat(owner, usr.client.select_lang("<font color='blue'>You get [XP] xp! ([toNextLevel()] to next level remain)</font>", "<font color='blue'>Вы получили [XP] опыта! ([toNextLevel()] осталось до следующего уровня)</font>"))
 	if(toNextLevel() > 0)
 		playsound(owner, "sound/f13effects/xp_add.ogg", 50)
 	else
@@ -44,13 +35,8 @@
 
 /datum/experience/proc/promoteLevel()
 	level += 1
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
-		to_chat(owner, "<font color='blue'>Level up! [level]!</font>")
-	else
-		to_chat(owner, "<font color='blue'>Вы получили уровень [level]!</font>")
-
+	to_chat(owner, usr.client.select_lang("<font color='blue'>Level up! [level]!</font>", "<font color='blue'>Вы получили уровень [level]!</font>"))
 	playsound(owner, "sound/f13effects/xp_newLevel.ogg", 50)
-
 	if (owner.perks)
 		if(owner.perks.count == 0)
 			owner.verbs += /mob/living/proc/perksShow

@@ -118,15 +118,6 @@
 	to_chat(src, "You will [(prefs.chat_toggles & CHAT_PRAYER) ? "now" : "no longer"] see prayerchat.")
 	feedback_add_details("admin_verb","TP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-/client/verb/changelanguage()
-	set name = "Change game language"
-	set category = "Preferences"
-	set desc = "Changes game language."
-	prefs.chat_toggles ^= CHAT_LANGUAGE
-	prefs.save_preferences()
-	to_chat(src, "Your game language is changed to [(prefs.chat_toggles & CHAT_LANGUAGE) ? "English" : "Russian"].")
-	feedback_add_details("admin_verb","ChangeLang") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
 /client/verb/toggleprayersounds()
 	set name = "Hear/Silence Prayer Sounds"
 	set category = "Preferences"

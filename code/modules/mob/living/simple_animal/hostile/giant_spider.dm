@@ -43,7 +43,7 @@
 	pass_flags = PASSTABLE
 	move_to_delay = 6
 	ventcrawler = VENTCRAWLER_ALWAYS
-	attacktext = "РєСѓСЃР°РµС‚"
+	attacktext = "кусает"
 	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	unique_name = 1

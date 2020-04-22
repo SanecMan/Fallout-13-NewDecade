@@ -7,7 +7,7 @@
 	var/list/Lines = list()
 
 	if(holder)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(usr.client && usr.client.language == "English")
 			if(check_rights(R_ADMIN,0) && isobserver(src.mob))//If they have +ADMIN and are a ghost they can see players IC names and statuses.
 				var/mob/dead/observer/G = src.mob
 				if(!G.started_as_observer)//If you aghost to do this, KorPhaeron will deadmin you in your sleep.
@@ -104,7 +104,7 @@
 /client/verb/adminwho()
 	set category = "Admin"
 	set name = "Adminwho"
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(usr.client && usr.client.language == "English")
 		var/msg = "<b>Current admins:</b>\n"
 		if(holder)
 			for(var/client/C in admins)

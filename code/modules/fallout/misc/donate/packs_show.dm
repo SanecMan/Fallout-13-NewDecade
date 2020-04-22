@@ -34,7 +34,7 @@
 	if(!spack_data["items"] && !spack_data["roles"] && !spack_data["pets"])
 		hide_data = 1
 
-	if(user.client && (user.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(user.client && user.client.language == "English")
 		var/html = {"
 			<div class="left_table">
 			  <center>Content packs</center>

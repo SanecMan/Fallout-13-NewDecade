@@ -1326,7 +1326,7 @@ proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 	pixel_y = initialpixely
 
 /proc/weightclass2text(var/w_class)
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(usr.client && usr.client.language == "English")
 		switch(w_class)
 			if(WEIGHT_CLASS_TINY)
 				. = "tiny"

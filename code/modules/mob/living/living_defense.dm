@@ -3,11 +3,11 @@
 	var/armor = getarmor(def_zone, attack_flag)
 
 	//the if "armor" check is because this is used for everything on /living, including humans
-	if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+	if(usr.client && usr.client.language == "English")
 		if(armor && armour_penetration)
 			armor = max(0, armor - armour_penetration)
 			if(penetrated_text)
-				if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+				if(usr.client && usr.client.language == "English")
 					to_chat(src, "<span class='userdanger'>[penetrated_text]</span>")
 				else
 					to_chat(src, "<span class='userdanger'>Your armor was penetrated!</span>")
@@ -66,13 +66,10 @@
 	if(!P.nodamage)
 		if(def_zone == "r_arm" || def_zone == "l_arm")
 			apply_damage(round(P.damage* 0.6 * rand(6, 14)/10,1), P.damage_type, def_zone, armor)
-
 		if(def_zone == "r_leg" || def_zone == "l_leg")
 			apply_damage(round(P.damage* 0.6 * rand(6, 14)/10,1), P.damage_type, def_zone, armor)
-
 		if(def_zone == "head")
 			apply_damage(round(P.damage* 2 * rand(6, 14)/10,1), P.damage_type, def_zone, armor)
-
 		else
 			apply_damage(round(P.damage*rand(6, 14)/10,1), P.damage_type, def_zone, armor)
 
@@ -117,7 +114,7 @@
 		if(!I.throwforce)// Otherwise, if the item's throwforce is 0...
 			playsound(loc, 'sound/weapons/throwtap.ogg', 1, volume, -1)//...play throwtap.ogg.
 		if(!blocked)
-			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			if(usr.client && usr.client.language == "English")
 				visible_message("<span class='danger'>[src] has been hit by [I].</span>", \
 								"<span class='userdanger'>[src] has been hit by [I].</span>")
 			else
@@ -128,26 +125,15 @@
 			//crc
 			if(zone == "r_arm" || zone == "l_arm")
 				var/melee_damage = round(I.throwforce* 0.6 * rand(6, 14)/10, 1)
-
 				apply_damage(melee_damage, dtype, zone, armor)
-
 			if(zone == "r_leg" || zone == "l_leg")
-
 				var/melee_damage = round(I.throwforce* 0.6 * rand(6, 14)/10, 1)
-
-
 				apply_damage(melee_damage, dtype, zone, armor)
-
 			if(zone == "head")
 				var/melee_damage = round(I.throwforce* 2 * rand(6, 14)/10, 1)
-
 				apply_damage(melee_damage, dtype, zone, armor)
-
 			else
-
-
 				var/melee_damage = round(I.throwforce * rand(6, 14)/10, 1)
-
 				apply_damage(melee_damage, dtype, zone, armor)
 
 
@@ -182,7 +168,7 @@
 				return
 		updatehealth()
 		attacked_trigger(M)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+		if(usr.client && usr.client.language == "English")
 			visible_message("<span class='danger'>[M.name] has hit [src]!</span>", \
 							"<span class='userdanger'>[M.name] has hit [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 		else
@@ -219,7 +205,7 @@
 		if(user.grab_state) //only the first upgrade is instantaneous
 			var/old_grab_state = user.grab_state
 			var/grab_upgrade_time = 30
-			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			if(usr.client && usr.client.language == "English")
 				visible_message("<span class='danger'>[user] starts tighten his grab on [src] neck!</span>", \
 					"<span class='userdanger'>[user] starts tighten his grab on your neck!</span>")
 			else
@@ -233,7 +219,7 @@
 		switch(user.grab_state)
 			if(GRAB_AGGRESSIVE)
 				add_logs(user, src, "grabbed", addition="aggressively")
-				if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+				if(usr.client && usr.client.language == "English")
 					visible_message("<span class='danger'>[user] grabbed [src] more aggressively!</span>", \
 									"<span class='userdanger'>[user] grabbed [src] more aggressively!</span>")
 				else
@@ -242,7 +228,7 @@
 				drop_all_held_items()
 				stop_pulling()
 			if(GRAB_NECK)
-				if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+				if(usr.client && usr.client.language == "English")
 					visible_message("<span class='danger'>[user] grabbed [src] by neck!</span>",\
 									"<span class='userdanger'>[user] grabbed your neck!</span>")
 				else
@@ -252,7 +238,7 @@
 				if(!buckled && !density)
 					Move(user.loc)
 			if(GRAB_KILL)
-				if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+				if(usr.client && usr.client.language == "English")
 					visible_message("<span class='danger'>[user] chokes [src]!</span>", \
 									"<span class='userdanger'>[user] chokes you!</span>")
 				else
@@ -292,15 +278,10 @@
 		if(M.attack_sound)
 			playsound(loc, M.attack_sound, 50, 1, 1)
 		M.do_attack_animation(src)
-		if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
-			visible_message("<span class='danger'>\The [M.eng_name] [M.eng_attacktext] [src]!</span>", \
-							"<span class='userdanger'>\The [M.eng_name] [M.eng_attacktext] [src]!</span>", null, COMBAT_MESSAGE_RANGE)
-		else
-			visible_message("<span class='danger'>\The [M.name] [M.attacktext] [src]!</span>", \
-							"<span class='userdanger'>\The [M.name] [M.attacktext] [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+		visible_message("<span class='danger'>\The [M] [M.attacktext] [src]!</span>", \
+						"<span class='userdanger'>\The [M] [M.attacktext] [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 		add_logs(M, src, "attacked")
 		return 1
-
 
 /mob/living/attack_paw(mob/living/carbon/monkey/M)
 	if(isturf(loc) && istype(loc.loc, /area/start))
@@ -309,14 +290,14 @@
 
 	if (M.a_intent == INTENT_HARM)
 		if(M.is_muzzled() || (M.wear_mask && M.wear_mask.flags_cover & MASKCOVERSMOUTH))
-			to_chat(M, "<span class='warning'>You can't bite with your mouth covered!</span>")
+			to_chat(M, usr.client.select_lang("<span class='warning'>You can't bite with your mouth covered!</span>", "<span class='warning'>Вы не можете кусаться, пока ваш рот закрыт!</span>"))
 			return 0
 		attacked_trigger(M)
 		M.do_attack_animation(src, ATTACK_EFFECT_BITE)
 		if (prob(75))
 			add_logs(M, src, "attacked")
 			playsound(loc, 'sound/weapons/bite.ogg', 50, 1, -1)
-			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			if(usr.client && usr.client.language == "English")
 				visible_message("<span class='danger'>[M.eng_name] bites [src]!</span>", \
 						"<span class='userdanger'>[M.eng_name] bites [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 			else
@@ -324,7 +305,7 @@
 						"<span class='userdanger'>[M.name] кусает [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 			return 1
 		else
-			if(usr.client && (usr.client.prefs.chat_toggles & CHAT_LANGUAGE))
+			if(usr.client && usr.client.language == "English")
 				visible_message("<span class='danger'>[M.eng_name] has attempted to bite [src]!</span>", \
 					"<span class='userdanger'>[M.eng_name] has attempted to bite [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 			else

@@ -2,7 +2,7 @@
 
 /obj/machinery/light/kebab
 	name = "Kebabtown sign"
-	desc = "Р’С‹РіР»СЏРґРёС‚ РѕС‚РІСЂР°С‚РёС‚РµР»СЊРЅРѕ."
+	desc = "Выглядит отвратительно."
 	eng_desc = "So awful..."
 	icon_state = "Kebab0"
 	base_state = "Kebab"
@@ -20,7 +20,7 @@
 
 /obj/machinery/light/kebab_sign
 	name = "Kebabtown"
-	desc = "Р’С‹РіР»СЏРґРёС‚ РѕС‚РІСЂР°С‚РёС‚РµР»СЊРЅРѕ."
+	desc = "Выглядит отвратительно."
 	eng_desc = "So awful..."
 	icon_state = "kebab_sign0"
 	base_state = "kebab_sign"
