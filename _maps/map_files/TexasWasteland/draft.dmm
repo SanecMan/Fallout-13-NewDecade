@@ -30,8 +30,8 @@
 "aD" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/blood/old,/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "aE" = (/obj/structure/closet,/obj/item/crafting/weapon_parts/ballistic,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "aF" = (/obj/structure/reagent_dispensers/barrel/explosive,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"aG" = (/obj/effect/decal/remains/human,/mob/living/simple_animal/hostile/ghoul/soldier/armored,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg1"; icon_state = "platingdmg1"},/area/f13/wasteland)
-"aH" = (/obj/structure/table,/obj/item/weapon/reagent_containers/pill/patch/radx,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg1"; icon_state = "platingdmg1"},/area/f13/wasteland)
+"aG" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerouter (EAST)"; icon_state = "outermaincornerouter"; dir = 4},/area/f13/wasteland)
+"aH" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerouter (NORTH)"; icon_state = "outermaincornerouter"; dir = 1},/area/f13/wasteland)
 "aI" = (/obj/structure/flora/tree/tall,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "aJ" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aK" = (/obj/structure/simple_door/room,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
@@ -39,11 +39,11 @@
 "aM" = (/obj/effect/spawner/lootdrop/trash,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "aN" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "aO" = (/obj/effect/decal/cleanable/dirt,/obj/item/weapon/grenade/mine/explosive/planted,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"aP" = (/obj/structure/spider/stickyweb,/obj/structure/reagent_dispensers/barrel/dangerous,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
+"aP" = (/turf/closed/wall/f13/ruins,/area/f13/wasteland)
 "aQ" = (/obj/item/stack/sheet/animalhide/human,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
 "aR" = (/obj/effect/decal/cleanable/waste{tag = "icon-goo12"; icon_state = "goo12"},/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"aS" = (/mob/living/simple_animal/hostile/ghoul/soldier,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
-"aT" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/blood/old,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
+"aS" = (/obj/structure/window/fulltile/house{tag = "icon-housewindow"; icon_state = "housewindow"; dir = 2},/obj/structure/barricade/wooden/planks/pregame,/turf/open/floor/plating,/area/f13/wasteland)
+"aT" = (/obj/structure/simple_door/metal/store,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
 "aU" = (/obj/structure/bed/mattress/dirty,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aV" = (/obj/effect/decal/cleanable/blood/old,/obj/effect/decal/cleanable/dirt,/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "aW" = (/obj/structure/bed/mattress/dirty,/obj/item/weapon/storage/backpack/satchel/leather,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/f13/wasteland)
@@ -65,53 +65,53 @@
 "bm" = (/obj/machinery/vending/nukacolavend,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bn" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bo" = (/obj/effect/decal/cleanable/oil/streak,/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"bp" = (/obj/structure/table,/obj/item/crafting/wonderglue,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg1"; icon_state = "platingdmg1"},/area/f13/wasteland)
+"bp" = (/obj/structure/simple_door/metal/store{tag = "icon-brokenstore"; icon_state = "brokenstore"},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
 "bq" = (/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"br" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
+"br" = (/turf/open/indestructible/ground/sidewalk{tag = "icon-outermaincornerinner (WEST)"; icon_state = "outermaincornerinner"; dir = 8},/area/f13/wasteland)
 "bs" = (/obj/effect/decal/remains/human,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"bt" = (/obj/effect/decal/cleanable/waste{tag = "icon-goo12"; icon_state = "goo12"},/obj/structure/closet,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
+"bt" = (/obj/machinery/shower{dir = 8; pixel_x = -5},/obj/structure/curtain,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
 "bu" = (/obj/machinery/computer/pod/old{icon_state = "terminal"; name = "terminal"; tag = "icon-terminal"},/obj/structure/table,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bv" = (/obj/structure/table,/obj/structure/window/reinforced,/obj/structure/window/reinforced{tag = "icon-rwindow (EAST)"; icon_state = "rwindow"; dir = 4},/obj/item/crafting/weapon_parts/plasma,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bw" = (/obj/machinery/light/small{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bx" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/sentrybot,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "by" = (/obj/structure/table,/obj/effect/spawner/lootdrop/gambling,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"bz" = (/obj/effect/decal/cleanable/waste{tag = "icon-goo5"; icon_state = "goo5"},/mob/living/simple_animal/hostile/protectron,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"bA" = (/obj/effect/spawner/lootdrop/crafts,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"bB" = (/obj/structure/chair,/obj/item/stack/sheet/animalhide/human,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
+"bz" = (/obj/structure/bookcase,/obj/structure/decoration/clock{pixel_y = 30},/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"bA" = (/obj/structure/bed,/obj/item/weapon/bedsheet{tag = "icon-sheetgrey"; icon_state = "sheetgrey"},/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"bB" = (/obj/structure/closet/cabinet,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
 "bC" = (/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
-"bD" = (/obj/structure/table,/obj/effect/spawner/lootdrop/crafts,/obj/item/crafting/weapon_repair_kit,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
+"bD" = (/obj/structure/closet/fridge,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
 "bE" = (/obj/structure/flora/tree/tall{tag = "icon-tree_3"; icon_state = "tree_3"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "bF" = (/obj/item/clothing/under/f13/rag,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bG" = (/obj/effect/decal/cleanable/blood/old,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bH" = (/obj/structure/chair{tag = "icon-chair (EAST)"; icon_state = "chair"; dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bI" = (/obj/effect/spawner/lootdrop/trash,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
 "bJ" = (/turf/open/floor/plasteel/barber{tag = "icon-platingdmg1"; icon_state = "platingdmg1"},/area/f13/wasteland)
-"bK" = (/obj/structure/closet/crate/radiation,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
+"bK" = (/obj/structure/table/wood,/obj/machinery/computer/security/wooden_tv{name = "Old TV"},/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
 "bL" = (/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
-"bM" = (/mob/living/simple_animal/hostile/sentrybot,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"bN" = (/obj/effect/decal/cleanable/waste{tag = "icon-goo8"; icon_state = "goo8"},/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
+"bM" = (/obj/structure/decoration/clock{pixel_y = 30},/obj/structure/chair/comfy{tag = "icon-comfychair (WEST)"; icon_state = "comfychair"; dir = 8},/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"bN" = (/obj/machinery/shower{dir = 4; pixel_x = 5},/obj/structure/curtain,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
 "bO" = (/obj/structure/closet/crate/miningcar,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "bP" = (/obj/item/stack/caps/random,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "bQ" = (/obj/effect/decal/cleanable/oil/streak,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bR" = (/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bS" = (/obj/structure/chair,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"bT" = (/obj/structure/spider/stickyweb,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
-"bU" = (/obj/effect/spawner/lootdrop/crafts,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
-"bV" = (/mob/living/simple_animal/hostile/ghoul/soldier/armored,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"bW" = (/obj/structure/closet/crate/secure/weapon,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
+"bT" = (/obj/structure/sink{dir = 8; icon_state = "sink"; pixel_x = -12; tag = "icon-sink (WEST)"},/obj/structure/mirror{pixel_x = -30},/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
+"bU" = (/obj/structure/simple_door/house,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
+"bV" = (/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"bW" = (/obj/structure/simple_door/room,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
 "bX" = (/obj/effect/landmark/latejoin,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "bY" = (/obj/structure/table,/obj/machinery/light/small,/obj/machinery/recharger,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "bZ" = (/obj/structure/chair{tag = "icon-chair (WEST)"; icon_state = "chair"; dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "ca" = (/obj/item/weapon/paper,/obj/item/weapon/pen,/obj/structure/table,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cb" = (/obj/structure/closet/crate/bin,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"cc" = (/obj/structure/table,/obj/item/weapon/reagent_containers/pill/patch/radaway,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"cd" = (/obj/effect/decal/remains/human,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
+"cc" = (/obj/structure/sink{dir = 4; icon_state = "sink"; pixel_x = 10; pixel_y = 0; tag = "icon-sink (EAST)"},/obj/structure/mirror{pixel_x = 30},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
+"cd" = (/obj/structure/toilet{tag = "icon-toilet00 (NORTH)"; icon_state = "toilet00"; dir = 1},/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
 "ce" = (/turf/open/indestructible/ground/desert{tag = "icon-wasteland33"; icon_state = "wasteland33"},/area/f13/wasteland)
 "cf" = (/obj/structure/grille,/obj/structure/window/reinforced/fulltile,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cg" = (/obj/structure/grille,/obj/structure/window/reinforced/fulltile,/turf/closed/wall/r_wall/rust,/area/f13/wasteland)
-"ch" = (/obj/structure/grille,/obj/item/weapon/shard,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"ci" = (/obj/structure/grille,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"cj" = (/obj/structure/door_assembly/door_assembly_hatch,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
+"ch" = (/obj/structure/table/wood,/obj/machinery/computer/pod/old{dir = 4; icon_state = "terminal"; name = "terminal"; tag = "icon-terminal"},/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"ci" = (/obj/structure/chair/comfy{tag = "icon-comfychair (WEST)"; icon_state = "comfychair"; dir = 8},/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"cj" = (/obj/structure/bookcase,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
 "ck" = (/obj/structure/closet,/obj/item/clothing/gloves/combat,/obj/item/clothing/shoes/combat,/obj/effect/spawner/lootdrop/clothing_high,/obj/effect/spawner/lootdrop/clothing_high,/obj/effect/spawner/lootdrop/clothing_high,/obj/item/crafting/wonderglue,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cl" = (/obj/structure/rack,/obj/machinery/door/window,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cm" = (/obj/structure/rack,/obj/machinery/door/window,/obj/effect/spawner/lootdrop/wrange_low,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
@@ -119,21 +119,21 @@
 "co" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/rad_scorpion/black,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cp" = (/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/rad_scorpion/black,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cq" = (/obj/machinery/shower{pixel_y = 22},/obj/effect/decal/cleanable/vomit/old,/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/rad_scorpion/black,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"cr" = (/obj/machinery/shower{pixel_y = 22},/obj/effect/decal/cleanable/vomit/old,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"cs" = (/obj/effect/decal/remains/human,/obj/item/device/flashlight/torch,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
-"ct" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg1"; icon_state = "platingdmg1"},/area/f13/wasteland)
-"cu" = (/obj/structure/reagent_dispensers/barrel/explosive,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
+"cr" = (/obj/structure/bed,/obj/item/weapon/bedsheet{tag = "icon-sheetgrey"; icon_state = "sheetgrey"},/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"cs" = (/obj/structure/toilet,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
+"ct" = (/obj/structure/bed,/obj/item/weapon/bedsheet{tag = "icon-sheetgrey"; icon_state = "sheetgrey"},/obj/structure/decoration/clock{pixel_y = 30},/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"cu" = (/obj/structure/chair/comfy,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
 "cv" = (/obj/structure/simple_door/room,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "cw" = (/obj/effect/spawner/lootdrop/trash,/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cx" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/vomit/old,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cy" = (/obj/machinery/door/airlock/hatch,/obj/effect/decal/cleanable/dirt,/turf/open/indestructible/ground/sidewalk,/area/f13/wasteland)
 "cz" = (/obj/machinery/door/airlock/hatch,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"cA" = (/obj/structure/door_assembly/door_assembly_hatch,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"cB" = (/obj/structure/spider/stickyweb,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg1"; icon_state = "platingdmg1"},/area/f13/wasteland)
+"cA" = (/obj/structure/table/wood,/obj/item/weapon/newspaper,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"cB" = (/mob/living/simple_animal/hostile/sentrybot{desc = "P gonna give it to ya, intruder."; health = 1e+006; name = "Protector"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "cC" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"cD" = (/mob/living/simple_animal/hostile/rad_scorpion/black,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"cE" = (/obj/structure/spider/stickyweb,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
-"cF" = (/obj/effect/decal/cleanable/waste{tag = "icon-goo5"; icon_state = "goo5"},/obj/structure/closet,/obj/item/weapon/reagent_containers/food/snacks/f13/cram,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
+"cD" = (/obj/structure/table/wood,/obj/machinery/computer/security/wooden_tv{name = "Old TV"},/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"cE" = (/obj/structure/chair/comfy{dir = 1},/obj/machinery/light/small,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"cF" = (/mob/living/simple_animal/hostile/sentrybot{desc = "P gonna give it to ya, intruder."; health = 1e+006; name = "Protector"},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
 "cG" = (/obj/structure/bed/mattress/dirty,/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/blood/old,/obj/effect/spawner/lootdrop/crafts,/obj/machinery/light/small{dir = 4},/turf/open/floor/f13/wood,/area/f13/wasteland)
 "cH" = (/obj/structure/flora/tree/tall{tag = "icon-tree_2"; icon_state = "tree_2"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "cI" = (/obj/structure/flora/cactus,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
@@ -143,10 +143,10 @@
 "cM" = (/obj/structure/closet/fridge,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cN" = (/obj/effect/decal/cleanable/oil/streak,/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "cO" = (/obj/effect/spawner/lootdrop/trash,/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"cP" = (/obj/effect/decal/cleanable/waste{tag = "icon-goo8"; icon_state = "goo8"},/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
-"cQ" = (/mob/living/simple_animal/hostile/ghoul/soldier,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"cR" = (/obj/structure/closet/crate/bin,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
-"cS" = (/obj/structure/table,/obj/item/weapon/reagent_containers/pill/patch/radaway,/obj/item/weapon/reagent_containers/pill/patch/radx,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
+"cP" = (/obj/structure/table/wood,/obj/structure/decoration/clock{pixel_y = 30},/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"cQ" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"cR" = (/obj/machinery/light/small{dir = 8},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"cS" = (/obj/structure/chair/stool{tag = "icon-bench (EAST)"; icon_state = "bench"; dir = 4},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/wasteland)
 "cT" = (/turf/closed/wall/r_wall,/area/f13/wasteland)
 "cU" = (/obj/structure/garbage/garbage9,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "cV" = (/obj/structure/garbage/garbage12,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
@@ -159,38 +159,38 @@
 "dc" = (/obj/structure/table,/obj/item/weapon/surgical_drapes,/obj/item/weapon/surgicaldrill,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "dd" = (/obj/structure/closet/crate/bin,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "de" = (/obj/structure/barricade/sandbags{tag = "icon-sandbags (WEST)"; icon_state = "sandbags"; dir = 8},/obj/structure/barricade/sandbags{tag = "icon-sandbags (NORTH)"; icon_state = "sandbags"; dir = 1},/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"df" = (/obj/effect/decal/cleanable/waste,/obj/effect/spawner/lootdrop/trash,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"dg" = (/obj/structure/reagent_dispensers/barrel/dangerous,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
-"dh" = (/obj/structure/rack,/obj/item/crafting/weapon_parts/energy,/obj/item/crafting/weapon_parts/plasma,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"di" = (/obj/item/bench/laser,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"dj" = (/obj/structure/rack,/obj/item/crafting/wonderglue,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
+"df" = (/obj/structure/chair/stool{tag = "icon-bench (WEST)"; icon_state = "bench"; dir = 8},/turf/open/floor/f13{icon_state = "floordirty"},/area/f13/wasteland)
+"dg" = (/obj/item/weapon/cigbutt,/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"dh" = (/obj/structure/table/wood,/turf/open/floor/f13{icon_state = "grimy"},/area/f13/wasteland)
+"di" = (/obj/structure/handrail/yellow{icon_state = "y_handrail12"; pixel_y = -10},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
+"dj" = (/obj/machinery/light/small{dir = 4},/obj/structure/handrail/yellow{icon_state = "y_handrail12"; pixel_y = -10},/turf/open/floor/f13{tag = "icon-floorrusty"; icon_state = "floorrusty"},/area/f13/wasteland)
 "dk" = (/obj/effect/decal/cleanable/vomit/old,/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "dl" = (/obj/effect/decal/cleanable/vomit/old,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/ghoul/soldier/armored,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "dm" = (/obj/structure/closet/crate/freezer/blood,/obj/machinery/light/small{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "dn" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/sentrybot,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"do" = (/obj/structure/spider/stickyweb,/mob/living/simple_animal/hostile/ghoul/glowing,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"dp" = (/obj/effect/spawner/lootdrop/trash,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"dq" = (/obj/effect/spawner/lootdrop/trash,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
+"do" = (/turf/open/floor/f13{icon_state = "rampuptop"; dir = 8},/area/f13/wasteland)
+"dp" = (/turf/closed/wall/f13/supermart,/area/f13/wasteland)
+"dq" = (/obj/structure/flora/grass/wasteland{tag = "icon-tall_grass_5"; icon_state = "tall_grass_5"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "dr" = (/obj/effect/decal/cleanable/oil/streak,/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/sentrybot,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "ds" = (/obj/structure/closet,/obj/item/weapon/storage/box/gloves,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "dt" = (/obj/structure/table/optable,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "du" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"dv" = (/obj/effect/decal/cleanable/dirt,/obj/item/blueprint/plasma_pistol,/turf/open/floor/plasteel/barber{tag = "icon-plating"; icon_state = "plating"},/area/f13/wasteland)
-"dw" = (/obj/structure/table,/obj/item/weapon/paper,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"dx" = (/obj/structure/chair{dir = 8},/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"dy" = (/obj/structure/closet,/obj/item/nuke_core,/obj/item/nuke_core_container,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
+"dv" = (/obj/item/weapon/pickaxe/rust,/mob/living/simple_animal/hostile/russian/ranged/mosin,/turf/open/floor/plasteel,/area/f13/wasteland)
+"dw" = (/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"dx" = (/turf/open/floor/plasteel,/area/f13/wasteland)
+"dy" = (/obj/item/weapon/ore/plasma,/obj/structure/barricade/sandbags,/turf/open/floor/plasteel,/area/f13/wasteland)
 "dz" = (/obj/structure/sink{dir = 8; icon_state = "sink"; pixel_x = -10; pixel_y = 0; tag = "icon-sink (WEST)"},/obj/structure/mirror{pixel_x = -32},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
 "dA" = (/obj/structure/janitorialcart,/obj/item/weapon/mop,/obj/item/weapon/reagent_containers/glass/bucket,/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
 "dB" = (/obj/structure/toilet{tag = "icon-toilet00 (WEST)"; icon_state = "toilet00"; dir = 8},/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
 "dC" = (/obj/structure/table,/obj/item/clothing/tie/armband/medblue,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"dD" = (/obj/structure/closet,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/f13/wasteland)
+"dD" = (/obj/structure/barricade/sandbags,/turf/open/floor/plasteel,/area/f13/wasteland)
 "dE" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "dF" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
 "dG" = (/obj/effect/decal/cleanable/oil/streak,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
 "dH" = (/obj/structure/table,/obj/item/weapon/storage/belt/medical,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "dI" = (/obj/effect/decal/cleanable/vomit/old,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "dJ" = (/obj/effect/decal/cleanable/blood/old,/obj/item/weapon/reagent_containers/pill/patch/radaway,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
-"dK" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-platingdmg2"; icon_state = "platingdmg2"},/area/f13/wasteland)
+"dK" = (/obj/structure/chalkboard,/turf/open/floor/plasteel,/area/f13/wasteland)
 "dL" = (/obj/machinery/door/airlock/hatch,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13{icon_state = "whitegreenrustychess"},/area/f13/wasteland)
 "dM" = (/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/mob/living/simple_animal/hostile/sentrybot,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
 "dN" = (/obj/structure/barricade/sandbags,/obj/machinery/light/small{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/barber{tag = "icon-bluerustychess2"; icon_state = "bluerustychess2"},/area/f13/wasteland)
@@ -570,6 +570,11 @@
 "kX" = (/turf/open/indestructible/ground/mountain,/area/f13/city_north)
 "kY" = (/turf/open/indestructible/ground/mountain,/area/f13/city_center)
 "kZ" = (/turf/closed/mineral,/area/f13/city_south)
+"la" = (/obj/item/weapon/ore/cooper,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lb" = (/obj/structure/reagent_dispensers/barrel/dangerous,/obj/structure/spider/stickyweb,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lc" = (/obj/structure/cargocrate,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"ld" = (/obj/item/weapon/ore/cooper,/turf/open/floor/plasteel,/area/f13/wasteland)
+"le" = (/obj/structure/barricade/sandbags{icon_state = "sandbag_0"; dir = 4},/turf/open/floor/plasteel,/area/f13/wasteland)
 "lf" = (/obj/structure/bookcase/random/fiction,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lg" = (/obj/structure/table/wood/settler,/obj/item/weapon/circuitboard/computer/scan_consolenew,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lh" = (/obj/structure/closet/cabinet,/obj/item/clothing/shoes/f13/swimfins,/obj/item/clothing/under/f13/settler,/obj/item/weapon/reagent_containers/food/snacks/f13/porknbeans,/obj/item/weapon/reagent_containers/food/drinks/flask/survival,/turf/open/floor/f13/wood,/area/f13/wasteland)
@@ -577,21 +582,62 @@
 "lj" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lk" = (/obj/structure/decoration/clock/old/active{pixel_y = 32},/turf/open/floor/f13/wood/housebase,/area/f13/wasteland)
 "ll" = (/obj/structure/table,/turf/open/floor/f13/wood/housebase,/area/f13/wasteland)
+"lm" = (/obj/structure/cargocrate{icon_state = "cargocrate3"},/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"ln" = (/mob/living/simple_animal/hostile/liberatormk0,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lo" = (/obj/structure/spider/stickyweb,/mob/living/simple_animal/hostile/radroach,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lp" = (/obj/item/weapon/ore/silver,/obj/structure/reagent_dispensers/barrel/dangerous,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lq" = (/obj/item/weapon/ore/cooper,/obj/structure/barricade/sandbags{dir = 8},/turf/open/floor/plasteel,/area/f13/wasteland)
+"lr" = (/obj/structure/chair/office{tag = "icon-chair (NORTH)"; icon_state = "chair"; dir = 1},/turf/open/floor/plasteel,/area/f13/wasteland)
+"ls" = (/obj/structure/reagent_dispensers/watertank,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lt" = (/obj/structure/ore_box,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lu" = (/obj/structure/rack,/obj/item/weapon/wrench,/obj/item/weapon/pickaxe/rust,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lv" = (/obj/structure/flora/grass/wasteland{tag = "icon-tall_grass_3"; icon_state = "tall_grass_3"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"lw" = (/obj/structure/simple_door/metal/store,/obj/structure/barricade/wooden/planks,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lx" = (/obj/structure/simple_door/metal/store,/obj/structure/barricade/wooden/planks,/turf/open/floor/plasteel,/area/f13/wasteland)
+"ly" = (/mob/living/simple_animal/hostile/radroach,/turf/open/floor/plasteel,/area/f13/wasteland)
 "lz" = (/obj/structure/chair/comfy/brown{dir = 4},/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lA" = (/obj/structure/easel,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lB" = (/obj/structure/chair/wood{dir = 4},/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lC" = (/obj/structure/table/wood/settler,/obj/item/weapon/reagent_containers/food/snacks/f13/galette,/turf/open/floor/f13/wood{tag = "icon-housewood3-broken"; icon_state = "housewood3-broken"},/area/f13/wasteland)
 "lD" = (/obj/structure/chair/wood{dir = 8},/turf/open/floor/f13/wood/housebase,/area/f13/wasteland)
+"lE" = (/obj/structure/rack,/obj/item/blueprint/laser_pistol,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lF" = (/obj/structure/janitorialcart,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lG" = (/obj/structure/reagent_dispensers/barrel/dangerous,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lH" = (/obj/structure/rack,/obj/item/weapon/tireiron,/obj/item/weapon/ore/uranium,/obj/item/weapon/ore/uranium,/obj/item/weapon/ore/uranium,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lI" = (/obj/structure/garbage/garbage10,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"lJ" = (/obj/structure/garbage/garbage2,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
 "lK" = (/turf/open/indestructible/ground/sidewalk{dir = 7; icon_state = "outerpavement"},/area/f13/wasteland)
 "lL" = (/obj/structure/table/wood/settler,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lM" = (/obj/structure/table/wood/settler,/obj/item/weapon/book/manual/random{pixel_y = 2},/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lN" = (/obj/item/trash/deadmouse,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lO" = (/obj/structure/table/wood/settler,/obj/item/trash/candle{pixel_y = 4},/turf/open/floor/f13/wood,/area/f13/wasteland)
 "lP" = (/obj/structure/chair/wood{dir = 8},/turf/open/floor/f13/wood,/area/f13/wasteland)
+"lQ" = (/obj/structure/garbage/garbage5,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"lR" = (/obj/structure/garbage/garbage7,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"lS" = (/obj/structure/spacevine,/obj/structure/reagent_dispensers/barrel/dangerous,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lT" = (/obj/structure/table/wood/settler,/obj/structure/spacevine,/obj/item/weapon/pipe,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lU" = (/obj/structure/table/wood/settler,/obj/structure/spacevine,/obj/item/weapon/ore/titanium,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
 "lV" = (/obj/machinery/light/small,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"lW" = (/obj/structure/barricade/bars,/obj/structure/barricade/sandbags{icon_state = "sandbag_0"; dir = 4},/turf/open/floor/plasteel,/area/f13/wasteland)
+"lX" = (/obj/structure/table/wood/settler,/obj/item/weapon/ore/diamond,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lY" = (/obj/structure/table/wood/settler,/obj/item/weapon/newspaper,/turf/open/floor/plasteel,/area/f13/wasteland)
+"lZ" = (/obj/structure/table/wood/settler,/obj/item/weapon/ore/gold,/turf/open/floor/plasteel,/area/f13/wasteland)
+"ma" = (/obj/structure/spacevine,/turf/open/floor/plasteel,/area/f13/wasteland)
+"mb" = (/obj/structure/spacevine,/obj/structure/spider/stickyweb,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
 "mc" = (/obj/structure/window/fulltile/house/broken,/obj/structure/decoration/rag,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "md" = (/obj/structure/simple_door/house,/turf/open/floor/f13/wood,/area/f13/wasteland)
 "me" = (/obj/structure/window/fulltile/house,/turf/open/floor/f13/wood,/area/f13/wasteland)
+"mf" = (/obj/structure/spacevine,/obj/structure/spider/stickyweb,/turf/open/floor/plasteel,/area/f13/wasteland)
+"mg" = (/obj/structure/simple_door/metal/barred,/turf/open/floor/plasteel,/area/f13/wasteland)
+"mh" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/obj/structure/fence{tag = "icon-metal_fence2"; icon_state = "metal_fence2"},/obj/structure/decoration_f13/bus,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"mi" = (/obj/structure/fence{tag = "icon-metal_fence3"; icon_state = "metal_fence3"},/obj/structure/fence{tag = "icon-metal_fence1"; icon_state = "metal_fence1"},/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"mj" = (/obj/structure/spacevine,/obj/structure/tank_dispenser/oxygen,/turf/open/floor/plasteel,/area/f13/wasteland)
+"mk" = (/obj/structure/reagent_dispensers/barrel/two,/turf/open/floor/plasteel,/area/f13/wasteland)
+"ml" = (/obj/item/weapon/ore/slag,/turf/open/floor/plasteel,/area/f13/wasteland)
+"mm" = (/obj/structure/burnbarrel,/turf/open/floor/plasteel,/area/f13/wasteland)
+"mn" = (/obj/structure/simple_door/metal/dirtystore,/turf/open/floor/plasteel,/area/f13/wasteland)
+"mo" = (/obj/structure/tires/half,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"mp" = (/obj/item/weapon/ore/plasma,/turf/open/floor/plasteel,/area/f13/wasteland)
 "mL" = (/turf/open/indestructible/ground/road{icon_state = "hole"},/area/f13/wasteland)
 "mM" = (/turf/open/indestructible/ground/sidewalk{icon_state = "horizontaltopbordertop2right"},/area/f13/wasteland)
 "mN" = (/turf/open/indestructible/ground/sidewalk{icon_state = "horizontaltopbordertop0"},/area/f13/wasteland)
@@ -725,26 +771,26 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadadadkm
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadadagagagadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadagagagagadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaacabaaaaaaaaaaaaaaaaaaaaaaadadadadadagagagagadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaauauauauauauacaaaaaaaaaaaaaaaaaaaaadadadadagagagadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadaeaeaeadadadadahahahahahahahahahahaeaeaeaeaeaeadaeaeaeadadadaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaawauayazauazauauaaaaaaaaaaaaaaaaaaaaadadadadagagadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadaeaeaeadadadadahaAaBaCaDaEahaFaFahadaGaHaaadadadadadaeaeadadaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaauauauauauaaauaJaJaKaJaLauauaaaaaaaaaaaaaaaaaaadadagknagkoadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaeaeaeadadadadadahaMaNaOaNaNahaFaFahaPaQaRaSaTahadadadadaeadadaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaauaUaVaWauaaauaXaYauaJaZbaauaaaaaaaaaaaaaaaaaaadadadkpagagadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaeadadahahahahahahahahbbahahahaFaFahbcahbdahahahahadadadaeaeadaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaubebfaXauaaauaJaybgbhbibjauaaadaaaaaaaaaaaaaaadadadadagagagadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadahbkblaNbmahaEbnaNboaNahaFaFahbpbqbrbdbdbcbsbtadadadaeaeaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaauauauaKauaaauauauauaKauauauadadadaaaaaaaaaaaaadadadadagagagadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadahbubvaNbwahaNaNbxaNbyahaFaFahbqbzbAbBbCahbqbDbdadadadaeaaaaaaaaaaaaaaaa
-aaaaaaaaaabEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadaaaaaaaaaaadadadadadagkqkradadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadahaNbxbFaNaraNbGaNbHbuahaFaFahbIbJbKbLbMbdbqbNbqbsbdadaeaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaabOaaaaaabPaaaaaaaaaaaaaaaaaaawaaaaadadaaaaaaaaaaadadadadadagagagagadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaaaaaaahaNaNbQaMahbRbSaNaMbwahaFaFahbdbdbTaRbIahbUbVbWaQbdadadaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabXaaaaaaaaaaaaaaadadadaaaaaaaaadadadadadadagagagagadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadahbybYbZaNahaNbucaaNcbahaFaFahbqbdccbqbdbcbqbdbNcdahadadaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaawaaaaaaceaaaaaaaaaaaaaaaaadadadaaaaaaaaadadadadadadadagagagagadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaahahahahahahahahahbbahahcfcgahahahahahahahahchciahahcjahahahbcahadaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaceaaaaaaaaceceaaaaaaadadadaaaaaaaaadadadadadadadadagagagagkradaaaaaaaaaaaaaaaaaaaaaaaaaaaaahckahclahcmcnahbRcoaNahcpbGahcqahaaaaahcrahcsbdahctbdcuahbdbdaTadaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaucvauauaaaaaaaaaaaaaaaabOaaaaaaaaaaadadadaaaaaaaaadadadadadadadadagatagagagagaaaaaaaaaaaaaaaaaaaaadadadadahaNcwbxaDbQaNbbbQaNcxbbaNaMbbaNcyaaaaczbqcAbVcBcAcCcDbdczbqcEbTcFaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaauaXcGauaaaaaaaacHaaaaaaaaaaaacIaaaaaaadadaaaaaaaaadadadadadadadagagagagagagadaaaaaaaaaaaaaaaaaaaaadadadadahcJahcKahcLcMahcoaMaNahcNbxahcOahaaaaahcPahbdcQahaQbCbdahcRcSbdbdaaaaaaaaaaaaaaaa
-aaaaaaaaaaadauauauauaaaaadadaaaaaaaaaaaaaaaaaaaaaaadadaaaaaaaaadadadadadadagagagagadadkradaaaaaaaaaaaaaaaaaaaaahahahahahahahahahahahahaharahahahahahahahaaaaahahahahahahahcAahahahahcTahaaaaaaaaaaaaaaaa
-aaaaaaaaaaadadadcUcVaaadadadadaaaaaaceaaawaaaaaaaaaaadaaaaaaaaadadadadadagagagagadadadadadaaaaaaaaaaaaaaaaaaaaahcWcXcYcZdadbdcahdddeaNbFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahdfcBbddgaRahdhdidjcTbLbLbqcTaa
-aaaaaaaaaaadadadadadadadadadadadadaaaaaaaaaaaaaabPaaadaaaaaaaaadadadadkragagadadadadadadadaaaaadadadadadadadadahdkaNaNbbaNdldmahdnbGbGahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahahahbddobsahandpanarcQdqadahaa
-aaaaaaaaaaadadadadadadadadadadadadadadaaaaaaaaaaaaaaadaaaaaaaaadadadadagagadadadagagadadadaaaaadadadadadadadadahaNdraNcZdsdtaNahduaMaNahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahdvbLaQcTdwdxdycTbq
-aaaaaaaaaaadadadadadadadadaaadadadadadaaaaaaaaceaaaaabaaaaaaaaadadadadkqagadadagagagadadadaaaaadadadadahahahahahaNcbbwahahahahahbQahahahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahahahbCcTahahcTahad
-aaaaaaaaaaadadadadadadaaaaaaaaadadadadadadaaaaaaaaceaaaaaaaaaaadadadadagagagagatagadadadadaaaaadadadadahdzdAdBahaNdCaNahcbbnaNaNaNahaaaaaaadadadadadadadadadadadadadadadaaahbdbdbdbKdDadahahadaddgadaaaa
-aaaaaaaaaaadadadaaaaaaaaaaaaaaaaaaadadadadaddEaaaaaaaaaaaaaaaaadadadadadadagagagadadadadadaaadadadadadahdFdFdGahbHdHaNardIaNdJahahahaaaaaaktktktktktadadadadadadadadadadaaahahahbqdKbCadadadahadbdbdaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaauauauauauauacaaaaaaaaaaaaaaaaaaaaadadadadagagagadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadaeaeaeadadadadahahahahahahahahahaaaGaHaPaPaPaPaSaPaPaTbpaPaPaSaPaPaPaPaaaGbr
+aaaaaaaaaaaaaaaaaaaaaaaaaaawauayazauazauauaaaaaaaaaaaaaaaaaaaaadadadadagagadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadaeaeaeadadadadahaAaBaCaDaEahaFaFaaaaaaaPbtaPbzbAbBaPpdpdaPbDbKbMaPbNaPaaaaaG
+aaaaaaaaaaaaaaaaauauauauauaaauaJaJaKaJaLauauaaaaaaaaaaaaaaaaaaadadagknagkoadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaeaeaeadadadadadahaMaNaOaNaNahaFaFaaaaaaaPbTbUbVbVbVbWpdpdbWbVbVbVbUccaPaaaaaa
+aaaaaaaaaaaaaaaaauaUaVaWauaaauaXaYauaJaZbaauaaaaaaaaaaaaaaaaaaadadadkpagagadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaeadadahahahahahahahahbbahahahaFaFaaaaaaaPcdaPchcibDaPpdpdaPcjcrbBaPcdaPaaaaaa
+aaaaaaaaaaaaaaaaaubebfaXauaaauaJaybgbhbibjauaaadaaaaaaaaaaaaaaadadadadagagagadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadahbkblaNbmahaEbnaNboaNahaFaFaaaaaaaPaPaPaPaPaPaPpdpdaPaPaPaPaPaPaPaaaaaa
+aaaaaaaaaaaaaaaaauauauaKauaaauauauauaKauauauadadadaaaaaaaaaaaaadadadadagagagadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadahbubvaNbwahaNaNbxaNbyahaFaFaaaaaaaPcsaPctcucAaPpdpdaPcjbAbBaPcsaPaacBaa
+aaaaaaaaaabEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadaaaaaaaaaaadadadadadagkqkradadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadahaNbxbFaNaraNbGaNbHbuahaFaFaaaaaaaPbTbUbVbVbVbWpdpdbWbVbVbVbUccaPaaaaaa
+aaaaaaaaaaaaaabOaaaaaabPaaaaaaaaaaaaaaaaaaawaaaaadadaaaaaaaaaaadadadadadagagagagadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadaaaaaaahaNaNbQaMahbRbSaNaMbwahaFaFaaaaaaaPbtaPbBcDbDaPpdpdaPchcEbDaPbNaPaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabXaaaaaaaaaaaaaaadadadaaaaaaaaadadadadadadagagagagadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadahbybYbZaNahaNbucaaNcbahaFaFaaaPaPaPaPaPaPaPaPaPpdpdaPaPaPaPaPaPaPaPaPaa
+aaaaaaaaaaaaaaaaaaaaaaawaaaaaaceaaaaaaaaaaaaaaaaadadadaaaaaaaaadadadadadadadagagagagadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaahahahahahahahahahbbahahcfcgahahahahahaaaPbtaPcjctbBaPpdpdcFpdpdpdaPbDcPbKaPbNaPaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaceaaaaaaaaceceaaaaaaadadadaaaaaaaaadadadadadadadadagagagagkradaaaaaaaaaaaaaaaaaaaaaaaaaaaaahckahclahcmcnahbRcoaNahcpbGahcqahaaaaaaaPbTbUbVbVbVbWpdpdpdpdpdpdbWbVbVbVbUccaPaa
+aaaaaaaaaaaaaucvauauaaaaaaaaaaaaaaaabOaaaaaaaaaaadadadaaaaaaaaadadadadadadadadagatagagagagaaaaaaaaaaaaaaaaaaaaadadadadahaNcwbxaDbQaNbbbQaNcxbbaNaMbbaNcyaaaaaaaPcdaPchcibDaPpdcQaPaPcRpdaPcjcrbBaPcdaPaa
+aaaaaaaaaaaaauaXcGauaaaaaaaacHaaaaaaaaaaaacIaaaaaaadadaaaaaaaaadadadadadadadagagagagagagadaaaaaaaaaaaaaaaaaaaaadadadadahcJahcKahcLcMahcoaMaNahcNbxahcOahaaaaaaaPaPaPaPaPaPaPpdpdcSdfpdpdaPaPaPaPaPaPaPaa
+aaaaaaaaaaadauauauauaaaaadadaaaaaaaaaaaaaaaaaaaaaaadadaaaaaaaaadadadadadadagagagagadadkradaaaaaaaaaaaaaaaaaaaaahahahahahahahahahahahahaharahahahahahahahaaaaaaaPcsaPbzbAbBaPpdpdpddgpdpdbWctcudhaPcsaPaa
+aaaaaaaaaaadadadcUcVaaadadadadaaaaaaceaaawaaaaaaaaaaadaaaaaaaaadadadadadagagagagadadadadadaaaaaaaaaaaaaaaaaaaaahcWcXcYcZdadbdcahdddeaNbFaaaaaaaaaaaaaaaaaaaaaaaPbTbUbVbVbVbWpdpdcSdfpdpdaPbVbVbVbUccaPaa
+aaaaaaaaaaadadadadadadadadadadadadaaaaaaaaaaaaaabPaaadaaaaaaaaadadadadkragagadadadadadadadaaaaadadadadadadadadahdkaNaNbbaNdldmahdnbGbGahaaaaaaaaaaaaaaaaaaaaaaaPbtaPchcibDaPdidjaPaPcRpdaPbBcDbDaPbNaPaa
+aaaaaaaaaaadadadadadadadadadadadadadadaaaaaaaaaaaaaaadaaaaaaaaadadadadagagadadadagagadadadaaaaadadadadadadadadahaNdraNcZdsdtaNahduaMaNahaaaaaaaaaaaaaaaaaaaaaaaPaPaPaPaPaPaPdodopdpdpdpdaPaPaPaPaPaPaPaa
+aaaaaaaaaaadadadadadadadadaaadadadadadaaaaaaaaceaaaaabaaaaaaaaadadadadkqagadadagagagadadadaaaaadadadadahahahahahaNcbbwahahahahahbQahahahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeaPaPaPaPaPaPaPaPadadadadaaaaaa
+aaaaaaaaaaadadadadadadaaaaaaaaadadadadadadaaaaaaaaceaaaaaaaaaaadadadadagagagagatagadadadadaaaaadadadadahdzdAdBahaNdCaNahcbbnaNaNaNahaaaaaaadadadadadadadadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaadadadaaaaaaaaaaaaaaaaaaadadadadaddEaaaaaaaaaaaaaaaaadadadadadadagagagadadadadadaaadadadadadahdFdFdGahbHdHaNardIaNdJahahahaaaaaaktktktktktadadadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadadagagadadadadadadaaadadadadadahdLahahahahahahahaNaNaNahaaaaaaaaaaktkukvkwktadadadadadadadktagadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadaeaeagagagaeaeaeaeaeaeaaadahahahahahaNbQdMaNaNdNaNaNaNahahahaaaaaaaaaaktkxkyagkzkAadadktadadagagagagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadadadadadksagadadadadadadadaaadahdOdPdOdQaNdRaNaNdSaNaNaNaMahaaaaaaaaaaaaaaktkBagagktagagagkCagkDagktadaaaaaaaaaaaaaaaaadadahaeaeaeaeaaaa
@@ -786,20 +832,20 @@ aaaaaaaaaaacaaaaaaaaeDeOePeDePeQeDePeQeDeGeGeKeGeGeEaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaacIaaaaaaaaeDeReSeDeGeTeDeUeReDeHeVeWeVeWeDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahBhChChDhEhFaaaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaeDeDeDeDeXeGeDeGeGeDeYeZeDeEeDfaeDeEeDeDeDeDeDeDeDeDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahGhEaahHhIhJhKhEhAaaaeaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaeDeDeHeGeDfbfceDfcfbeDfcfbeDeHeGfdfeeGfffgfhfifjfkfleDaaaaaaaagOgPgPgOgPaiaiaiaigPgPgPgPaaaaaahGhMhNauhOhKhPhKhQauhRhMaeaeaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaeDeGeGeGeDeGeGfpfrfsfteGeGeEeGfueMeMfveMeGfxeDfAhUhVeDaaaaaagVgVgVgVgVgVgVgVgVgVgVgVgVgVaaaaaakSauauauauaukTauauauauauaaaeaeaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaafbeGeReHfbhWhXeWhYhZfxeKiafbeGibicidieifigeGeDihfAiieDaaaaaahahahahahahahahahahahahahbfqaaaaaakSaulflglhlililjlkhKllauaaaaaeaeaeaeadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaeDeGeGeGeDijeWikilimineKeGeEeGioipiqeLipigireDisitiueDaaaaaaaaaahghghghghghghhhihhhghjfqaaaaaahNhElilililililihPhKhKauaaadadaeaeaeadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaeDeDeGeGeDfbfceDfcfbeDfcfbeDiveWiwixiwiweGeGeDeDeDeDeDaaaaaaaaaahghghghkhhhghhhlhlhhhjfqaaaaaaaihElzlililAhOlilBlClDauaaadadadaeaeadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaeDeDeDeDeGeGeDeGeGeDeZeGeDiyeGeGeGeKeGeHiaeDaaaaaaaaaaaaaaaaaahhhhhhhhhhhghlhlhhhhhjfqaaaaaaaiaulLlMlililNlilBlOlPauaaaaaaadadaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaeDizeGeDfxeGeDeGeGeDeDeGeReDeDeDeDeDeDaaaaaaaaaaaaaaaaaahhhhhhhlhlhlhlhlhhhhhjfqaaaaaaaiaulihOlVlilililVliliauaaaaaaaaadadaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaadadadaaaaeDiAePeDePiBeDePiCeDeGeGeGeHeGeDaaaaaaaaaaaaaaaaadaaaaaahhhhhhhlhihhhmhhhnhghjfqaaaaaaaiauaumcauaumdauaumeauaulKlKlKlKlKlKaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaadadadadaaeDeDeDeDeDeDeDeDeDeDiDeHeGeGiFeDaaaaaaaaaaaaaaadadaaaaaahghghghhhhhghnhnhqhghjfqaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaadiEadadadaaaaaaaaaaaaaaaaaaeDioiqiGeGiHeDaaaaaaaaaaaaaaadadaaaaaahghghghhhghghrhrhrhghsfqaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaadadadadaaaaaaaaaaaaaaaaeDioiIiGeGkleDaaaaaaaaaaaaadadadaaaaaafyhwhthghjhxfyfyfyfyfyfzaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaadadadadadahahahahadadadaaaaaaeDeDeDeDeDeDeDaaaaaaaaaaaaadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamMmNmOmOmPaiaiaimQmRmSmQaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaadadadadahahiJiJahahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaandnenfndngnhaiaininjnkniaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaadadadadahagatiJagahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaanynznznznAnBaiaininCnDniaiaiainEgVmPaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaadadadadahagiJiJagahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaanynymLnFnGnBaiaimQnHnImQaiainJnKnLngnhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaeDeGeGeGeDeGeGfpfrfsfteGeGeEeGfueMeMfveMeGfxeDfAhUhVeDaaaaaagVgVgVgVgVgVgVgVgVgVgVgVgVgVaaaaaakSauauauauaukTauauauauauaaaeaeaeaeaaaaaaaaaaaaaaaaagafdpdpdpdpdpdpdpdpdpaaaaaaaadqaaaaaaaaaaaa
+aaaaaaaaaaaafbeGeReHfbhWhXeWhYhZfxeKiafbeGibicidieifigeGeDihfAiieDaaaaaahahahahahahahahahahahahahbfqaaaaaakSaulflglhlililjlkhKllauaaaaaeaeaeaeadaaaaaaaaaaaaagdvdwdwdxdydDdKdxlddpaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaeDeGeGeGeDijeWikilimineKeGeEeGioipiqeLipigireDisitiueDaaaaaaaaaahghghghghghghhhihhhghjfqaaaaaahNhElilililililihPhKhKauaaadadaeaeaeadaaaaaaaaaaaaaflblcdwledxdxdxdxlndpaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaeDeDeGeGeDfbfceDfcfbeDfcfbeDiveWiwixiwiweGeGeDeDeDeDeDaaaaaaaaaahghghghkhhhghhhlhlhhhjfqaaaaaaaihElzlililAhOlilBlClDauaaadadadaeaeadaaaaaaaaaaaadplmdwlplydxlqlrlrmpdpaaaaaIaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaeDeDeDeDeGeGeDeGeGeDeZeGeDiyeGeGeGeKeGeHiaeDaaaaaaaaaaaaaaaaaahhhhhhhhhhhghlhlhhhhhjfqaaaaaaaiaulLlMlililNlilBlOlPauaaaaaaadadaeaeaaaaaaaaaaaadpdpdpdpdpdxdpdpdpdpdpaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaeDizeGeDfxeGeDeGeGeDeDeGeReDeDeDeDeDeDaaaaaaaaaaaaaaaaaahhhhhhhlhlhlhlhlhhhhhjfqaaaaaaaiaulihOlVlilililVliliauaaaaaaaaadadaeaaaaaaaaaaaaaadplsltdpdxdpdxludpaaaaaaaalvaaaIaaaaaaaaaa
+aaaaaaaaaaadadadaaaaeDiAePeDePiBeDePiCeDeGeGeGeHeGeDaaaaaaaaaaaaaaaaadaaaaaahhhhhhhlhihhhmhhhnhghjfqaaaaaaaiauaumcauaumdauaumeauaulKlKlKlKlKlKaeaaaaaaaaaaaaaadpdwlalwdxlxlylEdpaaeJaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaadadadadaaeDeDeDeDeDeDeDeDeDeDiDeHeGeGiFeDaaaaaaaaaaaaaaadadaaaaaahghghghhhhhghnhnhqhghjfqaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaaaadpltlFdpdxdplGlHdpaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaadiEadadadaaaaaaaaaaaaaaaaaaeDioiqiGeGiHeDaaaaaaaaaaaaaaadadaaaaaahghghghhhghghrhrhrhghsfqaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaadpdpdpdpdpdxdpdpdpdpdpdplIgscUlJlQlRlIaaaaaa
+aaaaaaaaaaaaaaadadadadaaaaaaaaaaaaaaaaeDioiIiGeGkleDaaaaaaaaaaaaadadadaaaaaafyhwhthghjhxfyfyfyfyfyfzaaaaaaaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaiaaaaaaaaaaaalSlTlUlWdxdxlolXlYlZdxdpaaaaaaaaaaaaadaaaaaa
+aaaaaaaaadadadadadahahahahadadadaaaaaaeDeDeDeDeDeDeDaaaaaaaaaaaaadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamMmNmOmOmPaiaiaimQmRmSmQaiaiaiaiaiaiaiaaaaaaaaaaaamambmfmgdxdxdxdxdxdxdxdpmhdEdEdEdEmiadaaaaaa
+aaaaaaaaadadadadahahiJiJahahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaandnenfndngnhaiaininjnkniaiaiaiaiaiaiaiaaaaaaaaaaaamjmfmklWdxdxmldxdxmmdwdpaaaaaaaaaaaaadaaaaaa
+aaaaaaaaadadadadahagatiJagahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaanynznznznAnBaiaininCnDniaiaiainEgVmPaiaaaaaaaaaaaadpdpdpdpdpmndpdpdpdpdpdplQaamoaaaaadadaaaaaa
+aaaaaaaaadadadadahagiJiJagahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaanynymLnFnGnBaiaimQnHnImQaiainJnKnLngnhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalIaaadadaaaaaa
 aaaaaaaaadadadadahahagagahahaaadadadadadadadadadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaanMnNnynFnAnOaiaiaiaiaiainPaifohtnFnAfqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaadadadadadahagagahadaaadadadadadadadadadagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaanQnMnFnFnAnOhyaiaiaiaiaiaiaifohtnFnAfqaaaaaaadadadadaaaaaaaaaaaaadadadadadadadadadadadadadadad
 aaaaaaaaadadadadadadagagadadaaadadadadadadadadagagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaanRnFnFnAnBaiaimQnSnTmQaiaifohtnFnAfqaaaaaaadadadadaanUaaaanVaaaaadadadaeaeaeaeaeadadadadadad
