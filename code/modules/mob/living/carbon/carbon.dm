@@ -178,7 +178,7 @@
 		unEquip(I)
 
 	if(thrown_thing)
-		visible_message("<span class='danger'>[src] кинул [thrown_thing].</span>")
+		visible_message("<span class='danger'>[src] кидает [thrown_thing].</span>")
 		newtonian_move(get_dir(target, src))
 		playsound(src, 'sound/effects/throw.ogg', 50, 1)
 		thrown_thing.throw_at(target, thrown_thing.throw_range, thrown_thing.throw_speed, src)

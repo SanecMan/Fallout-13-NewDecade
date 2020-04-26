@@ -50,6 +50,7 @@
 	var/obj/screen/healths
 	var/obj/screen/healthdoll
 	var/obj/screen/internals
+	var/obj/screen/tooltip
 
 	var/ui_style_icon = 'icons/mob/screen_midnight.dmi'
 
@@ -62,6 +63,11 @@
 	hide_actions_toggle.InitialiseIcon(src)
 
 	hand_slots = list()
+
+
+//FALLOUT 13//
+//	tooltip = new /obj/screen/tooltip()
+//	tooltip.hud = src
 
 	for(var/mytype in subtypesof(/obj/screen/plane_master))
 		var/obj/screen/plane_master/instance = new mytype()
