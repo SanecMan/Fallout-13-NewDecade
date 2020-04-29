@@ -152,6 +152,15 @@
 	multiple_sprites = 2
 	price = 250
 
+/obj/item/ammo_box/magazine/F13/service
+	name = "service rifle magazine (5.56mm)"
+	icon_state = "service"
+	ammo_type = /obj/item/ammo_casing/F13/a556
+	caliber = "a556"
+	max_ammo = 18
+	multiple_sprites = 2
+	price = 150
+
 /obj/item/ammo_box/magazine/F13/fnfal //Я КОСТЫЛЬНЫЙ ПИДОРАС ЫЫЫ//
 	name = "rifle magazine (7.62mm)"
 	icon_state = "falmag"
@@ -291,3 +300,11 @@
 	ammo_type = /obj/item/ammo_casing/F13/piperev
 	caliber = "38mm"
 	max_ammo = 12
+
+/obj/item/ammo_box/magazine/f13/sniper_rounds
+	name = "sniper rounds (.308)"
+	icon_state = ".50mag"
+	origin_tech = "combat=6;syndicate=2"
+	ammo_type = /obj/item/ammo_casing/F13/m308
+	max_ammo = 7
+	caliber = "308mm"
