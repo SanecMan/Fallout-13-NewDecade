@@ -86,6 +86,25 @@
 	attack_verb = list("attacked", "slashed", "sawed", "cut")
 	sharpness = IS_SHARP
 
+/obj/item/weapon/circular_saw
+	name = "circular saw"
+	desc = "For heavy duty cutting."
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "saw"
+	hitsound = 'sound/weapons/circsawhit.ogg'
+	throwhitsound =  'sound/weapons/pierce.ogg'
+	flags = CONDUCT
+	force = 45
+	w_class = WEIGHT_CLASS_NORMAL
+	throwforce = 9
+	throw_speed = 2
+	throw_range = 5
+	materials = list(MAT_METAL=10000, MAT_GLASS=6000)
+	origin_tech = "biotech=1;combat=1"
+	attack_verb = list("attacked", "slashed", "sawed", "cut")
+	sharpness = IS_SHARP
+
+
 /obj/item/weapon/surgical_drapes
 	name = "surgical drapes"
 	desc = "Nanotrasen brand surgical drapes provide optimal safety and infection control."

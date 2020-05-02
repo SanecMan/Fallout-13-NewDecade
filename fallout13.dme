@@ -1365,6 +1365,7 @@
 #include "code\modules\fallout\mob\npc\radroach.dm"
 #include "code\modules\fallout\mob\npc\radstag.dm"
 #include "code\modules\fallout\mob\npc\retro_robobrain.dm"
+#include "code\modules\fallout\mob\npc\scorched.dm"
 #include "code\modules\fallout\mob\npc\securitron.dm"
 #include "code\modules\fallout\mob\npc\sentrybot.dm"
 #include "code\modules\fallout\mob\npc\shepka.dm"

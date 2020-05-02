@@ -5,9 +5,9 @@
 	desc = "Вы видели когда-нибудь живого гуля?<br>Гули, это практически мертвые люди, гниющие и плохо пахнущие, прямо как зомби."
 	eng_name = "feral ghoul"
 	eng_desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
-	icon = 'icons/fallout/mobs/animal.dmi'
-	icon_state = "retro_ghoul"
-	icon_living = "retro_ghoul"
+	icon = 'icons/fallout/mobs/ghoul.dmi'
+	icon_state = "retro_ghoul-1"
+	icon_living = "retro_ghoul-1"
 	icon_dead = "retro_ghoul_d"
 	icon_gib = "gib"
 	speak_chance = 0
@@ -60,12 +60,17 @@
 			visible_message("<span class='notice'>Тело [src] разлагается!</span>")
 			gib(FALSE, FALSE, FALSE, TRUE)
 
+/mob/living/simple_animal/hostile/ghoul/New()
+	..()
+	icon_state = "retro_ghoul-[rand(1,5)]"
+	icon_living = "retro_ghoul-[rand(1,5)]"
+
 /mob/living/simple_animal/hostile/ghoul/aggressive
 	name = "Дикий гуль"
 	desc = "Вы видели когда-нибудь голодного гуля?<br>Аналогично другим диким гулям, этот более агрессивен и уверенен в том, что ты являешься отличной едой. <br> У него отсутствует левая рука."
 	eng_name = "feral ghoul"
 	eng_desc = "Have you ever seen a hungry ghoul before?<br>Similar to other feral ghouls, it's more aggressive and confident about the fact that you are the best food around.<br>It is missing a left arm."
-	icon_state = "angry_ghoul"
+	icon_state = "angry_ghoul-1"
 	icon_living = "angry_ghoul"
 	icon_dead = "angry_ghoul_d"
 	icon_gib = "gib"
@@ -78,13 +83,18 @@
 	attacktext = "жует"
 	eng_attacktext = "chomps"
 
+/mob/living/simple_animal/hostile/ghoul/aggressive/New()
+	..()
+	icon_state = "angry_ghoul-[rand(1,5)]"
+	icon_living = "angry_ghoul-[rand(1,5)]"
+
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "Светящийся гуль"
 	desc = "Вы видели когда-нибудь светящегося гуля??<br>Светящиеся гули, это практически мёртвые люди, гниющие и плохо пахнущие, прямо как зомби, и настолько облучённые что стали светиться в темноте."
 	eng_name = "glowing ghoul"
 	eng_desc = "Have you ever seen a glowing ghoul before?<br>Glowing ghouls are necrotic post-humans - rotting, zombie-like mutants, who are so irradiated they actually glow in the dark."
-	icon_state = "retro_glowghoul"
-	icon_living = "retro_glowghoul"
+	icon_state = "retro_glowghoul-1"
+	icon_living = "retro_glowghoul-1"
 	icon_dead = "retro_glowghoul_d"
 	icon_gib = "gib"
 	maxHealth = 100
@@ -97,111 +107,36 @@
 
 /mob/living/simple_animal/hostile/ghoul/glowing/New()
 	..()
+	icon_state = "retro_glowghoul-[rand(1,5)]"
+	icon_living = "retro_glowghoul-[rand(1,5)]"
 	SSradiation.processing += src
 
 /mob/living/simple_animal/hostile/ghoul/soldier
 	name = "Дикий гуль-солдат"
 	eng_name = "armored feral soldier ghoul"
-	icon = 'icons/fallout/mobs/animal.dmi'
-	icon_state = "soldier_ghoul"
-	icon_living = "soldier_ghoul"
+	icon_state = "soldier_ghoul-1"
+	icon_living = "soldier_ghoul-1"
 	icon_dead = "soldier_ghoul_d"
 	icon_gib = "gib"
 	maxHealth = 90
 	health = 90
 
+/mob/living/simple_animal/hostile/ghoul/soldier/New()
+	..()
+	icon_state = "soldier_ghoul-[rand(1,5)]"
+	icon_living = "soldier_ghoul-[rand(1,5)]"
+
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
 	name = "Бронированный дикий гуль-солдат"
 	eng_name = "armored feral soldier ghoul"
-	icon = 'icons/fallout/mobs/animal.dmi'
-	icon_state = "soldier_ghoul_a"
-	icon_living = "soldier_ghoul_a"
+	icon_state = "soldier_ghoul_a-1"
+	icon_living = "soldier_ghoul_a-1"
 	icon_dead = "soldier_ghoul_a_d"
 	icon_gib = "gib"
 	maxHealth = 100
 	health = 100
 
-/mob/living/simple_animal/hostile/ghoul/scorched
-	name = "Горелый"
-	desc = "В дополнение к сморщенной, обгоревшей коже, типичной для гулей, горелые обладают зелеными ультрацитовыми наростами по всему телу, пронизывающими их кожу нерегулярными узорами. Причины образования и предназначение этих ростков неизвестны, но, согласно предварительным исследованиям на местах, проводимым смотрительницей Убежища 76, горелые — это бывшие люди, которые заразились «чумой горелых», распространяемой зверожогами.."
-	eng_name = "scorched"
-	eng_desc = "It's like ghoul, but... not ghoul. What is this?"
-	icon = 'icons/fallout/mobs/animal.dmi'
-	icon_state = "scorched_m"
-	icon_living = "scorched_m"
-	icon_dead = "scorched_m_d"
-	icon_gib = "gib"
-	speak_chance = 1
-	turns_per_move = 5
-	environment_smash = 0
-	response_help = "hugs"
-	response_disarm = "pushes aside"
-	response_harm = "hits"
-	eng_attacktext = "sliced"
-	attacktext = "режет"
-	move_to_delay = 4
-	respawn_time_of_mob = 500000000 //Stalkeros: Чё так много? // iWuna: Надо.
-	maxHealth = 80
-	health = 80
-	self_weight = 45
-
-	faction = list("scorched", "hostile")
-
-	sound_speak_chance = 1
-	sound_speak = list('sound/f13npc/scor_br1.ogg','sound/f13npc/scor_b2.ogg','sound/f13npc/scor_b3.ogg')
-
-	aggro_sound_chance = 50
-	aggro_sound = 'sound/f13npc/ghoul_alert.ogg'
-
-	death_sound = list('sound/f13npc/scor_d1.ogg','sound/f13npc/scor_d2.ogg','sound/f13npc/scor_d3.ogg','sound/f13npc/scor_d4.ogg','sound/f13npc/scor_d5.ogg')
-
-	melee_damage_lower = 15
-	melee_damage_upper = 20
-	aggro_vision_range = 10
-	idle_vision_range = 7
-	attack_sound = "punch"
-	XP = 10
-
-/mob/living/simple_animal/hostile/ghoul/scorched/ranged
-	name = "Горелый"
-	desc = "В дополнение к сморщенной, обгоревшей коже, типичной для гулей, горелые обладают зелеными ультрацитовыми наростами по всему телу, пронизывающими их кожу нерегулярными узорами. Причины образования и предназначение этих ростков неизвестны, но, согласно предварительным исследованиям на местах, проводимым смотрительницей Убежища 76, горелые — это бывшие люди, которые заразились «чумой горелых», распространяемой зверожогами.."
-	eng_name = "scorched"
-	eng_desc = "It's like ghoul, but now ghoul. Oh wait, it's... rifle?"
-	icon = 'icons/fallout/mobs/animal.dmi'
-	icon_state = "scorched_r"
-	icon_living = "scorched_r"
-	icon_dead = "scorched_r_d"
-	icon_gib = "gib"
-	speak_chance = 1
-	turns_per_move = 5
-	environment_smash = 0
-	response_help = "hugs"
-	response_disarm = "pushes aside"
-	response_harm = "бьёт"
-	move_to_delay = 4
-	maxHealth = 80
-	health = 80
-	self_weight = 45
-	ranged = 1
-	ranged_cooldown_time = 200
-	projectiletype = /obj/item/projectile/bullet/F13/c9mmBullet
-	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
-
-	faction = list("scorched", "hostile")
-
-	sound_speak_chance = 1
-	sound_speak = list('sound/f13npc/scor_br1.ogg','sound/f13npc/scor_b2.ogg','sound/f13npc/scor_b3.ogg')
-
-	aggro_sound_chance = 50
-	aggro_sound = 'sound/f13npc/ghoul_alert.ogg'
-
-	death_sound = list('sound/f13npc/scor_d1.ogg','sound/f13npc/scor_d2.ogg','sound/f13npc/scor_d3.ogg','sound/f13npc/scor_d4.ogg','sound/f13npc/scor_d5.ogg')
-
-	melee_damage_lower = 15
-	melee_damage_upper = 20
-	aggro_vision_range = 10
-	idle_vision_range = 7
-	attacktext = "царапает"
-	eng_attacktext = "hits"
-	attack_sound = "punch"
-	XP = 15
+/mob/living/simple_animal/hostile/ghoul/soldier/armored/New()
+	..()
+	icon_state = "soldier_ghoul_a-[rand(1,5)]"
+	icon_living = "soldier_ghoul_a-[rand(1,5)]"
