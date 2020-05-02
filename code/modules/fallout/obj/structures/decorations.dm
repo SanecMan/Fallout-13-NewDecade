@@ -6,9 +6,42 @@
 	layer = 5
 	resistance_flags = INDESTRUCTIBLE
 
+/obj/structure/decoration_f13/stanok
+	icon = 'icons/fallout/objects/structures/workbench_old.dmi'
+	icon_state = "open"
+
+/obj/structure/decoration_f13/stanok/New()
+	..()
+	var/atom/movable/S = new (locate(x+1,y,z))
+	S.density = 1
+	S.anchored = 1
+	S.icon = null
+	S.verbs.Cut()
+	S = new (locate(x+2,y,z))
+	S.density = 1
+	S.anchored = 1
+	S.icon = null
+	S.verbs.Cut()
+	S = new (locate(x+2,y,z))
+	S.density = 1
+	S.anchored = 1
+	S.icon = null
+	S.verbs.Cut()
+
+/obj/structure/decoration_f13/stanok/opened
+	icon_state = "open"
+
+/obj/structure/decoration_f13/stanok/closed
+	icon_state = "close"
+
+/obj/structure/decoration_f13/stanok/working
+	icon_state = "working"
+
 /obj/structure/decoration_f13/panel
 	name = "прибор"
 	desc = "Какой-то военный прибор.  Не работает."
+	eng_name = "strange panel"
+	eng_desc = "Something like... army computer?"
 	icon_state = "panel_1"
 
 /obj/structure/decoration_f13/panel/v2
@@ -17,12 +50,16 @@
 /obj/structure/decoration_f13/stove
 	name = "плита"
 	desc = "Довоенная плита, ржавая, старая и нерабочая."
+	eng_name = "stove"
+	eng_desc = "Pre-war stove. Rusted, old and broken."
 	icon_state = "gasstove"
 	pass_flags = LETPASSTHROW
 
 /obj/structure/decoration_f13/radiator
 	name = "радиатор"
 	desc = "Большие ржавые трубы, когда-то служившие системой отопления..."
+	eng_name = "radiator"
+	eng_desc = "Big rust tubes, they was kinda heating system."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "radiator"
 	layer = 3.2
@@ -30,7 +67,9 @@
 
 /obj/structure/decoration_f13/dresser
 	name = "шкаф для одежды"
-	desc = "A nicely-crafted wooden dresser. It's filled with lots of undies."
+	desc = "Красивый шкафчик для одежды."
+	eng_name = "dresser"
+	eng_desc = "A nicely-crafted wooden dresser. It's filled with lots of undies."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "wardrobe"
 	density = 1
@@ -72,6 +111,8 @@
 /obj/structure/decoration_f13/decal/blood
 	name = "кровь"
 	desc = "Кровь... Много мать её крови. Целое художество."
+	eng_name = "blood"
+	eng_desc = "Blood. A lot of blood."
 	icon_state = "blood_pic_2"
 
 /obj/structure/decoration_f13/decal/blood/hands
@@ -98,6 +139,8 @@
 /obj/structure/decoration_f13/decal/hole
 	name = "дырка от пули"
 	desc = "Походе, кто-то вёл тут ожесточенную перестрелку... Когда-то."
+	eng_name = "bullet hole"
+	eng_desc = "There was something like a western pew-pew?"
 	icon_state = "bhole-small"
 
 /obj/structure/decoration_f13/decal/hole/medium
@@ -109,6 +152,8 @@
 /obj/structure/decoration_f13/poster
 	name = "постер"
 	desc = "Просто постер."
+	eng_name = "poster"
+	eng_desc = "Just a poster."
 	icon = 'icons/obj/contraband.dmi'
 	icon_state = "rolled_poster"
 	anchored = 1
@@ -149,6 +194,8 @@
 /obj/structure/decoration_f13/poster/pinup
 	name = "пинап"
 	desc = "постер с красивой женщиной, раньше их называли пинапами..."
+	eng_name = "pinup"
+	eng_desc = "Poster with woman."
 	icon_state = "poster4"
 
 /obj/structure/decoration_f13/poster/pinup/v2

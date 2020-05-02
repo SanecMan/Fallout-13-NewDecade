@@ -9,6 +9,8 @@
 /obj/structure/simple_door
 	name = "деревянная дверь"
 	desc = "Открывается и закрывается! Скучно..."
+	eng_name = "wooden door"
+	eng_desc = "It's opens and closes! Boring..."
 	icon = 'icons/fallout/objects/structures/doors.dmi'
 	icon_state = "house"
 	opacity = 1
@@ -16,6 +18,7 @@
 	anchored = 1
 	layer = CLOSED_DOOR_LAYER
 	explosion_block = 0.5
+	resistance_flags = INDESTRUCTIBLE //потому что так надо.
 	var/can_hold_padlock = FALSE
 	var/obj/item/lock/padlock
 	var/door_type = "house"
@@ -235,6 +238,8 @@
 /obj/structure/simple_door/manhole
 	name = "канализационный люк"
 	desc = "Небольшой люк, дающий доступ к канализации."
+	eng_name = "manhole"
+	eng_desc = "This manhole leads to the sewers."
 	icon_state = "manhole"
 	door_type = "manhole"
 	opacity = 0
@@ -267,13 +272,16 @@
 
 /obj/structure/simple_door/dirtyglass
 	desc = "Окно настолько грязное, что ничего не разглядеть."
+	eng_desc = "The window too dirty, can't see anything behind."
 	icon_state = "dirtyglass"
 	door_type = "dirtyglass"
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/fakeglass
-	name = "damaged wooden door"
-	desc = "It still somehow opens and closes."
+	name = "поврежденная деревянная дверь"
+	desc = "Ну, она хотябы всё еще открывается и закрывается."
+	eng_name = "damaged wooden door"
+	eng_desc = "It still somehow opens and closes."
 	icon_state = "fakeglass"
 	door_type = "fakeglass"
 	can_hold_padlock = TRUE
@@ -287,7 +295,8 @@
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/glass
-	desc = "A glass is quite clean, someone took care of this door."
+	desc = "Стекло выглядит почти чистым, похоже, кто-то заботился об этой двери."
+	eng_desc = "A glass is quite clean, someone took care of this door."
 	icon_state = "glass"
 	door_type = "glass"
 	opaque = 0
@@ -300,7 +309,8 @@
 	can_hold_padlock = TRUE
 
 /obj/structure/simple_door/metal
-	name = "metal door"
+	name = "металлическая дверь"
+	eng_name = "metal door"
 	material_type = /obj/item/stack/sheet/metal
 	open_sound = "sound/f13machines/doorstore_open.ogg"
 	close_sound = "sound/f13machines/doorstore_close.ogg"
@@ -308,6 +318,7 @@
 
 /obj/structure/simple_door/metal/dirtystore
 	desc = "Металлическая дверь, тут есть окошко, но оно настолько покрыто грязью, что ничего не разглядеть."
+	eng_desc = "Metal door, there is window, but you can't see anything because it's too dirty."
 	icon_state = "dirtystore"
 	door_type = "dirtystore"
 	can_hold_padlock = TRUE
@@ -322,6 +333,8 @@
 /obj/structure/simple_door/metal/barred
 	name = "решетчатая дверь"
 	desc = "Решетки. Не важно с какой стороны ты за ними, ты же всегда за РЕШЕТКОЙ?"
+	eng_name = "barred door"
+	eng_desc = "Bars. No matters which side you're from, you still BEHIND bars."
 	icon_state = "barred"
 	door_type = "barred"
 	open_sound = "sound/f13machines/doorchainlink_open.ogg"
@@ -332,6 +345,8 @@
 /obj/structure/simple_door/metal/ventilation
 	name = "вентиляционный люк"
 	desc = "Приглядевшись, вы замечаете рукоятку, возможно если её дёрнуть, можно будет попасть туда?"
+	eng_name = "ventilation"
+	eng_desc = "You see handle, what if i pull it?"
 	icon_state = "ventilation"
 	door_type = "ventilation"
 	open_sound = "sound/f13machines/doorhidden_open.ogg"
@@ -341,8 +356,10 @@
 	closing_time = 20
 
 /obj/structure/simple_door/metal/vault
-	name = "vault wall"
-	desc = "A sturdy and cold metal wall."
+	name = "стена убежища"
+	desc = "Холодный металл. Бр..."
+	eng_name = "vault wall"
+	eng_desc = "A sturdy and cold metal wall."
 	icon = 'icons/fallout/turfs/walls/vault.dmi'
 	icon_state = "vaultfwall"
 	door_type = "vaultfwall"
@@ -361,6 +378,8 @@
 /obj/structure/simple_door/blast
 	name = "гермозатвор"
 	desc = "Гермозатвор, создан специально чтобы выдерживать множественные взрывы. Выглядит грозно."
+	eng_name = "blast door"
+	eng_desc = "This blast door looks very complex and big."
 	icon_state = "blastdoor"
 	door_type = "blastdoor"
 	material_type = /obj/item/stack/sheet/plasteel
@@ -374,6 +393,8 @@
 /obj/structure/simple_door/bunker
 	name = "шлюз"
 	desc = "An olive green painted airlock.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
+	eng_name = "airlock"
+	eng_desc = "An olive green painted airlock.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
 	icon_state = "bunker"
 	door_type = "bunker"
 	material_type = /obj/item/stack/sheet/metal
@@ -384,12 +405,14 @@
 
 /obj/structure/simple_door/bunker/vault
 	desc = "шлюз бункера."
+	eng_desc = "vault airlock."
 	icon_state = "vault"
 	door_type = "vault"
 	explosion_block = 8
 
 /obj/structure/simple_door/bunker/glass
 	desc = "An olive green painted airlock, with semi-transparent glass window.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
+	eng_desc = "An olive green painted airlock, with semi-transparent glass window.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
 	icon_state = "bunkerglass"
 	door_type = "bunkerglass"
 	explosion_block = 4 //A glass window in it, reduces the resistance, am I right?
@@ -397,6 +420,7 @@
 
 /obj/structure/simple_door/bunker/glass/vault
 	desc = "шлюз бункера с окошком."
+	eng_desc = "airlock with window!"
 	icon_state = "vault_glass"
 	door_type = "vault_glass"
 	explosion_block = 7 //A glass window in it, reduces the resistance, am I right?

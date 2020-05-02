@@ -250,3 +250,11 @@
 /obj/item/weapon/storage/bag/lockpicks/remove_from_storage(obj/item/W, atom/new_location, burn = 0)
 	opened = TRUE
 	return ..()
+
+/// RANDOM LOCK ///
+/obj/item/lock/random
+	id = "null_blya"
+
+/obj/item/lock/random/New()
+	..()
+	id = "[rand(1,10000)]"

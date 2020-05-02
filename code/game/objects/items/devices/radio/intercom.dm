@@ -456,6 +456,113 @@
 /obj/item/device/radio/large_radio/add_blood(list/blood_dna)
 	return 0
 
+/obj/item/device/radio/army
+	name = "армейский радиопередатчик"
+	desc = "Вау! Рабочая военная рация!"
+	eng_desc = "Wow! Working army radio!"
+	icon_state = "army_radio"
+	anchored = 1
+	w_class = WEIGHT_CLASS_BULKY
+	canhear_range = 2
+	var/number = 0
+	var/anyai = 1
+	var/mob/living/silicon/ai/ai = list()
+	var/last_tick //used to delay the powercheck
+	var/busy = 0
+	var/soundLength = 50
+	var/soundFile = 'sound/f13music/mysterious_stranger.ogg'
+	var/songnumber = 1
+	dog_fashion = null
+
+/obj/item/device/radio/army/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+	src.playAudio(user)
+	return ..()
+
+/obj/item/device/radio/army/attack_self(mob/user as mob)
+	src.playAudio(user)
+	return
+
+/obj/item/device/radio/army/New()
+	..()
+	START_PROCESSING(SSobj, src)
+
+/obj/item/device/radio/army/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
+
+/obj/item/device/radio/army/attack_ai(mob/user)
+	interact(user)
+	src.playAudio(user)
+	return ..()
+
+/obj/item/device/radio/army/attack_hand(mob/user)
+	interact(user)
+	src.playAudio(user)
+	return ..()
+
+/obj/item/device/radio/army/proc/playAudio(mob/user)
+	if(!src.busy)
+		src.busy = 1
+
+		songnumber = pick(1,2)
+		if(songnumber == 1)
+			soundFile = 'sound/f13music/1983_radio_chatter_eng.ogg'
+			soundLength = 550200
+		if(songnumber == 2)
+			soundFile = 'sound/f13music/enclave_washington.ogg'
+			soundLength = 560
+
+		playsound(get_turf(src),src.soundFile,50)
+		src.add_fingerprint(user)
+		spawn(src.soundLength)
+			src.icon_state = initial(src.icon_state)
+			src.busy = 0
+	return
+
+
+/obj/item/device/radio/army/interact(mob/user)
+	..()
+	ui_interact(user, state = default_state)
+
+/obj/item/device/radio/army/receive_range(freq, level)
+	if(!on)
+		return -1
+	if(wires.is_cut(WIRE_RX))
+		return -1
+	if(!(0 in level))
+		var/turf/position = get_turf(src)
+		if(isnull(position) || !(position.z in level))
+			return -1
+	if(!src.listening)
+		return -1
+	if(freq == SYND_FREQ)
+		if(!(src.syndie))
+			return -1//Prevents broadcast of messages over devices lacking the encryption
+
+	return canhear_range
+
+
+/obj/item/device/radio/army/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, list/spans)
+	if(!anyai && !(speaker in ai))
+		return
+	..()
+
+/obj/item/device/radio/army/process()
+	if(((world.timeofday - last_tick) > 30) || ((world.timeofday - last_tick) < 0))
+		last_tick = world.timeofday
+
+		var/area/A = get_area_master(src)
+		if(!A || emped)
+			on = 0
+		else
+			on = A.powered(EQUIP) // set "on" to the power status
+
+		if(!on)
+			icon_state = "army_radio"
+		else
+			icon_state = "army_radio"
+
+
 /obj/item/device/radio/intercom/old_mic
 	name = "Старый Микрофон"
 	icon_state = "radio_mic2"
