@@ -21,7 +21,6 @@
 				to_chat(src, "<span class='userdanger'>[soften_text]</span>")
 			else
 				to_chat(src, "<span class='userdanger'>Your armor softens the blow!</span>")
-		return armor
 	else
 		if(armor && armour_penetration)
 			armor = max(0, armor - armour_penetration)
@@ -39,7 +38,7 @@
 				to_chat(src, "<span class='userdanger'>[soften_text]</span>")
 			else
 				to_chat(src, "<span class='userdanger'>Ваша броня смягчила урон!</span>")
-		return armor
+	return armor
 
 
 

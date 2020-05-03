@@ -43,11 +43,13 @@
 		return name_override
 	if(face_name)
 		if(id_name && (id_name != face_name))
-			return client.select_lang("[face_name]","[face_name]")
+			return "[face_name]"
 		return face_name
 	if(id_name)
 		return id_name
-	return client.select_lang("Неизвестная личность","Unknown")
+	if(client)
+		return client.select_lang("Неизвестная личность","Unknown")
+	return "Unknown"
 
 //Returns "Unknown" if facially disfigured and real_name if not. Useful for setting name when Fluacided or when updating a human's name variable
 /mob/living/carbon/human/proc/get_face_name(if_no_face="Неизвестная личность")
