@@ -11,6 +11,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "центральному штабу НКР"
+	eng_supervisors = "the central command of NCR"
 	selection_color = "#9d9fec"
 	minimal_player_age = 36
 	whitelist_on = 1
@@ -76,6 +77,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "генералу"
+	eng_supervisors = "the General"
 	selection_color = "#9d9fec"
 	minimal_player_age = 31
 	whitelist_on = 1
@@ -139,6 +141,7 @@
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "центральному штабу НКР"
+	eng_supervisors = "the Central command of NCR"
 	selection_color = "#9d9fec"
 	minimal_player_age = 25
 	whitelist_on = 1
@@ -199,6 +202,7 @@
 	total_positions = 6
 	spawn_positions = 6
 	supervisors = "генералу"
+	eng_supervisors = "the General"
 	selection_color = "#9d9fec"
 	minimal_player_age = 16
 	whitelist_on = 0

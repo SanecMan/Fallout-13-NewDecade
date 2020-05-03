@@ -2,7 +2,7 @@
 	set name = "Who"
 	set category = "OOC"
 
-	var/msg = "<b>Текущие игроки:</b>\n"
+	var/msg = usr.client.select_lang("<b>Текущие игроки:</b>\n", "<b>Current players:</b>\n")
 
 	var/list/Lines = list()
 

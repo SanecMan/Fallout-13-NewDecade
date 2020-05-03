@@ -363,7 +363,10 @@
 		if(deathmessage)
 			visible_message("<span class='danger'>[src] [deathmessage]</span>")
 		else if(!del_on_death)
-			visible_message("<span class='danger'>[src] перестает двигаться...</span>")
+			if(usr.client.language == "English")
+				visible_message("<span class='danger'>[src.eng_name] stops moving...</span>")
+			else
+				visible_message("<span class='danger'>[src] перестает двигаться...</span>")
 	if(del_on_death)
 		ghostize()
 		//Prevent infinite loops if the mob Destroy() is overriden in such

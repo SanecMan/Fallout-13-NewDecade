@@ -277,8 +277,12 @@
 		if(M.attack_sound)
 			playsound(loc, M.attack_sound, 50, 1, 1)
 		M.do_attack_animation(src)
-		visible_message("<span class='danger'>\The [M] [M.attacktext] [src]!</span>", \
-						"<span class='userdanger'>\The [M] [M.attacktext] [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+		if(usr.client.language == "English")
+			visible_message("<span class='danger'>\The [M.eng_name] [M.eng_attacktext] [src]!</span>", \
+							"<span class='userdanger'>\The [M] [M.eng_attacktext] [src]!</span>", null, COMBAT_MESSAGE_RANGE)
+		else
+			visible_message("<span class='danger'>[M] [M.attacktext] [src]!</span>", \
+							"<span class='userdanger'>[M] [M.attacktext] [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 		add_logs(M, src, "attacked")
 		return 1
 
