@@ -1,6 +1,8 @@
 /obj/item/clothing/suit/armor/f13/radist_armor
-	name = "radist plate carrier"
+	name = "плитник"
 	desc = "Плитник радиста Анклава."
+	eng_name = "radist plate carrier"
+	eng_desc = "Plate Carrier of Enclave"
 	icon_state = "unit_carrier"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	armor = list(melee = 65, bullet = 50, laser = 20, energy = 10, bomb = 45, bio = 0, rad = 0, fire = 10, acid = 0)

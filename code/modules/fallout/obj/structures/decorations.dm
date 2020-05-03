@@ -65,6 +65,13 @@
 	layer = 3.2
 	density = 0
 
+/obj/structure/decoration_f13/old_tv
+	name = "старый телевизор"
+	desc = "Старый телевизор, покрыт пылью а электроника уже никогда не заработает."
+	eng_name = "old tv"
+	eng_desc = "An old tv."
+	icon_state = "tv"
+
 /obj/structure/decoration_f13/dresser
 	name = "шкаф для одежды"
 	desc = "Красивый шкафчик для одежды."
