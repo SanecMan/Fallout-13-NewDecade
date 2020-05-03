@@ -201,7 +201,7 @@
 			f_name = "some "
 		else
 			f_name = ""
-		f_name += usr.client.select_lang("<span class='danger'>blood-stained</span> [eng_name]!", "<span class='danger'>в крови</span> [name]!")
+		f_name += usr.client.select_lang("<span class='danger'>blood-stained</span> [eng_name]!","<span class='danger'>в крови</span> [name]!")
 		if(user.client && usr.client.language == "English")
 			to_chat(user, "[bicon(src)] This is [eng_f_name]")
 		else

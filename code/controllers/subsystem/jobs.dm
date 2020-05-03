@@ -435,7 +435,7 @@ var/datum/subsystem/job/SSjob
 			H = new_mob
 
 //	to_chat(H, "<b>You are the [job.title].</b>")
-	to_chat(H, usr.client.select_lang("<b>Как [job.title] вы подчиняетесь [job.supervisors].</b>", "<b>As [job.title] you answer directly to [job.eng_supervisors].</b>"))
+	to_chat(H, "<b>Как [job.title] вы подчиняетесь [job.supervisors].</b>")
 	if(job && H)
 		job.after_spawn(H)
 
