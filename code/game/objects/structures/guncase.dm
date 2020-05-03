@@ -136,7 +136,7 @@
 
 /obj/structure/new_closet/update_icon()
 	cut_overlays()
-	for(var/i = contents.len, i >= 1, i--)
+	for(var/i = Ceiling(contents.len, 10), i >= 1, i--)
 		add_overlay(image(icon = src.icon, icon_state = "[item_type]", pixel_x = 4 * (i -1) ))
 	if(open)
 		add_overlay("[icon_state]_open")
