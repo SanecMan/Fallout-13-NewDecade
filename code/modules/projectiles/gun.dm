@@ -129,7 +129,7 @@
 
 
 /obj/item/weapon/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
-	to_chat(user, "<span class='danger'>*клик*</span>")
+	to_chat(user, user.client.select_lang("<span class='danger'>*клик*</span>", "<span class='danger'>*click*</span>"))
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 
 
@@ -143,9 +143,15 @@
 		playsound(user, fire_sound, 50, 1)
 		if(message)
 			if(pointblank)
-				user.visible_message("<span class='danger'>[user] стреляет из [src] в упор [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				if(usr.client.language == "English")
+					user.visible_message("<span class='danger'>[user] fires [src.eng_name] at point-blank [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				else
+					user.visible_message("<span class='danger'>[user] стреляет из [src] в упор [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
 			else
-				user.visible_message("<span class='danger'>[user] стреляет из [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				if(usr.client.language == "English")
+					user.visible_message("<span class='danger'>[user] fires [src.eng_name]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				else
+					user.visible_message("<span class='danger'>[user] стреляет из [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
 
 /obj/item/weapon/gun/emp_act(severity)
 	for(var/obj/O in contents)

@@ -343,7 +343,7 @@ var/global/image/fire_overlay = image("icon" = 'icons/effects/fire.dmi', "icon_s
 
 /obj/item/proc/hit_reaction(mob/living/carbon/human/owner, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(prob(final_block_chance))
-		owner.visible_message("<span class='danger'>[owner] blocks [attack_text] with [src]!</span>")
+		owner.visible_message(usr.client.select_lang("<span class='danger'>[owner] блокирует [attack_text] используя [src]!</span>", "<span class='danger'>[owner] blocks [attack_text] with [src.eng_name]!</span>"))
 		return 1
 	return 0
 
