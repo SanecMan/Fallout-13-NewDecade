@@ -37,6 +37,9 @@
 /turf/open/floor/holofloor/beach/water
 	name = "water"
 	icon_state = "water"
+	slowdown = 2
+	step_sounds = list("human" = "waterfootsteps")
+	flags = ADJACENCIES_OVERLAY
 
 /turf/open/floor/holofloor/asteroid
 	name = "asteroid"

@@ -45,7 +45,7 @@
 	for (var/turf/t in range(1,src))
 		t.remove_cached_overlay(type)
 
-var/global/list/smooth_files = list(/turf/open/indestructible/ground/desert = 'icons/fallout/turfs/ground_smooth.dmi')
+var/global/list/smooth_files = list(/turf/open/indestructible/ground/desert = 'icons/fallout/turfs/ground_smooth.dmi', /turf/open/floor/holofloor/beach/water = 'icons/fallout/turfs/water_smooth.dmi')
 
 /turf/proc/updateAdjacenciesOverlays(type)
 	if(!smooth_files[type])

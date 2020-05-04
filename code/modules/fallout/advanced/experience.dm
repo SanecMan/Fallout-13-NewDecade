@@ -26,7 +26,10 @@
 		if(owner.perks.have(/datum/perk/daddyboy))
 			XP *= 1.1
 	current += XP
-	to_chat(owner, usr.client.select_lang("<font color='blue'>You get [XP] xp! ([toNextLevel()] to next level remain)</font>", "<font color='blue'>Вы получили [XP] опыта! ([toNextLevel()] осталось до следующего уровня)</font>"))
+	if(usr.client.language == "English")
+		to_chat(owner, "<font color='blue'>You get [XP] xp! ([toNextLevel()] to next level remain)</font>")
+	else if(usr.client.language == "Russian")
+		to_chat(owner, "<font color='blue'>Вы получили [XP] опыта! ([toNextLevel()] осталось до следующего уровня)</font>")
 	if(toNextLevel() > 0)
 		playsound(owner, "sound/f13effects/xp_add.ogg", 50)
 	else
