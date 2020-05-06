@@ -157,7 +157,7 @@ other types of metals and chemistry for reagents).
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 6000, MAT_GLASS = 1000) //expensive, but no need for miners.
 	build_path = /obj/item/weapon/pickaxe/drill
-	category = list("Mining Designs")
+	category = list("Imported")
 
 /datum/design/drill_diamond
 	name = "Diamond-Tipped Mining Drill"

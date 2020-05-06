@@ -42,6 +42,7 @@
 	desc = "Какой-то военный прибор.  Не работает."
 	eng_name = "strange panel"
 	eng_desc = "Something like... army computer?"
+	layer = 3
 	icon_state = "panel_1"
 
 /obj/structure/decoration_f13/panel/v2
@@ -52,6 +53,7 @@
 	desc = "Довоенная плита, ржавая, старая и нерабочая."
 	eng_name = "stove"
 	eng_desc = "Pre-war stove. Rusted, old and broken."
+	layer = 3
 	icon_state = "gasstove"
 	pass_flags = LETPASSTHROW
 
@@ -71,6 +73,7 @@
 	eng_name = "old tv"
 	eng_desc = "An old tv."
 	icon_state = "tv"
+	layer = 3
 
 /obj/structure/decoration_f13/dresser
 	name = "шкаф для одежды"
