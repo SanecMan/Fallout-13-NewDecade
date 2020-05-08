@@ -311,3 +311,4 @@
 	desc = "Подкрепившись этим ЗАМЕЧТАТЕЛЬНЫМ супом, вам захотелось работать в шахтах в сорока градусный мороз!"
 	icon_state = "sawsoup"
 	bonus_reagents = list("nutriment" = 1, "vitamin" = 3, "mine_salve" = 1)
+	price = 150

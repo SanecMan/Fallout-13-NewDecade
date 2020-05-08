@@ -39,6 +39,7 @@
 	put_on_delay = 30
 	strip_delay = 30
 	self_weight = 3
+	price = 1200
 
 /obj/item/clothing/suit/armor/f13/punk
 	name = "armor kit"
@@ -50,6 +51,7 @@
 	put_on_delay = 30
 	strip_delay = 30
 	self_weight = 3
+	price = 1400
 
 /obj/item/clothing/suit/armor/f13/chestplate
 	name = "metal chestplate"
@@ -62,6 +64,7 @@
 	strip_delay = 10
 	resistance_flags = FIRE_PROOF
 	self_weight = 10
+	price = 1500
 
 /obj/item/clothing/suit/armor/f13/chestplate/New()
 	item_state = pick("metal_chestplate", "metal_chestplate_2")
@@ -164,6 +167,7 @@
 	put_on_delay = 40
 	strip_delay = 40
 	self_weight = 3
+	price = 1250
 
 /obj/item/clothing/suit/armor/f13/metalarmor
 	name = "metal armor"
@@ -177,6 +181,7 @@
 	strip_delay = 60
 	resistance_flags = FIRE_PROOF
 	self_weight = 15
+	price = 1500
 
 /obj/item/clothing/suit/armor/f13/bmetalarmor
 	name = "black metal armor"
@@ -190,6 +195,7 @@
 	strip_delay = 60
 	resistance_flags = FIRE_PROOF
 	self_weight = 12
+	price = 2500
 
 /obj/item/clothing/suit/armor/f13/bmetalarmor/New()
 	item_state = pick("bmetalarmor", "bmetalarmor_2")
@@ -286,6 +292,7 @@
 	strip_delay = 60
 	resistance_flags = FIRE_PROOF
 	self_weight = 20
+	price = 5500
 
 /obj/item/clothing/suit/armor/f13/combat_mk1/New()
 	item_state = pick("combat_mk1", "combat_mk1_2")
@@ -301,7 +308,7 @@
 	strip_delay = 70
 	resistance_flags = FIRE_PROOF
 	self_weight = 15
-
+	price = 8000
 /obj/item/clothing/suit/armor/f13/combat_mk2/New()
 	item_state = pick("combat_mk2", "combat_mk2_2")
 

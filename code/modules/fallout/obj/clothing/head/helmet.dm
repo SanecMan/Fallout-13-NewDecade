@@ -26,6 +26,7 @@
 	put_on_delay = 10
 	strip_delay = 20
 	self_weight = 5
+	price = 3500
 
 /obj/item/clothing/head/helmet/f13/tribal
 	name = "tribal power helmet"
@@ -50,6 +51,7 @@
 	put_on_delay = 10
 	strip_delay = 10
 	self_weight = 1.5
+	price = 1200
 
 /obj/item/clothing/head/helmet/f13/firefighter
 	name = "firefighter helmet"
@@ -67,6 +69,7 @@
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
 	self_weight = 1.5
+	price = 1150
 
 /obj/item/clothing/head/helmet/f13/supaflyhelmet
 	name = "supa-fly raider helmet"
@@ -79,6 +82,7 @@
 	put_on_delay = 10
 	strip_delay = 20
 	self_weight = 1
+	price = 400
 
 /obj/item/clothing/head/helmet/f13/yankee
 	name = "yankee raider helmet"
@@ -91,6 +95,7 @@
 	put_on_delay = 10
 	strip_delay = 30
 	self_weight = 1.5
+	price = 450
 
 /obj/item/clothing/head/helmet/f13/eyebot
 	name = "eyebot helmet"
@@ -127,6 +132,7 @@
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
 	self_weight = 2
+	price = 2500
 
 /obj/item/clothing/head/helmet/f13/combat_mk1
 	name = "reinforced combat helmet mark I"
@@ -139,6 +145,7 @@
 	strip_delay = 40
 	resistance_flags = FIRE_PROOF
 	self_weight = 5
+	price = 3500
 
 /obj/item/clothing/head/helmet/f13/combat_mk2
 	name = "reinforced combat helmet mark II"
@@ -151,6 +158,7 @@
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
 	self_weight = 7
+	price = 4500
 
 /obj/item/clothing/head/helmet/f13/brotherhood_helmet
 	name = "Brotherhood combat helmet"
@@ -460,6 +468,7 @@
 
 /obj/item/clothing/head/hardhat/f13/headlamp
 	name = "налобный фонарик"
+	eng_name = "headlamp"
 	icon_state = "hardhat0_head"
 	item_state = "hardhat0_head"
 	light_color = LIGHT_COLOR_YELLOW
@@ -470,6 +479,7 @@
 	flags_inv = 0
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	resistance_flags = ACID_PROOF
+	price = 850
 
 /* /obj/item/clothing/head/helmet/f13/headlamp/proc/toogle_light(mob/user)
 	on = !on

@@ -31,6 +31,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	price = 600
 
 /obj/item/clothing/gloves/f13/military
 	name = "military gloves"
@@ -45,6 +46,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	price = 1200
 
 /obj/item/clothing/gloves/f13/sstgloves
 	name = "M.I gloves"
@@ -73,6 +75,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	price = 1000
 
 /obj/item/clothing/gloves/f13/legionlegate
 	name = "legate gloves"

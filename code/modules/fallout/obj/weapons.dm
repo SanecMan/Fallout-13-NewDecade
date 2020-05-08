@@ -64,6 +64,7 @@
 	desc = "This big, long, sharp blade is good for cleaving limbs off of the native Joshua trees or from an unlucky mutant. It appears as a long, sharpened lawn mower blade taped to a wooden handle."
 	icon_state = "imp_machete"
 	force = 18
+	price = 900
 
 /obj/item/weapon/machete/serratedmachete
 	name = "Serrated machete"
@@ -83,6 +84,7 @@
 	throw_range = 4
 	throwforce = 10
 	w_class = 3
+	price = 450
 
 /obj/item/weapon/pipe/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
@@ -271,6 +273,7 @@
 /obj/item/weapon/hammer
 	name = "молоток"
 	desc = "A simple construction tool, that can also be used to bring the revenge upon those who kidnapped you and kept you in the basement for several years." //Old Boy (2003)
+	eng_name = "hammer"
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "hammer"
 	slot_flags = SLOT_BELT
@@ -279,6 +282,7 @@
 	w_class = 3
 	obj_integrity = 200
 	max_integrity = 200
+	price = 350
 
 /obj/item/weapon/twohanded/sledgehammer
 	name = "sledgehammer"
@@ -327,6 +331,7 @@
 	w_class = 5
 	var/charged = 1
 	origin_tech = "combat=5;powerstorage=5"
+	price = 4500
 
 /obj/item/weapon/twohanded/superhammer/proc/shock(mob/living/target)
 	var/datum/effect_system/lightning_spread/s = new /datum/effect_system/lightning_spread
@@ -368,3 +373,4 @@
 	force = 12
 	throwforce = 8
 	digspeed = 45
+	price = 1000

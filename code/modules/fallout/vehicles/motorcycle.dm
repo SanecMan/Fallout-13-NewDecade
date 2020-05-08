@@ -48,6 +48,7 @@
 	eng_name = "motorcycle key"
 	eng_desc = "A keyring with a small steel key.<br>By the look of the key cuts it likely belongs to a motorcycle."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
+	price = 4500
 
 /obj/item/key/motorcycle/New()
 	..()

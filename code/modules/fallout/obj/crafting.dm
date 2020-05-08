@@ -8,6 +8,7 @@
 	eng_desc = "Prototype of modular receiver for weapon."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "reciever"
+	price = 850
 
 /obj/item/weaponcrafting/stock
 	name = "ружейная ложа"
@@ -16,6 +17,7 @@
 	eng_desc = "A classic rifle stock that doubles as a grip, roughly carved out of wood."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "riflestock"
+	price = 250
 
 /obj/item/weaponcrafting/handle/rifle
 	name = "винтовочная рукоятка"
@@ -24,6 +26,7 @@
 	eng_desc = "Just a handle."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "handle_a_1"
+	price = 350
 
 /obj/item/weaponcrafting/handle/rifle/initialize()
 	..()
@@ -33,6 +36,7 @@
 	name = "пистолетная рукоятка"
 	eng_name = "pistol handle"
 	icon_state = "handle_p_1"
+	price = 250
 
 /obj/item/weaponcrafting/handle/pistol/initialize()
 	..()
@@ -54,6 +58,8 @@
 	eng_name = "diode"
 	eng_desc = "It looks like something I saw in that useless broken television set once.<br>That thing is probably used in some electronic devices."
 	icon_state = "diode_1"
+	price = 100
+
 /obj/item/crafting/diode/initialize()
 	..()
 	icon_state = "diode_[rand(1,3)]"
@@ -64,6 +70,8 @@
 	eng_name = "transistor"
 	eng_desc = "Popov would love it, but Tesla got to see it.<br>The most useful electrical component."
 	icon_state = "transistor_1"
+	price = 150
+
 /obj/item/crafting/transistor/initialize()
 	..()
 	icon_state = "transistor_[rand(1,3)]"
@@ -74,6 +82,8 @@
 	eng_name = "capacitor"
 	eng_desc = "It looks like something I saw inside of the radio once.<br>It seems like it's the most basic electrical component."
 	icon_state = "capacitor_1"
+	price = 200
+
 /obj/item/crafting/capacitor/initialize()
 	..()
 	icon_state = "capacitor_[rand(1,3)]"
@@ -84,6 +94,8 @@
 	eng_name = "fuse"
 	eng_desc = "A tiny glass tube with some wiring stuck inside of it.<br>I have no idea what it is."
 	icon_state = "fuse_1"
+	price = 100
+
 /obj/item/crafting/fuse/initialize()
 	..()
 	icon_state = "fuse_[rand(1,3)]"
@@ -94,6 +106,8 @@
 	eng_name = "resistor"
 	eng_desc = "Tesla Warrior says, \"Stop right there, criminal electron!\"<br>Electron says, \"You'll never catch me!!!\"<br>*Zoom* *Zoom* *Pew* *Pew* *Pew*"
 	icon_state = "resistor_1"
+	price = 250
+
 /obj/item/crafting/resistor/initialize()
 	..()
 	icon_state = "resistor_[rand(1,3)]"
@@ -104,6 +118,8 @@
 	eng_name = "switch"
 	eng_desc = "A common switch, used to light up the flashlight or activate a bomb timer." //Why i code it?
 	icon_state = "switch_1"
+	price = 200
+
 /obj/item/crafting/switch/initialize()
 	..()
 	icon_state = "switch_[rand(1,3)]"
@@ -114,6 +130,8 @@
 	eng_name = "bulb"
 	eng_desc = "And at last I see the light,<br>And it's like the fog has lifted,<br>And at last I see the light,<br>And it's like the sky is new,<br>And it's warm and real and bright,<br>And the world has somehow shifted,<br>All at once everything looks different."
 	icon_state = "bulb_1"
+	price = 100
+
 /obj/item/crafting/bulb/initialize()
 	..()
 	icon_state = "bulb_[rand(1,3)]"
@@ -124,6 +142,8 @@
 	eng_name = "empty circuit board"
 	eng_desc = "A plastic board used to hold all other electrical components together."
 	icon_state = "board_1"
+	price = 350
+
 /obj/item/crafting/board/initialize()
 	..()
 	icon_state = "board_[rand(1,3)]"
@@ -134,6 +154,7 @@
 	eng_name = "buzzer"
 	eng_desc = "I can almost hear it buzzing. Except it's not."
 	icon_state = "buzzer"
+	price = 200
 
 /obj/item/crafting/frame
 	name = "собранная плата"
@@ -141,6 +162,7 @@
 	eng_name = "circuit board assembly"
 	eng_desc = "A printed circuit board - a complex electrical component."
 	icon_state = "frame"
+	price = 450
 
 /obj/item/crafting/small_gear
 	name = "маленькая шестерня"
@@ -148,6 +170,7 @@
 	eng_name = "small gear"
 	eng_desc = "A litle part of a big mechanism."
 	icon_state = "gear_small"
+	price = 150
 
 /obj/item/crafting/large_gear
 	name = "большая шестерня"
@@ -155,6 +178,7 @@
 	eng_name = "large gear"
 	eng_desc = "A big part of a grand mechanism."
 	icon_state = "gear_large"
+	price = 200
 
 /obj/item/crafting/duct_tape
 	name = "изолента"
@@ -162,6 +186,7 @@
 	eng_name = "duct tape"
 	eng_desc = "A pinnacle of engineering - it fixes everything!"
 	icon_state = "duct_tape"
+	price = 100
 
 /obj/item/crafting/kettle
 	name = "чайничек"
@@ -169,6 +194,7 @@
 	eng_name = "kettle"
 	eng_desc = "Well, this can't hold tea anymore, holes in bottom prevents it."
 	icon_state = "kettle"
+	price = 95
 
 /obj/item/crafting/toaster
 	name = "тостер"
@@ -176,6 +202,7 @@
 	eng_name = "toaster"
 	eng_desc = "The toaster is a pre-War kitchen appliance that was used to toast bread. It has a stainless steel casing with black painted levers and base, that has internal heating coils to toast the bread inside the two slots on the top."
 	icon_state = "toaster"
+	price = 90
 
 /obj/item/crafting/vacuum_cleaner
 	name = "вакуумный пылесос"
@@ -183,6 +210,7 @@
 	eng_name = "vacuum cleaner"
 	eng_desc = "local space on earth!"
 	icon_state = "vacuum_cleaner"
+	price = 120
 
 /obj/item/crafting/sensor_module
 	name = "сенсорный модуль"
@@ -190,6 +218,7 @@
 	eng_name = "sensor module"
 	eng_desc = "This thing isn't works."
 	icon_state = "sensor_module"
+	price = 300
 
 /obj/item/crafting/cofee_pot
 	name = "кофейник"
@@ -218,6 +247,7 @@
 	eng_name = "wonder glue"
 	eng_desc = "A pre-War brand of glue that has retained its adhesive qualities.<br>A glue itself is a liquid acrylic adhesive, meant to fix broken plastics and ceramics or used in the assembly of a great assortment of items."
 	icon_state = "wonderglue1"
+	price = 500
 
 /obj/item/crafting/wonderglue/initialize()
 	..()
@@ -229,6 +259,7 @@
 	eng_name = "turpentine"
 	eng_desc = "A flammable liquid distilled from pine resin, used as a solvent."
 	icon_state = "turpentine"
+	price = 400
 
 /obj/item/crafting/abraxo
 	name = "чистящее средство абраско"
@@ -236,6 +267,7 @@
 	eng_name = "abraxo"
 	eng_desc = "A pre-War cleaning agent produced by Abraxodyne Chemical."
 	icon_state = "abraxo"
+	price = 290
 
 /obj/item/crafting/reloader
 	name = "перезарядчик гильз"
@@ -279,6 +311,7 @@
 	eng_name = "igniter"
 	eng_desc = "A small electronic device able to ignite combustable substances."
 	icon_state = "igniter"
+	price = 200
 
 /obj/item/crafting/timer
 	name = "таймер"
@@ -286,6 +319,7 @@
 	eng_name = "timer"
 	eng_desc = "Used to time things. Works well with contraptions which has to count down. Tick tock."
 	icon_state = "timer"
+	price = 210
 
 /obj/item/crafting/sensor
 	name = "сенсор движения"
@@ -293,6 +327,7 @@
 	eng_name = "proximity sensor"
 	eng_desc = "Used for scanning and alerting when someone enters a certain proximity."
 	icon_state = "sensor"
+	price = 350
 
 
 /obj/item/crafting/lunchbox
@@ -301,6 +336,7 @@
 	eng_name = "lunch box"
 	eng_desc = "This was a promotional item created by Vault-Tec before the Great War and used in the company's advertisements. With the right schematics, it can be used to make bottlecap mines."
 	icon_state = "lunchbox"
+	price = 750
 
 //crc
 
@@ -342,6 +378,7 @@
 	eng_desc = "You really need this thing, if you wanna craft ballistic weapon."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "ballistic_weapon_parts_1"
+	price = 1000
 /*
 /obj/item/crafting/weapon_parts/ballistic/initialize()
 	..()
@@ -354,6 +391,7 @@
 	eng_desc = "You really need this thing, if you wanna craft energy weapon."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "e_weapon_parts_1"
+	price = 2000
 /*
 /obj/item/crafting/weapon_parts/energy/initialize()
 	..()
@@ -366,6 +404,7 @@
 	eng_desc = "You really need this thing, if you wanna craft plasma weapon."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "p_weapon_parts_1"
+	price = 2600
 /*
 /obj/item/crafting/weapon_parts/plasma/initialize()
 	..()
@@ -387,6 +426,7 @@
 	eng_desc = "Just a barrel."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "barrel_long"
+	price = 200
 
 /obj/item/crafting/barrel_s
 	name = "короткий ствол"
@@ -395,3 +435,4 @@
 	eng_desc = "Just a barrel."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "barrel_short"
+	price = 190

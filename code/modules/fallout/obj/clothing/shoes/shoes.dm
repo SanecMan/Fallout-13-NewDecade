@@ -66,6 +66,7 @@
 	icon_state = "explorer"
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 30, fire = 10, acid = 0)
 	self_weight = 1
+	price = 750
 
 /obj/item/clothing/shoes/f13/khan
 	name = "Great Khan boots"
@@ -87,6 +88,7 @@
 	strip_delay = 40
 	resistance_flags = 0
 	self_weight = 1
+	price = 1000
 
 /obj/item/clothing/shoes/f13/military/light //I'm a ninja!
 	name = "advanced combat boots"

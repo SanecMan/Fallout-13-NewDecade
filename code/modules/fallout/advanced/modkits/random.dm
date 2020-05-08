@@ -1,5 +1,5 @@
 /obj/item/kit/random
-	price = 1000
+	price = 2500
 
 /obj/item/kit/random/New()
 	var/list/kits = typesof(/obj/item/kit/)

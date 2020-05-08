@@ -27,7 +27,7 @@
 	name = "должностной пистолет"
 	desc = "The N99 self-loading pistol is known for its ability to survive in the harshest of conditions.<br>This great weapon is able to be reliably restored to working condition, even after extended exposure to hard elements without maintenance."
 	eng_name = "executive"
-	icon_state = "n99"
+	icon_state = "executive"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=2;materials=2;prewar=2"
 	mag_type = /obj/item/ammo_box/magazine/F13/m10
@@ -37,7 +37,7 @@
 	burst_size = 1
 	fire_delay = 0
 	w_class = 2
-	price = 750
+	price = 900
 	recoil = 1
 	small_gun = 1
 
@@ -79,7 +79,7 @@
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 	recoil = 2
-	price = 1000
+	price = 4000
 	small_gun = 1
 
 //crc
@@ -163,7 +163,7 @@
 	pumpsound = 'sound/weapons/boltpump.ogg'
 	mag_load_sound = 'sound/effects/wep_magazines/rifle_load.ogg'
 	recoil = 2
-	price = 500
+	price = 5000
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
@@ -178,7 +178,7 @@
 	slot_flags = SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	scopetype = /obj/screen/fullscreen/scope/medium
-	price = 800
+	price = 6500
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/automatic/smg10mm
@@ -196,7 +196,7 @@
 	burst_size = 3
 	casing_ejector = 1
 	w_class = WEIGHT_CLASS_NORMAL
-	price = 800
+	price = 4500
 	recoil = 1
 	small_gun = 1
 
@@ -213,7 +213,7 @@
 	casing_ejector = 1
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
-	price = 100
+	price = 1200
 	recoil = 1
 	small_gun = 1
 
@@ -233,7 +233,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	pumpsound = 'sound/f13weapons/repeater_reload.ogg'
 	recoil = 2
-	price = 400
+	price = 4000
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
@@ -257,7 +257,7 @@
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 	wielded_icon = "assault-wielded"//Two handing
-	price = 300
+	price = 5700
 	recoil = 2
 	small_gun = 1
 
@@ -282,7 +282,7 @@
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 	wielded_icon = "assault-wielded"//Two handing
-	price = 200
+	price = 6100
 	recoil = 3
 	small_gun = 1
 
@@ -295,7 +295,7 @@
 	origin_tech = "combat=4;materials=2;prewar=4"
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 	burst_size = 2
-	price = 1000
+	price = 10000
 	scopetype = /obj/screen/fullscreen/scope/medium
 	zoomable = TRUE
 	zoom_amt = 7
@@ -310,7 +310,7 @@
 	origin_tech = "combat=5;materials=2;prewar=5"
 	fire_sound = 'sound/f13weapons/infiltrator.ogg'
 	burst_size = 2
-	price = 1400
+	price = 25000
 	scopetype = /obj/screen/fullscreen/scope/medium
 	can_suppress = 1
 	suppressed = 1
@@ -328,7 +328,7 @@
 	mag_type = /obj/item/ammo_box/magazine/F13/chinese
 	fire_sound = 'sound/f13weapons/chinese.ogg'
 	burst_size = 2
-	price = 400
+	price = 4000
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle/fnfal
@@ -341,7 +341,7 @@
 	origin_tech = "combat=4;materials=2;prewar=4"
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 	burst_size = 2
-	price = 1000
+	price = 5890
 	scopetype = /obj/screen/fullscreen/scope/medium
 	zoomable = FALSE
 	zoom_amt = 7
@@ -361,7 +361,7 @@
 	mag_unload_sound = 'sound/f13weapons/gunporn/m16_magout.ogg'
 	chamber_sound = 'sound/f13weapons/gunporn/m16_chargeback.ogg'
 	burst_size = 2
-	price = 3000
+	price = 30000
 	scopetype = /obj/screen/fullscreen/scope/medium
 	zoomable = TRUE
 	zoom_amt = 7
@@ -435,7 +435,7 @@
 	burst_size = 1
 	fire_delay = 2
 	w_class = 2
-	price = 50
+	price = 500
 	recoil = 3
 	small_gun = 1
 

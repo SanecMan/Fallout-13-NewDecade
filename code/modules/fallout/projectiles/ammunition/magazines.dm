@@ -56,6 +56,7 @@
 	origin_tech = "combat=3"
 	ammo_type = /obj/item/ammo_casing/F13/m10
 	caliber = "10mm"
+	price = 950
 	max_ammo = 30
 	multiple_sprites = 2
 
@@ -80,6 +81,7 @@
 	desc = "Designed to quickly reload revolvers."
 	icon_state = "b38"
 	ammo_type = /obj/item/ammo_casing/F13/m44
+	price = 850
 	max_ammo = 6
 	multiple_sprites = 1
 	self_weight = 0.3
@@ -130,6 +132,7 @@
 	ammo_type = /obj/item/ammo_casing/F13/m308
 	caliber = "308mm"
 	icon_state = "gclip"
+	price = 1000
 	max_ammo = 8
 	multiple_sprites = 1
 /*
@@ -150,30 +153,31 @@
 	caliber = "a556"
 	max_ammo = 20
 	multiple_sprites = 2
-	price = 250
+	price = 1500
 
 /obj/item/ammo_box/magazine/F13/service
 	name = "service rifle magazine (5.56mm)"
 	icon_state = "service"
 	ammo_type = /obj/item/ammo_casing/F13/a556
 	caliber = "a556"
+	price = 1100
 	max_ammo = 18
 	multiple_sprites = 2
-	price = 150
 
 /obj/item/ammo_box/magazine/F13/fnfal //Я КОСТЫЛЬНЫЙ ПИДОРАС ЫЫЫ//
 	name = "rifle magazine (7.62mm)"
 	icon_state = "falmag"
 	ammo_type = /obj/item/ammo_casing/F13/a556/heap
 	caliber = "a556"
+	price = 1200
 	max_ammo = 20
-	price = 300
 
 /obj/item/ammo_box/magazine/F13/chinese
 	name = "rifle magazine (5.56mm)"
 	icon_state = "china"
 	ammo_type = /obj/item/ammo_casing/F13/a556
 	caliber = "a556"
+	price = 1000
 	max_ammo = 24
 	multiple_sprites = 2
 
@@ -230,6 +234,7 @@
 	icon_state = "75"
 	max_ammo = 30
 	multiple_sprites = 2
+	price = 1000
 
 /obj/item/ammo_box/magazine/F13/m223/heap
 	name = "rifle magazine (.223) (+Heap!)"
@@ -308,3 +313,4 @@
 	ammo_type = /obj/item/ammo_casing/F13/m308
 	max_ammo = 7
 	caliber = "308mm"
+	price = 2500

@@ -93,6 +93,7 @@
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 1
 	self_weight = 3
+	price = 800
 
 /obj/item/clothing/under/f13/dbdu
 	name = "DBDU"
@@ -104,6 +105,7 @@
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	can_adjust = 1
 	self_weight = 3
+	price = 800
 
 /obj/item/clothing/under/f13/shiny //Firefly, yay!
 	name = "shiny outfit"
@@ -690,6 +692,7 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	can_adjust = 0
 	self_weight = 5
+	price = 10000
 
 /obj/item/clothing/under/f13/reconenclave
 	name = "enclave recon armor"

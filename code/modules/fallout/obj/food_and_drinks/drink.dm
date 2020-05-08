@@ -57,6 +57,7 @@
 	materials = list(MAT_GLASS=500)
 	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
 	list_reagents = list("nuka" = 25, "tricordrazine" = 5)
+	price = 750
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/fusioncola/on_reagent_change()
 	if(reagents.total_volume > 0)
@@ -77,6 +78,7 @@
 	materials = list(MAT_GLASS=500)
 	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
 	list_reagents = list("nuka" = 25, "tricordrazine" = 2, "silver_sulfadiazine" = 3)
+	price = 850
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cherrycola/on_reagent_change()
 	if(reagents.total_volume > 0)
@@ -97,6 +99,7 @@
 	materials = list(MAT_GLASS=500)
 	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
 	list_reagents = list("radium" = 25, "water" = 5)
+	price = 450
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/yellowcola/on_reagent_change()
 	if(reagents.total_volume > 0)
@@ -117,6 +120,7 @@
 	materials = list(MAT_GLASS=500)
 	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
 	list_reagents = list("nuka" = 20, "tricordrazine" = 5, "adminordrazine" = 5)
+	price = 1950
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/victorycola/on_reagent_change()
 	if(reagents.total_volume > 0)
@@ -138,6 +142,7 @@
 	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
 	list_reagents = list("nuka" = 10, "tricordrazine" = 8, "adminordrazine" = 8, "radium" = 4)
 	light_range = 1
+	price = 1500
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/quantumcola/on_reagent_change()
 	if(reagents.total_volume > 0)
@@ -159,7 +164,7 @@
 	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
 	list_reagents = list("nuka" = 10, "tricordrazine" = 2, "adminordrazine" = 2, "ethanol" = 16)
 	light_range = 1
-
+	price = 1200
 /obj/item/weapon/reagent_containers/food/drinks/bottle/quartzcola/on_reagent_change()
 	if(reagents.total_volume > 0)
 		if(icon_state != "quartzcola")

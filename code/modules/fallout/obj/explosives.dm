@@ -16,6 +16,7 @@
 	obj_integrity = 80
 	max_integrity = 80
 	var/state = FALSE
+	price = 1500
 
 /obj/item/weapon/bottlecap_mine/attack_self(mob/user as mob)
 	toogle_activate(user)
