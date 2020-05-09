@@ -124,6 +124,120 @@
 		icon_state = "book-5"
 
 
+///METAL SHELF///
+/obj/structure/metalcase
+	name = "metalshelf"
+	icon = 'icons/obj/library.dmi'
+	icon_state = "metalshelfempty"
+	anchored = 0
+	density = 1
+	opacity = 0
+	resistance_flags = FLAMMABLE
+	obj_integrity = 200
+	max_integrity = 200
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 50, acid = 0)
+	var/state = 0
+	var/list/allowed_books = list(/obj/item/weapon/book, /obj/item/weapon/spellbook, /obj/item/weapon/storage/book) //Things allowed in the bookcase
+
+
+/obj/structure/metalcase/initialize()
+	state = 2
+	icon_state = "metalshelf-0"
+	anchored = 1
+	for(var/obj/item/I in loc)
+		if(istype(I, /obj/item/weapon/book))
+			I.forceMove(src)
+	update_icon()
+
+
+/obj/structure/metalcase/attackby(obj/item/I, mob/user, params)
+	switch(state)
+		if(0)
+			if(istype(I, /obj/item/weapon/wrench))
+				playsound(loc, I.usesound, 100, 1)
+				if(do_after(user, 20*I.toolspeed, target = src))
+					to_chat(user, "<span class='notice'>You wrench the frame into place.</span>")
+					anchored = 1
+					state = 1
+			if(istype(I, /obj/item/weapon/crowbar))
+				playsound(loc, I.usesound, 100, 1)
+				if(do_after(user, 20*I.toolspeed, target = src))
+					to_chat(user, "<span class='notice'>You pry the frame apart.</span>")
+					deconstruct(TRUE)
+
+		if(1)
+			if(istype(I, /obj/item/stack/sheet/mineral/wood))
+				var/obj/item/stack/sheet/mineral/wood/W = I
+				if(W.get_amount() >= 2)
+					W.use(2)
+					to_chat(user, "<span class='notice'>You add a shelf.</span>")
+					state = 2
+					icon_state = "book-0"
+			if(istype(I, /obj/item/weapon/wrench))
+				playsound(loc, I.usesound, 100, 1)
+				to_chat(user, "<span class='notice'>You unwrench the frame.</span>")
+				anchored = 0
+				state = 0
+
+		if(2)
+			if(is_type_in_list(I, allowed_books))
+				if(!user.drop_item())
+					return
+				I.forceMove(src)
+				update_icon()
+			else if(istype(I, /obj/item/weapon/storage/bag/books))
+				var/obj/item/weapon/storage/bag/books/B = I
+				for(var/obj/item/T in B.contents)
+					if(istype(T, /obj/item/weapon/book) || istype(T, /obj/item/weapon/spellbook))
+						B.remove_from_storage(T, src)
+				to_chat(user, "<span class='notice'>You empty \the [I] into \the [src].</span>")
+				update_icon()
+			else if(istype(I, /obj/item/weapon/pen))
+				var/newname = stripped_input(user, "What would you like to title this bookshelf?")
+				if(!newname)
+					return
+				else
+					name = ("metalshelf ([sanitize(newname)])")
+			else if(istype(I, /obj/item/weapon/crowbar))
+				if(contents.len)
+					to_chat(user, "<span class='warning'>You need to remove the books first!</span>")
+				else
+					playsound(loc, I.usesound, 100, 1)
+					to_chat(user, "<span class='notice'>You pry the shelf out.</span>")
+					new /obj/item/stack/sheet/mineral/wood(loc, 2)
+					state = 1
+					icon_state = "metalshelf"
+			else
+				return ..()
+
+
+/obj/structure/metalcase/attack_hand(mob/user)
+	if(contents.len)
+		var/obj/item/weapon/book/choice = input("Which book would you like to remove from the shelf?") as null|obj in contents
+		if(choice)
+			if(!usr.canmove || usr.stat || usr.restrained() || !in_range(loc, usr))
+				return
+			if(ishuman(user))
+				if(!user.get_active_held_item())
+					user.put_in_hands(choice)
+			else
+				choice.forceMove(get_turf(src))
+			update_icon()
+
+
+/obj/structure/metalcase/deconstruct(disassembled = TRUE)
+	new /obj/item/stack/sheet/mineral/wood(loc, 4)
+	for(var/obj/item/weapon/book/B in contents)
+		B.forceMove(get_turf(src))
+	qdel(src)
+
+
+/obj/structure/metalcase/update_icon()
+	if(contents.len < 5)
+		icon_state = "metalshelf-[contents.len]"
+	else
+		icon_state = "metalshelf-5"
+
 /obj/structure/bookcase/manuals/medical
 	name = "medical manuals bookcase"
 
