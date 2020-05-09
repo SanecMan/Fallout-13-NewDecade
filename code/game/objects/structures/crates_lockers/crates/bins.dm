@@ -1,6 +1,8 @@
 /obj/structure/closet/crate/bin
-	desc = "A trash bin, place your trash here for the janitor to collect."
-	name = "trash bin"
+	name = "мусорный бак"
+	desc = "Мусорный бак, кладёте мусор сюда и закрываете крышку."
+	eng_desc = "A trash bin, place your trash here for the janitor to collect."
+	eng_name = "trash bin"
 	icon_state = "largebins"
 	open_sound = 'sound/effects/bin_open.ogg'
 	close_sound = 'sound/effects/bin_close.ogg'

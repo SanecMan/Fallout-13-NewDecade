@@ -132,8 +132,10 @@
 
 //space cleaner
 /obj/item/weapon/reagent_containers/spray/cleaner
-	name = "space cleaner"
-	desc = "BLAM!-brand non-foaming space cleaner!"
+	name = "чистящее средство"
+	desc = "БАМ! Пшик! И грязь как рукой сняло!"
+	eng_name = "cleaner"
+	eng_desc = "BLAM!-brand non-foaming cleaner!"
 	list_reagents = list("cleaner" = 250)
 
 //spray tan

@@ -1,6 +1,8 @@
 /obj/item/organ/gland
-	name = "fleshy mass"
-	desc = "A nausea-inducing hunk of twisting flesh and metal."
+	name = "субстанция"
+	eng_name = "fleshy mass"
+	desc = "Блевотно-серебрянный кусок плоти."
+	eng_desc = "A nausea-inducing hunk of twisting flesh and metal."
 	icon = 'icons/obj/abductor.dmi'
 	zone = "chest"
 	slot = "gland"
