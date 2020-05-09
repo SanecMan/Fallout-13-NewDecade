@@ -191,6 +191,9 @@
 	sheet_type = /obj/item/stack/rods
 	canSmoothWith = list(/turf/closed/wall/mineral/iron, /obj/structure/falsewall/iron)
 
+/turf/closed/wall/mineral/iron/TEST
+	icon = 'icons/turf/walls/TEST3.dmi'
+
 /turf/closed/wall/mineral/snow
 	name = "packed snow wall"
 	desc = "A wall made of densely packed snow blocks."
