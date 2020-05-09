@@ -40,8 +40,8 @@
 	XP = 10
 
 /mob/living/simple_animal/hostile/ghoul/scorched/New()
-	icon_state = "scorched_m"
-	icon_living = "scorched_m"
+	icon_state = "scorched_m-[rand(1,5)]"
+	icon_living = "scorched_m-[rand(1,5)]"
 
 
 /mob/living/simple_animal/hostile/ghoul/scorched/ranged
