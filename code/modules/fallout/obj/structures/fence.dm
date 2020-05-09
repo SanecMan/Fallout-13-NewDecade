@@ -108,12 +108,15 @@
 	icon_state = "[icontype][icon_junction][!density ? "-open" : ""]"
 
 
-/obj/structure/fence/broken
+/obj/structure/metal_fence/broken
+	icon = 'icons/fallout/objects/structures/fences.dmi'
 	name = "сломанный металлический забор"
 	density = 0
+	anchored = 1
+	layer = ABOVE_ALL_MOB_LAYER
 	icon_state = "metal_fence3-broken-alt"
 
-/obj/structure/fence/broken/alt
+/obj/structure/metal_fence/broken/alt
 	density = 0
 	icon_state = "metal_fence3-broken"
 
