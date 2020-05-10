@@ -357,6 +357,42 @@
 	"" = 50
 	)
 
+/obj/effect/spawner/lootdrop/lock_rand_60
+	color = "#96ff4d"
+	icon_state = "lock_door60"
+	layer = 6
+	loot = list(
+	/obj/item/lock/random = 60,
+	"" = 40
+	)
+
+/obj/effect/spawner/lootdrop/lock_rand_70
+	color = "#96ff4d"
+	icon_state = "lock_door70"
+	layer = 6
+	loot = list(
+	/obj/item/lock/random = 70,
+	"" = 30
+	)
+
+/obj/effect/spawner/lootdrop/lock_rand_80
+	color = "#96ff4d"
+	icon_state = "lock_door80"
+	layer = 6
+	loot = list(
+	/obj/item/lock/random = 80,
+	"" = 20
+	)
+
+/obj/effect/spawner/lootdrop/lock_rand_90
+	color = "#96ff4d"
+	icon_state = "lock_door90"
+	layer = 6
+	loot = list(
+	/obj/item/lock/random = 90,
+	"" = 10
+	)
+
 /obj/effect/spawner/lootdrop/mobs
 	color = "#96ff4d"
 	icon_state = "npc_land"
