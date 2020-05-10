@@ -4,8 +4,8 @@
 	eng_name = "scorched"
 	eng_desc = "It's like ghoul, but... not ghoul. What is this?"
 	icon = 'icons/fallout/mobs/scorched.dmi'
-	icon_state = "scorched_m"
-	icon_living = "scorched_m"
+	icon_state = "scorched_m-1"
+	icon_living = "scorched_m-1"
 	icon_dead = "scorched_m_d"
 	icon_gib = "gib"
 	speak_chance = 1
