@@ -317,3 +317,79 @@
 	/obj/item/clothing/under/f13/recon = 1,
 	/obj/item/clothing/suit/armor/f13/rangercombat/elite_riot = 1,
 	/obj/item/clothing/head/helmet/f13/ranger/elite_riot = 1)
+
+/obj/effect/spawner/lootdrop/lock_rand_20
+	color = "#96ff4d"
+	icon_state = "lock_door20"
+	layer = 6
+	loot = list(
+	/obj/item/lock/random = 20,
+	"" = 80
+	)
+
+
+/obj/effect/spawner/lootdrop/lock_rand_30
+	color = "#96ff4d"
+	icon_state = "lock_door30"
+	layer = 6
+	loot = list(
+	/obj/item/lock/random = 30,
+	"" = 70
+	)
+
+
+/obj/effect/spawner/lootdrop/lock_rand_40
+	color = "#f5e61b"
+	icon_state = "lock_door40"
+	layer = 6
+	loot = list(
+	/obj/item/lock/random = 40,
+	"" = 60
+	)
+
+
+/obj/effect/spawner/lootdrop/lock_rand_50
+	color = "#96ff4d"
+	icon_state = "lock_door50"
+	layer = 6
+	loot = list(
+	/obj/item/lock/random = 50,
+	"" = 50
+	)
+
+/obj/effect/spawner/lootdrop/mobs
+	color = "#96ff4d"
+	icon_state = "npc_land"
+	layer = 6
+
+/obj/effect/spawner/lootdrop/mobs/ghoul_or_scrorched
+	loot = list(
+	/mob/living/simple_animal/hostile/ghoul/scorched = 50,
+	/mob/living/simple_animal/hostile/ghoul/aggressive = 35,
+	/mob/living/simple_animal/hostile/ghoul = 50
+	)
+
+/obj/effect/spawner/lootdrop/mobs/ghoul_or_nothing
+	loot = list(
+	/mob/living/simple_animal/hostile/ghoul/aggressive = 15,
+	/mob/living/simple_animal/hostile/ghoul = 35,
+	"" = 80
+	)
+
+/obj/effect/spawner/lootdrop/mobs/scorched_or_nothing
+	loot = list(
+	/mob/living/simple_animal/hostile/ghoul/scorched = 40,
+	"" = 80
+	)
+
+/obj/effect/spawner/lootdrop/mobs/scorched_ranged_or_nothing
+	loot = list(
+	/mob/living/simple_animal/hostile/ghoul/scorched/ranged = 40,
+	"" = 80
+	)
+
+/obj/effect/spawner/lootdrop/mobs/scorched_ranged_or_melee
+	loot = list(
+	/mob/living/simple_animal/hostile/ghoul/scorched/ranged = 40,
+	/mob/living/simple_animal/hostile/ghoul/scorched = 40,
+	)
