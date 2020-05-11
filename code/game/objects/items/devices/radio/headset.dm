@@ -1,6 +1,8 @@
 /obj/item/device/radio/headset
 	name = "radio headset"
 	desc = "An updated, modular intercom that fits over the head. Takes encryption keys. \nTo speak on the general radio frequency, use ; before speaking."
+	eng_name = "radio headset"
+	eng_desc = "An updated, modular intercom that fits over the head. Takes encryption keys. \nTo speak on the general radio frequency, use ; before speaking."
 	icon_state = "headset"
 	item_state = "headset"
 	materials = list(MAT_METAL=75)
@@ -291,8 +293,10 @@
 	return
 
 /obj/item/device/radio/headset/enclave
-	name = "enclave bowman headset"
+	name = "радиогарнитура анклава"
 	desc = "This is used by your elite security force. Protects ears from flashbangs."
+	eng_name = "enclave bowman headset"
+	eng_desc = "This is used by your elite security force. Protects ears from flashbangs."
 	flags = EARBANGPROTECT
 	icon_state = "sec_headset_alt"
 	item_state = "sec_headset_alt"
@@ -302,8 +306,10 @@
 
 
 /obj/item/device/radio/headset/bs
-	name = "brotherhood bowman headset"
+	name = "радиогарнитура братства"
 	desc = "This is used by your elite security force. Protects ears from flashbangs."
+	eng_name = "brotherhood bowman headset"
+	eng_desc = "This is used by your elite security force. Protects ears from flashbangs."
 	flags = EARBANGPROTECT
 	icon_state = "sec_headset_alt"
 	item_state = "sec_headset_alt"

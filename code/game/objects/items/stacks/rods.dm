@@ -5,8 +5,10 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 	)
 
 /obj/item/stack/rods
-	name = "metal rod"
+	name = "арматура"
 	desc = "Немного арматуры. Можно использовать для строительства чего-либо."
+	eng_name = "metal rod"
+	eng_desc = "A bit of metal rod. You can use anything to build."
 	singular_name = "metal rod"
 	icon_state = "rods"
 	item_state = "rods"

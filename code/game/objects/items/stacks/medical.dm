@@ -105,14 +105,18 @@
 	name = "bruise pack"
 	singular_name = "bruise pack"
 	desc = "Гель в сочетании с бинтами, создан для лечения физического урона вроде ран."
+	eng_name = "bruise pack"
+	eng_desc = "The gel in combination with dressings is designed to treat physical damage, such as wounds."
 	icon_state = "brutepack"
 	heal_brute = 40
 	origin_tech = "biotech=2"
 	self_delay = 20
 
 /obj/item/stack/medical/gauze
-	name = "medical gauze"
+	name = "качественная марля"
 	desc = "Моток эластичной ткани, предназначен для более эффективного остановления кровотечения, но всё еще не лечит раны."
+	eng_name = "medical gauze"
+	eng_desc = "A skein of elastic tissue is designed to more effectively stop bleeding, but not to heal wounds."
 	gender = PLURAL
 	singular_name = "medical gauze"
 	icon_state = "gauze"
@@ -120,9 +124,11 @@
 	self_delay = 20
 
 /obj/item/stack/medical/gauze/improvised
-	name = "improvised gauze"
+	name = "импровизированная марля"
 	singular_name = "improvised gauze"
 	desc = "Моток ткани, предназначенный для остановления кровотечения, но всё-же не может вылечить раны."
+	eng_name = "improvised gauze"
+	eng_desc = "A skein of tissue designed to stop bleeding, but still cannot heal wounds."
 	stop_bleeding = 900
 
 /obj/item/stack/medical/gauze/cyborg
@@ -131,8 +137,10 @@
 	cost = 250
 
 /obj/item/stack/medical/ointment
-	name = "ointment"
+	name = "мазь"
 	desc = "Используйте чтобы вылечить эти бесящие ожоги."
+	eng_name = "ointment"
+	eng_desc = "Use this to heal all those burns."
 	gender = PLURAL
 	singular_name = "ointment"
 	icon_state = "ointment"

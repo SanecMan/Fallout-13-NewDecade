@@ -3,6 +3,8 @@
 /turf/open/floor/f13
 	name = "пол"
 	desc = "Самый обычный пол."
+	eng_name = "floor"
+	eng_desc = "An regular floor."
 	icon_state = "floor"
 	icon_regular_floor = "floor"
 	icon_plating = "plating"
@@ -63,6 +65,7 @@
 	icon_state = "wood_st"
 	icon_plating = "plating"
 	name = "пол"
+	eng_name = "floor"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	floor_tile = /obj/item/stack/tile/wood
 	sheet_type = /obj/item/stack/sheet/mineral/wood

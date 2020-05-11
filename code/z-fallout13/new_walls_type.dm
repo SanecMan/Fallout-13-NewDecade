@@ -1,6 +1,12 @@
-/turf/closed/wall/f13/new_test
-	name = "TEST"
-	eng_name = "TEST"
+
+/turf/closed/wall/f13/isometric_test
+	name = "interior wall"
+	desc = "Interesting, what kind of material they have used - these wallpapers still look good after all the centuries..."
+	eng_name = "interior wall"
+	eng_desc = "Interesting, what kind of material they have used - these wallpapers still look good after all the centuries..."
 	icon = 'icons/turf/walls/TEST3.dmi'
-	icon_state = "iron"
-	icontype = "iron"
+	icon_state = "interior0"
+	icontype = "interior"
+	hardness = 10
+	smooth = SMOOTH_OLD
+	canSmoothWith = list(/turf/closed/wall/f13/isometric_test, /turf/closed/wall)

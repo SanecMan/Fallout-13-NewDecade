@@ -7,6 +7,7 @@
 /turf/open/indestructible/ground
 	icon = 'icons/fallout/turfs/ground.dmi'
 	name = "\proper ground"
+	eng_name = "\proper ground"
 	icon_state = "wasteland1"
 	intact = 1
 
