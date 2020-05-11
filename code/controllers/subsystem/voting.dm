@@ -91,7 +91,7 @@ var/datum/subsystem/vote/SSvote
 		if(question)
 			text += "<b>[question]</b>"
 		else
-			text += "<b>[capitalize(mode)] голосование</b>")
+			text += "<b>[capitalize(mode)] голосование</b>"
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			if(!votes)
@@ -99,13 +99,13 @@ var/datum/subsystem/vote/SSvote
 			text += "\n<b>[choices[i]]:</b> [votes]"
 		if(mode != "custom")
 			if(winners.len > 1)
-				text = "\n<b>Голоса разделились между:</b>")
+				text = "\n<b>Голоса разделились между:</b>"
 				for(var/option in winners)
 					text += "\n\t[option]"
 			. = pick(winners)
-			text += "\n<b>Результат голосования: [.]</b>")
+			text += "\n<b>Результат голосования: [.]</b>"
 		else
-			text += "\n<b>Воздержалось:</b> [clients.len-voted.len]")
+			text += "\n<b>Воздержалось:</b> [clients.len-voted.len]"
 	else
 		text += "<b>Vote Result: Inconclusive - No Votes!</b>"
 	log_vote(text)
