@@ -14,6 +14,10 @@
 	climb_time = 10 //real fast, because let's be honest stepping into or onto a crate is easy
 	climb_stun = 0 //climbing onto crates isn't hard, guys
 	delivery_icon = "deliverycrate"
+	open_sound = 'sound/machines/crate_open.ogg'
+	close_sound = 'sound/machines/crate_close.ogg'
+	open_sound_volume = 35
+	close_sound_volume = 50
 	var/obj/item/weapon/paper/manifest/manifest
 
 /obj/structure/closet/crate/New()

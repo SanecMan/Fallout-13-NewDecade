@@ -28,8 +28,10 @@
 	var/mob_storage_capacity = 3 // how many human sized mob/living can fit together inside a closet.
 	var/storage_capacity = 300 //This is so that someone can't pack hundreds of items in a locker/crate then open it in a populated area to crash clients.
 	var/cutting_tool = /obj/item/weapon/weldingtool
-	var/open_sound = 'sound/machines/click.ogg'
-	var/close_sound = 'sound/machines/click.ogg'
+	var/open_sound = 'sound/machines/closet_open.ogg'
+	var/close_sound = 'sound/machines/closet_close.ogg'
+	var/open_sound_volume = 35
+	var/close_sound_volume = 50
 	var/cutting_sound = 'sound/items/Welder.ogg'
 	var/material_drop = /obj/item/stack/sheet/metal
 	var/material_drop_amount = 2
@@ -135,10 +137,10 @@
 /obj/structure/closet/proc/open(mob/living/user)
 	if(opened || !can_open(user))
 		return
-	playsound(loc, open_sound, 15, 1, -3)
-	opened = 1
+	playsound(loc, open_sound, open_sound_volume, TRUE, -3)
+	opened = TRUE
 	if(!dense_when_open)
-		density = 0
+		density = FALSE
 	climb_time *= 0.5 //it's faster to climb onto an open thing
 	dump_contents()
 	update_icon()
@@ -185,14 +187,14 @@
 
 /obj/structure/closet/proc/close(mob/living/user)
 	if(!opened || !can_close(user))
-		return 0
+		return FALSE
 	take_contents()
-	playsound(loc, close_sound, 15, 1, -3)
+	playsound(loc, close_sound, close_sound_volume, TRUE, -3)
 	climb_time = initial(climb_time)
-	opened = 0
-	density = 1
+	opened = FALSE
+	density = TRUE
 	update_icon()
-	return 1
+	return TRUE
 
 /obj/structure/closet/proc/toggle(mob/living/user)
 	if(opened)
