@@ -22,7 +22,7 @@
 	health = 80
 	self_weight = 45
 
-	faction = list("scorched", "hostile")
+	faction = list("hostile", "scorched")
 
 	sound_speak_chance = 1
 	sound_speak = list('sound/f13npc/scor_br1.ogg','sound/f13npc/scor_b2.ogg','sound/f13npc/scor_b3.ogg')
