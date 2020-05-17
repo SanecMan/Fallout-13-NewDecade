@@ -3,6 +3,8 @@
 /datum/f13_objective/protect
 	name = "Ангел Хранитель"
 	desc = "Вас наняли чтобы вы защищали кое-кого. Вам обещали заплатить достаточно много, чтобы вы хотели рисковать ради этого!"
+	eng_name = "Guardian Angel"
+	eng_desc = "You know that someone important is in a great danger - save and protect them, whatever it takes!"
 	kind = BOTH
 	available_factions = list("city", "none", "brotherhood")
 

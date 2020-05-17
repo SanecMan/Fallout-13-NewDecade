@@ -4,6 +4,8 @@
 	var
 		name = "Квест"
 		desc = "Описание квеста"
+		eng_name = "Objective"
+		eng_desc = "Objective description"
 		points = 0
 		kind = BOTH
 		list/available_factions = list("all")
