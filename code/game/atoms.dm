@@ -202,10 +202,7 @@
 		else
 			f_name = ""
 		f_name += usr.client.select_lang("<span class='danger'>blood-stained</span> [eng_name]!","<span class='danger'>в крови</span> [name]!")
-		if(usr.client.language == "English")
-			to_chat(user, "[bicon(src)] This is [eng_f_name]")
-		else
-			to_chat(user, "[bicon(src)] Это [f_name]")
+	to_chat(user, user.client.select_lang("[bicon(src)] Это [f_name]", "[bicon(src)] This is [eng_f_name]"))
 
 	if(desc)
 		to_chat(user, user.client.select_lang(desc, eng_desc))
@@ -217,12 +214,12 @@
 		if(reagents.reagent_list.len)
 			if(user.can_see_reagents()) //Show each individual reagent
 				for(var/datum/reagent/R in reagents.reagent_list)
-					to_chat(user, user.client.select_lang("[R.volume] едениц [R.name]", "[R.volume] units of [R.name]"))
+					to_chat(user, user.client.select_lang("[R.volume] units of [R.name]", "[R.volume] едениц [R.name]"))
 			else //Otherwise, just show the total volume
 				var/total_volume = 0
 				for(var/datum/reagent/R in reagents.reagent_list)
 					total_volume += R.volume
-				to_chat(user, user.client.select_lang("[total_volume] units of various reagents", "[total_volume] едениц разных реагентов"))
+				to_chat(user, user.client.select_lang("[total_volume] едениц разных реагентов", "[total_volume] units of various reagents"))
 		else
 			to_chat(user, user.client.select_lang("Ничего.", "Nothing"))
 

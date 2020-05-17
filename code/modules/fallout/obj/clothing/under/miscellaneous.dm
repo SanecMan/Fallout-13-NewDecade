@@ -5,8 +5,10 @@
 	self_weight = 2
 
 /obj/item/clothing/under/f13/navy
-	name = "navy jumpsuit"
-	desc = "Pre-War standard naval uniform."
+	name = "комбинезон морского флота"
+	desc = "Стандартная довоенная форма флота."
+	eng_name = "navy jumpsuit"
+	eng_desc = "Pre-War standard naval uniform."
 	icon_state = "navy"
 	item_state = "bl_suit"
 	item_color = "navy"
@@ -15,8 +17,10 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/navyofficer
-	name = "navy officer jumpsuit"
-	desc = "Pre-War standard naval uniform for ranked officers."
+	name = "комбинезон офицера морского флота"
+	desc = "Стандартная довоенная офицерская форма флота."
+	eng_name = "navy officer uniform"
+	eng_desc = "Pre-War standard naval uniform for ranked officers."
 	icon_state = "navyofficer"
 	item_state = "bl_suit"
 	item_color = "navyofficer"
@@ -25,24 +29,30 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/machinist
-	name = "workman outfit"
-	desc = "The apparel of an old-time machinist."
+	name = "комбинезон рабочего"
+	desc = "В этой одежде вы выглядите как стим-панк механик."
+	eng_name = "workman outfit"
+	eng_desc = "The apparel of an old-time machinist."
 	icon_state = "machinist"
 	item_state = "lb_suit"
 	item_color = "machinist"
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/lumberjack
-	name = "lumberjack outfit"
-	desc = "The apparel of an old-time lumberjack."
+	name = "костюм лесоруба"
+	desc = "Такие костюмы когда-то носили лесорубы."
+	eng_name = "lumberjack outfit"
+	eng_desc = "The apparel of an old-time lumberjack."
 	icon_state = "lumberjack"
 	item_state = "r_suit"
 	item_color = "lumberjack"
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/police
-	name = "pre-War police uniform"
-	desc = "Golden classics of pre-War police officers."
+	name = "довоенная полицейская форма"
+	desc = "Золотая классика полиции, до войны."
+	eng_name = "pre-War police uniform"
+	eng_desc = "Golden classics of pre-War police officers."
 	icon_state = "retro_police"
 	item_state = "b_suit"
 	item_color = "retro_police"
@@ -84,8 +94,10 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/bdu //WalterJe military standarts.
-	name = "BDU"
-	desc = "A standard military Battle Dress Uniform."
+	name = "военная форма"
+	desc = "Стандартная военная форма."
+	eng_name = "BDU"
+	eng_desc = "A standard military Battle Dress Uniform."
 	icon_state = "bdu"
 	item_state = "xenos_suit"
 	item_color = "bdu"
@@ -96,8 +108,10 @@
 	price = 800
 
 /obj/item/clothing/under/f13/dbdu
-	name = "DBDU"
-	desc = "A military Desert Battle Dress Uniform."
+	name = "пустынная военная форма"
+	desc = "Стандартная пустынная военная форма."
+	eng_name = "DBDU"
+	eng_desc = "A military Desert Battle Dress Uniform."
 	icon_state = "dbdu"
 	item_state = "brownjsuit"
 	item_color = "dbdu"
@@ -116,8 +130,10 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/batter //I guess we're going OFF limits.
-	name = "worn baseball uniform"
-	desc = "<b>Purification in progress...</b>"
+	name = "чистая форма бейсболиста"
+	desc = "<b>Очистка в процессе...</b>"
+	eng_name = "worn baseball uniform"
+	eng_desc = "<b>Purification in progress...</b>"
 	icon_state = "batter"
 	item_state = "w_suit"
 	item_color = "batter"
@@ -236,18 +252,18 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/deadmoney
-	icon = 'icons/obj/clothing/uniforms.dmi'
 	name = "Utility jumpsuit"
 	desc = "A working class jumpsuit that appears rather plain in every aspect, apart from the unsettling red X painted across it's back with an unknown substance."
+	icon = 'icons/obj/clothing/uniforms.dmi'
 	icon_state = "deadmoney"
 	item_state = "deadmoney"
 	item_color = "deadmoney"
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/casinoarmor
-	icon = 'icons/obj/clothing/uniforms.dmi'
 	name = "Casino security uniform"
 	desc = "A rather dated and now defunct pre-war Casino security guard's uniform, bearing mild kevlar armoring suitable for defense against some melee weapons and basic handgun calibers."
+	icon = 'icons/obj/clothing/uniforms.dmi'
 	icon_state = "casinoarmor"
 	item_state = "casinoarmor"
 	item_color = "casinoarmor"
@@ -256,9 +272,9 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/assassinarmor
-	icon = 'icons/obj/clothing/uniforms.dmi'
 	name = "Assassin's armor"
 	desc = "A very flexible bodysuit bearing little in the way of ballistic protection but highly suitable for defense against most conventional energy and plasma weapons due to it's odd and rubbery material."
+	icon = 'icons/obj/clothing/uniforms.dmi'
 	icon_state = "assassinarmor"
 	item_state = "assassinarmor"
 	item_color = "assassinarmor"
@@ -267,17 +283,21 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/patriotsuit
+	name = "костюм патриота"
+	desc = "Мотоцикл не входит в комплект."
+	eng_name = "Patriotic Suit"
+	eng_desc = "Motorcycle not included."
 	icon = 'icons/obj/clothing/uniforms.dmi'
-	name = "Patriotic Suit"
-	desc = "Motorcycle not included."
 	icon_state = "ek"
 	item_state = "ek"
 	item_color = "ek"
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/wolfwood
-	name = "Priest's suit"
-	desc = "A solid black suit with the untucked collar of a white button up. Looks pretty snazzy, but incredibly impactical for preaching."
+	name = "костюм священника"
+	desc = "Солидный черный костюм с оротников. В нём так и хочется читать молитвы своей пастве."
+	eng_name = "Priest's suit"
+	eng_desc = "A solid black suit with the untucked collar of a white button up. Looks pretty snazzy, but incredibly impactical for preaching."
 	icon_state = "wolfwood"
 	item_state = "wolfwood"
 	item_color = "wolfwood"
@@ -618,7 +638,9 @@
 
 /obj/item/clothing/under/f13/enclave_officer
 	name = "форма офицера анклава"
-	desc = "A standard Enclave officer uniform.<br>The outer layer is made of a sturdy material designed to withstand the harsh conditions of the wasteland."
+	desc = "Стандартная униформа офицера Анклава. <br>Внешний."
+	eng_name = "enclave officer uniform"
+	eng_desc = "A standard Enclave officer uniform.<br>The outer layer is made of a sturdy material designed to withstand the harsh conditions of the wasteland."
 	icon_state = "enclave_o"
 	item_state = "bl_suit"
 	item_color = "enclave_o"
@@ -640,7 +662,9 @@
 
 /obj/item/clothing/under/f13/ncr_officer
 	name = "офицерская форма"
-	desc = "A standard NCR officer uniform.<br>Embroided New California Republic flag patches adorn both sleeves."
+	desc = "Стандартная формаа используемая в НКР.<br>На рукаве есть нашивка изображающая флаг Новой Калифорнийской Республики."
+	eng_name = "officer uniform"
+	eng_desc = "A standard NCR officer uniform.<br>Embroided New California Republic flag patches adorn both sleeves."
 	icon_state = "ncr_o"
 	item_state = "lb_suit"
 	item_color = "ncr_o"
@@ -651,7 +675,9 @@
 
 /obj/item/clothing/under/f13/ncr
 	name = "шинель"
-	desc = "A regular NCR uniform that consists of khaki field jacket with bellowed hip pockets and khaki breeches."
+	desc = "Стандартная формаа используемая в НКР."
+	eng_name = "overcoat"
+	eng_desc = "A regular NCR uniform that consists of khaki field jacket with bellowed hip pockets and khaki breeches."
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "overcoat"
@@ -1084,8 +1110,10 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/female/maid
-	name = "maid costume"
-	desc = "Maid in China."
+	name = "форма горничной"
+	desc = "Сделано в китае."
+	eng_name = "maid costume"
+	eng_desc = "Maid in China."
 	icon_state = "maid"
 	item_state = "maid"
 	item_color = "maid"
@@ -1094,8 +1122,10 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/female/janimaid
-	name = "maid uniform"
-	desc = "A simple maid uniform for housekeeping."
+	name = "форма горничной"
+	desc = "Простая форма горничной для уборки."
+	eng_name = "maid uniform"
+	eng_desc = "A simple maid uniform for housekeeping."
 	icon_state = "janimaid"
 	item_state = "janimaid"
 	item_color = "janimaid"
@@ -1213,8 +1243,10 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/fluff/waffenss
-	name = "Waffen SS form"
-	desc = "Scheisse, das uniformei ist gut!."
+	name = "форма общих СС"
+	desc = "Когда-то это было музейным образцом, сейчас, лишь еще одна частица прошлого."
+	eng_name = "Allegmaine SS form"
+	eng_desc = "Once it was a museum exhibit, now, it is just another particle of the past."
 	icon_state = "waffen"
 	item_state = "bl_suit"
 	item_color = "waffen"
@@ -1224,8 +1256,10 @@
 	self_weight = 3
 
 /obj/item/clothing/under/f13/fluff/m35
-	name = "M35 form"
-	desc = "Scheisse, das uniformei ist gut!."
+	name = "форма вермахта"
+	desc = "Когда-то это было музейным образцом, сейчас, лишь еще одна частица прошлого."
+	eng_name = "wehrmacht uniform"
+	eng_desc = "Once it was a museum exhibit, now, it is just another particle of the past."
 	icon_state = "m35"
 	item_state = "bl_suit"
 	item_color = "m35"
@@ -1236,8 +1270,10 @@
 
 //FLUFF SHIT//
 /obj/item/clothing/under/f13/fluff/azov
-	name = "Azov uniform"
-	desc = "Batallion Azov uniform. Slava Ukraine."
+	name = "форма Азов"
+	desc = "Униформа бойца батальона Азов. Слава Украине."
+	eng_name = "Azov uniform"
+	eng_desc = "Batallion Azov uniform. Slava Ukraine."
 	icon_state = "ukform"
 	item_state = "dbdu"
 	item_color = "ukform"
