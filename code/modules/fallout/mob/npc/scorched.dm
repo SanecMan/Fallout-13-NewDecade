@@ -66,8 +66,9 @@
 	self_weight = 45
 	ranged = 1
 	ranged_cooldown_time = 200
-	projectiletype = /obj/item/projectile/bullet/F13/c9mmBullet
-	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
+	projectiletype = /obj/item/projectile/bullet/F13/c308mmBullet
+	projectilesound = 'sound/weapons/garandshot.ogg'
+	casingtype = /obj/item/ammo_casing/F13/m308
 
 	faction = list("scorched", "hostile")
 
