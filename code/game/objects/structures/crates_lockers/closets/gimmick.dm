@@ -2,6 +2,8 @@
 	name = "cabinet"
 	desc = "Old will forever be in fashion."
 	icon_state = "cabinet"
+	open_sound = 'sound/machines/wooden_closet_open.ogg'
+	close_sound = 'sound/machines/wooden_closet_close.ogg'
 	resistance_flags = FLAMMABLE
 	obj_integrity = 70
 	max_integrity = 70

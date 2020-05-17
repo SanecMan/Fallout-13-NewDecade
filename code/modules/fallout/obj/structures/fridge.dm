@@ -3,6 +3,8 @@
 /obj/structure/closet/wood
 	name = "бочка"
 	desc = "An old, wood barel with drinks."
+	open_sound = 'sound/machines/wooden_closet_open.ogg'
+	close_sound = 'sound/machines/wooden_closet_close.ogg'
 	icon_state = "wood"
 
 /obj/structure/closet/wood/standard/New()
