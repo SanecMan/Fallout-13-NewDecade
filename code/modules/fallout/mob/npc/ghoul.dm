@@ -62,8 +62,8 @@
 
 /mob/living/simple_animal/hostile/ghoul/New()
 	..()
-	icon_state = "retro_ghoul-[rand(1,5)]"
-	icon_living = "retro_ghoul-[rand(1,5)]"
+	icon_state = "retro_ghoul-[rand(1,10)]"
+	icon_living = "retro_ghoul-[rand(1,10)]"
 
 /mob/living/simple_animal/hostile/ghoul/aggressive
 	name = "Дикий гуль"
@@ -85,8 +85,8 @@
 
 /mob/living/simple_animal/hostile/ghoul/aggressive/New()
 	..()
-	icon_state = "angry_ghoul-[rand(1,5)]"
-	icon_living = "angry_ghoul-[rand(1,5)]"
+	icon_state = "angry_ghoul-[rand(1,10)]"
+	icon_living = "angry_ghoul-[rand(1,10)]"
 
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "Светящийся гуль"
@@ -107,8 +107,8 @@
 
 /mob/living/simple_animal/hostile/ghoul/glowing/New()
 	..()
-	icon_state = "retro_glowghoul-[rand(1,5)]"
-	icon_living = "retro_glowghoul-[rand(1,5)]"
+	icon_state = "retro_glowghoul-[rand(1,6)]"
+	icon_living = "retro_glowghoul-[rand(1,6)]"
 	SSradiation.processing += src
 
 /mob/living/simple_animal/hostile/ghoul/soldier
@@ -123,8 +123,8 @@
 
 /mob/living/simple_animal/hostile/ghoul/soldier/New()
 	..()
-	icon_state = "soldier_ghoul-[rand(1,5)]"
-	icon_living = "soldier_ghoul-[rand(1,5)]"
+	icon_state = "soldier_ghoul-[rand(1,10)]"
+	icon_living = "soldier_ghoul-[rand(1,10)]"
 
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
 	name = "Бронированный дикий гуль-солдат"
@@ -138,5 +138,5 @@
 
 /mob/living/simple_animal/hostile/ghoul/soldier/armored/New()
 	..()
-	icon_state = "soldier_ghoul_a-[rand(1,5)]"
-	icon_living = "soldier_ghoul_a-[rand(1,5)]"
+	icon_state = "soldier_ghoul_a-[rand(1,7)]"
+	icon_living = "soldier_ghoul_a-[rand(1,7)]"
