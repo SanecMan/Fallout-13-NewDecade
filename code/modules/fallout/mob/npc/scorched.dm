@@ -70,7 +70,7 @@
 	projectilesound = 'sound/weapons/garandshot.ogg'
 	casingtype = /obj/item/ammo_casing/F13/m308
 
-	faction = list("scorched", "hostile")
+	faction = list("hostile", "ghoul")
 
 	sound_speak_chance = 1
 	sound_speak = list('sound/f13npc/scor_br1.ogg','sound/f13npc/scor_b2.ogg','sound/f13npc/scor_b3.ogg')
