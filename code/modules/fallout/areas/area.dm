@@ -594,6 +594,15 @@
 	icon_state = "shuttle"
 
 //Сам поезд
+/area/f13/shuttle
+	name = "Shuttle"
+	requires_power = 0
+	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
+	has_gravity = 1
+	always_unpowered = 0
+	valid_territory = 0
+	icon_state = "shuttle"
+
 /area/f13/shuttle/train
 	name = "Поезд"
 	eng_name = "train"
