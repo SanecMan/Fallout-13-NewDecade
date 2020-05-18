@@ -30,6 +30,16 @@
 	var/default_power_usage = 10
 	var/current_power_usage = null
 	var/enabled = FALSE
+	var/footstep = 1
+
+/obj/item/clothing/suit/proc/step_action()
+
+/obj/item/clothing/suit/armor/f13/power_armor/step_action()
+	if(footstep > 1)
+		playsound(src, "servostep", 50, 1)
+		footstep = 0
+	else
+		footstep++
 
 /obj/item/clothing/suit/armor/f13/power_armor/initialize()
 	current_power_usage = default_power_usage
