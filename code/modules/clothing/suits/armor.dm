@@ -330,8 +330,10 @@
 	return
 
 /obj/item/clothing/suit/stealth/stealthsuit
-	name = "Chinese Stealth Suit"
-	desc = "A form-fitting armor suit complete with an active stealth field that can be triggered at the press of a button."
+	name = "Китайский стелс костюм"
+	desc = "Удобный стелс костюм, идеально для тайных операций."
+	eng_name = "Chinese Stealth Suit"
+	eng_desc = "A form-fitting armor suit complete with an active stealth field that can be triggered at the press of a button."
 	icon_state = "stealthsuit"
 	item_state = "stealthsuit"
 	allowed = list(/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/weapon/tank/internals,/obj/item/weapon/stock_parts/cell)
@@ -340,8 +342,8 @@
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 10, bomb = 10, bio = 10, rad = 10, fire = 100, acid = 100)
 	strip_delay = 12
 	var/mob/living/carbon/human/user = null
-	var/charge = 300
-	var/max_charge = 300
+	var/charge = 50
+	var/max_charge = 50
 	var/on = 0
 	var/old_alpha = 120
 	actions_types = list(/datum/action/item_action/toggle)

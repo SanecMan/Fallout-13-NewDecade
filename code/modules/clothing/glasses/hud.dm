@@ -29,16 +29,20 @@
 		desc = desc + " The display flickers slightly."
 
 /obj/item/clothing/glasses/hud/health
-	name = "Health Scanner HUD"
-	desc = "A heads-up display that scans the humans in view and provides accurate data about their health status."
+	name = "очки медика"
+	desc = "Очки которые позволяют считывать биометрические данные человека."
+	eng_name = "Health Scanner HUD"
+	eng_desc = "A heads-up display that scans the humans in view and provides accurate data about their health status."
 	icon_state = "healthhud"
 	origin_tech = "magnets=3;biotech=2"
 	hud_type = DATA_HUD_MEDICAL_ADVANCED
 	glass_colour_type = /datum/client_colour/glass_colour/lightblue
 
 /obj/item/clothing/glasses/hud/health/night
-	name = "Night Vision Health Scanner HUD"
-	desc = "An advanced medical head-up display that allows doctors to find patients in complete darkness."
+	name = "Прибор ночного видения медика"
+	desc = "Улучшенная технология очков, позволяющая считывать биометрические данные даже в темноте."
+	eng_name = "Night Vision Health Scanner HUD"
+	eng_desc = "An advanced medical head-up display that allows doctors to find patients in complete darkness."
 	icon_state = "healthhudnight"
 	item_state = "glasses"
 	origin_tech = "magnets=4;biotech=4;plasmatech=4;engineering=5"
@@ -47,16 +51,20 @@
 	glass_colour_type = /datum/client_colour/glass_colour/green
 
 /obj/item/clothing/glasses/hud/diagnostic
-	name = "Diagnostic HUD"
-	desc = "A heads-up display capable of analyzing the integrity and status of robotics and exosuits."
+	name = "очки РобКо"
+	desc = "Очки позвоялющие считывать данные о состоянии роботов и экзокостюмов."
+	eng_name = "Diagnostic HUD"
+	eng_desc = "A heads-up display capable of analyzing the integrity and status of robotics and exosuits."
 	icon_state = "diagnostichud"
 	origin_tech = "magnets=2;engineering=2"
 	hud_type = DATA_HUD_DIAGNOSTIC
 	glass_colour_type = /datum/client_colour/glass_colour/lightorange
 
 /obj/item/clothing/glasses/hud/diagnostic/night
-	name = "Night Vision Diagnostic HUD"
+	name = "Прибор ночного видения РобКо"
 	desc = "A robotics diagnostic HUD fitted with a light amplifier."
+	eng_name = "RobCo night vision glasses"
+	eng_desc = "A robotics diagnostic HUD fitted with a light amplifier."
 	icon_state = "diagnostichudnight"
 	item_state = "glasses"
 	origin_tech = "magnets=4;powerstorage=4;plasmatech=4;engineering=5"
@@ -65,8 +73,10 @@
 	glass_colour_type = /datum/client_colour/glass_colour/green
 
 /obj/item/clothing/glasses/hud/security
-	name = "Security HUD"
-	desc = "A heads-up display that scans the humans in view and provides accurate data about their ID status and security records."
+	name = "очки Службы Безопасности"
+	desc = "Очки позволяющие считывать данные с карточки человека."
+	eng_name = "Security HUD"
+	eng_desc = "A heads-up display that scans the humans in view and provides accurate data about their ID status and security records."
 	icon_state = "securityhud"
 	origin_tech = "magnets=3;combat=2"
 	hud_type = DATA_HUD_SECURITY_ADVANCED
@@ -97,8 +107,10 @@
 	glass_colour_type = /datum/client_colour/glass_colour/darkred
 
 /obj/item/clothing/glasses/hud/security/night
-	name = "Night Vision Security HUD"
-	desc = "An advanced heads-up display which provides id data and vision in complete darkness."
+	name = "Прибор ночного видения Службы Безопасности"
+	desc = "Улучшенная технология очков, позвляющая считывать данные карточки в полной темноте."
+	eng_name = "Night Vision Security HUD"
+	eng_desc = "An advanced heads-up display which provides id data and vision in complete darkness."
 	icon_state = "securityhudnight"
 	origin_tech = "magnets=4;combat=4;plasmatech=4;engineering=5"
 	darkness_view = 8
@@ -126,8 +138,10 @@
 	throwforce = 12
 
 /obj/item/clothing/glasses/hud/toggle
-	name = "Toggle Hud"
-	desc = "A hud with multiple functions."
+	name = "Включить очки"
+	desc = "Очки с разнообразными функциями."
+	eng_name = "Toggle Hud"
+	eng_desc = "A hud with multiple functions."
 	actions_types = list(/datum/action/item_action/switch_hud)
 
 /obj/item/clothing/glasses/hud/toggle/attack_self(mob/user)

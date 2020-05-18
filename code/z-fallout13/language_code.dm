@@ -10,7 +10,7 @@
 
 /client/verb/change_lang()
 	set name = "Change Language"
-	set category = "OOC"
+	set category = "CHANGE LANGUAGE"
 	set desc = "Changes game language."
 
 	if(usr.client.language == "English")

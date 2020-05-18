@@ -1,7 +1,9 @@
 
 /obj/item/clothing/gloves/fingerless
-	name = "fingerless gloves"
-	desc = "Plain black gloves without fingertips for the hard working."
+	name = "перчатки без пальцев"
+	desc = "Хорошие черные перчатки без пальцев. Самое то для тяжелой работы."
+	eng_name = "fingerless gloves"
+	eng_desc = "Plain black gloves without fingertips for the hard working."
 	icon_state = "fingerless"
 	item_state = "fingerless"
 	item_color = null	//So they don't wash.
@@ -25,8 +27,10 @@
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 70, acid = 30)
 
 /obj/item/clothing/gloves/combat
-	name = "combat gloves"
-	desc = "These tactical gloves are fireproof and shock resistant."
+	name = "боевые перчатки"
+	desc = "Эти тактические перчатки огнеупорны и электроустойчивы!"
+	eng_name = "combat gloves"
+	eng_desc = "These tactical gloves are fireproof and shock resistant."
 	icon_state = "black"
 	item_state = "blackgloves"
 	siemens_coefficient = 0
