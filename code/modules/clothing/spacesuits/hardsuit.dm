@@ -90,9 +90,8 @@
 			to_chat(user, "<span class='warning'>You cannot install the upgrade to [src] while wearing it.</span>")
 			return
 
-		if(user.unEquip(I))
+		if(user.transferItemToLoc(I, src))
 			jetpack = I
-			I.forceMove(src)
 			to_chat(user, "<span class='notice'>You successfully install the jetpack into [src].</span>")
 
 	else if(istype(I, /obj/item/weapon/screwdriver))

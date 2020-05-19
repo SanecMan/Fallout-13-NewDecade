@@ -29,6 +29,8 @@
 	var/needs_update    // Whether we are queued for an update.
 	var/destroyed       // Whether we are destroyed and need to stop emitting light.
 	var/force_update
+	var/luminosity = 0
+	var/atom/owner
 
 /datum/light_source/New(var/atom/owner, var/atom/top)
 	source_atom = owner // Set our new owner.
@@ -56,6 +58,14 @@
 	update()
 
 	return ..()
+
+
+/datum/light_source/New(atom/A)
+	if(!istype(A))
+		CRASH("The first argument to the light object's constructor must be the atom that is the light source. Expected atom, received '[A]' instead.")
+	..()
+	owner = A
+	UpdateLuminosity(A.luminosity)
 
 // Kill ourselves.
 /datum/light_source/proc/destroy()

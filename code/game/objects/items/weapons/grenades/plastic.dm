@@ -24,11 +24,10 @@
 /obj/item/weapon/grenade/plastic/attackby(obj/item/I, mob/user, params)
 	if(!nadeassembly && istype(I, /obj/item/device/assembly_holder))
 		var/obj/item/device/assembly_holder/A = I
-		if(!user.unEquip(I))
+		if(!user.transferItemToLoc(I, src))
 			return ..()
 		nadeassembly = A
 		A.master = src
-		A.forceMove(src)
 		assemblyattacher = user.ckey
 		to_chat(user, "<span class='notice'>You add [A] to the [name].</span>")
 		playsound(src, 'sound/weapons/tap.ogg', 20, 1)
@@ -73,10 +72,10 @@
 	to_chat(user, "<span class='notice'>You start planting the [src]. The timer is set to [det_time]...</span>")
 
 	if(do_after(user, 50, target = AM))
-		if(!user.unEquip(src))
+		if(!user.temporarilyRemoveItemFromInventory(src))
 			return
 		src.target = AM
-		forceMove(null)
+		forceMove(null)	//Yep
 
 		message_admins("[ADMIN_LOOKUPFLW(user)] planted [name] on [target.name] at [ADMIN_COORDJMP(target)] with [det_time] second fuse",0,1)
 		log_game("[key_name(user)] planted [name] on [target.name] at [COORD(src)] with [det_time] second fuse")
@@ -85,6 +84,8 @@
 		if(!nadeassembly)
 			to_chat(user, "<span class='notice'>You plant the bomb. Timer counting down from [det_time].</span>")
 			addtimer(CALLBACK(src, .proc/prime), det_time*10)
+		else
+			qdel(src)	//How?
 
 /obj/item/weapon/grenade/plastic/suicide_act(mob/user)
 	message_admins("[key_name_admin(user)](<A HREF='?_src_=holder;adminmoreinfo=\ref[user]'>?</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[user]'>FLW</A>) suicided with [src] at ([user.x],[user.y],[user.z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)",0,1)

@@ -31,32 +31,32 @@ obj/dugpit/New(lnk)
 	..()
 	parent = lnk
 
-/obj/dugpit/container_resist(usr) // RESIST
+/obj/dugpit/container_resist(user) // RESIST
 	//try to unbury self
-	to_chat(usr, "<span class='danger'>You start digging from the inside, trying to unbury yourself!</span>")
+	to_chat(user, "<span class='danger'>You start digging from the inside, trying to unbury yourself!</span>")
 	if(do_after(usr, 450, target = src))
-		to_chat(usr, "<span class='danger'>You have undug yourself!</span>")
+		to_chat(user, "<span class='danger'>You have undug yourself!</span>")
 		parent.gets_dug(null)
 
-/turf/open/indestructible/ground/desert/proc/handle_item_insertion(obj/item/W, mob/usr)
+/turf/open/indestructible/ground/desert/proc/handle_item_insertion(obj/item/W, mob/user)
 	if(!istype(W))
 		return
 	if (storedindex>=NUMCONTENT)
 		to_chat(usr, "<span class='danger'>The pit is filled to the brim!</span>")
 		return
-	if(usr)
-		if(!usr.unEquip(W))
+	if(user)
+		if(!usr.dropItemToGround(W))
 			return
-	if(usr)
+	if(user)
 		if(usr.client && usr.s_active != src)
 			usr.client.screen -= W
 
 		add_fingerprint(usr)
 
 		if(!istype(W, /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow))
-			for(var/mob/M in viewers(usr, null))
-				if(M == usr)
-					to_chat(usr, "<span class='notice'>Вы положили [W] в яму.</span>")
+			for(var/mob/M in viewers(user, null))
+				if(M == user)
+					to_chat(user, "<span class='notice'>Вы положили [W] в яму.</span>")
 				else if(in_range(M, usr)) //If someone is standing close enough, they can tell what it is...
 					M.show_message("<span class='notice'>[usr] кладёт [W] в яму.</span>", 1)
 				else if(W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...

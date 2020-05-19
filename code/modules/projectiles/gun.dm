@@ -644,11 +644,11 @@
 		if(istype(I, /obj/item/device/flashlight/seclite))
 			var/obj/item/device/flashlight/seclite/S = I
 			if(!gun_light)
-				if(!user.unEquip(I))
+				if(!user.transferItemToLoc(I, src))
 					return
 				to_chat(user, "<span class='notice'>You click [S] into place on [src].</span>")
 				if(S.on)
-					set_light(0)
+					SetLuminosity(0)
 				gun_light = S
 				update_icon()
 				update_gunlight(user)

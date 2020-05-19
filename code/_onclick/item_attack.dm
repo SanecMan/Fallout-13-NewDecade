@@ -3,6 +3,9 @@
 /obj/item/proc/attack_self(mob/user)
 	return
 
+/obj/item/proc/pre_attackby(obj/O, mob/living/user, params) //do stuff before attackby!
+	return TRUE //return FALSE to avoid calling attackby after this proc does stuff
+
 // No comment
 /atom/proc/attackby(obj/item/W, mob/user, params)
 	return
@@ -18,7 +21,7 @@
 	if(user.a_intent == INTENT_HARM && stat == DEAD && butcher_results) //can we butcher it?
 		var/sharpness = I.is_sharp()
 		if(sharpness)
-			to_chat(user, "<span class='notice'>You begin to butcher [src]...</span>")
+			user << "<span class='notice'>You begin to butcher [src]...</span>"
 			playsound(loc, 'sound/weapons/slice.ogg', 50, 1, -1)
 			if(do_mob(user, src, 80/sharpness))
 				harvest(user)
@@ -39,10 +42,6 @@
 
 	user.do_attack_animation(M)
 	M.attacked_by(src, user)
-
-	if(istype(M, /mob/living))
-		var/mob/living/target = M
-		target.murder = user
 
 	add_logs(user, M, "attacked", src.name, "(INTENT: [uppertext(user.a_intent)]) (DAMTYPE: [uppertext(damtype)])")
 	add_fingerprint(user)

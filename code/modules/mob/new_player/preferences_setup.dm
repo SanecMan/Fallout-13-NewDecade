@@ -64,8 +64,8 @@
 	preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
 	CHECK_TICK
 	for (var/obj/item/I in mannequin.get_equipped_items())
-		mannequin.unEquip(I, TRUE)
+		mannequin.dropItemToGround(I, TRUE)
 		PlaceInPool(I, FALSE)
 	for (var/obj/item/I in mannequin.held_items)
-		mannequin.unEquip(I, TRUE)
+		mannequin.dropItemToGround(I, TRUE)
 		PlaceInPool(I, FALSE)

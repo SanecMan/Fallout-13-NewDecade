@@ -213,8 +213,7 @@
 	else if(istype(I, /obj/item/weapon/electronics/airlock))
 		to_chat(user, "<span class='notice'>You start installing the electronics into [src]...</span>")
 		playsound(src.loc, I.usesound, 50, 1)
-		if(user.unEquip(I) && do_after(user, 30, target = src))
-			I.forceMove(src)
+		if(do_after(user, 30, target = src) && user.transferItemToLoc(I,src))
 			electronics = I
 			to_chat(user, "<span class='notice'>You install the airlock electronics.</span>")
 

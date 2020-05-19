@@ -88,7 +88,6 @@
 
 	//domestication
 	var/tame = 0
-	var/saddled = 0
 	var/datum/riding/riding_datum = null
 
 	var/XP = 0
@@ -587,7 +586,7 @@
 			client.screen |= l_hand
 
 //ANIMAL RIDING
-/mob/living/simple_animal/unbuckle_mob(mob/living/buckled_mob,force = 0)
+/mob/living/simple_animal/unbuckle_mob(mob/living/buckled_mob, force = 0, check_loc = 1)
 	if(riding_datum)
 		riding_datum.restore_position(buckled_mob)
 	. = ..()
@@ -598,15 +597,14 @@
 		if(user.incapacitated())
 			return
 		for(var/atom/movable/A in get_turf(src))
-			if(A.density)
-				if(A != src && A != M)
-					return
+			if(A != src && A != M && A.density)
+				return
 		M.forceMove(get_turf(src))
 		riding_datum.handle_vehicle_offsets()
 		riding_datum.ridden = src
 
 /mob/living/simple_animal/relaymove(mob/user, direction)
-	if(tame && saddled && riding_datum)
+	if(tame && riding_datum)
 		riding_datum.handle_ride(user, direction)
 
 /mob/living/simple_animal/Move(NewLoc,Dir=0,step_x=0,step_y=0)
@@ -616,7 +614,7 @@
 		riding_datum.handle_vehicle_offsets()
 
 
-/mob/living/simple_animal/buckle_mob()
-	..()
+/mob/living/simple_animal/buckle_mob(mob/living/buckled_mob, force = 0, check_loc = 1)
+	. = ..()
 	riding_datum = new/datum/riding/animal
 

@@ -55,7 +55,7 @@
 			to_chat(user, "<span class='warning'>You aren't sure where this brain came from, but you're pretty sure it's a useless brain!</span>")
 			return
 
-		if(!user.unEquip(O))
+		if(!user.transferItemToLoc(O, src))
 			return
 		var/mob/living/brain/B = newbrain.brainmob
 		if(!B.key)
@@ -72,7 +72,6 @@
 			living_mob_list += brainmob
 
 		brainmob.reset_perspective()
-		newbrain.forceMove(src )//P-put your brain in it
 		brain = newbrain
 
 		name = "Man-Machine Interface: [brainmob.real_name]"

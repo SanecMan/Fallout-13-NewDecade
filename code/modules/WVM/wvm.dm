@@ -118,7 +118,7 @@
 
 		if(istype(Itm.loc, /mob))
 			var/mob/M = Itm.loc
-			if(!M.unEquip(Itm))
+			if(!M.transferItemToLoc(Itm))
 				to_chat(usr, "<span class='warning'>\the [Itm] is stuck to your hand, you cannot put it in \the [src]!</span>")
 				return
 
@@ -247,7 +247,7 @@
 		return
 	else
 		lock = newLock
-		if(usr.unEquip(lock))
+		if(usr.transferItemToLoc(lock))
 			lock.forceMove(src)
 			playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 			to_chat(usr, "Lock installed.")

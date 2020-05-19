@@ -98,9 +98,8 @@
 			return
 		if(igniter)
 			return
-		if(!user.unEquip(W))
+		if(!user.transferItemToLoc(W, src))
 			return
-		I.forceMove(src)
 		igniter = I
 		update_icon()
 		return
@@ -109,10 +108,9 @@
 		if(ptank)
 			to_chat(user, "<span class='notice'>There is already a plasma tank loaded in [src]!</span>")
 			return
-		if(!user.unEquip(W))
+		if(!user.transferItemToLoc(W, src))
 			return
 		ptank = W
-		W.forceMove(src)
 		update_icon()
 		return
 

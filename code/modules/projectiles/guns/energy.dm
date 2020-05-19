@@ -73,7 +73,7 @@
 	if (istype(A, /obj/item/weapon/stock_parts/cell))
 		var/obj/O = power_supply
 
-		user.remove_from_mob(A)
+		user.transferItemToLoc(A)
 		power_supply = A
 		power_supply.forceMove(src)
 		recharge_newshot(1)

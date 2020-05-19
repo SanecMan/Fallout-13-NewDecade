@@ -453,7 +453,8 @@
 	return
 
 /obj/item/device/extinguisher_refill
-	name = "Plasma-man jumpsuit refill pack"
+	name = "envirosuit extinguisher cartridge"
+	eng_name = "envirosuit extinguisher cartridge"
 	desc = "A compressed water pack used to refill plasma-man jumpsuit auto-extinguishers."
 	icon_state = "plasmarefill"
 	origin_tech = "materials=2;plasmatech=3;biotech=1"

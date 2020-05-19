@@ -37,9 +37,8 @@
 
 /obj/item/weapon/folder/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/paper) || istype(W, /obj/item/weapon/photo) || istype(W, /obj/item/documents))
-		if(!user.unEquip(W))
+		if(!user.transferItemToLoc(W, src))
 			return
-		W.forceMove(src)
 		to_chat(user, "<span class='notice'>You put [W] into [src].</span>")
 		update_icon()
 	else if(istype(W, /obj/item/weapon/pen))

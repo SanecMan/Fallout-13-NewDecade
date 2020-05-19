@@ -708,14 +708,14 @@
 		if(G.seed)
 			if(istype(G.seed, /obj/item/seeds/kudzu))
 				investigate_log("had Kudzu planted in it by [user.ckey]([user]) at ([x],[y],[z])","kudzu")
-			user.unEquip(G)
+			if(!user.transferItemToLoc(O, src))
+				return
 			to_chat(user, "<span class='notice'>You plant [G].</span>")
 			dead = 0
 			myseed = G.seed
 			age = 1
 			plant_health = myseed.endurance
 			lastcycle = world.time
-			myseed.forceMove(src)
 			qdel(G)
 			update_icon()
 
@@ -791,14 +791,14 @@
 		if(!myseed)
 			if(istype(O, /obj/item/seeds/kudzu))
 				investigate_log("had Kudzu planted in it by [user.ckey]([user]) at ([x],[y],[z])","kudzu")
-			user.unEquip(O)
+			if(!user.transferItemToLoc(O, src))
+				return
 			to_chat(user, "<span class='notice'>You plant [O].</span>")
 			dead = 0
 			myseed = O
 			age = 1
 			plant_health = myseed.endurance
 			lastcycle = world.time
-			O.forceMove(src)
 			update_icon()
 		else
 			to_chat(user, "<span class='warning'>[src] already has seeds in it!</span>")

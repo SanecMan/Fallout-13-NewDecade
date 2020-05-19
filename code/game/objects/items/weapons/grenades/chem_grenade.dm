@@ -76,10 +76,9 @@
 			return
 		else
 			if(I.reagents.total_volume)
-				if(!user.unEquip(I))
+				if(!user.transferItemToLoc(I, src))
 					return
 				to_chat(user, "<span class='notice'>You add [I] to the [initial(name)] assembly.</span>")
-				I.forceMove(src)
 				beakers += I
 			else
 				to_chat(user, "<span class='warning'>[I] is empty!</span>")
@@ -89,12 +88,11 @@
 		var/obj/item/device/assembly_holder/A = I
 		if(isigniter(A.a_left) == isigniter(A.a_right))	//Check if either part of the assembly has an igniter, but if both parts are igniters, then fuck it
 			return
-		if(!user.unEquip(I))
+		if(!user.transferItemToLoc(I, src))
 			return
 
 		nadeassembly = A
 		A.master = src
-		A.forceMove(src)
 		assemblyattacher = user.ckey
 
 		stage_change(WIRED)
@@ -234,10 +232,9 @@
 	//make a special case you might as well do it explicitly. -Sayu
 /obj/item/weapon/grenade/chem_grenade/large/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/slime_extract) && stage == WIRED)
-		if(!user.unEquip(I))
+		if(!user.transferItemToLoc(I, src))
 			return
 		to_chat(user, "<span class='notice'>You add [I] to the [initial(name)] assembly.</span>")
-		I.forceMove(src)
 		beakers += I
 	else
 		return ..()

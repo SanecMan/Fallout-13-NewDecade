@@ -60,7 +60,7 @@
 		to_chat(L, "<span class='warning'>[drone] is trying to escape!</span>")
 		if(!do_after(drone, 50, target = L))
 			return
-		L.unEquip(src)
+		L.dropItemToGround(src)
 
 	contents -= drone
 	drone.forceMove(get_turf(src))

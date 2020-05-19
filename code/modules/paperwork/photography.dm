@@ -215,7 +215,7 @@
 		if(pictures_left)
 			to_chat(user, "<span class='notice'>[src] still has some film in it!</span>")
 			return
-		if(!user.unEquip(I))
+		if(!user.temporarilyRemoveItemFromInventory(I))
 			return
 		to_chat(user, "<span class='notice'>You insert [I] into [src].</span>")
 		qdel(I)
@@ -552,7 +552,7 @@
 	if(istype(I, /obj/item/weapon/photo))
 		if(!displayed)
 			var/obj/item/weapon/photo/P = I
-			user.unEquip(P)
+			user.transferItemToLoc(P)
 			P.forceMove(src)
 			displayed = P
 			update_icon()
@@ -640,8 +640,7 @@
 	else if(istype(O, /obj/item/weapon/photo))
 		if(!framed)
 			var/obj/item/weapon/photo/P = O
-			user.unEquip(P)
-			P.forceMove(src)
+			user.transferItemToLoc(P)
 			framed = P
 			update_icon()
 		else

@@ -248,15 +248,13 @@
 			return
 
 		if(!keyslot)
-			if(!user.unEquip(W))
+			if(!user.transferItemToLoc(W, src))
 				return
-			W.forceMove(src)
 			keyslot = W
 
 		else
-			if(!user.unEquip(W))
+			if(!user.transferItemToLoc(W, src))
 				return
-			W.forceMove(src)
 			keyslot2 = W
 
 

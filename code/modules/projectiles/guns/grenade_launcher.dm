@@ -20,9 +20,8 @@
 
 	if((istype(I, /obj/item/weapon/grenade)))
 		if(grenades.len < max_grenades)
-			if(!user.unEquip(I))
+			if(!user.transferItemToLoc(I, src))
 				return
-			I.forceMove(src)
 			grenades += I
 			to_chat(user, "<span class='notice'>You put the grenade in the grenade launcher.</span>")
 			to_chat(user, "<span class='notice'>[grenades.len] / [max_grenades] Grenades.</span>")

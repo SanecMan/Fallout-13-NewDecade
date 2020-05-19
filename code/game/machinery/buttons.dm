@@ -68,15 +68,14 @@
 
 	if(panel_open)
 		if(!device && istype(W, /obj/item/device/assembly))
-			if(!user.unEquip(W))
+			if(!user.transferItemToLoc(W, src))
 				to_chat(user, "<span class='warning'>\The [W] is stuck to you!</span>")
 				return
-			W.forceMove(src)
 			device = W
 			to_chat(user, "<span class='notice'>You add [W] to the button.</span>")
 
 		if(!board && istype(W, /obj/item/weapon/electronics/airlock))
-			if(!user.unEquip(W))
+			if(!user.transferItemToLoc(W, src))
 				to_chat(user, "<span class='warning'>\The [W] is stuck to you!</span>")
 				return
 			W.forceMove(src)

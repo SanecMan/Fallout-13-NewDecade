@@ -28,11 +28,10 @@
 		to_chat(user, "<span class='warning'>This power cell is too large for \the [holder]!</span>")
 		return FALSE
 
-	if(user && !user.unEquip(I))
+	if(user && !user.transferItemToLoc(I, src))
 		return FALSE
 
 	battery = I
-	I.forceMove(src)
 	to_chat(user, "<span class='notice'>You connect \the [I] to \the [src].</span>")
 
 	return TRUE

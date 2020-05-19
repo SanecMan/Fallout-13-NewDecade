@@ -12,7 +12,7 @@
 	var/repair_amount = 4 //how much a proselytizer can repair each cycle
 	var/can_be_repaired = TRUE //if a proselytizer can repair it at all
 	break_message = "<span class='warning'>The frog isn't a meme after all!</span>" //The message shown when a structure breaks
-	break_sound = 'sound/misc/gameover.ogg' //The sound played when a structure breaks
+	break_sound = 'sound/magic/clockwork/anima_fragment_death.ogg' //The sound played when a structure breaks
 	debris = list(/obj/item/clockwork/alloy_shards/large = 1, \
 	/obj/item/clockwork/alloy_shards/medium = 2, \
 	/obj/item/clockwork/alloy_shards/small = 3) //Parts left behind when a structure breaks
@@ -44,18 +44,19 @@
 		desc = clockwork_desc
 	..()
 	desc = initial(desc)
-	if(!(resistance_flags & INDESTRUCTIBLE))
+	if(unanchored_icon)
+		user << "<span class='notice'>[src] is [anchored ? "":"not "]secured to the floor.</span>"
+
+/obj/structure/destructible/clockwork/examine_status(mob/user)
+	if(is_servant_of_ratvar(user) || isobserver(user))
 		var/t_It = p_they(TRUE)
 		var/t_is = p_are()
-		var/servant_message = "[t_It] [t_is] at <b>[obj_integrity]/[max_integrity]</b> integrity"
 		var/heavily_damaged = FALSE
 		var/healthpercent = (obj_integrity/max_integrity) * 100
 		if(healthpercent < 50)
 			heavily_damaged = TRUE
-		if(can_see_clockwork)
-			to_chat(user, "<span class='[heavily_damaged ? "alloy":"brass"]'>[servant_message][heavily_damaged ? "!":"."]</span>")
-	if(unanchored_icon)
-		to_chat(user, "<span class='notice'>[src] is [anchored ? "":"not "]secured to the floor.</span>")
+		return "<span class='[heavily_damaged ? "alloy":"brass"]'>[t_It] [t_is] at <b>[obj_integrity]/[max_integrity]</b> integrity[heavily_damaged ? "!":"."]</span>"
+	return ..()
 
 /obj/structure/destructible/clockwork/hulk_damage()
 	return 20
@@ -72,9 +73,20 @@
 
 /obj/structure/destructible/clockwork/can_be_unfasten_wrench(mob/user)
 	if(anchored && obj_integrity <= round(max_integrity * 0.25, 1))
-		to_chat(user, "<span class='warning'>[src] is too damaged to unsecure!</span>")
+		user << "<span class='warning'>[src] is too damaged to unsecure!</span>"
 		return FAILED_UNFASTEN
 	return ..()
+
+/obj/structure/destructible/clockwork/attack_ai(mob/user)
+	if(is_servant_of_ratvar(user))
+		attack_hand(user)
+
+/obj/structure/destructible/clockwork/attack_animal(mob/living/simple_animal/M)
+	if(is_servant_of_ratvar(M))
+		attack_hand(M)
+		return FALSE
+	else
+		return ..()
 
 /obj/structure/destructible/clockwork/attackby(obj/item/I, mob/user, params)
 	if(is_servant_of_ratvar(user) && istype(I, /obj/item/weapon/wrench) && unanchored_icon)
@@ -91,7 +103,7 @@
 		if(do_damage)
 			playsound(src, break_sound, 10 * get_efficiency_mod(TRUE), 1)
 			take_damage(round(max_integrity * 0.25, 1), BRUTE)
-		to_chat(user, "<span class='warning'>As you unsecure [src] from the floor, you see cracks appear in its surface!</span>")
+		user << "<span class='warning'>As you unsecure [src] from the floor, you see cracks appear in its surface!</span>"
 
 /obj/structure/destructible/clockwork/emp_act(severity)
 	if(anchored && unanchored_icon)
@@ -132,7 +144,9 @@
 	..()
 	if(is_servant_of_ratvar(user) || isobserver(user))
 		var/powered = total_accessable_power()
-		to_chat(user, "<span class='[powered ? "brass":"alloy"]'>It has access to <b>[powered == INFINITY ? "INFINITY":"[powered]"]W</b> of power.</span>")
+		var/sigil_number = LAZYLEN(check_apc_and_sigils())
+		user << "<span class='[powered ? "brass":"alloy"]'>It has access to <b>[powered == INFINITY ? "INFINITY":"[powered]"]W</b> of power, \
+		and <b>[sigil_number]</b> Sigil[sigil_number == 1 ? "":"s"] of Transmission [sigil_number == 1 ? "is":"are"] in range.</span>"
 
 /obj/structure/destructible/clockwork/powered/Destroy()
 	SSfastprocess.processing -= src
@@ -145,20 +159,16 @@
 
 /obj/structure/destructible/clockwork/powered/can_be_unfasten_wrench(mob/user)
 	if(active)
-		to_chat(user, "<span class='warning'>[src] needs to be disabled before it can be unsecured!</span>")
+		user << "<span class='warning'>[src] needs to be disabled before it can be unsecured!</span>"
 		return FAILED_UNFASTEN
 	return ..()
-
-/obj/structure/destructible/clockwork/powered/attack_ai(mob/user)
-	if(is_servant_of_ratvar(user))
-		attack_hand(user)
 
 /obj/structure/destructible/clockwork/powered/proc/toggle(fast_process, mob/living/user)
 	if(user)
 		if(!is_servant_of_ratvar(user))
 			return FALSE
 		if(!anchored && !active)
-			to_chat(user, "<span class='warning'>[src] needs to be secured to the floor before it can be activated!</span>")
+			user << "<span class='warning'>[src] needs to be secured to the floor before it can be activated!</span>"
 			return FALSE
 		visible_message("<span class='notice'>[user] [active ? "dis" : "en"]ables [src].</span>", "<span class='brass'>You [active ? "dis" : "en"]able [src].</span>")
 	active = !active
@@ -213,7 +223,7 @@
 
 /obj/structure/destructible/clockwork/powered/proc/accessable_sigil_power()
 	var/power = 0
-	for(var/obj/effect/clockwork/sigil/transmission/T in range(1, src))
+	for(var/obj/effect/clockwork/sigil/transmission/T in range(SIGIL_ACCESS_RANGE, src))
 		power += T.power_charge
 	return power
 
@@ -231,8 +241,8 @@
 /obj/structure/destructible/clockwork/powered/proc/use_power(amount) //we've made sure we had power, so now we use it
 	var/sigilpower = accessable_sigil_power()
 	var/list/sigils_in_range = list()
-	for(var/obj/effect/clockwork/sigil/transmission/T in range(1, src))
-		sigils_in_range |= T
+	for(var/obj/effect/clockwork/sigil/transmission/T in range(SIGIL_ACCESS_RANGE, src))
+		sigils_in_range += T
 	while(sigilpower && amount >= MIN_CLOCKCULT_POWER)
 		for(var/S in sigils_in_range)
 			var/obj/effect/clockwork/sigil/transmission/T = S
@@ -278,8 +288,8 @@
 
 /obj/structure/destructible/clockwork/powered/proc/check_apc_and_sigils() //checks for sigils and an APC, returning FALSE if it finds neither, and a list of sigils otherwise
 	. = list()
-	for(var/obj/effect/clockwork/sigil/transmission/T in range(1, src))
-		. |= T
+	for(var/obj/effect/clockwork/sigil/transmission/T in range(SIGIL_ACCESS_RANGE, src))
+		. += T
 	var/list/L = .
 	if(!L.len && (!target_apc || !target_apc.cell))
 		return FALSE

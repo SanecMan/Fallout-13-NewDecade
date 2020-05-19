@@ -31,7 +31,7 @@
 				to_chat(user, "<span class ='notice'>You remove [G]'s old pin.</span>")
 
 			if(!G.pin)
-				if(!user.unEquip(src))
+				if(!user.temporarilyRemoveItemFromInventory(src))
 					return
 				gun_insert(user, G)
 				to_chat(user, "<span class ='notice'>You insert [src] into [G].</span>")

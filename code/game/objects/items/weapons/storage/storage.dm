@@ -57,9 +57,11 @@
 
 			if(istype(over_object, /obj/screen/inventory/hand))
 				var/obj/screen/inventory/hand/H = over_object
-				if(!M.unEquip(src))
+				if(!M.temporarilyRemoveItemFromInventory(src))
 					return
-				M.put_in_hand(src,H.held_index)
+				if(!M.put_in_hand(src,H.held_index))
+					qdel(src)
+					return
 
 			add_fingerprint(usr)
 
@@ -304,8 +306,10 @@
 	if(!istype(W))
 		return 0
 	if(usr)
-		if(!usr.unEquip(W))
+		if(!usr.transferItemToLoc(W, src))
 			return 0
+	else
+		W.forceMove(src)
 	if(silent)
 		prevent_warning = 1
 	if(W.pulledby)

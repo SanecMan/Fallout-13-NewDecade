@@ -177,8 +177,7 @@
 		var/obj/item/stack/rods/R = I
 		if (R.use(1))
 			var/obj/item/weapon/wirerod/W = new /obj/item/weapon/wirerod
-			if(!remove_item_from_storage(user))
-				user.unEquip(src)
+			remove_item_from_storage(user)
 			user.put_in_hands(W)
 			to_chat(user, "<span class='notice'>You wrap the cable restraint around the top of the rod.</span>")
 			qdel(src)
@@ -198,8 +197,7 @@
 			M.use(6)
 			user.put_in_hands(S)
 			to_chat(user, "<span class='notice'>You make some weights out of [I] and tie them to [src].</span>")
-			if(!remove_item_from_storage(user))
-				user.unEquip(src)
+			remove_item_from_storage(user)
 			qdel(src)
 	else
 		return ..()

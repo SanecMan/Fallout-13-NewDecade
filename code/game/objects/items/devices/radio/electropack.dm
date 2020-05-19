@@ -49,15 +49,13 @@
 		var/obj/item/assembly/shock_kit/A = new /obj/item/assembly/shock_kit( user )
 		A.icon = 'icons/obj/assemblies.dmi'
 
-		if(!user.unEquip(W))
+		if(!user.transferItemToLoc(W, A))
 			to_chat(user, "<span class='warning'>[W] is stuck to your hand, you cannot attach it to [src]!</span>")
 			return
-		W.forceMove(A)
 		W.master = A
 		A.part1 = W
 
-		user.unEquip(src)
-		forceMove(A)
+		user.transferItemToLoc(src, A, TRUE)
 		master = A
 		A.part2 = src
 

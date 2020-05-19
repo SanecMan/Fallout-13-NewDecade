@@ -216,8 +216,6 @@
 		if(hacked || other_esword.hacked)
 			newSaber.hacked = TRUE
 			newSaber.item_color = "rainbow"
-		user.unEquip(W)
-		user.unEquip(src)
 		qdel(W)
 		qdel(src)
 		user.put_in_hands(newSaber)

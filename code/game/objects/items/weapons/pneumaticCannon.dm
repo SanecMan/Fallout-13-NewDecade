@@ -65,7 +65,7 @@
 		if(IW.w_class > src.w_class)
 			to_chat(user, "<span class='warning'>\The [IW] is too large to fit into \the [src]!</span>")
 			return
-		if(!user.unEquip(W))
+		if(!user.transferItemToLoc(W, src))
 			return
 		to_chat(user, "<span class='notice'>You load \the [IW] into \the [src].</span>")
 		loadedItems.Add(IW)
@@ -167,7 +167,7 @@
 		if(src.tank)
 			to_chat(user, "<span class='warning'>\The [src] already has a tank.</span>")
 			return
-		if(!user.unEquip(thetank))
+		if(!user.transferItemToLoc(thetank, src))
 			return
 		to_chat(user, "<span class='notice'>You hook \the [thetank] up to \the [src].</span>")
 		src.tank = thetank

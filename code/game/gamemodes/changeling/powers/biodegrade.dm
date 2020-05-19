@@ -59,16 +59,12 @@
 
 /obj/effect/proc_holder/changeling/biodegrade/proc/dissolve_handcuffs(mob/living/carbon/human/user, obj/O)
 	if(O && user.handcuffed == O)
-		user.unEquip(O)
 		O.visible_message("<span class='warning'>[O] dissolves into a puddle of sizzling goop.</span>")
-		O.forceMove(get_turf(user))
 		qdel(O)
 
 /obj/effect/proc_holder/changeling/biodegrade/proc/dissolve_straightjacket(mob/living/carbon/human/user, obj/S)
 	if(S && user.wear_suit == S)
-		user.unEquip(S)
 		S.visible_message("<span class='warning'>[S] dissolves into a puddle of sizzling goop.</span>")
-		S.forceMove(get_turf(user))
 		qdel(S)
 
 /obj/effect/proc_holder/changeling/biodegrade/proc/open_closet(mob/living/carbon/human/user, obj/structure/closet/C)

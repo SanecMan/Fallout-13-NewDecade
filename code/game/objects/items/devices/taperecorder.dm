@@ -32,9 +32,8 @@
 
 /obj/item/device/taperecorder/attackby(obj/item/I, mob/user, params)
 	if(!mytape && istype(I, /obj/item/device/tape))
-		if(!user.unEquip(I))
+		if(!user.transferItemToLoc(I,src))
 			return
-		I.forceMove(src)
 		mytape = I
 		to_chat(user, "<span class='notice'>You insert [I] into [src].</span>")
 		update_icon()

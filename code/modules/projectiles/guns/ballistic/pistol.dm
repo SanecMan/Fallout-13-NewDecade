@@ -74,9 +74,8 @@
 	to_chat(user, "<span class='notice'>As you try to pick up [src], it slips out of your grip..</span>")
 	if(prob(50))
 		to_chat(user, "<span class='notice'>..and vanishes from your vision! Where the hell did it go?</span>")
-		user.unEquip(src)
 		qdel(src)
 		user.update_icons()
 	else
 		to_chat(user, "<span class='notice'>..and falls into view. Whew, that was a close one.</span>")
-		user.unEquip(src)
+		user.dropItemToGround(src)

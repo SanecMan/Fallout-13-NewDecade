@@ -44,14 +44,13 @@
 				magazine.update_icon()
 				magazine = null
 			else
-				to_chat(user, "<span class='notice'>You insert the magazine into \the [src].</span>")
-			user.remove_from_mob(AM)
-			magazine = AM
-			magazine.forceMove(src)
-			chamber_round()
-			A.update_icon()
-			update_icon()
-			return 1
+				if(user.transferItemToLoc(AM, src))
+					magazine = AM
+					user << "<span class='notice'>You load a new magazine into \the [src].</span>"
+					chamber_round()
+					A.update_icon()
+					update_icon()
+					return 1
 
 /obj/item/weapon/gun/ballistic/automatic/ui_action_click()
 	burst_select()

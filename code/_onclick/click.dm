@@ -32,8 +32,13 @@
 */
 /atom/Click(location,control,params)
 	usr.ClickOn(src, params)
+
 /atom/DblClick(location,control,params)
 	usr.DblClickOn(src,params)
+
+/atom/MouseWheel(delta_x,delta_y,location,control,params)
+	usr.MouseWheelOn(src, delta_x, delta_y, params)
+
 
 /*
 	Standard mob ClickOn()
@@ -53,7 +58,7 @@
 		return
 	next_click = world.time + 1
 
-	if(client.click_intercept)
+	if(client && client.click_intercept)
 		if(call(client.click_intercept, "InterceptClickOn")(src, params, A))
 			return
 
@@ -234,7 +239,7 @@
 		var/mob/living/carbon/human/H = user
 		H.dna.species.grab(H, src, H.martial_art)
 		H.next_click = world.time + CLICK_CD_MELEE
-	else 
+	else
 		..()
 /*
 	Alt click
@@ -371,3 +376,19 @@
 		if(T)
 			T.Click(location, control, params)
 	. = 1
+
+
+/* MouseWheelOn */
+
+/mob/proc/MouseWheelOn(atom/A, delta_x, delta_y, params)
+	return
+
+/mob/dead/observer/MouseWheelOn(atom/A, delta_x, delta_y, params)
+	var/list/modifier = params2list(params)
+	if(modifier["shift"])
+		var/view = 0
+		if(delta_y > 0)
+			view = -1
+		else
+			view = 1
+		add_view_range(view)

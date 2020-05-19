@@ -237,8 +237,8 @@
 	desc = "A weapon for combat exosuits. Shoots incendiary bullets."
 	icon_state = "mecha_carbine"
 	origin_tech = "materials=4;combat=4"
-	equip_cooldown = 5
-	projectile = /obj/item/projectile/bullet/incendiary/shell/dragonsbreath
+	equip_cooldown = 10
+	projectile = /obj/item/projectile/bullet/incendiary/shell
 	projectiles = 24
 	projectile_energy_cost = 15
 
@@ -281,6 +281,7 @@
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher
 	var/missile_speed = 2
 	var/missile_range = 30
+	var/diags_first = FALSE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/action(target)
 	if(!action_checks(target))
@@ -290,7 +291,7 @@
 	log_message("Launched a [O.name] from [name], targeting [target].")
 	projectiles--
 	proj_init(O)
-	O.throw_at(target, missile_range, missile_speed, spin = 0)
+	O.throw_at(target, missile_range, missile_speed, spin = 0, diagonals_first = diags_first)
 	return 1
 
 //used for projectile initilisation (priming flashbang) and additional logging
@@ -391,3 +392,4 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/mousetrap_mortar/proj_init(var/obj/item/device/assembly/mousetrap/armed/M)
 	M.secured = 1
+

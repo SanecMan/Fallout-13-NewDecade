@@ -12,7 +12,7 @@
 
 <i>Наслаждайтесь плодами наших усердных трудов, и поддержите разработку!</i>
 
-<i><b>You can change game language in OOC! | Вы можете поменять язык в OOC.</b></i>
+<i><b>You can change game language in CHANGE LANGUAGE! | Вы можете поменять язык в CHANGE LANGUAGE.</b></i>
 
 <h1>Welcome to Fallout 13</h1>
 

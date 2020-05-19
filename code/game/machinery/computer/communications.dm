@@ -1,6 +1,3 @@
-
-
-
 var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 // The communications computer
@@ -33,8 +30,6 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	var/const/STATE_CONFIRM_LEVEL = 9
 	var/const/STATE_TOGGLE_EMERGENCY = 10
 	var/const/STATE_PURCHASE = 11
-	var/const/COMMUNICATION_COOLDOWN = 600
-	var/const/COMMUNICATION_COOLDOWN_AI = 600
 
 	var/status_display_freq = "1435"
 	var/stat_msg1
@@ -118,7 +113,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 							if(SEC_LEVEL_BLUE)
 								feedback_inc("alert_comms_blue",1)
 					tmp_alertlevel = 0
-				else:
+				else
 					usr << "<span class='warning'>You are not authorized to do this!</span>"
 					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
 					tmp_alertlevel = 0
@@ -156,7 +151,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				var/list/shuttles = flatten_list(shuttle_templates)
 				var/datum/map_template/shuttle/S = locate(href_list["chosen_shuttle"]) in shuttles
 				if(S && istype(S))
-					if(SSshuttle.emergency.mode != SHUTTLE_CALL && SSshuttle.emergency.mode != SHUTTLE_RECALL && SSshuttle.emergency.mode != SHUTTLE_IDLE)
+					if(SSshuttle.emergency.mode != SHUTTLE_RECALL && SSshuttle.emergency.mode != SHUTTLE_IDLE)
 						usr << "It's a bit late to buy a new shuttle, don't you think?"
 						return
 					if(SSshuttle.shuttle_purchased)
@@ -412,7 +407,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		return
 
 	user.set_machine(src)
-	var/dat = {"<meta charset="UTF-8">"}
+	var/dat = ""
 	if(SSshuttle.emergency.mode == SHUTTLE_CALL)
 		var/timeleft = SSshuttle.emergency.timeLeft()
 		dat += "<B>Emergency shuttle</B>\n<BR>\nETA: [timeleft / 60 % 60]:[add_zero(num2text(timeleft % 60), 2)]"
@@ -542,8 +537,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	popup.open()
 
 /obj/machinery/computer/communications/proc/get_javascript_header(form_id)
-	var/dat = {"<meta charset="UTF-8">"}
-	dat += {"<script type="text/javascript">
+	var/dat = {"<script type="text/javascript">
 						function getLength(){
 							var reasonField = document.getElementById('reasonfield');
 							if(reasonField.value.length >= [CALL_SHUTTLE_REASON_LENGTH]){
@@ -561,8 +555,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 /obj/machinery/computer/communications/proc/get_call_shuttle_form(ai_interface = 0)
 	var/form_id = "callshuttle"
-	var/dat = {"<meta charset="UTF-8">"}
-	dat += get_javascript_header(form_id)
+	var/dat = get_javascript_header(form_id)
 	dat += "<form name='callshuttle' id='[form_id]' action='?src=\ref[src]' method='get' style='display: inline'>"
 	dat += "<input type='hidden' name='src' value='\ref[src]'>"
 	dat += "<input type='hidden' name='operation' value='[ai_interface ? "ai-callshuttle2" : "callshuttle2"]'>"
@@ -572,8 +565,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 /obj/machinery/computer/communications/proc/get_cancel_shuttle_form()
 	var/form_id = "cancelshuttle"
-	var/dat = {"<meta charset="UTF-8">"}
-	dat += get_javascript_header(form_id)
+	var/dat = get_javascript_header(form_id)
 	dat += "<form name='cancelshuttle' id='[form_id]' action='?src=\ref[src]' method='get' style='display: inline'>"
 	dat += "<input type='hidden' name='src' value='\ref[src]'>"
 	dat += "<input type='hidden' name='operation' value='cancelshuttle2'>"
@@ -582,7 +574,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	return dat
 
 /obj/machinery/computer/communications/proc/interact_ai(mob/living/silicon/ai/user)
-	var/dat = {"<meta charset="UTF-8">"}
+	var/dat = ""
 	switch(src.aistate)
 		if(STATE_DEFAULT)
 			if(SSshuttle.emergencyLastCallLoc)
@@ -656,26 +648,13 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	return dat
 
 /obj/machinery/computer/communications/proc/make_announcement(mob/living/user, is_silicon)
-	if((is_silicon && ai_message_cooldown > world.time) || (!is_silicon && message_cooldown > world.time))
+	if(!SScommunications.can_announce(user, is_silicon))
 		user << "Intercomms recharging. Please stand by."
 		return
 	var/input = stripped_input(user, "Please choose a message to announce to the station crew.", "What?")
 	if(!input || !user.canUseTopic(src))
 		return
-	if(is_silicon)
-		if(ai_message_cooldown > world.time)
-			return
-		minor_announce(input,"[user.name] Announces:")
-		ai_message_cooldown = world.time + COMMUNICATION_COOLDOWN_AI
-	else
-		if(message_cooldown > world.time)
-			return
-		priority_announce(html_decode(input), null, 'sound/misc/announce.ogg', "Captain")
-		message_cooldown = world.time + COMMUNICATION_COOLDOWN
-	log_say("[key_name(user)] has made a priority announcement: [input]")
-	message_admins("[key_name_admin(user)] has made a priority announcement.")
-
-
+	SScommunications.make_announcement(user, is_silicon, input)
 
 /obj/machinery/computer/communications/proc/post_status(command, data1, data2)
 

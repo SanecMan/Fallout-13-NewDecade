@@ -38,13 +38,13 @@
 
 /obj/item/weapon/avengerpack/attackby(obj/item/weapon/W, mob/user, params)
 	if(W == gun) //Don't need armed check, because if you have the gun assume its armed.
-		user.unEquip(gun,1)
+		user.dropItemToGround(gun, TRUE)
 	else
 		..()
 
 /obj/item/weapon/avengerpack/dropped(mob/user)
 	if(armed)
-		user.unEquip(gun,1)
+		user.dropItemToGround(gun, TRUE)
 
 /obj/item/weapon/avengerpack/MouseDrop(atom/over_object)
 	if(armed)
@@ -59,9 +59,10 @@
 
 			if(istype(over_object, /obj/screen/inventory/hand))
 				var/obj/screen/inventory/hand/H = over_object
-				if(!M.unEquip(src))
+				if(!M.temporarilyRemoveItemFromInventory(src))
 					return
-				M.put_in_hand(src, H.held_index)
+				if(!M.put_in_hand(src, H.held_index))
+					qdel(src)
 
 
 /obj/item/weapon/avengerpack/update_icon()

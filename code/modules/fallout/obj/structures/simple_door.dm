@@ -152,7 +152,7 @@
 			var/mob/living/carbon/human/H = user
 			var/obj/item/lock/P = H.get_inactive_held_item()
 			if(istype(P))
-				user.unEquip(P)
+				user.dropItemToGround(P)
 				attach_padlock(P)
 				P.attackby(I, user, params)
 				return 1
