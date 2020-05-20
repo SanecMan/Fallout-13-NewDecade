@@ -648,7 +648,7 @@
 					return
 				to_chat(user, "<span class='notice'>You click [S] into place on [src].</span>")
 				if(S.on)
-					SetLuminosity(0)
+					set_light(0)
 				gun_light = S
 				update_icon()
 				update_gunlight(user)

@@ -23,7 +23,7 @@
 		name = "anime fragment"
 		desc = "I-it's not like I want to show you the light of the Justiciar or anything, B-BAKA!"
 	..()
-	SetLuminosity(2,1)
+	set_light(2,1)
 
 /mob/living/simple_animal/hostile/clockwork/fragment/Stat()
 	..()

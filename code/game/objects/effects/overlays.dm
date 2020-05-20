@@ -336,7 +336,7 @@
 		damage *= multiplier
 	duration = max(round(damage * 0.2), 1)
 	..()
-	SetLuminosity(3, 2)
+	set_light(3, 2)
 
 /obj/effect/overlay/temp/ratvar/volt_hit/true/New(loc, caster, multiplier)
 	..()
