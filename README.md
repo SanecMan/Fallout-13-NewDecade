@@ -45,7 +45,7 @@ Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits
 
 Deus66, *DrNuke*, Def0lt, Dillashaw, KleFFir, Fanxelt.
 
-**Origins**  **Исходники**
+**Origins** || **Исходники**
 
 Currently the build contains code, graphics, sounds and specific build features of several Space Station 13 communities listed below.
 Fallout 13 would not exist without the efforts of creative people who did their best to make a game of spessmen more fun.
