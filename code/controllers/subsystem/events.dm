@@ -82,6 +82,7 @@ var/datum/subsystem/events/SSevent
 				continue
 			if (E.alertadmins)
 				message_admins("Random Event triggering: [E.name] ([E.typepath])")
+				deadchat_broadcast("[E.name] has just been randomly triggered!") //STOP ASSUMING IT'S BADMINS!
 			log_game("Random Event triggering: [E.name] ([E.typepath])")
 			return
 		sum_of_weights += E.weight
