@@ -1,4 +1,4 @@
-///меня часто просят выпилить это говно, но потом просят вернуть, в пизду, боьше не трону
+///РјРµРЅСЏ С‡Р°СЃС‚Рѕ РїСЂРѕСЃСЏС‚ РІС‹РїРёР»РёС‚СЊ СЌС‚Рѕ РіРѕРІРЅРѕ, РЅРѕ РїРѕС‚РѕРј РїСЂРѕСЃСЏС‚ РІРµСЂРЅСѓС‚СЊ, РІ РїРёР·РґСѓ, Р±РѕСЊС€Рµ РЅРµ С‚СЂРѕРЅСѓ
 
 /mob/var/sexual_potency =  15
 /mob/var/lust_tolerance = 100
@@ -9,19 +9,19 @@
 /mob/list_interaction_attributes()
 	var/dat = ..()
 	if(refactory_period)
-		dat += "<br>...сексуально исчерпан."
+		dat += "<br>...СЃРµРєСЃСѓР°Р»СЊРЅРѕ РёСЃС‡РµСЂРїР°РЅ."
 	if(is_nude())
-		dat += "<br>...голый."
+		dat += "<br>...РіРѕР»С‹Р№."
 		if(has_vagina())
-			dat += "<br>...имеет грудь."
+			dat += "<br>...РёРјРµРµС‚ РіСЂСѓРґСЊ."
 		if(has_penis())
-			dat += "<br>...имеет пенис."
+			dat += "<br>...РёРјРµРµС‚ РїРµРЅРёСЃ."
 		if(has_vagina())
-			dat += "<br>...имеет вагину."
+			dat += "<br>...РёРјРµРµС‚ РІР°РіРёРЅСѓ."
 		if(has_anus())
-			dat += "<br>...имеет анус."
+			dat += "<br>...РёРјРµРµС‚ Р°РЅСѓСЃ."
 	else
-		dat += "<br>...в одежде."
+		dat += "<br>...РІ РѕРґРµР¶РґРµ."
 	return dat
 
 /mob/living/Life()
@@ -33,8 +33,8 @@
 // If I could have gotten away with using a tilde in the type path, I would have.
 /datum/interaction/lewd
 	command = "assslap"
-	description = "Шлепнуть по жопе."
-	simple_message = "USER шлепнул TARGET по заднице!"
+	description = "РЁР»РµРїРЅСѓС‚СЊ РїРѕ Р¶РѕРїРµ."
+	simple_message = "USER С€Р»РµРїРЅСѓР» TARGET РїРѕ Р·Р°РґРЅРёС†Рµ!"
 	simple_style = "danger"
 	interaction_sound = 'honk/sound/interactions/slap.ogg'
 	needs_physical_contact = 1
@@ -63,19 +63,19 @@
 /datum/interaction/lewd/evaluate_user(var/mob/user, var/silent=1)
 	if(..(user, silent))
 		if(user_not_tired && user.refactory_period)
-			user << "<span class='warning'>Вы всё еще устали после прошлого раза.</span>"
+			user << "<span class='warning'>Р’С‹ РІСЃС‘ РµС‰Рµ СѓСЃС‚Р°Р»Рё РїРѕСЃР»Рµ РїСЂРѕС€Р»РѕРіРѕ СЂР°Р·Р°.</span>"
 			return 0
 		if(require_user_naked && !user.is_nude())
-			if(!silent) user << "<span class = 'warning'>Вам мешает одежда.</span>"
+			if(!silent) user << "<span class = 'warning'>Р’Р°Рј РјРµС€Р°РµС‚ РѕРґРµР¶РґР°.</span>"
 			return 0
 		if(require_user_penis && !user.has_penis())
-			if(!silent) user << "<span class = 'warning'>У вас нет члена.</span>"
+			if(!silent) user << "<span class = 'warning'>РЈ РІР°СЃ РЅРµС‚ С‡Р»РµРЅР°.</span>"
 			return 0
 		if(require_user_anus && !user.has_anus())
-			if(!silent) user << "<span class = 'warning'>У вас нет ануса.</span>"
+			if(!silent) user << "<span class = 'warning'>РЈ РІР°СЃ РЅРµС‚ Р°РЅСѓСЃР°.</span>"
 			return 0
 		if(require_user_vagina && !user.has_vagina())
-			if(!silent) user << "<span class = 'warning'>У вас нет вагины.</span>"
+			if(!silent) user << "<span class = 'warning'>РЈ РІР°СЃ РЅРµС‚ РІР°РіРёРЅС‹.</span>"
 			return 0
 		return 1
 	return 0
@@ -86,16 +86,16 @@
 			user << "<span class='warning'>.</span>"
 			return 0
 		if(require_target_naked && !target.is_nude())
-			if(!silent) user << "<span class = 'warning'>TARGET мешает одежда.</span>"
+			if(!silent) user << "<span class = 'warning'>TARGET РјРµС€Р°РµС‚ РѕРґРµР¶РґР°.</span>"
 			return 0
 		if(require_target_penis && !target.has_penis())
-			if(!silent) user << "<span class = 'warning'>У TARGET нет пениса.</span>"
+			if(!silent) user << "<span class = 'warning'>РЈ TARGET РЅРµС‚ РїРµРЅРёСЃР°.</span>"
 			return 0
 		if(require_target_anus && !target.has_anus())
-			if(!silent) user << "<span class = 'warning'>У TARGET нет ануса.</span>"
+			if(!silent) user << "<span class = 'warning'>РЈ TARGET РЅРµС‚ Р°РЅСѓСЃР°.</span>"
 			return 0
 		if(require_target_vagina && !target.has_vagina())
-			if(!silent) user << "<span class = 'warning'>У TARGET нет вагины.</span>"
+			if(!silent) user << "<span class = 'warning'>РЈ TARGET РЅРµС‚ РІР°РіРёРЅС‹.</span>"
 			return 0
 		return 1
 	return 0
@@ -106,7 +106,7 @@
 	return ..()
 
 /datum/interaction/lewd/get_action_link_for(var/mob/user, var/mob/target)
-	return "<font color='#FF0000'><b>ЭРИ:</b></font> [..()]"
+	return "<font color='#FF0000'><b>Р­Р Р:</b></font> [..()]"
 	if(user.stat == DEAD) return
 
 #define CUM_TARGET_MOUTH "mouth"

@@ -1,5 +1,5 @@
 ﻿## Server name: This appears at the top of the screen in-game. Remove the # infront of SERVERNAME and replace 'tgstation' with the name of your choice
-SERVERNAME Fallout 13 - Light of The Atom
+SERVERNAME Fallout 13 - New Oregon
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
 STATIONNAME Oregon
@@ -45,7 +45,7 @@ LOG_ADMINCHAT
 LOG_ACCESS
 
 ## log game actions (start of round, results, etc.)
-LOG_GAME
+#LOG_GAME
 
 ## log player votes
 LOG_VOTE
