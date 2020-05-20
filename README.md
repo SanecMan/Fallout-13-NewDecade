@@ -13,6 +13,7 @@ A friendly reminder to anyone who would like to create personal edition of a gam
 Дружеское напоминание для любого кто захочет использовать наш код для собственной разработки, не делайте вашу разработку закрытой - исходный код лицензирован под **/TG/ Station 13** правилам, ведение закрытой азработки при использовании этого кода, может привести к санкциям со стороны /TG/ и **администрации BYOND**. Мы сами с этим однажды столкнулись, и администрация официально отключили один из наших серверов за нарушение лицензий - не повторяйте наших ошибок.
 
 **Please carefully read the following statement**
+
 **Пожалуйста, прочтите следующее важное заявление**
 
 If you desire to host your own server based of Fallout 13 source code - you may not pretend to be an "Official Fallout 13" community.
@@ -35,21 +36,25 @@ Stated terms of service fully comply with the original AGPL v3 license of /TG/ S
 ## Credits | Особые благодарности
 
 **Code**
+
 **Код**
 
 *Jackerzz aka Maxyo*, *KoBRaAndrey*, Mattroks101, *Godsring*, Sarumyn, ChowderMcArthor, Tmad40blue, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, **BartNixon**, A3lex33, Gyaviste, Hold_Me_Please, SanecMan, *iWuna*, DuxaDuxovcev, Patapoiiika, *Lenorka*.
 
 **Graphics / Sprites / Icons** 
+
 **Графика / Спрайты / Иконки**
 
 Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, **BartNixon**, Uboaaaaaa, *BlackJack22*, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, *DoctorWho08*, Alexlox, Zhuppa, *iWuna*, Yarinevar, *TheRiddler*.
 
 **Ideas / Testing / Support** 
+
 **Идеи / Тестирование / Поддержка**
 
 Deus66, *DrNuke*, Def0lt, Dillashaw, KleFFir, Fanxelt.
 
 **Origins** 
+
 **Первоисточники**
 
 Currently the build contains code, graphics, sounds and specific build features of several Space Station 13 communities listed below.
@@ -87,6 +92,7 @@ You can download zip archive with unedited music tracks here:
 [click](http://www.mediafire.com/download/fdlmc67zwwyw26d/Fallout13OST.zip)
 
 **Since December 2018, we have new tracks in our project:**
+
 **Так-же с декабря 2018 года, в нашем проекте есть следующие треки:**
 
 1. John Denver - Take Me Home
