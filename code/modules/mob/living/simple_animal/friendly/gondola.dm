@@ -25,8 +25,31 @@
 	maxHealth = 200
 	health = 200
 	del_on_death = TRUE
+
+/mob/living/simple_animal/pet/chungus
+	name = "BIG CHUNGUS"
+	real_name = "big chungus"
+	desc = "BIG CHUNGUS, BIG BIG BIG CHUNGUS!"
+	response_help = "pets"
+	response_disarm = "bops"
+	response_harm = "kicks"
+	faction = list("gondola")
+	turns_per_move = 10
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "big_chungus"
+	icon_living = "big_chungus"
+	icon_dead = "big_chungus_d"
+	loot = list(/obj/effect/decal/cleanable/blood/gibs)
+	//Gondolas aren't affected by cold.
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	minbodytemp = 0
+	maxbodytemp = 1500
+	maxHealth = 200
+	health = 200
+	del_on_death = FALSE
+
 /*
-/mob/living/simple_animal/pet/gondola/Initialize()
+/mob/living/simple_animal/pet/gondola/initialize()
 	. = ..()
 	CreateGondola()
 
