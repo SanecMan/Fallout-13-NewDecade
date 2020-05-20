@@ -35,14 +35,14 @@ Stated terms of service fully comply with the original AGPL v3 license of /tg/ S
 
 **Code | Код**
 
-Jackerzz aka Maxyo, KoBRaAndrey, Mattroks101, Godsring, Sarumyn, ChowderMcArthor, Tmad40blue, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please, SanecMan, iWuna, DuxaDuxovcev, Patapoiiika, Lenorka.
+*Jackerzz aka Maxyo*, *KoBRaAndrey*, Mattroks101, *Godsring*, Sarumyn, ChowderMcArthor, Tmad40blue, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, **BartNixon**, A3lex33, Gyaviste, Hold_Me_Please, SanecMan, *iWuna*, DuxaDuxovcev, Patapoiiika, *Lenorka*.
 
 **Graphics / Sprites / Icons | Графика / Спрайты / Иконки**
 
-Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, BartNixon, Uboaaaaaa, BlackJack22, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, DoctorWho08, Alexlox, Zhuppa, iWuna, Yarinevar, TheRiddler.
+Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, **BartNixon**, Uboaaaaaa, *BlackJack22*, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, *DoctorWho08*, Alexlox, Zhuppa, *iWuna*, Yarinevar, *TheRiddler*.
 
 **Ideas / Testing / Support | Идеи / Тестирование / Поддержка**
-Deus66, DrNuke, Def0lt, Dillashaw, KleFFir, Fanxelt.
+Deus66, *DrNuke*, Def0lt, Dillashaw, KleFFir, Fanxelt.
 
 **Origins | Исходники**
 
