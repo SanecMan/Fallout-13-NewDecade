@@ -8,20 +8,20 @@
 
 ## Terms of service | Условия соглашения
 
-A friendly reminder to anyone who would like to create personal edition of a game to host a server while keeping the code base private - a source code is licensed under /tg/ Station 13 terms, and thus rendering your project closed-source will likely cause considerable sanctions on their behalf. Honestly, we tried it ourselves - it didn't work, and Byond administration officially disabled one of our servers for violation of licensing terms - don't repeat our mistakes.
+A friendly reminder to anyone who would like to create personal edition of a game to host a server while keeping the code base private - a source code is licensed under **/TG/ Station 13** terms, and thus rendering your project closed-source will likely cause considerable sanctions on their behalf. Honestly, we tried it ourselves - it didn't work, and **Byond administration officially** disabled one of our servers for violation of licensing terms - don't repeat our mistakes.
 
-Дружеское напоминание для любого кто захочет использовать наш код для собственной разработки, не делайте вашу разработку закрытой - исходный код лицензирован под /TG/ Station 13 правилам, ведение закрытой азработки при использовании этого кода, может привести к санкциям со стороны /TG/ и администрации BYOND. Мы сами с этим однажды столкнулись, и администрация официально отключили один из наших серверов за нарушение лицензий - не повторяйте наших ошибок.
+Дружеское напоминание для любого кто захочет использовать наш код для собственной разработки, не делайте вашу разработку закрытой - исходный код лицензирован под **/TG/ Station 13** правилам, ведение закрытой азработки при использовании этого кода, может привести к санкциям со стороны /TG/ и **администрации BYOND**. Мы сами с этим однажды столкнулись, и администрация официально отключили один из наших серверов за нарушение лицензий - не повторяйте наших ошибок.
 
 **Please carefully read the following statement | Пожалуйста, прочтите следующее важное заявление**
 
 If you desire to host your own server based of Fallout 13 source code - you may not pretend to be an "Official Fallout 13" community.
 Если вы собираетесь держать собственный сервер используя наш код - вы не можете претендовать на "официальность" в Fallout 13 коммьюнити.
 
-*The only Fallout 13 communities that are considered official at the moment are specified as:*
-*Только следующие сервера по Fallout 13 имеют отношение к нам:*
-1. [EN] Fallout 13 - Vault One
-2. [RU] Fallout 13 - CBET ATOMA ( Light of the Atom )
-3. [INTERNATIONAL] Fallout 13 - New Oregon
+*The only **Fallout 13** communities that are considered official at the moment are specified as:*
+*Только следующие сервера по **Fallout 13** имеют отношение к нам:*
+1. **[EN] Fallout 13 - Vault One**
+2. **[RU] Fallout 13 - CBET ATOMA ( Light of the Atom )**
+3. **[INTERNATIONAL] Fallout 13 - New Oregon**
 
 **By our terms and conditions we require any potential host to specify that they are an unofficial server in announcements and the Byond HUB.**
 
