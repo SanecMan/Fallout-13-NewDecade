@@ -27,24 +27,24 @@ If you desire to host your own server based of Fallout 13 source code - you may 
 
 **По нашей лицензии, мы настоятельно рекомендуем вам указывать что ваш сервер является не официальным в MOTD и BYOND HUB.**
 
-Stated terms of service fully comply with the original AGPL v3 license of /tg/ Station 13, as long as this applies to the running server of unofficial community.
+Stated terms of service fully comply with the original AGPL v3 license of /TG/ Station 13, as long as this applies to the running server of unofficial community.
 
 Указаные соглашения дополняются оригинальной лицензией AGPL v3 /TG/ станции, во время всего периода активности сервера.
 
 ## Credits | Особые благодарности
 
-**Code | Код**
+**Code  Код**
 
 *Jackerzz aka Maxyo*, *KoBRaAndrey*, Mattroks101, *Godsring*, Sarumyn, ChowderMcArthor, Tmad40blue, Pahomlancer, KorPhaeron, RemieRichards, WB, AnturK, **BartNixon**, A3lex33, Gyaviste, Hold_Me_Please, SanecMan, *iWuna*, DuxaDuxovcev, Patapoiiika, *Lenorka*.
 
-**Graphics / Sprites / Icons | Графика / Спрайты / Иконки**
+**Graphics / Sprites / Icons  Графика / Спрайты / Иконки**
 
 Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits, MrSnapwalk, **BartNixon**, Uboaaaaaa, *BlackJack22*, Nikston, Omen111, Talamus, The_Harvester, Lydee, Murmillo, HITHISISFRONK, *DoctorWho08*, Alexlox, Zhuppa, *iWuna*, Yarinevar, *TheRiddler*.
 
-**Ideas / Testing / Support | Идеи / Тестирование / Поддержка**
+**Ideas / Testing / Support  Идеи / Тестирование / Поддержка**
 Deus66, *DrNuke*, Def0lt, Dillashaw, KleFFir, Fanxelt.
 
-**Origins | Исходники**
+**Origins  Исходники**
 
 Currently the build contains code, graphics, sounds and specific build features of several Space Station 13 communities listed below.
 Fallout 13 would not exist without the efforts of creative people who did their best to make a game of spessmen more fun.
@@ -56,7 +56,7 @@ Fallout 13 бы не существовал без интузиазма и кр�
 
 _Восславьте прородителей!_
 
-**_/tg/ Station 13, Goon Station 13, Baystation 12, Soviet Station, Animus Station, Tau Ceti Station, Urist McStation, Atlas Station, ERIS, WhiteTG, GreenTG, BlackTG, Escalation 1983._**
+**_/TG/ Station 13, Goon Station 13, Baystation 12, Soviet Station, Animus Station, Tau Ceti Station, Urist McStation, Atlas Station, ERIS, WhiteTG, GreenTG, BlackTG, Escalation 1983._**
 
 And all the others who made our dreams come true.
 
@@ -125,9 +125,9 @@ You can download zip archive with unedited music tracks here:
 
 **Наш проект находится под лицензией Creative Commons 3.0 BY-SA.**
 
-All source code of /tg/ Station 13 after commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under [GNU AGPL v3](http://www.gnu.org/licenses/agpl-3.0.html).
+All source code of /TG/ Station 13 after commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under [GNU AGPL v3](http://www.gnu.org/licenses/agpl-3.0.html).
 
-All source code of /tg/ Station 13 code before commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html).
+All source code of /TG/ Station 13 code before commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html).
 (Including tools unless their readme specifies otherwise.)
 
 See LICENSE-AGPLv3.txt and LICENSE-GPLv3.txt for more details.
