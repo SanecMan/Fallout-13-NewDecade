@@ -12,7 +12,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/cargocrate/initialize()
+/obj/structure/cargocrate/Initialize()
 //	icon_state = "cargocrate[rand(1, 6)]"
 
 	var/atom/movable/S = new (locate(x+1,y,z))

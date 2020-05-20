@@ -9,7 +9,7 @@
 	max_integrity = 150
 	var/notices = 0
 
-/obj/structure/noticeboard/initialize()
+/obj/structure/noticeboard/Initialize()
 	for(var/obj/item/I in loc)
 		if(notices > 4) break
 		if(istype(I, /obj/item/weapon/paper))

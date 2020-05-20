@@ -10,6 +10,7 @@
 	var/admin_spawned = 0	//was this spawned by an admin? used for stat tracking stuff.
 	var/datum/reagents/reagents = null
 	var/eng_desc = ""
+
 	var/eng_name = ""
 
 	//This atom's HUD (med/sec, etc) images. Associative list.
@@ -25,6 +26,7 @@
 
 	var/list/atom_colours	 //used to store the different colors on an atom
 							//its inherent color, the colored paint applied on it, special color effect etc...
+	var/initialized = FALSE
 
 
 /atom/New()
@@ -35,6 +37,16 @@
 	if(color)
 		add_atom_colour(color, FIXED_COLOUR_PRIORITY)
 
+	//lighting stuff
+//	if(opacity && isturf(loc))
+//		loc.UpdateAffectingLights()
+
+//	if(luminosity)
+//		light = new(src)
+
+	var/initialized = SSobj.initialized
+	if(initialized > INITIALIZATION_INSSOBJ)
+		Initialize(initialized == INITIALIZATION_INNEW_MAPLOAD)
 	//. = ..() //uncomment if you are dumb enough to add a /datum/New() proc
 
 /atom/Destroy()
@@ -136,10 +148,8 @@
 	return container_type & TRANSPARENT
 
 /*//Convenience proc to see whether a container can be accessed in a certain way.
-
 /atom/proc/can_subract_container()
 	return flags & EXTRACT_CONTAINER
-
 /atom/proc/can_add_container()
 	return flags & INSERT_CONTAINER
 */
@@ -209,7 +219,7 @@
 	if(desc)
 		to_chat(user, user.client.select_lang(desc, eng_desc))
 	// *****RM
-//	to_chat(user, "[name]: Dn:[density] dir:[dir] cont:[contents] icon:[icon] is:[icon_state] loc:[loc]")
+	//to_chat(user, "[name]: Dn:[density] dir:[dir] cont:[contents] icon:[icon] is:[icon_state] loc:[loc]")
 
 	if(reagents && (is_open_container() || is_transparent())) //is_open_container() isn't really the right proc for this, but w/e
 		to_chat(user, user.client.select_lang("Содержит:", "Contains:"))
@@ -242,9 +252,11 @@
 
 /atom/proc/hitby(atom/movable/AM, skipcatch, hitpush, blocked)
 	if(density && !has_gravity(AM)) //thrown stuff bounces off dense stuff in no grav, unless the thrown stuff ends up inside what it hit(embedding, bola, etc...).
-		spawn(2) //very short wait, so we can actually see the impact.
-			if(AM && isturf(AM.loc))
-				step(AM, turn(AM.dir, 180))
+		addtimer(CALLBACK(src, .proc/hitby_react, AM), 2)
+
+/atom/proc/hitby_react(atom/movable/AM)
+	if(AM && isturf(AM.loc))
+		step(AM, turn(AM.dir, 180))
 
 var/list/blood_splatter_icons = list()
 
@@ -334,8 +346,6 @@ var/list/blood_splatter_icons = list()
 	transfer_blood = rand(2, 4)
 
 /turf/add_blood(list/blood_dna)
-	return 1
-
 	var/obj/effect/decal/cleanable/blood/splatter/B = locate() in src
 	if(!B)
 		B = new /obj/effect/decal/cleanable/blood/splatter(src)
@@ -426,13 +436,14 @@ var/list/blood_splatter_icons = list()
 	sleep(1)
 	stoplag()
 
-//This is called just before maps and objects are initialized, use it to spawn other mobs/objects
-//effects at world start up without causing runtimes
-/atom/proc/spawn_atom_to_world()
-
-//This will be called after the map and objects are loaded
-/atom/proc/initialize()
-	return
+//Called after New if the world is not loaded with TRUE
+//Called from base of New if the world is loaded with FALSE
+//This base must be called or derivatives must set initialized to TRUE to prevent repeat calls
+//Derivatives must not sleep
+/atom/proc/Initialize(mapload)
+	if(initialized)
+		stack_trace("Warning: [src]([type]) initialized multiple times!")
+	initialized = TRUE
 
 //the vision impairment to give to the mob whose perspective is set to that atom (e.g. an unfocused camera giving you an impaired vision when looking through it)
 /atom/proc/get_remote_view_fullscreens(mob/user)

@@ -1513,7 +1513,7 @@
 		G.reenter_corpse()
 
 /mob/proc/sync_mind()
-	mind_initialize()	//updates the mind (or creates and initializes one if one doesn't exist)
+	mind_Initialize()	//updates the mind (or creates and initializes one if one doesn't exist)
 	mind.active = 1		//indicates that the mind is currently synced with a client
 
 /mob/new_player/sync_mind()
@@ -1523,7 +1523,7 @@
 	return
 
 //Initialisation procs
-/mob/proc/mind_initialize()
+/mob/proc/mind_Initialize()
 	if(mind)
 		mind.key = key
 
@@ -1533,38 +1533,38 @@
 			ticker.minds += mind
 		else
 			spawn(0)
-				throw EXCEPTION("mind_initialize(): No ticker ready")
+				throw EXCEPTION("mind_Initialize(): No ticker ready")
 	if(!mind.name)
 		mind.name = real_name
 	mind.current = src
 
-/mob/living/carbon/mind_initialize()
+/mob/living/carbon/mind_Initialize()
 	..()
 	last_mind = mind
 
 //HUMAN
-/mob/living/carbon/human/mind_initialize()
+/mob/living/carbon/human/mind_Initialize()
 	..()
 	if(!mind.assigned_role)
 		mind.assigned_role = "Assistant" //defualt
 
 //XENO
-/mob/living/carbon/alien/mind_initialize()
+/mob/living/carbon/alien/mind_Initialize()
 	..()
 	mind.special_role = "Alien"
 
 //AI
-/mob/living/silicon/ai/mind_initialize()
+/mob/living/silicon/ai/mind_Initialize()
 	..()
 	mind.assigned_role = "AI"
 
 //BORG
-/mob/living/silicon/robot/mind_initialize()
+/mob/living/silicon/robot/mind_Initialize()
 	..()
 	mind.assigned_role = "Cyborg"
 
 //PAI
-/mob/living/silicon/pai/mind_initialize()
+/mob/living/silicon/pai/mind_Initialize()
 	..()
 	mind.assigned_role = "pAI"
 	mind.special_role = ""

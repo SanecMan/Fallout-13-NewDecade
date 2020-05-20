@@ -2,7 +2,7 @@
 /obj/item/weapon/disk/design_disk/fallout
 	name = "TEST"
 
-/obj/item/weapon/disk/design_disk/fallout/initialize()
+/obj/item/weapon/disk/design_disk/fallout/Initialize()
 	..()
 	var/datum/design/golem_shell/G = new
 	blueprints[1] = G

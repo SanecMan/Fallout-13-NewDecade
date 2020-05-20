@@ -22,7 +22,7 @@
 	user.visible_message("<span class='suicide'>[user] hooks [user.p_them()]self to the electropack and spams the trigger! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return (FIRELOSS)
 
-/obj/item/device/electropack/initialize()
+/obj/item/device/electropack/Initialize()
 	if(SSradio)
 		SSradio.add_object(src, frequency, RADIO_CHAT)
 
@@ -182,7 +182,7 @@ Code:
 	user.visible_message("<span class='suicide'>[user] hooks [user.p_them()]self to the slave_collar and spams the trigger! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return (FIRELOSS)
 
-/obj/item/device/slave_collar/initialize()
+/obj/item/device/slave_collar/Initialize()
 	if(SSradio)
 		SSradio.add_object(src, frequency, RADIO_CHAT)
 

@@ -3,7 +3,7 @@
 	var/list/obj/machinery/camera/motioncameras = list()
 	var/list/motionTargets = list()
 
-/area/ai_monitored/initialize()
+/area/ai_monitored/Initialize()
 	..()
 	for (var/obj/machinery/camera/M in src)
 		if(M.isMotion())

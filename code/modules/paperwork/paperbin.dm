@@ -13,7 +13,7 @@
 	var/list/papers = list()
 	var/obj/item/weapon/pen/bin_pen
 
-/obj/item/weapon/paper_bin/initialize(mapload)
+/obj/item/weapon/paper_bin/Initialize(mapload)
 	..()
 	if(!mapload)
 		return
@@ -24,7 +24,7 @@
 		update_icon()
 		var/static/warned = FALSE
 		if(!warned)
-			warning("one or more paperbins ate a pen duing initialize()")
+			warning("one or more paperbins ate a pen duing Initialize()")
 			warned = TRUE
 
 /obj/item/weapon/paper_bin/fire_act(exposed_temperature, exposed_volume)

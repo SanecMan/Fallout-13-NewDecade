@@ -49,7 +49,7 @@
 	del_on_death = FALSE
 
 /*
-/mob/living/simple_animal/pet/gondola/initialize()
+/mob/living/simple_animal/pet/gondola/Initialize()
 	. = ..()
 	CreateGondola()
 

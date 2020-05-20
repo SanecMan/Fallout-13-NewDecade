@@ -12,7 +12,7 @@
 	layer = ABOVE_MOB_LAYER
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/car/initialize()
+/obj/structure/car/Initialize()
 	..()
 
 	dir = rand(1, 10)
@@ -27,7 +27,7 @@
 	icon = 'icons/fallout/vehicles/car.dmi'
 	icon_state = "car1"
 
-/obj/structure/car/highwayman/initialize()
+/obj/structure/car/highwayman/Initialize()
 	icon_state = "car[rand(1, 4)]"
 
 	var/atom/movable/S = new (locate(x+1,y,z))

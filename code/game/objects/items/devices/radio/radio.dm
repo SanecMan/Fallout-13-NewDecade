@@ -61,7 +61,7 @@
 	secure_radio_connections = new
 	..()
 	if(SSradio)
-		initialize()
+		Initialize()
 
 /obj/item/device/radio/proc/recalculateChannels()
 	channels = list()
@@ -106,7 +106,7 @@
 	keyslot = null
 	return ..()
 
-/obj/item/device/radio/initialize()
+/obj/item/device/radio/Initialize()
 	frequency = sanitize_frequency(frequency, freerange)
 	set_frequency(frequency)
 

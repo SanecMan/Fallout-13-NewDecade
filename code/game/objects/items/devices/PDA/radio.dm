@@ -31,7 +31,7 @@
 /obj/item/radio/integrated/signal/New()
 	..()
 	if(SSradio)
-		initialize()
+		Initialize()
 
 /obj/item/radio/integrated/signal/Destroy()
 	if(SSradio)
@@ -39,7 +39,7 @@
 	radio_connection = null
 	return ..()
 
-/obj/item/radio/integrated/signal/initialize()
+/obj/item/radio/integrated/signal/Initialize()
 	if (src.frequency < 1200 || src.frequency > 1600)
 		src.frequency = sanitize_frequency(src.frequency)
 

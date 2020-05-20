@@ -117,7 +117,7 @@ var/list/airlock_overlays = list()
 		damage_deflection = AIRLOCK_DAMAGE_DEFLECTION_R
 	update_icon()
 
-/obj/machinery/door/airlock/initialize()
+/obj/machinery/door/airlock/Initialize()
 	. = ..()
 	if (cyclelinkeddir)
 		cyclelinkairlock()

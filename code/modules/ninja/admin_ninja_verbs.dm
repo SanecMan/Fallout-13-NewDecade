@@ -24,7 +24,7 @@ Contents:
 
 	log_admin("[key_name(src)] turned [H.key] into a Space Ninja.")
 	H.mind = create_ninja_mind(H.key)
-	H.mind_initialize()
+	H.mind_Initialize()
 	H.equip_space_ninja(1)
 	if(istype(H.wear_suit, /obj/item/clothing/suit/space/space_ninja))
 		H.wear_suit:randomize_param()

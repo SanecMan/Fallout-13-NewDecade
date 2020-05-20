@@ -351,7 +351,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		G_found.mind.transfer_to(new_character)	//be careful when doing stuff like this! I've already checked the mind isn't in use
 		new_character.mind.special_verbs = list()
 	else
-		new_character.mind_initialize()
+		new_character.mind_Initialize()
 	if(!new_character.mind.assigned_role)
 		new_character.mind.assigned_role = "Assistant"//If they somehow got a null assigned role.
 

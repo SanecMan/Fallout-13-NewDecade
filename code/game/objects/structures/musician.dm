@@ -323,7 +323,7 @@
 	song = null
 	return ..()
 
-/obj/structure/piano/initialize()
+/obj/structure/piano/Initialize()
 	song.tempo = song.sanitize_tempo(song.tempo) // tick_lag isn't set when the map is loaded
 	..()
 

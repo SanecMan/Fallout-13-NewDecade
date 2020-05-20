@@ -16,7 +16,7 @@
 	..()
 	update_icon()
 
-/obj/structure/guncase/initialize()
+/obj/structure/guncase/Initialize()
 	..()
 	for(var/obj/item/I in loc.contents)
 		if(istype(I, gun_category))
@@ -125,7 +125,7 @@
 	..()
 	update_icon()
 
-/obj/structure/new_closet/initialize()
+/obj/structure/new_closet/Initialize()
 	..()
 	for(var/obj/item/I in loc.contents)
 		if(istype(I, item_category))

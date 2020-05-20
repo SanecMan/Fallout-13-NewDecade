@@ -290,7 +290,7 @@ var/list/available_depts = list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT
 	wires = new(src)
 	secure_radio_connections = new
 
-	initialize()
+	Initialize()
 	recalculateChannels()
 
 /obj/item/device/radio/headset/headset_sec/alt/department/engi

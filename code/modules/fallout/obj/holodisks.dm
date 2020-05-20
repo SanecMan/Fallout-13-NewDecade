@@ -19,7 +19,7 @@
 	var/soundLength = 50
 	var/soundFile = 'sound/f13music/mysterious_stranger.ogg'
 
-/obj/item/weapon/holodisk/initialize()
+/obj/item/weapon/holodisk/Initialize()
         src.name = "holodisk #[rand(1,999)]"
         return ..()
 
@@ -116,6 +116,6 @@
 	soundLength = 320
 	price = 1000
 
-/obj/item/weapon/holodisk/musicbox/initialize()
+/obj/item/weapon/holodisk/musicbox/Initialize()
 	..()
 	name = "music box"

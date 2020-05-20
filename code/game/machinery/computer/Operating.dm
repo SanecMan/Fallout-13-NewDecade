@@ -13,7 +13,7 @@
 	if(ticker)
 		find_table()
 
-/obj/machinery/computer/operating/initialize()
+/obj/machinery/computer/operating/Initialize()
 	find_table()
 
 /obj/machinery/computer/operating/proc/find_table()

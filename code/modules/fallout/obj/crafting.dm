@@ -28,7 +28,7 @@
 	icon_state = "handle_a_1"
 	price = 350
 
-/obj/item/weaponcrafting/handle/rifle/initialize()
+/obj/item/weaponcrafting/handle/rifle/Initialize()
 	..()
 	icon_state = "handle_a_[rand(1,2)]"
 
@@ -38,7 +38,7 @@
 	icon_state = "handle_p_1"
 	price = 250
 
-/obj/item/weaponcrafting/handle/pistol/initialize()
+/obj/item/weaponcrafting/handle/pistol/Initialize()
 	..()
 	icon_state = "handle_p_[rand(1,3)]"
 
@@ -60,7 +60,7 @@
 	icon_state = "diode_1"
 	price = 100
 
-/obj/item/crafting/diode/initialize()
+/obj/item/crafting/diode/Initialize()
 	..()
 	icon_state = "diode_[rand(1,3)]"
 
@@ -72,7 +72,7 @@
 	icon_state = "transistor_1"
 	price = 150
 
-/obj/item/crafting/transistor/initialize()
+/obj/item/crafting/transistor/Initialize()
 	..()
 	icon_state = "transistor_[rand(1,3)]"
 
@@ -84,7 +84,7 @@
 	icon_state = "capacitor_1"
 	price = 200
 
-/obj/item/crafting/capacitor/initialize()
+/obj/item/crafting/capacitor/Initialize()
 	..()
 	icon_state = "capacitor_[rand(1,3)]"
 
@@ -96,7 +96,7 @@
 	icon_state = "fuse_1"
 	price = 100
 
-/obj/item/crafting/fuse/initialize()
+/obj/item/crafting/fuse/Initialize()
 	..()
 	icon_state = "fuse_[rand(1,3)]"
 
@@ -108,7 +108,7 @@
 	icon_state = "resistor_1"
 	price = 250
 
-/obj/item/crafting/resistor/initialize()
+/obj/item/crafting/resistor/Initialize()
 	..()
 	icon_state = "resistor_[rand(1,3)]"
 
@@ -120,7 +120,7 @@
 	icon_state = "switch_1"
 	price = 200
 
-/obj/item/crafting/switch/initialize()
+/obj/item/crafting/switch/Initialize()
 	..()
 	icon_state = "switch_[rand(1,3)]"
 
@@ -132,7 +132,7 @@
 	icon_state = "bulb_1"
 	price = 100
 
-/obj/item/crafting/bulb/initialize()
+/obj/item/crafting/bulb/Initialize()
 	..()
 	icon_state = "bulb_[rand(1,3)]"
 
@@ -144,7 +144,7 @@
 	icon_state = "board_1"
 	price = 350
 
-/obj/item/crafting/board/initialize()
+/obj/item/crafting/board/Initialize()
 	..()
 	icon_state = "board_[rand(1,3)]"
 
@@ -249,7 +249,7 @@
 	icon_state = "wonderglue1"
 	price = 500
 
-/obj/item/crafting/wonderglue/initialize()
+/obj/item/crafting/wonderglue/Initialize()
 	..()
 	icon_state = "wonderglue[rand(1,2)]"
 
@@ -380,7 +380,7 @@
 	icon_state = "ballistic_weapon_parts_1"
 	price = 1000
 /*
-/obj/item/crafting/weapon_parts/ballistic/initialize()
+/obj/item/crafting/weapon_parts/ballistic/Initialize()
 	..()
 	icon_state = "ballistic_weapon_parts_[rand(1,3)]"
 */
@@ -393,7 +393,7 @@
 	icon_state = "e_weapon_parts_1"
 	price = 2000
 /*
-/obj/item/crafting/weapon_parts/energy/initialize()
+/obj/item/crafting/weapon_parts/energy/Initialize()
 	..()
 	icon_state = "weapon_parts/energy_[rand(1,3)]"
 */
@@ -406,7 +406,7 @@
 	icon_state = "p_weapon_parts_1"
 	price = 2600
 /*
-/obj/item/crafting/weapon_parts/plasma/initialize()
+/obj/item/crafting/weapon_parts/plasma/Initialize()
 	..()
 	icon_state = "weapon_parts/plasma_[rand(1,3)]"
 */

@@ -42,7 +42,7 @@
 	update_icon()
 	take_contents()
 
-/obj/structure/closet/initialize()
+/obj/structure/closet/Initialize()
 	..()
 	if(!opened)		// if closed, any item at the crate's loc is put in the contents
 		take_contents()

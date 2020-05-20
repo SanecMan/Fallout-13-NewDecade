@@ -38,7 +38,7 @@
 		reset = null
 	. = ..()
 
-/obj/item/weapon/twohanded/ctf/initialize()
+/obj/item/weapon/twohanded/ctf/Initialize()
 	if(!reset)
 		reset = new reset_path(get_turf(src))
 

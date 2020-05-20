@@ -106,7 +106,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	matching_designs = list()
 	if(!id)
 		for(var/obj/machinery/r_n_d/server/centcom/S in machines)
-			S.initialize()
+			S.Initialize()
 			break
 
 /*	Instead of calling this every tick, it is only being called when needed

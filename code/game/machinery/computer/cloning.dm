@@ -18,7 +18,7 @@
 	var/loading = 0 // Nice loading text
 	var/autoprocess = 0
 
-/obj/machinery/computer/cloning/initialize()
+/obj/machinery/computer/cloning/Initialize()
 	..()
 	updatemodules(TRUE)
 

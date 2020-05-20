@@ -49,7 +49,7 @@
 	if(SSradio)
 		SSradio.add_object(src, frequency)
 
-/obj/machinery/status_display/initialize()
+/obj/machinery/status_display/Initialize()
 	if(SSradio)
 		SSradio.add_object(src, frequency)
 

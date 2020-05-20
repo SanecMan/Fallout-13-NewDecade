@@ -20,7 +20,7 @@
 	var/dirlike = FALSE
 	var/canpass = FALSE
 
-/obj/structure/barricade/initialize()
+/obj/structure/barricade/Initialize()
 	..()
 	if(dir == 2)
 		layer = ABOVE_MOB_LAYER

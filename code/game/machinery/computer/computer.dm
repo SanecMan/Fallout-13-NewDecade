@@ -36,7 +36,7 @@
 		circuit = null
 	return ..()
 
-/obj/machinery/computer/initialize()
+/obj/machinery/computer/Initialize()
 	power_change()
 
 /obj/machinery/computer/process()

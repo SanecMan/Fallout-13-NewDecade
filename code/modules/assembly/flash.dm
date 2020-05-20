@@ -152,7 +152,7 @@
 		if(user.mind && (user.mind in ticker.mode.head_revolutionaries))
 			if(M.client)
 				if(M.stat == CONSCIOUS)
-					M.mind_initialize() //give them a mind datum if they don't have one.
+					M.mind_Initialize() //give them a mind datum if they don't have one.
 					var/resisted
 					if(!M.isloyal())
 						if(user.mind in ticker.mode.head_revolutionaries)

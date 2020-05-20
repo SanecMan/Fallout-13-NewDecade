@@ -23,9 +23,9 @@
 /obj/structure/bookcase/random/New()
 	..()
 	if(ticker && ticker.current_state >= GAME_STATE_PLAYING)
-		initialize()
+		Initialize()
 
-/obj/structure/bookcase/random/initialize()
+/obj/structure/bookcase/random/Initialize()
 	if(!book_count || !isnum(book_count))
 		update_icon()
 		return
@@ -77,7 +77,7 @@
 	name = "bookcase (Reference)"
 	category = "Reference"
 	var/ref_book_prob = 20
-/obj/structure/bookcase/random/reference/initialize()
+/obj/structure/bookcase/random/reference/Initialize()
 	while(book_count > 0 && prob(ref_book_prob))
 		book_count--
 		new /obj/item/weapon/book/manual/random(src)

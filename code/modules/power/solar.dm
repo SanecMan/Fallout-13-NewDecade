@@ -285,7 +285,7 @@
 /obj/machinery/power/solar_control/New()
 	..()
 	if(ticker)
-		initialize()
+		Initialize()
 	connect_to_network()
 
 /obj/machinery/power/solar_control/Destroy()
@@ -336,7 +336,7 @@
 	updateDialog()
 
 
-/obj/machinery/power/solar_control/initialize()
+/obj/machinery/power/solar_control/Initialize()
 	..()
 	if(!powernet) return
 	set_panels(currentdir)

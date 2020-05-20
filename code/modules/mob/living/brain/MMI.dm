@@ -40,7 +40,7 @@
 	if(config)
 		laws.set_laws_config()
 
-/obj/item/device/mmi/initialize()
+/obj/item/device/mmi/Initialize()
 	..()
 	laws.set_laws_config()
 
