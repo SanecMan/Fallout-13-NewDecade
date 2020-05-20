@@ -4,41 +4,22 @@
 
 	//the if "armor" check is because this is used for everything on /living, including humans
 	if(client)
-		if(usr.client.language == "English")
-			if(armor && armour_penetration)
-				armor = max(0, armor - armour_penetration)
-				if(penetrated_text)
-					if(usr.client && usr.client.language == "English")
-						to_chat(src, "<span class='userdanger'>[penetrated_text]</span>")
-					else
-						to_chat(src, "<span class='userdanger'>Your armor was penetrated!</span>")
-			else if(armor >= 100)
-				if(absorb_text)
-					to_chat(src, "<span class='userdanger'>[absorb_text]</span>")
-				else
-					to_chat(src, "<span class='userdanger'>Your armor absorbs the blow!</span>")
-			else if(armor > 0)
-				if(soften_text)
-					to_chat(src, "<span class='userdanger'>[soften_text]</span>")
-				else
-					to_chat(src, "<span class='userdanger'>Your armor softens the blow!</span>")
-		else
-			if(armor && armour_penetration)
-				armor = max(0, armor - armour_penetration)
-				if(penetrated_text)
-					to_chat(src, "<span class='userdanger'>[penetrated_text]</span>")
-				else
-					to_chat(src, "<span class='userdanger'>Ваша броня пробита!</span>")
-			else if(armor >= 100)
-				if(absorb_text)
-					to_chat(src, "<span class='userdanger'>[absorb_text]</span>")
-				else
-					to_chat(src, "<span class='userdanger'>Ваша броня поглотила урон!</span>")
-			else if(armor > 0)
-				if(soften_text)
-					to_chat(src, "<span class='userdanger'>[soften_text]</span>")
-				else
-					to_chat(src, "<span class='userdanger'>Ваша броня смягчила урон!</span>")
+		if(armor && armour_penetration)
+			armor = max(0, armor - armour_penetration)
+			if(penetrated_text)
+				to_chat(src, "<span class='userdanger'>[penetrated_text]</span>")
+			else
+				to_chat(src, "<span class='userdanger'>Your armor was penetrated!</span>")
+		else if(armor >= 100)
+			if(absorb_text)
+				to_chat(src, "<span class='userdanger'>[absorb_text]</span>")
+			else
+				to_chat(src, "<span class='userdanger'>Your armor absorbs the blow!</span>")
+		else if(armor > 0)
+			if(soften_text)
+				to_chat(src, "<span class='userdanger'>[soften_text]</span>")
+			else
+				to_chat(src, "<span class='userdanger'>Your armor softens the blow!</span>")
 	return armor
 
 
