@@ -57,15 +57,6 @@
 
 	return ..()
 
-/*
-
-/datum/light_source/New(atom/A)
-	if(!istype(A))
-		CRASH("The first argument to the light object's constructor must be the atom that is the light source. Expected atom, received '[A]' instead.")
-	..()
-	owner = A
-	UpdateLuminosity(A.luminosity)
-*/
 // Kill ourselves.
 /datum/light_source/proc/destroy()
 	destroyed = TRUE
