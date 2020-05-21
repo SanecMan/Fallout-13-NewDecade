@@ -3,8 +3,6 @@
 /mob/living/simple_animal/hostile/supermutant
 	name = "супермутант"
 	desc = "Больной, уродливый и зеленый гуманоид."
-	eng_name = "super mutant"
-	eng_desc = "A huge and ugly mutant humanoid."
 	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "hulk_113_s"
 	icon_living = "hulk_113_s"
@@ -26,7 +24,6 @@
 	melee_damage_upper = 30
 	mob_size = MOB_SIZE_LARGE
 	attacktext = "бьёт"
-	eng_attacktext = "hits"
 	attack_sound = "punch"
 	self_weight = 250
 

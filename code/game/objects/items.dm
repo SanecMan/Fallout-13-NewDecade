@@ -157,21 +157,12 @@ var/global/image/fire_overlay = image("icon" = 'icons/effects/fire.dmi', "icon_s
 /obj/item/examine(mob/user) //This might be spammy. Remove?
 	..()
 	var/pronoun
-	if(usr.client && usr.client.language == "English")
-		if(src.gender == PLURAL)
-			pronoun = "They are"
-		else
-			pronoun = "This is"
+	if(src.gender == PLURAL)
+		pronoun = "Они"
 	else
-		if(src.gender == PLURAL)
-			pronoun = "Они"
-		else
-			pronoun = "Это"
+		pronoun = "Это"
 	var/size = weightclass2text(src.w_class)
-	if(usr.client && usr.client.language == "English")
-		to_chat(user, "[pronoun] [size] item.")//e.g. They are a small item. or It is a bulky item.
-	else
-		to_chat(user, "[pronoun] [size] предмет.")
+	to_chat(user, "[pronoun] [size] предмет.")
 
 
 	if(user.research_scanner) //Mob has a research scanner active.
@@ -343,7 +334,7 @@ var/global/image/fire_overlay = image("icon" = 'icons/effects/fire.dmi', "icon_s
 
 /obj/item/proc/hit_reaction(mob/living/carbon/human/owner, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(prob(final_block_chance))
-		owner.visible_message(usr.client.select_lang("<span class='danger'>[owner] блокирует [attack_text] используя [src]!</span>", "<span class='danger'>[owner] blocks [attack_text] with [src.eng_name]!</span>"))
+		owner.visible_message("<span class='danger'>[owner] блокирует [attack_text] используя [src]!</span>")
 		return 1
 	return 0
 

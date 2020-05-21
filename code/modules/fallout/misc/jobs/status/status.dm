@@ -35,8 +35,6 @@ proc/get_mobs_by_status(status)
 
 	var/welcome_text = ""
 
-	var/eng_welcome_text = ""
-
 	var/verbs = list()
 
 	var/change_faction = 1
@@ -76,16 +74,10 @@ mob/proc/set_status(var/status)
 
 	src.status = S.id
 	var/text
-	if(usr.client && usr.client.language == "English")
-		text += "<span class='notice'>Now you're <span style='color: [S.color];'>[S.name]</span>.</span>"
-		if(S.welcome_text)
-			text += "<br>[S.eng_welcome_text]"
-		to_chat(src, text)
-	else
-		text += "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>"
-		if(S.welcome_text)
-			text += "<br>[S.welcome_text]"
-		to_chat(src, text)
+	text += "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>"
+	if(S.welcome_text)
+		text += "<br>[S.welcome_text]"
+	to_chat(src, text)
 
 	src.verbs += S.verbs
 	src.allow_recipes += S.craft_recipes
@@ -95,8 +87,8 @@ mob/proc/set_status(var/status)
 	return 1
 
 /mob/proc/leave_faction()
-	set name = "Leave Faction"
-	set category = "Faction"
+	set name = "Покинуть фракцию"
+	set category = "Фракция"
 	if(status == "none")
 		return
 	if(alert("Вы уверены что хотите покинуть фракцию?",,"Yes","No")=="No")
@@ -110,8 +102,8 @@ mob/proc/set_status(var/status)
 
 
 /mob/proc/convert_to_status(mob/M in oview(), status in get_can_invite_status())
-	set name = "Invite To"
-	set category = "Faction"
+	set name = "Пригласить в фракцию"
+	set category = "Фракция"
 	if(!M.mind || !M.client)
 		return
 	if(M.status == status)
@@ -127,14 +119,9 @@ mob/proc/set_status(var/status)
 		var/datum/f13_faction/F = get_faction_datum(src.social_faction)
 		to_chat(M, "<span class='notice'>Вы присоеденились к <span style='color: [F.color];'>[F.name]</span> faction.</span>")
 		if(F.welcome_text)
-			if(usr.client && usr.client.language == "English")
-				to_chat(M, "<br>[F.eng_welcome_text]")
-				M.set_status(status)
-				to_chat(M, "<span class='notice'>Now you're <span style='color: [S.color];'>[S.name]</span>.</span>")
-			else
-				to_chat(M, "<br>[F.welcome_text]")
-				M.set_status(status)
-				to_chat(M, "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>")
+			to_chat(M, "<br>[F.welcome_text]")
+			M.set_status(status)
+			to_chat(M, "<span class='notice'>Теперь вы <span style='color: [S.color];'>[S.name]</span>.</span>")
 	if(S.welcome_text)
 		to_chat(M, "<br>[S.welcome_text]")
 

@@ -207,8 +207,6 @@
 /obj/structure/new_closet/eatotronic3000
 	name = "еда-трон 3000"
 	desc = "Шкафчик содержащий в себе вкусности."
-	eng_name = "eat-o-tronic 3000"
-	eng_desc = "Shelf with yummies."
 	icon_state = "eatotronic3000"
 	item_type = "eatotronic3000_full"
 	item_category = /obj/item/weapon/reagent_containers/food
@@ -219,8 +217,6 @@
 /obj/structure/new_closet/dresser
 	name = "комод"
 	desc = "Комод который может содержать вещи."
-	eng_name = "dresser"
-	eng_desc = "Dresser which can hold things inside."
 	icon_state = "dresser"
 	item_type = "dresser_full"
 	item_category = /obj/item

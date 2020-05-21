@@ -11,7 +11,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Цезарю"
-	eng_supervisors = "the Caesar"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -77,7 +76,6 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "Легату"
-	eng_supervisors = "the Legate"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -139,7 +137,6 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Legate"
-	eng_supervisors = "the Legate"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -201,7 +198,6 @@
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "Центуриону"
-	eng_supervisors = "the Centurion"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE
@@ -264,7 +260,6 @@
 	total_positions = 20
 	spawn_positions = 20
 	supervisors = "Центуриону"
-	eng_supervisors = "the Centurion"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	disallowed_gender = FEMALE

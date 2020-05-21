@@ -3,8 +3,6 @@
 /mob/living/simple_animal/hostile/gecko
 	name = "Геккон"
 	desc = "Это Геккон. Не Г.Э.К.К."
-	eng_name = "gecko"
-	eng_desc = "This is gecko, not an G.E.C.K."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "gecko"
 	icon_living = "gecko"
@@ -31,7 +29,6 @@
 	aggro_vision_range = 10
 	idle_vision_range = 8
 	attacktext = "кусает"
-	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 3
 

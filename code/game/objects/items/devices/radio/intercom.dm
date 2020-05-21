@@ -1,8 +1,6 @@
 /obj/item/device/radio/intercom
 	name = "Интерком"
 	desc = "Вы можете говорить через него."
-	eng_name = "intercom"
-	eng_desc = "You can talk into."
 	icon_state = "intercom"
 	anchored = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -77,8 +75,6 @@
 /obj/item/device/radio/radio
 	name = "Старый радиоприёмник"
 	desc = "Вы можете слушать через него."
-	eng_name = "old radio"
-	eng_desc = "You can listen things by using this."
 	icon_state = "radio"
 	anchored = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -272,8 +268,6 @@
 /obj/item/device/radio/large_radio
 	name = "Винтажный радиоприёмник"
 	desc = "Вы можете послушать музыку через него."
-	eng_name = "vintage radio"
-	eng_desc = "You can listen music by this..."
 	icon_state = "large_radio"
 	anchored = 1
 	w_class = WEIGHT_CLASS_BULKY
@@ -465,8 +459,6 @@
 /obj/item/device/radio/army
 	name = "армейский радиопередатчик"
 	desc = "Вау! Рабочая военная рация!"
-	eng_name = "army radio"
-	eng_desc = "Wow! Working army radio!"
 	icon_state = "army_radio"
 	anchored = 1
 	w_class = WEIGHT_CLASS_BULKY

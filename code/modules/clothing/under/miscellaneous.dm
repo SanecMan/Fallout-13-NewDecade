@@ -504,8 +504,6 @@
 /obj/item/clothing/under/columbine
 	name = "футболка с джинсами"
 	desc = "Футболка с надписью \"Естественный Отбор\"."
-	eng_name = "shirt and jeans"
-	eng_desc = "Shirt with \"Natural Selection\" on it."
 	icon_state = "columbine"
 	item_state = "columbine"
 	item_color = "columbine"

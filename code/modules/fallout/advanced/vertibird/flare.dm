@@ -1,8 +1,6 @@
 /obj/item/vertibird_flare
 	name = "сигнальный огонь"
 	desc = "Запрашиваю эвакуацию!"
-	eng_name = "Vertibird emergency flare"
-	eng_desc = "REQUESTING MED-EVAC!"
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "flareblue"
 	w_class = 1

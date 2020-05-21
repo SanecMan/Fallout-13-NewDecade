@@ -46,7 +46,6 @@
 
 /obj/item/weapon/disk/design_disk/f13/robco_tool
 	name = "голоплёнка с данными РобКо"
-	eng_name = "holotape with RobCo data"
 	icon_state = "datadisk0"
 	design_1 = /datum/design/crowbar
 	design_2 = /datum/design/mini_weldingtool
@@ -83,7 +82,6 @@
 
 /obj/item/weapon/disk/design_disk/f13/schlocket
 	name = "голоплёнка с данными Шлокет"
-	eng_name = "holotape with Schlocket data"
 	design_1 = /datum/design/bowl
 	design_2 = /datum/design/drinking_glass
 	design_3 = /datum/design/shot_glass
@@ -93,7 +91,6 @@
 
 /obj/item/weapon/disk/design_disk/f13/dawnshire
 	name = "голоплёнка с данными Доншир поттери"
-	eng_name = "holotape with Dawnshire Pottery Inc data"
 	design_1 = /datum/design/tray
 	design_2 = /datum/design/drinking_glass
 	design_3 = /datum/design/shot_glass
@@ -101,7 +98,6 @@
 
 /obj/item/weapon/disk/design_disk/f13/ormed
 	name = "голоплёнка с данными ОРМЕД"
-	eng_name = "holotape with ORMED data"
 	design_1 = /datum/design/scalpel
 	design_2 = /datum/design/circular_saw
 	design_3 = /datum/design/surgicaldrill
@@ -111,7 +107,6 @@
 
 /obj/item/weapon/disk/design_disk/f13/vesttec
 	name = "голоплёнка с данными Вест-Тек"
-	eng_name = "holotape with Vest-Tec data"
 	design_1 = /datum/design/beaker
 	design_2 = /datum/design/large_beaker
 	design_3 = /datum/design/basic_cell
@@ -121,7 +116,6 @@
 
 /obj/item/weapon/disk/design_disk/f13/greenway
 	name = "голоплёнка с данными Гринуэй Хайдропоникс"
-	eng_name = "holotape with Greenway Hydroponics data"
 	design_1 = /datum/design/hatchet
 	design_2 = /datum/design/spade
 	design_3 = /datum/design/shovel

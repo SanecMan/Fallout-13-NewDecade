@@ -1,8 +1,6 @@
 /obj/machinery/computer/security/enclave
 	name = "консоль слежения"
 	desc = "Используется для получения доступа к камерам."
-	eng_name = "camera console"
-	eng_desc = "Used to access cameras."
 	icon = 'icons/fallout/machines/terminals.dmi'
 	icon_state = "enclave"
 	icon_screen = "enclave_on"

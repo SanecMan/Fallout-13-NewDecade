@@ -29,8 +29,6 @@
 /turf/closed/wall/f13/wood
 	name = "wooden wall"
 	desc = "A traditional wooden wall."
-	eng_name = "wooden wall"
-	eng_desc = "A traditional wooden wall."
 	icon = 'icons/fallout/turfs/walls/wood.dmi'
 	icon_state = "wood0"
 	icontype = "wood"
@@ -46,8 +44,6 @@
 /turf/closed/wall/f13/wood/house
 	name = "house wall"
 	desc = "A weathered pre-War house wall."
-	eng_name = "house wall"
-	eng_desc = "A weathered pre-War house wall."
 	icon = 'icons/fallout/turfs/walls/house.dmi'
 	icon_state = "house0"
 	icontype = "house"
@@ -81,8 +77,6 @@
 /turf/closed/wall/f13/wood/interior
 	name = "interior wall"
 	desc = "Interesting, what kind of material they have used - these wallpapers still look good after all the centuries..."
-	eng_name = "interior wall"
-	eng_desc = "Interesting, what kind of material they have used - these wallpapers still look good after all the centuries..."
 	icon = 'icons/fallout/turfs/walls/interior.dmi'
 	icon_state = "interior0"
 	icontype = "interior"
@@ -93,8 +87,6 @@
 /turf/closed/wall/f13/store
 	name = "store wall"
 	desc = "A pre-War store wall made of solid concrete."
-	eng_name = "store wall"
-	eng_desc = "A pre-War store wall made of solid concrete."
 	icon = 'icons/fallout/turfs/walls/store.dmi'
 	icon_state = "store0"
 	icontype = "store"
@@ -108,8 +100,6 @@
 /turf/closed/wall/f13/supermart
 	name = "supermart wall"
 	desc = "A pre-War supermart wall made of reinforced concrete."
-	eng_name = "supermart wall"
-	eng_desc = "A pre-War supermart wall made of reinforced concrete."
 	icon = 'icons/fallout/turfs/walls/superstore.dmi'
 	icon_state = "supermart0"
 	icontype = "supermart"
@@ -124,8 +114,6 @@
 /turf/closed/wall/f13/tunnel
 	name = "utility tunnel wall"
 	desc = "A sturdy metal wall with various pipes and wiring set inside a special groove."
-	eng_name = "utility tunnel wall"
-	eng_desc = "A sturdy metal wall with various pipes and wiring set inside a special groove."
 	icon = 'icons/fallout/turfs/walls/tunnel.dmi'
 	icon_state = "tunnel0"
 	icontype = "tunnel"
@@ -139,8 +127,6 @@
 /turf/closed/wall/f13/vault
 	name = "vault wall"
 	desc = "A sturdy and cold metal wall."
-	eng_name = "vault wall"
-	eng_desc = "A sturdy and cold metal wall."
 	icon = 'icons/fallout/turfs/walls/vault.dmi'
 	icon_state = "vault0"
 	icontype = "vault"
@@ -159,8 +145,6 @@
 /turf/closed/wall/r_wall/f13/vault
 	name = "vault reinforced wall"
 	desc = "A wall built to withstand an atomic explosion."
-	eng_name = "vault reinforced wall"
-	eng_desc = "A wall built to withstand an atomic explosion."
 	icon = 'icons/fallout/turfs/walls/vault_reinforced.dmi'
 	icon_state = "vaultrwall0"
 	icontype = "vaultrwall"
@@ -232,8 +216,6 @@
 /turf/closed/indestructible/f13/tunnel
 	name = "utility tunnel wall"
 	desc = "A sturdy metal wall with various pipes and wiring set inside a special groove."
-	eng_name = "utility tunnel wall"
-	eng_desc = "A sturdy metal wall with various pipes and wiring set inside a special groove."
 	icon = 'icons/fallout/turfs/walls/tunnel.dmi'
 	icon_state = "tunnel0"
 	icontype = "tunnel"
@@ -243,8 +225,6 @@
 /turf/closed/indestructible/f13/vault
 	name = "vault reinforced wall"
 	desc = "A wall built to withstand an atomic explosion."
-	eng_name = "vault reinforced wall"
-	eng_desc = "A wall built to withstand an atomic explosion."
 	icon = 'icons/fallout/turfs/walls/vault_reinforced.dmi'
 	icon_state = "vaultrwall0"
 	icontype = "vaultrwall"
@@ -254,8 +234,6 @@
 /turf/closed/indestructible/f13/obsidian //Just like that one game studio that worked on the original game, or that block in Minecraft!
 	name = "obsidian"
 	desc = "No matter what you do with this rock, there's not even a scratch left on its surface.<br><font color='#7e0707'>You shall not pass!!!</font>"
-	eng_name = "obsidian"
-	eng_desc = "No matter what you do with this rock, there's not even a scratch left on its surface.<br><font color='#7e0707'>You shall not pass!!!</font>"
 	icon = 'icons/fallout/turfs/mining.dmi'
 	icon_state = "rock1"
 

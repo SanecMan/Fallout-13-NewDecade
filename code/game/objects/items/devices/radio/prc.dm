@@ -4,8 +4,6 @@
 	icon = 'icons/obj/prc.dmi'
 	name = "PRC-68"
 	desc = "Такие рации использовали еще до войны..."
-	eng_name = "PRC-68"
-	eng_desc = "This type of eadio, used before World War 2..."
 	icon_state = "prc"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
@@ -24,15 +22,12 @@
 	icon = 'icons/obj/prc.dmi'
 	name = "Р-105"
 	desc = "Где вообще можно было нарыть этот древний кусок дерьма?"
-	eng_name = "R-105"
-	eng_desc = "Where the fuck you find this shit?"
 	icon_state = "r105"
 	frequency = 1919
 	key = 1501
 
 /obj/item/device/radio/headset/radist
 	name = "радиогарнитура"
-	eng_name = "radist headset"
 	icon = 'icons/obj/prc.dmi'
 	icon_state = "headset"
 

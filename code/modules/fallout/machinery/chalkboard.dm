@@ -6,8 +6,6 @@
 /obj/structure/chalkboard
 	name = "chalkboard"
 	desc = "Классическая доска для рисования всяких штук и научных диограмм.<br>Пожалуйста, не ешьте мел."
-	eng_name = "chalkboard"
-	eng_desc = "Classic board for doodling and scientific graphics.<br>Please, do not eat the chalk."
 	icon = 'icons/fallout/machines/64x32.dmi'
 	icon_state = "board_clean"
 	flags = FPRINT

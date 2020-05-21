@@ -71,20 +71,20 @@
 	if(istype(usr, /mob/living/carbon))
 		var/mob/living/carbon/C = usr
 		if(C.special.getPoint("i") < 6 && !C.perks.have(/datum/perk_hidden/powerArmor))
-			to_chat(usr, usr.client.select_lang("<span class='boldwarning'>Три кнопки на силовой броне вгоняют вас в ступор, вы нажимаете одну из кнопок и ничего не происходит..</span>", "<span class='boldwarning'>There is three buttons, but you too stupid to find right button..</span>"))
+			to_chat(usr, "<span class='boldwarning'>Три кнопки на силовой броне вгоняют вас в ступор, вы нажимаете одну из кнопок и ничего не происходит..</span>")
 			playsound(src.loc, 'sound/f13items/lighter_off.ogg', 40, 0, 0)
 			return
 
 	if(!power_cell || power_cell.charge <= 0)
-		to_chat(usr, usr.client.select_lang("<span class='userdanger'>Питание отсутствует.</span>", "<span class='userdanger'>No power.</span>"))
+		to_chat(usr, "<span class='userdanger'>Питание отсутствует.</span>")
 		return
 
 	enabled = !enabled
 	if(enabled)
-		to_chat(usr, usr.client.select_lang("<span class='green'>Силовая броня активирована.</span>", "<span class='notice'>Power Armor activated.</span>"))
+		to_chat(usr, "<span class='green'>Силовая броня активирована.</span>")
 		powerControl()
 	else
-		to_chat(usr, usr.client.select_lang("<span class='notice'>Силовая броня деактивирована.</span>", "<span class='notice'>Power Armor de-activated.</span>"))
+		to_chat(usr, "<span class='notice'>Силовая броня деактивирована.</span>")
 
 /obj/item/clothing/suit/armor/f13/power_armor/verb/ejectInsertCell()
 	set name = "Изъять/Вставить Ядерную ячейку"
@@ -94,11 +94,11 @@
 	if(istype(usr, /mob/living/carbon))
 		var/mob/living/carbon/C = usr
 		if(C.special.getPoint("i") < 3 && !C.perks.have(/datum/perk_hidden/powerArmor))
-			to_chat(usr, usr.client.select_lang("<span class='boldwarning'>Эта дырка для батарейка вы-ыглядеть СЛИШКАМ сложна.</span>", "<span class='boldwarning'>This hole looks TOO hard...</span>"))
+			to_chat(usr, "<span class='boldwarning'>Эта дырка для батарейка вы-ыглядеть СЛИШКАМ сложна.</span>")
 			playsound(src.loc, 'sound/f13effects/bruh.ogg', 40, 0, 0)
 			return
 	else
-		to_chat(usr, usr.client.select_lang("Иди нахуй, животное", "Fuck off, stupid animal."))
+		to_chat(usr, "Иди нахуй, животное")
 		return
 
 	if(!power_cell)
@@ -107,13 +107,13 @@
 			usr.drop_item()
 			power_cell.forceMove(src)
 			powerControl()
-			to_chat(usr, usr.client.select_lang("<span class='notice'>Вы подключили [power_cell.name] к [src].</span>", "<span class='notice'>You inserted [power_cell.name] to [src].</span>"))
+			to_chat(usr, "<span class='notice'>Вы подключили [power_cell.name] к [src].</span>")
 			playsound(src.loc, 'sound/weapons/selector.ogg', 40, 0, 0)
 			return
-		to_chat(usr, usr.client.select_lang("<span class='warning'>Ядерный блок отсутствует!</span>", "<span class='warning'>There's no power source!</span>"))
+		to_chat(usr, "<span class='warning'>Ядерный блок отсутствует!</span>")
 		return
 	else
-		to_chat(usr, usr.client.select_lang("<span class='green'>Вы извлекли [power_cell.name] из [src].</span>", "<span class='green'>You ejected [power_cell.name] from [src].</span>"))
+		to_chat(usr, "<span class='green'>Вы извлекли [power_cell.name] из [src].</span>")
 		playsound(src.loc, 'sound/weapons/selector.ogg', 40, 0, 0)
 		usr.put_in_hands(power_cell)
 		power_cell = null
@@ -144,13 +144,12 @@
 	if(!power_cell || !power_cell.use(current_power_usage) || !enabled)
 		enabled = FALSE
 		STOP_PROCESSING(SSobj, src)
-		to_chat(usr, usr.client.select_lang("<span class='boldwarning'>[src] отключилась!.</span>", "<span class='boldwarning'>[src] shutdown!.</span>"))
+		to_chat(usr, "<span class='boldwarning'>[src] отключилась!.</span>")
 
 
 /obj/item/clothing/suit/armor/f13/power_armor/sierra
 	name = "дырявая силовая броня Сиерра"
-	eng_name = "scorched sierra power armor"
-	eng_desc = "The scorched Sierra power armor is a suit of T-45d power armor that has been modified by the NCR for its officers. The left shoulder pauldron has been replaced with a hairless, taxidermied bear's head held in place by a green mantle with two bronze star medallion clips. The back-mounted power cylinders have been replaced by a more streamlined box unit with glowing green panels which also appear on the forearms. The armor itself is slightly blackened due to the nuclear detonation. The bolts on the armor appear to have once been plated in gold-flake, along with gold trim all around the armor."
+	desc = "The scorched Sierra power armor is a suit of T-45d power armor that has been modified by the NCR for its officers. The left shoulder pauldron has been replaced with a hairless, taxidermied bear's head held in place by a green mantle with two bronze star medallion clips. The back-mounted power cylinders have been replaced by a more streamlined box unit with glowing green panels which also appear on the forearms. The armor itself is slightly blackened due to the nuclear detonation. The bolts on the armor appear to have once been plated in gold-flake, along with gold trim all around the armor."
 	icon_state = "sierra"
 	item_state = "sierra"
 	armor = list(melee = 70, bullet = 70, laser = 45, energy = 20, bomb = 75, bio = 100, rad = 100, fire = 100, acid = 50)

@@ -2,7 +2,6 @@
 
 /turf/open/floor/plating/wooden
 	name = "фундамент"
-	eng_name = "house base"
 	icon_state = "housebase"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	intact = 0
@@ -16,7 +15,6 @@
 
 /turf/open/floor/plating/tunnel
 	name = "металлический пол"
-	eng_name = "metal floor"
 	icon_state = "tunneldirty"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	baseturf = /turf/open/indestructible/ground/mountain

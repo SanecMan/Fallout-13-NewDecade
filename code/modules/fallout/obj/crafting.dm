@@ -4,8 +4,6 @@
 /obj/item/weaponcrafting/reciever
 	name = "спусковой механизм"
 	desc = "Прототип модульного спускового механизма для всякого оружия."
-	eng_name = "modular receiver"
-	eng_desc = "Prototype of modular receiver for weapon."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "reciever"
 	price = 850
@@ -13,8 +11,6 @@
 /obj/item/weaponcrafting/stock
 	name = "ружейная ложа"
 	desc = "Ложа для всякий ружий, автоматов и.т.п"
-	eng_name = "rifle stock"
-	eng_desc = "A classic rifle stock that doubles as a grip, roughly carved out of wood."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "riflestock"
 	price = 250
@@ -22,8 +18,6 @@
 /obj/item/weaponcrafting/handle/rifle
 	name = "винтовочная рукоятка"
 	desc = "Просто рукоятка."
-	eng_name = "rifle handle"
-	eng_desc = "Just a handle."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "handle_a_1"
 	price = 350
@@ -34,7 +28,6 @@
 
 /obj/item/weaponcrafting/handle/pistol
 	name = "пистолетная рукоятка"
-	eng_name = "pistol handle"
 	icon_state = "handle_p_1"
 	price = 250
 
@@ -46,8 +39,6 @@
 /obj/item/crafting
 	name = "бляздец"
 	desc = "сука, тут кто-то щитспавнит, напишите @woona#2803"
-	eng_name = "Shitspawn"
-	eng_desc = "Why it's here?!<br>Badmins spawn shit!<br>Tell someone about it."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	item_state = "null"
 	w_class = WEIGHT_CLASS_TINY
@@ -55,8 +46,6 @@
 /obj/item/crafting/diode
 	name = "диод"
 	desc = "Можно использовать для сборки каких-нибудь электронных приборов."
-	eng_name = "diode"
-	eng_desc = "It looks like something I saw in that useless broken television set once.<br>That thing is probably used in some electronic devices."
 	icon_state = "diode_1"
 	price = 100
 
@@ -67,8 +56,6 @@
 /obj/item/crafting/transistor
 	name = "транзистор"
 	desc = "Попов очень любил его. Но Тесла больше.<br>Наиболее полезный компонент."
-	eng_name = "transistor"
-	eng_desc = "Popov would love it, but Tesla got to see it.<br>The most useful electrical component."
 	icon_state = "transistor_1"
 	price = 150
 
@@ -79,8 +66,6 @@
 /obj/item/crafting/capacitor
 	name = "конденсатор"
 	desc = "Можно использовать для сборки каких-нибудь электронных приборов."
-	eng_name = "capacitor"
-	eng_desc = "It looks like something I saw inside of the radio once.<br>It seems like it's the most basic electrical component."
 	icon_state = "capacitor_1"
 	price = 200
 
@@ -91,8 +76,6 @@
 /obj/item/crafting/fuse
 	name = "зажигатель"
 	desc = "Маленькая стеклянная трубка с проводами. Даже и не знаю что это..."
-	eng_name = "fuse"
-	eng_desc = "A tiny glass tube with some wiring stuck inside of it.<br>I have no idea what it is."
 	icon_state = "fuse_1"
 	price = 100
 
@@ -103,8 +86,6 @@
 /obj/item/crafting/resistor
 	name = "резистор"
 	desc = "Тесла Воин говорит, \"Сдавайся, криминальнй электрон!\"<br>Электрон говорит, \"Ты никогда не поймаешь меня!\"<br>*вжжж!* *з-з-з!* *пиу!* *пиу!* *пиу!*"
-	eng_name = "resistor"
-	eng_desc = "Tesla Warrior says, \"Stop right there, criminal electron!\"<br>Electron says, \"You'll never catch me!!!\"<br>*Zoom* *Zoom* *Pew* *Pew* *Pew*"
 	icon_state = "resistor_1"
 	price = 250
 
@@ -115,8 +96,6 @@
 /obj/item/crafting/switch
 	name = "переключатель"
 	desc = "обычный переключатель, используется во всяких бытовых вещах, фонариках, выключателях, бомбах."
-	eng_name = "switch"
-	eng_desc = "A common switch, used to light up the flashlight or activate a bomb timer." //Why i code it?
 	icon_state = "switch_1"
 	price = 200
 
@@ -127,8 +106,6 @@
 /obj/item/crafting/bulb
 	name = "лампочка"
 	desc = "Просто лампочка, недостаточно большая чтобы использовать где-либо кроме создания чего-либо."
-	eng_name = "bulb"
-	eng_desc = "And at last I see the light,<br>And it's like the fog has lifted,<br>And at last I see the light,<br>And it's like the sky is new,<br>And it's warm and real and bright,<br>And the world has somehow shifted,<br>All at once everything looks different."
 	icon_state = "bulb_1"
 	price = 100
 
@@ -139,8 +116,6 @@
 /obj/item/crafting/board
 	name = "пустая плата"
 	desc = "Пластиковая плата, используется для того чтобы держать все электронные части вместе."
-	eng_name = "empty circuit board"
-	eng_desc = "A plastic board used to hold all other electrical components together."
 	icon_state = "board_1"
 	price = 350
 
@@ -151,101 +126,75 @@
 /obj/item/crafting/buzzer
 	name = "жужжалка"
 	desc = "Я почти слышу это жужжание. Ну, почти."
-	eng_name = "buzzer"
-	eng_desc = "I can almost hear it buzzing. Except it's not."
 	icon_state = "buzzer"
 	price = 200
 
 /obj/item/crafting/frame
 	name = "собранная плата"
 	desc = "Напечатанная и собранная плата для сложных электрических приборов."
-	eng_name = "circuit board assembly"
-	eng_desc = "A printed circuit board - a complex electrical component."
 	icon_state = "frame"
 	price = 450
 
 /obj/item/crafting/small_gear
 	name = "маленькая шестерня"
 	desc = "Маленькая часть большого механизма."
-	eng_name = "small gear"
-	eng_desc = "A litle part of a big mechanism."
 	icon_state = "gear_small"
 	price = 150
 
 /obj/item/crafting/large_gear
 	name = "большая шестерня"
 	desc = "Большая часть грандиозного механизма."
-	eng_name = "large gear"
-	eng_desc = "A big part of a grand mechanism."
 	icon_state = "gear_large"
 	price = 200
 
 /obj/item/crafting/duct_tape
 	name = "изолента"
 	desc = "Всё починит, синяя, серая, красная и черная - изолента!"
-	eng_name = "duct tape"
-	eng_desc = "A pinnacle of engineering - it fixes everything!"
 	icon_state = "duct_tape"
 	price = 100
 
 /obj/item/crafting/kettle
 	name = "чайничек"
 	desc = "Ну, ай оно уже не так хорошо хранит, мешают дырки в дне."
-	eng_name = "kettle"
-	eng_desc = "Well, this can't hold tea anymore, holes in bottom prevents it."
 	icon_state = "kettle"
 	price = 95
 
 /obj/item/crafting/toaster
 	name = "тостер"
 	desc = "Как починить тостер:<br>1. Будьте девушкой. <br>2. Найдите девушку.<br>3. Переспите."
-	eng_name = "toaster"
-	eng_desc = "The toaster is a pre-War kitchen appliance that was used to toast bread. It has a stainless steel casing with black painted levers and base, that has internal heating coils to toast the bread inside the two slots on the top."
 	icon_state = "toaster"
 	price = 90
 
 /obj/item/crafting/vacuum_cleaner
 	name = "вакуумный пылесос"
 	desc = "Кусочек космоса на земле!"
-	eng_name = "vacuum cleaner"
-	eng_desc = "local space on earth!"
 	icon_state = "vacuum_cleaner"
 	price = 120
 
 /obj/item/crafting/sensor_module
 	name = "сенсорный модуль"
 	desc = "Позволяет отслеживать движение. Ну, вернее, когда-то позволял."
-	eng_name = "sensor module"
-	eng_desc = "This thing isn't works."
 	icon_state = "sensor_module"
 	price = 300
 
 /obj/item/crafting/cofee_pot
 	name = "кофейник"
 	desc = "Кофейник, разработан специанльно для того чтобы удобно хранить кофе литрами! Жаль дно дырявое..."
-	eng_name = "Coffee pot"
-	eng_desc = "The coffee pot is a large pot that gently slopes inwards. As indicated by the untarnished pot, it was originally chrome colored."
 	icon_state = "cofee_pot"
 
 /obj/item/crafting/cookpot
 	name = "кастрюля"
 	desc = "Ржавая кастрюля."
-	eng_name = "Cookpot"
-	eng_desc = "Rusty cookpot."
 	icon_state = "cookpot"
 
 /obj/item/crafting/Baseball_ball
 	name = "бейсбольный мяч"
 	desc = "кожанный бейсбольный мяч."
-	eng_name = "baseball ball"
-	eng_desc = "Leather baseball ball."
 	icon_state = "Baseball_ball"
 
 /obj/item/crafting/wonderglue
 	name = "чудо-клей"
 	desc = "Довоенный бренд клея, который вполне соответствует названию."
-	eng_name = "wonder glue"
-	eng_desc = "A pre-War brand of glue that has retained its adhesive qualities.<br>A glue itself is a liquid acrylic adhesive, meant to fix broken plastics and ceramics or used in the assembly of a great assortment of items."
 	icon_state = "wonderglue1"
 	price = 500
 
@@ -256,24 +205,18 @@
 /obj/item/crafting/turpentine
 	name = "скипидар" //Используется для обработки древесины и я сам неебу что это
 	desc = "Горючяя жидкость, перегнанная из сосновой смолы. Используется как растворитель."
-	eng_name = "turpentine"
-	eng_desc = "A flammable liquid distilled from pine resin, used as a solvent."
 	icon_state = "turpentine"
 	price = 400
 
 /obj/item/crafting/abraxo
 	name = "чистящее средство абраско"
 	desc = "Довоенное чистящее средство производства Абраксодин Чемикалс."
-	eng_name = "abraxo"
-	eng_desc = "A pre-War cleaning agent produced by Abraxodyne Chemical."
 	icon_state = "abraxo"
 	price = 290
 
 /obj/item/crafting/reloader
 	name = "перезарядчик гильз"
 	desc = "Этот нехитрый девайс, позволяет одной рукой переснаряжать гильзы. При наличии материала конечно же."
-	eng_name = "cartrige reloader"
-	eng_desc = "This device allows to hand-load your own gun rounds using certain raw materials."
 	icon_state = "reloader"
 	var/pow_loaded = 0
 	var/cartridges = 30
@@ -308,24 +251,18 @@
 /obj/item/crafting/igniter
 	name = "зажигатель"
 	desc = "маленький девайс, способный поджигать субстанции."
-	eng_name = "igniter"
-	eng_desc = "A small electronic device able to ignite combustable substances."
 	icon_state = "igniter"
 	price = 200
 
 /obj/item/crafting/timer
 	name = "таймер"
 	desc = "Используется для того чтобы отмерять промежутки времени. Тик-так Мориарти."
-	eng_name = "timer"
-	eng_desc = "Used to time things. Works well with contraptions which has to count down. Tick tock."
 	icon_state = "timer"
 	price = 210
 
 /obj/item/crafting/sensor
 	name = "сенсор движения"
 	desc = "Используется для обнаржуения кого-либо."
-	eng_name = "proximity sensor"
-	eng_desc = "Used for scanning and alerting when someone enters a certain proximity."
 	icon_state = "sensor"
 	price = 350
 
@@ -333,8 +270,6 @@
 /obj/item/crafting/lunchbox
 	name = "ланчбокс"
 	desc = "Ланчбокс с рекламой Волт-Тек. Если знать как, из этого можно собрать мину."
-	eng_name = "lunch box"
-	eng_desc = "This was a promotional item created by Vault-Tec before the Great War and used in the company's advertisements. With the right schematics, it can be used to make bottlecap mines."
 	icon_state = "lunchbox"
 	price = 750
 
@@ -343,8 +278,6 @@
 /obj/item/crafting/reloader_set
 	name = "картридж"
 	desc = "Материалы для переснарядки гильз."
-	eng_name = "reloader cartridges"
-	eng_desc = "Set of materials for reloader."
 	icon_state = "reloader_set"
 	var/cartridges = 30
 
@@ -359,8 +292,6 @@
 /obj/item/crafting/weapon_repair_kit
 	name = "набор для починки оружия"
 	desc = "С его помощью можно чинить оружие."
-	eng_name = "Weapon repair kit"
-	eng_desc = "With this you can repair your gun."
 	icon_state = "weapon_repair_set"
 	price = 500
 
@@ -374,8 +305,6 @@
 /obj/item/crafting/weapon_parts/ballistic
 	name = "части огнестрельного оружия"
 	desc = "Вам нужна эта штука, чтобы делать оружие."
-	eng_name = "Ballistic Weapon Parts"
-	eng_desc = "You really need this thing, if you wanna craft ballistic weapon."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "ballistic_weapon_parts_1"
 	price = 1000
@@ -387,8 +316,6 @@
 /obj/item/crafting/weapon_parts/energy
 	name = "части лазерного оружия"
 	desc = "Вам нужна эта штука, чтобы делать энергооружие."
-	eng_name = "Energy Weapon Parts"
-	eng_desc = "You really need this thing, if you wanna craft energy weapon."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "e_weapon_parts_1"
 	price = 2000
@@ -400,8 +327,6 @@
 /obj/item/crafting/weapon_parts/plasma
 	name = "части плазменного оружия"
 	desc = "Вам нужна эта штука, чтобы делать плазменное оружие."
-	eng_name = "Plasma Weapon Parts"
-	eng_desc = "You really need this thing, if you wanna craft plasma weapon."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "p_weapon_parts_1"
 	price = 2600
@@ -414,16 +339,12 @@
 /obj/item/crafting/instruments
 	name = "инструменты для работы по металлу"
 	desc = "Инструменты для резки по металлу."
-	eng_name = "instruments for metalwork"
-	eng_desc = "You can use this for metalworking."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "instruments"
 
 /obj/item/crafting/barrel_l
 	name = "длинный barrel"
 	desc = "Просто ствол."
-	eng_name = "long barrel"
-	eng_desc = "Just a barrel."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "barrel_long"
 	price = 200
@@ -431,8 +352,6 @@
 /obj/item/crafting/barrel_s
 	name = "короткий ствол"
 	desc = "Просто ствол."
-	eng_name = "short barrel"
-	eng_desc = "Just a barrel."
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "barrel_short"
 	price = 190

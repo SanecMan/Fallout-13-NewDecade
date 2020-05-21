@@ -273,7 +273,6 @@
 /obj/item/weapon/hammer
 	name = "молоток"
 	desc = "A simple construction tool, that can also be used to bring the revenge upon those who kidnapped you and kept you in the basement for several years." //Old Boy (2003)
-	eng_name = "hammer"
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "hammer"
 	slot_flags = SLOT_BELT
@@ -366,8 +365,6 @@
 /obj/item/weapon/pickaxe/rust
 	name = "ржавая кирка"
 	desc = "Эта кирка знала лучшие дни."
-	eng_name = "rusted pickaxe"
-	eng_desc = "This pickaxe looks a bit... rusty."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "pickaxe_rust"
 	force = 12

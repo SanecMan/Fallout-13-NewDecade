@@ -203,12 +203,8 @@ var/last_irc_status = 0
 	else
 		delay = config.round_end_countdown * 10
 	if(ticker.delay_end)
-		if(usr.client.language == "English")
-			to_chat(world, "<span class='boldannounce'>Administrator delayed Round End.</span>")
-			return
-		else
-			to_chat(world, "<span class='boldannounce'>Администратор приостановил конец раунда.</span>")
-			return
+		to_chat(world, "<span class='boldannounce'>Администратор приостановил конец раунда.</span>")
+		return
 	to_chat(world, "<span class='boldannounce'>Перезапуск мира через [delay/10] [delay > 10 ? "seconds" : "second"]. [reason]</span>")
 	var/round_end_sound_sent = FALSE
 	if(ticker.round_end_sound)

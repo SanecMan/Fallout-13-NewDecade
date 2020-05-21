@@ -1,8 +1,6 @@
 /obj/item/weapon/reagent_containers/hypospray
 	name = "гипоспрей"
 	desc = "Инъектор производства РобКО Индастриз."
-	eng_name = "hypospray"
-	eng_desc = "The DeForest Medical Corporation hypospray is a sterile, air-needle autoinjector for rapid administration of drugs to patients."
 	icon = 'icons/obj/syringe.dmi'
 	item_state = "hypo"
 	icon_state = "hypo"
@@ -26,8 +24,8 @@
 		return
 
 	if(reagents.total_volume && (ignore_flags || M.can_inject(user, 1))) // Ignore flag should be checked first or there will be an error message.
-		to_chat(M, user.client.select_lang("<span class='warning'>Вы ощущаете небольшой укол!</span>", "<span class='warning'>You feel a tiny prick!</span>"))
-		to_chat(user, user.client.select_lang("<span class='notice'>Вы ввели [M] используя [src].</span>", "<span class='notice'>You inject [M] with [src.eng_name].</span>"))
+		to_chat(M, "<span class='warning'>Вы ощущаете небольшой укол!</span>")
+		to_chat(user, "<span class='notice'>Вы ввели [M] используя [src].</span>")
 
 		var/fraction = min(amount_per_transfer_from_this/reagents.total_volume, 1)
 		reagents.reaction(M, INJECT, fraction)
@@ -41,7 +39,7 @@
 			else
 				trans = reagents.copy_to(M, amount_per_transfer_from_this)
 
-			to_chat(user, user.client.select_lang("<span class='notice'>[trans] унций введено.  [reagents.total_volume] унций осталось в [src].</span>", "<span class='notice'>[trans] unit\s injected.  [reagents.total_volume] unit\s remaining in [src.eng_name].</span>"))
+			to_chat(user, "<span class='notice'>[trans] унций введено.  [reagents.total_volume] унций осталось в [src].</span>")
 
 			var/contained = english_list(injected)
 

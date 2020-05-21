@@ -3,8 +3,6 @@
 /mob/living/simple_animal/hostile/radroach
 	name = "Радтаракан"
 	desc = "Огромный Американский Таракан, но в основном их все просто называют тараканами-переростками, довоенный вид животного, подвершегося мутации."
-	eng_name = "radroach"
-	eng_desc = "Great American Roach, but mostly people name them as giant roach."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "radroach"
 	icon_living = "radroach"
@@ -38,7 +36,6 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 5
 	attacktext = "кусает"
-	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	aggro_vision_range = 10
 	idle_vision_range = 5
@@ -48,8 +45,6 @@
 /mob/living/simple_animal/hostile/radroach/radioactive
 	name = "Радиоактивный-Радтаракан"
 	desc = "Огромный Американский Радиоактивный Таракан, но в основном их все просто называют тараканами-переростками, довоенный вид животного, подвершегося мутации. Этот еще и светится."
-	eng_name = "radioactive-radroach"
-	eng_desc = "Great American Radioactive Roach, but mostly people name them as giant roach. This one is glowing..."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "glowingroach"
 	icon_living = "glowingroach"
@@ -76,8 +71,6 @@
 /mob/living/simple_animal/hostile/radroach/radioactive/legendary
 	name = "Легендарный Радтаракан"
 	desc = "Огромный радтаракан излучающий радиацию! Этот явно сильнее своих сородией."
-	eng_name = "Legendary radroach"
-	eng_desc = "GIANT radroach, this one emits rad-rays and bigger than others!"
 	icon_state = "radroach_radioactive_boss"
 	icon_living = "radroach_radioactive_boss"
 	icon_dead = "radroach_radioactive_boss_d"

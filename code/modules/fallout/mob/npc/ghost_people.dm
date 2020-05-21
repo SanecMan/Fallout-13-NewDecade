@@ -3,8 +3,6 @@
 /mob/living/simple_animal/hostile/ghost_man
 	name = "призрак"
 	desc = "Существо в химзащитном костюме, из глаз идет зеленоватое свечение."
-	eng_name = "Ghost Man"
-	eng_desc = "I'd sooner ask what makes me an undying son of a bitch than spend any thought as to why they crawled to life here."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "ghost_man"
 	icon_living = "ghost_man"
@@ -37,7 +35,6 @@
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	attacktext = "царапает"
-	eng_attacktext = "scratches"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1
@@ -49,9 +46,7 @@
 
 /mob/living/simple_animal/hostile/ghost_man_bear_trap
 	name = "Призрак-охотник"
-	eng_name = "Ghost trapper"
 	desc = "Если видише медвежий капкан, значит, призраки неподалёку."
-	eng_desc = "Where there's a bear trap, Ghost People aren't far behind."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "ghost_man_bear_trap"
 	icon_living = "ghost_man_bear_trap"
@@ -84,7 +79,6 @@
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	attacktext = "царапает"
-	eng_attacktext = "scratches"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1
@@ -96,9 +90,7 @@
 
 /mob/living/simple_animal/hostile/ghost_man_spear
 	name = "Призрак-жнец"
-	eng_name = "Ghost harvester"
 	desc = "Призраки-жнецы - самый распространённый вид людей-призраков. Они наименьшие в своём роде и легко различимы по своим капюшонам и меньшим противогазам."
-	eng_desc = "Ghost harvesters are the most common variant of ghost people. They are the smallest variant and are easily distinguished by their hoods and smaller gas masks."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "ghost_man_spear"
 	icon_living = "ghost_man_spear"
@@ -138,7 +130,6 @@
 	aggro_vision_range = 10
 	idle_vision_range = 5
 	attacktext = "царапает"
-	eng_attacktext = "scratches"
 	attack_sound = "punch"
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 1

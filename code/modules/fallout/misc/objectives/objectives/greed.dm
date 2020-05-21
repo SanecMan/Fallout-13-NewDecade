@@ -3,8 +3,6 @@
 /datum/f13_objective/greed
 	name = "Скрудж"
 	desc = "Вы жили в бедности, перебирались на помойках а ваши родные умерли от голода, вы решили прервать черту бедности вашего рода.<br>Наберите %count% крышек, чтобы наконец выбраться из долгов."
-	eng_name  = "Greed"
-	eng_desc = "Your family home has shattered, the promising business went down the drain, and on top of it - you're totally out of money.<br>You have to collect %count% caps to get your life back together."
 	kind = INDIVIDUAL
 
 	assignto_mind(datum/mind/M, var/list/data = list())

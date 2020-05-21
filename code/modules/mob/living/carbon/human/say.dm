@@ -1,10 +1,10 @@
 /mob/living/carbon/human/say_quote(input, spans)
 	if(!input)
-		return src.client.select_lang("says, \"...\"", "говорит, \"...\"")
+		return "говорит, \"...\""
 	verb_say = dna.species.say_mod
 	if(src.slurring)
 		input = attach_spans(input, spans)
-		return src.client.select_lang("slurs, \"[input]\"", "несвязно, \"[input]\"")
+		return "несвязно, \"[input]\""
 	return ..()
 
 /mob/living/carbon/human/treat_message(message)
@@ -112,7 +112,7 @@
 
 /mob/living/carbon/human/get_alt_name()
 	if(name != GetVoice())
-		return usr.client.select_lang(" (as [get_id_name("Unknown")])", " (как [get_id_name("Неизвестная личность")])")
+		return " (как [get_id_name("Неизвестная личность")])"
 
 /mob/living/carbon/human/proc/forcesay(list/append) //this proc is at the bottom of the file because quote fuckery makes notepad++ cri
 	if(stat == CONSCIOUS)

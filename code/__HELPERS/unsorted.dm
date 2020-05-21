@@ -1326,38 +1326,21 @@ proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 	pixel_y = initialpixely
 
 /proc/weightclass2text(var/w_class)
-	if(usr.client && usr.client.language == "English")
-		switch(w_class)
-			if(WEIGHT_CLASS_TINY)
-				. = "tiny"
-			if(WEIGHT_CLASS_SMALL)
-				. = "small"
-			if(WEIGHT_CLASS_NORMAL)
-				. = "normal"
-			if(WEIGHT_CLASS_BULKY)
-				. = "bulky"
-			if(WEIGHT_CLASS_HUGE)
-				. = "huge"
-			if(WEIGHT_CLASS_GIGANTIC)
-				. = "gigantic"
-			else
-				. = ""
-	else
-		switch(w_class)
-			if(WEIGHT_CLASS_TINY)
-				. = "небольшой"
-			if(WEIGHT_CLASS_SMALL)
-				. = "маленький"
-			if(WEIGHT_CLASS_NORMAL)
-				. = "обычный"
-			if(WEIGHT_CLASS_BULKY)
-				. = "громоздкий"
-			if(WEIGHT_CLASS_HUGE)
-				. = "большой"
-			if(WEIGHT_CLASS_GIGANTIC)
-				. = "огромный"
-			else
-				. = ""
+	switch(w_class)
+		if(WEIGHT_CLASS_TINY)
+			. = "небольшой"
+		if(WEIGHT_CLASS_SMALL)
+			. = "маленький"
+		if(WEIGHT_CLASS_NORMAL)
+			. = "обычный"
+		if(WEIGHT_CLASS_BULKY)
+			. = "громоздкий"
+		if(WEIGHT_CLASS_HUGE)
+			. = "большой"
+		if(WEIGHT_CLASS_GIGANTIC)
+			. = "огромный"
+		else
+			. = ""
 
 
 /var/mob/dview/dview_mob = new

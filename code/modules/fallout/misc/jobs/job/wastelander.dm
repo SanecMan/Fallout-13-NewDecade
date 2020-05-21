@@ -10,7 +10,6 @@
 	total_positions = -1
 	spawn_positions = -1
 	supervisors = "никому"
-	eng_supervisors = "no one"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
@@ -37,7 +36,6 @@
 	total_positions = -1
 	spawn_positions = -1 //does not matter for late join
 	supervisors = "зову приключений"
-	eng_supervisors = "no one"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
@@ -92,7 +90,6 @@
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "кодексу чести наёмника"
-	eng_supervisors = "no one"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()

@@ -1,8 +1,6 @@
 /mob/living/simple_animal/hostile/mrhandy
 	name = "Мистер Помощник"
 	desc = "Эти летающие на реактивном двигателе роботы с несколькими манипуляторами были разработаны компанией «Дженерал Атомикс Интернешнл»; их основной функцией было ведение домашнего хозяйства, например, приготовление пищи или выгуливание собаки. Удивительно во что они превратились сейчас."
-	eng_name = "Mr.Handy"
-	eng_desc = "Those flying robots with manipulators, was developed by «General Atomics International»; Their main function was... helping with home stuff, like a garden or walking with dog."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "handy"
 	icon_living = "handy"
@@ -46,7 +44,6 @@
 
 /mob/living/simple_animal/hostile/mrhandy/gutsy
 	name = "Мистер Храбрец"
-	eng_name = "Mr.Gutsy"
 	icon_state = "gutsy"
 	icon_living = "gutsy"
 	icon_dead = "gutsy_d"

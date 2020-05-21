@@ -28,7 +28,6 @@
 	var/area			= null
 
 	var/fake 			= null
-	var/language = "English"
 		////////////
 		//SECURITY//
 		////////////

@@ -11,7 +11,7 @@
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 	var/wielded = 0
 
-	var/msg = user.client.select_lang("<span class='info'>*---------* <br>Это [bicon(src)] <EM>[src]</EM>!\n", "<span class='info'>*---------* <br>This is [bicon(src)] <EM>[src]</EM>!\n")
+	var/msg = "<span class='info'>*---------* <br>Это [bicon(src)] <EM>[src]</EM>!\n"
 
 	//uniform
 	if(w_uniform && !(slot_w_uniform in obscured))
@@ -20,40 +20,40 @@
 		if(istype(w_uniform,/obj/item/clothing/under))
 			var/obj/item/clothing/under/U = w_uniform
 			if(U.hastie)
-				tie_msg += user.client.select_lang(" с [bicon(U.hastie)]  [U.hastie]", " with [bicon(U.hastie)]  [U.hastie]")
+				tie_msg += " с [bicon(U.hastie)]  [U.hastie]"
 
 		if(w_uniform.blood_DNA)
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_is] носит [bicon(w_uniform)] [w_uniform.gender==PLURAL?"some":"a"] покрытую кровью [w_uniform.name][tie_msg]!</span>\n", "<span class='warning'>[t_He] [t_is] wears [bicon(w_uniform)] [w_uniform.gender==PLURAL?"some":"a"] blood-stained [w_uniform.name][tie_msg]!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(w_uniform)] [w_uniform.gender==PLURAL?"some":"a"] покрытую кровью [w_uniform.name][tie_msg]!</span>\n"
 		else
-			msg += user.client.select_lang("[t_He] [t_is] носит [bicon(w_uniform)] [w_uniform][tie_msg].\n", "[t_He] [t_is] wears [bicon(w_uniform)] [w_uniform][tie_msg].\n")
+			msg += "[t_He] [t_is] носит [bicon(w_uniform)] [w_uniform][tie_msg].\n"
 
 	//head
 	if(head)
 		if(head.blood_DNA)
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_is] носит [bicon(head)] [head.gender==PLURAL?"some":"a"] покрытую кровью [head.name] на своей голове!</span>\n", "<span class='warning'>[t_He] [t_is] wears [bicon(head)] [head.gender==PLURAL?"some":"a"] blood-stained [head.name] on [t_his] head!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(head)] [head.gender==PLURAL?"some":"a"] покрытую кровью [head.name] на своей голове!</span>\n"
 		else
-			msg += user.client.select_lang("[t_He] [t_is] носит [bicon(head)] [head] на своей голове.\n", "[t_He] [t_is] wears [bicon(head)] [head] on [t_his] head.\n")
+			msg += "[t_He] [t_is] носит [bicon(head)] [head] на своей голове.\n"
 
 	//suit/armor
 	if(wear_suit)
 		if(wear_suit.blood_DNA)
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_is] носит [bicon(wear_suit)] [wear_suit.gender==PLURAL?"some":"a"] покрытый кровью [wear_suit.name]!</span>\n", "<span class='warning'>[t_He] [t_is] wears [bicon(wear_suit)] [wear_suit.gender==PLURAL?"some":"a"] blood-stained [wear_suit.name]!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(wear_suit)] [wear_suit.gender==PLURAL?"some":"a"] покрытый кровью [wear_suit.name]!</span>\n"
 		else
-			msg += user.client.select_lang("[t_He] [t_is] носит [bicon(wear_suit)] [wear_suit].\n", "[t_He] [t_is] wears [bicon(wear_suit)] [wear_suit].\n")
+			msg += "[t_He] [t_is] носит [bicon(wear_suit)] [wear_suit].\n"
 
 		//suit/armor storage
 		if(s_store)
 			if(s_store.blood_DNA)
-				msg += user.client.select_lang("<span class='warning'>[t_He] [t_is] тащит [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] покрытый кровью [s_store.name] на своём [wear_suit.name]!</span>\n", "<span class='warning'>[t_He] [t_is] carries [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] blood-stained [s_store.name] on [t_his] [wear_suit.name]!</span>\n")
+				msg += "<span class='warning'>[t_He] [t_is] тащит [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] покрытый кровью [s_store.name] на своём [wear_suit.name]!</span>\n"
 			else
-				msg += user.client.select_lang("[t_He] [t_is] тащит [bicon(s_store)] [s_store] на своем [wear_suit.name].\n", "[t_He] [t_is] carries [bicon(s_store)] [s_store] on [t_his] [wear_suit.name].\n")
+				msg += "[t_He] [t_is] тащит [bicon(s_store)] [s_store] на своем [wear_suit.name].\n"
 
 	//back
 	if(back)
 		if(back.blood_DNA)
-			msg += msg += user.client.select_lang("<span class='warning'>[t_He] [t_has] [bicon(back)] [back.gender==PLURAL?"some":"a"] покрытый кровью [back] на своей спине.</span>\n", "<span class='warning'>[t_He] [t_has] [bicon(back)] [back.gender==PLURAL?"some":"a"] blood-stained [back] on [t_his] back.</span>\n")
+			msg += msg += "<span class='warning'>[t_He] [t_has] [bicon(back)] [back.gender==PLURAL?"some":"a"] покрытый кровью [back] на своей спине.</span>\n"
 		else
-			msg += msg += user.client.select_lang("[t_He] носит [bicon(back)] [back] на своей спине.\n", "[t_He] [t_has] [bicon(back)] [back] on [t_his] back.\n")
+			msg += msg += "[t_He] носит [bicon(back)] [back] на своей спине.\n"
 
 	//Hands
 	for(var/obj/item/I in held_items)
@@ -63,68 +63,68 @@
 				if(W.wielded)
 					wielded = 1
 			if(I.blood_DNA)
-				msg += user.client.select_lang("<span class='warning'>[t_He] [t_is] держит [bicon(I)] [I.gender==PLURAL?"немного":""] покрытый кровью [I.name] в своих [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))]!</span>\n", "<span class='warning'>[t_He] [t_is] holds [bicon(I)] [I.gender==PLURAL?"some":"a"] blood-stained [I.name] in [wielded ? "hands" : get_held_index_name(get_held_index_of_item(I))]!</span>\n")
+				msg += "<span class='warning'>[t_He] [t_is] держит [bicon(I)] [I.gender==PLURAL?"немного":""] покрытый кровью [I.name] в своих [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))]!</span>\n"
 			else
-				msg += user.client.select_lang("[t_He] [t_is] держит [bicon(I)] [I] в своих [wielded ? "руках" : get_held_index_name(get_held_index_of_item(I))].\n", "[t_He] [t_is] holds [bicon(I)] [I] in [wielded ? "hands" : get_held_index_name(get_held_index_of_item(I))].\n")
+				msg += "[t_He] [t_is] держит [bicon(I)] [I] в [wielded ? "своих руках" : get_held_index_name(get_held_index_of_item(I))].\n"
 
 	//gloves
 	if(gloves && !(slot_gloves in obscured))
 		if(gloves.blood_DNA)
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_has] [bicon(gloves)] [gloves.gender==PLURAL?"some":"a"] покрытые кровью [gloves.name] на своих руках!</span>\n", "<span class='warning'>[t_He] [t_has] [bicon(gloves)] [gloves.gender==PLURAL?"some":"a"] blood-stained [gloves.name] on [t_his] hands!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(gloves)] [gloves.gender==PLURAL?"some":"a"] покрытые кровью [gloves.name] на своих руках!</span>\n"
 		else
-			msg += user.client.select_lang("[t_He] [t_has] [bicon(gloves)]  [gloves] на своих руках.\n", "[t_He] [t_has] [bicon(gloves)]  [gloves] on [t_his] hands.\n")
+			msg += "[t_He] [t_has] [bicon(gloves)]  [gloves] на своих руках.\n"
 	else if(blood_DNA)
 		var/hand_number = get_num_arms()
 		if(hand_number)
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_has] покрытую кровью [hand_number > 1 ? "левую" : "правую"] руку!</span>\n", "<span class='warning'>[t_He] [t_has] blood-stained [hand_number > 1 ? "left" : "right"] hand!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_has] покрытую кровью [hand_number > 1 ? "левую" : "правую"] руку!</span>\n"
 
 	//handcuffed?
 
 	//handcuffed?
 	if(handcuffed)
 		if(istype(handcuffed, /obj/item/weapon/restraints/handcuffs/cable))
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] связан кабелем</span>\n", "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] restrained</span>\n")
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] связан кабелем</span>\n"
 		else
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] в наручниках!</span>\n", "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] handcuffed!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] в наручниках!</span>\n"
 
 	//belt
 	if(belt)
 		if(belt.blood_DNA)
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_has] [bicon(belt)] [belt.gender==PLURAL?"some":""] покрытый кровью [belt.name] вокруг своего пояса!</span>\n", "<span class='warning'>[t_He] [t_has] [bicon(belt)] [belt.gender==PLURAL?"some":"a"] blood-stained [belt.name] around [t_his] waist!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(belt)] [belt.gender==PLURAL?"some":""] покрытый кровью [belt.name] вокруг своего пояса!</span>\n"
 		else
-			msg += user.client.select_lang("[t_He] [t_has] [bicon(belt)] [belt] вокруг [t_his] пояса.\n", "[t_He] [t_has] [bicon(belt)] [belt] around [t_his] waist.\n")
+			msg += "[t_He] [t_has] [bicon(belt)] [belt] вокруг [t_his] пояса.\n"
 
 	//shoes
 	if(shoes && !(slot_shoes in obscured))
 		if(shoes.blood_DNA)
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_is] носит [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] покрытые кровью [shoes.name] на своих ногах!</span>\n", "<span class='warning'>[t_He] [t_is] wears [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] blood-stained [shoes.name] on [t_his] feet!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_is] носит [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] покрытые кровью [shoes.name] на своих ногах!</span>\n"
 		else
-			msg += user.client.select_lang("[t_He] [t_is] носит [bicon(shoes)]  [shoes] на [t_his] ногах.\n", "[t_He] [t_is] wears [bicon(shoes)]  [shoes] on [t_his] feet.\n")
+			msg += "[t_He] [t_is] носит [bicon(shoes)]  [shoes] на [t_his] ногах.\n"
 
 	//mask
 	if(wear_mask && !(slot_wear_mask in obscured))
 		if(wear_mask.blood_DNA)
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_has] [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":""] покрытую кровью [wear_mask.name] на своём лице!</span>\n", "<span class='warning'>[t_He] [t_has] [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":"a"] blood-stained [wear_mask.name] on [t_his] face!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":""] покрытую кровью [wear_mask.name] на своём лице!</span>\n"
 		else
-			msg += user.client.select_lang("[t_He] [t_has] [bicon(wear_mask)]  [wear_mask] на своём лице.\n", "[t_He] [t_has] [bicon(wear_mask)]  [wear_mask] on [t_his] face.\n")
+			msg += "[t_He] [t_has] [bicon(wear_mask)]  [wear_mask] на своём лице.\n"
 
 	if (wear_neck && !(slot_neck in obscured))
-		msg += user.client.select_lang("[t_He] [t_is] носит [bicon(src.wear_neck)]  [src.wear_neck] вокруг своей шеи.\n", "[t_He] [t_is] wears [bicon(src.wear_neck)]  [src.wear_neck] around [t_his] neck.\n")
+		msg += "[t_He] [t_is] носит [bicon(src.wear_neck)]  [src.wear_neck] вокруг своей шеи.\n"
 
 	//eyes
 	if(glasses && !(slot_glasses in obscured))
 		if(glasses.blood_DNA)
-			msg += user.client.select_lang("<span class='warning'>[t_He] [t_has] [bicon(glasses)] [glasses.gender==PLURAL?"some":"a"] покрытые кровью [glasses] скрывающие [t_his] глаза!</span>\n", "<span class='warning'>[t_He] [t_has] [bicon(glasses)] [glasses.gender==PLURAL?"some":"a"] blood-stained [glasses] hides [t_his] eyes!</span>\n")
+			msg += "<span class='warning'>[t_He] [t_has] [bicon(glasses)] [glasses.gender==PLURAL?"some":"a"] покрытые кровью [glasses] скрывающие [t_his] глаза!</span>\n"
 		else
-			msg += user.client.select_lang("[t_He] [t_has] [bicon(glasses)]  [glasses] скрывающие [t_his] глаза.\n", "[t_He] [t_has] [bicon(glasses)]  [glasses] hides [t_his] eyes.\n")
+			msg += "[t_He] [t_has] [bicon(glasses)]  [glasses] скрывающие [t_his] глаза.\n"
 
 	//ears
 	if(ears && !(slot_ears in obscured))
-		msg += user.client.select_lang("[t_He] [t_has] [bicon(ears)]  [ears] на своих ушах.\n", "[t_He] [t_has] [bicon(ears)]  [ears] on [t_his] ears.\n")
+		msg += "[t_He] [t_has] [bicon(ears)]  [ears] на своих ушах.\n"
 
 	//ID
 	if(wear_id)
-		msg += user.client.select_lang("[t_He] [t_is] носит [bicon(wear_id)] [wear_id].\n", "[t_He] [t_is] wears [bicon(wear_id)] [wear_id].\n")
+		msg += "[t_He] [t_is] носит [bicon(wear_id)] [wear_id].\n"
 
 	if(src.status != "Wastelander" && !skipface)
 		var/datum/status/S = get_status_datum(src.status)
@@ -227,7 +227,7 @@
 	if(fire_stacks > 0)
 		msg += "[t_He] [t_is] покрыт чем-то горючим.\n"
 	if(fire_stacks < 0)
-		msg += "[t_He] looks a little soaked.\n"
+		msg += "[t_He] выглядит немного промокшим.\n"
 
 
 	if(pulledby && pulledby.grab_state)
@@ -315,9 +315,9 @@
 					var/cyberimp_detect
 					for(var/obj/item/organ/cyberimp/CI in internal_organs)
 						if(CI.status == ORGAN_ROBOTIC)
-							cyberimp_detect += "[name] is modified with a [CI.name].<br>"
+							cyberimp_detect += "[name] модифицирован [CI.name].<br>"
 					if(cyberimp_detect)
-						msg += "Detected cybernetic modifications:<br>"
+						msg += "Обнаружены кибернитические модификации:<br>"
 						msg += cyberimp_detect
 					if(R)
 						var/health_r = R.fields["p_stat"]

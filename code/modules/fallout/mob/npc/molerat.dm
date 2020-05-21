@@ -3,8 +3,6 @@
 /mob/living/simple_animal/hostile/molerat
 	name = "Кротокрыс"
 	desc = "Гигантская крыса. Или крот?"
-	eng_name = "molerat"
-	eng_desc = "Giant rat! Or mole?..."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "mole_rat"
 	icon_living = "mole_rat"
@@ -36,7 +34,6 @@
 	aggro_vision_range = 12 //I SEE EVERYTHING
 	idle_vision_range = 10
 	attacktext = "кусает"
-	eng_attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 3
 

@@ -2,8 +2,6 @@
 /turf/closed/wall/f13/isometric_test
 	name = "interior wall"
 	desc = "Interesting, what kind of material they have used - these wallpapers still look good after all the centuries..."
-	eng_name = "interior wall"
-	eng_desc = "Interesting, what kind of material they have used - these wallpapers still look good after all the centuries..."
 	icon = 'icons/turf/walls/TEST2.dmi'
 	icon_state = "interior0"
 	icontype = "interior"

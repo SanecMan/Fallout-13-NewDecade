@@ -1,6 +1,5 @@
 /obj/vertibird_exit_door
 	name = "люк выхода"
-	eng_name = "Exit Hatch"
 	icon = 'icons/obj/doors/airlocks/survival/horizontal/survival.dmi'
 	icon_state = "closed"
 	anchored = 1
@@ -11,28 +10,16 @@
 		return
 
 	if(istype(I, /obj/vertibird_exit_door))
-		if(usr.client && usr.client.language == "English")
-			to_chat(usr, "Nice try.")
-			return
-		else
-			to_chat(usr, "Хорошая попытка.")
-			return
+		to_chat(usr, "Хорошая попытка.")
+		return
 
 	if(vertibird:locked)
-		if(usr.client && usr.client.language == "English")
-			to_chat(usr, "Locked!")
-			return
-		else
-			to_chat(usr, "Заперто!")
-			return
+		to_chat(usr, "Заперто!")
+		return
 
 	if(vertibird:inFly)
-		if(usr.client && usr.client.language == "English")
-			to_chat(usr, "YOU CAN'T GO OUT WHILE FLYING!")
-			return
-		else
-			to_chat(usr, "ВЫ НЕ МОЖЕТЕ ВЫЙТИ ПОКА В ПОЛЕТЕ!")
-			return
+		to_chat(usr, "ВЫ НЕ МОЖЕТЕ ВЫЙТИ ПОКА В ПОЛЕТЕ!")
+		return
 
 	I.forceMove(vertibird:ejectTurf())
 

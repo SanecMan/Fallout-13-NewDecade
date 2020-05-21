@@ -1,8 +1,6 @@
 /obj/item/door_key
 	name = "неиспользованный ключ"
 	desc = "Маленький серый ключ."
-	eng_name = "unused key"
-	eng_desc = "Small grey key."
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "empty_key"
 	w_class = WEIGHT_CLASS_TINY
@@ -64,8 +62,6 @@
 /obj/item/weapon/storage/keys_set
 	name = "key chain"
 	desc = "Put your keys here and make using doors comfortable!"
-	eng_name = "key chain"
-	eng_desc = "Put your keys here and make using doors comfortable!"
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "keychain_0"
 	storage_slots = 4
@@ -89,7 +85,6 @@
 /obj/item/lock
 	name = "неиспользованный замок"
 	desc = "Маленький серый замок."
-	eng_name = "unused lock"
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "closed_lock"
 	w_class = WEIGHT_CLASS_TINY
@@ -191,8 +186,6 @@
 /obj/item/lockpick
 	name = "заколка"
 	desc = "Обычная заколка для волоc, однако в умелых руках может выступать в роли отмычки."
-	eng_name = "hairpin"
-	eng_desc = "The usual hair clip for hair, but in skilled hands can act as a lockpick."
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "Hairpin"
 	self_weight = 0.1
@@ -220,8 +213,6 @@
 /obj/item/weapon/storage/bag/lockpicks
 	name = "коробок шпилек"
 	desc = "Маленькая довоенная коробочка со шпильками."
-	eng_name = "hairpin box"
-	eng_desc = "Small box for hairpins"
 	icon = 'icons/fallout/objects/storage.dmi'
 	icon_state = "lockpickbox_closed"
 	item_state = "zippo"

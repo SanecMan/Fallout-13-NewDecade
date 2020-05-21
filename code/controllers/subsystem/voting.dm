@@ -107,7 +107,7 @@ var/datum/subsystem/vote/SSvote
 		else
 			text += "\n<b>Воздержалось:</b> [clients.len-voted.len]"
 	else
-		text += "<b>Vote Result: Inconclusive - No Votes!</b>"
+		text += "<b>Результат: Inconclusive - No Votes!</b>"
 	log_vote(text)
 	remove_action_buttons()
 	to_chat(world, "\n<font color='purple'>[text]</font>")
@@ -137,7 +137,7 @@ var/datum/subsystem/vote/SSvote
 		if(!active_admins)
 			ticker.force_ending = 1
 		else
-			to_chat(world, usr.client.select_lang("<span style='boldannounce'>Notice: Restart after admin press button. Call some one of them.</span>", "<span style='boldannounce'>Примечание: Перезапуск не состоится пока активный администратор не нажмет кнопку.</span>"))
+			to_chat(world, "<span style='boldannounce'>Примечание: Перезапуск не состоится пока активный администратор не нажмет кнопку.</span>")
 			message_admins("Голосование о перезапуске завершено, но на сервере имеется администратор с флагом +server который должен решить окончательно.")
 
 	return .

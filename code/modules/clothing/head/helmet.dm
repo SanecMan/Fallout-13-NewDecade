@@ -1,8 +1,6 @@
 /obj/item/clothing/head/helmet
 	name = "шлем"
 	desc = "Стандартный шлем. Защищает голову от ударов."
-	eng_name = "helmet"
-	eng_desc = "Standard Security gear. Protects the head from impacts."
 	icon_state = "helmet"
 	flags = HEADBANGPROTECT
 	item_state = "helmet"
@@ -28,8 +26,6 @@
 /obj/item/clothing/head/helmet/alt
 	name = "пулестойкий шлем"
 	desc = "Пулестойкий боевой шлем."
-	eng_name = "bulletproof helmet"
-	eng_desc = "A bulletproof combat helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
 	icon_state = "helmetalt"
 	item_state = "helmetalt"
 	armor = list(melee = 15, bullet = 40, laser = 10, energy = 10, bomb = 40, bio = 0, rad = 0, fire = 50, acid = 50)
@@ -43,8 +39,6 @@
 /obj/item/clothing/head/helmet/riot
 	name = "каска спецназа"
 	desc = "Каска специально разработанная для защиты против холодного и тупого оружия."
-	eng_name = "riot helmet"
-	eng_desc = "It's a helmet specifically designed to protect against close range attacks."
 	icon_state = "riot"
 	item_state = "helmet"
 	toggle_message = "Вы спустили забрало"
@@ -118,8 +112,6 @@
 /obj/item/clothing/head/helmet/swat/nanotrasen
 	name = "каска SWAT"
 	desc = "Каска SWAT, очень прочная использовалась в Волт-Тек для службы безопасности."
-	eng_name = "\improper SWAT helmet"
-	eng_desc = "An extremely robust, helmet with the Vault-Tec logo emblazoned on the top."
 	icon_state = "swat"
 	item_state = "swat"
 
@@ -140,8 +132,6 @@
 /obj/item/clothing/head/helmet/roman
 	name = "имперский шлем"
 	desc = "Древний шлем сделанный из кожи и бронзы."
-	eng_name = "roman helmet"
-	eng_desc = "An ancient helmet made of bronze and leather."
 	flags_inv = HIDEEARS|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 	armor = list(melee = 25, bullet = 0, laser = 25, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 100, acid = 50)
@@ -160,8 +150,6 @@
 /obj/item/clothing/head/helmet/gladiator
 	name = "гладиаторский шлем"
 	desc = "Аве император!"
-	eng_name = "gladiator helmet"
-	eng_desc = "Ave, Imperator, morituri te salutant."
 	icon_state = "gladiator"
 	item_state = "gladiator"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR

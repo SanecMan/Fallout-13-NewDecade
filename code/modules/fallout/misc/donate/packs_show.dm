@@ -34,47 +34,7 @@
 	if(!spack_data["items"] && !spack_data["roles"] && !spack_data["pets"])
 		hide_data = 1
 
-	if(user.client && user.client.language == "English")
-		var/html = {"
-			<div class="left_table">
-			  <center>Content packs</center>
-				  [packs_data]
-			</div>
-			  <div class="right_table">
-			  	<center>[spack_data["name"]]</center>
-			  	<span style="float: right; font-style: normal; font-weight: lighter; font-size: xx-small;">Balance: [parent.donate_money] atoms</span><br>
-			  	Description:
-			  	<p style="margin-left: 25px; font-size: x-small;">[spack_data["desc"]]</p>
-			  	<h2>Price: [(pack.id in parent.content_packs) ? "purchased" : pack.price]</h2><br>
-				<a [(selected_pack in parent.content_packs) ? "class='linkOff'" : ""] href='?_src_=prefs;preference=content_packs;buy=[pack.id]'>Buy</a>
-				<div style="[hide_data ? "visibility: hidden;" : ""] display: block; width: 98%; border: 1px solid #0bcc62; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px">
-				<div style="width: 30%; display: inline-block; float: left;[spack_data["items"] ? "" : " visibility: hidden;"]">
-					Items:
-					<ul style="margin-left: 25px;">
-						[spack_data["items"]]
-						</ul>
-					</div>
-					<div style="width: 30%; display: inline-block; float: left;[spack_data["roles"] ? "" : " visibility: hidden;"]">
-					Roles:
-					<ul style="margin-left: 25px;">
-					[spack_data["roles"]]
-					</ul>
-					</div>
-					<div style="width: 30%; display: inline-block; float: left;[spack_data["pets"] ? "" : " visibility: hidden;"]">
-					Pets:
-					<ul style="margin-left: 25px;">
-						[spack_data["pets"]]
-						</ul>
-						</div>
-					<div style="width: 100%;clear: both; "></div>
-				</div>
-			  </div>"}
-		var/datum/browser/popup = new(user, "packs", "<div align='center'>Atom Shop</div>", 640, 350)
-		popup.set_content(html)
-		popup.open(0)
-
-	else
-		var/html = {"
+	var/html = {"
 		<div class="left_table">
 		  <center>Контент</center>
 			  [packs_data]
@@ -85,29 +45,29 @@
 		  	Описание:
 		  	<p style="margin-left: 25px; font-size: x-small;">[spack_data["desc"]]</p>
 		  	<h2>Цена: [(pack.id in parent.content_packs) ? "purchased" : pack.price]</h2><br>
-			<a [(selected_pack in parent.content_packs) ? "class='linkOff'" : ""] href='?_src_=prefs;preference=content_packs;buy=[pack.id]'>Купить</a>
-			<div style="[hide_data ? "visibility: hidden;" : ""] display: block; width: 98%; border: 1px solid #0bcc62; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px">
-			<div style="width: 30%; display: inline-block; float: left;[spack_data["items"] ? "" : " visibility: hidden;"]">
-				Предметы:
-				<ul style="margin-left: 25px;">
-					[spack_data["items"]]
-					</ul>
-				</div>
-				<div style="width: 30%; display: inline-block; float: left;[spack_data["roles"] ? "" : " visibility: hidden;"]">
-				Роли:
-				<ul style="margin-left: 25px;">
-				[spack_data["roles"]]
-				</ul>
-				</div>
-				<div style="width: 30%; display: inline-block; float: left;[spack_data["pets"] ? "" : " visibility: hidden;"]">
-				Животные:
-				<ul style="margin-left: 25px;">
-					[spack_data["pets"]]
-					</ul>
-					</div>
-				<div style="width: 100%;clear: both; "></div>
-			</div>
+           	<a [(selected_pack in parent.content_packs) ? "class='linkOff'" : ""] href='?_src_=prefs;preference=content_packs;buy=[pack.id]'>Купить</a>
+            <div style="[hide_data ? "visibility: hidden;" : ""] display: block; width: 98%; border: 1px solid #0bcc62; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px">
+              <div style="width: 30%; display: inline-block; float: left;[spack_data["items"] ? "" : " visibility: hidden;"]">
+                Предметы:
+                <ul style="margin-left: 25px;">
+                  [spack_data["items"]]
+                  </ul>
+              </div>
+              <div style="width: 30%; display: inline-block; float: left;[spack_data["roles"] ? "" : " visibility: hidden;"]">
+                Роли:
+                <ul style="margin-left: 25px;">
+                  [spack_data["roles"]]
+                  </ul>
+                </div>
+              <div style="width: 30%; display: inline-block; float: left;[spack_data["pets"] ? "" : " visibility: hidden;"]">
+                Животные:
+                <ul style="margin-left: 25px;">
+                  [spack_data["pets"]]
+                  </ul>
+                </div>
+                <div style="width: 100%;clear: both; "></div>
+            </div>
 		  </div>"}
-		var/datum/browser/popup = new(user, "packs", "<div align='center'>Атомный Магазин</div>", 640, 350)
-		popup.set_content(html)
-		popup.open(0)
+	var/datum/browser/popup = new(user, "packs", "<div align='center'>Атомный Магазин</div>", 640, 350)
+	popup.set_content(html)
+	popup.open(0)

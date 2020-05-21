@@ -12,8 +12,6 @@
 /obj/item/weapon/melee/chainofcommand
 	name = "цепь командования"
 	desc = "Инструмент хороших парней, в их нелегком деле - подчинять других."
-	eng_name = "chain of command"
-	eng_desc = "A tool used by great men to placate the frothing masses."
 	icon_state = "chain"
 	item_state = "chain"
 	flags = CONDUCT
@@ -45,8 +43,6 @@
 /obj/item/weapon/melee/sabre
 	name = "сабля"
 	desc = "Элегантное оружие, которое просто создано для разрезания плоти и костей."
-	eng_name = "officer's sabre"
-	eng_desc = "An elegant weapon, its monomolecular edge is capable of cutting through flesh and bone with ease."
 	icon_state = "sabre"
 	item_state = "sabre"
 	flags = CONDUCT
@@ -70,8 +66,6 @@
 /obj/item/weapon/melee/classic_baton
 	name = "полицейская дубинка"
 	desc = "Деревянная дубинка чтобы делать фарш из криминальных лиц."
-	eng_name = "police baton"
-	eng_desc = "A wooden truncheon for beating criminal scum."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "baton"
 	item_state = "classic_baton"
@@ -128,8 +122,6 @@
 /obj/item/weapon/melee/classic_baton/telescopic
 	name = "телескопическая дубинка"
 	desc = "Компактное орудие службы безопасности любого населенного пункта. А еще она складывается."
-	eng_name = "telescopic baton"
-	eng_desc = "A compact yet robust personal defense weapon. Can be concealed when folded."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "telebaton_0"
 	item_state = null
@@ -181,8 +173,6 @@
 /obj/item/weapon/melee/supermatter_sword
 	name = "меч из осколка суперматерии"
 	desc = "Если всё хреново, что может быть хуже? Парень с этой штукой..."
-	eng_name = "supermatter sword"
-	eng_desc = "In a station full of bad ideas, this might just be the worst."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "supermatter_sword"
 	item_state = "supermatter_sword"
@@ -277,8 +267,6 @@
 /obj/item/weapon/melee/curator_whip
 	name = "curator's whip"
 	desc = "Somewhat eccentric and outdated, it still stings like hell to be hit by."
-	eng_name = "curator's whip"
-	eng_desc = "Somewhat eccentric and outdated, it still stings like hell to be hit by."
 	icon_state = "whip"
 	item_state = "chain"
 	slot_flags = SLOT_BELT
@@ -297,16 +285,12 @@
 /obj/item/weapon/melee/curator_whip/black
 	name = "плеть сутенёра"
 	desc = "Черная плеть, скорее всего используется для.. плотских утех..."
-	eng_name = "souteneur's whip"
-	eng_desc = "LEWD!"
 	icon_state = "whip_black"
 	force = 25
 
 /obj/item/weapon/melee/ripper
 	name = "потрошитель"
 	desc = "Для работы там, где обычного резака недостаточно."
-	eng_name = "ripper"
-	eng_desc = "For heavy duty cutting."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "ripper_off"
 	hitsound = 'sound/weapons/circsawhit.ogg'

@@ -6,8 +6,7 @@
 
 /turf/open/indestructible/ground
 	icon = 'icons/fallout/turfs/ground.dmi'
-	name = "\proper ground"
-	eng_name = "\proper ground"
+	name = "\proper пол"
 	icon_state = "wasteland1"
 	intact = 1
 
@@ -47,7 +46,6 @@ var/global/list/desertTurfEdgeCache
 
 /turf/open/indestructible/ground/desert
 	name = "песок"
-	eng_name = "desert"
 	icon_state = "wasteland"
 	step_sounds = list("human" = "dirtfootsteps")
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/agave, /obj/item/seeds/mutfruit, \
@@ -60,7 +58,6 @@ var/global/list/desertTurfEdgeCache
 	..()
 /turf/open/indestructible/ground/dirt
 	name = "земля"
-	eng_name = "dirt"
 	icon_state = "dirtfull"
 	step_sounds = list("human" = "dirtfootsteps")
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
@@ -70,21 +67,18 @@ var/global/list/desertTurfEdgeCache
 
 /turf/open/indestructible/ground/road
 	name = "дорога"
-	eng_name = "road"
 	icon_state = "innermiddle"
 	icon = 'icons/fallout/turfs/asphalt.dmi'
 	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/sidewalk
 	name = "тротуар"
-	eng_name = "sidewalk"
 	icon_state = "outermiddle"
 	icon = 'icons/fallout/turfs/sidewalk.dmi'
 	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/mountain
 	name = "камень"
-	eng_name = "mountain"
 	icon_state = "rockfloor1"
 	icon = 'icons/fallout/turfs/mining.dmi'
 	allowed_plants = list(/obj/item/seeds/glow)
@@ -96,7 +90,6 @@ var/global/list/desertTurfEdgeCache
 
 /turf/open/indestructible/ground/subway
 	name = "туннель метро"
-	eng_name = "subway tunnel"
 	icon_state = "railsnone"
 	icon = 'icons/fallout/turfs/ground.dmi'
 
@@ -131,7 +124,6 @@ var/global/list/desertTurfEdgeCache
 /turf/open/ruins
 	name = "руины"
 	desc = "It's just a pile of concrete rubble."
-	eng_name = "ruins"
 	icon_state = "rubblefull"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	step_sounds = list("human" = "erikafootsteps")
@@ -151,7 +143,6 @@ var/global/list/desertTurfEdgeCache
 /turf/open/temple
 	name = "храм"
 	desc = "It's temple floor."
-	eng_name = "temple"
 	icon_state = "temple"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	step_sounds = list("human" = "erikafootsteps")

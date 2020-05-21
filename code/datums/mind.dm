@@ -240,7 +240,7 @@
 /datum/mind/proc/show_memory(mob/recipient, window=1)
 	if(!recipient)
 		recipient = current
-	var/output = usr.client.select_lang("<B>Память [current.real_name]:</B><br>", "<B>[current.real_name]'s Memories:</B><br>")
+	var/output = "<B>Память [current.real_name]:</B><br>"
 	output += memory
 
 	if(objectives.len)

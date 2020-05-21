@@ -1,8 +1,6 @@
 /obj/item/clothing/head/hardhat
 	name = "строительная каска"
 	desc = "Элемент строительной одежды для работы в опасных условиях и защиты головы. В комплекте с фонариком."
-	eng_name = "hard hat"
-	eng_desc = "A piece of headgear used in dangerous working conditions to protect the head. Comes with a built-in flashlight."
 	icon_state = "hardhat0_yellow"
 	item_state = "hardhat0_yellow"
 	var/brightness_on = 4 //luminosity when on
@@ -73,8 +71,6 @@
 /obj/item/clothing/head/hardhat/atmos
 	name = "каска пожарного"
 	desc = "Каска пожарного, специально для тех случаев когда обычная расплавится."
-	eng_name = "atmospheric technician's firefighting helmet"
-	eng_desc = "A firefighter's helmet, able to keep the user cool in any situation."
 	icon_state = "hardhat0_atmos"
 	item_state = "hardhat0_atmos"
 	item_color = "atmos"

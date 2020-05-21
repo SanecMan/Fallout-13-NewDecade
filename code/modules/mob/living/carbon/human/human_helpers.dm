@@ -48,13 +48,13 @@
 	if(id_name)
 		return id_name
 	if(client)
-		return client.select_lang("Неизвестная личность","Unknown")
+		return "Неизвестная личность"
 	return "Unknown"
 
 //Returns "Unknown" if facially disfigured and real_name if not. Useful for setting name when Fluacided or when updating a human's name variable
 /mob/living/carbon/human/proc/get_face_name(if_no_face="Неизвестная личность")
 	if(client)
-		if_no_face = client.select_lang("Неизвестная личность","Unknown")
+		if_no_face = "Неизвестная личность"
 	if( wear_mask && (wear_mask.flags_inv&HIDEFACE) )	//Wearing a mask which hides our face, use id-name if possible
 		return if_no_face
 	if( head && (head.flags_inv&HIDEFACE) )
@@ -68,7 +68,7 @@
 //Useful when player is being seen by other mobs
 /mob/living/carbon/human/proc/get_id_name(if_no_id = "Неизвестная личность")
 	if(client)
-		if_no_id = client.select_lang("Неизвестная личность", "Unknown")
+		if_no_id = "Неизвестная личность"
 	var/obj/item/weapon/storage/wallet/wallet = wear_id
 	var/obj/item/device/pda/pda = wear_id
 	var/obj/item/weapon/card/id/id = wear_id

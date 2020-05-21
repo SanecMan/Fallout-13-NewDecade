@@ -3,8 +3,6 @@
 /datum/f13_objective/assassinate
 	name = "Убийство в большом городе"
 	desc = "Вас наняли, чтобы разобраться с одной персоной. Вам не сказали причин, лишь имя."
-	eng_name = "Big murder in Big Town"
-	eng_desc = "You were hired to kill someone. They didn't tell you the reason, just the name."
 	kind = BOTH
 
 	check_mob(mob/living/carbon/human/H)

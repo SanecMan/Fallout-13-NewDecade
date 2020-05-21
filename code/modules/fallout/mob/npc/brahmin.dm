@@ -3,8 +3,6 @@
 /mob/living/simple_animal/cow/brahmin
 	name = "Брамин"
 	desc = "Брамин, это мутировавшая корова, с двумя головами. А еще она имеет два вымени.<br>Популярны за своё молоко."
-	eng_name = "brahmin"
-	eng_desc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "brahmin"
 	icon_living = "brahmin"

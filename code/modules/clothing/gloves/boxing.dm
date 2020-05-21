@@ -1,8 +1,6 @@
 /obj/item/clothing/gloves/boxing
 	name = "боксёрские перчатки"
 	desc = "Пара боксёрских перчаток, самое то чтобы набить морду."
-	eng_name = "boxing gloves"
-	eng_desc = "Because you really needed another excuse to punch your crewmates."
 	icon_state = "boxing"
 	item_state = "boxing"
 	put_on_delay = 60

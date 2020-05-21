@@ -1,6 +1,5 @@
 /mob/living/carbon/human
 	name = "Неизвестная личность"
-	eng_name = "Unknown"
 	real_name = "Неизвестная личность"
 	voice_name = "Неизвестная личность"
 	icon = 'icons/mob/human.dmi'

@@ -3,8 +3,6 @@
 /mob/living/simple_animal/hostile/ghoul
 	name = "Дикий гуль"
 	desc = "Вы видели когда-нибудь живого гуля?<br>Гули, это практически мертвые люди, гниющие и плохо пахнущие, прямо как зомби."
-	eng_name = "feral ghoul"
-	eng_desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants."
 	icon = 'icons/fallout/mobs/ghoul.dmi'
 	icon_state = "retro_ghoul-1"
 	icon_living = "retro_ghoul-1"
@@ -38,7 +36,6 @@
 	aggro_vision_range = 10
 	idle_vision_range = 7
 	attacktext = "царапает"
-	eng_attacktext = "scratches"
 	attack_sound = "punch"
 
 	XP = 7
@@ -68,8 +65,6 @@
 /mob/living/simple_animal/hostile/ghoul/aggressive
 	name = "Дикий гуль"
 	desc = "Вы видели когда-нибудь голодного гуля?<br>Аналогично другим диким гулям, этот более агрессивен и уверенен в том, что ты являешься отличной едой. <br> У него отсутствует левая рука."
-	eng_name = "feral ghoul"
-	eng_desc = "Have you ever seen a hungry ghoul before?<br>Similar to other feral ghouls, it's more aggressive and confident about the fact that you are the best food around.<br>It is missing a left arm."
 	icon_state = "angry_ghoul-1"
 	icon_living = "angry_ghoul"
 	icon_dead = "angry_ghoul_d"
@@ -81,7 +76,6 @@
 	aggro_vision_range = 15
 	idle_vision_range = 10
 	attacktext = "жует"
-	eng_attacktext = "chomps"
 
 /mob/living/simple_animal/hostile/ghoul/aggressive/New()
 	..()
@@ -91,8 +85,6 @@
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "Светящийся гуль"
 	desc = "Вы видели когда-нибудь светящегося гуля??<br>Светящиеся гули, это практически мёртвые люди, гниющие и плохо пахнущие, прямо как зомби, и настолько облучённые что стали светиться в темноте."
-	eng_name = "glowing ghoul"
-	eng_desc = "Have you ever seen a glowing ghoul before?<br>Glowing ghouls are necrotic post-humans - rotting, zombie-like mutants, who are so irradiated they actually glow in the dark."
 	icon_state = "retro_glowghoul-1"
 	icon_living = "retro_glowghoul-1"
 	icon_dead = "retro_glowghoul_d"
@@ -113,7 +105,6 @@
 
 /mob/living/simple_animal/hostile/ghoul/soldier
 	name = "Дикий гуль-солдат"
-	eng_name = "armored feral soldier ghoul"
 	icon_state = "soldier_ghoul-1"
 	icon_living = "soldier_ghoul-1"
 	icon_dead = "soldier_ghoul_d"
@@ -128,7 +119,6 @@
 
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
 	name = "Бронированный дикий гуль-солдат"
-	eng_name = "armored feral soldier ghoul"
 	icon_state = "soldier_ghoul_a-1"
 	icon_living = "soldier_ghoul_a-1"
 	icon_dead = "soldier_ghoul_a_d"

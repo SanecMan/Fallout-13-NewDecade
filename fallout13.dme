@@ -2286,7 +2286,6 @@
 #include "code\orphaned_procs\priority_announce.dm"
 #include "code\orphaned_procs\statistics.dm"
 #include "code\z-fallout13\color_correction.dm"
-#include "code\z-fallout13\language_code.dm"
 #include "code\z-fallout13\new_walls_type.dm"
 #include "code\z-fallout13\game\objects\items\skill_books.dm"
 #include "code\z-fallout13\game\objects\structures\obstacle.dm"

@@ -3,8 +3,6 @@
 /obj/item/weapon/banhammer
 	desc = "банхаммер"
 	name = "БАН СУКА!"
-	eng_desc = "A banhammer"
-	eng_name = "banhammer"
 	icon = 'icons/obj/items.dmi'
 	icon_state = "toyhammer"
 	slot_flags = SLOT_BELT
@@ -47,8 +45,6 @@
 /obj/item/weapon/claymore
 	name = "клеймор"
 	desc = "Чего стоишь как истукан? Руби!"
-	eng_name = "claymore"
-	eng_desc = "What are you standing around staring at this for? Get to killing!"
 	icon_state = "claymore"
 	item_state = "claymore"
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -184,8 +180,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/katana
 	name = "японский меч"
 	desc = "Лезвие, дошедшее до нас через века, лезвие, которое идеально режет сыр."
-	eng_name = "katana"
-	eng_desc = "Blade, the PERFECT blade, which can slice cheese!"
 	icon_state = "katana"
 	item_state = "katana"
 	icon = 'icons/fallout/objects/melee.dmi'
@@ -206,8 +200,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/katana/chinese
 	name = "меч китайского офицера"
 	desc = "A grimy Chinese straight sword with a leather and bronze hilt. It was wielded by Chinese officers before the Great War."
-	eng_name = "chinese officer sword"
-	eng_desc = "A grimy Chinese straight sword with a leather and bronze hilt. It was wielded by Chinese officers before the Great War."
 	icon_state = "chinese"
 	icon = 'icons/fallout/objects/melee.dmi'
 	force = 35
@@ -223,8 +215,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/wirerod
 	name = "арматура с проводами"
 	desc = "Арматура обмотанная проводами красного цвета."
-	eng_name = "wirerod"
-	eng_desc = "Rod with cable coil."
 	icon_state = "wiredrod"
 	item_state = "rods"
 	flags = CONDUCT
@@ -265,8 +255,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/throwing_star
 	name = "сюрикен"
 	desc = "An ancient weapon still used to this day due to it's ease of lodging itself into victim's body parts"
-	eng_name = "throwing star"
-	eng_desc = "An ancient weapon still used to this day due to it's ease of lodging itself into victim's body parts"
 	icon_state = "throwingstar"
 	item_state = "eshield0"
 	icon = 'icons/fallout/objects/melee.dmi'
@@ -285,8 +273,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/switchblade
 	name = "выкидной нож"
 	desc = "Острый, складной нож с пружинкой."
-	eng_desc = "A sharp, concealable, spring-loaded knife."
-	eng_name = "switchblade"
 	icon_state = "switchblade"
 	icon = 'icons/fallout/objects/melee.dmi'
 	flags = CONDUCT
@@ -329,8 +315,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/phone
 	name = "красный телефон"
 	desc = "Что-то точно идет не по плану..."
-	eng_name = "red phone"
-	eng_desc = "Should anything ever go wrong..."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "red_phone"
 	force = 3
@@ -351,8 +335,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/cane
 	name = "трость"
 	desc = "Трость используемая истинными джентельменами."
-	eng_name = "cane"
-	eng_desc = "A cane used by a true gentleman. Or a clown."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "cane"
 	item_state = "stick"
@@ -365,8 +347,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/staff
 	name = "wizard staff"
 	desc = "Apparently a staff used by the wizard."
-	eng_name = "wizard staff"
-	eng_desc = "Apparently a staff used by the wizard."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "staff"
 	force = 3
@@ -381,8 +361,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/staff/broom
 	name = "метла"
 	desc = "Used for sweeping, and flying into the night while cackling. Black cat not included."
-	eng_name = "broom"
-	eng_desc = "Used for sweeping, and flying into the night while cackling. Black cat not included."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "broom"
 	resistance_flags = FLAMMABLE
@@ -390,8 +368,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/staff/stick
 	name = "палка"
 	desc = "A great tool to drag someone else's drinks across the bar."
-	eng_name = "stick"
-	eng_desc = "A great tool to drag someone else's drinks across the bar."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "stick"
 	item_state = "stick"
@@ -404,8 +380,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/ectoplasm
 	name = "эктоплазма"
 	desc = "Стра-ашно!"
-	eng_name = "ectoplasm"
-	eng_desc = "spooky"
 	gender = PLURAL
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "ectoplasm"
@@ -417,8 +391,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/mounted_chainsaw
 	name = "ручная бензопила"
 	desc = "Бензопила, что заменяет тебе руку."
-	eng_name = "mounted chainsaw"
-	eng_desc = "A chainsaw that has replaced your arm."
 	icon_state = "chainsaw_on"
 	item_state = "mounted_chainsaw"
 	flags = NODROP | ABSTRACT
@@ -439,8 +411,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/statuebust
 	name = "бюст"
 	desc = "Несокрушимая древняя статуя из мрамора, принадлежащая местному музею." //or you can hit people with it
-	eng_name = "statue bust"
-	eng_desc = "A priceless ancient marble bust, the kind that belongs in a museum."
 	icon = 'icons/obj/statue.dmi'
 	icon_state = "bust"
 	force = 15
@@ -452,8 +422,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/tailclub
 	name = "tail club"
 	desc = "For the beating to death of lizards with their own tails."
-	eng_name = "tail club"
-	eng_desc = "For the beating to death of lizards with their own tails."
 	icon_state = "tailclub"
 	force = 14
 	throwforce = 1 // why are you throwing a club do you even weapon
@@ -464,8 +432,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/melee/chainofcommand/tailwhip
 	name = "liz o' nine tails"
 	desc = "A whip fashioned from the severed tails of lizards."
-	eng_name = "liz o' nine tails"
-	eng_desc = "A whip fashioned from the severed tails of lizards."
 	icon_state = "tailwhip"
 	origin_tech = "engineering=3;combat=3;biotech=3"
 	needs_permit = 0
@@ -487,8 +453,6 @@ var/highlander_claymores = 0
 /obj/item/weapon/melee/baseball_bat
 	name = "биток"
 	desc = "Нет ниодного черепа, которого не могла бы сокрушить эта бита."
-	eng_name = "baseball bat"
-	eng_desc = "There ain't a skull in the league that can withstand a swatter."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "baseball_bat"
 	item_state = "baseball_bat"

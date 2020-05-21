@@ -9,8 +9,6 @@
 	var/container_type = 0
 	var/admin_spawned = 0	//was this spawned by an admin? used for stat tracking stuff.
 	var/datum/reagents/reagents = null
-	var/eng_desc = ""
-	var/eng_name = ""
 
 	//This atom's HUD (med/sec, etc) images. Associative list.
 	var/list/image/hud_list = null
@@ -195,33 +193,32 @@
 /atom/proc/examine(mob/user)
 	//This reformat names to get a/an properly working on item descriptions when they are bloody
 	var/f_name = "\a [src]."
-	var/eng_f_name = "\a [src.eng_name]"
 	if(src.blood_DNA && !istype(src, /obj/effect/decal))
 		if(gender == PLURAL)
 			f_name = "some "
 		else
 			f_name = ""
-		f_name += usr.client.select_lang("<span class='danger'>blood-stained</span> [eng_name]!","<span class='danger'>в крови</span> [name]!")
-	to_chat(user, user.client.select_lang("[bicon(src)] Это [f_name]", "[bicon(src)] This is [eng_f_name]"))
+		f_name += "<span class='danger'>в крови</span> [name]!"
+	to_chat(user, "[bicon(src)] Это [f_name]")
 
 	if(desc)
-		to_chat(user, user.client.select_lang(desc, eng_desc))
+		to_chat(user, desc)
 	// *****RM
 //	to_chat(user, "[name]: Dn:[density] dir:[dir] cont:[contents] icon:[icon] is:[icon_state] loc:[loc]")
 
 	if(reagents && (is_open_container() || is_transparent())) //is_open_container() isn't really the right proc for this, but w/e
-		to_chat(user, user.client.select_lang("Содержит:", "Contains:"))
+		to_chat(user, "Содержит:")
 		if(reagents.reagent_list.len)
 			if(user.can_see_reagents()) //Show each individual reagent
 				for(var/datum/reagent/R in reagents.reagent_list)
-					to_chat(user, user.client.select_lang("[R.volume] units of [R.name]", "[R.volume] едениц [R.name]"))
+					to_chat(user, "[R.volume] едениц [R.name]")
 			else //Otherwise, just show the total volume
 				var/total_volume = 0
 				for(var/datum/reagent/R in reagents.reagent_list)
 					total_volume += R.volume
-				to_chat(user, user.client.select_lang("[total_volume] едениц разных реагентов", "[total_volume] units of various reagents"))
+				to_chat(user, "[total_volume] едениц разных реагентов")
 		else
-			to_chat(user, user.client.select_lang("Ничего.", "Nothing"))
+			to_chat(user, "Ничего.")
 
 /atom/proc/relaymove()
 	return

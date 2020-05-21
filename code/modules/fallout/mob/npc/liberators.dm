@@ -1,8 +1,6 @@
 /mob/living/simple_animal/hostile/liberatormk0
 	name = "Освободитель МК0"
 	desc = "Маленький бирюзовый паукообразный робот с красным «глазом» в виде звезды. Чуть ниже глаза-звезды можно заметить китайские иероглифы, по которым можно догадаться, что данный робот использовался НОАК. При нападении «Освободитель» использует маломощный лазер.."
-	eng_name = "liberator MK0"
-	eng_desc = "Small cyan spider-like robot with red \"eye\" which looks like star. A bit lower, you can see chineese symbols, wait, is this old communist robot?"
 	icon = 'icons/fallout/mobs/liberator.dmi'
 	icon_state = "liberator"
 	icon_living = "liberator"
@@ -41,7 +39,6 @@
 	minimum_distance = 5
 	retreat_distance = 8
 	attacktext = "режет"
-	eng_attacktext = "sliced"
 	attack_sound = 'sound/f13npc/libattack.ogg'
 	a_intent = "harm"
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -60,8 +57,6 @@
 /mob/living/simple_animal/hostile/liberatormk0/mk2
 	name = "Освободитель МК2"
 	desc = "Маленький желтый паукообразный робот с красным «глазом» в виде звезды. Чуть ниже глаза-звезды можно заметить китайские иероглифы, по которым можно догадаться, что данный робот использовался НОАК. При нападении «Освободитель» использует маломощный лазер.."
-	eng_name = "liberator MK2"
-	eng_desc = "Small yellow spider-like robot with red \"eye\" which looks like star. A bit lower, you can see chineese symbols, wait, is this old communist robot?"
 	icon_state = "liberator_y"
 	icon_living = "liberator_y"
 	icon_dead = "liberator_y_d"

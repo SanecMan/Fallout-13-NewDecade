@@ -11,7 +11,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "центральному штабу Анклава"
-	eng_supervisors = "the central command of Enclave"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 31
 	whitelist_on = 1
@@ -75,7 +74,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Полковнику"
-	eng_supervisors = "the Colonel"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 24
 	whitelist_on = 1
@@ -140,7 +138,6 @@
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "Полковнику"
-	eng_supervisors = "the Colonel"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 19
 	whitelist_on = 1
@@ -201,7 +198,6 @@
 	total_positions = 2
 	spawn_positions = 1
 	supervisors = "Полковнику"
-	eng_supervisors = "the Colonel"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 19
 	whitelist_on = 1

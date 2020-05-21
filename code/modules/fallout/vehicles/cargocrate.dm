@@ -3,8 +3,6 @@
 /obj/structure/cargocrate
 	name = "контейнер"
 	desc = "Ржавый контейнер."
-	eng_name = "cargo crate"
-	eng_desc = "A rusty cargo crate."
 	icon = 'icons/fallout/cargocrate.dmi'
 	icon_state = "cargocrate1"
 	anchored = 1

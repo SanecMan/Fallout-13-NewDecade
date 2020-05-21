@@ -10,7 +10,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "никому"
-	eng_supervisors = "no one"
 	selection_color = "#804B00"
 	access = list()
 	minimal_access = list()
@@ -81,7 +80,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Мэру"
-	eng_supervisors = "the mayor"
 	selection_color = "#804B00"
 	access = list()
 	minimal_access = list()
@@ -140,7 +138,6 @@
 	total_positions = 6
 	spawn_positions = 6
 	supervisors = "мэру и шерифу"
-	eng_supervisors = "the mayor and sheriff"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
@@ -185,7 +182,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "никому"
-	eng_supervisors = "no one"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()

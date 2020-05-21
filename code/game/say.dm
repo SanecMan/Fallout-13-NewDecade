@@ -64,18 +64,18 @@ var/list/freqtospan = list(
 
 /atom/movable/proc/say_quote(input, list/spans=list())
 	if(!input)
-		return "says, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+		return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 	var/ending = copytext_char(input, length(input))
 	if(copytext_char(input, length(input) - 1) == "!!")
 		spans |= SPAN_YELL
-		return usr.client.select_lang("[en_verb_yell], \"[attach_spans(input, spans)]\"", "[verb_yell], \"[attach_spans(input, spans)]\"")
+		return "[verb_yell], \"[attach_spans(input, spans)]\""
 	input = attach_spans(input, spans)
 	if(ending == "?")
-		return usr.client.select_lang("[en_verb_ask], \"[input]\"", "[verb_ask], \"[input]\"")
+		return "[verb_ask], \"[input]\""
 	if(ending == "!")
-		return usr.client.select_lang("[en_verb_exclaim], \"[input]\"", "[verb_exclaim], \"[input]\"")
+		return "[verb_exclaim], \"[input]\""
 
-	return usr.client.select_lang("[en_verb_say], \"[input]\"", "[verb_say], \"[input]\"")
+	return "[verb_say], \"[input]\""
 
 /atom/movable/proc/lang_treat(atom/movable/speaker, message_langs, raw_message, list/spans)
 	if(languages_understood & message_langs)

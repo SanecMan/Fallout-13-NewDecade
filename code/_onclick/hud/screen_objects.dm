@@ -55,7 +55,6 @@
 
 /obj/screen/craft
 	name = "меню крафта"
-	eng_name = "crafting menu"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "craft"
 	screen_loc = ui_crafting
@@ -68,7 +67,6 @@
 
 /obj/screen/wield
 	name = "взять в обе руки"
-	eng_name = "wield"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "wield"
 	screen_loc = ui_wield
@@ -82,7 +80,6 @@
 
 /obj/screen/area_creator
 	name = "создать новую зону"
-	eng_name = "create new area"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "area_edit"
 	screen_loc = ui_building
@@ -196,7 +193,6 @@
 
 /obj/screen/drop
 	name = "бросить"
-	eng_name = "drop"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "act_drop"
 	layer = HUD_LAYER
@@ -207,7 +203,6 @@
 
 /obj/screen/act_intent
 	name = "взаимодействие"
-	eng_name = "intent"
 	icon_state = "help"
 	screen_loc = ui_acti
 
@@ -242,7 +237,6 @@
 
 /obj/screen/internals
 	name = "переключить"
-	eng_name = "toggle internals"
 	icon_state = "internal0"
 	screen_loc = ui_internal
 
@@ -303,7 +297,6 @@
 
 /obj/screen/mov_intent
 	name = "бег/ходьба"
-	eng_name = "run/walk toggle"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "running"
 
@@ -324,7 +317,6 @@
 
 /obj/screen/pull
 	name = "перестать тащить"
-	eng_name = "stop pulling"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "pull"
 
@@ -342,7 +334,6 @@
 
 /obj/screen/resist
 	name = "сопротивляться"
-	eng_name = "resist"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "act_resist"
 	layer = HUD_LAYER
@@ -355,7 +346,6 @@
 
 /obj/screen/storage
 	name = "хранилище"
-	eng_name = "storage"
 
 /obj/screen/storage/Click(location, control, params)
 	if(world.time <= usr.next_move)
@@ -372,7 +362,6 @@
 
 /obj/screen/throw_catch
 	name = "кинуть/поймать"
-	eng_name = "throw/catch"
 	icon = 'icons/mob/screen_midnight.dmi'
 	icon_state = "act_throw_off"
 
@@ -383,7 +372,6 @@
 
 /obj/screen/zone_sel
 	name = "зона урона"
-	eng_name = "damage zone"
 	icon_state = "zone_sel"
 	screen_loc = ui_zonesel
 	var/selecting = "chest"
@@ -488,7 +476,6 @@
 
 /obj/screen/healths
 	name = "здоровье"
-	eng_name = "health"
 	icon_state = "health0"
 	screen_loc = ui_health
 
@@ -554,7 +541,6 @@
 
 /obj/screen/wheel
 	name = "колесо"
-	eng_name = "wheel"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
 	icon_state = ""
@@ -633,7 +619,6 @@
 
 /obj/screen/wheel/talk
 	name = "разговорное колесо"
-	eng_name = "talk wheel"
 	icon_state = "talk_wheel"
 	screen_loc = "11:6,2:-11"
 	wheel_buttons_type = /obj/screen/wheel_button/talk
@@ -652,7 +637,6 @@
 
 /obj/screen/wheel_button
 	name = "базовое колесо"
-	eng_name = "default wheel button"
 	screen_loc = "8,8"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
@@ -665,7 +649,6 @@
 
 /obj/screen/wheel_button/close_wheel
 	name = "закрыть колесо"
-	eng_name = "close wheel"
 	icon_state = "radialclose"
 
 /obj/screen/wheel_button/close_wheel/Click()
@@ -677,7 +660,6 @@
 
 /obj/screen/wheel_button/talk
 	name = "опция разговора"
-	eng_name = "talk option"
 	icon_state = "talk_help"
 	var/talk_cooldown = 0
 	var/list/word_messages = list()

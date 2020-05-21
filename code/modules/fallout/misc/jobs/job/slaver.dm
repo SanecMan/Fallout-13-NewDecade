@@ -10,7 +10,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "никому"
-	eng_supervisors = "no one"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
@@ -79,7 +78,6 @@
 	total_positions = 8
 	spawn_positions = 2 //does not matter for late join
 	supervisors = "Лидеру Банды"
-	eng_supervisors = "the Gang Leader"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
@@ -132,7 +130,6 @@
 	total_positions = 8
 	spawn_positions = 2 //does not matter for late join
 	supervisors = "Лидеру Банды"
-	eng_supervisors = "the Gang Leader"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()
@@ -185,7 +182,6 @@
 	total_positions = 4
 	spawn_positions = 5 //does not matter for late join
 	supervisors = "никому"
-	eng_supervisors = "no one"
 	selection_color = "#ece19d"
 	access = list()
 	minimal_access = list()

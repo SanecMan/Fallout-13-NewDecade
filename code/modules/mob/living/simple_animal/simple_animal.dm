@@ -52,7 +52,6 @@
 	var/melee_damage_type = BRUTE //Damage type of a simple mob's melee attack, should it do damage.
 	var/list/damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1) // 1 for full damage , 0 for none , -1 for 1:1 heal from that source
 	var/attacktext = "атакует"
-	var/eng_attacktext = "attacks"
 	var/attack_sound = null
 	var/friendly = "nuzzles" //If the mob does no damage with it's attack
 	var/environment_smash = 0 //Set to 1 to allow breaking of crates,lockers,racks,tables; 2 for walls; 3 for Rwalls
@@ -363,7 +362,7 @@
 		if(deathmessage)
 			visible_message("<span class='danger'>[src] [deathmessage]</span>")
 		else if(!del_on_death)
-			visible_message("<span class='danger'>[src.eng_name] stops moving...</span>")
+			visible_message("<span class='danger'>[src.name] перестаёт двигаться...</span>")
 
 	if(del_on_death)
 		ghostize()

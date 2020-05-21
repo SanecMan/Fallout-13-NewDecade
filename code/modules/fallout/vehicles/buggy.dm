@@ -3,7 +3,6 @@
 /obj/vehicle/fuel/motorcycle/buggy
 	name = "багги"
 	desc = "<i>Ain't no place for fancy cars on the wasteland.<br>No place for classy brands, but nicknames.<br>Only the rusty and trusty death machines.<br>Only fuel and blood.</i>"
-	eng_name = "buggy"
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
 	icon_state = "buggy_dune"
 	datum_type = /datum/riding/motorcycle/buggy
@@ -25,8 +24,6 @@
 /obj/item/key/buggy
 	name = "ключи"
 	desc = "Колечко с ключиком.<br>При осмотре ключа, вы делаете вывод что это используется для автомобиля."
-	eng_name = "key"
-	eng_desc = "A keyring with a small steel key.<br>By the look of the key cuts, it likely belongs to an automobile."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
 
 /obj/item/key/buggy/New()
@@ -36,8 +33,6 @@
 /obj/item/key/buggy/wheel //I am the man... Who grabs the sun... RIDING TO VALHALLA!
 	name = "руль"
 	desc = "Важная часть авто, сделанная из металла и с черепом посередине, выполненным из металла. <br>Ох, что за день... Что за чудный день чтобы прокатиться!"
-	eng_name = "steering wheel"
-	eng_desc = "A vital part of an automobile that is made of metal and decorated with a freaky skull.<br>Oh, what a day... What a lovely day for taking a ride!"
 	icon_state = "wheel"
 
 /obj/item/key/buggy/wheel/New()
@@ -86,9 +81,7 @@
 /obj/vehicle/fuel/motorcycle/buggy/tank
 	name = "CVR"
 	desc = "Танк, ТАНК МАТЬ ЕГО!"
-	eng_name = "CVR"
-	eng_desc = "FREAKIN, TANK!"
-	names = list("Box 2", "CVR-T", "U.N.I.T CVR", "Igniter", "Heat", "Est Probitie", "T-90")
+	names = list("Коробочка Два", "CVR-T", "U.N.I.T CVR", "Зажигатель", "Тёплый", "Есть Пробитие", "T-90")
 	icon = 'icons/fallout/vehicles/CVR.dmi'
 	icon_state = "CVR(T)-WFLV_207"
 	layer = 5

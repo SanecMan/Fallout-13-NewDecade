@@ -2,8 +2,6 @@
 /mob/living/simple_animal/pet/cat
 	name = "кошка"
 	desc = "кошечка!"
-	eng_name = "cat"
-	eng_desc = "Kitty!!"
 	icon = 'icons/mob/pets.dmi'
 	icon_state = "cat2"
 	icon_living = "cat2"
@@ -48,8 +46,6 @@
 /mob/living/simple_animal/pet/cat/space
 	name = "Космический Кот"
 	desc = "Это кошка. Из космоса. Кошка."
-	eng_name = "space cat"
-	eng_desc = "It's a cat... in space!"
 	icon_state = "spacecat"
 	icon_living = "spacecat"
 	icon_dead = "spacecat_dead"
@@ -68,8 +64,6 @@
 /mob/living/simple_animal/pet/cat/kitten
 	name = "Котёнок"
 	desc = "О боже, как мило!"
-	eng_name = "kitty"
-	eng_desc = "D'aaaaw, kitty!"
 	icon_state = "kitten"
 	icon_living = "kitten"
 	icon_dead = "kitten_dead"

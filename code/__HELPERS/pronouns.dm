@@ -1,31 +1,31 @@
 //pronoun procs, for getting pronouns without using the text macros that only work in certain positions
 //datums don't have gender, but most of their subtypes do!
 /datum/proc/p_they(capitalized, temp_gender)
-	. = usr.client.select_lang("оно", "it")
+	. = "оно"
 	if(capitalized)
 		. = capitalize(.)
 
 /datum/proc/p_their(capitalized, temp_gender)
-	. = usr.client.select_lang("это", "its")
+	. = "это"
 	if(capitalized)
 		. = capitalize(.)
 
 /datum/proc/p_them(capitalized, temp_gender)
-	. = usr.client.select_lang("оно", "it")
+	. = "оно"
 	if(capitalized)
 		. = capitalize(.)
 
 /datum/proc/p_have(temp_gender)
-	. = usr.client.select_lang("имеет", "has")
+	. = "имеет"
 
 /datum/proc/p_are(temp_gender)
-	. = usr.client.select_lang("есть", "is")
+	. = "есть"
 
 /datum/proc/p_were(temp_gender)
-	. = usr.client.select_lang("был", "was")
+	. = "был"
 
 /datum/proc/p_do(temp_gender)
-	. = usr.client.select_lang("делает", "does")
+	. = "делает"
 
 /datum/proc/p_theyve(capitalized, temp_gender)
 	. = p_they(capitalized, temp_gender) + "'" + copytext_char(p_have(temp_gender), 3)
@@ -43,9 +43,9 @@
 	. = "они"
 	switch(temp_gender)
 		if(FEMALE)
-			. = usr.client.select_lang("она", "she")
+			. = "она"
 		if(MALE)
-			. = usr.client.select_lang("он", "he")
+			. = "он"
 	if(capitalized)
 		. = capitalize(.)
 
@@ -55,51 +55,51 @@
 	. = "их"
 	switch(temp_gender)
 		if(FEMALE)
-			. = usr.client.select_lang("свой", "her")
+			. = "свой"
 		if(MALE)
-			. = usr.client.select_lang("свой", "his")
+			. = "свой"
 	if(capitalized)
 		. = capitalize(.)
 
 /client/p_them(capitalized, temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = usr.client.select_lang("их", "them")
+	. = "их"
 	switch(temp_gender)
 		if(FEMALE)
-			. = usr.client.select_lang("своих", "her")
+			. = "своей"
 		if(MALE)
-			. = usr.client.select_lang("своих", "him")
+			. = "своей"
 	if(capitalized)
 		. = capitalize(.)
 
 /client/p_have(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = usr.client.select_lang("имеет", "has")
+	. = "имеет"
 	if(temp_gender == PLURAL || temp_gender == NEUTER)
-		. = usr.client.select_lang("имеют", "have")
+		. = "имеют"
 
 /client/p_are(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = usr.client.select_lang("", "is") //is
+	. = "" //is
 	if(temp_gender == PLURAL || temp_gender == NEUTER)
-		. = usr.client.select_lang("", "are")
+		. = ""
 
 /client/p_were(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = usr.client.select_lang("был", "was")
+	. = "был"
 	if(temp_gender == PLURAL || temp_gender == NEUTER)
-		. = usr.client.select_lang("были", "were")
+		. = "были"
 
 /client/p_do(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = usr.client.select_lang("делает", "does")
+	. = "делает"
 	if(temp_gender == PLURAL || temp_gender == NEUTER)
-		. = usr.client.select_lang("делают", "do")
+		. = "делают"
 
 /client/p_s(temp_gender)
 	if(!temp_gender)
@@ -114,55 +114,55 @@
 	. = "it"
 	switch(temp_gender)
 		if(FEMALE)
-			. = usr.client.select_lang("она", "she")
+			. = "она"
 		if(MALE)
-			. = usr.client.select_lang("он", "he")
+			. = "он"
 		if(PLURAL)
-			. = usr.client.select_lang("это", "they")
+			. = "оно"
 	if(capitalized)
 		. = capitalize(.)
 
 /mob/p_their(capitalized, temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = usr.client.select_lang("это", "its")
+	. = "это"
 	switch(temp_gender)
 		if(FEMALE)
-			. = usr.client.select_lang("её", "her")
+			. = "её"
 		if(MALE)
-			. = usr.client.select_lang("его", "his")
+			. = "его"
 		if(PLURAL)
-			. = usr.client.select_lang("их", "their")
+			. = "их"
 	if(capitalized)
 		. = capitalize(.)
 
 /mob/p_them(capitalized, temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = "it"
+	. = "оно"
 	switch(temp_gender)
 		if(FEMALE)
-			. = usr.client.select_lang("её", "her")
+			. = "её"
 		if(MALE)
-			. = usr.client.select_lang("его", "him")
+			. = "его"
 		if(PLURAL)
-			. = usr.client.select_lang("их", "them")
+			. = "их"
 	if(capitalized)
 		. = capitalize(.)
 
 /mob/p_have(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = usr.client.select_lang("имеет", "has")
+	. = "имеет"
 	if(temp_gender == PLURAL)
-		. = usr.client.select_lang("имеют", "have")
+		. = "имеют"
 
 /mob/p_are(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = usr.client.select_lang("", "is") //is
+	. = "" //is
 	if(temp_gender == PLURAL)
-		. = usr.client.select_lang("", "are")
+		. = ""
 
 /mob/p_were(temp_gender)
 	if(!temp_gender)

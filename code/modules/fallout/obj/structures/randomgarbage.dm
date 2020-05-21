@@ -3,8 +3,6 @@
 /obj/structure/garbage
 	name = "мусор"
 	desc = "Просто мусор."
-	eng_name = "trash"
-	eng_desc = "Just trash"
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "Junk_1"
 	obj_integrity = 50
@@ -88,7 +86,7 @@
 		if(craftobj == 32)
 			CC = new/obj/item/weaponcrafting/handle/rifle(user.loc)
 
-		to_chat(user, user.client.select_lang("<span class='notice'>Вы разгребли кучу и достали немного материалов из [src].</span>", "<span class='notice'>You find something in [src.eng_name].</span>"))
+		to_chat(user, "<span class='notice'>Вы разгребли кучу и достали немного материалов из [src].</span>")
 		craftnumber = craftnumber - 1
 	else
 		if(iscyborg(user) || isalien(user))
@@ -159,7 +157,7 @@
 			CC = new/obj/item/weaponcrafting/handle/pistol(user.loc)
 		if(craftobj == 32)
 			CC = new/obj/item/weaponcrafting/handle/rifle(user.loc)
-		to_chat(user, user.client.select_lang("<span class='notice'>Вы достали последний полезный материал из этой кучи.</span>", "<span class='notice'>You find last useful item there.</span>"))
+		to_chat(user, "<span class='notice'>Вы достали последний полезный материал из этой кучи.</span>")
 		qdel(src)
 
 /obj/structure/garbage/garbage2

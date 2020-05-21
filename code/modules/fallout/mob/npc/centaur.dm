@@ -3,8 +3,6 @@
 /mob/living/simple_animal/hostile/centaur
 	name = "кентавр"
 	desc = "Кентавры, как ни странно, это мутанты. Они, это результат Вируса Рукотворной Эволюции."
-	eng_name = "centaur"
-	eng_desc = "Centaurs are mutated creatures. They are a result of infection by the Forced Evolutionary Virus gone horribly wrong."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "centaur"
 	icon_living = "centaur"
@@ -41,7 +39,6 @@
 
 	damage_coeff = list(BRUTE = 0.6, BURN = 1, TOX = 0.2, CLONE = 0, STAMINA = 1, OXY = 0)
 	attacktext = "кусает"
-	eng_attacktext = "bites"
 	attack_sound = 'sound/f13npc/Npc_centaur_attackspit_03.ogg'
 
 	XP = 15

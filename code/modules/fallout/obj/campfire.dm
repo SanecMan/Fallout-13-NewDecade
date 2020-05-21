@@ -3,8 +3,6 @@
 /obj/structure/campfire
 	name = "костёр"
 	desc = "Тёплый и яркий. Что может быть лучше костра? Еда конечно."
-	eng_name = "campfire"
-	eng_desc = "A warm, bright, and hopeful fire source - when it's burning, of course."
 	icon = 'icons/fallout/objects/structures/campfire.dmi'
 	icon_state = "campfire20"
 	density = 0
@@ -115,8 +113,6 @@
 /obj/structure/campfire/extinguish()
 	name = "потухший костёр"
 	desc = "Потух и осталась лишь кучка пепла..."
-	eng_name = "burned campfire"
-	eng_desc = "It has burned to ashes..."
 	icon_state = "campfire0"
 	fired = 0
 	burned = 1
@@ -128,8 +124,6 @@
 /obj/structure/burnbarrel
 	name = "бочка"
 	desc = "Теплый и яркий источник огня в бочке. Мило."
-	eng_name = "burnbarrel"
-	eng_desc = "A warm, bright, and hopeful fire source - when it's burning, of course."
 	icon = 'icons/fallout/objects/structures/stationary.dmi'
 	icon_state = "barrel_rust"
 	density = 1
@@ -236,8 +230,6 @@
 /obj/structure/burnbarrel/extinguish()
 	name = "бочка"
 	desc = "Теплый и яркий источник огня в бочке. Мило."
-	eng_name = "burnbarrel"
-	eng_desc = "A warm, bright, and hopeful fire source - when it's burning, of course."
 	icon_state = "burnbarrel"
 	fired = 0
 	set_light(0)

@@ -72,12 +72,10 @@
 	var/product_slogans = ""
 	icon = 'icons/fallout/mobs/trader.dmi'
 	name = "Торговец"
-	eng_name = "Trader"
 	icon_state = "trader-1"
 
 /obj/machinery/magazine/human/trader_misc
 	name = "Герберт Шнобель"
-	eng_name = "Herbert Shnobel"
 	icon_state = "trader-1"
 	shipment = list(
 	/obj/item/weapon/pipe,
@@ -104,7 +102,6 @@
 
 /obj/machinery/magazine/human/trader_clothing
 	name = "Джозеф Брактович"
-	eng_name = "Joseph Blaskodrich"
 	icon_state = "trader-2"
 	shipment = list(
 	/obj/item/clothing/glasses/f13/old,
@@ -139,7 +136,6 @@
 
 /obj/machinery/magazine/human/trader_merchant // lol what
 	name = "Торговец"
-	eng_name = "Merchant"
 	icon_state = "trader-3"
 	shipment = list(
 	/obj/item/weapon/reagent_containers/food/drinks/bottle/victorycola,
@@ -164,7 +160,6 @@
 
 /obj/machinery/magazine/human/trader_explosive_and_kits
 	name = "Вильям Гриневич"
-	eng_name = "William Grinewich"
 	icon_state = "trader-4"
 	shipment = list(
 	/obj/item/kit/random,
@@ -173,7 +168,6 @@
 
 /obj/machinery/magazine/human/trader_brotherhood //undone
 	name = "Паладин Хувс"
-	eng_name = "Pladin Hooves"
 	shipment = list(
 	/obj/item/kit/random,
 	/obj/item/weapon/bottlecap_mine
@@ -181,7 +175,6 @@
 
 /obj/machinery/magazine/human/trader_mechanic
 	name = "Болт"
-	eng_name = "Bolt"
 	shipment = list(
 	/obj/item/weaponcrafting/reciever,
 	/obj/item/weaponcrafting/stock,
@@ -220,7 +213,6 @@
 
 /obj/machinery/magazine/human/random
 	name = "Джонатан Милсбрук"
-	eng_name = "Jhonatan Milsbrook"
 	icon_state = "rand"
 	product_slogans = "Эй! Не хочешь прикупить себе новую пушку?; Оружие! Медикаменты! Подходим берём!; Не желаете чего-нибудь приобрести?; У меня как в греции, всё есть!"
 	shipment = list()
@@ -229,7 +221,6 @@
 	icon_state = "trader-[rand(1,5)]"
 	if(icon_state == "trader-1")
 		name = "Герберт Шнобель"
-		eng_name = "Herbert Shnobel"
 		shipment = list(
 		/obj/item/weapon/pipe,
 		/obj/item/weapon/hammer,
@@ -254,7 +245,6 @@
 		)
 	if(icon_state == "trader-2")
 		name = "Джозеф Брактович"
-		eng_name = "Joseph Blaskodrich"
 		shipment = list(
 		/obj/item/clothing/glasses/f13/old,
 		/obj/item/clothing/glasses/f13/biker,
@@ -287,7 +277,6 @@
 		)
 	if(icon_state == "trader-3")
 		name = "Торговец"
-		eng_name = "Merchant"
 		shipment = list(
 		/obj/item/weapon/reagent_containers/food/drinks/bottle/victorycola,
 		/obj/item/weapon/reagent_containers/food/drinks/bottle/yellowcola,
@@ -310,21 +299,18 @@
 		)
 	if(icon_state == "trader-4")
 		name = "Вильям Гриневич"
-		eng_name = "William Grinewich"
 		shipment = list(
 		/obj/item/kit/random,
 		/obj/item/weapon/bottlecap_mine
 		)
 	if(icon_state == "trader-5")
 		name = "Паладин Хувс"
-		eng_name = "Paladin Hooves"
 		shipment = list(
 		/obj/item/kit/random,
 		/obj/item/weapon/bottlecap_mine
 		)
 	if(icon_state == "trader-6")
 		name = "Болт"
-		eng_name = "Bolt"
 		shipment = list(
 		/obj/item/weaponcrafting/reciever,
 		/obj/item/weaponcrafting/stock,

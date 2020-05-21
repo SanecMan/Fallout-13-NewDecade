@@ -3,8 +3,6 @@
 /mob/living/simple_animal/hostile/deathclaw
 	name = "Коготь Смерти"
 	desc = "БЕГИ БЛЯТЬ."
-	eng_name = "deathclaw"
-	eng_desc = "FUCK, RUN!"
 	icon = 'icons/fallout/mobs/deathclaw.dmi'
 	icon_state = "deathclaw"
 	icon_living = "deathclaw"
@@ -44,6 +42,5 @@
 	pixel_w = -16
 	mob_size = MOB_SIZE_LARGE
 	attacktext = "бьёт с размаху"
-	eng_attacktext = "slashes"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	XP = 65

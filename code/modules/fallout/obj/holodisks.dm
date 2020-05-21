@@ -4,8 +4,6 @@
 /obj/item/weapon/holodisk
 	name = "голозапись"
 	desc = "A durable laser-readable storage device produced by Wattz Electronics.<br>Based on tape holography technology, it can store information safely for extended periods of time."
-	eng_name = "holodisk"
-	eng_desc = "A durable laser-readable storage device produced by Wattz Electronics.<br>Based on tape holography technology, it can store information safely for extended periods of time."
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "holodisk"
 	item_state = "holodisk"
@@ -107,8 +105,6 @@
 /obj/item/weapon/holodisk/musicbox
 	name = "музыкальная шкатулка"
 	desc = "Довоенное напоминание о былом человечестве и его искусстве..."
-	eng_name = "music box"
-	eng_desc = "A pre-War music box - remainder of humanity from the good old days."
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "music1"
 	item_state = "music1"

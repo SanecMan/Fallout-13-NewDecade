@@ -5,21 +5,16 @@
 /mob/living/simple_animal/hostile/deathclaw/funclaw
 	name = "Еблёготь"
 	desc = "Огромная рептилия с огромными мускулами и бритвенно острыми когтями. Очень агрессивное. Эй, почему оно так смотрит на мою задницу?"
-	eng_name = "Fuckclaw"
-	eng_desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one seems to have a strange look in its eyes.."
 	var/pound_cooldown = 0
 	var/chosen_hole
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/bossraider
 	name = "Супер-Рейдер"
 	desc = "ВАЛЕРА ЕЖОВ!"
-	eng_name = "Super-Raider"
-	eng_desc = "Valery Ejov!"
 	icon = 'icons/mob/raiderboss.dmi'
 	icon_state = "raider"
 	icon_dead = "raider_d"
 	attacktext = "бьёт с размаху"
-	eng_attacktext = "slashed"
 	maxHealth = 800
 	health = 800
 	speak_chance = 30

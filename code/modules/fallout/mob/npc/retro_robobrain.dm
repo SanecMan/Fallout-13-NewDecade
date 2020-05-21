@@ -3,8 +3,6 @@
 /mob/living/simple_animal/hostile/retro_robobrain
 	name = "Робомозг"
 	desc = "Довоенный вид робомогов.<br> Очень опасная машина."
-	eng_name = "robobrain"
-	eng_desc = "A pre-War type of robobrain.<br>Extremely dangerous machine."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "retro_robobrain"
 	icon_living = "retro_robobrain"

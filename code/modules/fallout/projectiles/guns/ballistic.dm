@@ -3,7 +3,6 @@
 /obj/item/weapon/gun/ballistic/automatic/pistol/n99
 	name = "10-мм пистолет"
 	desc = "The N99 self-loading pistol is known for its ability to survive in the harshest of conditions.<br>This great weapon is able to be reliably restored to working condition, even after extended exposure to hard elements without maintenance."
-	eng_name = "N99 pistol"
 	icon_state = "n99"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=2;materials=2;prewar=2"
@@ -26,7 +25,6 @@
 /obj/item/weapon/gun/ballistic/automatic/pistol/n99/executive
 	name = "должностной пистолет"
 	desc = "The N99 self-loading pistol is known for its ability to survive in the harshest of conditions.<br>This great weapon is able to be reliably restored to working condition, even after extended exposure to hard elements without maintenance."
-	eng_name = "executive"
 	icon_state = "executive"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	origin_tech = "combat=2;materials=2;prewar=2"
@@ -43,7 +41,6 @@
 
 /obj/item/weapon/gun/ballistic/revolver/magnum
 	name = "Магнум"
-	eng_name = "magnum 44."
 	icon_state = "44magnum"
 	desc = "The Smith & Wesson Model 29 is a powerful six-shot double-action revolver, manufactured by the U.S. company Smith & Wesson since 1955.<br>Centuries later, copies of it can still be found in the wastes."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -64,7 +61,6 @@
 
 /obj/item/weapon/gun/ballistic/automatic/rifle
 	name = "Автоматическая винтовка .308"
-	eng_name = "automatic rifle .308"
 	icon_state = "rifle-automatic"
 	item_state = "rifle308"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -86,8 +82,6 @@
 /obj/item/weapon/gun/ballistic/automatic/garand
 	name = "Гаранд M1"
 	desc = "Винтажная полу-автоматическая винтовка."
-	eng_name = "M1 garand"
-	eng_desc = "An old vintage semi-auto rifle."
 	icon_state = "garand"
 	item_state = "garand"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -148,8 +142,6 @@
 /obj/item/weapon/gun/ballistic/shotgun/rifle
 	name = "охотничья винтовка"
 	desc = "Довоенная охотничья винтовка."
-	eng_name = "hunting rifle"
-	eng_desc = "Pre-war rifle, used to be rifle for hunting. Who is the prey, is your choose."
 	icon_state = "rifle"
 	item_state = "rifle"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -168,7 +160,6 @@
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle/scope
 	name = "охотничья винтовка с прицелом"
-	eng_name = "hunting rifle with scope"
 	icon_state = "rifle_scope"
 	item_state = "rifle308scope"
 	can_suppress = 1
@@ -184,8 +175,6 @@
 /obj/item/weapon/gun/ballistic/automatic/smg10mm
 	name = "10-мм пистолет-пулемёт"
 	desc = "H&K MP9 пистолет-пулемёт (10мм калибра). Неплохой пистолёт-пулемёт который может стрелять в двух режимах."
-	eng_name = "10-mm SMG"
-	eng_desc = "K&K MP9 SMG (10mm caliber). A good smg, which have two fire modes."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -203,8 +192,6 @@
 /obj/item/weapon/gun/ballistic/shotgun/pipe
 	name = "самопал"
 	desc = "Самодельный дробовик что может нести в себе лишь один патрон."
-	eng_name = "pipe gun"
-	eng_desc = "Well, better this than nothing, right?"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "pipe-gun"
 	item_state = "shotgun"
@@ -220,8 +207,6 @@
 /obj/item/weapon/gun/ballistic/shotgun/trail
 	name = "карабин следопыта"
 	desc = "Ложе и цевьё этой винтовки изготовлены из светлой породы дерева, на ствольной коробке отсутствует дополнительный прицел; также у этой винтовки трубка магазина длиннее.."
-	eng_name = "trail carabine"
-	eng_desc = "This is trail carabine. Modified to use buckshot."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "trail-carbine"
 	item_state = "huntingshotgun"
@@ -239,8 +224,6 @@
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	name = "Боевая винтовка АР15"
 	desc = "Так-же известная как Боевая Винтовка НКР, винтовка использует обычные боеприпасы калибра 5.56мм и имеет вместимость магазина в 20 патрон."
-	eng_name = "AR-15 assault rifle"
-	eng_desc = "Also known as main NCR assault rifle, this rifle uses 5.56mm ammo, and can have to 20 bullets."
 	icon_state = "assault-rifle"
 	item_state = "assault"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -264,8 +247,6 @@
 /obj/item/weapon/gun/ballistic/automatic/service_rifle
 	name = "Служебная винтовка АР15"
 	desc = "Так-же известная как Служебная Винтовка НКР, винтовка использует обычные боеприпасы калибра 5.56мм и имеет вместимость магазина в 18 патрон."
-	eng_name = "service rifle"
-	eng_desc = "Also known as main NCR service rifle, this rifle uses 5.56mm ammo, and can have to 18 bullets."
 	icon_state = "service_rifle"
 	item_state = "assault"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -289,8 +270,6 @@
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle/marksman
 	name = "Карабин Стрелка"
 	desc = "Винтовка калибра 5.56, использовалась военными силами США до войны."
-	eng_name = "marksman rifle"
-	eng_desc = "An 5.56 caliber rifle. Used by US Army before war."
 	icon_state = "marksman_rifle"
 	origin_tech = "combat=4;materials=2;prewar=4"
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
@@ -304,8 +283,6 @@
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle/infiltrator
 	name = "Infiltrator"
 	desc = "The Infiltrator is a silenced and scoped assault rifle. Its appearance consists of a black paint finish, a scope, and is basically a shortened and stock-less variant of the R91 assault rifle that was standard-issue in the United States Armed Forces at the time of the Great War. Based on its name, it was probably created to be used for special operations groups. The Infiltrator fires 5.56mm round and utilizes a 20-round magazine."
-	eng_name = "Infiltrator"
-	eng_desc = "The Infiltrator is a silenced and scoped assault rifle. Its appearance consists of a black paint finish, a scope, and is basically a shortened and stock-less variant of the R91 assault rifle that was standard-issue in the United States Armed Forces at the time of the Great War. Based on its name, it was probably created to be used for special operations groups. The Infiltrator fires 5.56mm round and utilizes a 20-round magazine."
 	icon_state = "infiltrator"
 	origin_tech = "combat=5;materials=2;prewar=5"
 	fire_sound = 'sound/f13weapons/infiltrator.ogg'
@@ -321,8 +298,6 @@
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle/chinese
 	name = "Китайский автомат"
 	desc = "The Type 93 Chinese assault rifle was designed and manufactured by a Chinese industrial conglomerate for the People's Liberation Army during the Resource Wars, for the purpose of equipping the Chinese infiltrators and American fifth-columnists. To this end, it was chambered for the abundant 5.56mm round and utilizes a 20-round magazine. Thousands of these weapons were smuggled into the US for use by Chinese operatives and sympathizers on the East Coast, and many remain functional even two hundred years after the Great War. These rifles are also proven to be ready for manufacturing in post-War conditions."
-	eng_name = "chineese assault rifle"
-	eng_desc = "The Type 93 Chinese assault rifle was designed and manufactured by a Chinese industrial conglomerate for the People's Liberation Army during the Resource Wars, for the purpose of equipping the Chinese infiltrators and American fifth-columnists. To this end, it was chambered for the abundant 5.56mm round and utilizes a 20-round magazine. Thousands of these weapons were smuggled into the US for use by Chinese operatives and sympathizers on the East Coast, and many remain functional even two hundred years after the Great War. These rifles are also proven to be ready for manufacturing in post-War conditions."
 	icon_state = "chinese"
 	item_state = "chinese"
 	mag_type = /obj/item/ammo_box/magazine/F13/chinese
@@ -334,8 +309,6 @@
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle/fnfal
 	name = "ФН-Фал"
 	desc = "The FN FAL is a battle rifle designed by Belgian small arms designers Dieudonne Saive and Ernest Vervier and manufactured by FN Herstal. During the Cold War the FAL was adopted by many countries of the North Atlantic Treaty Organization (NATO), with the notable exception of the United States. It is one of the most widely used rifles in history, having been used by more than 90 countries. This particular model sports wooden furniture and an aftermarket conversion that allows it to fire more readily available .308 Winchester ammunition, which is very similar in size to the 7.62?51mm NATO it was originally chambered in."
-	eng_name = "FL FAL"
-	eng_desc = "The FN FAL is a battle rifle designed by Belgian small arms designers Dieudonne Saive and Ernest Vervier and manufactured by FN Herstal. During the Cold War the FAL was adopted by many countries of the North Atlantic Treaty Organization (NATO), with the notable exception of the United States. It is one of the most widely used rifles in history, having been used by more than 90 countries. This particular model sports wooden furniture and an aftermarket conversion that allows it to fire more readily available .308 Winchester ammunition, which is very similar in size to the 7.62?51mm NATO it was originally chambered in."
 	icon_state = "fnfal"
 	mag_type = /obj/item/ammo_box/magazine/F13/fnfal
 	origin_tech = "combat=4;materials=2;prewar=4"
@@ -350,8 +323,6 @@
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle/morita
 	name = "Морита MK2"
 	desc = "ЛУЧШЕЕ оружие для войн между жуками и людьми."
-	eng_name = "Morita MK2"
-	eng_desc = "BEST weapon to stop bug invasion."
 	icon_state = "morita"
 	item_state = "morita"
 	mag_type = /obj/item/ammo_box/magazine/F13/sst_stanag
@@ -370,8 +341,6 @@
 /obj/item/weapon/gun/ballistic/automatic/bozar
 	name = "Бозар"
 	desc = "The ultimate refinement of the sniper's art.<br>Although somewhat finicky and prone to jamming if not kept immacuately clean, its accuracy more than makes up for its extra maintenance requirements."
-	eng_name = "\improper Bozar"
-	eng_desc = "The ultimate refinement of the sniper's art.<br>Although somewhat finicky and prone to jamming if not kept immacuately clean, its accuracy more than makes up for its extra maintenance requirements."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "bozar"
 	item_state = "arg" //Looks like bozar
@@ -394,8 +363,6 @@
 /obj/item/weapon/gun/ballistic/revolver/sequoia
 	name = "«Секвойя» рейнджера"
 	desc = "«Секвойя» рейнджера, популярная модель револьвера на пустоши, имеющая богатую рукоятку. Этот отличается от остальных моделей, и имеет серийный номер на дуле."
-	eng_name = "ranger «Sequoia»"
-	eng_desc = "ranger Sequoia», most popular revolver model on wasteland."
 	icon_state = "sequoia"
 	item_state = "liquidsequoia"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -424,8 +391,6 @@
 /obj/item/weapon/gun/ballistic/automatic/pistol/f4/pipe_pistol
 	name = "гладкоствол с патронником"
 	desc = "Самодельный пистолет из ближайшего мусора. Лучше так, чем ничего."
-	eng_name = "pipe revolver"
-	eng_desc = "Gross. Well, that's better than nothig, right?"
 	icon_state = "zipgun"
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/piperev
@@ -440,7 +405,7 @@
 	small_gun = 1
 
 /obj/item/weapon/gun/ballistic/automatic/sniper_rifle/f13
-	name = "sniper rifle"
+	name = "снайперская винтовка"
 	desc = "A long ranged weapon that does significant damage. No, you can't quickscope."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "sniper_rifle"
@@ -471,8 +436,6 @@
 /obj/item/weapon/gun/ballistic/automatic/pistol/f13/stal/pm
 	name = "ПМ" //Говорим бульону имя объекта
 	desc = "Пистолет Макарова, прямо из СССР!" //говорим бульону пистолет это кто?(who?)
-	eng_name = "PM" //С апреля 2020, у нас двойной язык в билде, указывать обязательно.
-	eng_desc = "Makarov Pistol, right from USSR!"
 	icon_state = "pm" // даём иконку
 
 //практика.
@@ -480,6 +443,4 @@
 /obj/item/weapon/gun/ballistic/automatic/pistol/f13/stal/fort12
 	name = "Фора-12"
 	desc = "Пистолет Фора, прямо из УКРССР!"
-	eng_name = "Fort-12"
-	eng_desc = "Fort-12 pistol, right from Ukraine!"
 	icon_state = "fort12"

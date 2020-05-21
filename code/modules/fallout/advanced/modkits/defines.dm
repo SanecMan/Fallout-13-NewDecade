@@ -6,14 +6,8 @@
 /obj/item/weapon/gun/examine(mob/user)
 	..()
 
-	if(usr.client && usr.client.language == "English")
-		if(modificationsNames.len == 0)
-			return
-
-		to_chat(user, "Module installed:")
-	else
-		if(modificationsNames.len == 0)
-			return
+	if(modificationsNames.len == 0)
+		return
 
 		to_chat(user, "Модуль установлен:")
 	for(var/S in modificationsNames)
@@ -23,12 +17,8 @@
 	..()
 
 	if(user.special.getPoint("i") + user.skills.getPoint("repair") <= 12)
-		if(usr.client && usr.client.language == "English")
-			to_chat(user, "You have no skills, to do this.")
-			return
-		else
-			to_chat(user, "У вас не хватает навыхов, чтобы поставить улучшение.")
-			return
+		to_chat(user, "У вас не хватает навыхов, чтобы поставить улучшение. Навык Ремонт: 12")
+		return
 
 	if(istype(W, /obj/item/kit))
 		W:install(src)

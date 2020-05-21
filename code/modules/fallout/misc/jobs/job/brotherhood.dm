@@ -11,7 +11,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "центральному штабу Братства Стали"
-	eng_supervisors = "the central command of Brotherhood"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1
@@ -77,7 +76,6 @@
 	total_positions = 1
 	spawn_positions = 2
 	supervisors = "Старейшине"
-	eng_supervisors = "the elder"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1
@@ -141,7 +139,6 @@
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "Старейшине и Паладинам"
-	eng_supervisors = "the elder and paladins"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1
@@ -203,7 +200,6 @@
 	total_positions = 2
 	spawn_positions = 7
 	supervisors = "Старейшине"
-	eng_supervisors = "the elder"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1
@@ -256,7 +252,6 @@
 	total_positions = 2
 	spawn_positions = 1
 	supervisors = "Старейшине и Паладинам"
-	eng_supervisors = "elder and paladins"
 	selection_color = "#ec9d9d"
 	minimal_player_age = 7
 	whitelist_on = 1

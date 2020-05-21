@@ -5,7 +5,6 @@
 /obj/machinery/autolathe_prom
 	name = "промышленный станок"
 	desc = "It produces items using metal and glass."
-	eng_name = "industrial workbench"
 	icon_state = "autolathe_prom"
 	density = 1
 

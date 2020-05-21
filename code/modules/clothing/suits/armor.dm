@@ -332,8 +332,6 @@
 /obj/item/clothing/suit/stealth/stealthsuit
 	name = "Китайский стелс костюм"
 	desc = "Удобный стелс костюм, идеально для тайных операций."
-	eng_name = "Chinese Stealth Suit"
-	eng_desc = "A form-fitting armor suit complete with an active stealth field that can be triggered at the press of a button."
 	icon_state = "stealthsuit"
 	item_state = "stealthsuit"
 	allowed = list(/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/weapon/tank/internals,/obj/item/weapon/stock_parts/cell)
