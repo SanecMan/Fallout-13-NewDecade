@@ -33,13 +33,13 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 //Data of factions. Taking all available factions of this world and showing them as list (once can show 4 max).
 	var/factions_data
 	if(parent && parent.allowed_factions)
-		for(var/i = choiced_faction_index to choiced_faction_index + 3)
+		for(var/i = choiced_faction_index to choiced_faction_index + 2)
 			if(i > parent.allowed_factions.len)
 				break
 			var/datum/f13_faction/faction = parent.allowed_factions[i]
 			factions_data += "<a href='?_src_=prefs;preference=faction;task=input;faction_id=[faction.id];' data-tooltip=\"[quoter(faction.full_name)]\"  class='tooltip[faction == choiced_faction ? " linkOn" : ""]'>[faction.name]</a>"
-	if(!factions_data)
-		factions_data = "<center>Нет доступных фракций</center>"
+		if(!factions_data)
+			factions_data = "<center>Нет доступных фракций</center>"
 
 
 // Roles data. Showing all jobs of selected faction and showing priorities.
