@@ -258,6 +258,9 @@
 /obj/effect/landmark/latejoin
 	name = "JoinLate"
 
+/obj/effect/landmark/observer
+	name = "Observer-Start"
+
 //generic event spawns
 /obj/effect/landmark/event_spawn
 	name = "generic event spawn"

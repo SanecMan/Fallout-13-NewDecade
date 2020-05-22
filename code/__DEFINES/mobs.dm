@@ -45,18 +45,24 @@
 
 //Nutrition levels for humans
 #define NUTRITION_LEVEL_FAT 600
-#define NUTRITION_LEVEL_FULL 550
-#define NUTRITION_LEVEL_WELL_FED 450
-#define NUTRITION_LEVEL_FED 350
-#define NUTRITION_LEVEL_HUNGRY 250
-#define NUTRITION_LEVEL_STARVING 150
+#define NUTRITION_LEVEL_FULL 300
+#define NUTRITION_LEVEL_WELL_FED 260
+#define NUTRITION_LEVEL_FED 180
+#define NUTRITION_LEVEL_HUNGRY 100
+#define NUTRITION_LEVEL_STARVING 50
 
+#define THIRST_LEVEL_FULL 100 //honestly this shit decays so slowly i could probably put max to 10 and deadly to 1 and you'd still only have to drink every 30 minutes.
+#define THIRST_LEVEL_LIGHT 80
+#define THIRST_LEVEL_MIDDLE 60
+#define THIRST_LEVEL_HARD 40
+#define THIRST_LEVEL_DEADLY 20
+/*
 #define THIRST_LEVEL_FULL 200
 #define THIRST_LEVEL_LIGHT 150
 #define THIRST_LEVEL_MIDDLE 100
 #define THIRST_LEVEL_HARD 75
 #define THIRST_LEVEL_DEADLY 40
-
+*/
 //Slime evolution threshold. Controls how fast slimes can split/grow
 #define SLIME_EVOLUTION_THRESHOLD 10
 

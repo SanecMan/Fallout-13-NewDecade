@@ -61,7 +61,7 @@ list(name = "- Busty Backdoor Xeno Babes 6", desc = " Get a load, or give, of th
 var/global/list/legitposters = list(
 
 list(name = "- Here For Your Safety", desc = " A poster glorifying the station's security force."),
-list(name = "- Nanotrasen Logo", desc = " A poster depicting the Nanotrasen logo."),
+list(name = "- Vault-Tec Logo", desc = " A poster depicting the Vault-Tec logo."),
 list(name = "- Cleanliness", desc = " A poster warning of the dangers of poor hygiene."),
 list(name = "- Help Others", desc = " A poster encouraging you to help fellow crewmembers."),
 list(name = "- Build", desc = " A poster glorifying the engineering team."),
@@ -85,9 +85,9 @@ list(name = "- Report Crimes", desc = " A poster encouraging the swift reporting
 list(name = "- Ion Rifle", desc = " A poster displaying an Ion Rifle."),
 list(name = "- Foam Force Ad", desc = " Foam Force, it's Foam or be Foamed!"),
 list(name = "- Cohiba Robusto Ad", desc = " Cohiba Robusto, the classy cigar."),
-list(name = "- 50th Anniversary Vintage Reprint", desc = " A reprint of a poster from 2505, commemorating the 50th Aniversery of Nanoposters Manufacturing, a subsidary of Nanotrasen."),
+list(name = "- 20th Anniversary Vintage Reprint", desc = " A reprint of a poster from 2505, commemorating the 50th Aniversery of Nanoposters Manufacturing, a subsidary of Nanotrasen."),
 list(name = "- Fruit Bowl", desc = " Simple, yet awe-inspiring."),
-list(name = "- PDA Ad", desc = " A poster advertising the latest PDA from Nanotrasen suppliers."),
+list(name = "- PIPBOY Ad", desc = " A poster advertising the latest PDA from Nanotrasen suppliers."),
 list(name = "- Enlist", desc = " Enlist in the Nanotrasen Deathsquadron reserves today!"),
 list(name = "- Nanomichi Ad", desc = " A poster advertising Nanomichi brand audio cassettes."),
 list(name = "- 12 Gauge", desc = " A poster boasting about the superiority of 12 gauge shotgun shells."),

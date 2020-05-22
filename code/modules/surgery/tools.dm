@@ -1,6 +1,6 @@
 /obj/item/weapon/retractor
-	name = "retractor"
-	desc = "Retracts stuff."
+	name = "ретрактор"
+	desc = "Чтобы отодвигать плоть."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "retractor"
 	materials = list(MAT_METAL=6000, MAT_GLASS=3000)
@@ -10,8 +10,8 @@
 
 
 /obj/item/weapon/hemostat
-	name = "hemostat"
-	desc = "You think you have seen this before."
+	name = "зажим"
+	desc = "Этот нехитрый прибор, поможет остановить кровотечение во время операции."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "hemostat"
 	materials = list(MAT_METAL=5000, MAT_GLASS=2500)
@@ -22,8 +22,8 @@
 
 
 /obj/item/weapon/cautery
-	name = "cautery"
-	desc = "This stops bleeding."
+	name = "термокаутер"
+	desc = "Поможет вам остановить кровотечение и заживить надрез."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "cautery"
 	materials = list(MAT_METAL=2500, MAT_GLASS=750)
@@ -34,8 +34,8 @@
 
 
 /obj/item/weapon/surgicaldrill
-	name = "surgical drill"
-	desc = "You can drill using this item. You dig?"
+	name = "хирургическая дрель"
+	desc = "Вы можете сверлить используя её, понимаете?"
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "drill"
 	hitsound = 'sound/weapons/circsawhit.ogg'
@@ -47,8 +47,8 @@
 	attack_verb = list("drilled")
 
 /obj/item/weapon/scalpel
-	name = "scalpel"
-	desc = "Cut, cut, and once more cut."
+	name = "скальпель"
+	desc = "Надрез. Еще надрез, и-и-и, еще!"
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "scalpel"
 	flags = CONDUCT
@@ -67,34 +67,15 @@
 	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] [pick("wrists", "throat", "stomach")] with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return (BRUTELOSS)
 
-
 /obj/item/weapon/circular_saw
-	name = "circular saw"
-	desc = "For heavy duty cutting."
+	name = "циркулярная пила"
+	desc = "Для тяжелой резки."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "saw"
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	throwhitsound =  'sound/weapons/pierce.ogg'
 	flags = CONDUCT
-	force = 15
-	w_class = WEIGHT_CLASS_NORMAL
-	throwforce = 9
-	throw_speed = 2
-	throw_range = 5
-	materials = list(MAT_METAL=10000, MAT_GLASS=6000)
-	origin_tech = "biotech=1;combat=1"
-	attack_verb = list("attacked", "slashed", "sawed", "cut")
-	sharpness = IS_SHARP
-
-/obj/item/weapon/circular_saw
-	name = "circular saw"
-	desc = "For heavy duty cutting."
-	icon = 'icons/obj/surgery.dmi'
-	icon_state = "saw"
-	hitsound = 'sound/weapons/circsawhit.ogg'
-	throwhitsound =  'sound/weapons/pierce.ogg'
-	flags = CONDUCT
-	force = 45
+	force = 25
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 9
 	throw_speed = 2
@@ -106,8 +87,8 @@
 
 
 /obj/item/weapon/surgical_drapes
-	name = "surgical drapes"
-	desc = "Nanotrasen brand surgical drapes provide optimal safety and infection control."
+	name = "хирургическая простыня"
+	desc = "Пирургическая простыня бренда ОРМЕД, даёт лучшую защиту от инфекций! Если верить слогану..."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "surgical_drapes"
 	w_class = WEIGHT_CLASS_TINY

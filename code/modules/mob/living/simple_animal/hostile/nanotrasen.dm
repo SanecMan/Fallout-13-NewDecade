@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/nanotrasen
-	name = "Nanotrasen Private Security Officer"
-	desc = "An officer part of Nanotrasen's private security force, he seems rather unpleased to meet you."
+	name = "Vault-Tec Private Security Officer"
+	desc = "An officer part of Vault-Tec private security force, he seems rather unpleased to meet you."
 	icon_state = "nanotrasen"
 	icon_living = "nanotrasen"
 	icon_dead = null
