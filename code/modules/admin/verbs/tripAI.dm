@@ -1,5 +1,5 @@
 /client/proc/triple_ai()
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Create AI Triumvirate"
 
 	if(ticker.current_state > GAME_STATE_PREGAME)

@@ -1,7 +1,7 @@
 var/list/GPS_list = list()
 /obj/item/device/gps
-	name = "global positioning system"
-	desc = "Helping lost spacemen find their way through the planets since 2016. Alt+click to toggle power."
+	name = "глобальная позиционная система"
+	desc = "Не очень компактный и не очень информативный ГПС маяк."
 	icon = 'icons/obj/telescience.dmi'
 	icon_state = "gps-c"
 	w_class = WEIGHT_CLASS_SMALL
@@ -15,7 +15,7 @@ var/list/GPS_list = list()
 /obj/item/device/gps/New()
 	..()
 	GPS_list.Add(src)
-	name = "global positioning system ([gpstag])"
+	name = "глобальная позиционная система ([gpstag])"
 	add_overlay("working")
 
 /obj/item/device/gps/Destroy()
@@ -55,12 +55,12 @@ var/list/GPS_list = list()
 	var/obj/item/device/gps/t = ""
 	var/gps_window_height = 110 + GPS_list.len * 20 // Variable window height, depending on how many GPS units there are to show
 	if(emped)
-		t += "ERROR"
+		t += "ОШИБКА"
 	else
-		t += "<BR><A href='?src=\ref[src];tag=1'>Set Tag</A> "
-		t += "<BR>Tag: [gpstag]"
+		t += "<BR><A href='?src=\ref[src];tag=1'>Указать метку</A> "
+		t += "<BR>Метка: [gpstag]"
 		if(locked_location && locked_location.loc)
-			t += "<BR>Bluespace coordinates saved: [locked_location.loc]"
+			t += "<BR>Координаты сохранены: [locked_location.loc]"
 			gps_window_height += 20
 
 		for(var/obj/item/device/gps/G in GPS_list)
@@ -68,7 +68,7 @@ var/list/GPS_list = list()
 			var/area/gps_area = get_area(G)
 			var/tracked_gpstag = G.gpstag
 			if(G.emped == 1)
-				t += "<BR>[tracked_gpstag]: ERROR"
+				t += "<BR>[tracked_gpstag]: ОШИБКА"
 			else if(G.tracking)
 				t += "<BR>[tracked_gpstag]: [format_text(gps_area.name)] ([pos.x], [pos.y], [pos.z])"
 			else
@@ -81,11 +81,11 @@ var/list/GPS_list = list()
 /obj/item/device/gps/Topic(href, href_list)
 	..()
 	if(href_list["tag"] )
-		var/a = input("Please enter desired tag.", name, gpstag) as text
+		var/a = input("Пожалуйста, введите метку.", name, gpstag) as text
 		a = uppertext(copytext_char(sanitize(a), 1, 5))
 		if(in_range(src, usr))
 			gpstag = a
-			name = "global positioning system ([gpstag])"
+			name = "глобальная позиционная система ([gpstag])"
 			attack_self(usr)
 
 /obj/item/device/gps/science

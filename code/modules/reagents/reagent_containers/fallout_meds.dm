@@ -157,7 +157,7 @@
 			if(self_delay)
 				if(!do_mob(user, M, self_delay))
 					return 0
-			to_chat(H, "<span class='danger'>You feel strange! You should wait some time before moving, becuase your whole body hurts!</span>")
+			to_chat(H, "<span class='danger'>Вы ощущаете себя... Странно!Вам бы стоило постоять, перед тем как продолжить движение, ведь всё ваше тело болит!</span>")
 			H.set_species(/datum/species/supermutant)
 			H.Stun(20)
 			H.radiation = 0

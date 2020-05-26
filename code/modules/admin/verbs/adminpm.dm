@@ -15,7 +15,7 @@
 
 //shows a list of clients we could send PMs to, then forwards our choice to cmd_admin_pm
 /client/proc/cmd_admin_pm_panel()
-	set category = "Admin"
+	set category = "Администрация"
 	set name = "Admin PM"
 	if(!holder)
 		to_chat(src, "<font color='red'>Error: Admin-PM-Panel: Only administrators may use this command.</font>")
@@ -79,7 +79,7 @@
 		if(!ircreplyamount)	//to prevent people from spamming irc
 			return
 		if(!msg)
-			msg = input(src,"Message:", "Private message to Administrator") as text|null
+			msg = input(src,"Сообщение:", "Личное Сообщение Администратору") as text|null
 
 		if(!msg)
 			return
@@ -131,14 +131,14 @@
 	var/keywordparsedmsg = keywords_lookup(msg)
 
 	if(irc)
-		to_chat(src, "<font color='blue'>PM to-<b>Admins</b>: [rawmsg]</font>")
+		to_chat(src, "<font color='blue'>ЛС для-<b>Админов</b>: [rawmsg]</font>")
 		ircreplyamount--
-		send2irc("Reply: [ckey]",rawmsg)
+		send2irc("Ответ: [ckey]",rawmsg)
 	else
 		if(C.holder)
 			if(holder)	//both are admins
-				to_chat(C, "<font color='red'>Admin PM from-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>")
-				to_chat(src, "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)]</b>: [keywordparsedmsg]</font>")
+				to_chat(C, "<font color='red'>ЛС Администрации от-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>")
+				to_chat(src, "<font color='blue'>ЛС Администрации для-<b>[key_name(C, src, 1)]</b>: [keywordparsedmsg]</font>")
 
 			else		//recipient is an admin but sender is not
 				to_chat(C, "<font color='red'>Reply PM from-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>")
@@ -150,10 +150,10 @@
 
 		else
 			if(holder)	//sender is an admin but recipient is not. Do BIG RED TEXT
-				to_chat(C, "<font color='red' size='4'><b>-- Administrator private message --</b></font>")
-				to_chat(C, "<font color='red'>Admin PM from-<b>[key_name(src, C, 0)]</b>: [msg]</font>")
-				to_chat(C, "<font color='red'><i>Click on the administrator's name to reply.</i></font>")
-				to_chat(src, "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)]</b>: [msg]</font>")
+				to_chat(C, "<font color='red' size='4'><b>-- Сообщение от Администратора --</b></font>")
+				to_chat(C, "<font color='red'>ЛС от Админа-<b>[key_name(src, C, 0)]</b>: [msg]</font>")
+				to_chat(C, "<font color='red'><i>Нажмите на никнейм администратора чтобы ответить.</i></font>")
+				to_chat(src, "<font color='blue'>ЛС для-<b>[key_name(C, src, 1)]</b>: [msg]</font>")
 
 				//always play non-admin recipients the adminhelp sound
 				to_chat(C, 'sound/effects/adminhelp.ogg')
@@ -178,7 +178,7 @@
 	if(irc)
 		log_admin("PM: [key_name(src)]->IRC: [rawmsg]")
 		for(var/client/X in admins)
-			to_chat(X, "<B><font color='blue'>PM: [key_name(src, X, 0)]-&gt;IRC:</B> \blue [keywordparsedmsg]</font>")//inform X
+			to_chat(X, "<B><font color='blue'>ЛС: [key_name(src, X, 0)]-&gt;IRC:</B> \blue [keywordparsedmsg]</font>")//inform X
 
 	else
 		window_flash(C)
@@ -186,7 +186,7 @@
 		//we don't use message_admins here because the sender/receiver might get it too
 		for(var/client/X in admins)
 			if(X.key!=key && X.key!=C.key)	//check client/X is an admin and isn't the sender or recipient
-				to_chat(X, "<B><font color='blue'>PM: [key_name(src, X, 0)]-&gt;[key_name(C, X, 0)]:</B> \blue [keywordparsedmsg]</font>")//inform X
+				to_chat(X, "<B><font color='blue'>ЛС: [key_name(src, X, 0)]-&gt;[key_name(C, X, 0)]:</B> \blue [keywordparsedmsg]</font>")//inform X
 
 
 

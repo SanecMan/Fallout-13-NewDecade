@@ -46,7 +46,7 @@
 
 /proc/givetestverbs(mob/M in mob_list)
 	set desc = "Give this guy possess/release verbs"
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Give Possessing Verbs"
 	M.verbs += /proc/possess
 	M.verbs += /proc/release

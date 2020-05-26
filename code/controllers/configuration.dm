@@ -152,7 +152,7 @@
 
 	var/intercept = 1					//Whether or not to send a communications intercept report roundstart. This may be overriden by gamemodes.
 	var/alert_desc_green = "All threats to the Vault have passed. Security may not have weapons visible, privacy laws are once again fully enforced."
-	var/alert_desc_blue_upto = "The Vault has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted."
+	var/alert_desc_blue_upto = "Главы получили информацию о возможной активности враждебных сил в Убежище. Служба Безопасности может носить оружие открыто и проводить обыски."
 	var/alert_desc_blue_downto = "The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed."
 	var/alert_desc_red_upto = "There is an immediate serious threat to the Vault. Security may have weapons unholstered at all times. Random searches are allowed and advised."
 	var/alert_desc_red_downto = "The Vault's destruction has been averted. There is still however an immediate serious threat to the Vault. Security may have weapons unholstered at all times, random searches are allowed and advised."

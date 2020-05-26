@@ -19,7 +19,7 @@
 	. = (ckey(ckey) in config.whitelist)
 
 /datum/admins/proc/add_whitelist(nickname as text)
-	set category = "Admin"
+	set category = "Администрация"
 	set name = "Add Player To Whitelist"
 	nickname = ckey(nickname)
 	if(nickname in config.whitelist)
@@ -28,7 +28,7 @@
 	config.whitelist += nickname
 
 /datum/admins/proc/remove_whitelist(nickname as text)
-	set category = "Admin"
+	set category = "Администрация"
 	set name = "Remove Player From Whitelist"
 	nickname = ckey(nickname)
 	if(!(nickname in config.whitelist))
@@ -37,13 +37,13 @@
 	config.whitelist -= nickname
 
 /datum/admins/proc/who_whitelist()
-	set category = "Admin"
+	set category = "Администрация"
 	set name = "Whitelist Who"
 	for(var/c in config.whitelist)
 		to_chat(usr,c)
 
 /datum/admins/proc/toogle_whitelist()
-	set category = "Admin"
+	set category = "Администрация"
 	set name = "Whitelist Toggle"
 	config.whitelist_on = !config.whitelist_on
 	to_chat(usr, "The whitelist is now [config.whitelist_on ? "on" : "off"]")

@@ -191,7 +191,7 @@
 
 
 /client/proc/cmd_admin_add_random_ai_law()
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Add Random AI Law"
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -424,7 +424,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	return new_character
 
 /client/proc/cmd_admin_add_freeform_ai_law()
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Add Custom AI law"
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -446,7 +446,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/cmd_admin_rejuvenate(mob/living/M in mob_list)
 	set category = "Special Verbs"
-	set name = "Rejuvenate"
+	set name = "!!!ОЖИВИТЬ!!!!"
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
@@ -485,7 +485,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/cmd_change_command_name()
 	set category = "Special Verbs"
-	set name = "Radio Broadcast: Rename"
+	set name = "Радиопередача: переименовать"
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
@@ -497,8 +497,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	log_admin("[key_name(src)] has changed a world radio transmitter name to: [input]")
 
 /client/proc/cmd_admin_delete(atom/O as obj|mob|turf in world)
-	set category = "Admin"
-	set name = "Delete"
+	set category = "Администрация"
+	set name = "!!!УДАЛИТЬ!!!"
 
 	if (!holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -511,8 +511,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		qdel(O)
 
 /client/proc/cmd_admin_list_open_jobs()
-	set category = "Admin"
-	set name = "Manage Job Slots"
+	set category = "Администрация"
+	set name = "Администратирование ролей"
 
 	if (!holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -522,7 +522,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/cmd_admin_explosion(atom/O as obj|mob|turf in world)
 	set category = "Special Verbs"
-	set name = "Explosion"
+	set name = "Взрыв"
 
 	if (!holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -554,7 +554,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/cmd_admin_emp(atom/O as obj|mob|turf in world)
 	set category = "Special Verbs"
-	set name = "EM Pulse"
+	set name = "ЭМ импульс"
 
 	if (!holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -578,39 +578,39 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/cmd_admin_gib(mob/M in mob_list)
 	set category = "Special Verbs"
-	set name = "Gib"
+	set name = "Гибнуть"
 
 	if (!holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
 
-	var/confirm = alert(src, "Drop a brain?", "Confirm", "Yes", "No","Cancel")
-	if(confirm == "Cancel")
+	var/confirm = alert(src, "Оставить мозг?", "Подтвердите", "Да", "Нет","Закрыть")
+	if(confirm == "Закрыть")
 		return
 	//Due to the delay here its easy for something to have happened to the mob
 	if(!M)
 		return
 
-	log_admin("[key_name(usr)] has gibbed [key_name(M)]")
-	message_admins("[key_name_admin(usr)] has gibbed [key_name_admin(M)]")
+	log_admin("[key_name(usr)] гибает [key_name(M)]")
+	message_admins("[key_name_admin(usr)] гибнул [key_name_admin(M)]")
 
 	if(isobserver(M))
 		new /obj/effect/gibspawner/generic(M.loc, M.viruses)
 		return
-	if(confirm == "Yes")
+	if(confirm == "Да")
 		M.gib()
 	else
 		M.gib(1)
 	feedback_add_details("admin_verb","GIB") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_gib_self()
-	set name = "Gibself"
-	set category = "Fun"
+	set name = "Гибнуть себя"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 
-	var/confirm = alert(src, "You sure?", "Confirm", "Yes", "No")
-	if(confirm == "Yes")
-		log_admin("[key_name(usr)] used gibself.")
-		message_admins("<span class='adminnotice'>[key_name_admin(usr)] used gibself.</span>")
+	var/confirm = alert(src, "Вы уверены?", "Подтвердите", "Да", "Нет")
+	if(confirm == "Да")
+		log_admin("[key_name(usr)] гибнул самого себя. Досадно.")
+		message_admins("<span class='adminnotice'>[key_name_admin(usr)] гибнул самого себя. Досадно.</span>")
 		feedback_add_details("admin_verb","GIBS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		mob.gib(1, 1, 1)
 
@@ -639,9 +639,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	feedback_add_details("admin_verb","CVRA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/admin_call_shuttle()
-
-	set category = "Admin"
-	set name = "Call Shuttle"
+	set category = "Администрация"
+	set name = "Вызвать поезд"
 
 	if(EMERGENCY_AT_LEAST_DOCKED)
 		return
@@ -650,8 +649,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		to_chat(src, "Only administrators may use this command.")
 		return
 
-	var/confirm = alert(src, "You sure?", "Confirm", "Yes", "No")
-	if(confirm != "Yes")
+	var/confirm = alert(src, "Вы уверены?", "Подтвердите", "Да", "Нет")
+	if(confirm != "Да")
 		return
 
 	SSshuttle.emergency.request()
@@ -661,11 +660,11 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	return
 
 /client/proc/admin_cancel_shuttle()
-	set category = "Admin"
-	set name = "Cancel Shuttle"
+	set category = "Администрация"
+	set name = "Отозвать поезд"
 	if(!check_rights(0))
 		return
-	if(alert(src, "You sure?", "Confirm", "Yes", "No") != "Yes")
+	if(alert(src, "Вы уверены?", "Подтвердите", "Да", "Нет") != "Да")
 		return
 
 	if(EMERGENCY_AT_LEAST_DOCKED)
@@ -689,7 +688,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 
 /client/proc/everyone_random()
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Make Everyone Random"
 	set desc = "Make everyone have a random appearance. You can only use this before rounds!"
 
@@ -721,8 +720,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 
 /client/proc/toggle_random_events()
-	set category = "Server"
-	set name = "Toggle random events on/off"
+	set category = "Сервер"
+	set name = "Включить/Выключить рандомные события"
 	set desc = "Toggles random events such as meteors, black holes, blob (but not space dust) on/off"
 	if(!config.allow_random_events)
 		config.allow_random_events = 1
@@ -753,8 +752,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		feedback_add_details("admin_verb","CSL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_nuke(obj/machinery/nuclearbomb/N in nuke_list)
-	set name = "Toggle Nuke"
-	set category = "Fun"
+	set name = "!!!ЗАПУСТИТЬ ЯДЕРНУЮ БОМБУ!!!"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set popup_menu = 0
 	if(!check_rights(R_DEBUG))
 		return
@@ -772,7 +771,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	feedback_add_details("admin_verb","TN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/reset_latejoin_spawns()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Remove Latejoin Spawns"
 
 	if(!check_rights(R_DEBUG))
@@ -792,7 +791,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 
 /client/proc/create_outfits()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Create Custom Outfit"
 
 	if(!check_rights(R_DEBUG))
@@ -966,7 +965,7 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 	usr << browse(dat, "window=dressup;size=550x600")
 
 /client/proc/toggle_antag_hud()
-	set category = "Admin"
+	set category = "Администрация"
 	set name = "Toggle AntagHUD"
 	set desc = "Toggles the Admin AntagHUD"
 
@@ -989,16 +988,16 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 	feedback_add_details("admin_verb","TAH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/open_shuttle_manipulator()
-	set category = "Admin"
-	set name = "Shuttle Manipulator"
+	set category = "Администрация"
+	set name = "Манипуляции с поездами"
 	set desc = "Opens the shuttle manipulator UI."
 
 	for(var/obj/machinery/shuttle_manipulator/M in machines)
 		M.ui_interact(usr)
 
 /client/proc/mass_zombie_infection()
-	set category = "Fun"
-	set name = "Mass Zombie Infection"
+	set category = "В.Е.С.Е.Л.Ь.Е"
+	set name = "!!!ВЫПУСТИТЬ ЗОМБИ ИНФЕКЦИЮ!!!"
 	set desc = "Infects all humans with a latent organ that will zombify \
 		them on death."
 
@@ -1017,8 +1016,8 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 	feedback_add_details("admin_verb","MZI")
 
 /client/proc/mass_zombie_cure()
-	set category = "Fun"
-	set name = "Mass Zombie Cure"
+	set category = "В.Е.С.Е.Л.Ь.Е"
+	set name = "Излечить всех от зомби инфекции"
 	set desc = "Removes the zombie infection from all humans, returning them to normal."
 	if(!holder)
 		return
@@ -1035,7 +1034,7 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 	feedback_add_details("admin_verb","MZC")
 
 /client/proc/polymorph_all()
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Polymorph All"
 	set desc = "Applies the effects of the bolt of change to every single mob."
 
@@ -1068,8 +1067,8 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 
 
 /client/proc/show_tip()
-	set category = "Admin"
-	set name = "Show Tip"
+	set category = "Администрация"
+	set name = "Показать совет"
 	set desc = "Sends a tip (that you specify) to all players. After all \
 		you're the experienced player here."
 
@@ -1142,7 +1141,7 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 #undef ON_PURRBATION
 
 /client/proc/modify_goals()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Modify goals"
 
 	if(!check_rights(R_ADMIN))
@@ -1159,8 +1158,8 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 
 
 /client/proc/toggle_hub()
-	set category = "Server"
-	set name = "Toggle Hub"
+	set category = "Сервер"
+	set name = "Включить отображение в хабе"
 
 	world.visibility = (!world.visibility)
 
@@ -1175,7 +1174,7 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 
 /client/proc/editappear(mob/living/carbon/human/M as mob in world)
 	set name = "Edit Appearance"
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 
 	if(!check_rights(R_FUN))	return
 	if(!istype(M, /mob/living/carbon/human))
@@ -1236,7 +1235,7 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 //The global game of D&D, where admins are the Game Master (single).
 
 /client/proc/roll_dice()
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Roll Dice"
 	if(!check_rights(R_FUN))	return
 

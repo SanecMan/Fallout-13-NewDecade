@@ -1,5 +1,5 @@
 /client/proc/Debug2()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Debug-Game"
 	if(!check_rights(R_DEBUG))
 		return
@@ -27,7 +27,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 */
 
 /client/proc/callproc()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Advanced ProcCall"
 	set waitfor = 0
 
@@ -82,7 +82,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	feedback_add_details("admin_verb","APC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/callproc_datum(datum/A as null|area|mob|obj|turf)
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Atom ProcCall"
 	set waitfor = 0
 
@@ -154,7 +154,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 
 /client/proc/Cell()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Air Status in Location"
 	if(!mob)
 		return
@@ -175,7 +175,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	feedback_add_details("admin_verb","ASL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_robotize(mob/M in mob_list)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Make Robot"
 
 	if(!ticker || !ticker.mode)
@@ -191,7 +191,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		alert("Invalid mob")
 
 /client/proc/cmd_admin_blobize(mob/M in mob_list)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Make Blob"
 
 	if(!ticker || !ticker.mode)
@@ -209,7 +209,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 
 /client/proc/cmd_admin_animalize(mob/M in mob_list)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Make Simple Animal"
 
 	if(!ticker || !ticker.mode)
@@ -230,7 +230,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 
 /client/proc/makepAI(turf/T in mob_list)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Make pAI"
 	set desc = "Specify a location to spawn a pAI device, then specify a key to play that pAI"
 
@@ -257,7 +257,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	feedback_add_details("admin_verb","MPAI") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_alienize(mob/M in mob_list)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Make Alien"
 
 	if(!ticker || !ticker.mode)
@@ -274,7 +274,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		alert("Invalid mob")
 
 /client/proc/cmd_admin_slimeize(mob/M in mob_list)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Make slime"
 
 	if(!ticker || !ticker.mode)
@@ -354,7 +354,7 @@ var/list/TYPES_SHORTCUTS = list(
 
 //TODO: merge the vievars version into this or something maybe mayhaps
 /client/proc/cmd_debug_del_all(object as text)
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Del-All"
 
 	var/list/matches = get_fancy_list_of_atom_types()
@@ -378,7 +378,7 @@ var/list/TYPES_SHORTCUTS = list(
 
 
 /client/proc/cmd_debug_make_powernets()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Make Powernets"
 	SSmachine.makepowernets()
 	log_admin("[key_name(src)] has remade the powernet. makepowernets() called.")
@@ -386,7 +386,7 @@ var/list/TYPES_SHORTCUTS = list(
 	feedback_add_details("admin_verb","MPWN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_grantfullaccess(mob/M in mob_list)
-	set category = "Admin"
+	set category = "Администрация"
 	set name = "Grant Full Access"
 
 	if(!ticker || !ticker.mode)
@@ -426,7 +426,7 @@ var/list/TYPES_SHORTCUTS = list(
 	message_admins("<span class='adminnotice'>[key_name_admin(usr)] has granted [M.key] full access.</span>")
 
 /client/proc/cmd_assume_direct_control(mob/M in mob_list)
-	set category = "Admin"
+	set category = "Администрация"
 	set name = "Assume direct control"
 	set desc = "Direct intervention"
 
@@ -533,7 +533,7 @@ var/list/TYPES_SHORTCUTS = list(
 		to_chat(world, "* [areatype]")
 
 /client/proc/cmd_admin_dress(mob/living/carbon/human/M in mob_list)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Select equipment"
 	if(!ishuman(M))
 		alert("Invalid mob")
@@ -597,7 +597,7 @@ var/list/TYPES_SHORTCUTS = list(
 
 /client/proc/startSinglo()
 
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Start Singularity"
 	set desc = "Sets up the singularity and all machines to get power flowing through the station"
 
@@ -654,7 +654,7 @@ var/list/TYPES_SHORTCUTS = list(
 			SMES.input_attempt = 1
 
 /client/proc/cmd_debug_mob_lists()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Debug Mob Lists"
 	set desc = "For when you just gotta know"
 
@@ -675,7 +675,7 @@ var/list/TYPES_SHORTCUTS = list(
 			to_chat(usr, jointext(joined_player_list,","))
 
 /client/proc/cmd_display_del_log()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Display del() Log"
 	set desc = "Displays a list of things that have failed to GC this round"
 
@@ -692,7 +692,7 @@ var/list/TYPES_SHORTCUTS = list(
 	usr << browse(dat, "window=dellog")
 
 /client/proc/debug_huds(i as num)
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Debug HUDs"
 	set desc = "Debug the data or antag HUDs"
 
@@ -701,7 +701,7 @@ var/list/TYPES_SHORTCUTS = list(
 	debug_variables(huds[i])
 
 /client/proc/jump_to_ruin()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Jump to Ruin"
 	set desc = "Displays a list of all placed ruins to teleport to."
 	if(!holder)
@@ -733,7 +733,7 @@ var/list/TYPES_SHORTCUTS = list(
 		to_chat(usr, "<span class='italics'>[template.description]</span>")
 
 /client/proc/clear_dynamic_transit()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Clear Dynamic Transit"
 	set desc = "Deallocates all transit space, restoring it to round start \
 		conditions."
@@ -746,7 +746,7 @@ var/list/TYPES_SHORTCUTS = list(
 
 
 /client/proc/toggle_medal_disable()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Toggle Medal Disable"
 	set desc = "Toggles the safety lock on trying to contact the medal hub."
 	if(!holder)

@@ -3,7 +3,7 @@ var/list/sounds_cache = list()
 var/sound/admin_sound
 
 /client/proc/play_sound(S as sound)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Play Global Sound"
 	if(!check_rights(R_SOUNDS))	return
 
@@ -35,7 +35,7 @@ var/sound/admin_sound
 	feedback_add_details("admin_verb","PGS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/play_local_sound(S as sound)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Play Local Sound"
 	if(!check_rights(R_SOUNDS))
 		return
@@ -46,7 +46,7 @@ var/sound/admin_sound
 	feedback_add_details("admin_verb","PLS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/play_server_sound()
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Play Server Sound"
 	if(!check_rights(R_SOUNDS))	return
 
@@ -64,7 +64,7 @@ var/sound/admin_sound
 	feedback_add_details("admin_verb","PSS") //If you are copy-pasting this, ensure the 2nd paramter is unique to the new proc!
 
 /client/proc/set_round_end_sound(S as sound)
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	set name = "Set round end sound"
 	if(!check_rights(R_SOUNDS))
 		return
@@ -79,7 +79,7 @@ var/sound/admin_sound
 	feedback_add_details("admin_verb","SRES") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/stop_sounds()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Stop all sound"
 	if(!src.holder)
 		return

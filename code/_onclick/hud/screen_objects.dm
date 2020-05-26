@@ -457,7 +457,7 @@
 
 
 /obj/screen/flash
-	name = "flash"
+	name = "вспышка"
 	icon_state = "blank"
 	blend_mode = BLEND_ADD
 	screen_loc = "WEST,SOUTH to EAST,NORTH"

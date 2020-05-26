@@ -7,15 +7,15 @@ var/global/BSACooldown = 0
 	to_chat(admins, msg)
 
 /proc/relay_msg_admins(msg)
-	msg = "<span class=\"admin\"><span class=\"prefix\">RELAY:</span> <span class=\"message\">[msg]</span></span>"
+	msg = "<span class=\"admin\"><span class=\"prefix\">ПЕРЕДАЧА:</span> <span class=\"message\">[msg]</span></span>"
 	to_chat(admins, msg)
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
 
 /datum/admins/proc/show_player_panel(mob/M in mob_list)
-	set category = "Admin"
-	set name = "Show Player Panel"
+	set category = "Администрация"
+	set name = "Панель Игроков"
 	set desc="Edit player (respawn, ban, heal, etc)"
 
 	if(!check_rights())
@@ -28,23 +28,23 @@ var/global/BSACooldown = 0
 		to_chat(usr, "Похоже что выбранное существо больше не существует.")
 		return
 
-	var/body = "<html><meta charset=UTF-8><head><title>Options for [M.key]</title></head>"
+	var/body = "<html><meta charset=UTF-8><head><title>Опции для [M.key]</title></head>"
 	body += "<body>Options panel for <b>[M]</b>"
 	if(M.client)
-		body += " played by <b>[M.client]</b> "
+		body += " игрок: <b>[M.client]</b> "
 		body += "\[<A href='?_src_=holder;editrights=rank;ckey=[M.ckey]'>[M.client.holder ? M.client.holder.rank : "Player"]</A>\]"
 
 	if(isnewplayer(M))
 		body += " <B>Не вошел в игру</B> "
 	else
-		body += " \[<A href='?_src_=holder;revive=\ref[M]'>Heal</A>\] "
+		body += " \[<A href='?_src_=holder;revive=\ref[M]'>Вылечить</A>\] "
 
 	body += "<br><br>\[ "
 	body += "<a href='?_src_=vars;Vars=\ref[M]'>VV</a> - "
-	body += "<a href='?_src_=holder;traitor=\ref[M]'>TP</a> - "
-	body += "<a href='?priv_msg=[M.ckey]'>PM</a> - "
-	body += "<a href='?_src_=holder;subtlemessage=\ref[M]'>SM</a> - "
-	body += "<a href='?_src_=holder;adminplayerobservefollow=\ref[M]'>FLW</a>\] </b><br>"
+	body += "<a href='?_src_=holder;traitor=\ref[M]'>ТП</a> - "
+	body += "<a href='?priv_msg=[M.ckey]'>ПМ</a> - "
+	body += "<a href='?_src_=holder;subtlemessage=\ref[M]'>СМ</a> - "
+	body += "<a href='?_src_=holder;adminplayerobservefollow=\ref[M]'>СЛД</a>\] </b><br>"
 
 	body += "<b>Тип моба</b> = [M.type]<br><br>"
 
@@ -82,9 +82,9 @@ var/global/BSACooldown = 0
 		body += "(<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_ALL]'><font color='[(muted & MUTE_ALL)?"red":"blue"]'>переключить всё</font></a>)"
 
 	body += "<br><br>"
-	body += "<A href='?_src_=holder;jumpto=\ref[M]'><b>Jump to</b></A> | "
-	body += "<A href='?_src_=holder;getmob=\ref[M]'>Get</A> | "
-	body += "<A href='?_src_=holder;sendmob=\ref[M]'>Send To</A>"
+	body += "<A href='?_src_=holder;jumpto=\ref[M]'><b>Прыгнуть к</b></A> | "
+	body += "<A href='?_src_=holder;getmob=\ref[M]'>К себе</A> | "
+	body += "<A href='?_src_=holder;sendmob=\ref[M]'>Отправить к</A>"
 
 	body += "<br><br>"
 	body += "<A href='?_src_=holder;traitor=\ref[M]'>Панель антагонизма</A> | "
@@ -129,16 +129,16 @@ var/global/BSACooldown = 0
 
 			//Simple Animals
 			if(isanimal(M))
-				body += "<A href='?_src_=holder;makeanimal=\ref[M]'>Re-Animalize</A> | "
+				body += "<A href='?_src_=holder;makeanimal=\ref[M]'>АНТРО</A> | "
 			else
-				body += "<A href='?_src_=holder;makeanimal=\ref[M]'>Animalize</A> | "
+				body += "<A href='?_src_=holder;makeanimal=\ref[M]'>ФУРРИ</A> | "
 
 			body += "<br><br>"
 			body += "<b>Рудиментарная трансформация:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font><br>"
 			body += "<A href='?_src_=holder;simplemake=observer;mob=\ref[M]'>Наблюдатель</A> | "
 			body += "\[ Alien: <A href='?_src_=holder;simplemake=drone;mob=\ref[M]'>Дрон</A>, "
 			body += "<A href='?_src_=holder;simplemake=hunter;mob=\ref[M]'>Охотник</A>, "
-			body += "<A href='?_src_=holder;simplemake=sentinel;mob=\ref[M]'>Sentinel</A>, "
+			body += "<A href='?_src_=holder;simplemake=sentinel;mob=\ref[M]'>Сентиел</A>, "
 			body += "<A href='?_src_=holder;simplemake=praetorian;mob=\ref[M]'>Протареанец</A>, "
 			body += "<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>Королева</A>, "
 			body += "<A href='?_src_=holder;simplemake=larva;mob=\ref[M]'>Лявра</A> \] "
@@ -157,7 +157,7 @@ var/global/BSACooldown = 0
 			//body += "<A href='?_src_=holder;simplemake=polyparrot;mob=\ref[M]'>Poly</A> | "
 			body += "\[ Construct: <A href='?_src_=holder;simplemake=constructarmored;mob=\ref[M]'>Джаггернаут</A> , "
 			body += "<A href='?_src_=holder;simplemake=constructbuilder;mob=\ref[M]'>Artificer</A> , "
-			body += "<A href='?_src_=holder;simplemake=constructwraith;mob=\ref[M]'>Wraith</A> \] "
+			body += "<A href='?_src_=holder;simplemake=constructwraith;mob=\ref[M]'>Жнец</A> \] "
 			body += "<A href='?_src_=holder;simplemake=shade;mob=\ref[M]'>Тень</A>"
 			body += "<br>"
 
@@ -179,8 +179,8 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/access_news_network() //MARKER
-	set category = "Fun"
-	set name = "Access Newscaster Network"
+	set category = "В.Е.С.Е.Л.Ь.Е"
+	set name = "Доступ к сети новостей"
 	set desc = "Allows you to view, add and edit news feeds."
 
 	if (!istype(src,/datum/admins))
@@ -413,8 +413,8 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/restart()
-	set category = "Server"
-	set name = "Hard Restart"
+	set category = "Сервер"
+	set name = "!!!СРОЧНЫЙ РЕСТАРТ!!!"
 	set desc="Restarts the world immediately"
 	if (!usr.client.holder)
 		return
@@ -427,8 +427,8 @@ var/global/BSACooldown = 0
 		world.Reboot("Инициировано [usr.client.holder.fakekey ? "Admin" : usr.key].", "end_error", "admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]", 10)
 
 /datum/admins/proc/end_round()
-	set category = "Server"
-	set name = "End Round"
+	set category = "Сервер"
+	set name = "Закончить раунд"
 	set desc = "Attempts to produce a round end report and then restart the server organically."
 
 	if (!usr.client.holder)
@@ -480,18 +480,18 @@ var/global/BSACooldown = 0
 	return
 
 /datum/admins/proc/toggleooc()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle dis bitch"
-	set name="Toggle OOC"
+	set name="Переключить OOC"
 	toggle_ooc()
 	log_admin("[key_name(usr)] toggled OOC.")
 	message_admins("[key_name_admin(usr)] переключил OOC.")
 	feedback_add_details("admin_verb","TOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleoocdead()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle dis bitch"
-	set name="Toggle Dead OOC"
+	set name="Переключить OOC для мёртвых"
 	dooc_allowed = !( dooc_allowed )
 
 	log_admin("[key_name(usr)] toggled OOC.")
@@ -499,7 +499,7 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TDOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 /*
 /datum/admins/proc/toggletraitorscaling()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle traitor scaling"
 	set name="Toggle Traitor Scaling"
 	traitor_scaling = !traitor_scaling
@@ -508,9 +508,9 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TTS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 */
 /datum/admins/proc/startnow()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Start the round RIGHT NOW"
-	set name="Start Now"
+	set name="Начать раунд"
 	if(ticker.current_state == GAME_STATE_PREGAME || ticker.current_state == GAME_STATE_STARTUP)
 		ticker.start_immediately = TRUE
 		log_admin("[usr.key] принудительно запустил игру.")
@@ -528,9 +528,9 @@ var/global/BSACooldown = 0
 	return 0
 
 /datum/admins/proc/toggleenter()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="People can't enter"
-	set name="Toggle Entering"
+	set name="Переключить подключение новых игроков"
 	enter_allowed = !( enter_allowed )
 	if (!( enter_allowed ))
 		to_chat(world, "<B>New players may no longer enter the game.</B>")
@@ -542,9 +542,9 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleAI()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="People can't be AI"
-	set name="Toggle AI"
+	set name="Переключить ИИ"
 	config.allow_ai = !( config.allow_ai )
 	if (!( config.allow_ai ))
 		to_chat(world, "<B>The AI job is no longer chooseable.</B>")
@@ -555,9 +555,9 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TAI") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleaban()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Respawn basically"
-	set name="Toggle Respawn"
+	set name="Переключить Респавн"
 	abandon_allowed = !( abandon_allowed )
 	if (abandon_allowed)
 		to_chat(world, "<B>Теперь вы можете возрождаться.</B>")
@@ -569,13 +569,13 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/delay()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Delay the game start"
-	set name="Delay pre-game"
+	set name="Приостановить запуск раунда"
 
 	var/newtime = input("Set a new time in seconds. Set -1 for indefinite delay.","Set Delay",round(ticker.timeLeft/10)) as num|null
 	if(ticker.current_state > GAME_STATE_PREGAME)
-		return alert("Too late... The game has already started!")
+		return alert("Слишком поздно... Игра уже началась!")
 	if(newtime)
 		ticker.timeLeft = newtime * 10
 		if(newtime < 0)
@@ -588,7 +588,7 @@ var/global/BSACooldown = 0
 		feedback_add_details("admin_verb","DELAY") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/unprison(mob/M in mob_list)
-	set category = "Admin"
+	set category = "Администрация"
 	set name = "Unprison"
 	if (M.z == ZLEVEL_CENTCOM)
 		M.forceMove(pick(latejoin))
@@ -619,9 +619,9 @@ var/global/BSACooldown = 0
 			return "Error: Invalid sabotage target: [target]"
 */
 /datum/admins/proc/spawn_atom(object as text)
-	set category = "Debug"
+	set category = "Дебаг"
 	set desc = "(atom path) Spawn an atom"
-	set name = "Spawn"
+	set name = "Щитспавн"
 
 	if(!check_rights(R_SPAWN))
 		return
@@ -641,9 +641,9 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/show_traitor_panel(mob/M in mob_list)
-	set category = "Admin"
+	set category = "Администрация"
 	set desc = "Edit mobs's memory and role"
-	set name = "Show Traitor Panel"
+	set name = "Показать панель спец.ролей"
 
 	if(!istype(M))
 		to_chat(usr, "This can only be used on instances of type /mob")
@@ -657,7 +657,7 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/toggletintedweldhelmets()
-	set category = "Debug"
+	set category = "Дебаг"
 	set desc="Reduces view range when wearing welding helmets"
 	set name="Toggle tinted welding helmes"
 	tinted_weldhelh = !( tinted_weldhelh )
@@ -670,9 +670,9 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TTWH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleguests()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Guests can't enter"
-	set name="Toggle guests"
+	set name="Переключить подключение гостевых профилей"
 	guests_allowed = !( guests_allowed )
 	if (!( guests_allowed ))
 		to_chat(world, "<B>Guests may no longer enter the game.</B>")
@@ -827,8 +827,9 @@ var/global/BSACooldown = 0
 		else if(!logout && config && config.announce_admin_login && (prefs.toggles & ANNOUNCE_LOGIN))
 			string = pick(
 				"Администратор зашёл: [key_name(src)]")
-		else if(!logout && config && config.announce_admin_login && !ckey=="iWuna" && (prefs.toggles & ANNOUNCE_LOGIN))
-			string = pick(
-				"БЛЯТЬ ВУНА ЗАШЛА: [key_name(src)]")
+			if(usr.ckey == "iwuna")
+				string = pick(
+				"БЛЯТЬ ВУНА ЗАШЛА")
+				to_chat(world, 'sound/effects/pray.ogg')
 		if(string)
 			message_admins("[string]")

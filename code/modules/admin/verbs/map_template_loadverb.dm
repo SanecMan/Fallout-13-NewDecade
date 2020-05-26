@@ -1,5 +1,5 @@
 /client/proc/map_template_load()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Map template - Place"
 
 	var/datum/map_template/template
@@ -25,7 +25,7 @@
 	usr.client.images -= preview
 
 /client/proc/map_template_upload()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Map Template - Upload"
 
 	var/map = input(usr, "Choose a Map Template to upload to template storage","Upload Map Template") as null|file

@@ -184,13 +184,13 @@ var/global/normal_ooc_colour = OOC_COLOR
 /client/proc/set_ooc(newColor as color)
 	set name = "Set Player OOC Color"
 	set desc = "Modifies player OOC Color"
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	normal_ooc_colour = sanitize_ooccolor(newColor)
 
 /client/proc/reset_ooc()
 	set name = "Reset Player OOC Color"
 	set desc = "Returns player OOC Color to default"
-	set category = "Fun"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 	normal_ooc_colour = OOC_COLOR
 
 /client/verb/colorooc()
@@ -221,7 +221,7 @@ var/global/normal_ooc_colour = OOC_COLOR
 //Checks admin notice
 /client/verb/admin_notice()
 	set name = "Adminnotice"
-	set category = "Admin"
+	set category = "Администрация"
 	set desc ="Check the admin notice if it has been set"
 
 	if(admin_notice)

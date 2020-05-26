@@ -214,7 +214,7 @@
 
 	name = "Near Sightness"
 	quality = MINOR_NEGATIVE
-	text_gain_indication = "<span class='danger'>You can't see very well.</span>"
+	text_gain_indication = "<span class='danger'>Вы плохо видите.</span>"
 
 /datum/mutation/human/nearsight/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
@@ -230,7 +230,7 @@
 
 	name = "Epilepsy"
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You get a headache.</span>"
+	text_gain_indication = "<span class='danger'>У вас болит голова.</span>"
 
 /datum/mutation/human/epilepsy/on_life(mob/living/carbon/human/owner)
 	if(prob(1) && !owner.paralysis)
@@ -246,7 +246,7 @@
 /datum/mutation/human/bad_dna
 	name = "Unstable DNA"
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You feel strange.</span>"
+	text_gain_indication = "<span class='danger'>Вы ощущаете себя... Странно.</span>"
 
 /datum/mutation/human/bad_dna/on_acquiring(mob/living/carbon/human/owner)
 	to_chat(owner, text_gain_indication)
@@ -266,7 +266,7 @@
 /datum/mutation/human/cough
 	name = "Cough"
 	quality = MINOR_NEGATIVE
-	text_gain_indication = "<span class='danger'>You start coughing.</span>"
+	text_gain_indication = "<span class='danger'>Вы начинаете кашлять.</span>"
 
 /datum/mutation/human/cough/on_life(mob/living/carbon/human/owner)
 	if((prob(5) && owner.paralysis <= 1))
@@ -314,7 +314,7 @@
 /datum/mutation/human/tourettes
 	name = "Tourettes Syndrome"
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You twitch.</span>"
+	text_gain_indication = "<span class='danger'>Вы трясётесь.</span>"
 
 /datum/mutation/human/tourettes/on_life(mob/living/carbon/human/owner)
 	if((prob(10) && owner.paralysis <= 1))

@@ -29,7 +29,7 @@ var/list/preferences_datums = list()
 	var/datum/special/SPEC = new /datum/special()
 	var/datum/skills/SKILLS = new /datum/skills()
 
-	var/UI_style = "Fallout"
+	var/UI_style = "Fallout New"
 	var/hotkeys = FALSE
 	var/tgui_fancy = TRUE
 	var/tgui_lock = TRUE
@@ -1040,7 +1040,7 @@ var/list/preferences_datums = list()
 						if (world.byond_version >= 511 && user.client && user.client.byond_version >= 511)
 							user.client.vars["fps"] = clientfps
 				if("ui")
-					var/pickedui = input(user, "Choose your UI style.", "Character Preference")  as null|anything in list("Fallout", "Midnight", "Plasmafire", "Retro", "Slimecore", "Operative", "Clockwork")
+					var/pickedui = input(user, "Choose your UI style.", "Character Preference")  as null|anything in list("Fallout New", "Fallout", "Midnight", "Plasmafire", "Retro", "Slimecore", "Operative", "Clockwork")
 					if(pickedui)
 						UI_style = pickedui
 

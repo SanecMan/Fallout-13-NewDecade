@@ -3,7 +3,6 @@ var/datum/protected_configuration/protected_config = null
 
 var/host = null
 var/join_motd = null
-var/en_join_motd = null
 var/station_name = null
 var/game_version = "Fallout 13"
 var/changelog_hash = ""

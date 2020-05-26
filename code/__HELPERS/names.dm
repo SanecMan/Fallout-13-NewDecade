@@ -171,8 +171,8 @@ var/syndicate_code_response//Code response for traitors.
 	)
 
 	var/safety[] = list(1,2,3)//Tells the proc which options to remove later on.
-	var/nouns[] = list("love","hate","anger","peace","pride","sympathy","bravery","loyalty","honesty","integrity","compassion","charity","success","courage","deceit","skill","beauty","brilliance","pain","misery","beliefs","dreams","justice","truth","faith","liberty","knowledge","thought","information","culture","trust","dedication","progress","education","hospitality","leisure","trouble","friendships", "relaxation")
-	var/drinks[] = list("vodka and tonic","gin fizz","bahama mama","manhattan","black Russian","whiskey soda","long island iced tea","margarita","Irish coffee"," manly dwarf","Irish cream","doctor's delight","Beepksy Smash","tequila sunrise","brave bull","gargle blaster","bloody mary","whiskey cola","white Russian","vodka martini","martini","Cuba libre","kahlua","vodka","wine","moonshine")
+	var/nouns[] = list("любовь","ненависть","злость","мир","прайд","симпатия","храбрость","верность","честность","смех","забота","магия","щедрость","кураж","судьба","умение","красота","бриллиант","боль","изолента","особенности","мечты","правосудие","правда","проёб","либерал","знание","жёсткость","информация","культура","доверие","dedication","прогресс","образование","hospitality","leisure","проблема","дружба", "отдых")
+	var/drinks[] = list("водка и тоник","джин","багама мама","мэнхэттэн","чёрный русский","виски кола","лонг-айланд","маргарита","ирландский кофе"," мужской дварф","Ирландский крем","наслаждение доктора","Бипски Смэш","текила санрайз","Бык","горлодёр","кровавая мэри","виски сода","белый русский","водка с мартини","мартини","Куба Либре","коньяк","водка","вино","самогон")
 	var/locations[] = teleportlocs.len ? teleportlocs : drinks//if null, defaults to drinks instead.
 
 	var/names[] = list()

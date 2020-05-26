@@ -73,8 +73,8 @@
 
 /obj/structure/proc/climb_structure(mob/user)
 	src.add_fingerprint(user)
-	user.visible_message("<span class='warning'>[user] starts climbing onto [src].</span>", \
-								"<span class='notice'>You start climbing onto [src]...</span>")
+	user.visible_message("<span class='warning'>[user] начинает забираться на [src].</span>", \
+								"<span class='notice'>Вы начали забираться на[src]...</span>")
 	var/adjusted_climb_time = climb_time
 	if(user.restrained()) //climbing takes twice as long when restrained.
 		adjusted_climb_time *= 2
@@ -108,10 +108,10 @@
 	var/healthpercent = (obj_integrity/max_integrity) * 100
 	switch(healthpercent)
 		if(100 to INFINITY)
-			return  "It seems pristine and undamaged."
+			return  "Выглядит нетронутым."
 		if(50 to 100)
-			return  "It looks slightly damaged."
+			return  "Выглядит немного повреждённым."
 		if(25 to 50)
-			return  "It appears heavily damaged."
+			return  "Похоже, оно сильно повреждено."
 		if(0 to 25)
-			return  "<span class='warning'>It's falling apart!</span>"
+			return  "<span class='warning'>Похоже, оно вот-вот развалится!</span>"

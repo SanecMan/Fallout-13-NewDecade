@@ -81,23 +81,23 @@
 
 	using = new /obj/screen/drop()
 	using.icon = ui_style
-	using.screen_loc = ui_drop_throw
+	using.screen_loc = ui_drop
 	static_inventory += using
 
 	using = new /obj/screen/resist()
 	using.icon = ui_style
-	using.screen_loc = ui_pull_resist
+	using.screen_loc = ui_resist
 	hotkeybuttons += using
 
 	throw_icon = new /obj/screen/throw_catch()
 	throw_icon.icon = ui_style
-	throw_icon.screen_loc = ui_drop_throw
+	throw_icon.screen_loc = ui_throw
 	hotkeybuttons += throw_icon
 
 	pull_icon = new /obj/screen/pull()
 	pull_icon.icon = ui_style
 	pull_icon.update_icon(mymob)
-	pull_icon.screen_loc = ui_pull_resist
+	pull_icon.screen_loc = ui_pull
 	static_inventory += pull_icon
 
 //begin indicators
