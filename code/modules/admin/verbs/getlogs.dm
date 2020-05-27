@@ -81,8 +81,8 @@
 
 //Shows today's server log
 /datum/admins/proc/view_txt_log()
-	set category = "Admin"
-	set name = "Show Server Log"
+	set category = "Администрация"
+	set name = "!!!СКАЧАТЬ ЛОГИ ЗА СЕГОДНЯ!!!"
 	set desc = "Shows today's server log."
 
 	if(fexists("[diary]"))
@@ -95,8 +95,8 @@
 
 //Shows today's attack log
 /datum/admins/proc/view_atk_log()
-	set category = "Admin"
-	set name = "Show Server Attack Log"
+	set category = "Администрация"
+	set name = "Показать логи атаки за этот раунд"
 	set desc = "Shows today's server attack log."
 
 	if(fexists("[diaryofmeanpeople]"))

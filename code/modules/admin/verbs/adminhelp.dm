@@ -77,8 +77,8 @@
 	adminhelptimerid = 0
 
 /client/verb/adminhelp(msg as text)
-	set category = "Admin"
-	set name = "Adminhelp"
+	set category = "Администрация"
+	set name = "!!!ПОМОЩЬ АДМИНИСТРАЦИИ!!!"
 
 	if(say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
@@ -115,7 +115,7 @@
 
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
-			to_chat(X, 'sound/effects/-adminhelp.ogg')
+			to_chat(X, 'sound/effects/adminhelp.ogg')
 		window_flash(X)
 		to_chat(X, msg)
 

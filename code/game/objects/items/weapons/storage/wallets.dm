@@ -1,6 +1,6 @@
 /obj/item/weapon/storage/wallet
-	name = "wallet"
-	desc = "It can hold a few small and personal things."
+	name = "кошелёк"
+	desc = "Может держать в себе пару мелких вещей, или деньги."
 	storage_slots = 4
 	icon_state = "wallet"
 	w_class = WEIGHT_CLASS_SMALL

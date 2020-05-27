@@ -1,5 +1,5 @@
 /datum/surgery/organ_manipulation
-	name = "organ manipulation"
+	name = "манипуляция органами"
 	steps = list(/datum/surgery_step/incise, /datum/surgery_step/retract_skin, /datum/surgery_step/saw, /datum/surgery_step/clamp_bleeders,
 	/datum/surgery_step/incise, /datum/surgery_step/manipulate_organs)
 	species = list(/mob/living/carbon/human, /mob/living/carbon/monkey)
@@ -58,11 +58,11 @@
 		current_type = "insert"
 		I = tool
 		if(target_zone != I.zone || target.getorganslot(I.slot))
-			to_chat(user, "<span class='notice'>There is no room for [I] in [target]'s [parse_zone(target_zone)]!</span>")
+			to_chat(user, "<span class='notice'>Тут нет места для [I] в [parse_zone(target_zone)] [target]!</span>")
 			return -1
 
-		user.visible_message("[user] begins to insert [tool] into [target]'s [parse_zone(target_zone)].",
-			"<span class='notice'>You begin to insert [tool] into [target]'s [parse_zone(target_zone)]...</span>")
+		user.visible_message("[user] начинает вставлять [tool] в [parse_zone(target_zone)] [target].",
+			"<span class='notice'>Вы начинаете вставлять [tool] в [parse_zone(target_zone)] [target]...</span>")
 
 	else if(implement_type in implements_extract)
 		current_type = "extract"
@@ -85,18 +85,18 @@
 			if(I && user && target && user.Adjacent(target) && user.get_active_held_item() == tool)
 				I = organs[I]
 				if(!I) return -1
-				user.visible_message("[user] begins to extract [I] from [target]'s [parse_zone(target_zone)].",
-					"<span class='notice'>You begin to extract [I] from [target]'s [parse_zone(target_zone)]...</span>")
+				user.visible_message("[user] начинает доставать [I] из [parse_zone(target_zone)] [target].",
+					"<span class='notice'>Вы начинаете доставать [I] из [parse_zone(target_zone)] [target]...</span>")
 			else
 				return -1
 
 	else if(implement_type in implements_mend)
 		current_type = "mend"
-		user.visible_message("[user] begins to mend the incision in [target]'s [parse_zone(target_zone)].",
-			"<span class='notice'>You begin to mend the incision in [target]'s [parse_zone(target_zone)]...</span>")
+		user.visible_message("[user] начинает прижигать [parse_zone(target_zone)] [target].",
+			"<span class='notice'>Вы начинаете прижигать надрез [target] в [parse_zone(target_zone)]...</span>")
 
 	else if(istype(tool, /obj/item/weapon/reagent_containers/food/snacks/organ))
-		to_chat(user, "<span class='warning'>[tool] was biten by someone! It's too damaged to use!</span>")
+		to_chat(user, "<span class='warning'>[tool] кто-то попытался употребить в еду! Это больше нельзя использовать для операции!</span>")
 		return -1
 
 /datum/surgery_step/manipulate_organs/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)

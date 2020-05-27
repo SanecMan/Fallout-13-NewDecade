@@ -214,11 +214,11 @@
 
 /proc/give_codewords(mob/living/traitor_mob)
 	to_chat(traitor_mob, "<U><B>The Syndicate provided you with the following information on how to identify their agents:</B></U>")
-	to_chat(traitor_mob, "<B>Code Phrase</B>: <span class='danger'>[syndicate_code_phrase]</span>")
-	to_chat(traitor_mob, "<B>Code Response</B>: <span class='danger'>[syndicate_code_response]</span>")
+	to_chat(traitor_mob, "<B>Кодовые слова</B>: <span class='danger'>[syndicate_code_phrase]</span>")
+	to_chat(traitor_mob, "<B>Ответы на кодовые слова</B>: <span class='danger'>[syndicate_code_response]</span>")
 
-	traitor_mob.mind.store_memory("<b>Code Phrase</b>: [syndicate_code_phrase]")
-	traitor_mob.mind.store_memory("<b>Code Response</b>: [syndicate_code_response]")
+	traitor_mob.mind.store_memory("<b>Кодовые слова</b>: [syndicate_code_phrase]")
+	traitor_mob.mind.store_memory("<b>Ответы на кодовые слова</b>: [syndicate_code_response]")
 
 	to_chat(traitor_mob, "Use the code words in the order provided, during regular conversation, to identify other agents. Proceed with caution, however, as everyone is a potential foe.")
 
@@ -262,16 +262,16 @@
 				var/count = 1
 				for(var/datum/objective/objective in traitor.objectives)
 					if(objective.check_completion())
-						objectives += "<br><B>Objective #[count]</B>: [objective.explanation_text] <font color='green'><B>Success!</B></font>"
+						objectives += "<br><B>Задача #[count]</B>: [objective.explanation_text] <font color='green'><B>Успех!</B></font>"
 						feedback_add_details("traitor_objective","[objective.type]|SUCCESS")
 					else
-						objectives += "<br><B>Objective #[count]</B>: [objective.explanation_text] <font color='red'>Fail.</font>"
+						objectives += "<br><B>Задача #[count]</B>: [objective.explanation_text] <font color='red'>Провал.</font>"
 						feedback_add_details("traitor_objective","[objective.type]|FAIL")
 						traitorwin = 0
 					count++
 
 			if(uplink_true)
-				text += " (used [TC_uses] TC) [purchases]"
+				text += " (использовал [TC_uses] TC) [purchases]"
 				if(TC_uses==0 && traitorwin)
 					text += "<BIG><IMG CLASS=icon SRC=\ref['icons/BadAss.dmi'] ICONSTATE='badass'></BIG>"
 
@@ -285,16 +285,16 @@
 
 
 			if(traitorwin)
-				text += "<br><font color='green'><B>The [special_role_text] was successful!</B></font>"
+				text += "<br><font color='green'><B> [special_role_text] выполняет свою задачу!</B></font>"
 				feedback_add_details("traitor_success","SUCCESS")
 			else
-				text += "<br><font color='red'><B>The [special_role_text] has failed!</B></font>"
+				text += "<br><font color='red'><B> [special_role_text] проваливает свою задачу!</B></font>"
 				feedback_add_details("traitor_success","FAIL")
 
 			text += "<br>"
 
-		text += "<br><b>The code phrases were:</b> <font color='red'>[syndicate_code_phrase]</font><br>\
-		<b>The code responses were:</b> <font color='red'>[syndicate_code_response]</font><br>"
+		text += "<br><b>Кодовыми фразами были:</b> <font color='red'>[syndicate_code_phrase]</font><br>\
+		<b>Ответы на кодовые фразы были:</b> <font color='red'>[syndicate_code_response]</font><br>"
 		to_chat(world, text)
 
 	return 1

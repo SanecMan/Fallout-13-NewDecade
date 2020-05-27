@@ -1,5 +1,5 @@
 /obj/item/weapon/storage/book
-	name = "hollowed book"
+	name = "незаполненная книга"
 	desc = "I guess someone didn't like it."
 	icon = 'icons/obj/library.dmi'
 	icon_state ="book"
@@ -17,7 +17,7 @@ var/global/list/biblestates     = list("bible", "koran", "scrapbook", "burning",
 var/global/list/bibleitemstates = list("bible", "koran", "scrapbook", "bible",         "bible",       "bible",        "syringe_kit",   "syringe_kit", "syringe_kit", "syringe_kit",      "syringe_kit", "kingyellow",         "ithaqua", "scientology", "melted",       "necronomicon")
 
 /obj/item/weapon/storage/book/bible
-	name = "bible"
+	name = "библия"
 	desc = "Apply to head repeatedly."
 	icon = 'icons/obj/storage.dmi'
 	icon_state ="bible"

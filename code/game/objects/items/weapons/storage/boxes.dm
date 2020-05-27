@@ -22,8 +22,8 @@
  */
 
 /obj/item/weapon/storage/box
-	name = "box"
-	desc = "It's just an ordinary box."
+	name = "коробка"
+	desc = "Просто обычная коробка."
 	icon_state = "box"
 	item_state = "syringe_kit"
 	resistance_flags = FLAMMABLE

@@ -1,6 +1,6 @@
 /obj/structure/window
-	name = "window"
-	desc = "A window."
+	name = "окно"
+	desc = "Окно."
 	icon_state = "window"
 	density = 1
 	layer = ABOVE_OBJ_LAYER //Just above doors

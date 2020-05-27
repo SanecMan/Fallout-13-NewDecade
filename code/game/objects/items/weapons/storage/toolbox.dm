@@ -1,5 +1,5 @@
 /obj/item/weapon/storage/toolbox
-	name = "Ящик для инструментов"
+	name = "ящик для инструментов"
 	desc = "Опасно. Очень Робустный."
 	icon_state = "red"
 	item_state = "toolbox_red"
@@ -19,7 +19,7 @@
 	return (BRUTELOSS)
 
 /obj/item/weapon/storage/toolbox/emergency
-	name = "Ящик для инструментов"
+	name = "ящик для инструментов"
 	icon_state = "red"
 	item_state = "toolbox_red"
 
@@ -35,7 +35,7 @@
 	new /obj/item/device/radio/off(src)
 
 /obj/item/weapon/storage/toolbox/mechanical
-	name = "Ящик для инструментов механика"
+	name = "ящик для инструментов механика"
 	icon_state = "blue"
 	item_state = "toolbox_blue"
 
@@ -48,7 +48,7 @@
 	new /obj/item/weapon/wirecutters(src)
 
 /obj/item/weapon/storage/toolbox/electrical
-	name = "Ящик для инструментов электрика"
+	name = "ящик для инструментов электрика"
 	icon_state = "yellow"
 	item_state = "toolbox_yellow"
 
@@ -66,7 +66,7 @@
 		new /obj/item/stack/cable_coil(src,30,pickedcolor)
 
 /obj/item/weapon/storage/toolbox/syndicate
-	name = "Подозрительно выглядящий ящик для инструметов"
+	name = "подозрительно выглядящий ящик для инструметов"
 	icon_state = "syndicate"
 	item_state = "toolbox_syndi"
 	origin_tech = "combat=2;syndicate=1;engineering=2"
@@ -85,7 +85,7 @@
 	new /obj/item/clothing/gloves/combat(src)
 
 /obj/item/weapon/storage/toolbox/drone
-	name = "mechanical toolbox"
+	name = "ящик для инструментов механика"
 	icon_state = "blue"
 	item_state = "toolbox_blue"
 
@@ -101,7 +101,7 @@
 	new /obj/item/device/multitool(src)
 
 /obj/item/weapon/storage/toolbox/brass
-	name = "brass box"
+	name = "бронзовый ящик"
 	desc = "A huge brass box with several indentations in its surface."
 	icon_state = "brassbox"
 	w_class = WEIGHT_CLASS_HUGE
@@ -110,7 +110,7 @@
 	storage_slots = 28
 	slowdown = 1
 	flags = HANDSLOW
-	attack_verb = list("robusted", "crushed", "smashed")
+	attack_verb = list("робустит", "крушит", "бьёт")
 	var/proselytizer_type = /obj/item/clockwork/clockwork_proselytizer/scarab
 
 /obj/item/weapon/storage/toolbox/brass/prefilled/New()

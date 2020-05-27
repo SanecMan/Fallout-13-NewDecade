@@ -1,6 +1,6 @@
 /client/proc/admin_memo()
-	set name = "Memo"
-	set category = "Server"
+	set name = "Мемо"
+	set category = "Сервер"
 	if(!check_rights(0))
 		return
 	if(!dbcon.IsConnected())

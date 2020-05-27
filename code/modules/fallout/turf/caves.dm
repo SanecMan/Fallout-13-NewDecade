@@ -33,9 +33,8 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 			icon_state = pick("rock_Clown1","rock_Clown2","rock_Clown3")
 
 /turf/closed/mineral //wall piece
-	name = "rock"
+	name = "камень"
 	icon = 'icons/fallout/turfs/mining.dmi'
-	icon_state = "rock2"
 	//var/smooth_icon = 'icons/turf/smoothrocks.dmi'
 	//smooth = SMOOTH_MORE|SMOOTH_BORDER
 	canSmoothWith
@@ -65,8 +64,8 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 				var/turf/T = get_step(src, dir)
 				if(istype(T, /turf/closed/mineral/random))
 					Spread(T)
-	//spawn(15)
-		//randomizerock(mineraltype)
+	spawn(15)
+		randomizerock(mineraltype)
 /turf/closed/mineral/shuttleRotate(rotation)
 	setDir(angle2dir(rotation+dir2angle(dir)))
 	queue_smooth(src)
@@ -82,7 +81,7 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 /turf/closed/mineral/attackby(obj/item/weapon/pickaxe/P, mob/user, params)
 
 	if (!user.IsAdvancedToolUser())
-		usr << "<span class='warning'>You don't have the dexterity to do this!</span>"
+		usr << "<span class='warning'>Вы слишком тупы чтобы пользоваться этим!</span>"
 		return
 
 	if (istype(P, /obj/item/weapon/pickaxe))
@@ -93,12 +92,12 @@ turf/closed/mineral/proc/randomizerock(mineraltype)
 		if(last_act+P.digspeed > world.time)//prevents message spam
 			return
 		last_act = world.time
-		user << "<span class='notice'>You start mining...</span>"
+		user << "<span class='notice'>Вы начинаете копать...</span>"
 		P.playDigSound()
 
 		if(do_after(user,P.digspeed, target = src))
 			if(ismineralturf(src))
-				user << "<span class='notice'>You finish cutting into the rock.</span>"
+				user << "<span class='notice'>Вы закончили копать [src].</span>"
 				gets_drilled(user)
 				feedback_add_details("pick_used_mining","[P.type]")
 	else

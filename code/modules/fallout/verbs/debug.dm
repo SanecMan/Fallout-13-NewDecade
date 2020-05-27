@@ -1,5 +1,5 @@
 /client/proc/library_debug_cat() //Easy to use library debug tool. Doesn't work yet. Shame.
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Library: Catalog"
 	if(!check_rights(R_PERMISSIONS))	return
 
@@ -26,7 +26,7 @@
 	onclose(usr, "library")
 
 /client/proc/library_debug_remove()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Library: Remove by id"
 	if(!check_rights(R_PERMISSIONS))	return
 
@@ -57,7 +57,7 @@
 		usr << query.ErrorMsg()
 
 /client/proc/library_debug_read()
-	set category = "Debug"
+	set category = "Дебаг"
 	set name = "Library: Read by id"
 	if(!check_rights(R_PERMISSIONS))	return
 

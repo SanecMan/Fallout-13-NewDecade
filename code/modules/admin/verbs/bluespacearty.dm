@@ -1,6 +1,6 @@
 /client/proc/bluespace_artillery(mob/M in mob_list)
-	set name = "Bluespace Artillery"
-	set category = "Fun"
+	set name = "АРТИЛЛЕРИЯ"
+	set category = "В.Е.С.Е.Л.Ь.Е"
 
 	if(!holder || !check_rights(R_FUN))
 		return

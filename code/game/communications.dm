@@ -247,7 +247,7 @@ var/list/pointers = list()
 
 /client/proc/print_pointers()
 	set name = "Debug Signals"
-	set category = "Debug"
+	set category = "Дебаг"
 
 	if(!holder)
 		return

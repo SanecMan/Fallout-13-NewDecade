@@ -284,7 +284,7 @@
 		/obj/item/clothing/under/syndicate/tacticool,
 		/obj/item/clothing/glasses/night
 		)
-	price = 75000 // Stalkeros: А не слишком ли дохрена? // iWuna: net, ne mnogo.
+	price = 75000 // Stalkeros: А не слишком ли дохрена? // iWuna: net, ne mnogo. //SanecMan: Помоему это немонго много
 
 /datum/content_pack/f76
 	name = "Коллекционное Издание Фоллаут 13"
