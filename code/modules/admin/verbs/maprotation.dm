@@ -1,5 +1,5 @@
 /client/proc/forcerandomrotate()
-	set category = "Сервер"
+	set category = "Server"
 	set name = "Задействовать рандомную смену карты"
 	var/rotate = alert("Force a random map rotation to trigger?", "Rotate map?", "Yes", "Cancel")
 	if (rotate != "Yes")
@@ -10,7 +10,7 @@
 	maprotate()
 
 /client/proc/adminchangemap()
-	set category = "Сервер"
+	set category = "Server"
 	set name = "Сменить Карту"
 	var/list/maprotatechoices = list()
 	for (var/map in config.maplist)

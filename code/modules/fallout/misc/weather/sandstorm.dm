@@ -20,6 +20,7 @@
 		..()
 	for (var/area/A in SSweather.outside_areas)
 		for(var/mob/living/carbon/human/H in A)
+			to_chat(world, "Воздух вокруг становится сухим и поднимается сильный ветер")
 			H.playsound_local(get_turf(H), 'sound/f13effects/sandstorm_transition.ogg', vol = 15, channel = SANDSTORM_CHANNEL, repeat = 1)
 	return TRUE
 

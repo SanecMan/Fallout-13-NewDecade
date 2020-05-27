@@ -1,6 +1,6 @@
 ﻿<!-- Most valid html will work in here, excluding images. -->
 
-<h1>Добро пожаловать на Fallout 13</h1>
+<h1 style="text-align: center;"><span style="background-color: #3366ff;"><span style="color: #ffffff;">Добро пожаловать на</span> <span style="color: #ffff99;">Fallout 13</span></span></h1>
 
 <a href="https://www.reddit.com/r/Fallout13/">Наш реддит</a> .</b></i>
 <i>Донаты будут направленны на разработку.</i>
