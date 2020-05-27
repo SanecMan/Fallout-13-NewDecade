@@ -335,7 +335,7 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/hide_most_verbs()//Allows you to keep some functionality while hiding some verbs
 	set name = "Adminverbs - Hide Most"
-	set category = "Администрация"
+	set category = "Admin"
 
 	verbs.Remove(/client/proc/hide_most_verbs, admin_verbs_hideable)
 	verbs += /client/proc/show_verbs
@@ -346,7 +346,7 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/hide_verbs()
 	set name = "Adminverbs - Hide All"
-	set category = "Администрация"
+	set category = "Admin"
 
 	remove_admin_verbs()
 	verbs += /client/proc/show_verbs
@@ -357,7 +357,7 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/show_verbs()
 	set name = "Adminverbs - Show"
-	set category = "Администрация"
+	set category = "Admin"
 
 	verbs -= /client/proc/show_verbs
 	add_admin_verbs()
@@ -369,7 +369,7 @@ var/list/admin_verbs_hideable = list(
 
 
 /client/proc/admin_ghost()
-	set category = "Администрация"
+	set category = "Admin"
 	set name = "Aghost"
 	if(!holder)
 		return
@@ -398,8 +398,8 @@ var/list/admin_verbs_hideable = list(
 
 
 /client/proc/invisimin()
-	set name = "Невидимость"
-	set category = "Администрация"
+	set name = "Invisimin"
+	set category = "Admin"
 	set desc = "Toggles ghost-like invisibility (Don't abuse this)"
 	if(holder && mob)
 		if(mob.invisibility == INVISIBILITY_OBSERVER)
@@ -410,8 +410,8 @@ var/list/admin_verbs_hideable = list(
 			to_chat(mob, "<span class='adminnotice'><b>Невидимость включена. Теперь вы невидимы словно призрак.</b></span>")
 
 /client/proc/player_panel_new()
-	set name = "Панель игроков 2"
-	set category = "Администрация"
+	set name = "Player Panel"
+	set category = "Admin"
 	if(holder)
 		holder.player_panel_new()
 	feedback_add_details("admin_verb","PPN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -419,7 +419,7 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/check_antagonists()
 	set name = "Check Antagonists"
-	set category = "Администрация"
+	set category = "Admin"
 	if(holder)
 		holder.check_antagonists()
 		log_admin("[key_name(usr)] checked antagonists.")	//for tsar~
@@ -430,7 +430,7 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/unban_panel()
 	set name = "Unban Panel"
-	set category = "Администрация"
+	set category = "Admin"
 	if(holder)
 		if(config.ban_legacy_system)
 			holder.unbanpanel()
@@ -440,16 +440,16 @@ var/list/admin_verbs_hideable = list(
 	return
 
 /client/proc/game_panel()
-	set name = "!!!ЩИТСПАВН ПАНЕЛЬ!!!"
-	set category = "Администрация"
+	set name = "Game Panel"
+	set category = "Admin"
 	if(holder)
 		holder.Game()
 	feedback_add_details("admin_verb","GP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/secrets()
-	set name = "Секреты"
-	set category = "Администрация"
+	set name = "Secrets"
+	set category = "Admin"
 	if (holder)
 		holder.Secrets()
 	feedback_add_details("admin_verb","S") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -476,8 +476,8 @@ var/list/admin_verbs_hideable = list(
 	stealthminID["[ckey]"] = "@[num2text(num)]"
 
 /client/proc/stealth()
-	set category = "Администрация"
-	set name = "Стелс режим"
+	set category = "Admin"
+	set name = "Stealth Mode"
 	if(holder)
 		if(holder.fakekey)
 			holder.fakekey = null
@@ -559,7 +559,7 @@ var/list/admin_verbs_hideable = list(
 		feedback_add_details("admin_verb","DDXB") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/get_dynex_range()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Get DynEx Range"
 	set desc = "Get the estimated range of a bomb, using explosive power."
 
@@ -568,7 +568,7 @@ var/list/admin_verbs_hideable = list(
 	to_chat(usr, "Estimated Explosive Range: (Devestation: [round(range*0.25)], Heavy: [round(range*0.5)], Light: [round(range)])")
 
 /client/proc/get_dynex_power()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Get DynEx Power"
 	set desc = "Get the estimated required power of a bomb, to reach a specific range."
 
@@ -577,7 +577,7 @@ var/list/admin_verbs_hideable = list(
 	to_chat(usr, "Estimated Explosive Power: [power]")
 
 /client/proc/set_dynex_scale()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Set DynEx Scale"
 	set desc = "Set the scale multiplier of dynex explosions. The default is 0.5."
 
@@ -589,7 +589,7 @@ var/list/admin_verbs_hideable = list(
 	message_admins("[key_name_admin(usr)] has  modified Dynamic Explosion Scale: [ex_scale]")
 
 /client/proc/give_spell(mob/T in mob_list)
-	set category = "В.Е.С.Е.Л.Ь.Е"
+	set category = "Fun"
 	set name = "Give Spell"
 	set desc = "Gives a spell to a mob."
 
@@ -613,7 +613,7 @@ var/list/admin_verbs_hideable = list(
 		message_admins("<span class='danger'>Spells given to mindless mobs will not be transferred in mindswap or cloning!</span>")
 
 /client/proc/remove_spell(mob/T in mob_list)
-	set category = "В.Е.С.Е.Л.Ь.Е"
+	set category = "Fun"
 	set name = "Remove Spell"
 	set desc = "Remove a spell from the selected mob."
 
@@ -626,7 +626,7 @@ var/list/admin_verbs_hideable = list(
 			feedback_add_details("admin_verb","RS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/give_disease(mob/T in mob_list)
-	set category = "В.Е.С.Е.Л.Ь.Е"
+	set category = "Fun"
 	set name = "Give Disease"
 	set desc = "Gives a Disease to a mob."
 	var/datum/disease/D = input("Choose the disease to give to that guy", "ACHOO") as null|anything in diseases
@@ -659,7 +659,7 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/toggle_log_hrefs()
 	set name = "Toggle href logging"
-	set category = "Сервер"
+	set category = "Server"
 	if(!holder)
 		return
 	if(config)
@@ -672,13 +672,13 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/check_ai_laws()
 	set name = "Check AI Laws"
-	set category = "Администрация"
+	set category = "Admin"
 	if(holder)
 		src.holder.output_ai_laws()
 
 /client/proc/deadmin()
 	set name = "Deadmin"
-	set category = "Администрация"
+	set category = "Admin"
 	set desc = "Shed your admin powers."
 
 	if(!holder)
@@ -698,7 +698,7 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/readmin()
 	set name = "Readmin"
-	set category = "Администрация"
+	set category = "Admin"
 	set desc = "Regain your admin powers."
 
 	load_admins(ckey)
@@ -716,7 +716,7 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/populate_world(amount = 50 as num)
 	set name = "Populate World"
-	set category = "Дебаг"
+	set category = "Debug"
 	set desc = "(\"Amount of mobs to create\") Populate the world with test mobs."
 
 	if (amount > 0)
@@ -749,7 +749,7 @@ var/list/admin_verbs_hideable = list(
 
 /client/proc/toggle_AI_interact()
 	set name = "Toggle Admin AI Interact"
-	set category = "Администрация"
+	set category = "Admin"
 	set desc = "Allows you to interact with most machines as an AI would as a ghost"
 
 	AI_Interact = !AI_Interact

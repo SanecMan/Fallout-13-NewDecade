@@ -14,8 +14,8 @@ var/global/BSACooldown = 0
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
 
 /datum/admins/proc/show_player_panel(mob/M in mob_list)
-	set category = "Администрация"
-	set name = "Панель Игроков"
+	set category = "Admin"
+	set name = "Show Player Panel"
 	set desc="Edit player (respawn, ban, heal, etc)"
 
 	if(!check_rights())
@@ -179,8 +179,8 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/access_news_network() //MARKER
-	set category = "В.Е.С.Е.Л.Ь.Е"
-	set name = "Доступ к сети новостей"
+	set category = "Fun"
+	set name = "Access Newscaster Network"
 	set desc = "Allows you to view, add and edit news feeds."
 
 	if (!istype(src,/datum/admins))
@@ -413,8 +413,8 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/restart()
-	set category = "Сервер"
-	set name = "!!!СРОЧНЫЙ РЕСТАРТ!!!"
+	set category = "Server"
+	set name = "Hard Restart"
 	set desc="Restarts the world immediately"
 	if (!usr.client.holder)
 		return
@@ -427,8 +427,8 @@ var/global/BSACooldown = 0
 		world.Reboot("Инициировано [usr.client.holder.fakekey ? "Admin" : usr.key].", "end_error", "admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]", 10)
 
 /datum/admins/proc/end_round()
-	set category = "Сервер"
-	set name = "Закончить раунд"
+	set category = "Server"
+	set name = "End Round"
 	set desc = "Attempts to produce a round end report and then restart the server organically."
 
 	if (!usr.client.holder)
@@ -480,18 +480,18 @@ var/global/BSACooldown = 0
 	return
 
 /datum/admins/proc/toggleooc()
-	set category = "Сервер"
+	set category = "Server"
 	set desc="Toggle dis bitch"
-	set name="Переключить OOC"
+	set name="Toggle OOC"
 	toggle_ooc()
 	log_admin("[key_name(usr)] toggled OOC.")
 	message_admins("[key_name_admin(usr)] переключил OOC.")
 	feedback_add_details("admin_verb","TOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleoocdead()
-	set category = "Сервер"
+	set category = "Server"
 	set desc="Toggle dis bitch"
-	set name="Переключить OOC для мёртвых"
+	set name="Toggle Dead OOC"
 	dooc_allowed = !( dooc_allowed )
 
 	log_admin("[key_name(usr)] toggled OOC.")
@@ -499,7 +499,7 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TDOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 /*
 /datum/admins/proc/toggletraitorscaling()
-	set category = "Сервер"
+	set category = "Server"
 	set desc="Toggle traitor scaling"
 	set name="Toggle Traitor Scaling"
 	traitor_scaling = !traitor_scaling
@@ -508,9 +508,9 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TTS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 */
 /datum/admins/proc/startnow()
-	set category = "Сервер"
+	set category = "Server"
 	set desc="Start the round RIGHT NOW"
-	set name="Начать раунд"
+	set name="Start Now"
 	if(ticker.current_state == GAME_STATE_PREGAME || ticker.current_state == GAME_STATE_STARTUP)
 		ticker.start_immediately = TRUE
 		log_admin("[usr.key] принудительно запустил игру.")
@@ -528,9 +528,9 @@ var/global/BSACooldown = 0
 	return 0
 
 /datum/admins/proc/toggleenter()
-	set category = "Сервер"
+	set category = "Server"
 	set desc="People can't enter"
-	set name="Переключить подключение новых игроков"
+	set name="Toggle Entering"
 	enter_allowed = !( enter_allowed )
 	if (!( enter_allowed ))
 		to_chat(world, "<B>New players may no longer enter the game.</B>")
@@ -542,9 +542,9 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleAI()
-	set category = "Сервер"
+	set category = "Server"
 	set desc="People can't be AI"
-	set name="Переключить ИИ"
+	set name="Toggle AI"
 	config.allow_ai = !( config.allow_ai )
 	if (!( config.allow_ai ))
 		to_chat(world, "<B>The AI job is no longer chooseable.</B>")
@@ -555,9 +555,9 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TAI") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleaban()
-	set category = "Сервер"
+	set category = "Server"
 	set desc="Respawn basically"
-	set name="Переключить Респавн"
+	set name="Toggle Respawn"
 	abandon_allowed = !( abandon_allowed )
 	if (abandon_allowed)
 		to_chat(world, "<B>Теперь вы можете возрождаться.</B>")
@@ -569,9 +569,9 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/delay()
-	set category = "Сервер"
+	set category = "Server"
 	set desc="Delay the game start"
-	set name="Приостановить запуск раунда"
+	set name="Delay pre-game"
 
 	var/newtime = input("Set a new time in seconds. Set -1 for indefinite delay.","Set Delay",round(ticker.timeLeft/10)) as num|null
 	if(ticker.current_state > GAME_STATE_PREGAME)
@@ -588,7 +588,7 @@ var/global/BSACooldown = 0
 		feedback_add_details("admin_verb","DELAY") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/unprison(mob/M in mob_list)
-	set category = "Администрация"
+	set category = "Admin"
 	set name = "Unprison"
 	if (M.z == ZLEVEL_CENTCOM)
 		M.forceMove(pick(latejoin))
@@ -619,9 +619,9 @@ var/global/BSACooldown = 0
 			return "Error: Invalid sabotage target: [target]"
 */
 /datum/admins/proc/spawn_atom(object as text)
-	set category = "Дебаг"
+	set category = "Debug"
 	set desc = "(atom path) Spawn an atom"
-	set name = "Щитспавн"
+	set name = "Spawn"
 
 	if(!check_rights(R_SPAWN))
 		return
@@ -641,9 +641,9 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/show_traitor_panel(mob/M in mob_list)
-	set category = "Администрация"
+	set category = "Admin"
 	set desc = "Edit mobs's memory and role"
-	set name = "Показать панель спец.ролей"
+	set name = "Show Traitor Panel"
 
 	if(!istype(M))
 		to_chat(usr, "This can only be used on instances of type /mob")
@@ -657,7 +657,7 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/toggletintedweldhelmets()
-	set category = "Дебаг"
+	set category = "Debug"
 	set desc="Reduces view range when wearing welding helmets"
 	set name="Toggle tinted welding helmes"
 	tinted_weldhelh = !( tinted_weldhelh )
@@ -670,9 +670,9 @@ var/global/BSACooldown = 0
 	feedback_add_details("admin_verb","TTWH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleguests()
-	set category = "Сервер"
+	set category = "Server"
 	set desc="Guests can't enter"
-	set name="Переключить подключение гостевых профилей"
+	set name="Toggle guests"
 	guests_allowed = !( guests_allowed )
 	if (!( guests_allowed ))
 		to_chat(world, "<B>Guests may no longer enter the game.</B>")
