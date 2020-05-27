@@ -71,6 +71,7 @@
 	max_w_class = WEIGHT_CLASS_TINY
 	slot_flags = SLOT_BELT
 	max_combined_w_class = 4
+	self_weight = 0.1
 
 /obj/item/weapon/storage/keys_set/update_icon()
 	icon_state = "keychain_[contents.len]"
@@ -89,6 +90,7 @@
 	icon_state = "closed_lock"
 	w_class = WEIGHT_CLASS_TINY
 	layer = 100
+	self_weight = 0.1
 	var/open = FALSE
 	var/id = null
 	var/jammed = FALSE
@@ -222,6 +224,7 @@
 	display_contents_with_number = TRUE
 	can_hold = list(/obj/item/lockpick)
 	cant_hold = list(/obj/item/lockpick/pro)
+	self_weight = 0.1
 	var/opened = FALSE
 
 /obj/item/weapon/storage/bag/lockpicks/attack_self()
