@@ -147,7 +147,7 @@ var/global/list/datum/stack_recipe/wood_recipes = list ( \
 	//crc
 	new/datum/stack_recipe("coffin", /obj/structure/closet/coffin, 5, time = 150, one_per_turf = 1), \
 	new/datum/stack_recipe("book case", /obj/structure/bookcase, 4, time = 150, one_per_turf = 1), \
-	new/datum/stack_recipe("drying rack", /obj/machinery/smartfridge/drying_rack, 100, time = 15, one_per_turf = 1), \
+	new/datum/stack_recipe("drying rack", /obj/machinery/smartfridge/drying_rack, 35, time = 15, one_per_turf = 1), \
 	new/datum/stack_recipe("dog bed", /obj/structure/bed/dogbed, 10, time = 100, one_per_turf = 1), \
 	new/datum/stack_recipe("picture frame", /obj/item/weapon/picture_frame, 1, time = 80),\
 	new/datum/stack_recipe("display case chassis", /obj/structure/displaycase_chassis, 5, one_per_turf = 1), \
