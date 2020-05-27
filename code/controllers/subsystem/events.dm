@@ -125,7 +125,7 @@ var/datum/subsystem/events/SSevent
 //aka Badmin Central
 /client/proc/forceEvent()
 	set name = "Trigger Event"
-	set category = "В.Е.С.Е.Л.Ь.Е"
+	set category = "Fun"
 
 	if(!holder ||!check_rights(R_FUN))
 		return

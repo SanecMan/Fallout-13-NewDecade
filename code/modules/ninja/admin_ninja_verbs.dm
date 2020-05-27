@@ -35,7 +35,7 @@ Contents:
 
 //ADMIN CREATE NINJA (From Ghost)
 /client/proc/send_space_ninja()
-	set category = "В.Е.С.Е.Л.Ь.Е"
+	set category = "Fun"
 	set name = "Spawn Space Ninja"
 	set desc = "Spawns a space ninja for when you need a teenager with attitude."
 	set popup_menu = 0

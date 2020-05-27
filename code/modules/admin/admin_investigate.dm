@@ -27,7 +27,7 @@
 //ADMINVERBS
 /client/proc/investigate_show( subject in list("hrefs","notes","watchlist","singulo","wires","telesci", "gravity", "records", "cargo", "supermatter", "atmos", "experimentor", "kudzu") )
 	set name = "Investigate"
-	set category = "Администрация"
+	set category = "Admin"
 	if(!holder)
 		return
 	switch(subject)

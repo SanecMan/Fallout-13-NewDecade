@@ -40,7 +40,7 @@ var/next_mob_id = 0
 		hud_list[hud] = I
 
 /mob/proc/Cell()
-	set category = "Администрация"
+	set category = "Admin"
 	set hidden = 1
 
 	if(!loc) return 0

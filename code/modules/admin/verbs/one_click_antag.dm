@@ -1,7 +1,7 @@
 /client/proc/one_click_antag()
 	set name = "Создать спец.роль"
 	set desc = "Auto-create an antagonist of your choice"
-	set category = "Администрация"
+	set category = "Admin"
 
 	if(holder)
 		holder.one_click_antag()
