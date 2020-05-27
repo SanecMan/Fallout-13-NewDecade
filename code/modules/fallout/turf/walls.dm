@@ -111,6 +111,28 @@
 	sheet_type = null
 	canSmoothWith = list(/turf/closed/wall/f13/supermart, /turf/closed/wall)
 
+/turf/closed/wall/f13/supermart/window
+	icon_state = "sukablyat"
+	canSmoothWith = null
+
+/turf/closed/wall/f13/supermart/window/horizontal
+	icon_state = "storeprewindowhorizontal"
+
+/turf/closed/wall/f13/supermart/window/vertical
+	icon_state = "storeprewindowvertical"
+
+/turf/closed/wall/f13/supermart/window/top
+	icon_state = "storeprewindowtop"
+
+/turf/closed/wall/f13/supermart/window/bottom
+	icon_state = "storeprewindowbottom"
+
+/turf/closed/wall/f13/supermart/window/left
+	icon_state = "storeprewindowleft"
+
+/turf/closed/wall/f13/supermart/window/right
+	icon_state = "storeprewindowright"
+
 /turf/closed/wall/f13/tunnel
 	name = "utility tunnel wall"
 	desc = "A sturdy metal wall with various pipes and wiring set inside a special groove."
