@@ -7,12 +7,12 @@
 // хз насколько вообще актуально этим пользоваться
 //#ifndef TRAVIS_MASS_MAP_BUILD
 
-		#include "map_files\debug\turbo_wasteland.dmm"
+		//#include "map_files\debug\turbo_wasteland.dmm"
 		///#include "map_files\TexasWasteland\navarro.dmm"
 		///#include "map_files\TexasWasteland\fartexas.dmm"
         ///#include "map_files\TexasWasteland\z3.dmm"
-		//#include "map_files\TexasWasteland\oregon_legacy.dmm"
-		//#include "map_files\TexasWasteland\z2_legacy.dmm"
+		#include "map_files\TexasWasteland\oregon_legacy.dmm"
+		#include "map_files\TexasWasteland\z2_legacy.dmm"
 		//#include "map_files\shuttles\TexasPoezd.dmm"
 
 		#define MAP_PATH "map_files/TexasWasteland"
