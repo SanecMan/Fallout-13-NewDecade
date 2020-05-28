@@ -2,9 +2,9 @@
 
 /datum/computer_file/program/aidiag
 	filename = "aidiag"
-	filedesc = "AI Maintenance Utility"
+	filedesc = "Система Восстановления ИИ"
 	program_icon_state = "generic"
-	extended_desc = "This program is capable of reconstructing damaged AI systems. Requires direct AI connection via intellicard slot."
+	extended_desc = "Программа восстанавливает почти любые версии ИИ"
 	size = 12
 	requires_ntnet = 0
 	usage_flags = PROGRAM_CONSOLE
@@ -96,14 +96,14 @@
 
 	if(!aicard)
 		data["nocard"] = TRUE
-		data["error"] = "Please insert an intelliCard."
+		data["error"] = "Вставьте ИнтелКарту."
 	else
 		if(!AI)
-			data["error"] = "No AI located"
+			data["error"] = "ИИ не обнаружен."
 		else
 			var/obj/item/device/aicard/cardhold = AI.loc
 			if(cardhold.flush)
-				data["error"] = "Flush in progress"
+				data["error"] = "Очистка..."
 			else
 				data["name"] = AI.name
 				data["restoring"] = restoring
@@ -117,7 +117,7 @@
 /datum/computer_file/program/aidiag/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = 0, datum/tgui/master_ui = null, datum/ui_state/state = default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "ai_restorer", "Integrity Restorer", 600, 400, master_ui, state)
+		ui = new(user, src, ui_key, "ai_restorer", "Восстановление...", 600, 400, master_ui, state)
 		ui.open()
 
 /datum/computer_file/program/aidiag/kill_program(forced)

@@ -1,8 +1,8 @@
 /datum/computer_file/program/ntnetmonitor
 	filename = "ntmonitor"
-	filedesc = "NTNet Diagnostics and Monitoring"
+	filedesc = "РобКо Управление Терминалами"
 	program_icon_state = "comm_monitor"
-	extended_desc = "This program monitors stationwide NTNet network, provides access to logging systems, and allows for configuration changes"
+	extended_desc = "Эта программа позволяет управлять терминалами РобКо"
 	size = 12
 	requires_ntnet = 1
 	required_access = access_network	//Network control is a more secure program.
@@ -17,7 +17,7 @@
 		assets.send(user)
 
 
-		ui = new(user, src, ui_key, "ntnet_monitor", "NTNet Diagnostics and Monitoring Tool", 575, 700, state = state)
+		ui = new(user, src, ui_key, "ntnet_monitor", "Программа диагностики сети РобКо", 575, 700, state = state)
 		ui.open()
 		ui.set_autoupdate(state = 1)
 
@@ -50,8 +50,8 @@
 			var/mob/user = usr
 			if(!user)
 				return 1
-			var/response = alert(user, "Really disable NTNet wireless? If your computer is connected wirelessly you won't be able to turn it back on! This will affect all connected wireless devices.", "NTNet shutdown", "Yes", "No")
-			if(response == "Yes")
+			var/response = alert(user, "Действительно отключить беспроводной интернет? Если ваш компьютер подключен по беспроводной сети, вы не сможете снова включить его! Это повлияет на все подключенные беспроводные устройства.", "РобКо Индустриз", "Да", "Нет")
+			if(response == "Да")
 				ntnet_global.setting_disabled = 1
 			return 1
 		if("purgelogs")
@@ -61,7 +61,7 @@
 		if("updatemaxlogs")
 			. = 1
 			var/mob/user = usr
-			var/logcount = text2num(input(user,"Enter amount of logs to keep in memory ([MIN_NTNET_LOGS]-[MAX_NTNET_LOGS]):"))
+			var/logcount = text2num(input(user,"Введите количество хранимых в памяти строк логов ([MIN_NTNET_LOGS]-[MAX_NTNET_LOGS]):"))
 			if(ntnet_global)
 				ntnet_global.update_max_log_count(logcount)
 		if("toggle_function")

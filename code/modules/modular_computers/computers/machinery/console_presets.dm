@@ -30,7 +30,7 @@
 // ===== ENGINEERING CONSOLE =====
 /obj/machinery/modular_computer/console/preset/engineering
 	 console_department = "Engineering"
-	 desc = "A stationary computer. This one comes preloaded with engineering programs."
+	 desc = "Консоль с предустановлеными на ней програмами для инженеров."
 
 /obj/machinery/modular_computer/console/preset/engineering/install_programs()
 	var/obj/item/weapon/computer_hardware/hard_drive/hard_drive = cpu.all_components[MC_HDD]
@@ -40,7 +40,7 @@
 // ===== RESEARCH CONSOLE =====
 /obj/machinery/modular_computer/console/preset/research
 	 console_department = "Research"
-	 desc = "A stationary computer. This one comes preloaded with research programs."
+	 desc = "Консоль с предустановлеными на ней програмами для научных исследований."
 	 _has_ai = 1
 
 /obj/machinery/modular_computer/console/preset/research/install_programs()
@@ -54,7 +54,7 @@
 // ===== COMMAND CONSOLE =====
 /obj/machinery/modular_computer/console/preset/command
 	 console_department = "Command"
-	 desc = "A stationary computer. This one comes preloaded with command programs."
+	 desc = "Консоль с предустановлеными на ней програмами для управления этой частью пустоши."
 	 _has_id_slot = 1
 	 _has_printer = 1
 
@@ -66,7 +66,7 @@
 // ===== CIVILIAN CONSOLE =====
 /obj/machinery/modular_computer/console/preset/civilian
 	 console_department = "Civilian"
-	 desc = "A stationary computer. This one comes preloaded with generic programs."
+	 desc = "Консоль с ничем не установленым на ней."
 
 /obj/machinery/modular_computer/console/preset/civilian/install_programs()
 	var/obj/item/weapon/computer_hardware/hard_drive/hard_drive = cpu.all_components[MC_HDD]

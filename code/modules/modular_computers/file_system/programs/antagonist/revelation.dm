@@ -1,8 +1,8 @@
 /datum/computer_file/program/revelation
 	filename = "revelation"
-	filedesc = "Revelation"
+	filedesc = "Dream.Maker.Crash.All"
 	program_icon_state = "hostile"
-	extended_desc = "This virus can destroy hard drive of system it is executed on. It may be obfuscated to look like another non-malicious program. Once armed, it will destroy the system upon next execution."
+	extended_desc = "Этот вирус может уничтожить жесткий диск системы, на которой он выполняется. Он может быть переименован, чтобы выглядеть как другая не вредоносная программа. Будучи запущеным, он уничтожит систему при следующем запуске."
 	size = 13
 	requires_ntnet = 0
 	available_on_ntnet = 0
@@ -16,7 +16,7 @@
 
 /datum/computer_file/program/revelation/proc/activate()
 	if(computer)
-		computer.visible_message("<span class='notice'>\The [computer]'s screen brightly flashes and loud electrical buzzing is heard.</span>")
+		computer.visible_message("<span class='notice'>\ [computer] мигает</span>")
 		computer.enabled = 0
 		computer.update_icon()
 		var/obj/item/weapon/computer_hardware/hard_drive/hard_drive = computer.all_components[MC_HDD]
@@ -26,13 +26,13 @@
 		computer.take_damage(25, BRUTE, 0, 0)
 		if(battery_module && prob(25))
 			qdel(battery_module)
-			computer.visible_message("<span class='notice'>\The [computer]'s battery explodes in rain of sparks.</span>")
+			computer.visible_message("<span class='notice'>\ [computer] неожиданно взорвался выплёвывая ошмётки батареи.</span>")
 			var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread
 			spark_system.start()
 
 		if(recharger && prob(50))
 			qdel(recharger)
-			computer.visible_message("<span class='notice'>\The [computer]'s recharger explodes in rain of sparks.</span>")
+			computer.visible_message("<span class='notice'>\ [computer] вывел сообщ...</span>")
 			var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread
 			spark_system.start()
 
@@ -47,7 +47,7 @@
 			activate()
 		if("PRG_obfuscate")
 			var/mob/living/user = usr
-			var/newname = sanitize(input(user, "Enter new program name: "))
+			var/newname = sanitize(input(user, "Введите новое название программы: "))
 			if(!newname)
 				return
 			filedesc = newname
@@ -62,7 +62,7 @@
 
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "revelation", "Revelation Virus", 400, 250, state = state)
+		ui = new(user, src, ui_key, "revelation", "Вирус", 400, 250, state = state)
 		ui.set_style("syndicate")
 		ui.set_autoupdate(state = 1)
 		ui.open()

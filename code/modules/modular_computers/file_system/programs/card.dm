@@ -1,8 +1,8 @@
 /datum/computer_file/program/card_mod
 	filename = "cardmod"
-	filedesc = "ID card modification program"
+	filedesc = "Модификатор Доступа Индефикационных Карточек"
 	program_icon_state = "id"
-	extended_desc = "Program for programming employee ID cards to access parts of the station."
+	extended_desc = "Программа добавит или уберёт доступ с любой карточки"
 	transfer_access = access_change_ids
 	requires_ntnet = 0
 	size = 8
@@ -81,7 +81,7 @@
 		var/datum/asset/assets = get_asset_datum(/datum/asset/simple/headers)
 		assets.send(user)
 
-		ui = new(user, src, ui_key, "identification_computer", "ID card modification program", 600, 700, state = state)
+		ui = new(user, src, ui_key, "identification_computer", "Модификатор Доступа Индефикационных Карточек", 600, 700, state = state)
 		ui.open()
 		ui.set_autoupdate(state = 1)
 
@@ -140,12 +140,12 @@
 			if(computer && printer) //This option should never be called if there is no printer
 				if(mod_mode)
 					if(authorized())
-						var/contents = {"<h4>Access Report</h4>
-									<u>Prepared By:</u> [user_id_card && user_id_card.registered_name ? user_id_card.registered_name : "Unknown"]<br>
-									<u>For:</u> [id_card.registered_name ? id_card.registered_name : "Unregistered"]<br>
+						var/contents = {"<h4>Изменение доступа</h4>
+									<u>Изменено кем:</u> [user_id_card && user_id_card.registered_name ? user_id_card.registered_name : "Unknown"]<br>
+									<u>Изменено кому:</u> [id_card.registered_name ? id_card.registered_name : "Unregistered"]<br>
 									<hr>
-									<u>Assignment:</u> [id_card.assignment]<br>
-									<u>Access:</u><br>
+									<u>Название:</u> [id_card.assignment]<br>
+									<u>Доступ:</u><br>
 								"}
 
 						var/known_access_rights = get_all_accesses()
@@ -154,20 +154,20 @@
 								contents += "  [get_access_desc(A)]"
 
 						if(!printer.print_text(contents,"access report"))
-							to_chat(usr, "<span class='notice'>Hardware error: Printer was unable to print the file. It may be out of paper.</span>")
+							to_chat(usr, "<span class='notice'>Ошибка принтера - нет модуля или бумаги в нём.</span>")
 							return
 						else
-							computer.visible_message("<span class='notice'>\The [computer] prints out paper.</span>")
+							computer.visible_message("<span class='notice'>\[computer] распечатывает бумагу.</span>")
 				else
-					var/contents = {"<h4>Crew Manifest</h4>
+					var/contents = {"<h4>Субьекты</h4>
 									<br>
 									[data_core ? data_core.get_manifest(0) : ""]
 									"}
-					if(!printer.print_text(contents,text("crew manifest ([])", worldtime2text())))
-						to_chat(usr, "<span class='notice'>Hardware error: Printer was unable to print the file. It may be out of paper.</span>")
+					if(!printer.print_text(contents,text("Субьекты ([])", worldtime2text())))
+						to_chat(usr, "<span class='notice'>Ошибка принтера - нет модуля или бумаги в нём.</span>")
 						return
 					else
-						computer.visible_message("<span class='notice'>\The [computer] prints out paper.</span>")
+						computer.visible_message("<span class='notice'>\[computer] распечатывает бумагу.</span>")
 		if("PRG_eject")
 			if(computer && card_slot)
 				var/select = params["target"]
@@ -207,11 +207,11 @@
 		if("PRG_edit")
 			if(computer && authorized())
 				if(params["name"])
-					var/temp_name = reject_bad_name(input("Enter name.", "Name", id_card.registered_name))
+					var/temp_name = reject_bad_name(input("Введите имя.", "Name", id_card.registered_name))
 					if(temp_name)
 						id_card.registered_name = temp_name
 					else
-						computer.visible_message("<span class='notice'>[computer] buzzes rudely.</span>")
+						computer.visible_message("<span class='notice'>[computer] издаёт сигнал.</span>")
 				//else if(params["account"])
 				//	var/account_num = text2num(input("Enter account number.", "Account", id_card.associated_account_number))
 				//	id_card.associated_account_number = account_num
@@ -219,7 +219,7 @@
 			if(computer && authorized() && id_card)
 				var/t1 = params["assign_target"]
 				if(t1 == "Custom")
-					var/temp_t = reject_bad_text(input("Enter a custom job assignment.","Assignment", id_card.assignment), 45)
+					var/temp_t = reject_bad_text(input("Введите название.","Assignment", id_card.assignment), 45)
 					//let custom jobs function as an impromptu alt title, mainly for sechuds
 					if(temp_t)
 						id_card.assignment = temp_t
@@ -235,7 +235,7 @@
 								jobdatum = J
 								break
 						if(!jobdatum)
-							to_chat(usr, "<span class='warning'>No log exists for this job: [t1]</span>")
+							to_chat(usr, "<span class='warning'>Нет логов для этих профессий: [t1]</span>")
 							return
 
 						access = jobdatum.get_access()

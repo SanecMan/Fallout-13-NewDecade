@@ -4,8 +4,8 @@
 
 /datum/computer_file/program/computerconfig
 	filename = "compconfig"
-	filedesc = "Computer Configuration Tool"
-	extended_desc = "This program allows configuration of computer's hardware"
+	filedesc = "Управление Системой"
+	extended_desc = "Эта программа управляет встроенной в систему аппаратурой."
 	program_icon_state = "generic"
 	unsendable = 1
 	undeletable = 1
@@ -23,7 +23,7 @@
 		var/datum/asset/assets = get_asset_datum(/datum/asset/simple/headers)
 		assets.send(user)
 
-		ui = new(user, src, ui_key, "laptop_configuration", "NTOS Configuration Utility", 575, 700, state = state)
+		ui = new(user, src, ui_key, "laptop_configuration", "РобКо Настройки", 575, 700, state = state)
 		ui.open()
 		ui.set_autoupdate(state = 1)
 

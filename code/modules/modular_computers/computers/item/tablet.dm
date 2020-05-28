@@ -1,5 +1,5 @@
 /obj/item/device/modular_computer/tablet  //Its called tablet for theme of 90ies but actually its a "big smartphone" sized
-	name = "tablet computer"
+	name = "Планшет"
 	icon = 'icons/obj/modular_tablet.dmi'
 	icon_state = "tablet"
 	icon_state_unpowered = "tablet"
