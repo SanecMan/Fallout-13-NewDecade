@@ -3,7 +3,6 @@
 	desc = "Маленький серый ключ."
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "empty_key"
-	w_class = WEIGHT_CLASS_TINY
 	slot_flags = SLOT_BELT
 	var/id = null
 	var/static/list/used_ids = list()
@@ -60,14 +59,13 @@
 	return null
 
 /obj/item/weapon/storage/keys_set
-	name = "key chain"
-	desc = "Put your keys here and make using doors comfortable!"
+	name = "ключница"
+	desc = "сюда вы можете поместить ваши ключи!"
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "keychain_0"
 	storage_slots = 4
-	can_hold = list(/obj/item/door_key)
+	can_hold = list(/obj/item/door_key, obj/item/weapon/key/vending, /obj/item/key/buggy, /obj/item/key/motorcycle)
 	rustle_jimmies = FALSE
-	w_class = WEIGHT_CLASS_TINY
 	max_w_class = WEIGHT_CLASS_TINY
 	slot_flags = SLOT_BELT
 	max_combined_w_class = 4
