@@ -2,7 +2,7 @@ var/global/static/ntnrc_uid = 0
 
 /datum/ntnet_conversation
 	var/id = null
-	var/title = "Untitled Conversation"
+	var/title = "Неизвестная Связь"
 	var/datum/computer_file/program/chatclient/operator // "Administrator" of this channel. Creator starts as channel's operator,
 	var/list/messages = list()
 	var/list/clients = list()
@@ -38,7 +38,7 @@ var/global/static/ntnrc_uid = 0
 	if(!istype(C))
 		return
 	clients.Add(C)
-	add_status_message("[C.username] has joined the channel.")
+	add_status_message("[C.username] подключился к каналу.")
 	// No operator, so we assume the channel was empty. Assign this user as operator.
 	if(!operator)
 		changeop(C)
@@ -47,7 +47,7 @@ var/global/static/ntnrc_uid = 0
 	if(!istype(C) || !(C in clients))
 		return
 	clients.Remove(C)
-	add_status_message("[C.username] has left the channel.")
+	add_status_message("[C.username] покинул канал.")
 
 	// Channel operator left, pick new operator
 	if(C == operator)
@@ -60,11 +60,11 @@ var/global/static/ntnrc_uid = 0
 /datum/ntnet_conversation/proc/changeop(datum/computer_file/program/chatclient/newop)
 	if(istype(newop))
 		operator = newop
-		add_status_message("Channel operator status transferred to [newop.username].")
+		add_status_message("Статус оператора теперь принадлежит [newop.username].")
 
 /datum/ntnet_conversation/proc/change_title(newtitle, datum/computer_file/program/chatclient/client)
 	if(operator != client)
 		return 0 // Not Authorised
 
-	add_status_message("[client.username] has changed channel title from [title] to [newtitle]")
+	add_status_message("[client.username] переименовал [title] в [newtitle]")
 	title = newtitle

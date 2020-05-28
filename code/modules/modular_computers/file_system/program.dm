@@ -1,12 +1,12 @@
 // /program/ files are executable programs that do things.
 /datum/computer_file/program
 	filetype = "PRG"
-	filename = "UnknownProgram"				// File name. FILE NAME MUST BE UNIQUE IF YOU WANT THE PROGRAM TO BE DOWNLOADABLE FROM NTNET!
+	filename = "НеизвестныйТип"				// File name. FILE NAME MUST BE UNIQUE IF YOU WANT THE PROGRAM TO BE DOWNLOADABLE FROM NTNET!
 	var/required_access = null				// List of required accesses to *run* the program.
 	var/transfer_access = null				// List of required access to download or file host the program
 	var/program_state = PROGRAM_STATE_KILLED// PROGRAM_STATE_KILLED or PROGRAM_STATE_BACKGROUND or PROGRAM_STATE_ACTIVE - specifies whether this program is running.
 	var/obj/item/device/modular_computer/computer	// Device that runs this program.
-	var/filedesc = "Unknown Program"		// User-friendly name of this program.
+	var/filedesc = "Неизвестная Программа"	// User-friendly name of this program.
 	var/extended_desc = "N/A"				// Short description of this program's function.
 	var/program_icon_state = null			// Program-specific screen icon state
 	var/requires_ntnet = 0					// Set to 1 for program to require nonstop NTNet connection to run. If NTNet connection is lost program crashes.
@@ -51,7 +51,7 @@
 /datum/computer_file/program/proc/is_supported_by_hardware(hardware_flag = 0, loud = 0, mob/user = null)
 	if(!(hardware_flag & usage_flags))
 		if(loud && computer && user)
-			to_chat(user, "<span class='danger'>\The [computer] flashes an \"Hardware Error - Incompatible software\" warning.</span>")
+			to_chat(user, "<span class='danger'>\[computer] вывел сообщение \"Ошибка: Невозможно определить тип файла\" warning.</span>")
 		return 0
 	return 1
 
@@ -102,7 +102,7 @@
 
 		if(!I && !C && !D)
 			if(loud)
-				to_chat(user, "<span class='danger'>\The [computer] flashes an \"RFID Error - Unable to scan ID\" warning.</span>")
+				to_chat(user, "<span class='danger'>\[computer] flashes an \"RFID Error - Unable to scan ID\" warning.</span>")
 			return 0
 
 		if(I)

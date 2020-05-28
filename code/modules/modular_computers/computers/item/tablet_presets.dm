@@ -1,7 +1,7 @@
 
 // This is literally the worst possible cheap tablet
 /obj/item/device/modular_computer/tablet/preset/cheap
-	desc = "A low-end tablet often seen among low ranked station personnel."
+	desc = "Низкопробный планшет, редко встречающийся среди обитателей пустоши."
 
 /obj/item/device/modular_computer/tablet/preset/cheap/New()
 	. = ..()
