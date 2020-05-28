@@ -7,6 +7,7 @@
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
 	icon_state = "key-door"
 	var/id = 0
+	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/weapon/key/vending/proc/set_name(newname)
 	if(name != newname)

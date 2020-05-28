@@ -6,7 +6,7 @@
 	slot_flags = SLOT_BELT
 	var/id = null
 	var/static/list/used_ids = list()
-	self_weight = 0.1
+	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/door_key/New()
 	..()
@@ -66,10 +66,10 @@
 	storage_slots = 4
 	can_hold = list(/obj/item/door_key, /obj/item/weapon/key/vending, /obj/item/key/buggy, /obj/item/key/motorcycle)
 	rustle_jimmies = FALSE
-	max_w_class = WEIGHT_CLASS_TINY
+	max_w_class = WEIGHT_CLASS_HUGE
 	slot_flags = SLOT_BELT
 	max_combined_w_class = 4
-	self_weight = 0.1
+	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/weapon/storage/keys_set/update_icon()
 	icon_state = "keychain_[contents.len]"
@@ -88,7 +88,6 @@
 	icon_state = "closed_lock"
 	w_class = WEIGHT_CLASS_TINY
 	layer = 100
-	self_weight = 0.1
 	var/open = FALSE
 	var/id = null
 	var/jammed = FALSE

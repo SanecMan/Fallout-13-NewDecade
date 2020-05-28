@@ -25,6 +25,7 @@
 	name = "ключи"
 	desc = "Колечко с ключиком.<br>При осмотре ключа, вы делаете вывод что это используется для автомобиля."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
+	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/key/buggy/New()
 	..()

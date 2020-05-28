@@ -44,6 +44,7 @@
 	name = "ключи от мотоцикла"
 	desc = "Кольцо с ключиком.<br>При осмотре, вы понимаете что это ключ от мотоцикла."
 	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
+	w_class = WEIGHT_CLASS_TINY
 	price = 4500
 
 /obj/item/key/motorcycle/New()

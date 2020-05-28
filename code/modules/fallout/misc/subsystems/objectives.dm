@@ -46,10 +46,10 @@ var/datum/subsystem/objectives/SSobjectives
 			desc = O.desc
 		if(O.check_complete(faction.objective))
 //			give_points(mind, O.points)
-			text += "\t<b>The [faction.full_name]</b> <font color='#00FF00'>успешно выполняет</font> [O.name] квест:<br>"
+			text += "\t<b>The [faction.full_name]</b> <font color='#00FF00'>успешно выполняет</font> квест: [O.name].<br>"
 			text += "\t\t <i>[FormatText(desc, faction.objective.data)]</i><br>"
 		else
-			text += "\t<b>The [faction.full_name]</b> <font color='#FF0000'>проваливает</font> [O.name] квест:<br>"
+			text += "\t<b>The [faction.full_name]</b> <font color='#FF0000'>проваливает</font> квест: [O.name].<br>"
 			text += "\t\t <i>[FormatText(desc, faction.objective.data)]</i><br>"
 
 	text += "<h2>Результат по индивидуальным квестам:</h2>"
@@ -63,10 +63,10 @@ var/datum/subsystem/objectives/SSobjectives
 			desc = O.desc
 		if(O.check_complete(mind.objective))
 			give_points(mind, O.points)
-			text += "\t<b>[mind]</b> <font color='#00FF00'>успешно выполняет</font> [O.name] квест:<br>"
+			text += "\t<b>[mind]</b> <font color='#00FF00'>успешно выполняет</font> квест: [O.name].<br>"
 			text += "\t\t <i>[FormatText(desc, mind.objective.data)]</i><br>"
 		else
-			text += "\t<b>[mind]</b> <font color='#FF0000'>проваливает</font> [O.name] квест:<br>"
+			text += "\t<b>[mind]</b> <font color='#FF0000'>проваливает</font> квест: [O.name].<br>"
 			text += "\t\t <i>[FormatText(desc, mind.objective.data)]</i><br>"
 	to_chat(world, text)
 
