@@ -115,7 +115,7 @@
 	name = "Paladin"
 	backpack = null
 	satchel = null
-	id = /obj/item/weapon/card/id/gold
+	id = /obj/item/weapon/card/id/dogtag
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -178,7 +178,7 @@
 	name = "Knight"
 	backpack = null
 	satchel = null
-	id = /obj/item/weapon/card/id/gold
+	id = /obj/item/weapon/card/id/dogtag
 	ears = /obj/item/device/radio/headset/bs
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/combat
@@ -233,7 +233,7 @@
 	backpack = null
 	ears = /obj/item/device/radio/headset/bs
 	satchel = null
-	id = /obj/item/weapon/card/id/gold
+	id = /obj/item/weapon/card/id/dogtag
 	uniform = /obj/item/clothing/under/f13/combat
 	shoes = /obj/item/clothing/shoes/f13/tan
 	suit = /obj/item/clothing/suit/f13/scribe
@@ -291,7 +291,7 @@
 	name = "BS Radist"
 	back = /obj/item/device/radio/prc/bs
 	ears = /obj/item/device/radio/headset/bs
-	id = /obj/item/weapon/card/id/gold
+	id = /obj/item/weapon/card/id/dogtag
 	gloves = /obj/item/clothing/gloves/f13/military
 	uniform = /obj/item/clothing/under/f13/radist_bs
 	shoes = /obj/item/clothing/shoes/f13/military

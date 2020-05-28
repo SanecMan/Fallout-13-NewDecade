@@ -67,6 +67,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	suit = null
 	head = /obj/item/clothing/head/f13/beaver
+	id = /obj/item/weapon/card/id/passport_city
 
 //Sheriff
 
@@ -117,7 +118,7 @@
 
 /datum/outfit/job/sheriff
 	name = "Sheriff"
-	id = /obj/item/card/id/sheriff
+	id = /obj/item/weapon/card/id/passport_city
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/f13/cowboy
 	suit = /obj/item/clothing/suit/f13/sheriff
@@ -171,6 +172,7 @@
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/cowboyt
 	shoes = /obj/item/clothing/shoes/f13/brownie
+	id = /obj/item/weapon/card/id/passport_city
 
 /datum/job/trader
 	title = "Trader"
@@ -215,3 +217,4 @@
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/merchant
 	shoes = /obj/item/clothing/shoes/f13/brownie
+	id = /obj/item/weapon/card/id/passport_trader

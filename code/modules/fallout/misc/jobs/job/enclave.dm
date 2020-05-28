@@ -60,6 +60,7 @@
 	weapon = /obj/item/weapon/gun/energy/plasma/glock
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2, \
 	/obj/item/weapon/kitchen/knife/combat = 1)
+	id = /obj/item/weapon/card/id/passport_colonel
 
 //Enclave Sergeant
 
@@ -124,6 +125,7 @@
 	belt = /obj/item/weapon/storage/belt/military/army/enclave
 	weapon = /obj/item/weapon/gun/energy/plasma/pistol
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 2, /obj/item/weapon/kitchen/knife/combat = 1)
+	id = /obj/item/weapon/card/id/passport
 
 //Enclave Private
 
@@ -184,7 +186,7 @@
 	belt = /obj/item/weapon/storage/belt/military/army/enclave
 	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol/n99
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 1, /obj/item/weapon/kitchen/knife/combat = 1)
-
+	id = /obj/item/weapon/card/id/passport
 
 /// enclave radist///
 /datum/job/enclave_radist
@@ -243,3 +245,4 @@
 	belt = /obj/item/weapon/storage/belt/military/army/enclave
 	weapon = /obj/item/weapon/gun/ballistic/automatic/pistol/n99
 	belt_contents = list(/obj/item/weapon/reagent_containers/f13stimpack = 1, /obj/item/weapon/kitchen/knife/combat = 1, /obj/item/clothing/head/helmet/f13/radist = 1)
+	id = /obj/item/weapon/card/id/passport

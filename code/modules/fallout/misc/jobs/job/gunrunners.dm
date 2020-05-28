@@ -59,3 +59,4 @@
 	belt = null
 	weapon = null
 	glasses = /obj/item/clothing/glasses/f13/biker
+	id = /obj/item/weapon/card/id/passport_trader

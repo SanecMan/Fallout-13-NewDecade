@@ -51,7 +51,7 @@
 
 /datum/outfit/job/leglegate
 	name = "Legate"
-	id = /obj/item/card/id/legveteran
+	id = /obj/item/weapon/card/id/legcenturion
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionlegate
 	gloves = /obj/item/clothing/gloves/f13/legionlegate
@@ -113,7 +113,7 @@
 
 /datum/outfit/job/legcenturion
 	name = "Centurion"
-	id = /obj/item/card/id/legcenturion
+	id = /obj/item/weapon/card/id/legveteran
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -174,7 +174,7 @@
 
 /datum/outfit/job/legvex
 	name = "Vexillarius"
-	id = /obj/item/card/id/legrecruit
+	id = /obj/item/weapon/card/id/legveteran
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionmetal
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -235,7 +235,7 @@
 
 /datum/outfit/job/legdecan
 	name = "Decanus"
-	id = /obj/item/card/id/legrecruit
+	id = /obj/item/weapon/card/id/legprime
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -296,7 +296,7 @@
 
 /datum/outfit/job/prime
 	name = "Prime"
-	id = /obj/item/card/id/legprime
+	id = /obj/item/weapon/card/id/legprime
 	uniform = /obj/item/clothing/under/pants/f13/cloth
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -308,6 +308,3 @@
 	mask = /obj/item/clothing/mask/bandana/f13/legrecruit
 	weapon = /obj/item/weapon/gun/ballistic/shotgun/rifle
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, /obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, /obj/item/weapon/storage/wallet=1,/obj/item/stack/medical/healingpowder=2)
-
-
-///легион принял ислам
