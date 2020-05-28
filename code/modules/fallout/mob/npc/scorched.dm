@@ -11,7 +11,7 @@
 	maxHealth = 80
 	health = 80
 	self_weight = 45
-
+	faction = list("hostile", "ghoul")
 	sound_speak_chance = 1
 	sound_speak = list('sound/f13npc/scor_br1.ogg','sound/f13npc/scor_b2.ogg','sound/f13npc/scor_b3.ogg')
 
@@ -27,6 +27,7 @@
 	XP = 10
 
 /mob/living/simple_animal/hostile/ghoul/scorched/New()
+	..()
 	icon_state = "scorched_m-[rand(1,5)]"
 	icon_living = "scorched_m-[rand(1,5)]"
 
@@ -50,5 +51,6 @@
 	XP = 13
 
 /mob/living/simple_animal/hostile/ghoul/scorched/ranged/New()
+	..()
 	icon_state = "scorched_r-[rand(1,5)]"
 	icon_living = "scorched_r-[rand(1,5)]"
