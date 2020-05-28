@@ -164,8 +164,8 @@
 /*****************************Shovel********************************/
 
 /obj/item/weapon/shovel
-	name = "shovel"
-	desc = "A large tool for digging and moving dirt."
+	name = "лопата"
+	desc = "Инструмент для копания земли, песка и прочих сыпучих вещей."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "shovel"
 	flags = CONDUCT
@@ -181,8 +181,8 @@
 	sharpness = IS_SHARP
 
 /obj/item/weapon/shovel/spade
-	name = "spade"
-	desc = "A small tool for digging and moving dirt."
+	name = "лопатка"
+	desc = "Небольшая лопатка. Такими еще садовники пользовались."
 	icon_state = "spade"
 	item_state = "spade"
 	force = 5
@@ -190,7 +190,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/weapon/emptysandbag
-	name = "empty sandbag"
+	name = "пустой мешок с песком"
 	desc = "A bag to be filled with sand."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "sandbag"
