@@ -2,9 +2,9 @@
 
 /datum/computer_file/program/power_monitor
 	filename = "powermonitor"
-	filedesc = "Power Monitoring"
+	filedesc = "Контроль Подачи Энергии"
 	program_icon_state = "power_monitor"
-	extended_desc = "This program connects to sensors around the station to provide information about electrical systems"
+	extended_desc = "Программа следит за подачей энегрии в определённой области"
 	ui_header = "power_norm.gif"
 	transfer_access = access_engine
 	usage_flags = PROGRAM_CONSOLE
@@ -61,7 +61,7 @@
 		assets.send(user)
 
 
-		ui = new(user, src, ui_key, "power_monitor_prog", "Power Monitoring", 1200, 1000, master_ui, state)
+		ui = new(user, src, ui_key, "power_monitor_prog", "Контроль Энергии", 1200, 1000, master_ui, state)
 		ui.open()
 
 /datum/computer_file/program/power_monitor/ui_data()

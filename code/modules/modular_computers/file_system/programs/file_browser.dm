@@ -1,7 +1,7 @@
 /datum/computer_file/program/filemanager
 	filename = "filemanager"
-	filedesc = "NTOS File Manager"
-	extended_desc = "This program allows management of files."
+	filedesc = "РобКо Менеджер Файлов"
+	extended_desc = "Основная программа для просмотра и редактирования файлов."
 	program_icon_state = "generic"
 	size = 8
 	requires_ntnet = 0
@@ -24,7 +24,7 @@
 			open_file = params["name"]
 		if("PRG_newtextfile")
 			. = 1
-			var/newname = sanitize(input(usr, "Enter file name or leave blank to cancel:", "File rename"))
+			var/newname = sanitize(input(usr, "Введите новое название файла или ничего для отмены:", "Переименовать"))
 			if(!newname)
 				return 1
 			if(!HDD)
@@ -69,7 +69,7 @@
 			var/datum/computer_file/file = HDD.find_file_by_name(params["name"])
 			if(!file || !istype(file))
 				return 1
-			var/newname = sanitize(input(usr, "Enter new file name:", "File rename", file.filename))
+			var/newname = sanitize(input(usr, "Введите новое имя файла:", "Переименовать", file.filename))
 			if(file && newname)
 				file.filename = newname
 		if("PRG_edit")
@@ -81,10 +81,10 @@
 			var/datum/computer_file/data/F = HDD.find_file_by_name(open_file)
 			if(!F || !istype(F))
 				return 1
-			if(F.do_not_edit && (alert("WARNING: This file is not compatible with editor. Editing it may result in permanently corrupted formatting or damaged data consistency. Edit anyway?", "Incompatible File", "No", "Yes") == "No"))
+			if(F.do_not_edit && (alert("Предупреждение: этот файл не совместим с редактором. Его редактирование может привести к необратимому повреждению данных или нарушению работоспособности. Продолжить?", "Обнаруженна Несовместимость", "Нет", "Да") == "Нет"))
 				return 1
 			// 16384 is the limit for file length in characters. Currently, papers have value of 2048 so this is 8 times as long, since we can't edit parts of the file independently.
-			var/newtext = sanitize(html_decode(input(usr, "Editing file [open_file]. You may use most tags used in paper formatting:", "Text Editor", F.stored_data) as message|null), 16384)
+			var/newtext = sanitize(html_decode(input(usr, "Редактирование [open_file]. Вы можете использовать большинство тегов, используемых при написании бумаги::", "Текстовый Редактор", F.stored_data) as message|null), 16384)
 			if(!newtext)
 				return
 			if(F)
@@ -96,7 +96,7 @@
 				// This is mostly intended to prevent people from losing texts they spent lot of time working on due to running out of space.
 				// They will be able to copy-paste the text from error screen and store it in notepad or something.
 				if(!HDD.store_file(F))
-					error = "I/O error: Unable to overwrite file. Hard drive is probably full. You may want to backup your changes before closing this window:<br><br>[F.stored_data]<br><br>"
+					error = "Невозможно перезаписать файл. Возможно переполнен диск. Хотите сделать резервную копию:<br><br>[F.stored_data]<br><br>"
 					HDD.store_file(backup)
 		if("PRG_printfile")
 			. = 1
@@ -108,10 +108,10 @@
 			if(!F || !istype(F))
 				return 1
 			if(!printer)
-				error = "Missing Hardware: Your computer does not have required hardware to complete this operation."
+				error = "Ошибка: на вашем компьютере нет необходимого оборудования для выполнения этой операции."
 				return 1
 			if(!printer.print_text(parse_tags(F.stored_data)))
-				error = "Hardware error: Printer was unable to print the file. It may be out of paper."
+				error = "Ошибка: нет модуля принтера или бумаги в нём."
 				return 1
 		if("PRG_copytousb")
 			. = 1
@@ -179,7 +179,7 @@
 		var/datum/asset/assets = get_asset_datum(/datum/asset/simple/headers)
 		assets.send(user)
 
-		ui = new(user, src, ui_key, "file_manager", "NTOS File Manage", 575, 700, state = state)
+		ui = new(user, src, ui_key, "file_manager", "РобКо Файловая Система", 575, 700, state = state)
 		ui.open()
 		ui.set_autoupdate(state = 1)
 
@@ -194,17 +194,17 @@
 		var/datum/computer_file/data/file
 
 		if(!computer || !HDD)
-			data["error"] = "I/O ERROR: Unable to access hard drive."
+			data["error"] = "Ошибка: Жёсткий диск не читаем"
 		else
 			file = HDD.find_file_by_name(open_file)
 			if(!istype(file))
-				data["error"] = "I/O ERROR: Unable to open file."
+				data["error"] = "Ошибка: Не удаётся открыть файл"
 			else
 				data["filedata"] = parse_tags(file.stored_data)
 				data["filename"] = "[file.filename].[file.filetype]"
 	else
 		if(!computer || !HDD)
-			data["error"] = "I/O ERROR: Unable to access hard drive."
+			data["error"] = "Ошибка: Жёсткий диск не читаем"
 		else
 			var/list/files[0]
 			for(var/datum/computer_file/F in HDD.stored_files)

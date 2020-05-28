@@ -34,7 +34,7 @@
 /obj/item/weapon/computer_hardware/attackby(obj/item/I, mob/living/user)
 	// Multitool. Runs diagnostics
 	if(istype(I, /obj/item/device/multitool))
-		to_chat(user, "***** DIAGNOSTICS REPORT *****")
+		to_chat(user, "********* ДИАГНОСТИКА ********")
 		diagnostics(user)
 		to_chat(user, "******************************")
 		return 1
@@ -43,10 +43,10 @@
 	if(istype(I, /obj/item/stack/cable_coil))
 		var/obj/item/stack/S = I
 		if(obj_integrity == max_integrity)
-			to_chat(user, "<span class='warning'>\The [src] doesn't seem to require repairs.</span>")
+			to_chat(user, "<span class='warning'>\[src] похоже теперь не восстановить</span>")
 			return 1
 		if(S.use(1))
-			to_chat(user, "<span class='notice'>You patch up \the [src] with a bit of \the [I].</span>")
+			to_chat(user, "<span class='notice'>Вы восстанавливаете [src] с помощью [I].</span>")
 			obj_integrity = min(obj_integrity + 10, max_integrity)
 		return 1
 
@@ -57,7 +57,7 @@
 
 // Called on multitool click, prints diagnostic information to the user.
 /obj/item/weapon/computer_hardware/proc/diagnostics(var/mob/user)
-	to_chat(user, "Hardware Integrity Test... (Corruption: [damage]/[max_damage]) [damage > damage_failure ? "FAIL" : damage > damage_malfunction ? "WARN" : "PASS"]")
+	to_chat(user, "Тест жёсткого диска (Повреждения: [damage]/[max_damage]) [damage > damage_failure ? "КРИТ" : damage > damage_malfunction ? "ВНИМ" : "ОК"]")
 
 // Handles damage checks
 /obj/item/weapon/computer_hardware/proc/check_functionality()
@@ -76,11 +76,11 @@
 /obj/item/weapon/computer_hardware/examine(var/mob/user)
 	. = ..()
 	if(damage > damage_failure)
-		to_chat(user, "<span class='danger'>It seems to be severely damaged!</span>")
+		to_chat(user, "<span class='danger'>Похоже что он сильно повреждён.</span>")
 	else if(damage > damage_malfunction)
-		to_chat(user, "<span class='warning'>It seems to be damaged!</span>")
+		to_chat(user, "<span class='warning'>Похоже что он повреждён.</span>")
 	else if(damage)
-		to_chat(user, "<span class='notice'>It seems to be slightly damaged.</span>")
+		to_chat(user, "<span class='notice'>Похоже что он поцарапан..</span>")
 
 // Component-side compatibility check.
 /obj/item/weapon/computer_hardware/proc/can_install(obj/item/device/modular_computer/M, mob/living/user = null)

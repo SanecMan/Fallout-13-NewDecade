@@ -39,7 +39,7 @@
 		return ..()
 
 /obj/item/device/modular_computer/laptop/verb/open_computer()
-	set name = "Toggle Open"
+	set name = "Открыть"
 	set category = "Object"
 	set src in view(1)
 
@@ -83,11 +83,11 @@
 
 /obj/item/device/modular_computer/laptop/proc/toggle_open(mob/living/user=null)
 	if(screen_on)
-		to_chat(user, "<span class='notice'>You close \the [src].</span>")
+		to_chat(user, "<span class='notice'>Вы закрыли [src].</span>")
 		slowdown = initial(slowdown)
 		w_class = initial(w_class)
 	else
-		to_chat(user, "<span class='notice'>You open \the [src].</span>")
+		to_chat(user, "<span class='notice'>Вы открыли [src].</span>")
 		slowdown = slowdown_open
 		w_class = w_class_open
 

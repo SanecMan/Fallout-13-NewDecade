@@ -2,13 +2,13 @@ var/global/nttransfer_uid = 0
 
 /datum/computer_file/program/nttransfer
 	filename = "nttransfer"
-	filedesc = "NTNet P2P Transfer Client"
-	extended_desc = "This program allows for simple file transfer via direct peer to peer connection."
+	filedesc = "РобКо P2P"
+	extended_desc = "Программа для двухсторонней связи между терминалами."
 	program_icon_state = "comm_logs"
 	size = 7
 	requires_ntnet = 1
 	requires_ntnet_feature = NTNET_PEERTOPEER
-	network_destination = "other device via P2P tunnel"
+	network_destination = "другиее терминалы в  двухсторонней сети"
 	available_on_ntnet = 1
 
 	var/error = ""										// Error screen
@@ -42,7 +42,7 @@ var/global/nttransfer_uid = 0
 				C.finish_download()
 	else if(downloaded_file) // Client mode
 		if(!remote)
-			crash_download("Connection to remote server lost")
+			crash_download("Соединение прекращено")
 
 /datum/computer_file/program/nttransfer/kill_program(forced = FALSE)
 	if(downloaded_file) // Client mode, clean up variables for next use
@@ -50,7 +50,7 @@ var/global/nttransfer_uid = 0
 
 	if(provided_file) // Server mode, disconnect all clients
 		for(var/datum/computer_file/program/nttransfer/P in connected_clients)
-			P.crash_download("Connection terminated by remote server")
+			P.crash_download("Соединение прекращено удалённым сервером")
 		downloaded_file = null
 	..(forced)
 
@@ -68,12 +68,12 @@ var/global/nttransfer_uid = 0
 /datum/computer_file/program/nttransfer/proc/finish_download()
 	var/obj/item/weapon/computer_hardware/hard_drive/hard_drive = computer.all_components[MC_HDD]
 	if(!computer || !hard_drive || !hard_drive.store_file(downloaded_file))
-		error = "I/O Error:  Unable to save file. Check your hard drive and try again."
+		error = "Ошибка: Невозможно сохранить файл"
 	finalize_download()
 
 //  Crashes the download and displays specific error message
 /datum/computer_file/program/nttransfer/proc/crash_download(var/message)
-	error = message ? message : "An unknown error has occurred during download"
+	error = message ? message : "Во время загрузки произошла неизвестная ошибка"
 	finalize_download()
 
 // Cleans up variables for next use
@@ -94,7 +94,7 @@ var/global/nttransfer_uid = 0
 		assets.send(user)
 
 
-		ui = new(user, src, ui_key, "ntnet_transfer", "NTNet P2P Transfer Client", 575, 700, state = state)
+		ui = new(user, src, ui_key, "ntnet_transfer", "РобКо P2P", 575, 700, state = state)
 		ui.open()
 		ui.set_autoupdate(state = 1)
 
@@ -110,9 +110,9 @@ var/global/nttransfer_uid = 0
 			if(!remote || !remote.provided_file)
 				return
 			if(remote.server_password)
-				var/pass = reject_bad_text(input(usr, "Code 401 Unauthorized. Please enter password:", "Password required"))
+				var/pass = reject_bad_text(input(usr, "Авторизация:", "Введите пароль"))
 				if(pass != remote.server_password)
-					error = "Incorrect Password"
+					error = "Ошибка"
 					return
 			downloaded_file = remote.provided_file.clone()
 			remote.connected_clients.Add(src)
@@ -124,11 +124,11 @@ var/global/nttransfer_uid = 0
 			if(src in ntnet_global.fileservers)
 				ntnet_global.fileservers.Remove(src)
 			for(var/datum/computer_file/program/nttransfer/T in connected_clients)
-				T.crash_download("Remote server has forcibly closed the connection")
+				T.crash_download("Удаленный сервер принудительно закрыл соединение")
 			provided_file = null
 			return 1
 		if("PRG_setpassword")
-			var/pass = reject_bad_text(input(usr, "Enter new server password. Leave blank to cancel, input 'none' to disable password.", "Server security", "none"))
+			var/pass = reject_bad_text(input(usr, "Введите новое имя сервера или введите 'none' для отключения пароля.", "РобКо охранные системы", "none"))
 			if(!pass)
 				return
 			if(pass == "none")
@@ -141,16 +141,16 @@ var/global/nttransfer_uid = 0
 			for(var/datum/computer_file/F in hard_drive.stored_files)
 				if("[F.uid]" == params["id"])
 					if(F.unsendable)
-						error = "I/O Error: File locked."
+						error = "Ошибка: Файл зашифрован"
 						return
 					if(istype(F, /datum/computer_file/program))
 						var/datum/computer_file/program/P = F
 						if(!P.can_run(usr,transfer = 1))
-							error = "Access Error: Insufficient rights to upload file."
+							error = "Ошибка: Невозможно обновить файл"
 					provided_file = F
 					ntnet_global.fileservers.Add(src)
 					return
-			error = "I/O Error: Unable to locate file on hard drive."
+			error = "Ошибка: Файл не обнаружен"
 			return 1
 		if("PRG_uploadmenu")
 			upload_menu = 1

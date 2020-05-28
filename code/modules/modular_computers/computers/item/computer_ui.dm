@@ -26,7 +26,7 @@
 	// This screen simply lists available programs and user may select them.
 	var/obj/item/weapon/computer_hardware/hard_drive/hard_drive = all_components[MC_HDD]
 	if(!hard_drive || !hard_drive.stored_files || !hard_drive.stored_files.len)
-		to_chat(user, "<span class='danger'>\The [src] beeps three times, it's screen displaying a \"DISK ERROR\" warning.</span>")
+		to_chat(user, "<span class='danger'>\ [src] показывает на дислее сообщение \"Ошибка носителя\".</span>")
 		return // No HDD, No HDD files list or no stored files. Something is very broken.
 
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
@@ -34,7 +34,7 @@
 		var/datum/asset/assets = get_asset_datum(/datum/asset/simple/headers)
 		assets.send(user)
 
-		ui = new(user, src, ui_key, "computer_main", "NTOS Main menu", 400, 500, master_ui, state)
+		ui = new(user, src, ui_key, "computer_main", " РобКо Главное Меню", 400, 500, master_ui, state)
 		ui.open()
 		ui.set_autoupdate(state = 1)
 
@@ -89,7 +89,7 @@
 				return
 
 			P.kill_program(forced = TRUE)
-			to_chat(user, "<span class='notice'>Program [P.filename].[P.filetype] with PID [rand(100,999)] has been killed.</span>")
+			to_chat(user, "<span class='notice'>Программа [P.filename].[P.filetype] с UID [rand(100,999)] закрыта.</span>")
 
 		if("PC_runprogram")
 			var/prog = params["name"]
@@ -99,7 +99,7 @@
 				P = hard_drive.find_file_by_name(prog)
 
 			if(!P || !istype(P)) // Program not found or it's not executable program.
-				to_chat(user, "<span class='danger'>\The [src]'s screen shows \"I/O ERROR - Unable to run program\" warning.</span>")
+				to_chat(user, "<span class='danger'>\[src] показывает на дислее сообщение \"Файл не обнаружен\".</span>")
 				return
 
 			P.computer = src
@@ -118,11 +118,11 @@
 			var/obj/item/weapon/computer_hardware/processor_unit/PU = all_components[MC_CPU]
 
 			if(idle_threads.len > PU.max_idle_programs)
-				to_chat(user, "<span class='danger'>\The [src] displays a \"Maximal CPU load reached. Unable to run another program.\" error.</span>")
+				to_chat(user, "<span class='danger'>\ [src] показывает на дислее сообщение \"Главный процессор перегружен, закройте лишние приложения\" error.</span>")
 				return
 
 			if(P.requires_ntnet && !get_ntnet_status(P.requires_ntnet_feature)) // The program requires NTNet connection, but we are not connected to NTNet.
-				to_chat(user, "<span class='danger'>\The [src]'s screen shows \"Unable to connect to NTNet. Please retry. If problem persists contact your system administrator.\" warning.</span>")
+				to_chat(user, "<span class='danger'>\ [src] показывает на дислее сообщение \"RobCo Industries Termlink не может подключиться к остальным терминалам\".</span>")
 				return
 			if(P.run_program(user))
 				active_program = P

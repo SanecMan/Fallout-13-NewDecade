@@ -1,8 +1,8 @@
 /datum/computer_file/program/ntnet_dos
 	filename = "ntn_dos"
-	filedesc = "DoS Traffic Generator"
+	filedesc = "Генератор Трафика"
 	program_icon_state = "hostile"
-	extended_desc = "This advanced script can perform denial of service attacks against NTNet quantum relays. The system administrator will probably notice this. Multiple devices can run this program together against same relay for increased effect"
+	extended_desc = "Этот расширенный сценарий может выполнять атаки типа 'отказ в обслуживании' против серверов РобКо. Системный администратор, вероятно, заметит это. Несколько устройств могут запускать эту программу вместе против одного и того же реле для увеличения эффекта."
 	size = 20
 	requires_ntnet = 1
 	available_on_ntnet = 0
@@ -26,7 +26,7 @@
 		if(!target.is_operational())
 			target.dos_sources.Remove(src)
 			target = null
-			error = "Connection to destination relay lost."
+			error = "Соединение с сервером потеряно."
 
 /datum/computer_file/program/ntnet_dos/kill_program(forced = FALSE)
 	if(target)
@@ -41,7 +41,7 @@
 
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "ntnet_dos", "DoS Traffic Generator", 400, 250, state = state)
+		ui = new(user, src, ui_key, "ntnet_dos", "Генератор Трафика", 400, 250, state = state)
 		ui.set_style("syndicate")
 		ui.set_autoupdate(state = 1)
 		ui.open()
@@ -70,7 +70,7 @@
 				target.dos_sources.Add(src)
 				if(ntnet_global.intrusion_detection_enabled)
 					var/obj/item/weapon/computer_hardware/network_card/network_card = computer.all_components[MC_NET]
-					ntnet_global.add_log("IDS WARNING - Excess traffic flood targeting relay [target.uid] detected from device: [network_card.get_network_tag()]")
+					ntnet_global.add_log("Внимание: переполнение трафика идёт с [target.uid] и замечен тут: [network_card.get_network_tag()]")
 					ntnet_global.intrusion_detection_alarm = 1
 			return 1
 

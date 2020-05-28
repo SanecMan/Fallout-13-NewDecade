@@ -1,7 +1,7 @@
 // Held by /obj/machinery/modular_computer to reduce amount of copy-pasted code.
 /obj/item/device/modular_computer/processor
-	name = "processing unit"
-	desc = "You shouldn't see this. If you do, report it."
+	name = "процессор"
+	desc = "Если вы видите это, значит вы нашли ошибку."
 	icon = null
 	icon_state = null
 	icon_state_unpowered = null
@@ -20,7 +20,7 @@
 	STOP_PROCESSING(SSobj, src) // Processed by its machine
 
 	if(!comp || !istype(comp, /obj/machinery/modular_computer))
-		CRASH("Inapropriate type passed to obj/item/device/modular_computer/processor/New()! Aborting.")
+		CRASH("Неопознаный тип obj/item/device/modular_computer/processor/New()! Отмена.")
 		return
 	// Obtain reference to machinery computer
 	all_components = list()
