@@ -1,7 +1,7 @@
 //Fallout 13 general destructible walls directory
 
 /turf/closed/wall/f13/
-	name = "glitch"
+	name = "матрица"
 	desc = "<font color='#6eaa2c'>You suddenly realize the truth - there is no spoon.<br>Something has caused a glitch in the simulation.</font>"
 	icon = 'icons/fallout/turfs/walls.dmi'
 	icon_state = "matrix"
@@ -11,7 +11,7 @@
 	ChangeTurf(baseturf)
 
 /turf/closed/wall/f13/ruins
-	name = "ruins"
+	name = "руины"
 	desc = "All what has left from the good old days."
 	icon = 'icons/fallout/turfs/walls/ruins.dmi'
 	icon_state = "ruins0"
@@ -27,8 +27,8 @@
 
 
 /turf/closed/wall/f13/wood
-	name = "wooden wall"
-	desc = "A traditional wooden wall."
+	name = "бревенчатая стена"
+	desc = "Традиционная бревенчатая стенка."
 	icon = 'icons/fallout/turfs/walls/wood.dmi'
 	icon_state = "wood0"
 	icontype = "wood"
@@ -42,8 +42,8 @@
 	canSmoothWith = list(/turf/closed/wall/f13/wood, /turf/closed/wall)
 
 /turf/closed/wall/f13/wood/house
-	name = "house wall"
-	desc = "A weathered pre-War house wall."
+	name = "деревянная стена"
+	desc = "Довоенная стена из досок."
 	icon = 'icons/fallout/turfs/walls/house.dmi'
 	icon_state = "house0"
 	icontype = "house"
@@ -75,7 +75,7 @@
 	..()
 
 /turf/closed/wall/f13/wood/interior
-	name = "interior wall"
+	name = "стена с обоями"
 	desc = "Interesting, what kind of material they have used - these wallpapers still look good after all the centuries..."
 	icon = 'icons/fallout/turfs/walls/interior.dmi'
 	icon_state = "interior0"
@@ -85,7 +85,7 @@
 	canSmoothWith = list(/turf/closed/wall/f13/wood/interior, /turf/closed/wall)
 
 /turf/closed/wall/f13/store
-	name = "store wall"
+	name = "бетонная стена"
 	desc = "A pre-War store wall made of solid concrete."
 	icon = 'icons/fallout/turfs/walls/store.dmi'
 	icon_state = "store0"
@@ -98,7 +98,7 @@
 	canSmoothWith = list(/turf/closed/wall/f13/store, /turf/closed/wall)
 
 /turf/closed/wall/f13/supermart
-	name = "supermart wall"
+	name = "усиленная бетонная стена"
 	desc = "A pre-War supermart wall made of reinforced concrete."
 	icon = 'icons/fallout/turfs/walls/superstore.dmi'
 	icon_state = "supermart0"
@@ -134,7 +134,7 @@
 	icon_state = "storeprewindowright"
 
 /turf/closed/wall/f13/tunnel
-	name = "utility tunnel wall"
+	name = "стена технических коммуникаций"
 	desc = "A sturdy metal wall with various pipes and wiring set inside a special groove."
 	icon = 'icons/fallout/turfs/walls/tunnel.dmi'
 	icon_state = "tunnel0"
@@ -159,7 +159,7 @@
 	canSmoothWith = list(/turf/closed/wall/f13/vault, /turf/closed/wall/r_wall/f13/vault, /turf/closed/wall)
 
 /turf/closed/wall/r_wall/f13
-	name = "glitch"
+	name = "матрица"
 	desc = "<font color='#6eaa2c'>You suddenly realize the truth - there is no spoon.<br>Something has caused a glitch in the simulation.</font>"
 	icon = 'icons/fallout/turfs/walls.dmi'
 	icon_state = "matrix"
@@ -179,7 +179,7 @@
 //Fallout 13 indestructible walls
 
 /turf/closed/indestructible/f13
-	name = "glitch"
+	name = "матрица"
 	desc = "<font color='#6eaa2c'>You suddenly realize the truth - there is no spoon.<br>Something has caused a glitch in the simulation.</font>"
 	icon = 'icons/fallout/turfs/walls.dmi'
 	icon_state = "matrix"
