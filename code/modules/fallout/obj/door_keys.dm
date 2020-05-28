@@ -64,7 +64,7 @@
 	icon = 'icons/fallout/objects/keys.dmi'
 	icon_state = "keychain_0"
 	storage_slots = 4
-	can_hold = list(/obj/item/door_key, obj/item/weapon/key/vending, /obj/item/key/buggy, /obj/item/key/motorcycle)
+	can_hold = list(/obj/item/door_key, /obj/item/weapon/key/vending, /obj/item/key/buggy, /obj/item/key/motorcycle)
 	rustle_jimmies = FALSE
 	max_w_class = WEIGHT_CLASS_TINY
 	slot_flags = SLOT_BELT
