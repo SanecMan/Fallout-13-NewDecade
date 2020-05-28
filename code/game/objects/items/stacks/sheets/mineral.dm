@@ -36,7 +36,7 @@ var/global/list/datum/stack_recipe/sandstone_recipes = list ( \
 	)
 
 /obj/item/stack/sheet/mineral/sandstone
-	name = "sandstone brick"
+	name = "кирпич из песчаника"
 	desc = "This appears to be a combination of both sand and stone."
 	singular_name = "sandstone brick"
 	icon_state = "sheet-sandstone"
@@ -60,7 +60,7 @@ var/global/list/datum/stack_recipe/sandstone_recipes = list ( \
  */
 
 /obj/item/stack/sheet/mineral/sandbags
-	name = "sandbags"
+	name = "мешки с песком"
 	icon = 'icons/obj/items.dmi'
 	icon_state = "sandbags"
 	singular_name = "sandbag"
@@ -81,7 +81,7 @@ var/global/list/datum/stack_recipe/sandbag_recipes = list ( \
  * Diamond
  */
 /obj/item/stack/sheet/mineral/diamond
-	name = "diamond"
+	name = "алмазы"
 	icon_state = "sheet-diamond"
 	singular_name = "diamond"
 	origin_tech = "materials=6"
@@ -106,7 +106,7 @@ var/global/list/datum/stack_recipe/diamond_recipes = list ( \
  * Uranium
  */
 /obj/item/stack/sheet/mineral/uranium
-	name = "uranium"
+	name = "уран"
 	icon_state = "sheet-uranium"
 	singular_name = "uranium sheet"
 	origin_tech = "materials=5"
@@ -130,7 +130,7 @@ var/global/list/datum/stack_recipe/uranium_recipes = list ( \
  * Plasma
  */
 /obj/item/stack/sheet/mineral/plasma
-	name = "solid plasma"
+	name = "твёрдая плазма"
 	icon_state = "sheet-plasma"
 	singular_name = "plasma sheet"
 	origin_tech = "plasmatech=2;materials=2"
@@ -168,7 +168,7 @@ var/global/list/datum/stack_recipe/plasma_recipes = list ( \
  * Gold
  */
 /obj/item/stack/sheet/mineral/gold
-	name = "gold"
+	name = "золото"
 	icon_state = "sheet-gold"
 	singular_name = "gold bar"
 	origin_tech = "materials=4"
@@ -196,7 +196,7 @@ var/global/list/datum/stack_recipe/gold_recipes = list ( \
  * Cooper
  */
 /obj/item/stack/sheet/mineral/cooper
-	name = "cooper"
+	name = "медь"
 	icon_state = "sheet-cooper"
 	singular_name = "cooper bar"
 	origin_tech = "materials=3"
@@ -224,7 +224,7 @@ var/global/list/datum/stack_recipe/cooper_recipes = list ( \
  * Silver
  */
 /obj/item/stack/sheet/mineral/silver
-	name = "silver"
+	name = "серебро"
 	icon_state = "sheet-silver"
 	singular_name = "silver bar"
 	origin_tech = "materials=4"
@@ -251,7 +251,7 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
  * Clown
  */
 /obj/item/stack/sheet/mineral/bananium
-	name = "bananium"
+	name = "бананиум"
 	icon_state = "sheet-clown"
 	singular_name = "bananium sheet"
 	origin_tech = "materials=4"
@@ -273,7 +273,7 @@ var/global/list/datum/stack_recipe/clown_recipes = list ( \
  * Titanium
  */
 /obj/item/stack/sheet/mineral/titanium
-	name = "titanium"
+	name = "титаниум"
 	icon_state = "sheet-titanium"
 	singular_name = "titanium sheet"
 	force = 5
@@ -300,7 +300,7 @@ var/global/list/datum/stack_recipe/titanium_recipes = list ( \
  * Plastitanium
  */
 /obj/item/stack/sheet/mineral/plastitanium
-	name = "plastitanium"
+	name = "пластитаниум"
 	icon_state = "sheet-plastitanium"
 	singular_name = "plastitanium sheet"
 	force = 5
@@ -327,7 +327,7 @@ var/global/list/datum/stack_recipe/plastitanium_recipes = list ( \
  * Snow
  */
 /obj/item/stack/sheet/mineral/snow
-	name = "snow"
+	name = "снег"
 	icon_state = "sheet-snow"
 	singular_name = "snow block"
 	force = 1
@@ -363,7 +363,7 @@ var/global/list/datum/stack_recipe/snow_recipes = list ( \
  * Adamantine
  */
 /obj/item/stack/sheet/mineral/adamantine
-	name = "adamantine"
+	name = "адамантий"
 	icon_state = "sheet-adamantine"
 	singular_name = "adamantine sheet"
 	origin_tech = "materials=4"
@@ -372,7 +372,7 @@ var/global/list/datum/stack_recipe/snow_recipes = list ( \
  * Mythril
  */
 /obj/item/stack/sheet/mineral/mythril
-	name = "mythril"
+	name = "митрил"
 	icon_state = "sheet-mythril"
 	singular_name = "mythril sheet"
 	origin_tech = "materials=4"
@@ -381,7 +381,7 @@ var/global/list/datum/stack_recipe/snow_recipes = list ( \
  * Alien Alloy
  */
 /obj/item/stack/sheet/mineral/abductor
-	name = "alien alloy"
+	name = "сплав чужих"
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "sheet-abductor"
 	singular_name = "alien alloy sheet"

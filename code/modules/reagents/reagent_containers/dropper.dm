@@ -1,6 +1,6 @@
 /obj/item/weapon/reagent_containers/dropper
-	name = "dropper"
-	desc = "A dropper. Holds up to 5 units."
+	name = "пипетка"
+	desc = "Пипетка. Может держать до 5 ед."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "dropper0"
 	amount_per_transfer_from_this = 5

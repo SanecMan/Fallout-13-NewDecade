@@ -15,7 +15,7 @@
  * Wrench
  */
 /obj/item/weapon/wrench
-	name = "wrench"
+	name = "гаечный ключ"
 	desc = "A wrench with common uses. Can be found in your hand."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "wrench"
@@ -57,8 +57,8 @@
 	origin_tech = "materials=5;engineering=5;abductor=3"
 
 /obj/item/weapon/wrench/power
-	name = "Hand Drill"
-	desc ="A simple powered drill with a bolt bit"
+	name = "ручная дрель"
+	desc ="Простая ручная дрель с насадкой для болтов."
 	icon_state = "drill_bolt"
 	item_state = "drill"
 	usesound = 'sound/items/drill_use.ogg'
@@ -123,8 +123,8 @@
  * Screwdriver
  */
 /obj/item/weapon/screwdriver
-	name = "screwdriver"
-	desc = "You can be totally screwy with this."
+	name = "отвёртка"
+	desc = "Вы можете закручивать всякие штуки с её помощью. Имеет гравировку РобКо."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = null
 	flags = CONDUCT
@@ -166,7 +166,7 @@
 	return eyestab(M,user)
 
 /obj/item/weapon/screwdriver/brass
-	name = "brass screwdriver"
+	name = "медная отвёртка"
 	desc = "A screwdriver made of brass. The handle feels freezing cold."
 	icon_state = "screwdriver_brass"
 	toolspeed = 0.5
@@ -180,8 +180,8 @@
 	toolspeed = 0.1
 
 /obj/item/weapon/screwdriver/power
-	name = "Hand Drill"
-	desc = "A simple hand drill with a screwdriver bit attached."
+	name = "ручная дрель"
+	desc = "Простая дрель с наконечником-отверткой."
 	icon_state = "drill_screw"
 	item_state = "drill"
 	materials = list(MAT_METAL=150,MAT_SILVER=50,MAT_TITANIUM=25)
@@ -217,8 +217,8 @@
  * Wirecutters
  */
 /obj/item/weapon/wirecutters
-	name = "wirecutters"
-	desc = "This cuts wires and cloth, just like scissors."
+	name = "кусачки"
+	desc = "Режут провода и одежду, прямо как ножницы."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = null
 	flags = CONDUCT
@@ -259,7 +259,7 @@
 	return (BRUTELOSS)
 
 /obj/item/weapon/wirecutters/brass
-	name = "brass wirecutters"
+	name = "медные кусачки"
 	desc = "A pair of wirecutters made of brass. The handle feels freezing cold to the touch."
 	icon_state = "cutters_brass"
 	toolspeed = 0.5
@@ -273,8 +273,8 @@
 	origin_tech = "materials=5;engineering=4;abductor=3"
 
 /obj/item/weapon/wirecutters/cyborg
-	name = "wirecutters"
-	desc = "This cuts wires."
+	name = "кусачки"
+	desc = "Кусают провода."
 	toolspeed = 0.5
 
 /obj/item/weapon/wirecutters/power
@@ -309,8 +309,8 @@
  * Welding Tool
  */
 /obj/item/weapon/weldingtool
-	name = "welding tool"
-	desc = "A standard edition welder provided by NanoTrasen."
+	name = "сварочный инструмент"
+	desc = "Стандартный сварочный аппарат производимый РобКо."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "welder"
 	item_state = "welder"
@@ -609,7 +609,7 @@
 	origin_tech = "engineering=3;plasmatech=2"
 
 /obj/item/weapon/weldingtool/experimental //Moded for Fallout 13 blowtorch
-	name = "blowtorch"
+	name = "сварка"
 	desc = "A fuel-burning tool used for applying flame and heat to various applications, usually metalworking."
 	icon_state = "blowtorch"
 	item_state = "blowtorch"
@@ -642,7 +642,7 @@
  */
 
 /obj/item/weapon/crowbar
-	name = "pocket crowbar"
+	name = "лом"
 	desc = "A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "crowbar"
@@ -683,7 +683,7 @@
 	origin_tech = "combat=4;engineering=4;abductor=3"
 
 /obj/item/weapon/crowbar/large
-	name = "crowbar"
+	name = "монтировка"
 	desc = "It's a big crowbar. It doesn't fit in your pockets, because it's big."
 	force = 15
 	w_class = WEIGHT_CLASS_NORMAL

@@ -1,5 +1,5 @@
 /obj/item/organ/brain
-	name = "brain"
+	name = "мозг"
 	desc = "A piece of juicy meat found in a person's head."
 	icon_state = "brain"
 	throw_speed = 3

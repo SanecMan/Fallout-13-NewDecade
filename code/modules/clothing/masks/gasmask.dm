@@ -1,5 +1,5 @@
 /obj/item/clothing/mask/gas
-	name = "gas mask"
+	name = "противогаз"
 	desc = "A face-covering mask that can be connected to an air supply. While good for concealing your identity, it isn't good for blocking gas flow." //More accurate
 	icon_state = "gas_alt"
 	flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
@@ -14,7 +14,7 @@
 // **** Welding gas mask ****
 
 /obj/item/clothing/mask/gas/welding
-	name = "welding mask"
+	name = "сварочная маска"
 	desc = "A gas mask with built-in welding goggles and a face shield. Looks like a skull - clearly designed by a nerd."
 	icon_state = "weldingmask"
 	materials = list(MAT_METAL=4000, MAT_GLASS=2000)
@@ -37,7 +37,7 @@
 
 //Plague Dr suit can be found in clothing/suits/bio.dm
 /obj/item/clothing/mask/gas/plaguedoctor
-	name = "plague doctor mask"
+	name = "маска чумного доктора"
 	desc = "A modernised version of the classic design, this mask will not only filter out toxins but it can also be connected to an air supply."
 	icon_state = "plaguedoctor"
 	item_state = "gas_mask"
@@ -50,7 +50,7 @@
 	strip_delay = 60
 
 /obj/item/clothing/mask/gas/huntermask
-	name = "hunter mask"
+	name = "маска охотника"
 	desc = "A hunter mask which protects from radiation."
 	icon_state = "huntermask"
 	item_state = "huntermask"
@@ -99,7 +99,7 @@
 	resistance_flags = FLAMMABLE
 
 /obj/item/clothing/mask/gas/mime
-	name = "mime mask"
+	name = "маска мима"
 	desc = "The traditional mime's mask. It has an eerie facial posture."
 	flags = MASKINTERNALS
 	icon_state = "mime"
@@ -129,7 +129,7 @@
 	return 1
 
 /obj/item/clothing/mask/gas/monkeymask
-	name = "monkey mask"
+	name = "маска обезьянки"
 	desc = "A mask used when acting as a monkey."
 	flags = MASKINTERNALS
 	icon_state = "monkeymask"
@@ -152,13 +152,13 @@
 	item_state = "death_commando_mask"
 
 /obj/item/clothing/mask/gas/cyborg
-	name = "cyborg visor"
+	name = "визор киборга"
 	desc = "Beep boop."
 	icon_state = "death"
 	resistance_flags = FLAMMABLE
 
 /obj/item/clothing/mask/gas/owl_mask
-	name = "owl mask"
+	name = "маска совы"
 	desc = "Twoooo!"
 	icon_state = "owl"
 	flags = MASKINTERNALS
@@ -166,6 +166,6 @@
 	resistance_flags = FLAMMABLE
 
 /obj/item/clothing/mask/gas/carp
-	name = "carp mask"
+	name = "маска карпа"
 	desc = "Gnash gnash."
 	icon_state = "carp_mask"

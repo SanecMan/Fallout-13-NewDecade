@@ -1,24 +1,24 @@
 //Added by Jack Rost
 /obj/item/trash
 	icon = 'icons/obj/janitor.dmi'
-	desc = "This is rubbish."
+	desc = "Мусор."
 	w_class = WEIGHT_CLASS_TINY
 	resistance_flags = FLAMMABLE
 
 /obj/item/trash/raisins
-	name = "\improper 4no raisins"
+	name = "\improper 4Причины"
 	icon_state= "4no_raisins"
 
 /obj/item/trash/candy
-	name = "candy"
+	name = "конфета"
 	icon_state= "candy"
 
 /obj/item/trash/cheesie
-	name = "cheesie honkers"
+	name = "сырный хонкерс"
 	icon_state = "cheesie_honkers"
 
 /obj/item/trash/chips
-	name = "chips"
+	name = "чипсы"
 	icon_state = "chips"
 
 /obj/item/trash/popcorn
@@ -34,11 +34,11 @@
 	icon_state = "syndi_cakes"
 
 /obj/item/trash/waffles
-	name = "waffles tray"
+	name = "поднос из под вафель"
 	icon_state = "waffles"
 
 /obj/item/trash/plate
-	name = "plate"
+	name = "тарелка"
 	icon_state = "plate"
 	resistance_flags = 0
 
@@ -47,21 +47,21 @@
 	icon_state = "pistachios_pack"
 
 /obj/item/trash/semki
-	name = "semki pack"
+	name = "упаковка семечек"
 	icon_state = "semki_pack"
 
 /obj/item/trash/tray
-	name = "tray"
+	name = "поднос"
 	icon_state = "tray"
 	resistance_flags = 0
 
 /obj/item/trash/candle
-	name = "candle"
+	name = "свеча"
 	icon = 'icons/obj/candle.dmi'
 	icon_state = "candle4"
 
 /obj/item/trash/can
-	name = "crushed can"
+	name = "мятая банка"
 	icon_state = "cola"
 	resistance_flags = 0
 

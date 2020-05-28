@@ -1,6 +1,6 @@
 /obj/item/weapon/lipstick
 	gender = PLURAL
-	name = "red lipstick"
+	name = "красная помада"
 	desc = "A generic brand of lipstick."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "lipstick"
@@ -29,7 +29,7 @@
 /obj/item/weapon/lipstick/random/New()
 	..()
 	colour = pick("red","purple","lime","black","green","blue","white")
-	name = "[colour] lipstick"
+	name = "[colour] помада"
 
 
 
@@ -103,7 +103,7 @@
 
 
 /obj/item/weapon/razor
-	name = "electric razor"
+	name = "электрическая бритва"
 	desc = "The latest and greatest power razor born from the science of shaving."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "razor"

@@ -5,8 +5,8 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 
 /obj/item/device/pda
-	name = "\improper PDA"
-	desc = "A portable microcomputer by Thinktronic Systems, LTD. Functionality determined by a preprogrammed ROM cartridge."
+	name = "\improper ПипБой-3000А"
+	desc = "Наручный микрокомпьютер. Очень стильный и прочный."
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pda"
 	item_state = "pipboy"
@@ -38,7 +38,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	var/lock_code = "" // Lockcode to unlock uplink
 	var/honkamt = 0 //How many honks left when infected with honk.exe
 	var/mimeamt = 0 //How many silence left when infected with mime.exe
-	var/note = "Congratulations, your station has chosen the Thinktronic 5230 Personal Data Assistant!" //Current note in the notepad function
+	var/note = "Поздравляем Вас с приобритением нового ПИПБОЙ-3000А, приятного вам пользования!" //Current note in the notepad function
 	var/notehtml = ""
 	var/notescanned = 0 // True if what is in the notekeeper was from a paper.
 	var/cart = "" //A place to stick cartridge menu information
@@ -68,7 +68,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	update_icon()
 
 /obj/item/device/pda/proc/update_label()
-	name = "PDA-[owner] ([ownjob])" //Name generalisation
+	name = "ПипБой-[owner] ([ownjob])" //Name generalisation
 
 /obj/item/device/pda/GetAccess()
 	if(id)
@@ -114,44 +114,44 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		hidden_uplink.interact(user)
 		return
 
-	var/dat = "<html><meta charset=UTF-8><head><title>Personal Data Assistant</title></head><body bgcolor=\"#808000\"><style>a, a:link, a:visited, a:active, a:hover { color: #000000; }img {border-style:none;}</style>"
+	var/dat = "<html><meta charset=UTF-8><head><title>ПипБой-3000А</title></head><body bgcolor=\"#808000\"><style>a, a:link, a:visited, a:active, a:hover { color: #000000; }img {border-style:none;}</style>"
 
-	dat += "<a href='byond://?src=\ref[src];choice=Refresh'><img src=pda_refresh.png> Refresh</a>"
+	dat += "<a href='byond://?src=\ref[src];choice=Refresh'><img src=pda_refresh.png> Обновить</a>"
 
 	if ((!isnull(cartridge)) && (mode == 0))
-		dat += " | <a href='byond://?src=\ref[src];choice=Eject'><img src=pda_eject.png> Eject [cartridge]</a>"
+		dat += " | <a href='byond://?src=\ref[src];choice=Eject'><img src=pda_eject.png> Изъять [cartridge]</a>"
 	if (mode)
-		dat += " | <a href='byond://?src=\ref[src];choice=Return'><img src=pda_menu.png> Return</a>"
+		dat += " | <a href='byond://?src=\ref[src];choice=Return'><img src=pda_menu.png> Назад</a>"
 
 	dat += "<br>"
 
 	if (!owner)
-		dat += "Warning: No owner information entered.  Please swipe card.<br><br>"
+		dat += "Внимание: Нет данных о пользователе.  Подтвердите личность.<br><br>"
 		dat += "<a href='byond://?src=\ref[src];choice=Refresh'><img src=pda_refresh.png> Retry</a>"
 	else
 		switch (mode)
 			if (0)
-				dat += "<h2>Personal Information Processor 3000A</h2>"
-				dat += "Owner: [owner], [ownjob]<br>"
+				dat += "<h2>ПипБой-3000А</h2>"
+				dat += "Пользователь: [owner], [ownjob]<br>"
 				dat += text("ID: <A href='?src=\ref[src];choice=Authenticate'>[id ? "[id.registered_name], [id.assignment]" : "----------"]")
-				dat += text("<br><A href='?src=\ref[src];choice=UpdateInfo'>[id ? "Update PIP Info" : ""]</A><br><br>")
+				dat += text("<br><A href='?src=\ref[src];choice=UpdateInfo'>[id ? "Обновить информацию." : ""]</A><br><br>")
 
 				dat += "[worldtime2text()]<br>" //:[world.time / 100 % 6][world.time / 100 % 10]"
-				dat += "[time2text(world.realtime, "MMM DD")] [year_integer+540]"
+				dat += "[time2text(world.realtime, "MMM DD")] [year_integer+240]"
 
 				dat += "<br><br>"
 
-				dat += "<h4>General Functions</h4>"
+				dat += "<h4>Основные функции</h4>"
 				dat += "<ul>"
-				dat += "<li><a href='byond://?src=\ref[src];choice=1'><img src=pda_notes.png> Notekeeper</a></li>"
-				dat += "<li><a href='byond://?src=\ref[src];choice=2'><img src=pda_mail.png> Messenger</a></li>"
+				dat += "<li><a href='byond://?src=\ref[src];choice=1'><img src=pda_notes.png> Заметки</a></li>"
+				dat += "<li><a href='byond://?src=\ref[src];choice=2'><img src=pda_mail.png> Передатчик</a></li>"
 
 				if (cartridge)
 					if (cartridge.access_clown)
 						dat += "<li><a href='byond://?src=\ref[src];choice=Honk'><img src=pda_honk.png> Honk Synthesizer</a></li>"
 						dat += "<li><a href='byond://?src=\ref[src];choice=Trombone'><img src=pda_honk.png> Sad Trombone</a></li>"
 					if (cartridge.access_manifest)
-						dat += "<li><a href='byond://?src=\ref[src];choice=41'><img src=pda_notes.png> View Crew Manifest</a></li>"
+						dat += "<li><a href='byond://?src=\ref[src];choice=41'><img src=pda_notes.png> Просмотреть список персонала</a></li>"
 					if(cartridge.access_status_display)
 						dat += "<li><a href='byond://?src=\ref[src];choice=42'><img src=pda_status.png> Set Status Display</a></li>"
 					dat += "</ul>"
@@ -164,17 +164,17 @@ var/global/list/obj/item/device/pda/PDAs = list()
 						dat += "<h4>Medical Functions</h4>"
 						dat += "<ul>"
 						dat += "<li><a href='byond://?src=\ref[src];choice=44'><img src=pda_medical.png> Medical Records</a></li>"
-						dat += "<li><a href='byond://?src=\ref[src];choice=Medical Scan'><img src=pda_scanner.png> [scanmode == 1 ? "Disable" : "Enable"] Medical Scanner</a></li>"
+						dat += "<li><a href='byond://?src=\ref[src];choice=Medical Scan'><img src=pda_scanner.png> [scanmode == 1 ? "Выключить" : "Включить"] Биометрический сканер</a></li>"
 						dat += "</ul>"
 					if (cartridge.access_security)
 						dat += "<h4>Security Functions</h4>"
 						dat += "<ul>"
-						dat += "<li><a href='byond://?src=\ref[src];choice=45'><img src=pda_cuffs.png> Security Records</A></li>"
+						dat += "<li><a href='byond://?src=\ref[src];choice=45'><img src=pda_cuffs.png> Записи СБ</A></li>"
 						dat += "</ul>"
 					if(cartridge.access_quartermaster)
 						dat += "<h4>Quartermaster Functions:</h4>"
 						dat += "<ul>"
-						dat += "<li><a href='byond://?src=\ref[src];choice=47'><img src=pda_crate.png> Supply Records</A></li>"
+						dat += "<li><a href='byond://?src=\ref[src];choice=47'><img src=pda_crate.png> Записи Доставки</A></li>"
 						dat += "</ul>"
 				dat += "</ul>"
 
@@ -211,18 +211,18 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				dat += "</ul>"
 
 			if (1)
-				dat += "<h4><img src=pda_notes.png> Notekeeper V2.2</h4>"
+				dat += "<h4><img src=pda_notes.png> Заметки V2.2</h4>"
 				dat += "<a href='byond://?src=\ref[src];choice=Edit'>Edit</a><br>"
 				if(notescanned)
 					dat += "(This is a scanned image, editing it may cause some text formatting to change.)<br>"
 				dat += "<HR><font face=\"[PEN_FONT]\">[(!notehtml ? note : notehtml)]</font>"
 
 			if (2)
-				dat += "<h4><img src=pda_mail.png> SpaceMessenger V3.9.6</h4>"
-				dat += "<a href='byond://?src=\ref[src];choice=Toggle Ringer'><img src=pda_bell.png> Ringer: [silent == 1 ? "Off" : "On"]</a> | "
-				dat += "<a href='byond://?src=\ref[src];choice=Toggle Messenger'><img src=pda_mail.png> Send / Receive: [toff == 1 ? "Off" : "On"]</a> | "
+				dat += "<h4><img src=pda_mail.png> Передатчик V3.9.6</h4>"
+				dat += "<a href='byond://?src=\ref[src];choice=Toggle Ringer'><img src=pda_bell.png> Звонок: [silent == 1 ? "Off" : "On"]</a> | "
+				dat += "<a href='byond://?src=\ref[src];choice=Toggle Messenger'><img src=pda_mail.png> Отправка / Получение: [toff == 1 ? "ВЫКЛ" : "ВКЛ"]</a> | "
 				dat += "<a href='byond://?src=\ref[src];choice=Ringtone'><img src=pda_bell.png> Set Ringtone</a> | "
-				dat += "<a href='byond://?src=\ref[src];choice=21'><img src=pda_mail.png> Messages</a><br>"
+				dat += "<a href='byond://?src=\ref[src];choice=21'><img src=pda_mail.png> Сообщения</a><br>"
 
 				if (istype(cartridge, /obj/item/weapon/cartridge/syndicate))
 					dat += "<b>[cartridge:shock_charges] detonation charges left.</b><HR>"
@@ -231,7 +231,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				if (istype(cartridge, /obj/item/weapon/cartridge/mime))
 					dat += "<b>[cartridge:mime_charges] viral files left.</b><HR>"
 
-				dat += "<h4><img src=pda_menu.png> Detected PDAs</h4>"
+				dat += "<h4><img src=pda_menu.png> Обнаруженные компьютеры</h4>"
 
 				dat += "<ul>"
 				var/count = 0
@@ -242,7 +242,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 							continue
 						dat += "<li><a href='byond://?src=\ref[src];choice=Message;target=\ref[P]'>[P]</a>"
 						if (istype(cartridge, /obj/item/weapon/cartridge/syndicate) && P.detonate)
-							dat += " (<a href='byond://?src=\ref[src];choice=Detonate;target=\ref[P]'><img src=pda_boom.png>*Detonate*</a>)"
+							dat += " (<a href='byond://?src=\ref[src];choice=Detonate;target=\ref[P]'><img src=pda_boom.png>*взорвать*</a>)"
 						if (istype(cartridge, /obj/item/weapon/cartridge/clown))
 							dat += " (<a href='byond://?src=\ref[src];choice=Send Honk;target=\ref[P]'><img src=pda_honk.png>*Send Virus*</a>)"
 						if (istype(cartridge, /obj/item/weapon/cartridge/mime))
@@ -256,20 +256,20 @@ var/global/list/obj/item/device/pda/PDAs = list()
 					dat += "<a href='byond://?src=\ref[src];choice=MessageAll'>Send To All</a>"
 
 			if(21)
-				dat += "<h4><img src=pda_mail.png> SpaceMessenger V3.9.6</h4>"
-				dat += "<a href='byond://?src=\ref[src];choice=Clear'><img src=pda_blank.png> Clear Messages</a>"
+				dat += "<h4><img src=pda_mail.png> Передатчик V3.9.6</h4>"
+				dat += "<a href='byond://?src=\ref[src];choice=Clear'><img src=pda_blank.png> Очистить сообщения</a>"
 
-				dat += "<h4><img src=pda_mail.png> Messages</h4>"
+				dat += "<h4><img src=pda_mail.png> Сообщения</h4>"
 
 				dat += tnote
 				dat += "<br>"
 
 			if (3)
-				dat += "<h4><img src=pda_atmos.png> Atmospheric Readings</h4>"
+				dat += "<h4><img src=pda_atmos.png> Атмосферные показатели</h4>"
 
 				var/turf/T = user.loc
 				if (isnull(T))
-					dat += "Unable to obtain a reading.<br>"
+					dat += "Неудаётся получить данные.<br>"
 				else
 					var/datum/gas_mixture/environment = T.return_air()
 					var/list/env_gases = environment.gases
@@ -277,7 +277,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 					var/pressure = environment.return_pressure()
 					var/total_moles = environment.total_moles()
 
-					dat += "Air Pressure: [round(pressure,0.1)] kPa<br>"
+					dat += "Давление воздуха: [round(pressure,0.1)] kPa<br>"
 
 					if (total_moles)
 						for(var/id in env_gases)
@@ -285,7 +285,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 							if(gas_level > 0)
 								dat += "[env_gases[id][GAS_META][META_GAS_NAME]]: [round(gas_level*100, 0.01)]%<br>"
 
-					dat += "Temperature: [round(environment.temperature-T0C)]&deg;C<br>"
+					dat += "Температура: [round(environment.temperature-T0C)]&deg;C<br>"
 				dat += "<br>"
 			else//Else it links to the cart menu proc. Although, it really uses menu hub 4--menu 4 doesn't really exist as it simply redirects to hub.
 				dat += cart
@@ -328,7 +328,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			if("Eject")//Ejects the cart, only done from hub.
 				if (!isnull(cartridge))
 					U.put_in_hands(cartridge)
-					to_chat(U, "<span class='notice'>You remove [cartridge] from [src].</span>")
+					to_chat(U, "<span class='notice'>Вы изъяли [cartridge] из [src].</span>")
 					scanmode = 0
 					if (cartridge.radio)
 						cartridge.radio.hostpda = null
@@ -401,7 +401,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 //NOTEKEEPER FUNCTIONS===================================
 
 			if ("Edit")
-				var/n = stripped_multiline_input(U, "Please enter message", name, note)
+				var/n = stripped_multiline_input(U, "Введите сообщение", name, note)
 				if (in_range(src, U) && loc == U)
 					if (mode == 1 && n)
 						note = n
@@ -420,12 +420,12 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			if("Clear")//Clears messages
 				tnote = null
 			if("Ringtone")
-				var/t = input(U, "Please enter new ringtone", name, ttone) as text
+				var/t = input(U, "Выберите новый рингтон", name, ttone) as text
 				if(in_range(src, U) && loc == U)
 					if(t)
 						if(hidden_uplink && (trim(lowertext(t)) == trim(lowertext(lock_code))))
 							hidden_uplink.interact(U)
-							to_chat(U, "The PDA softly beeps.")
+							to_chat(U, "Пипбой тихо пищит.")
 							U << browse(null, "window=pda")
 							src.mode = 0
 						else
@@ -447,7 +447,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 					if(!isnull(P))
 						if (!P.toff && cartridge:honk_charges > 0)
 							cartridge:honk_charges--
-							U.show_message("<span class='notice'>Virus sent!</span>", 1)
+							U.show_message("<span class='notice'>Вирус отправлен!</span>", 1)
 							P.honkamt = (rand(15,20))
 					else
 						to_chat(U, "PDA not found.")
@@ -460,11 +460,11 @@ var/global/list/obj/item/device/pda/PDAs = list()
 					if(!isnull(P))
 						if (!P.toff && cartridge:mime_charges > 0)
 							cartridge:mime_charges--
-							U.show_message("<span class='notice'>Virus sent!</span>", 1)
+							U.show_message("<span class='notice'>Вирус отправлен!</span>", 1)
 							P.silent = 1
 							P.ttone = "silence"
 					else
-						to_chat(U, "PDA not found.")
+						to_chat(U, "Пипбой не найден.")
 				else
 					U << browse(null, "window=pda")
 					return
@@ -501,12 +501,12 @@ var/global/list/obj/item/device/pda/PDAs = list()
 								difficulty += 2
 
 							if(prob(difficulty * 15) || (P.hidden_uplink))
-								U.show_message("<span class='danger'>An error flashes on your [src].</span>", 1)
+								U.show_message("<span class='danger'>Ошибка высвечивается на экране [src].</span>", 1)
 							else
-								U.show_message("<span class='notice'>Success!</span>", 1)
+								U.show_message("<span class='notice'>Успех!</span>", 1)
 								P.explode()
 					else
-						to_chat(U, "PDA not found.")
+						to_chat(U, "Пипбой не найден.")
 				else
 					U.unset_machine()
 					U << browse(null, "window=pda")
@@ -555,14 +555,14 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		if (ismob(loc))
 			var/mob/M = loc
 			M.put_in_hands(id)
-			to_chat(usr, "<span class='notice'>You remove the ID from the [name].</span>")
+			to_chat(usr, "<span class='notice'>Вы изъяли носитель данных из [name].</span>")
 		else
 			id.forceMove(get_turf(src))
 		id = null
 		update_icon()
 
 /obj/item/device/pda/proc/msg_input(mob/living/U = usr)
-	var/t = stripped_input(U, "Please enter message", name, null, MAX_MESSAGE_LEN)
+	var/t = stripped_input(U, "Введите сообщение", name, null, MAX_MESSAGE_LEN)
 	if (!t || toff)
 		return
 	if (!in_range(src, U) && loc != U)
@@ -599,17 +599,17 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			P.show_recieved_message(msg,src)
 			if(!multiple)
 				show_to_ghosts(user,msg)
-				log_pda("[user] (PDA: [src.name]) sent \"[message]\" to [P.name]")
+				log_pda("[user] (ПИП: [src.name]) отправляет \"[message]\" для [P.name]")
 		else
 			if(!multiple)
-				to_chat(user, "<span class='notice'>ERROR: Server isn't responding.</span>")
+				to_chat(user, "<span class='notice'>ОШИБКА: Сервер Волт-Тек не отвечает. Попробуйте позже.</span>")
 				return
 	photo = null
 
 	if(multiple)
 		show_to_sender(last_sucessful_msg,1)
 		show_to_ghosts(user,last_sucessful_msg,1)
-		log_pda("[user] (PDA: [src.name]) sent \"[message]\" to Everyone")
+		log_pda("[user] (ПИП: [src.name]) отправляет \"[message]\" для Всех")
 
 /obj/item/device/pda/proc/show_to_sender(datum/data_pda_msg/msg,multiple = 0)
 	tnote += "<i><b>&rarr; To [multiple ? "Everyone" : msg.recipient]:</b></i><br>[msg.message][msg.get_photo_ref()]<br>"
@@ -629,7 +629,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		L = get(src, /mob/living/silicon)
 
 	if(L && L.stat != UNCONSCIOUS)
-		to_chat(L, "[bicon(src)] <b>Message from [source.owner] ([source.ownjob]), </b>\"[msg.message]\"[msg.get_photo_ref()] (<a href='byond:)//?src=\ref[src];choice=Message;skiprefresh=1;target=\ref[source]'>Reply</a>")
+		to_chat(L, "[bicon(src)] <b>Сообщение от [source.owner] ([source.ownjob]), </b>\"[msg.message]\"[msg.get_photo_ref()] (<a href='byond:)//?src=\ref[src];choice=Message;skiprefresh=1;target=\ref[source]'>Ответить</a>")
 
 
 	update_icon()
@@ -639,7 +639,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	for(var/mob/M in player_list)
 		if(isobserver(M) && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTPDA))
 			var/link = FOLLOW_LINK(M, user)
-			to_chat(M, "[link] <span class='name'>[msg.sender] </span><span class='game say'>PDA Message</span> --> <span class='name'>[multiple ? "Everyone" : msg.recipient]</span>: <span class='message'>[msg.message][msg.get_photo_ref()]</span></span>")
+			to_chat(M, "[link] <span class='name'>[msg.sender] </span><span class='game say'>Сообщение на Пипбой</span> --> <span class='name'>[multiple ? "Everyone" : msg.recipient]</span>: <span class='message'>[msg.message][msg.get_photo_ref()]</span></span>")
 
 /obj/item/device/pda/proc/can_send(obj/item/device/pda/P)
 	if(!P || qdeleted(P) || P.toff)
@@ -702,7 +702,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		if(id)
 			remove_id()
 		else
-			to_chat(usr, "<span class='warning'>This PDA does not have an ID in it!</span>")
+			to_chat(usr, "<span class='warning'>В пипбое нет носителя данных!</span>")
 
 /obj/item/device/pda/verb/verb_remove_pen()
 	set category = "Object"
@@ -722,11 +722,11 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			M.put_in_hands(inserted_item)
 		else
 			inserted_item.forceMove(loc)
-		to_chat(usr, "<span class='notice'>You remove \the [inserted_item] from \the [src].</span>")
+		to_chat(usr, "<span class='notice'>Вы достали [inserted_item] из [src].</span>")
 		inserted_item = null
 		update_icon()
 	else
-		to_chat(usr, "<span class='warning'>This PDA does not have a pen in it!</span>")
+		to_chat(usr, "<span class='warning'>В пипбое нет ручки!</span>")
 
 //trying to insert or remove an id
 /obj/item/device/pda/proc/id_check(mob/user, obj/item/weapon/card/id/I)
@@ -757,7 +757,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			return
 		cartridge = C
 		cartridge.forceMove(src)
-		to_chat(user, "<span class='notice'>You insert [cartridge] into [src].</span>")
+		to_chat(user, "<span class='notice'>Вы вставляете [cartridge] в [src].</span>")
 		if(cartridge.radio)
 			cartridge.radio.hostpda = src
 		update_icon()
@@ -765,19 +765,19 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	else if(istype(C, /obj/item/weapon/card/id))
 		var/obj/item/weapon/card/id/idcard = C
 		if(!idcard.registered_name)
-			to_chat(user, "<span class='warning'>\The [src] rejects the ID!</span>")
+			to_chat(user, "<span class='warning'> [src] не принимает носитель данных!</span>")
 			return
 		if(!owner)
 			owner = idcard.registered_name
 			ownjob = idcard.assignment
 			update_label()
-			to_chat(user, "<span class='notice'>Card scanned.</span>")
+			to_chat(user, "<span class='notice'>Носитель данных просканирован.</span>")
 		else
 			//Basic safety check. If either both objects are held by user or PDA is on ground and card is in hand.
 			if(((src in user.contents) || (isturf(loc) && in_range(src, user))) && (C in user.contents))
 				if(!id_check(user, idcard))
 					return
-				to_chat(user, "<span class='notice'>You put the ID into \the [src]'s slot.</span>")
+				to_chat(user, "<span class='notice'>Вы вставили носитель данных в слот [src].</span>")
 				updateSelfDialog()//Update self dialog on success.
 			return	//Return in case of failed check or when successful.
 		updateSelfDialog()//For the non-input related code.
@@ -867,7 +867,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if (!scanmode && istype(A, /obj/item/weapon/paper) && owner)
 		var/obj/item/weapon/paper/PP = A
 		if (!PP.info)
-			to_chat(user, "<span class='warning'>Unable to scan! Paper is blank.</span>")
+			to_chat(user, "<span class='warning'>Не удалось просканировать, документ пуст.</span>")
 			return
 		notehtml = PP.info
 		note = replacetext_char(notehtml, "<BR>", "\[br\]")
@@ -876,7 +876,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		note = replacetext_char(note, "</ul>", "\[/list\]")
 		note = html_encode(note)
 		notescanned = 1
-		to_chat(user, "<span class='notice'>Paper scanned. Saved to PDA's notekeeper.</span>")//concept of scanning paper copyright brainoblivion 2009
+		to_chat(user, "<span class='notice'>Документ просканирован и сохранен в заметки.</span>")//concept of scanning paper copyright brainoblivion 2009
 
 
 
@@ -886,9 +886,9 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 	if (ismob(loc))
 		var/mob/M = loc
-		M.show_message("<span class='userdanger'>Your [src] explodes!</span>", 1)
+		M.show_message("<span class='userdanger'>Ваш [src] взрывается!</span>", 1)
 	else
-		visible_message("<span class='danger'>[src] explodes!</span>", "<span class='warning'>You hear a loud *pop*!</span>")
+		visible_message("<span class='danger'>[src] взрывается!</span>", "<span class='warning'>You hear a loud *pop*!</span>")
 
 	if(T)
 		T.hotspot_expose(700,125)
@@ -985,8 +985,8 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 //Some spare PDAs in a box
 /obj/item/weapon/storage/box/PDAs
-	name = "spare PDAs"
-	desc = "A box of spare PDA microcomputers."
+	name = "запасные пипбои"
+	desc = "Коробка с запасными пипбоями."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "pda"
 

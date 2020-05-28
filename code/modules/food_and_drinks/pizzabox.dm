@@ -1,14 +1,14 @@
 /obj/item/weapon/bombcore/pizza
 	parent_type = /obj/item/weapon/bombcore/miniature
-	name = "pizza bomb"
-	desc = "Special delivery!"
+	name = "пицца-бомба"
+	desc = "Особая доставка!"
 	icon_state = "pizzabomb_inactive"
 	item_state = "eshield0"
 	origin_tech = "syndicate=3;engineering=3"
 
 /obj/item/pizzabox
-	name = "pizza box"
-	desc = "A box suited for pizzas."
+	name = "коробка пиццы"
+	desc = "Коробка для пиццы!"
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "pizzabox1"
 	item_state = "pizzabox"
@@ -80,7 +80,7 @@
 		return
 	open = !open
 	if(open && !bomb_defused)
-		audible_message("<span class='warning'>[bicon(src)] *beep*</span>")
+		audible_message("<span class='warning'>[bicon(src)] *бип*</span>")
 		bomb_active = TRUE
 		START_PROCESSING(SSobj, src)
 	update_icon()
@@ -92,14 +92,14 @@
 	if(open)
 		if(pizza)
 			user.put_in_hands(pizza)
-			to_chat(user, "<span class='notice'>You take [pizza] out of [src].</span>")
+			to_chat(user, "<span class='notice'>Вы достали [pizza] из [src].</span>")
 			pizza = null
 			update_icon()
 			return
 		else if(bomb)
 			if(wires.is_all_cut() && bomb_defused)
 				user.put_in_hands(bomb)
-				to_chat(user, "<span class='notice'>You carefully remove the [bomb] from [src].</span>")
+				to_chat(user, "<span class='notice'>Вы аккуратно изъяли [bomb] из [src].</span>")
 				bomb = null
 				update_icon()
 				return
@@ -121,7 +121,7 @@
 		var/obj/item/pizzabox/topbox = boxes[boxes.len]
 		boxes -= topbox
 		user.put_in_hands(topbox)
-		to_chat(user, "<span class='notice'>You remove the topmost [name] from the stack.</span>")
+		to_chat(user, "<span class='notice'>Вы взяли самую высокую [name] из кучи.</span>")
 		topbox.update_icon()
 		update_icon()
 		return
@@ -141,14 +141,14 @@
 				boxes += add
 				newbox.boxes.Cut()
 				newbox.forceMove(src)
-				to_chat(user, "<span class='notice'>You put [newbox] on top of [src]!</span>")
+				to_chat(user, "<span class='notice'>Вы кладёте [newbox] на верх [src]!</span>")
 				newbox.update_icon()
 				update_icon()
 				return
 			else
-				to_chat(user, "<span class='notice'>The stack is dangerously high!</span>")
+				to_chat(user, "<span class='notice'>Куча слишком высокая!</span>")
 		else
-			to_chat(user, "<span class='notice'>Close [open ? src : newbox] first!</span>")
+			to_chat(user, "<span class='notice'>Закройте [open ? src : newbox] сначала!</span>")
 	else if(istype(I, /obj/item/weapon/reagent_containers/food/snacks/pizza) || istype(I, /obj/item/weapon/reagent_containers/food/snacks/customizable/pizza))
 		if(open)
 			if(!user.drop_item())
@@ -181,7 +181,7 @@
 		if(wires && bomb)
 			wires.interact(user)
 	else if(istype(I, /obj/item/weapon/reagent_containers/food))
-		to_chat(user, "<span class='notice'>That's not a pizza!</span>")
+		to_chat(user, "<span class='notice'>Это не пицца!</span>")
 	..()
 
 /obj/item/pizzabox/process()

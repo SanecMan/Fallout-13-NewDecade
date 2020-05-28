@@ -15,7 +15,7 @@
 	var/busy = 0
 	var/soundLength = 50
 	var/soundFile = 'sound/f13music/mysterious_stranger.ogg'
-	self_weight = 0.1
+	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/weapon/holodisk/initialize()
         src.name = "holodisk #[rand(1,999)]"

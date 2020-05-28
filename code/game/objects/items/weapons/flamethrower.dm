@@ -1,6 +1,6 @@
 /obj/item/weapon/flamethrower
-	name = "flamethrower"
-	desc = "You are a firestarter!"
+	name = "огнемёт"
+	desc = "ЖГИ ДЕТКА ЖГИ!"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "flamer"
 	item_state = "flamethrower_0"

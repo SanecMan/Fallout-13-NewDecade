@@ -159,7 +159,7 @@ var/global/list/datum/stack_recipe/wood_recipes = list ( \
 	)
 
 /obj/item/stack/sheet/mineral/wood
-	name = "wooden plank"
+	name = "доски"
 	desc = "One can only guess that this is a bunch of wood."
 	singular_name = "wood plank"
 	icon_state = "sheet-wood"

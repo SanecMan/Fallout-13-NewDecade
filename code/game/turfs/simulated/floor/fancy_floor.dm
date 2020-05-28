@@ -28,7 +28,7 @@
 	initial_gas_mix = "TEMP=2.7"
 
 /turf/open/floor/grass
-	name = "grass patch"
+	name = "трава"
 	desc = "You can't tell if this is real grass or just cheap plastic imitation."
 	icon_state = "grass"
 	floor_tile = /obj/item/stack/tile/grass
@@ -52,7 +52,7 @@
 		return
 
 /turf/open/floor/grass/snow
-	name = "snow"
+	name = "снег"
 	icon = 'icons/turf/snow.dmi'
 	desc = "Looks cold."
 	icon_state = "snow"
@@ -85,7 +85,7 @@
 
 
 /turf/open/floor/carpet
-	name = "carpet"
+	name = "ковёр"
 	desc = "Soft velvet carpeting. Feels good between your toes."
 	icon = 'icons/turf/floors/carpet.dmi'
 	icon_state = "carpet"

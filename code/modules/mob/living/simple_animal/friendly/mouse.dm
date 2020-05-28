@@ -101,7 +101,7 @@
 	gold_core_spawnable = 0
 
 /obj/item/trash/deadmouse
-	name = "dead mouse"
+	name = "мёртвая мышь"
 	desc = "It looks like somebody dropped the bass on it."
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "mouse_gray_dead"

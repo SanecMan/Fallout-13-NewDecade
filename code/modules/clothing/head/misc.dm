@@ -16,7 +16,7 @@
 	item_state = "pwig"
 
 /obj/item/clothing/head/that
-	name = "top-hat"
+	name = "цилиндр"
 	desc = "It's an amish looking hat."
 	icon_state = "tophat"
 	item_state = "that"
@@ -34,12 +34,12 @@
 	desc = "<i>'I guess it's a redhead.'</i>"
 
 /obj/item/clothing/head/mailman
-	name = "mailman's hat"
+	name = "фуражка почтальона"
 	icon_state = "mailman"
 	desc = "<i>'Right-on-time'</i> mail service head wear."
 
 /obj/item/clothing/head/plaguedoctorhat
-	name = "plague doctor's hat"
+	name = "шляпа чумного доктора"
 	desc = "These were once used by plague doctors. They're pretty much useless."
 	icon_state = "plaguedoctor"
 	permeability_coefficient = 0.01
@@ -52,7 +52,7 @@
 	flags_cover = HEADCOVERSEYES
 
 /obj/item/clothing/head/nursehat
-	name = "nurse's hat"
+	name = "шапочка медсестры"
 	desc = "It allows quick identification of trained medical personnel."
 	icon_state = "nursehat"
 
@@ -74,7 +74,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/snowman
-	name = "Snowman Head"
+	name = "голова снеговика"
 	desc = "A ball of white styrofoam. So festive."
 	icon_state = "snowman_h"
 	item_state = "snowman_h"
@@ -106,7 +106,7 @@
 	item_state = "justicepink"
 
 /obj/item/clothing/head/rabbitears
-	name = "rabbit ears"
+	name = "ушки кролика"
 	desc = "Wearing these makes you look useless, and only good for your sex appeal."
 	icon_state = "bunny"
 
@@ -120,7 +120,7 @@
 	item_state = "detective"
 
 /obj/item/clothing/head/pirate
-	name = "pirate hat"
+	name = "пиратская шляпа"
 	desc = "Yarr."
 	icon_state = "pirate"
 	item_state = "pirate"
@@ -131,7 +131,7 @@
 	item_state = "hgpiratecap"
 
 /obj/item/clothing/head/bandana
-	name = "pirate bandana"
+	name = "пиратская бандана"
 	desc = "Yarr."
 	icon_state = "bandana"
 	item_state = "bandana"
@@ -177,7 +177,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/fedora
-	name = "fedora"
+	name = "федора"
 	icon_state = "fedora"
 	item_state = "fedora"
 	desc = "A really cool hat if you're a mobster. A really lame hat if you're not."
@@ -194,7 +194,7 @@
 	return(BRUTELOSS)
 
 /obj/item/clothing/head/sombrero
-	name = "sombrero"
+	name = "сомбреро"
 	icon_state = "sombrero"
 	item_state = "sombrero"
 	desc = "You can practically taste the fiesta."
@@ -211,7 +211,7 @@
 	dog_fashion = null
 
 /obj/item/clothing/head/sombrero/shamebrero
-	name = "shamebrero"
+	name = "кринжбреро"
 	icon_state = "shamebrero"
 	item_state = "shamebrero"
 	desc = "Once it's on, it never comes off."
@@ -220,7 +220,7 @@
 
 /obj/item/clothing/head/cone
 	desc = "This cone is trying to warn you of something!"
-	name = "warning cone"
+	name = "предупреждающий конус"
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "cone"
 	item_state = "cone"
@@ -247,8 +247,8 @@
 	icon_state = "jester_hat"
 
 /obj/item/clothing/head/rice_hat
-	name = "rice hat"
-	desc = "Welcome to the rice fields, motherfucker."
+	name = "рисовая шляпа"
+	desc = "ДОБРО ПОЖАЛОВАТЬ НА РИСОВЫЕ ПОЛЯ, УБЛЮДИНА."
 	icon_state = "rice_hat"
 
 /obj/item/clothing/head/lizard
@@ -269,13 +269,13 @@
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
 /obj/item/clothing/head/crown
-	name = "crown"
+	name = "корона"
 	desc = "A crown fit for a king, a petty king maybe."
 	icon_state = "crown"
 	armor = list(melee = 15, bullet = 0, laser = 0,energy = 15, bomb = 0, bio = 0, rad = 0, fire = 100, acid = 50)
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/head/crown/fancy
-	name = "magnificent crown"
+	name = "богатая корона"
 	desc = "A crown worn by only the highest emperors of the land."
 	icon_state = "fancycrown"

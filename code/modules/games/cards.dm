@@ -7,8 +7,8 @@
 /* Deck */
 
 /obj/item/weapon/deck
-	name = "deck of cards"
-	desc = "A simple deck of playing cards."
+	name = "колода карт"
+	desc = "Простая колода игральных карт."
 	icon = 'icons/obj/playing_cards.dmi'
 	icon_state = "deck"
 	w_class = WEIGHT_CLASS_SMALL

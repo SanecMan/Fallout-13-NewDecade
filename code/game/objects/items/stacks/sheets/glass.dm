@@ -14,7 +14,7 @@ var/global/list/datum/stack_recipe/glass_recipes = list ( \
 )
 
 /obj/item/stack/sheet/glass
-	name = "glass"
+	name = "стекло"
 	desc = "HOLY SHEET! That is a lot of glass."
 	singular_name = "glass sheet"
 	icon_state = "sheet-glass"
@@ -78,7 +78,7 @@ var/global/list/datum/stack_recipe/reinforced_glass_recipes = list ( \
 
 
 /obj/item/stack/sheet/rglass
-	name = "reinforced glass"
+	name = "армированое стекло"
 	desc = "Glass which seems to have rods or something stuck in them."
 	singular_name = "reinforced glass sheet"
 	icon_state = "sheet-rglass"
@@ -110,7 +110,7 @@ var/global/list/datum/stack_recipe/reinforced_glass_recipes = list ( \
 	..()
 
 /obj/item/weapon/shard
-	name = "shard"
+	name = "осколок"
 	desc = "A nasty looking shard of glass."
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "large"

@@ -1,6 +1,6 @@
 //Fallout 13 syringes by Gargule
 /obj/item/weapon/reagent_containers/f13stimpack //(Gargule)
-	name = "Стимулятор"
+	name = "стимулятор"
 	desc = "A stimpak, or stimulation delivery package, is a type of hand-held medication used for healing the body. This item consists of a syringe for containing and delivering the medication and a gauge for measuring the status of the stimpak's contents. When the medicine is injected, it provides immediate healing of the body's minor wounds."
 	icon = 'icons/fallout/objects/medicine/syringe.dmi'
 	icon_state = "stim"

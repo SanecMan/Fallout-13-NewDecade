@@ -1,6 +1,6 @@
 /obj/item/weapon/stamp
-	name = "\improper GRANTED rubber stamp"
-	desc = "A rubber stamp for stamping important documents."
+	name = "печать ОДОБРЕНО"
+	desc = "Резиновая печать чтобы ставить печати на важные документы."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "stamp-ok"
 	item_state = "stamp"
@@ -14,7 +14,7 @@
 	attack_verb = list("stamped")
 
 /obj/item/weapon/stamp/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] stamps 'VOID' on [user.p_their()] forehead, then promptly falls over, dead.</span>")
+	user.visible_message("<span class='suicide'>[user] ставит штамп 'И-ДИ-ОТ' на своём лбу, и падает замертво. Совсем.</span>")
 	return (OXYLOSS)
 
 /obj/item/weapon/stamp/qm
@@ -58,7 +58,7 @@
 	item_color = "cmo"
 
 /obj/item/weapon/stamp/denied
-	name = "\improper DENIED rubber stamp"
+	name = "печать ОТКАЗ"
 	icon_state = "stamp-deny"
 	item_color = "redcoat"
 

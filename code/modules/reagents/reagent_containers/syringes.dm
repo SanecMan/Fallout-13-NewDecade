@@ -2,8 +2,8 @@
 #define SYRINGE_INJECT 1
 
 /obj/item/weapon/reagent_containers/syringe
-	name = "syringe"
-	desc = "A syringe that can hold up to 15 units."
+	name = "шприц"
+	desc = "Шприц. Может содержать до 15 ед. веществ."
 	icon = 'icons/obj/syringe.dmi'
 	item_state = "syringe_0"
 	icon_state = "0"

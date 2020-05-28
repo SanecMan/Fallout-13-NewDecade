@@ -3,8 +3,8 @@
 #define AUTOLATHE_SEARCH_MENU     3
 
 /obj/machinery/autolathe
-	name = "autolathe"
-	desc = "It produces items using metal and glass."
+	name = "станок"
+	desc = "Может производить предметы, используя стекло и металл."
 	icon_state = "autolathe"
 	density = 1
 
