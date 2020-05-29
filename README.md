@@ -51,7 +51,7 @@ Ivan_mrr, Nienhaus, Llego_man007, WalterJe, Danowar, Superballs, Fo4an, Hankkits
 
 **Идеи / Тестирование / Поддержка**
 
-Deus66, *DrNuke*, Def0lt, Dillashaw, KleFFir, Fanxelt.
+Deus66, *DrNuke*, Def0lt, Dillashaw, KleFFir, Fanxelt, AndreyKey.
 
 **Origins** 
 
