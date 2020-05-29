@@ -16,7 +16,7 @@
 				msg += "<B>Its casing is melted and heat-warped!</B>\n"
 		msg += "</span>"
 		if (shunted == 0 && !src.client)
-			msg += "[src]Core.exe has stopped responding! NTOS is searching for a solution to the problem...\n"
+			msg += "[src] не нашёл RobcOS.dm! РобКо запускает систему восстановления...\n"
 	msg += "*---------*</span>"
 
 	to_chat(user, msg)

@@ -64,6 +64,7 @@
 	name = "Gang Leader"
 	uniform = /obj/item/clothing/under/f13/villain
 	shoes = /obj/item/clothing/shoes/laceup
+	id = /obj/item/weapon/card/id/passport_trader
 
 //Basic Raider
 
@@ -111,13 +112,14 @@
 	)
 
 /datum/outfit/job/slaver
-	name = "Raider"
+	name = "Slaver"
 	backpack = null
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/rag
 	shoes = /obj/item/clothing/shoes/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/supafly
 	head = /obj/item/clothing/head/helmet/f13/supaflyhelmet
+	id = /obj/item/weapon/card/id/passport_trader
 
 /datum/job/raider
 	title = "Raider"

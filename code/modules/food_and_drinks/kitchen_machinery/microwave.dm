@@ -1,6 +1,6 @@
 /obj/machinery/microwave
-	name = "microwave oven"
-	desc = "Cooks and boils stuff."
+	name = "микроволновка"
+	desc = "Готовит и подогревает вещи. Или еду."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "mw"
 	layer = BELOW_OBJ_LAYER
@@ -347,7 +347,7 @@
 
 /obj/machinery/oven_old
 	name = "печка"
-	desc = "Cooks and boils stuff."
+	desc = "Готовит еду. Выглядит ржавой но имеет всё-еще читаемую гравировку РобКо."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "oven_old"
 	layer = BELOW_OBJ_LAYER

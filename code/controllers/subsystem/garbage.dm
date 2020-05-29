@@ -234,7 +234,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 /datum/var/running_find_references
 
 /datum/proc/find_refs()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Find References"
 	set background = 1
 	set src in world
@@ -285,7 +285,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 	SSgarbage.next_fire = world.time + world.tick_lag
 
 /client/proc/purge_all_destroyed_objects()
-	set category = "Дебаг"
+	set category = "Debug"
 	if(SSgarbage)
 		while(SSgarbage.queue.len)
 			var/datum/o = locate(SSgarbage.queue[1])
@@ -295,7 +295,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 			SSgarbage.queue.Cut(1, 2)
 
 /datum/proc/qdel_then_find_references()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "qdel() then Find References"
 	set background = 1
 	set src in world
@@ -305,7 +305,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 		find_references(TRUE)
 
 /client/proc/show_qdeleted()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Show qdel() Log"
 	set desc = "Render the qdel() log and display it"
 

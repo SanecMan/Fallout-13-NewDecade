@@ -149,7 +149,7 @@
 /client/proc/resetSNPC(var/mob/A in SSnpc.botPool_l)
 	set name = "Reset SNPC"
 	set desc = "Reset the SNPC"
-	set category = "Дебаг"
+	set category = "Debug"
 
 	if(!holder)
 		return
@@ -166,7 +166,7 @@
 /client/proc/toggleSNPC(var/mob/A in SSnpc.botPool_l)
 	set name = "Toggle SNPC Proccessing Mode"
 	set desc = "Toggle SNPC Proccessing Mode"
-	set category = "Дебаг"
+	set category = "Debug"
 
 	if(!holder)
 		return
@@ -183,7 +183,7 @@
 /client/proc/customiseSNPC(var/mob/A in SSnpc.botPool_l)
 	set name = "Customize SNPC"
 	set desc = "Customise the SNPC"
-	set category = "Дебаг"
+	set category = "Debug"
 
 	if(!holder)
 		return

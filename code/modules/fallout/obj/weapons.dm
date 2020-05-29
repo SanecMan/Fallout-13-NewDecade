@@ -1,14 +1,14 @@
 //Fallout 13 melee weapons directory
 
 /obj/item/stack/spear
-	name = "Throwing spears"
-	desc = "A lightweight throwing spear made to be thrown at assailants, has a pretty sharp point."
+	name = "метательные копья"
+	desc = "Лёгкие копья для метания с острым концом."
 	singular_name = "Throwing spear"
 	icon_state = "throw_spear"
 	icon = 'icons/fallout/objects/melee.dmi'
 	item_state = "tribalspear"
 	flags = CONDUCT
-	w_class = 3
+	self_weight = 3.000
 	force = 20
 	throwforce = 50		//I need to add armor pen eventually.
 	throw_speed = 3
@@ -31,7 +31,7 @@
 	amount = 5
 
 /obj/item/weapon/twohanded/baseball
-	name = "baseball bat"
+	name = "бейсбольная бита"
 	desc = "Деревянный источник боли и веселья."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "baseball0"
@@ -73,7 +73,7 @@
 	force = 32
 
 /obj/item/weapon/pipe
-	name = "lead pipe"
+	name = "свинцовая труба"
 	desc = "One of the ends has tape wrapped around it to improve grip, while the other is heavily corroded and/or bloodstained, and topped with a pipe fitting.<br>Though it has a short reach, it has decent damage and a fast swing."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "pipe"
@@ -138,7 +138,7 @@
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/pan
-	name = "frying pan"
+	name = "сковородка"
 	desc = "An ancient cast iron frying pan.<br>It's heavy, but fairly useful if you need to keep the mutants away, and don't have a better weapon around."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "pan"
@@ -316,7 +316,7 @@
 	origin_tech = "combat=4;powerstorage=4"
 
 /obj/item/weapon/twohanded/superhammer
-	name = "super sledge"
+	name = "суперкувалда"
 	desc = "Суперкувалда - Братство разработало эту хреновину.<br>Это снаряжено небольшим генератором для ускорения импулься."
 	icon = 'icons/fallout/objects/melee.dmi'
 	icon_state = "supersledgehammer0"

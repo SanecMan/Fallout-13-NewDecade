@@ -1,12 +1,12 @@
 /datum/computer_file/program/chatclient
 	filename = "ntnrc_client"
-	filedesc = "NTNet Relay Chat Client"
+	filedesc = "РобКо чат - клиент"
 	program_icon_state = "command"
-	extended_desc = "This program allows communication over NTNRC network"
+	extended_desc = "Эта программа используется как чат-клиент между терминалами"
 	size = 8
 	requires_ntnet = 1
 	requires_ntnet_feature = NTNET_COMMUNICATION
-	network_destination = "NTNRC server"
+	network_destination = "РобКо сервер"
 	ui_header = "ntnrc_idle.gif"
 	available_on_ntnet = 1
 	var/last_message = null				// Used to generate the toolbar icon
@@ -16,7 +16,7 @@
 	var/netadmin_mode = 0		// Administrator mode (invisible to other users + bypasses passwords)
 
 /datum/computer_file/program/chatclient/New()
-	username = "DefaultUser[rand(100, 999)]"
+	username = "Пользователь #[rand(100, 999)]"
 
 /datum/computer_file/program/chatclient/ui_act(action, params)
 	if(..())
@@ -28,11 +28,11 @@
 			if(!channel)
 				return 1
 			var/mob/living/user = usr
-			var/message = reject_bad_text(input(user, "Enter message or leave blank to cancel: "))
+			var/message = reject_bad_text(input(user, "Введите сообщение или оставьте поле пустым для отмены: "))
 			if(!message || !channel)
 				return
 			channel.add_message(message, username)
-			log_chat("[user]/([user.ckey]) as [username] sent to [channel.title]: [message]")
+			log_chat("[user]/([user.ckey]) он же [username] отправил сообщение в [channel.title]: [message]")
 
 		if("PRG_joinchannel")
 			. = 1
@@ -51,7 +51,7 @@
 
 			if(C.password)
 				var/mob/living/user = usr
-				var/password = reject_bad_text(input(user,"Access Denied. Enter password:"))
+				var/password = reject_bad_text(input(user,"Доступ запрещён: Введите пароль:"))
 				if(C && (password == C.password))
 					C.add_client(src)
 					channel = C
@@ -66,7 +66,7 @@
 		if("PRG_newchannel")
 			. = 1
 			var/mob/living/user = usr
-			var/channel_title = reject_bad_text(input(user,"Enter channel name or leave blank to cancel:"))
+			var/channel_title = reject_bad_text(input(user,"Введите название канала или оставьте поле пустым для отмены: "))
 			if(!channel_title)
 				return
 			var/datum/ntnet_conversation/C = new/datum/ntnet_conversation()
@@ -85,8 +85,8 @@
 			var/mob/living/user = usr
 			if(can_run(usr, 1, access_network))
 				if(channel)
-					var/response = alert(user, "Really engage admin-mode? You will be disconnected from your current channel!", "NTNRC Admin mode", "Yes", "No")
-					if(response == "Yes")
+					var/response = alert(user, "Действительно ли переключить админ-режим? Вы будете отключены от вашего текущего канала!", "РобКо Админ Панель", "Да", "Нет")
+					if(response == "Да")
 						if(channel)
 							channel.remove_client(src)
 							channel = null
@@ -96,11 +96,11 @@
 		if("PRG_changename")
 			. = 1
 			var/mob/living/user = usr
-			var/newname = sanitize(input(user,"Enter new nickname or leave blank to cancel:"))
+			var/newname = sanitize(input(user,"Введите ваш новый никнейм или оставьте поле пустым для отмены: "))
 			if(!newname)
 				return 1
 			if(channel)
-				channel.add_status_message("[username] is now known as [newname].")
+				channel.add_status_message("[username] сменил свой никнейм на [newname].")
 			username = newname
 
 		if("PRG_savelog")
@@ -108,36 +108,36 @@
 			if(!channel)
 				return
 			var/mob/living/user = usr
-			var/logname = input(user,"Enter desired logfile name (.log) or leave blank to cancel:")
+			var/logname = input(user,"Введите желаемое имя файла журнала (.log) или оставить пустым для отмены:")
 			if(!logname || !channel)
 				return 1
 			var/datum/computer_file/data/logfile = new/datum/computer_file/data/logfile()
 			// Now we will generate HTML-compliant file that can actually be viewed/printed.
 			logfile.filename = logname
-			logfile.stored_data = "\[b\]Logfile dump from NTNRC channel [channel.title]\[/b\]\[BR\]"
+			logfile.stored_data = "\[b\]Дамп журнала РобКо [channel.title]\[/b\]\[BR\]"
 			for(var/logstring in channel.messages)
 				logfile.stored_data += "[logstring]\[BR\]"
-			logfile.stored_data += "\[b\]Logfile dump completed.\[/b\]"
+			logfile.stored_data += "\[b\]Завершено.\[/b\]"
 			logfile.calculate_size()
 			var/obj/item/weapon/computer_hardware/hard_drive/hard_drive = computer.all_components[MC_HDD]
 			if(!computer || !hard_drive || !hard_drive.store_file(logfile))
 				if(!computer)
 					// This program shouldn't even be runnable without computer.
-					CRASH("Var computer is null!")
+					CRASH("Значение компьютера не определено!")
 					return 1
 				if(!hard_drive)
-					computer.visible_message("\The [computer] shows an \"I/O Error - Hard drive connection error\" warning.")
+					computer.visible_message("\ [computer] вывел на экран \"Ошибка: Невозможно подключиться к диску\".")
 				else	// In 99.9% cases this will mean our HDD is full
-					computer.visible_message("\The [computer] shows an \"I/O Error - Hard drive may be full. Please free some space and try again. Required space: [logfile.size]GQ\" warning.")
+					computer.visible_message("\ [computer] вывел на экран \"Ошибка: Необходимо [logfile.size]GQ для скачивания логов\".")
 		if("PRG_renamechannel")
 			. = 1
 			if(!operator_mode || !channel)
 				return 1
 			var/mob/living/user = usr
-			var/newname = reject_bad_text(input(user, "Enter new channel name or leave blank to cancel:"))
+			var/newname = reject_bad_text(input(user, "Введите новое название канала или оставьте пустым для отмены: "))
 			if(!newname || !channel)
 				return
-			channel.add_status_message("Channel renamed from [channel.title] to [newname] by operator.")
+			channel.add_status_message("Канал [channel.title] переименован [newname] оператором.")
 			channel.title = newname
 		if("PRG_deletechannel")
 			. = 1
@@ -150,7 +150,7 @@
 				return 1
 
 			var/mob/living/user = usr
-			var/newpassword = sanitize(input(user, "Enter new password for this channel. Leave blank to cancel, enter 'nopassword' to remove password completely:"))
+			var/newpassword = sanitize(input(user, "Введите новый пароль для канала или введите 'nopassword' для снятия пароля:"))
 			if(!channel || !newpassword || ((channel.operator != src) && !netadmin_mode))
 				return 1
 
@@ -190,7 +190,7 @@
 		assets.send(user)
 
 
-		ui = new(user, src, ui_key, "ntnet_chat", "NTNet Relay Chat Client", 575, 700, state = state)
+		ui = new(user, src, ui_key, "ntnet_chat", "РобКо чат - клиент", 575, 700, state = state)
 		ui.open()
 		ui.set_autoupdate(state = 1)
 

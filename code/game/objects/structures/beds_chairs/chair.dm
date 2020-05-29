@@ -258,7 +258,7 @@
 	item_chair = /obj/item/chair/stool/bar
 
 /obj/item/chair
-	name = "chair"
+	name = "стул"
 	desc = "Bar brawl essential."
 	icon = 'icons/obj/chairs.dmi'
 	icon_state = "chair_toppled"
@@ -346,7 +346,7 @@
 	return //sturdy enough to ignore a god
 
 /obj/item/chair/wood
-	name = "wooden chair"
+	name = "деревянный стул"
 	icon_state = "wooden_chair_toppled"
 	item_state = "woodenchair"
 	resistance_flags = FLAMMABLE
@@ -360,7 +360,7 @@
 	return
 
 /obj/structure/chair/old
-	name = "strange chair"
+	name = "странный стул"
 	desc = "You sit in this. Either by will or force. Looks REALLY uncomfortable."
 	icon_state = "chairold"
 	item_chair = null

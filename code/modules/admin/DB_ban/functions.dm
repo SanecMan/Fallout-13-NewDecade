@@ -316,7 +316,7 @@
 
 
 /client/proc/DB_ban_panel()
-	set category = "Администрация"
+	set category = "Admin"
 	set name = "Banning Panel"
 	set desc = "Edit admin permissions"
 

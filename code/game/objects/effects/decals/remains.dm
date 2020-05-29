@@ -1,4 +1,5 @@
 /obj/effect/decal/remains
+	desc = "They look like human remains. They have a strange aura about them."
 	name = "remains"
 	gender = PLURAL
 	icon = 'icons/effects/blood.dmi'

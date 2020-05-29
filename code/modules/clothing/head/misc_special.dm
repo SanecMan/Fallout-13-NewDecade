@@ -12,8 +12,8 @@
  * Welding mask
  */
 /obj/item/clothing/head/welding
-	name = "welding helmet"
-	desc = "A head-mounted face cover designed to protect the wearer completely from space-arc eye."
+	name = "сварочная маска"
+	desc = "Сварочная маска созданная РобКо для защиты ваших глаз от интенсивного светового излучения сварки."
 	icon_state = "welding"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	item_state = "welding"
@@ -81,7 +81,7 @@
  * Ushanka
  */
 /obj/item/clothing/head/ushanka
-	name = "ushanka"
+	name = "ушанка"
 	desc = "Perfect for winter in Siberia, da?"
 	icon_state = "ushankadown"
 	item_state = "ushankadown"
@@ -122,7 +122,7 @@
  * Kitty ears
  */
 /obj/item/clothing/head/kitty
-	name = "kitty ears"
+	name = "кошачьи ушки"
 	desc = "A pair of kitty ears. Meow!"
 	icon_state = "kitty"
 	color = "#999999"

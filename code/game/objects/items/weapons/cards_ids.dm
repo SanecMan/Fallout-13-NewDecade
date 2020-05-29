@@ -88,8 +88,8 @@
 	var/dorm = 0		// determines if this ID has claimed a dorm already
 
 /obj/item/weapon/card/id/attack_self(mob/user)
-	user.visible_message("<span class='notice'>[user] shows you: [bicon(src)] [src.name].</span>", \
-					"<span class='notice'>You show \the [src.name].</span>")
+	user.visible_message("<span class='notice'>[user] показывает вам: [bicon(src)] [src.name].</span>", \
+					"<span class='notice'>Вы показываете [src.name].</span>")
 	src.add_fingerprint(user)
 	return
 
@@ -114,10 +114,10 @@ update_label("John Doe", "Clowny")
 */
 /obj/item/weapon/card/id/proc/update_label(newname, newjob)
 	if(newname || newjob)
-		name = "[(!newname)	? "identification card"	: "[newname]'s ID Card"][(!newjob) ? "" : " ([newjob])"]"
+		name = "[(!newname)	? "identification card"	: "[newname]'s ID"][(!newjob) ? "" : " ([newjob])"]"
 		return
 
-	name = "[(!registered_name)	? "identification card"	: "[registered_name]'s ID Card"][(!assignment) ? "" : " ([assignment])"]"
+	name = "[(!registered_name)	? "identification card"	: "[registered_name]'s ID"][(!assignment) ? "" : " ([assignment])"]"
 
 /obj/item/weapon/card/id/silver
 	name = "silver identification card"
@@ -300,58 +300,78 @@ update_label("John Doe", "Clowny")
 	name = "Officer ID"
 	access = list(access_away_general, access_away_maint, access_away_sec)
 
-/obj/item/card/id/sheriff
+/obj/item/weapon/card/id/sheriff
 	name = "sheriff's badge"
 	desc = "A golden badge which shows power and might."
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
 
-/obj/item/card/id/ncrtrooper
+/obj/item/weapon/card/id/ncrtrooper
 	name = "trooper's tags"
 	desc = "A dog tag proving enlistment."
 	icon_state = "ncrdogtagrecruit"
 
-/obj/item/card/id/ncrsergeant
+/obj/item/weapon/card/id/ncrsergeant
 	name = "sergeant's tags"
 	desc = "A chevron decorated dog tag showing NCO-ship."
 	icon_state = "ncrdogtagsergeant"
 
-/obj/item/card/id/ncrlieutenant
+/obj/item/weapon/card/id/ncrlieutenant
 	name = "lieutenant's tags"
 	desc = "A silver bar dog tag that denotes a member of the NCR military with a lieutenant commission."
 	icon_state = "ncrdogtagofficer"
 
-/obj/item/card/id/ncrgeneral
+/obj/item/weapon/card/id/ncrgeneral
 	name = "general's tags"
 	desc = "A dog tag that demands respect from all those subordinate to it. This one belongs to an NCR captain."
 	icon_state = "ncrdogtagcaptain"
 
-/obj/item/card/id/ncrranger
+/obj/item/weapon/card/id/ncrranger
 	name = "ranger tags"
 	desc = "A dog tag that invokes fear in those who see it, belongs to a man with a big iron on his hip."
 	icon_state = "ncrdogtagranger"
 
-/obj/item/card/id/legrecruit
+/obj/item/weapon/card/id/legrecruit
 	name = "recruit medallion"
 	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a recruit."
 	icon_state = "legionmedallionrecruit"
 
-/obj/item/card/id/legprime
+/obj/item/weapon/card/id/legprime
 	name = "prime medallion"
 	desc = "A marked silver disc stamped with the Legion's Bull insignia. Belongs to a prime."
 	icon_state = "legionmedallionprime"
 
-/obj/item/card/id/legveteran
+/obj/item/weapon/card/id/legveteran
 	name = "veteran medallion"
 	desc = "A heavily marked silver disc stamped with the Legion's Bull insignia. Belongs to a veteran, and reeks of iron."
 	icon_state = "legionmedallionveteran"
 
-/obj/item/card/id/legcenturion
+/obj/item/weapon/card/id/legcenturion
 	name = "centurion medallion"
 	desc = "A golden disc awarded to the most fierce men in the whole legion. If you are close enough to read the insignia you won't be alive much longer."
 	icon_state = "legionmedallioncent"
 
-/obj/item/card/id/dogtag
-	name = "holo dogtag"
+/obj/item/weapon/card/id/dogtag
+	name = "голографический жетон"
 	desc = "An advanced holographic dogtag, that shows the duty of a BoS member."
 	icon_state = "holodogtag"
+
+/obj/item/weapon/card/id/passport_city
+	name = "паспорт Кебабтауна"
+	desc = "Кожаный чехол с паспортом гражданина местной общины, несёт в себе данные о владельце и гражданстве Кебаба."
+	icon_state = "pass"
+
+/obj/item/weapon/card/id/passport_trader
+	name = "паспорт колегии Торговцев"
+	desc = "Кожаный чехол с паспортом, используется коллегией торговцев для опознания друг-друга. Обычно владельцы таких паспартов занимаются торговлей в ближайших городах."
+	icon_state = "trader_colegy"
+
+/obj/item/weapon/card/id/passport
+	name = "паспорт Анклава"
+	desc = "Стильный чёрный паспорт с символом Анклава. Несёт в себе данные о гражданине США и чип с доступом к инфраструктуре Анклава."
+	icon_state = "enclave_pass"
+
+/obj/item/weapon/card/id/passport_colonel
+	name = "паспорт полковника Анклава"
+	desc = "Стильный чёрный паспорт с золотым символом Анклава. Несёт в себе данные о гражданине США и чип с доступом к инфраструктуре Анклава."
+	icon_state = "enclave_pass_colonel"

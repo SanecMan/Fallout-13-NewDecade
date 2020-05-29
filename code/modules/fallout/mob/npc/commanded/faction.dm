@@ -18,3 +18,9 @@
 	faction = list("bs")
 	faction_enemy = list("hostile", "enclave", "legion", "ncr", "raiders")
 	status_master = "elder"
+
+/mob/living/simple_animal/hostile/commanded/dog/faction/shepard
+	name = "Шепард"
+	faction = list("city")
+	faction_enemy = list("hostile", "enclave", "legion", "ncr", "raiders", "bs")
+	status_master = "sheriff"

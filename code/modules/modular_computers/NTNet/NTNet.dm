@@ -32,7 +32,7 @@ var/global/datum/ntnet/ntnet_global = new()
 		relays.Add(R)
 		R.NTNet = src
 	build_software_lists()
-	add_log("NTNet logging system activated.")
+	add_log("РобКо система логов")
 
 // Simplified logging: Adds a log. log_string is mandatory parameter, source is optional.
 /datum/ntnet/proc/add_log(log_string, obj/item/weapon/computer_hardware/network_card/source = null)
@@ -40,7 +40,7 @@ var/global/datum/ntnet/ntnet_global = new()
 	if(source)
 		log_text += "[source.get_network_tag()] - "
 	else
-		log_text += "*SYSTEM* - "
+		log_text += "*СИСТЕМА* - "
 	log_text += log_string
 	logs.Add(log_text)
 
@@ -85,7 +85,7 @@ var/global/datum/ntnet/ntnet_global = new()
 	for(var/F in typesof(/datum/computer_file/program))
 		var/datum/computer_file/program/prog = new F
 		// Invalid type (shouldn't be possible but just in case), invalid filetype (not executable program) or invalid filename (unset program)
-		if(!prog || prog.filename == "UnknownProgram" || prog.filetype != "PRG")
+		if(!prog || prog.filename == "НеизвестныйТип" || prog.filetype != "PRG")
 			continue
 		// Check whether the program should be available for station/antag download, if yes, add it to lists.
 		if(prog.available_on_ntnet)
@@ -115,7 +115,7 @@ var/global/datum/ntnet/ntnet_global = new()
 // Removes all logs
 /datum/ntnet/proc/purge_logs()
 	logs = list()
-	add_log("-!- LOGS DELETED BY SYSTEM OPERATOR -!-")
+	add_log("-!- ЛОГИ УДАЛЕНЫ ОПЕРАТОРОМ -!-")
 
 // Updates maximal amount of stored logs. Use this instead of setting the number, it performs required checks.
 /datum/ntnet/proc/update_max_log_count(lognumber)
@@ -124,7 +124,7 @@ var/global/datum/ntnet/ntnet_global = new()
 	// Trim the value if necessary
 	lognumber = max(MIN_NTNET_LOGS, min(lognumber, MAX_NTNET_LOGS))
 	setting_maxlogcount = lognumber
-	add_log("Configuration Updated. Now keeping [setting_maxlogcount] logs in system memory.")
+	add_log("Теперь [setting_maxlogcount] логов будет храниться в памяти сервера.")
 
 /datum/ntnet/proc/toggle_function(function)
 	if(!function)

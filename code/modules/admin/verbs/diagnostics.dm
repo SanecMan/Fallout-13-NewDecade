@@ -1,5 +1,5 @@
 /client/proc/air_status(turf/target)
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Display Air Status"
 
 	if(!isturf(target))
@@ -19,7 +19,7 @@
 	feedback_add_details("admin_verb","DAST") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/fix_next_move()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Unfreeze Everyone"
 	var/largest_move_time = 0
 	var/largest_click_time = 0
@@ -50,7 +50,7 @@
 	return
 
 /client/proc/radio_report()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Radio report"
 
 	var/filters = list(
@@ -87,8 +87,8 @@
 	feedback_add_details("admin_verb","RR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/reload_admins()
-	set name = "Перезагрузить администрацию"
-	set category = "Администрация"
+	set name = "Reload Admins"
+	set category = "Admin"
 
 	if(!src.holder)
 		return

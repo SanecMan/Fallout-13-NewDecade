@@ -161,7 +161,7 @@ var/list/admin_verbs_debug_mapping = list(
 	feedback_add_details("admin_verb","mATL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/enable_debug_verbs()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Debug verbs - Enable"
 	if(!check_rights(R_DEBUG))
 		return
@@ -170,7 +170,7 @@ var/list/admin_verbs_debug_mapping = list(
 	feedback_add_details("admin_verb","mDVE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/disable_debug_verbs()
-	set category = "Дебаг"
+	set category = "Debug"
 	set name = "Debug verbs - Disable"
 	verbs.Remove(/client/proc/disable_debug_verbs, admin_verbs_debug_mapping)
 	verbs += /client/proc/enable_debug_verbs

@@ -1,5 +1,5 @@
 /obj/item/clothing/mask/muzzle
-	name = "muzzle"
+	name = "кляп"
 	desc = "To stop that awful noise."
 	icon_state = "muzzle"
 	item_state = "blindfold"
@@ -17,7 +17,7 @@
 	..()
 
 /obj/item/clothing/mask/surgical
-	name = "sterile mask"
+	name = "стерильная маска"
 	desc = "A sterile mask designed to help prevent the spread of diseases."
 	icon_state = "sterile"
 	item_state = "sterile"
@@ -35,13 +35,13 @@
 	adjustmask(user)
 
 /obj/item/clothing/mask/fakemoustache
-	name = "fake moustache"
+	name = "фальшивые усы"
 	desc = "Warning: moustache is fake."
 	icon_state = "fake-moustache"
 	flags_inv = HIDEFACE
 
 /obj/item/clothing/mask/pig
-	name = "pig mask"
+	name = "маска свиньи"
 	desc = "A rubber pig mask."
 	icon_state = "pig"
 	item_state = "pig"
@@ -60,7 +60,7 @@
 	return message
 
 /obj/item/clothing/mask/spig //needs to be different otherwise you could turn the speedmodification off and on
-	name = "Pig face"
+	name = "Лицо свиньи"
 	desc = "It looks like a mask, but closer inspection reveals it's melded onto this persons face!" //It's only ever going to be attached to your face.
 	icon_state = "pig"
 	item_state = "pig"

@@ -3,10 +3,10 @@
 
 /datum/computer_file/program/alarm_monitor
 	filename = "alarmmonitor"
-	filedesc = "Alarm Monitoring"
+	filedesc = "Монитор Тревог"
 	ui_header = "alarm_green.gif"
 	program_icon_state = "alert-green"
-	extended_desc = "This program provides visual interface for station's alarm system."
+	extended_desc = "Программа подключается к общей сети обнаружения тревог"
 	requires_ntnet = 1
 	network_destination = "alarm monitoring network"
 	size = 5
@@ -34,7 +34,7 @@
 									datum/tgui/master_ui = null, datum/ui_state/state = default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "station_alert_prog", "Alarm Monitoring", 300, 500, master_ui, state)
+		ui = new(user, src, ui_key, "station_alert_prog", "Монитор Тревог", 300, 500, master_ui, state)
 		ui.open()
 
 /datum/computer_file/program/alarm_monitor/ui_data(mob/user)

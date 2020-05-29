@@ -1,8 +1,8 @@
 ﻿## Server name: This appears at the top of the screen in-game. Remove the # infront of SERVERNAME and replace 'tgstation' with the name of your choice
-SERVERNAME Fallout 13 - New Oregon
+SERVERNAME [ORIGINAL] Fallout 13
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Oregon
+STATIONNAME New Oregon
 
 ## Put on byond hub: uncomment this to put your server on the byond hub.
 HUB

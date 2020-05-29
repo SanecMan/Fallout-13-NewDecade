@@ -4,7 +4,6 @@
 	name = "песчанная_буря"
 	id = "sandstorm"
 	desc = "Sandstorm."
-
 	overlay = "sandstorm"
 	chance = 15
 	duration_min = 3 MINUTE
@@ -20,6 +19,7 @@
 		..()
 	for (var/area/A in SSweather.outside_areas)
 		for(var/mob/living/carbon/human/H in A)
+			to_chat(H, "<span class='userdanger'>Воздух вокруг становится сухим и поднимается сильный ветер</span>")
 			H.playsound_local(get_turf(H), 'sound/f13effects/sandstorm_transition.ogg', vol = 15, channel = SANDSTORM_CHANNEL, repeat = 1)
 	return TRUE
 

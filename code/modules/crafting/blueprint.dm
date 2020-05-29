@@ -1,5 +1,5 @@
 /obj/item/blueprint
-	name = "blueprint"
+	name = "чертёж"
 	desc = "just blueprint"
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "blueprint_empty"

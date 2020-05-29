@@ -9,13 +9,13 @@
 	item_state = "holodisk"
 	throwforce = 0
 	hitsound = null
-	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 3
 	throw_range = 7
 	attack_verb = list("had a wonderful day, and was about to examine the holodisk, but suddenly noticed that someone nearby is making rather abusive gestures, and decided to hit")
 	var/busy = 0
 	var/soundLength = 50
 	var/soundFile = 'sound/f13music/mysterious_stranger.ogg'
+	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/weapon/holodisk/initialize()
         src.name = "holodisk #[rand(1,999)]"

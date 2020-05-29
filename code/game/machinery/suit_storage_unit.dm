@@ -2,7 +2,7 @@
 /obj/machinery/suit_storage_unit
 	name = "suit storage unit"
 	desc = "An industrial unit made to hold space suits. It comes with a built-in UV cauterization mechanism. A small warning label advises that organic matter should not be placed into the unit."
-	icon = 'icons/obj/suitstorage.dmi'
+	icon = 'icons/obj/suitstorage_new.dmi'
 	icon_state = "close"
 	anchored = 1
 	density = 1

@@ -252,7 +252,7 @@
 #define COLD_GAS_DAMAGE_LEVEL_3 3
 
 /obj/item/organ/lungs
-	name = "lungs"
+	name = "лёгкие"
 	icon_state = "lungs"
 	zone = "chest"
 	slot = "lungs"
@@ -518,7 +518,7 @@
 #undef COLD_GAS_DAMAGE_LEVEL_3
 
 /obj/item/organ/tongue
-	name = "tongue"
+	name = "язык"
 	desc = "A fleshy muscle mostly used for lying."
 	icon_state = "tonguenormal"
 	zone = "mouth"
@@ -675,7 +675,7 @@
 	return ..() | SPAN_ROBOT
 
 /obj/item/organ/appendix
-	name = "appendix"
+	name = "аппендицит"
 	icon_state = "appendix"
 	zone = "groin"
 	slot = "appendix"

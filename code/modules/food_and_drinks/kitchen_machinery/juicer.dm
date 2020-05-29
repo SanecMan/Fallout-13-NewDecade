@@ -1,6 +1,6 @@
 
 /obj/machinery/juicer
-	name = "juicer"
+	name = "соковыжималка"
 	desc = "a centrifugal juicer with two speeds: Juice and Separate."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "juicer1"

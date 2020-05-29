@@ -57,7 +57,7 @@
 	to_chat(src, msg)
 
 /client/verb/adminwho()
-	set category = "Администрация"
+	set category = "Admin"
 	set name = "Админинстрация онлайн"
 	var/msg = "<b>Текущие администрация онлайн:</b>\n"
 	if(holder)

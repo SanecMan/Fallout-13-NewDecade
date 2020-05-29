@@ -1,5 +1,5 @@
 /obj/item/weapon/storage/pill_bottle/dice
-	name = "bag of dice"
+	name = "мешочек с кубиками"
 	desc = "Contains all the luck you'll ever need."
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "dicebag"
@@ -31,7 +31,7 @@
 		new /obj/item/weapon/dice/d100(src)
 
 /obj/item/weapon/dice //depreciated d6, use /obj/item/weapon/dice/d6 if you actually want a d6
-	name = "die"
+	name = "кубик"
 	desc = "A die with six sides. Basic and servicable.<br>Commonly used as a lucky charm, or the most basic way to earn some caps by placing bets."
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "d6"
@@ -169,17 +169,17 @@
 	if(special_faces.len == sides)
 		result = special_faces[result]
 	if(user != null) //Dice was rolled in someone's hand
-		user.visible_message("[user] has thrown [src]. It lands on [result]. [comment]", \
-							 "<span class='notice'>You throw [src]. It lands on [result]. [comment]</span>", \
-							 "<span class='italics'>You hear [src] rolling, it sounds like a [fake_result].</span>")
+		user.visible_message("[user] кидает [src]. Он приземляется на [result]. [comment]", \
+							 "<span class='notice'>Вы кинули [src]. Он приземлился на [result]. [comment]</span>", \
+							 "<span class='italics'>Вы слышите как [src] перекатывается, похоже, это [fake_result].</span>")
 	else if(src.throwing == 0) //Dice was thrown and is coming to rest
-		visible_message("<span class='notice'>[src] rolls to a stop, landing on [result]. [comment]</span>")
+		visible_message("<span class='notice'>[src] перестаёт перекатываться, останавливаясь на [result]. [comment]</span>")
 
 /obj/item/weapon/dice/d4/Crossed(mob/living/carbon/human/H)
 	if(istype(H) && !H.shoes)
 		if(PIERCEIMMUNE in H.dna.species.species_traits)
 			return 0
-		to_chat(H, "<span class='userdanger'>You step on the D4!</span>")
+		to_chat(H, "<span class='userdanger'>Вы наступили на D4!</span>")
 		H.apply_damage(4,BRUTE,(pick("l_leg", "r_leg")))
 		H.Weaken(3)
 

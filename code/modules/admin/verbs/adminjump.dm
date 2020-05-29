@@ -1,7 +1,7 @@
 /client/proc/jumptoarea(area/A in sortedAreas)
-	set name = "Прыгнуть в зону"
+	set name = "Jump to Area"
 	set desc = "Прыгнуть в зону"
-	set category = "Администрация"
+	set category = "Admin"
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
@@ -26,8 +26,8 @@
 	feedback_add_details("admin_verb","JA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/jumptoturf(turf/T in world)
-	set name = "Прыгнуть на тайл"
-	set category = "Администрация"
+	set name = "Jump to Turf"
+	set category = "Admin"
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
@@ -39,8 +39,8 @@
 	return
 
 /client/proc/jumptomob(mob/M in mob_list)
-	set category = "Администрация"
-	set name = "Прыгнуть на моба"
+	set category = "Admin"
+	set name = "Jump to Mob"
 
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -58,8 +58,8 @@
 			to_chat(A, "This mob is not located in the game world.")
 
 /client/proc/jumptocoord(tx as num, ty as num, tz as num)
-	set category = "Администрация"
-	set name = "Прыгнуть на координаты"
+	set category = "Admin"
+	set name = "Jump to coordinates"
 
 	if (!holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -74,8 +74,8 @@
 	message_admins("[key_name_admin(usr)] телепортировался по координатам [tx], [ty], [tz]")
 
 /client/proc/jumptokey()
-	set category = "Администрация"
-	set name = "Пригнуть на юзверя"
+	set category = "Admin"
+	set name = "Jump to key"
 
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -97,8 +97,8 @@
 	feedback_add_details("admin_verb","JK") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/Getmob(mob/M in mob_list)
-	set category = "Администрация"
-	set name = "Телепортировать моба к себе"
+	set category = "Admin"
+	set name = "Get Mob"
 	set desc = "Mob to teleport"
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -110,8 +110,8 @@
 	feedback_add_details("admin_verb","GM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/Getkey()
-	set category = "Администрация"
-	set name = "Телепортировать юзверя к себе"
+	set category = "Admin"
+	set name = "Get Key"
 	set desc = "Key to teleport"
 
 	if(!src.holder)
@@ -136,8 +136,8 @@
 		feedback_add_details("admin_verb","GK") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/sendmob(mob/M in sortmobs())
-	set category = "Администрация"
-	set name = "Отправить моба в зону"
+	set category = "Admin"
+	set name = "Send Mob"
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
 		return

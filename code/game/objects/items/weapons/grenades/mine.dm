@@ -55,7 +55,7 @@
 /obj/item/weapon/grenade/mine/proc/triggermine(mob/victim)
 	if(triggered)
 		return
-	visible_message("<span class='danger'>выражение лица [victim] приходит в ужас, когда активируется [bicon(src)] [src]!</span>")
+	visible_message("<span class='danger'>[victim] активирует [bicon(src)] [src]!</span>")
 	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
 	s.set_up(3, 1, src)
 	s.start()

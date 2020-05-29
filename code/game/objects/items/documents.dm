@@ -1,6 +1,6 @@
 /obj/item/documents
-	name = "secret documents"
-	desc = "\"Top Secret\" documents."
+	name = "секретные документы"
+	desc = "\"Совершенно секретно\" а это интересно..."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "docs_generic"
 	item_state = "paper"

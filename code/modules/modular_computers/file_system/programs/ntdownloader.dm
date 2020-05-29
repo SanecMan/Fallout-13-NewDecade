@@ -1,8 +1,8 @@
 /datum/computer_file/program/ntnetdownload
 	filename = "ntndownloader"
-	filedesc = "NTNet Software Download Tool"
+	filedesc = "Обьединёная сеть РобКо"
 	program_icon_state = "generic"
-	extended_desc = "This program allows downloads of software from official NT repositories"
+	extended_desc = "Эта программа скачивает исполняемые файлы с других терминалов РобКо"
 	unsendable = 1
 	undeletable = 1
 	size = 4
@@ -38,13 +38,13 @@
 	ui_header = "downloader_running.gif"
 
 	if(PRG in ntnet_global.available_station_software)
-		generate_network_log("Began downloading file [PRG.filename].[PRG.filetype] from NTNet Software Repository.")
+		generate_network_log("Начато скачивание [PRG.filename].[PRG.filetype] с серверов.")
 		hacked_download = 0
 	else if(PRG in ntnet_global.available_antag_software)
-		generate_network_log("Began downloading file **ENCRYPTED**.[PRG.filetype] from unspecified server.")
+		generate_network_log("Начато скачивание ERRORERRORRREREOREOR.[PRG.filetype] с неизвестного сервера.")
 		hacked_download = 1
 	else
-		generate_network_log("Began downloading file [PRG.filename].[PRG.filetype] from unspecified server.")
+		generate_network_log("Начато скачивание [PRG.filename].[PRG.filetype] с неизвестного сервера.")
 		hacked_download = 0
 
 	downloaded_file = PRG.clone()
@@ -52,7 +52,7 @@
 /datum/computer_file/program/ntnetdownload/proc/abort_file_download()
 	if(!downloaded_file)
 		return
-	generate_network_log("Aborted download of file [hacked_download ? "**ENCRYPTED**" : "[downloaded_file.filename].[downloaded_file.filetype]"].")
+	generate_network_log("Отмена скачивания [hacked_download ? "ERROR" : "[downloaded_file.filename].[downloaded_file.filetype]"].")
 	downloaded_file = null
 	download_completion = 0
 	ui_header = "downloader_finished.gif"
@@ -60,11 +60,11 @@
 /datum/computer_file/program/ntnetdownload/proc/complete_file_download()
 	if(!downloaded_file)
 		return
-	generate_network_log("Completed download of file [hacked_download ? "**ENCRYPTED**" : "[downloaded_file.filename].[downloaded_file.filetype]"].")
+	generate_network_log("Завершено скачивания [hacked_download ? "ERROR" : "[downloaded_file.filename].[downloaded_file.filetype]"].")
 	var/obj/item/weapon/computer_hardware/hard_drive/hard_drive = computer.all_components[MC_HDD]
 	if(!computer || !hard_drive || !hard_drive.store_file(downloaded_file))
 		// The download failed
-		downloaderror = "I/O ERROR - Unable to save file. Check whether you have enough free space on your hard drive and whether your hard drive is properly connected. If the issue persists contact your system administrator for assistance."
+		downloaderror = "Ошибка: не удается сохранить файл. Проверьте, достаточно ли у вас свободного места на жестком диске и правильно ли он подключен. Если проблема не устранена, обратитесь за помощью к системному администратору."
 	downloaded_file = null
 	download_completion = 0
 	ui_header = "downloader_finished.gif"
@@ -110,7 +110,7 @@
 		var/datum/asset/assets = get_asset_datum(/datum/asset/simple/headers)
 		assets.send(user)
 
-		ui = new(user, src, ui_key, "ntnet_downloader", "NTNet Download Program", 575, 700, state = state)
+		ui = new(user, src, ui_key, "ntnet_downloader", "РобКо Программа Предустановки", 575, 700, state = state)
 		ui.open()
 		ui.set_autoupdate(state = 1)
 
@@ -170,8 +170,8 @@
 	var/hardflag = computer.hardware_flag
 
 	if(P && P.is_supported_by_hardware(hardflag,0))
-		return "Compatible"
-	return "Incompatible!"
+		return "Совместимо"
+	return "Несовместимо"
 
 /datum/computer_file/program/ntnetdownload/kill_program(forced)
 	abort_file_download()

@@ -1,5 +1,5 @@
 /obj/item/weapon/reagent_containers/pill
-	name = "pill"
+	name = "таблетка"
 	desc = "A tablet or capsule."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "pill"
@@ -7,7 +7,7 @@
 	possible_transfer_amounts = list()
 	volume = 50
 	var/apply_type = INGEST
-	var/apply_method = "проглотить"
+	var/apply_method = "проглатываете"
 	var/roundstart = 0
 	var/self_delay = 0 //pills are instant, this is because patches inheret their aplication from pills
 
