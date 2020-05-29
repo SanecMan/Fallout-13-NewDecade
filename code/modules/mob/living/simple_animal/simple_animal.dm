@@ -603,7 +603,7 @@
 		riding_datum.ridden = src
 
 /mob/living/simple_animal/relaymove(mob/user, direction)
-		if(tame && riding_datum)
+	if(tame && riding_datum)
 		riding_datum.handle_ride(user, direction)
 
 /mob/living/simple_animal/Move(NewLoc,Dir=0,step_x=0,step_y=0)
