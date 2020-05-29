@@ -33,30 +33,30 @@
 		hierophant_message("<span class='inathneq'>\"[text2ratvar("Engine, come forth and show your servants your mercy")]!\"</span>")
 	else
 		hierophant_message("<span class='inathneq'>\"[text2ratvar("We will show all the mercy of Engine")]!\"</span>")
-	playsound(T, 'sound/misc/gameover.ogg', 30, 0)
+	playsound(T, 'sound/magic/clockwork/invoke_general.ogg', 30, 0)
 	sleep(10)
 	new/obj/effect/clockwork/general_marker/sevtug(T)
 	if(objective_is_gateway)
 		hierophant_message("<span class='sevtug'>\"[text2ratvar("Engine, come forth and show this station your decorating skills")]!\"</span>")
 	else
 		hierophant_message("<span class='sevtug'>\"[text2ratvar("We will show all Engine's decorating skills")]!\"</span>")
-	playsound(T, 'sound/misc/gameover.ogg', 45, 0)
+	playsound(T, 'sound/magic/clockwork/invoke_general.ogg', 45, 0)
 	sleep(10)
 	new/obj/effect/clockwork/general_marker/nezbere(T)
 	if(objective_is_gateway)
 		hierophant_message("<span class='nezbere'>\"[text2ratvar("Engine, come forth and shine your light across this realm")]!!\"</span>")
 	else
 		hierophant_message("<span class='nezbere'>\"[text2ratvar("We will show all Engine's light")]!!\"</span>")
-	playsound(T, 'sound/misc/gameover.ogg', 60, 0)
+	playsound(T, 'sound/magic/clockwork/invoke_general.ogg', 60, 0)
 	sleep(10)
 	new/obj/effect/clockwork/general_marker/nzcrentr(T)
 	if(objective_is_gateway)
 		hierophant_message("<span class='nzcrentr'>\"[text2ratvar("Engine, come forth")].\"</span>")
 	else
 		hierophant_message("<span class='nzcrentr'>\"[text2ratvar("We will show all Engine's power")].\"</span>")
-	playsound(T, 'sound/misc/gameover.ogg', 75, 0)
+	playsound(T, 'sound/magic/clockwork/invoke_general.ogg', 75, 0)
 	sleep(10)
-	playsound(T, 'sound/misc/gameover.ogg', 100, 0)
+	playsound(T, 'sound/magic/clockwork/invoke_general.ogg', 100, 0)
 	var/list/open_turfs = list()
 	for(var/turf/open/OT in orange(1, T))
 		if(!is_blocked_turf(OT, TRUE))
@@ -103,7 +103,7 @@
 			resistance_flags |= INDESTRUCTIBLE
 			countdown.stop()
 			visible_message("<span class='userdanger'>The [src] begins to pulse uncontrollably... you might want to run!</span>")
-			send_to_playing_players(sound('sound/misc/gameover.ogg', 0, channel = 8, volume = 50))
+			send_to_playing_players(sound('sound/effects/clockcult_gateway_disrupted.ogg', 0, channel = 8, volume = 50))
 			make_glow()
 			glow.icon_state = "clockwork_gateway_disrupted"
 			resistance_flags |= INDESTRUCTIBLE
@@ -132,37 +132,44 @@
 	..()
 	icon_state = initial(icon_state)
 	if(is_servant_of_ratvar(user) || isobserver(user))
-		to_chat(user, "<span class='big'><b>Seconds until [ratvar_portal ? "Ratvar's arrival":"Proselytization"]:</b> [get_arrival_text(TRUE)]</span>")
+		user << "<span class='big'><b>Seconds until [ratvar_portal ? "Ratvar's arrival":"Proselytization"]:</b> [get_arrival_text(TRUE)]</span>"
 		switch(progress_in_seconds)
 			if(-INFINITY to GATEWAY_REEBE_FOUND)
-				to_chat(user, "<span class='heavy_brass'>It's still opening.</span>")
+				user << "<span class='heavy_brass'>It's still opening.</span>"
 			if(GATEWAY_REEBE_FOUND to GATEWAY_RATVAR_COMING)
-				to_chat(user, "<span class='heavy_brass'>It's reached the Celestial Derelict and is drawing power from it.</span>")
+				user << "<span class='heavy_brass'>It's reached the Celestial Derelict and is drawing power from it.</span>"
 			if(GATEWAY_RATVAR_COMING to INFINITY)
-				to_chat(user, "<span class='heavy_brass'>[ratvar_portal ? "Ratvar is coming through the gateway":"The gateway is glowing with massed power"]!</span>")
+				user << "<span class='heavy_brass'>[ratvar_portal ? "Ratvar is coming through the gateway":"The gateway is glowing with massed power"]!</span>"
 	else
 		switch(progress_in_seconds)
 			if(-INFINITY to GATEWAY_REEBE_FOUND)
-				to_chat(user, "<span class='warning'>It's a swirling mass of blackness.</span>")
+				user << "<span class='warning'>It's a swirling mass of blackness.</span>"
 			if(GATEWAY_REEBE_FOUND to GATEWAY_RATVAR_COMING)
-				to_chat(user, "<span class='warning'>It seems to be leading somewhere.</span>")
+				user << "<span class='warning'>It seems to be leading somewhere.</span>"
 			if(GATEWAY_RATVAR_COMING to INFINITY)
-				to_chat(user, "<span class='boldwarning'>[ratvar_portal ? "Something is coming through":"It's glowing brightly"]!</span>")
+				user << "<span class='boldwarning'>[ratvar_portal ? "Something is coming through":"It's glowing brightly"]!</span>"
 
 /obj/structure/destructible/clockwork/massive/celestial_gateway/process()
 	if(!progress_in_seconds || prob(7))
 		for(var/M in player_list)
 			if(M && !isnewplayer(M))
-				to_chat(M, "<span class='warning'><b>You hear otherworldly sounds from the [dir2text(get_dir(get_turf(M), get_turf(src)))]...</span>")
+				M << "<span class='warning'><b>You hear otherworldly sounds from the [dir2text(get_dir(get_turf(M), get_turf(src)))]...</span>"
 	if(!obj_integrity)
 		return 0
-	for(var/t in RANGE_TURFS(1, loc))
-		if(iswallturf(t))
-			var/turf/closed/wall/W = t
-			W.dismantle_wall()
-		else if(t && (isclosedturf(t) || !is_blocked_turf(t)))
-			var/turf/T = t
-			T.ChangeTurf(/turf/open/floor/clockwork)
+	var/convert_dist = 1 + (round(Floor(progress_in_seconds, 15) * 0.067))
+	for(var/t in RANGE_TURFS(convert_dist, loc))
+		var/turf/T = t
+		if(!T)
+			continue
+		if(get_dist(T, src) < 2)
+			if(iswallturf(T))
+				var/turf/closed/wall/W = T
+				W.dismantle_wall()
+			else if(t && (isclosedturf(T) || !is_blocked_turf(T)))
+				T.ChangeTurf(/turf/open/floor/clockwork)
+		var/dist = cheap_hypotenuse(T.x, T.y, x, y)
+		if(dist < convert_dist)
+			T.ratvar_act(FALSE, TRUE, 3)
 	for(var/obj/O in orange(1, src))
 		if(!O.pulledby && !istype(O, /obj/effect) && O.density)
 			if(!step_away(O, src, 2) || get_dist(O, src) < 2)
@@ -172,7 +179,7 @@
 	switch(progress_in_seconds)
 		if(-INFINITY to GATEWAY_REEBE_FOUND)
 			if(!first_sound_played)
-				send_to_playing_players(sound('sound/f13music/quest.ogg', 1, channel = 8, volume = 30))
+				send_to_playing_players(sound('sound/effects/clockcult_gateway_charging.ogg', 1, channel = 8, volume = 30))
 				first_sound_played = TRUE
 			make_glow()
 			glow.icon_state = "clockwork_gateway_charging"
@@ -180,13 +187,13 @@
 			if(!second_sound_played)
 				var/area/gate_area = get_area(src)
 				priority_announce("Massive energy anomaly detected on short-range scanners. Location: [gate_area.map_name].", "Anomaly Alert")
-				send_to_playing_players(sound('sound/f13music/quest.ogg', 1, channel = 8, volume = 35))
+				send_to_playing_players(sound('sound/effects/clockcult_gateway_active.ogg', 1, channel = 8, volume = 35))
 				second_sound_played = TRUE
 			make_glow()
 			glow.icon_state = "clockwork_gateway_active"
 		if(GATEWAY_RATVAR_COMING to GATEWAY_RATVAR_ARRIVAL)
 			if(!third_sound_played)
-				send_to_playing_players(sound('sound/f13music/quest.ogg', 1, channel = 8, volume = 40))
+				send_to_playing_players(sound('sound/effects/clockcult_gateway_closing.ogg', 1, channel = 8, volume = 40))
 				third_sound_played = TRUE
 			make_glow()
 			glow.icon_state = "clockwork_gateway_closing"
@@ -197,7 +204,7 @@
 				purpose_fulfilled = TRUE
 				make_glow()
 				animate(glow, transform = matrix() * 1.5, alpha = 255, time = 125)
-				send_to_playing_players(sound('sound/misc/joker.ogg', 0, channel = 8)) //End the sounds
+				send_to_playing_players(sound('sound/effects/ratvar_rises.ogg', 0, channel = 8)) //End the sounds
 				sleep(125)
 				make_glow()
 				animate(glow, transform = matrix() * 3, alpha = 0, time = 5)
@@ -213,7 +220,7 @@
 					send_to_playing_players("<span class='ratvar'>\"[text2ratvar("Behold")]!\"</span>\n<span class='inathneq_large'>\"[text2ratvar("See Engine's mercy")]!\"</span>\n\
 					<span class='sevtug_large'>\"[text2ratvar("Observe Engine's design skills")]!\"</span>\n<span class='nezbere_large'>\"[text2ratvar("Behold Engine's light")]!!\"</span>\n\
 					<span class='nzcrentr_large'>\"[text2ratvar("Gaze upon Engine's power")]!\"</span>")
-					send_to_playing_players('sound/f13music/quest.ogg')
+					send_to_playing_players('sound/magic/clockwork/invoke_general.ogg')
 					var/x0 = startpoint.x
 					var/y0 = startpoint.y
 					for(var/I in spiral_range_turfs(255, startpoint))

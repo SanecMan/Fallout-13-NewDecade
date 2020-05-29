@@ -142,10 +142,10 @@ macro "default"
 		command = ".screenshot"
 	elem 
 		name = "F3"
-		command = "looc"
+		command = "say"
 	elem 
 		name = "F4"
-		command = "say"
+		command = "looc"
 	elem 
 		name = "F5"
 		command = "me"

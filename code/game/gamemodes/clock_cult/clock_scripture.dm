@@ -55,7 +55,7 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 	var/successful = FALSE
 	if(can_recite() && has_requirements())
 		if(slab.busy)
-			to_chat(invoker, "<span class='warning'>[slab] refuses to work, displaying the message: \"[slab.busy]!\"</span>")
+			invoker << "<span class='warning'>[slab] refuses to work, displaying the message: \"[slab.busy]!\"</span>"
 			return FALSE
 		slab.busy = "Invocation ([name]) in progress"
 		if(ratvar_awakens)
@@ -96,7 +96,7 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 	if(!invoker || !slab || invoker.get_active_held_item() != slab)
 		return FALSE
 	if(!invoker.can_speak_vocal())
-		to_chat(invoker, "<span class='warning'>You are unable to speak the words of the scripture!</span>")
+		invoker << "<span class='warning'>You are unable to speak the words of the scripture!</span>"
 		return FALSE
 	return TRUE
 
@@ -115,7 +115,7 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 				failed = TRUE
 		if(failed)
 			component_printout += "</span>"
-			to_chat(invoker, component_printout)
+			invoker << component_printout
 			return FALSE
 	if(multiple_invokers_used && !multiple_invokers_optional && !ratvar_awakens && !slab.no_cost)
 		var/nearby_servants = 0
@@ -123,7 +123,7 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 			if(is_servant_of_ratvar(L) && L.stat == CONSCIOUS && L.can_speak_vocal())
 				nearby_servants++
 		if(nearby_servants < invokers_required)
-			to_chat(invoker, "<span class='warning'>There aren't enough non-mute servants nearby ([nearby_servants]/[invokers_required])!</span>")
+			invoker << "<span class='warning'>There aren't enough non-mute servants nearby ([nearby_servants]/[invokers_required])!</span>"
 			return FALSE
 	if(!check_special_requirements())
 		return FALSE
@@ -149,7 +149,8 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 		if(message)
 			if(prob(ratvarian_prob))
 				message = text2ratvar(message)
-			to_chat(invoker, "<span class='[get_component_span(primary_component)]_large'>\"[message]\"</span>")
+			invoker << "<span class='[get_component_span(primary_component)]_large'>\"[message]\"</span>"
+			invoker << 'sound/magic/clockwork/invoke_general.ogg'
 	return TRUE
 
 /datum/clockwork_scripture/proc/check_offstation_penalty()
@@ -177,7 +178,7 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 		else
 			for(var/invocation in invocations)
 				clockwork_say(invoker, text2ratvar(invocation), whispered)
-	to_chat(invoker, "<span class='brass'>You [channel_time <= 0 ? "recite" : "begin reciting"] a piece of scripture entitled \"[name]\".</span>")
+	invoker << "<span class='brass'>You [channel_time <= 0 ? "recite" : "begin reciting"] a piece of scripture entitled \"[name]\".</span>"
 	if(!channel_time)
 		return TRUE
 	for(var/invocation in invocations)
@@ -213,7 +214,8 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 		if(!do_after(invoker, chant_interval, target = invoker))
 			break
 		clockwork_say(invoker, text2ratvar(pick(chant_invocations)), whispered)
-		chant_effects(i)
+		if(!chant_effects(i))
+			break
 	if(invoker && slab)
 		chant_end_effects()
 	return TRUE
@@ -221,7 +223,7 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 /datum/clockwork_scripture/channeled/proc/chant_effects(chant_number) //The chant's periodic effects
 
 /datum/clockwork_scripture/channeled/proc/chant_end_effects() //The chant's effect upon ending
-	to_chat(invoker, "<span class='brass'>You cease your chant.</span>")
+	invoker << "<span class='brass'>You cease your chant.</span>"
 
 
 //Creates an object at the invoker's feet
@@ -241,10 +243,10 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 /datum/clockwork_scripture/create_object/check_special_requirements()
 	var/turf/T = get_turf(invoker)
 	if(!space_allowed && isspaceturf(T))
-		to_chat(invoker, "<span class='warning'>You need solid ground to place this object!</span>")
+		invoker << "<span class='warning'>You need solid ground to place this object!</span>"
 		return FALSE
 	if(one_per_tile && (locate(prevent_path) in T))
-		to_chat(invoker, "<span class='warning'>You can only place one of this object on each tile!</span>")
+		invoker << "<span class='warning'>You can only place one of this object on each tile!</span>"
 		return FALSE
 	return TRUE
 
@@ -252,7 +254,7 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 	if(creator_message && observer_message)
 		invoker.visible_message(observer_message, creator_message)
 	else if(creator_message)
-		to_chat(invoker, creator_message)
+		invoker << creator_message
 	var/obj/O = new object_path (get_turf(invoker))
 	O.ratvar_act() //update the new object so it gets buffed if ratvar is alive
 	if(istype(O, /obj/item))

@@ -11,6 +11,7 @@
 	var/list/stored_components = list(BELLIGERENT_EYE = 0, VANGUARD_COGWHEEL = 0, GEIS_CAPACITOR = 0, REPLICANT_ALLOY = 0, HIEROPHANT_ANSIBLE = 0)
 	var/busy //If the slab is currently being used by something
 	var/production_time = 0
+	var/target_component_id //the target component ID to create, if any
 	var/no_cost = FALSE //If the slab is admin-only and needs no components and has no scripture locks
 	var/speed_multiplier = 1 //multiples how fast this slab recites scripture
 	var/nonhuman_usable = FALSE //if the slab can be used by nonhumans, defaults to off
@@ -68,7 +69,7 @@
 	/datum/clockwork_scripture/create_object/mania_motor)
 
 /obj/item/clockwork/slab/cyborg/janitor
-	quickbound = list(/datum/clockwork_scripture/channeled/belligerent, /datum/clockwork_scripture/channeled/volt_void, /datum/clockwork_scripture/create_object/sigil_of_transmission, \
+	quickbound = list(/datum/clockwork_scripture/channeled/belligerent, /datum/clockwork_scripture/channeled/volt_void/cyborg, /datum/clockwork_scripture/create_object/sigil_of_transmission, \
 	/datum/clockwork_scripture/create_object/interdiction_lens)
 
 /obj/item/clockwork/slab/cyborg/service
@@ -80,7 +81,7 @@
 	/datum/clockwork_scripture/create_object/sigil_of_transgression, /datum/clockwork_scripture/spatial_gateway)
 
 /obj/item/clockwork/slab/cyborg/access_display(mob/living/user)
-	to_chat(user, "<span class='warning'>Use the action buttons to recite your limited set of scripture!</span>")
+	user << "<span class='warning'>Use the action buttons to recite your limited set of scripture!</span>"
 
 /obj/item/clockwork/slab/New()
 	..()
@@ -127,14 +128,16 @@
 	var/mob/living/L
 	L = get_atom_on_turf(src, /mob/living)
 	if(istype(L) && is_servant_of_ratvar(L) && (nonhuman_usable || ishuman(L)))
-		var/component_to_generate = get_weighted_component_id(src) //more likely to generate components that we have less of
+		var/component_to_generate = target_component_id
+		if(!component_to_generate)
+			component_to_generate = get_weighted_component_id(src) //more likely to generate components that we have less of
 		stored_components[component_to_generate]++
 		update_slab_info(src)
 		for(var/obj/item/clockwork/slab/S in L.GetAllContents()) //prevent slab abuse today
 			if(S == src)
 				continue
 			S.production_time = production_time + 50 //set it to our next production plus five seconds, so that if you hold the same slabs, the same one will always generate
-		to_chat(L, "<span class='warning'>Your slab cl[pick("ank", "ink", "unk", "ang")]s as it produces a new component.</span>")
+		L << "<span class='warning'>Your slab cl[pick("ank", "ink", "unk", "ang")]s as it produces a </span><span class='[get_component_span(component_to_generate)]'>component</span><span class='warning'>.</span>"
 
 /obj/item/clockwork/slab/examine(mob/user)
 	..()
@@ -144,16 +147,16 @@
 				if(!quickbound[i])
 					continue
 				var/datum/clockwork_scripture/quickbind_slot = quickbound[i]
-				to_chat(user, "<b>Quickbind</b> button: <span class='[get_component_span(initial(quickbind_slot.primary_component))]'>[initial(quickbind_slot.name)]</span>.")
+				user << "<b>Quickbind</b> button: <span class='[get_component_span(initial(quickbind_slot.primary_component))]'>[initial(quickbind_slot.name)]</span>."
 		if(clockwork_caches)
-			to_chat(user, "<b>Stored components (with global cache):</b>")
+			user << "<b>Stored components (with global cache):</b>"
 			for(var/i in stored_components)
-				to_chat(user, "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != REPLICANT_ALLOY ? "s":""]:</i> <b>[stored_components[i]]</b> \
-				(<b>[stored_components[i] + clockwork_component_cache[i]]</b>)</span>")
+				user << "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != REPLICANT_ALLOY ? "s":""]:</i> <b>[stored_components[i]]</b> \
+				(<b>[stored_components[i] + clockwork_component_cache[i]]</b>)</span>"
 		else
-			to_chat(user, "<b>Stored components:</b>")
+			user << "<b>Stored components:</b>"
 			for(var/i in stored_components)
-				to_chat(user, "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != REPLICANT_ALLOY ? "s":""]:</i> <b>[stored_components[i]]</b></span>")
+				user << "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != REPLICANT_ALLOY ? "s":""]:</i> <b>[stored_components[i]]</b></span>"
 
 //Component Transferal
 /obj/item/clockwork/slab/attack(mob/living/target, mob/living/carbon/human/user)
@@ -170,7 +173,7 @@
 					targetslab = S
 		if(targetslab)
 			if(targetslab == src)
-				to_chat(user, "<span class='heavy_brass'>\"You can't transfer components into your own slab, idiot.\"</span>")
+				user << "<span class='heavy_brass'>\"You can't transfer components into your own slab, idiot.\"</span>"
 			else
 				for(var/i in stored_components)
 					targetslab.stored_components[i] += stored_components[i]
@@ -180,7 +183,7 @@
 				user.visible_message("<span class='notice'>[user] empties [src] into [target]'s [targetslab.name].</span>", \
 				"<span class='notice'>You transfer your slab's components into [target]'s [targetslab.name].</span>")
 		else
-			to_chat(user, "<span class='warning'>[target] has no slabs to transfer components to.</span>")
+			user << "<span class='warning'>[target] has no slabs to transfer components to.</span>"
 	else
 		return ..()
 
@@ -222,7 +225,7 @@
 
 /obj/item/clockwork/slab/proc/show_hierophant(mob/living/user)
 	if(!user.can_speak_vocal())
-		to_chat(user, "<span class='warning'>You cannot speak into the slab!</span>")
+		user << "<span class='warning'>You cannot speak into the slab!</span>"
 		return FALSE
 	var/message = stripped_input(user, "Enter a message to send to your fellow servants.", "Hierophant")
 	if(!message || !user || !user.canUseTopic(src) || !user.can_speak_vocal())
@@ -234,7 +237,7 @@
 //Scripture Recital
 /obj/item/clockwork/slab/attack_self(mob/living/user)
 	if(iscultist(user))
-		to_chat(user, "<span class='heavy_brass'>\"You reek of blood. You've got a lot of nerve to even look at that slab.\"</span>")
+		user << "<span class='heavy_brass'>\"You reek of blood. You've got a lot of nerve to even look at that slab.\"</span>"
 		user.visible_message("<span class='warning'>A sizzling sound comes from [user]'s hands!</span>", "<span class='userdanger'>[src] suddenly grows extremely hot in your hands!</span>")
 		playsound(get_turf(user), 'sound/weapons/sear.ogg', 50, 1)
 		user.drop_item()
@@ -243,15 +246,15 @@
 		user.apply_damage(5, BURN, "r_arm")
 		return 0
 	if(!is_servant_of_ratvar(user))
-		to_chat(user, "<span class='warning'>The information on [src]'s display shifts rapidly. After a moment, your head begins to pound, and you tear your eyes away.</span>")
+		user << "<span class='warning'>The information on [src]'s display shifts rapidly. After a moment, your head begins to pound, and you tear your eyes away.</span>"
 		user.confused += 5
 		user.dizziness += 5
 		return 0
 	if(busy)
-		to_chat(user, "<span class='warning'>[src] refuses to work, displaying the message: \"[busy]!\"</span>")
+		user << "<span class='warning'>[src] refuses to work, displaying the message: \"[busy]!\"</span>"
 		return 0
 	if(!nonhuman_usable && !ishuman(user))
-		to_chat(user, "<span class='nezbere'>[src] hums fitfully in your hands, but doesn't seem to do anything...</span>")
+		user << "<span class='nezbere'>[src] hums fitfully in your hands, but doesn't seem to do anything...</span>"
 		return 0
 	access_display(user)
 
@@ -273,13 +276,13 @@
 	if(!scripture || !user || !user.canUseTopic(src) || (!nonhuman_usable && !ishuman(user)))
 		return FALSE
 	if(user.get_active_held_item() != src)
-		to_chat(user, "<span class='warning'>You need to hold the slab in your active hand to recite scripture!</span>")
+		user << "<span class='warning'>You need to hold the slab in your active hand to recite scripture!</span>"
 		return FALSE
 	var/initial_tier = initial(scripture.tier)
 	if(initial_tier != SCRIPTURE_PERIPHERAL)
 		var/list/tiers_of_scripture = scripture_unlock_check()
 		if(!ratvar_awakens && !no_cost && !tiers_of_scripture[initial_tier])
-			to_chat(user, "<span class='warning'>That scripture is not unlocked, and cannot be recited!</span>")
+			user << "<span class='warning'>That scripture is not unlocked, and cannot be recited!</span>"
 			return FALSE
 	var/datum/clockwork_scripture/scripture_to_recite = new scripture
 	scripture_to_recite.slab = src
@@ -400,6 +403,10 @@
 
 	data["selected"] = selected_scripture
 
+	data["target_comp"] = "<font color=#B18B25>NONE</font>"
+	if(target_component_id)
+		data["target_comp"] = "<font color=[get_component_color_bright(target_component_id)]>[get_component_acronym(target_component_id)]</font>"
+
 	generate_all_scripture()
 
 	data["scripture"] = list()
@@ -439,6 +446,16 @@
 			addtimer(CALLBACK(src, .proc/recite_scripture, text2path(params["category"]), usr, FALSE), 0)
 		if("select")
 			selected_scripture = params["category"]
+		if("component")
+			var/list/components = list("Random Components")
+			for(var/i in clockwork_component_cache)
+				var/cache_components = 0
+				if(clockwork_caches)
+					cache_components = clockwork_component_cache[i]
+				components["[get_component_name(i)] [(cache_components + stored_components[i])]"] = i
+			var/input_component = input("Choose a component type.", "Target Component") as null|anything in components
+			if(input_component && !..())
+				target_component_id = components[input_component]
 		if("bind")
 			var/datum/clockwork_scripture/path = text2path(params["category"]) //we need a path and not a string
 			var/found_index = quickbound.Find(path)
@@ -449,7 +466,7 @@
 					quickbound[found_index] = null //otherwise, leave it as a null so the scripture maintains position
 				update_quickbind()
 			else
-				var/target_index = input("Position of [initial(path.name)], 1 to 5?", text("Input"))  as num|null
+				var/target_index = input("Position of [initial(path.name)], 1 to 5?", "Input")  as num|null
 				if(isnum(target_index) && target_index > 0 && target_index < 6 && !..())
 					var/datum/clockwork_scripture/S
 					if(LAZYLEN(quickbound) >= target_index)

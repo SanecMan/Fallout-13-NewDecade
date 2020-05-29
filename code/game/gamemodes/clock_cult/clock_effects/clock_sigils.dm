@@ -35,7 +35,7 @@
 	if(isliving(AM))
 		var/mob/living/L = AM
 		if(L.stat <= stat_affected)
-			if((!is_servant_of_ratvar(L) || (is_servant_of_ratvar(L) && affects_servants)) && L.mind && (!isdrone(L) || istype(L, /mob/living/simple_animal/drone/cogscarab)))
+			if((!is_servant_of_ratvar(L) || (affects_servants && is_servant_of_ratvar(L))) && (L.mind || L.has_status_effect(STATUS_EFFECT_SIGILMARK)) && !isdrone(L))
 				var/obj/item/I = L.null_rod_check()
 				if(I)
 					L.visible_message("<span class='warning'>[L]'s [I.name] [resist_string], protecting them from [src]'s effects!</span>", \
@@ -62,7 +62,7 @@
 		if(!is_servant_of_ratvar(M) && M != L)
 			M.flash_act()
 	if(iscultist(L))
-		to_chat(L, "<span class='heavy_brass'>\"Watch your step, wretch.\"</span>")
+		L << "<span class='heavy_brass'>\"Watch your step, wretch.\"</span>"
 		L.adjustBruteLoss(10)
 		L.Weaken(7)
 	L.visible_message("<span class='warning'>[src] appears around [L] in a burst of light!</span>", \
@@ -116,7 +116,7 @@
 		return
 	post_channel(L)
 	if(is_eligible_servant(L))
-		to_chat(L, "<span class='heavy_brass'>\"You belong to me now.\"</span>")
+		L << "<span class='heavy_brass'>\"You belong to me now.\"</span>"
 	add_servant_of_ratvar(L)
 	L.Weaken(3) //Completely defenseless for about five seconds - mainly to give them time to read over the information they've just been presented with
 	L.Stun(3)
@@ -127,12 +127,12 @@
 	for(var/M in mob_list)
 		if(isobserver(M))
 			var/link = FOLLOW_LINK(M, L)
-			to_chat(M, "[link] <span class='heavy_brass'>[message] [L.real_name]!</span>")
+			M <<  "[link] <span class='heavy_brass'>[message] [L.real_name]!</span>"
 		else if(is_servant_of_ratvar(M))
 			if(M == L)
-				to_chat(M, "<span class='heavy_brass'>[message] you!</span>")
+				M << "<span class='heavy_brass'>[message] you!</span>"
 			else
-				to_chat(M, "<span class='heavy_brass'>[message] [L.real_name]!</span>")
+				M << "<span class='heavy_brass'>[message] [L.real_name]!</span>"
 	if(delete_on_finish)
 		qdel(src)
 	else
@@ -171,7 +171,7 @@
 /obj/effect/clockwork/sigil/transmission
 	name = "suspicious sigil"
 	desc = "A glowing orange sigil. The air around it feels staticky."
-	clockwork_desc = "A sigil that will serve as a battery for clockwork structures. Use Volt Void while standing on it to charge it."
+	clockwork_desc = "A sigil that will serve as a battery for clockwork structures."
 	icon_state = "sigiltransmission"
 	color = "#EC8A2D"
 	alpha = 50
@@ -190,21 +190,21 @@
 /obj/effect/clockwork/sigil/transmission/examine(mob/user)
 	..()
 	if(is_servant_of_ratvar(user) || isobserver(user))
-		to_chat(user, "<span class='[power_charge ? "brass":"alloy"]'>It is storing <b>[ratvar_awakens ? "INFINITY":"[power_charge]"]W</b> of power.</span>")
+		user << "<span class='[power_charge ? "brass":"alloy"]'>It is storing <b>[ratvar_awakens ? "INFINITY":"[power_charge]"]W</b> of power.</span>"
 		if(iscyborg(user))
-			to_chat(user, "<span class='brass'>You can recharge from the [sigil_name] by crossing it.</span>")
+			user << "<span class='brass'>You can recharge from the [sigil_name] by crossing it.</span>"
 
 /obj/effect/clockwork/sigil/transmission/sigil_effects(mob/living/L)
 	if(is_servant_of_ratvar(L))
 		if(iscyborg(L))
 			charge_cyborg(L)
 	else if(power_charge)
-		to_chat(L, "<span class='brass'>You feel a slight, static shock.</span>")
+		L << "<span class='brass'>You feel a slight, static shock.</span>"
 
 /obj/effect/clockwork/sigil/transmission/proc/charge_cyborg(mob/living/silicon/robot/cyborg)
 	if(!cyborg_checks(cyborg))
 		return
-	to_chat(cyborg, "<span class='brass'>You start to charge from the [sigil_name]...</span>")
+	cyborg << "<span class='brass'>You start to charge from the [sigil_name]...</span>"
 	if(!do_after(cyborg, 50, target = src))
 		return
 	if(!cyborg_checks(cyborg))
@@ -221,16 +221,16 @@
 
 /obj/effect/clockwork/sigil/transmission/proc/cyborg_checks(mob/living/silicon/robot/cyborg)
 	if(!cyborg.cell)
-		to_chat(cyborg, "<span class='warning'>You have no cell!</span>")
+		cyborg << "<span class='warning'>You have no cell!</span>"
 		return FALSE
 	if(!power_charge)
-		to_chat(cyborg, "<span class='warning'>The [sigil_name] has no stored power!</span>")
+		cyborg << "<span class='warning'>The [sigil_name] has no stored power!</span>"
 		return FALSE
 	if(cyborg.cell.charge > cyborg.cell.maxcharge - MIN_CLOCKCULT_POWER)
-		to_chat(cyborg, "<span class='warning'>You are already at maximum charge!</span>")
+		cyborg << "<span class='warning'>You are already at maximum charge!</span>"
 		return FALSE
 	if(cyborg.has_status_effect(STATUS_EFFECT_POWERREGEN))
-		to_chat(cyborg, "<span class='warning'>You are already regenerating power!</span>")
+		cyborg << "<span class='warning'>You are already regenerating power!</span>"
 		return FALSE
 	return TRUE
 
@@ -280,8 +280,8 @@
 /obj/effect/clockwork/sigil/vitality/examine(mob/user)
 	..()
 	if(is_servant_of_ratvar(user) || isobserver(user))
-		to_chat(user, "<span class='[vitality ? "inathneq_small":"alloy"]'>It is storing <b>[ratvar_awakens ? "INFINITE":"[vitality]"]</b> units of vitality.</span>")
-		to_chat(user, "<span class='inathneq_small'>It requires at least <b>[base_revive_cost]</b> units of vitality to revive dead Servants, in addition to any damage the Servant has.</span>")
+		user << "<span class='[vitality ? "inathneq_small":"alloy"]'>It is storing <b>[ratvar_awakens ? "INFINITE":"[vitality]"]</b> units of vitality.</span>"
+		user << "<span class='inathneq_small'>It requires at least <b>[base_revive_cost]</b> units of vitality to revive dead Servants, in addition to any damage the Servant has.</span>"
 
 /obj/effect/clockwork/sigil/vitality/sigil_effects(mob/living/L)
 	if((is_servant_of_ratvar(L) && L.suiciding) || sigil_active)
@@ -291,7 +291,7 @@
 	addtimer(CALLBACK(src, .proc/update_alpha), 10)
 	sleep(10)
 //as long as they're still on the sigil and are either not a servant or they're a servant AND it has remaining vitality
-	while(L && (!is_servant_of_ratvar(L) || (is_servant_of_ratvar(L) && vitality)) && get_turf(L) == get_turf(src))
+	while(L && (!is_servant_of_ratvar(L) || (is_servant_of_ratvar(L) && (ratvar_awakens || vitality))) && get_turf(L) == get_turf(src))
 		sigil_active = TRUE
 		if(animation_number >= 4)
 			new /obj/effect/overlay/temp/ratvar/sigil/vitality(get_turf(src))
@@ -305,7 +305,7 @@
 				animate(V, alpha = 0, transform = matrix()*2, time = 8)
 				playsound(L, 'sound/magic/WandODeath.ogg', 50, 1)
 				L.visible_message("<span class='warning'>[L] collapses in on [L.p_them()]self as [src] flares bright blue!</span>")
-				to_chat(L, "<span class='inathneq_large'>\"[text2ratvar("Your life will not be wasted.")]\"</span>")
+				L << "<span class='inathneq_large'>\"[text2ratvar("Your life will not be wasted.")]\"</span>"
 				for(var/obj/item/W in L)
 					if(!L.unEquip(W))
 						qdel(W)
