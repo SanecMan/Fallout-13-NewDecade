@@ -121,6 +121,41 @@
 	desc = "Ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
 	icon_state = "four_b"
 	tank_volume = 800
+	reagent_id = "water"
+	anchored = 1
+	self_weight = 60
+
+/obj/structure/reagent_dispensers/barrel/rusted_old
+	name = "старая бочка"
+	desc = "An old barrel. Oddly enough, it stands undamaged after all this time.<br>You wonder if there is anything left in it."
+	icon_state = "rust_one"
+	tank_volume = 500
+	reagent_id = "mutagen"
+	self_weight = 100
+
+/obj/structure/reagent_dispensers/barrel/rusted_two
+	name = "две старых бочки"
+	desc = "A couple of old barrels. Oddly enough, they stand undamaged after all this time.<br>You wonder if there is anything left in these."
+	icon_state = "rust_two_a2"
+	tank_volume = 1000
+	reagent_id = "mutagen"
+	anchored = 1
+	self_weight = 200
+
+/obj/structure/reagent_dispensers/barrel/rusted_three
+	name = "три старых бочки"
+	desc = "Ancient containers with something inside of them. Or are they empty? Actually, how would you know that..."
+	icon_state = "rust_three_a"
+	tank_volume = 400
+	reagent_id = "mutagen"
+	anchored = 1
+	self_weight = 600
+
+/obj/structure/reagent_dispensers/barrel/rusted_four
+	name = "четыре бочки"
+	desc = "Ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
+	icon_state = "four_b"
+	tank_volume = 600
 	reagent_id = "mutagen"
 	anchored = 1
 	self_weight = 60
