@@ -44,9 +44,9 @@
 			break
 	if(linkedwall && wall_generation_cooldown <= world.time)
 		wall_generation_cooldown = world.time + (CACHE_PRODUCTION_TIME * get_efficiency_mod(TRUE))
-		generate_cache_component(null, src)
-		playsound(linkedwall, 'sound/f13music/quest.ogg', rand(15, 20), 1, -3, 1, 1)
-		visible_message("<span class='warning'>Something cl[pick("ank", "ink", "unk", "ang")]s around inside of [src]...</span>")
+		var/component_id = generate_cache_component(null, src)
+		playsound(linkedwall, 'sound/magic/clockwork/fellowship_armory.ogg', rand(15, 20), 1, -3, 1, 1)
+		visible_message("<span class='[get_component_span(component_id)]'>Something</span><span class='warning'> cl[pick("ank", "ink", "unk", "ang")]s around inside of [src]...</span>")
 
 /obj/structure/destructible/clockwork/cache/attackby(obj/item/I, mob/living/user, params)
 	if(!is_servant_of_ratvar(user))
@@ -54,18 +54,18 @@
 	if(istype(I, /obj/item/clockwork/component))
 		var/obj/item/clockwork/component/C = I
 		if(!anchored)
-			to_chat(user, "<span class='warning'>[src] needs to be secured to place [C] into it!</span>")
+			user << "<span class='warning'>[src] needs to be secured to place [C] into it!</span>"
 		else
 			clockwork_component_cache[C.component_id]++
 			update_slab_info()
-			to_chat(user, "<span class='notice'>You add [C] to [src].</span>")
+			user << "<span class='notice'>You add [C] to [src].</span>"
 			user.drop_item()
 			qdel(C)
 		return 1
 	else if(istype(I, /obj/item/clockwork/slab))
 		var/obj/item/clockwork/slab/S = I
 		if(!anchored)
-			to_chat(user, "<span class='warning'>[src] needs to be secured to offload your slab's components into it!</span>")
+			user << "<span class='warning'>[src] needs to be secured to offload your slab's components into it!</span>"
 		else
 			for(var/i in S.stored_components)
 				clockwork_component_cache[i] += S.stored_components[i]
@@ -81,21 +81,21 @@
 	if(is_servant_of_ratvar(user))
 		if(linkedwall)
 			if(wall_generation_cooldown > world.time)
-				to_chat(user, "<span class='alloy'>[src] will produce a component in <b>[(world.time - wall_generation_cooldown) * 0.1]</b> seconds.</span>")
+				user << "<span class='alloy'>[src] will produce a component in <b>[(world.time - wall_generation_cooldown) * 0.1]</b> seconds.</span>"
 			else
-				to_chat(user, "<span class='brass'>[src] is about to produce a component!</span>")
+				user << "<span class='brass'>[src] is about to produce a component!</span>"
 		else if(anchored)
-			to_chat(user, "<span class='alloy'>[src] is unlinked! Construct a Clockwork Wall nearby to generate components!</span>")
+			user << "<span class='alloy'>[src] is unlinked! Construct a Clockwork Wall nearby to generate components!</span>"
 		else
-			to_chat(user, "<span class='alloy'>[src] needs to be secured to generate components!</span>")
+			user << "<span class='alloy'>[src] needs to be secured to generate components!</span>"
 
 /obj/structure/destructible/clockwork/cache/examine(mob/user)
 	..()
 	if(is_servant_of_ratvar(user) || isobserver(user))
 		if(linkedwall)
-			to_chat(user, "<span class='brass'>It is linked to a Clockwork Wall and will generate a component every <b>[round((CACHE_PRODUCTION_TIME * 0.1) * get_efficiency_mod(TRUE), 0.1)]</b> seconds!</span>")
+			user << "<span class='brass'>It is linked to a Clockwork Wall and will generate a component every <b>[round((CACHE_PRODUCTION_TIME * 0.1) * get_efficiency_mod(TRUE), 0.1)]</b> seconds!</span>"
 		else
-			to_chat(user, "<span class='alloy'>It is unlinked! Construct a Clockwork Wall nearby to generate components!</span>")
-		to_chat(user, "<b>Stored components:</b>")
+			user << "<span class='alloy'>It is unlinked! Construct a Clockwork Wall nearby to generate components!</span>"
+		user << "<b>Stored components:</b>"
 		for(var/i in clockwork_component_cache)
-			to_chat(user, "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != REPLICANT_ALLOY ? "s":""]:</i> <b>[clockwork_component_cache[i]]</b></span>")
+			user << "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != REPLICANT_ALLOY ? "s":""]:</i> <b>[clockwork_component_cache[i]]</b></span>"

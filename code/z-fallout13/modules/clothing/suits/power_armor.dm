@@ -41,7 +41,7 @@
 	else
 		footstep++
 
-/obj/item/clothing/suit/armor/f13/power_armor/initialize()
+/obj/item/clothing/suit/armor/f13/power_armor/Initialize()
 	current_power_usage = default_power_usage
 	..()
 

@@ -18,10 +18,10 @@
 
 /obj/structure/destructible/clockwork/powered/interdiction_lens/examine(mob/user)
 	..()
-	to_chat(user, "<span class='[recharging > world.time ? "neovgre_small":"brass"]'>Its gemstone [recharging > world.time ? "has been breached by writhing tendrils of blackness that cover the totem" \
-	: "vibrates in place and thrums with power"].</span>")
+	user << "<span class='[recharging > world.time ? "neovgre_small":"brass"]'>Its gemstone [recharging > world.time ? "has been breached by writhing tendrils of blackness that cover the totem" \
+	: "vibrates in place and thrums with power"].</span>"
 	if(is_servant_of_ratvar(user) || isobserver(user))
-		to_chat(user, "<span class='neovgre_small'>If it fails to drain any electronics or has nothing to return power to, it will disable itself for <b>[round(recharge_time/600, 1)]</b> minutes.</span>")
+		user << "<span class='neovgre_small'>If it fails to drain any electronics or has nothing to return power to, it will disable itself for <b>[round(recharge_time/600, 1)]</b> minutes.</span>"
 
 /obj/structure/destructible/clockwork/powered/interdiction_lens/toggle(fast_process, mob/living/user)
 	. = ..()
@@ -33,7 +33,7 @@
 /obj/structure/destructible/clockwork/powered/interdiction_lens/attack_hand(mob/living/user)
 	if(user.canUseTopic(src, !issilicon(user)))
 		if(disabled)
-			to_chat(user, "<span class='warning'>As you place your hand on the gemstone, cold tendrils of black matter crawl up your arm. You quickly pull back.</span>")
+			user << "<span class='warning'>As you place your hand on the gemstone, cold tendrils of black matter crawl up your arm. You quickly pull back.</span>"
 			return 0
 		toggle(0, user)
 
@@ -89,7 +89,7 @@
 			power_drained += (A.power_drain(TRUE) * efficiency)
 
 			if(prob(1 * rage_modifier))
-				to_chat(A, "<span class='neovgre'>\"[text2ratvar(pick(rage_messages))]\"</span>")
+				A << "<span class='neovgre'>\"[text2ratvar(pick(rage_messages))]\"</span>"
 
 			if(prob(100 * (efficiency * efficiency)))
 				if(istype(A, /obj/machinery/camera) && unconverted_ai)

@@ -17,7 +17,7 @@
 	engine_on_sound = 'sound/f13machines/bike_start.ogg'
 	engine_loop_sound = 'sound/f13machines/bike_loop.ogg'
 
-/obj/vehicle/fuel/motorcycle/buckle_mob()
+/obj/vehicle/fuel/motorcycle/buckle_mob(mob/living/buckled_mob, force = 0, check_loc = 1)
 	. = ..()
 	riding_datum = new datum_type()
 

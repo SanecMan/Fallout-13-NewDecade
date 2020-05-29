@@ -33,6 +33,8 @@
 	if(color)
 		add_atom_colour(color, FIXED_COLOUR_PRIORITY)
 
+	if(SSobj && SSobj.initialized)
+		Initialize(FALSE)
 	//. = ..() //uncomment if you are dumb enough to add a /datum/New() proc
 
 /atom/Destroy()
@@ -152,7 +154,8 @@
 	return
 
 /atom/proc/emp_act(severity)
-	return
+	if(istype(wires))
+		wires.emp_pulse()
 
 /atom/proc/bullet_act(obj/item/projectile/P, def_zone)
 	. = P.on_hit(src, 0, def_zone)
@@ -237,9 +240,11 @@
 
 /atom/proc/hitby(atom/movable/AM, skipcatch, hitpush, blocked)
 	if(density && !has_gravity(AM)) //thrown stuff bounces off dense stuff in no grav, unless the thrown stuff ends up inside what it hit(embedding, bola, etc...).
-		spawn(2) //very short wait, so we can actually see the impact.
-			if(AM && isturf(AM.loc))
-				step(AM, turn(AM.dir, 180))
+		addtimer(CALLBACK(src, .proc/hitby_react, AM), 2)
+
+/atom/proc/hitby_react(atom/movable/AM)
+	if(AM && isturf(AM.loc))
+		step(AM, turn(AM.dir, 180))
 
 var/list/blood_splatter_icons = list()
 
@@ -425,8 +430,10 @@ var/list/blood_splatter_icons = list()
 //effects at world start up without causing runtimes
 /atom/proc/spawn_atom_to_world()
 
-//This will be called after the map and objects are loaded
-/atom/proc/initialize()
+//Called after New if the world is not loaded with TRUE
+//Called from base of New if the world is loaded with FALSE
+/atom/proc/Initialize(mapload)
+	set waitfor = 0
 	return
 
 //the vision impairment to give to the mob whose perspective is set to that atom (e.g. an unfocused camera giving you an impaired vision when looking through it)

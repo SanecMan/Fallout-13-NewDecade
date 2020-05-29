@@ -6,18 +6,18 @@
 		if(!servantsonly && isobserver(M))
 			if(target)
 				var/link = FOLLOW_LINK(M, target)
-				to_chat(M, "[link] [message]")
+				M << "[link] [message]"
 			else
-				to_chat(M, message)
+				M << message
 		else if(is_servant_of_ratvar(M))
-			to_chat(M, message)
+			M << message
 	return TRUE
 
 //Sends a titled message from a mob to all servants of ratvar and ghosts.
 /proc/titled_hierophant_message(mob/user, message, name_span = "heavy_brass", message_span = "brass", user_title = "Servant")
 	if(!user || !message)
 		return FALSE
-	var/parsed_message = "<span class='[name_span]'>[user_title ? "[user_title] ":""][findtextEx_char(user.name, user.real_name) ? user.name : "[user.real_name] (as [user.name])"]: \
+	var/parsed_message = "<span class='[name_span]'>[user_title ? "[user_title] ":""][findtextEx(user.name, user.real_name) ? user.name : "[user.real_name] (as [user.name])"]: \
 	</span><span class='[message_span]'>\"[message]\"</span>"
 	hierophant_message(parsed_message, FALSE, user)
 	return TRUE

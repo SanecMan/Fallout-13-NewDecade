@@ -16,7 +16,7 @@
 	var/busy = 0
 	var/shredding = 300
 
-/obj/item/weapon/hydrocutter/initialize()
+/obj/item/weapon/hydrocutter/Initialize()
         src.force = "[rand(10,30)]"
         return ..()
 

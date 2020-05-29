@@ -173,7 +173,7 @@
 	spillable = 1
 
 /obj/item/weapon/reagent_containers/food/drinks/mug/ // parent type is literally just so empty mug sprites are a thing
-	name = "mug"
+	name = "чашка"
 	desc = "A drink served in a classy mug."
 	icon_state = "tea"
 	item_state = "coffee"
@@ -274,7 +274,7 @@
 //	icon states.
 
 /obj/item/weapon/reagent_containers/food/drinks/shaker
-	name = "shaker"
+	name = "шейкер"
 	desc = "A metal shaker to mix drinks in."
 	icon_state = "shaker"
 	materials = list(MAT_METAL=1500)
@@ -282,20 +282,20 @@
 	volume = 100
 
 /obj/item/weapon/reagent_containers/food/drinks/flask
-	name = "flask"
+	name = "фляга"
 	desc = "Every good spaceman knows it's a good idea to bring along a couple of pints of whiskey wherever they go."
 	icon_state = "flask"
 	materials = list(MAT_METAL=250)
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/gold
-	name = "captain's flask"
+	name = "фляга смотрителя"
 	desc = "A gold flask belonging to the captain."
 	icon_state = "flask_gold"
 	materials = list(MAT_GOLD=500)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/det
-	name = "detective's flask"
+	name = "фляга детектива"
 	desc = "The detective's only true friend."
 	icon_state = "detflask"
 	list_reagents = list("whiskey" = 30)

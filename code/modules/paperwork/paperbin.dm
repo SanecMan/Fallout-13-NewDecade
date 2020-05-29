@@ -1,5 +1,6 @@
 /obj/item/weapon/paper_bin
 	name = "лоток с бумагой"
+
 	desc = "Содержит столько бумаги, что любой бюрократ обрадуется."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "paper_bin1"
@@ -13,7 +14,10 @@
 	var/list/papers = list()
 	var/obj/item/weapon/pen/bin_pen
 
-/obj/item/weapon/paper_bin/initialize()
+/obj/item/weapon/paper_bin/Initialize(mapload)
+	..()
+	if(!mapload)
+		return
 	var/obj/item/weapon/pen/P = locate(/obj/item/weapon/pen) in src.loc
 	if(P && !bin_pen)
 		P.forceMove(src)
