@@ -306,7 +306,7 @@ var/datum/subsystem/ticker/ticker
 					flick("station_explode_fade_red",cinematic)
 					to_chat(world, sound('sound/effects/explosionfar.ogg'))
 					station_explosion_detonation(bomb)	//TODO: If we ever decide to actually detonate the vault bomb
-					cinematic.icon_state = "summary_malf
+					cinematic.icon_state = "summary_malf"
 				if("blob") //Station nuked (nuke,explosion,summary)
 					flick("intro_nuke",cinematic)
 					sleep(35)
