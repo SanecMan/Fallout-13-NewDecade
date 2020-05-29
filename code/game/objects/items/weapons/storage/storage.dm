@@ -272,7 +272,7 @@
 
 	if(W.w_class > max_w_class)
 		if(!stop_messages)
-			to_chat(usr, "<span class='warning'>[W] слишком большое для [src]!</span>")
+			to_chat(usr, "<span class='warning'>[W] слишком большой предмет для [src]!</span>")
 		return 0
 
 	var/sum_w_class = W.w_class

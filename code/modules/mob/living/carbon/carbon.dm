@@ -3,10 +3,6 @@
 	verb_say = "говорит"
 	verb_ask = "спрашивает"
 	verb_exclaim = "восклицает"
-	en_verb_say = "says"
-	en_verb_ask = "asks"
-	en_verb_exclaim = "exclaims"
-	en_verb_yell = "yells"
 	verb_yell = "вопит"
 	var/datum/special/special
 	var/datum/skills/skills
