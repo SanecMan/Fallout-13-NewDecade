@@ -10,7 +10,7 @@
 	throw_speed = 3
 	throw_range = 7
 
-/obj/item/ring/initialize()
+/obj/item/ring/Initialize()
 	..()
 	START_PROCESSING(SSobj, src)
 
