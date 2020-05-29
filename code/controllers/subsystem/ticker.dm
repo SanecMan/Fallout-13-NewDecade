@@ -122,7 +122,8 @@ var/datum/subsystem/ticker/ticker
 				current_state = GAME_STATE_FINISHED
 				toggle_ooc(1) // Turn it on
 				declare_completion(force_ending)
-				addtimer(CALLBACK(src, .proc/NukeCleanup), 50)
+				spawn(50)
+					world.Reboot("Round ended.", "end_proper", "proper completion")
 
 /datum/subsystem/ticker/proc/NukeCleanup()
 	if(mode.station_was_nuked)
@@ -208,7 +209,6 @@ var/datum/subsystem/ticker/ticker
 		for(var/holidayname in SSevent.holidays)
 			var/datum/holiday/holiday = SSevent.holidays[holidayname]
 			to_chat(world, "<h4>[holiday.greet()]</h4>")
-	PostSetup()
 
 	spawn(0)//Forking here so we dont have to wait for this to finish
 		mode.post_setup()
