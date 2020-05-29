@@ -210,18 +210,20 @@ var/datum/subsystem/ticker/ticker
 			to_chat(world, "<h4>[holiday.greet()]</h4>")
 	PostSetup()
 
-/datum/subsystem/ticker/proc/PostSetup()
-	set waitfor = 0
-	mode.post_setup()
-	//Cleanup some stuff
-	for(var/obj/effect/landmark/start/S in landmarks_list)
-		//Deleting Startpoints but we need the ai point to AI-ize people later
-		if(S.name != "AI")
-			qdel(S)
+	spawn(0)//Forking here so we dont have to wait for this to finish
+		mode.post_setup()
+		//Cleanup some stuff
+		/*
+		for(var/obj/effect/landmark/start/S in landmarks_list)
+			//Deleting Startpoints but we need the ai point to AI-ize people later
+			if(S.name != "AI")
+				qdel(S)
+		*/
+		var/list/adm = get_admin_counts()
+		if(!adm["present"])
+			send2irc("Server", "Round just started with no active admins online!")
 
-	var/list/adm = get_admin_counts()
-	if(!adm["present"])
-		send2irc("Server", "Round just started with no active admins online!")
+	return 1
 
 /datum/subsystem/ticker/proc/station_explosion_detonation(atom/bomb)
 	if(bomb)	//BOOM
@@ -451,7 +453,8 @@ var/datum/subsystem/ticker/ticker
 	//map rotate chance defaults to 75% of the length of the round (in minutes)
 	if (!prob((world.time/600)*config.maprotatechancedelta))
 		return
-	addtimer(CALLBACK(GLOBAL_PROC, /.proc/maprotate), 0)
+	spawn(0) //compiling a map can lock up the mc for 30 to 60 seconds if we don't spawn
+		maprotate()
 
 
 /world/proc/has_round_started()
