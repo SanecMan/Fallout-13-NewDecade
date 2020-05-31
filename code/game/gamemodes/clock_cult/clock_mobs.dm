@@ -17,7 +17,7 @@
 	verb_exclaim = "proclaims"
 	verb_yell = "harangues"
 	bubble_icon = "clock"
-	death_sound = 'sound/f13music/quest.ogg'
+	death_sound = 'sound/magic/clockwork/anima_fragment_death.ogg'
 	var/playstyle_string = "<span class='heavy_brass'>You are a bug, yell at whoever spawned you!</span>"
 	var/obj/item/clockwork/slab/internalslab //an internal slab for running scripture
 
@@ -35,7 +35,7 @@
 
 /mob/living/simple_animal/hostile/clockwork/Login()
 	..()
-	to_chat(src, playstyle_string)
+	src << playstyle_string
 
 /mob/living/simple_animal/hostile/clockwork/ratvar_act()
 	fully_heal(TRUE)
@@ -46,7 +46,7 @@
 /mob/living/simple_animal/hostile/clockwork/examine(mob/user)
 	var/t_He = p_they(TRUE)
 	var/t_s = p_s()
-	var/msg = "<span class='brass'>*---------*\nThis is [bicon(src)] \a <b>[src]</b>!\n"
+	var/msg = "<span class='brass'>*---------*\nThis is \icon[src] \a <b>[src]</b>!\n"
 	msg += "[desc]\n"
 	if(health < maxHealth)
 		msg += "<span class='warning'>"
@@ -57,7 +57,7 @@
 		msg += "</span>"
 	msg += "*---------*</span>"
 
-	to_chat(user, msg)
+	user << msg
 
 /mob/living/simple_animal/hostile/clockwork/fragment //Anima fragment: Low health and high melee damage, but slows down when struck. Created by inserting a soul vessel into an empty fragment.
 	name = "anima fragment"
@@ -69,7 +69,7 @@
 	melee_damage_lower = 18
 	melee_damage_upper = 18
 	attacktext = "crushes"
-	attack_sound = 'sound/f13music/quest.ogg'
+	attack_sound = 'sound/magic/clockwork/anima_fragment_attack.ogg'
 	loot = list(/obj/item/clockwork/component/replicant_alloy/smashed_anima_fragment)
 	weather_immunities = list("lava")
 	movement_type = FLYING
@@ -147,6 +147,7 @@
 	var/blockchance = 20 //chance to block melee attacks entirely
 	var/counterchance = 30 //chance to counterattack after blocking
 	var/combattimer = 50 //after 5 seconds of not being hit ot attacking we count as 'out of combat' and lose block/counter chance
+	var/static/list/damage_heal_order = list(OXY, BURN, BRUTE, TOX) //we heal our host's damage in this order
 	playstyle_string = "<span class='sevtug'>You are a clockwork marauder</span><b>, a living extension of Sevtug's will. As a marauder, you are somewhat slow, but may block melee attacks \
 	and have a chance to also counter blocked melee attacks for extra damage, in addition to being immune to extreme temperatures and pressures. \
 	Your primary goal is to serve the creature that you are now a part of. You can use <span class='sevtug_small'><i>:b</i></span> to communicate silently with your master, \
@@ -177,8 +178,8 @@
 		if(!recovering)
 			heal_host() //also heal our host if inside of them and we aren't recovering
 		else if(health == maxHealth)
-			to_chat(src, "<span class='userdanger'>Your strength has returned. You can once again come forward!</span>")
-			to_chat(host, "<span class='userdanger'>Your marauder is now strong enough to come forward again!</span>")
+			src << "<span class='userdanger'>Your strength has returned. You can once again come forward!</span>"
+			host << "<span class='userdanger'>Your marauder is now strong enough to come forward again!</span>"
 			recovering = FALSE
 	else
 		if(ratvar_awakens)
@@ -187,7 +188,7 @@
 		else if(host) //If Ratvar is alive, marauders don't need a host and are downright impossible to kill
 			if(host.stat == DEAD)
 				adjustHealth(50)
-				to_chat(src, "<span class='userdanger'>Your host is dead!</span>")
+				src << "<span class='userdanger'>Your host is dead!</span>"
 				return
 			if(z && host.z && z == host.z)
 				switch(get_dist(get_turf(src), get_turf(host)))
@@ -205,13 +206,13 @@
 						adjustHealth(7)
 					if(8 to INFINITY)
 						adjustHealth(10)
-						to_chat(src, "<span class='userdanger'>You're too far from your host and rapidly taking damage!</span>")
+						src << "<span class='userdanger'>You're too far from your host and rapidly taking damage!</span>"
 					else //right next to or on top of host
 						adjustHealth(-2)
 						heal_host() //gradually heal host if nearby and host is very weak
 			else //well then, you're not even in the same zlevel
 				adjustHealth(10)
-				to_chat(src, "<span class='userdanger'>You're too far from your host and rapidly taking damage!</span>")
+				src << "<span class='userdanger'>You're too far from your host and rapidly taking damage!</span>"
 			update_health_hud()
 
 /mob/living/simple_animal/hostile/clockwork/marauder/Process_Spacemove(movement_dir = 0)
@@ -226,10 +227,7 @@
 		resulthealth = round((abs(HEALTH_THRESHOLD_DEAD - host.health) / abs(HEALTH_THRESHOLD_DEAD - host.maxHealth)) * 100)
 	if(ratvar_awakens || resulthealth <= MARAUDER_EMERGE_THRESHOLD)
 		new /obj/effect/overlay/temp/heal(host.loc, "#AF0AAF")
-		host.adjustBruteLoss(-1)
-		host.adjustFireLoss(-1)
-		host.adjustToxLoss(-1)
-		host.adjustOxyLoss(-3)
+		host.heal_ordered_damage(4, damage_heal_order)
 
 /mob/living/simple_animal/hostile/clockwork/marauder/proc/update_stats()
 	if(ratvar_awakens)
@@ -275,7 +273,7 @@
 	emerge_from_host(0, 1)
 	visible_message("<span class='warning'>[src]'s equipment clatters lifelessly to the ground as the red flames within dissipate.</span>", \
 	"<span class='userdanger'>Your equipment falls away. You feel a moment of confusion before your fragile form is annihilated.</span>")
-	..()
+	. = ..()
 
 /mob/living/simple_animal/hostile/clockwork/marauder/Stat()
 	..()
@@ -307,7 +305,7 @@
 		combattimer = world.time + initial(combattimer)
 		for(var/mob/living/L in view(2, src))
 			if(L.is_holding_item_of_type(/obj/item/weapon/nullrod))
-				to_chat(src, "<span class='userdanger'>The presence of a brandished holy artifact weakens your armor!</span>")
+				src << "<span class='userdanger'>The presence of a brandished holy artifact weakens your armor!</span>"
 				amount *= 4 //if a wielded null rod is nearby, it takes four times the health damage
 				break
 	. = ..()
@@ -384,7 +382,7 @@
 			target.do_attack_animation(src)
 			target.changeNext_move(CLICK_CD_MELEE)
 		blockchance = initial(blockchance)
-		playsound(src, 'sound/f13music/quest.ogg', 10, 1, 0, 1) //clang
+		playsound(src, 'sound/magic/clockwork/fellowship_armory.ogg', 30, 1, 0, 1) //clang
 		visible_message("<span class='boldannounce'>[src] blocks [target && istype(textobject, /obj/item) ? "[target]'s [textobject.name]":"\the [textobject]"]!</span>", \
 		"<span class='userdanger'>You block [target && istype(textobject, /obj/item) ? "[target]'s [textobject.name]":"\the [textobject]"]!</span>")
 		if(target && Adjacent(target))
@@ -407,11 +405,11 @@
 
 /mob/living/simple_animal/hostile/clockwork/marauder/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, list/spans)
 	..()
-	if(findtext_char(message, true_name) && is_in_host()) //Called or revealed by hearing their true name
+	if(findtext(message, true_name) && is_in_host()) //Called or revealed by hearing their true name
 		if(speaker == host)
 			emerge_from_host(1)
 		else
-			to_chat(src, "<span class='boldannounce'>You hear your true name and partially emerge before you can stop yourself!</span>")
+			src << "<span class='boldannounce'>You hear your true name and partially emerge before you can stop yourself!</span>"
 			host.visible_message("<span class='warning'>[host]'s skin flashes crimson!</span>", "<span class='boldannounce'>Your marauder instinctively reacts to its true name!</span>")
 
 /mob/living/simple_animal/hostile/clockwork/marauder/say(message, message_mode)
@@ -423,12 +421,12 @@
 /mob/living/simple_animal/hostile/clockwork/marauder/proc/marauder_comms(message)
 	if(host)
 		message = "<span class='sevtug'>Marauder [true_name]:</span> <span class='sevtug_small'>\"[message]\"</span>" //Processed output
-		to_chat(src, message)
-		to_chat(host, message)
+		src << message
+		host << message
 		for(var/M in mob_list)
 			if(isobserver(M))
 				var/link = FOLLOW_LINK(M, src)
-				to_chat(M, "[link] [message]")
+				M << "[link] [message]"
 		return 1
 	return 0
 
@@ -443,22 +441,22 @@
 			if(C.host == src)
 				marauder = C
 		if(!marauder) //Double-check afterwards
-			to_chat(src, "<span class='warning'>You aren't hosting any marauders!</span>")
+			src << "<span class='warning'>You aren't hosting any marauders!</span>"
 			verbs -= /mob/living/proc/talk_with_marauder
 			return 0
 	var/message = stripped_input(src, "Enter a message to tell your marauder.", "Telepathy")// as null|anything
 	if(!src || !message)
 		return 0
 	if(!marauder)
-		to_chat(usr, "<span class='warning'>Your marauder seems to have vanished!</span>")
+		usr << "<span class='warning'>Your marauder seems to have vanished!</span>"
 		return 0
-	message = "<span class='sevtug'>Servant [findtextEx_char(name, real_name) ? "[name]" : "[real_name] (as [name])"]:</span> <span class='brass'>\"[message]\"</span>" //Processed output
-	to_chat(src, message)
-	to_chat(marauder, message)
+	message = "<span class='sevtug'>Servant [findtextEx(name, real_name) ? "[name]" : "[real_name] (as [name])"]:</span> <span class='brass'>\"[message]\"</span>" //Processed output
+	src << message
+	marauder << message
 	for(var/M in mob_list)
 		if(isobserver(M))
 			var/link = FOLLOW_LINK(M, src)
-			to_chat(M, "[link] [message]")
+			M << "[link] [message]"
 	return 1
 
 /mob/living/simple_animal/hostile/clockwork/marauder/verb/change_true_name()
@@ -471,13 +469,13 @@
 	if(!usr)
 		return 0
 	if(!new_name)
-		to_chat(usr, "<span class='notice'>You decide against changing your true name for now.</span>")
+		usr << "<span class='notice'>You decide against changing your true name for now.</span>"
 		verbs += /mob/living/simple_animal/hostile/clockwork/marauder/verb/change_true_name //If they decide against it, let them have another opportunity
 		return 0
 	true_name = new_name
-	to_chat(usr, "<span class='heavy_brass'>You have changed your true name to </span><span class='sevtug'>\"[new_name]\"</span><span class='heavy_brass'>!</span>")
+	usr << "<span class='heavy_brass'>You have changed your true name to </span><span class='sevtug'>\"[new_name]\"</span><span class='heavy_brass'>!</span>"
 	if(host)
-		to_chat(host, "<span class='heavy_brass'>Your clockwork marauder has changed their true name to </span><span class='sevtug'>\"[new_name]\"</span><span class='heavy_brass'>!</span>")
+		host << "<span class='heavy_brass'>Your clockwork marauder has changed their true name to </span><span class='sevtug'>\"[new_name]\"</span><span class='heavy_brass'>!</span>"
 	return 1
 
 /mob/living/simple_animal/hostile/clockwork/marauder/verb/return_to_host()
@@ -488,7 +486,7 @@
 	if(is_in_host())
 		return 0
 	if(!host)
-		to_chat(src, "<span class='warning'>You don't have a host!</span>")
+		src << "<span class='warning'>You don't have a host!</span>"
 		verbs -= /mob/living/simple_animal/hostile/clockwork/marauder/verb/return_to_host
 		return 0
 	var/resulthealth = round((host.health / host.maxHealth) * 100, 0.5)
@@ -497,9 +495,9 @@
 	host.visible_message("<span class='warning'>[host]'s skin flashes crimson!</span>", "<span class='heavy_brass'>You feel [true_name]'s consciousness settle in your mind.</span>")
 	visible_message("<span class='warning'>[src] suddenly disappears!</span>", "<span class='heavy_brass'>You return to [host].</span>")
 	forceMove(host)
-	if(resulthealth > MARAUDER_EMERGE_THRESHOLD)
+	if(resulthealth > MARAUDER_EMERGE_THRESHOLD && health != maxHealth)
 		recovering = TRUE
-		to_chat(src, "<span class='userdanger'>You have weakened and will need to recover before manifesting again!</span>")
+		src << "<span class='userdanger'>You have weakened and will need to recover before manifesting again!</span>"
 	return 1
 
 /mob/living/simple_animal/hostile/clockwork/marauder/verb/try_emerge()
@@ -508,14 +506,14 @@
 	set category = "Marauder"
 
 	if(!host)
-		to_chat(src, "<span class='warning'>You don't have a host!</span>")
+		src << "<span class='warning'>You don't have a host!</span>"
 		verbs -= /mob/living/simple_animal/hostile/clockwork/marauder/verb/try_emerge
 		return 0
 	var/resulthealth = round((host.health / host.maxHealth) * 100, 0.5)
 	if(iscarbon(host))
 		resulthealth = round((abs(HEALTH_THRESHOLD_DEAD - host.health) / abs(HEALTH_THRESHOLD_DEAD - host.maxHealth)) * 100)
 	if(!ratvar_awakens && host.stat != DEAD && resulthealth > MARAUDER_EMERGE_THRESHOLD) //if above 20 health, fails
-		to_chat(src, "<span class='warning'>Your host must be at [MARAUDER_EMERGE_THRESHOLD]% or less health to emerge like this!</span>")
+		src << "<span class='warning'>Your host must be at [MARAUDER_EMERGE_THRESHOLD]% or less health to emerge like this!</span>"
 		return
 	return emerge_from_host(0)
 
@@ -524,15 +522,15 @@
 		return 0
 	if(!force && recovering)
 		if(hostchosen)
-			to_chat(host, "<span class='heavy_brass'>[true_name] is too weak to come forth!</span>")
+			host << "<span class='heavy_brass'>[true_name] is too weak to come forth!</span>"
 		else
-			to_chat(host, "<span class='heavy_brass'>[true_name] tries to emerge to protect you, but it's too weak!</span>")
-		to_chat(src, "<span class='userdanger'>You try to come forth, but you're too weak!</span>")
+			host << "<span class='heavy_brass'>[true_name] tries to emerge to protect you, but it's too weak!</span>"
+		src << "<span class='userdanger'>You try to come forth, but you're too weak!</span>"
 		return 0
 	if(hostchosen) //marauder approved
-		to_chat(host, "<span class='heavy_brass'>Your words echo with power as [true_name] emerges from your body!</span>")
+		host << "<span class='heavy_brass'>Your words echo with power as [true_name] emerges from your body!</span>"
 	else
-		to_chat(host, "<span class='heavy_brass'>[true_name] emerges from your body to protect you!</span>")
+		host << "<span class='heavy_brass'>[true_name] emerges from your body to protect you!</span>"
 	forceMove(get_turf(host))
 	visible_message("<span class='warning'>[host]'s skin glows red as [name] emerges from their body!</span>", "<span class='brass'>You exit the safety of [host]'s body!</span>")
 	return 1

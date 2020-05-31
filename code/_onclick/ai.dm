@@ -1,12 +1,9 @@
 /*
 	AI ClickOn()
-
 	Note currently ai restrained() returns 0 in all cases,
 	therefore restrained code has been removed
-
 	The AI can double click to move the camera (this was already true but is cleaner),
 	or double click a mob to track them.
-
 	Note that AI have no need for the adjacency proc, and so this proc is a lot cleaner.
 */
 /mob/living/silicon/ai/DblClickOn(var/atom/A, params)
@@ -35,14 +32,12 @@
 		return
 
 	var/turf/pixel_turf = get_turf_pixel(A)
-	var/turf_visible
-	if(pixel_turf)
-		turf_visible = cameranet.checkTurfVis(pixel_turf)
-		if(!turf_visible)
-			log_admin("[key_name_admin(src)] might be running a modified client! (failed checkTurfVis on AI click of [A]([COORD(pixel_turf)])")
-			message_admins("[key_name_admin(src)] might be running a modified client! (failed checkTurfVis on AI click of [A]([ADMIN_COORDJMP(pixel_turf)]))")
-			send2irc_adminless_only("NOCHEAT", "[key_name(src)] might be running a modified client! (failed checkTurfVis on AI click of [A]([COORD(pixel_turf)]))")
-			return
+	var/turf_visible = cameranet.checkTurfVis(pixel_turf)
+	if(pixel_turf && !turf_visible)
+		log_admin("[key_name_admin(src)] might be running a modified client! (failed checkTurfVis on AI click of [A]([COORD(pixel_turf)])")
+		message_admins("[key_name_admin(src)] might be running a modified client! (failed checkTurfVis on AI click of [A]([ADMIN_COORDJMP(pixel_turf)]))")
+		send2irc_adminless_only("NOCHEAT", "[key_name(src)] might be running a modified client! (failed checkTurfVis on AI click of [A]([COORD(pixel_turf)]))")
+		return
 
 	var/list/modifiers = params2list(params)
 	if(modifiers["shift"] && modifiers["ctrl"])

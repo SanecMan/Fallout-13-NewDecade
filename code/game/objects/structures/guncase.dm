@@ -12,17 +12,14 @@
 	var/open = 1
 	var/capacity = 4
 
-/obj/structure/guncase/New()
+/obj/structure/guncase/Initialize(mapload)
 	..()
-	update_icon()
-
-/obj/structure/guncase/initialize()
-	..()
-	for(var/obj/item/I in loc.contents)
-		if(istype(I, gun_category))
-			I.forceMove(src)
-		if(contents.len >= capacity)
-			break
+	if(mapload)
+		for(var/obj/item/I in loc.contents)
+			if(istype(I, gun_category))
+				I.loc = src
+			if(contents.len >= capacity)
+				break
 	update_icon()
 
 /obj/structure/guncase/update_icon()
@@ -121,17 +118,14 @@
 	var/open = 1
 	var/capacity = 4
 
-/obj/structure/new_closet/New()
+/obj/structure/new_closet/Initialize(mapload)
 	..()
-	update_icon()
-
-/obj/structure/new_closet/initialize()
-	..()
-	for(var/obj/item/I in loc.contents)
-		if(istype(I, item_category))
-			I.forceMove(src)
-		if(contents.len >= capacity)
-			break
+	if(mapload)
+		for(var/obj/item/I in loc.contents)
+			if(istype(I, item_category))
+				I.loc = src
+			if(contents.len >= capacity)
+				break
 	update_icon()
 
 /obj/structure/new_closet/update_icon()

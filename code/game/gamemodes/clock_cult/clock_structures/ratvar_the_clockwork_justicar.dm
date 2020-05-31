@@ -20,7 +20,7 @@
 		O.ratvar_act()
 	START_PROCESSING(SSobj, src)
 	send_to_playing_players("<span class='ratvar'>\"[text2ratvar("ONCE AGAIN MY LIGHT SHALL SHINE ACROSS THIS PATHETIC REALM")]!!\"</span>")
-	send_to_playing_players('sound/f13music/quest.ogg')
+	send_to_playing_players('sound/effects/ratvar_reveal.ogg')
 	var/image/alert_overlay = image('icons/effects/clockwork_effects.dmi', "ratvar_alert")
 	var/area/A = get_area(src)
 	notify_ghosts("The Justiciar's light calls to you! Reach out to Ratvar in [A.name] to be granted a shell to spread his glory!", null, source = src, alert_overlay = alert_overlay)
@@ -72,13 +72,13 @@
 					meals += L
 			if(meals.len)
 				prey = pick(meals)
-				to_chat(prey, "<span class='heavy_brass'><font size=5>\"You will do.\"</font></span>\
-				<span class='userdanger'>Something very large and very malevolent begins lumbering its way towards you...</span>")
-				to_chat(prey, 'sound/f13music/quest.ogg')
+				prey << "<span class='heavy_brass'><font size=5>\"You will do.\"</font></span>\n\
+				<span class='userdanger'>Something very large and very malevolent begins lumbering its way towards you...</span>"
+				prey << 'sound/effects/ratvar_reveal.ogg'
 	else
 		if(prob(10) || is_servant_of_ratvar(prey) || prey.z != z)
-			to_chat(prey, "<span class='heavy_brass'><font size=5>\"How dull. Leave me.\"</font></span>\
-			<span class='userdanger'>You feel tremendous relief as a set of horrible eyes loses sight of you...</span>")
+			prey << "<span class='heavy_brass'><font size=5>\"How dull. Leave me.\"</font></span>\n\
+			<span class='userdanger'>You feel tremendous relief as a set of horrible eyes loses sight of you...</span>"
 			prey = null
 		else
 			dir_to_step_in = get_dir(src, prey) //Unlike Nar-Sie, Ratvar ruthlessly chases down his target
@@ -88,8 +88,8 @@
 	if(clashing)
 		return FALSE
 	clashing = TRUE
-	to_chat(world, "<span class='heavy_brass'><font size=5>\"[pick("BLOOD GOD!!!", "NAR-SIE!!!", "AT LAST, YOUR TIME HAS COME!")]\"</font></span>")
-	to_chat(world, "<span class='cult'><font size=5>\"<b>Ratvar?! How?!</b>\"</font></span>")
+	world << "<span class='heavy_brass'><font size=5>\"[pick("BLOOD GOD!!!", "NAR-SIE!!!", "AT LAST, YOUR TIME HAS COME!")]\"</font></span>"
+	world << "<span class='cult'><font size=5>\"<b>Ratvar?! How?!</b>\"</font></span>"
 	for(var/obj/singularity/narsie/N in range(15, src))
 		if(N.clashing)
 			continue
@@ -103,7 +103,7 @@
 	var/winner = "Undeclared"
 	var/base_victory_chance = 1
 	while(src && narsie)
-		send_to_playing_players('sound/misc/gameover.ogg')
+		send_to_playing_players('sound/magic/clockwork/ratvar_attack.ogg')
 		sleep(5.2)
 		for(var/mob/M in mob_list)
 			if(!isnewplayer(M))
@@ -119,7 +119,7 @@
 			winner = "Ratvar"
 			break
 		sleep(rand(2,5))
-		send_to_playing_players('sound/misc/gameover.ogg')
+		send_to_playing_players('sound/magic/clockwork/narsie_attack.ogg')
 		sleep(7.4)
 		for(var/mob/M in mob_list)
 			if(!isnewplayer(M))
@@ -133,13 +133,13 @@
 		if("Ratvar")
 			send_to_playing_players("<span class='heavy_brass'><font size=5>\"[pick("DIE! DIE! DIE!", "FILTH!!!", "SUFFER!!!", text2ratvar("ROT FOR CENTURIES AS I HAVE!!"))]\"</font></span>\n\
 			<span class='cult'><font size=5>\"<b>[pick("Nooooo...", "Not die. To y-", "Die. Ratv-", "Sas tyen re-")]\"</b></font></span>") //nar-sie get out
-			send_to_playing_players('sound/misc/gameover.ogg')
+			send_to_playing_players('sound/magic/clockwork/anima_fragment_attack.ogg')
 			send_to_playing_players('sound/magic/demon_dies.ogg')
 			clashing = FALSE
 			qdel(narsie)
 		if("Nar-Sie")
 			send_to_playing_players("<span class='cult'><font size=5>\"<b>[pick("Ha.", "Ra'sha fonn dest.", "You fool. To come here.")]</b>\"</font></span>") //Broken English
 			send_to_playing_players('sound/magic/demon_attack1.ogg')
-			send_to_playing_players('sound/misc/gameover.ogg')
+			send_to_playing_players('sound/magic/clockwork/anima_fragment_death.ogg')
 			narsie.clashing = FALSE
 			qdel(src)

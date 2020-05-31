@@ -28,6 +28,7 @@ var/datum/subsystem/timer/SStimer
 /datum/subsystem/timer/New()
 	processing = list()
 	hashes = list()
+
 	bucket_list = list()
 	timer_id_dict = list()
 
@@ -63,13 +64,11 @@ var/datum/subsystem/timer/SStimer
 		shift_buckets()
 		resumed = FALSE
 
-
 	if (!resumed)
 		timer = null
 		head = null
 
 	var/list/bucket_list = src.bucket_list
-
 	while (practical_offset <= BUCKET_LEN && head_offset + (practical_offset*world.tick_lag) <= world.time && !MC_TICK_CHECK)
 		if (!timer || !head || timer == head)
 			head = bucket_list[practical_offset]
@@ -96,6 +95,7 @@ var/datum/subsystem/timer/SStimer
 			if (MC_TICK_CHECK)
 				return
 		while (timer && timer != head)
+
 		timer = null
 		bucket_list[practical_offset++] = null
 		if (MC_TICK_CHECK)
@@ -122,9 +122,9 @@ var/datum/subsystem/timer/SStimer
 			bucket_node = bucket_node.next
 		while(bucket_node && bucket_node != bucket_head)
 
+
 	bucket_list.len = 0
 	bucket_list.len = BUCKET_LEN
-
 	practical_offset = 1
 	bucket_count = 0
 	head_offset = world.time
@@ -307,17 +307,12 @@ proc/addtimer(datum/callback/callback, wait, flags)
 
 		var/datum/timedevent/hash_timer = SStimer.hashes[hash]
 		if(hash_timer)
-			if (hash_timer.spent) //it's pending deletion, pretend it doesn't exist.
-				hash_timer.hash = null
-				SStimer.hashes -= hash
+			if (flags & TIMER_OVERRIDE)
+				qdel(hash_timer)
 			else
-
-				if (flags & TIMER_OVERRIDE)
-					qdel(hash_timer)
-				else
-					if (hash_timer.flags & TIMER_STOPPABLE)
-						. = hash_timer.id
-					return
+				if (hash_timer.flags & TIMER_STOPPABLE)
+					. = hash_timer.id
+				return
 
 
 	var/timeToRun = world.time + wait

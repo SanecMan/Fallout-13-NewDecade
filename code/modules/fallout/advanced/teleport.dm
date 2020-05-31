@@ -22,7 +22,7 @@
 
 	..()
 
-/turf/open/floor/f13/teleport/initialize()
+/turf/open/floor/f13/teleport/Initialize()
 	spawn(120)
 		for(var/turf/open/floor/f13/teleport/L in world)
 			if(L.id == id)

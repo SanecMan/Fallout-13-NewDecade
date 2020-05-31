@@ -14,7 +14,7 @@
 	name = "sturdy ladder"
 	desc = "An extremely sturdy metal ladder."
 
-/obj/structure/ladder/initialize()
+/obj/structure/ladder/Initialize()
 	spawn(120)
 		for(var/obj/structure/ladder/L in world)
 			if(L.id == id)

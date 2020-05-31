@@ -3,7 +3,7 @@
 	real_name = "Неизвестная личность"
 	voice_name = "Неизвестная личность"
 	icon = 'icons/mob/human.dmi'
-	icon_state = "caucasian_m_s"
+	icon_state = "caucasian_m"
 	self_weight = 0
 
 /mob/living/carbon/human/dummy

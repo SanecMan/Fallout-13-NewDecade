@@ -32,7 +32,7 @@
 /obj/structure/destructible/clockwork/powered/mania_motor/examine(mob/user)
 	..()
 	if(is_servant_of_ratvar(user) || isobserver(user))
-		to_chat(user, "<span class='sevtug_small'>It requires <b>[mania_cost]W</b> to run, and <b>[convert_attempt_cost + convert_cost]W</b> to convert humans adjecent to it.</span>")
+		user << "<span class='sevtug_small'>It requires <b>[mania_cost]W</b> to run, and <b>[convert_attempt_cost + convert_cost]W</b> to convert humans adjecent to it.</span>"
 
 /obj/structure/destructible/clockwork/powered/mania_motor/forced_disable(bad_effects)
 	if(active)
@@ -46,7 +46,7 @@
 /obj/structure/destructible/clockwork/powered/mania_motor/attack_hand(mob/living/user)
 	if(user.canUseTopic(src, !issilicon(user)) && is_servant_of_ratvar(user))
 		if(!total_accessable_power() >= mania_cost)
-			to_chat(user, "<span class='warning'>[src] needs more power to function!</span>")
+			user << "<span class='warning'>[src] needs more power to function!</span>"
 			return 0
 		toggle(0, user)
 
@@ -67,14 +67,14 @@
 				continue
 			if(H.Adjacent(src) && try_use_power(convert_attempt_cost))
 				if(is_eligible_servant(H) && try_use_power(convert_cost))
-					to_chat(H, "<span class='sevtug'>\"[text2ratvar("You are mine and his, now.")]\"</span>")
+					H << "<span class='sevtug'>\"[text2ratvar("You are mine and his, now.")]\"</span>"
 					H.playsound_local(T, hum, 80, 1)
 					add_servant_of_ratvar(H)
 					H.Paralyse(5)
 				else if(!H.stat)
 					if(H.getBrainLoss() >= 100)
 						H.Paralyse(5)
-						to_chat(H, "<span class='sevtug'>\"[text2ratvar(pick(convert_messages))]\"</span>")
+						H << "<span class='sevtug'>\"[text2ratvar(pick(convert_messages))]\"</span>"
 					else
 						H.adjustBrainLoss(100 * efficiency)
 						H.visible_message("<span class='warning'>[H] reaches out and touches [src].</span>", "<span class='sevtug'>You touch [src] involuntarily.</span>")
@@ -95,15 +95,15 @@
 				var/sound_distance = falloff_distance * 0.5
 				var/targetbrainloss = H.getBrainLoss()
 				if(distance >= 4 && prob(falloff_distance * 0.5))
-					to_chat(H, "<span class='sevtug_small'>\"[text2ratvar(pick(mania_messages))]\"</span>")
+					H << "<span class='sevtug_small'>\"[text2ratvar(pick(mania_messages))]\"</span>"
 				H.playsound_local(T, hum, sound_distance, 1)
 				switch(distance)
 					if(2 to 3)
 						if(prob(falloff_distance * 0.5))
 							if(prob(falloff_distance))
-								to_chat(H, "<span class='sevtug_small'>\"[text2ratvar(pick(mania_messages))]\"</span>")
+								H << "<span class='sevtug_small'>\"[text2ratvar(pick(mania_messages))]\"</span>"
 							else
-								to_chat(H, "<span class='sevtug'>\"[text2ratvar(pick(compel_messages))]\"</span>")
+								H << "<span class='sevtug'>\"[text2ratvar(pick(compel_messages))]\"</span>"
 						if(targetbrainloss <= 50)
 							H.adjustBrainLoss((50 * efficiency) - targetbrainloss) //got too close had brain eaten
 						H.adjust_drugginess(Clamp(7 * efficiency, 0, 100 - H.druggy))
@@ -135,11 +135,11 @@
 					else //if it's a distance of 1 and they can't see it/aren't adjacent or they're on top of it(how'd they get on top of it and still trigger this???)
 						if(prob(falloff_distance * 0.5))
 							if(prob(falloff_distance))
-								to_chat(H, "<span class='sevtug'>\"[text2ratvar(pick(compel_messages))]\"</span>")
+								H << "<span class='sevtug'>\"[text2ratvar(pick(compel_messages))]\"</span>"
 							else if(prob(falloff_distance * 0.5))
-								to_chat(H, "<span class='sevtug'>\"[text2ratvar(pick(close_messages))]\"</span>")
+								H << "<span class='sevtug'>\"[text2ratvar(pick(close_messages))]\"</span>"
 							else
-								to_chat(H, "<span class='sevtug_small'>\"[text2ratvar(pick(mania_messages))]\"</span>")
+								H << "<span class='sevtug_small'>\"[text2ratvar(pick(mania_messages))]\"</span>"
 						if(targetbrainloss <= 99)
 							H.adjustBrainLoss((99 * efficiency) - targetbrainloss)
 						H.adjust_drugginess(Clamp(10 * efficiency, 0, 150 - H.druggy))

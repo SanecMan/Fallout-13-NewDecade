@@ -12,21 +12,21 @@
 /obj/item/clockwork/component/pickup(mob/living/user)
 	..()
 	if(iscultist(user) || (user.mind && user.mind.isholy))
-		to_chat(user, "<span class='[message_span]'>[cultist_message]</span>")
+		user << "<span class='[message_span]'>[cultist_message]</span>"
 		if(user.mind && user.mind.isholy)
-			to_chat(user, "<span class='boldannounce'>The power of your faith melts away the [src]!</span>")
+			user << "<span class='boldannounce'>The power of your faith melts away the [src]!</span>"
 			var/obj/item/weapon/ore/slag/wrath = new /obj/item/weapon/ore/slag
 			user.unEquip(src)
 			user.put_in_active_hand(wrath)
 			qdel(src)
 	if(is_servant_of_ratvar(user) && prob(20))
 		var/pickedmessage = pick(servant_of_ratvar_messages)
-		to_chat(user, "<span class='[message_span]'>[servant_of_ratvar_messages[pickedmessage] ? "[text2ratvar(pickedmessage)]" : pickedmessage]</span>")
+		user << "<span class='[message_span]'>[servant_of_ratvar_messages[pickedmessage] ? "[text2ratvar(pickedmessage)]" : pickedmessage]</span>"
 
 /obj/item/clockwork/component/examine(mob/user)
 	..()
 	if(is_servant_of_ratvar(user))
-		to_chat(user, "<span class='[message_span]'>You should put this in a slab or cache immediately.</span>")
+		user << "<span class='[message_span]'>You should put this in a slab or cache immediately.</span>"
 
 /obj/item/clockwork/component/belligerent_eye
 	name = "belligerent eye"

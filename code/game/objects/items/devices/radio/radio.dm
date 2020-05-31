@@ -60,8 +60,6 @@
 		wires.cut(WIRE_TX) // OH GOD WHY
 	secure_radio_connections = new
 	..()
-	if(SSradio)
-		initialize()
 
 /obj/item/device/radio/proc/recalculateChannels()
 	channels = list()
@@ -106,7 +104,8 @@
 	keyslot = null
 	return ..()
 
-/obj/item/device/radio/initialize()
+/obj/item/device/radio/Initialize()
+	..()
 	frequency = sanitize_frequency(frequency, freerange)
 	set_frequency(frequency)
 

@@ -3,10 +3,6 @@
 	verb_say = "говорит"
 	verb_ask = "спрашивает"
 	verb_exclaim = "восклицает"
-	en_verb_say = "says"
-	en_verb_ask = "asks"
-	en_verb_exclaim = "exclaims"
-	en_verb_yell = "yells"
 	verb_yell = "вопит"
 	var/datum/special/special
 	var/datum/skills/skills
@@ -300,13 +296,20 @@
 
 /mob/living/carbon/resist_restraints()
 	var/obj/item/I = null
+	var/type = 0
 	if(handcuffed)
 		I = handcuffed
+		type = 1
 	else if(legcuffed)
 		I = legcuffed
+		type = 2
 	if(I)
-		changeNext_move(CLICK_CD_BREAKOUT)
-		last_special = world.time + CLICK_CD_BREAKOUT
+		if(type == 1)
+			changeNext_move(CLICK_CD_BREAKOUT)
+			last_special = world.time + CLICK_CD_BREAKOUT
+		if(type == 2)
+			changeNext_move(CLICK_CD_RANGE)
+			last_special = world.time + CLICK_CD_RANGE
 		cuff_resist(I)
 
 

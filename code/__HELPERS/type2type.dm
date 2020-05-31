@@ -221,6 +221,10 @@
 			return 'icons/fallout/misc/screen_fallout.dmi'
 		if("Fallout New")
 			return 'icons/fallout/misc/fallout_screen_new.dmi'
+		if("Fallout Vegas")
+			return 'icons/fallout/misc/fallout_screen_vegas.dmi'
+		if("Vault-Tec")
+			return 'icons/fallout/misc/fallout_screen_vault_tec.dmi'
 		if("Retro")
 			return 'icons/mob/screen_retro.dmi'
 		if("Plasmafire")

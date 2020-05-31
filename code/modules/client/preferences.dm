@@ -66,6 +66,8 @@ var/list/preferences_datums = list()
 	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs")
 
 	var/list/custom_names = list("clown", "mime", "ai", "cyborg", "religion", "deity")
+	var/prefered_security_department = SEC_DEPT_RANDOM
+
 		//Mob preview
 	var/icon/preview_icon = null
 
@@ -1013,6 +1015,11 @@ var/list/preferences_datums = list()
 					if(new_ooccolor)
 						ooccolor = sanitize_ooccolor(new_ooccolor)
 
+				if("sec_dept")
+					var/department = input(user, "Choose your prefered security department:", "Security Departments") as null|anything in security_depts_prefs
+					if(department)
+						prefered_security_department = department
+
 				if ("preferred_map")
 					var/maplist = list()
 					var/default = "Default"
@@ -1040,7 +1047,7 @@ var/list/preferences_datums = list()
 						if (world.byond_version >= 511 && user.client && user.client.byond_version >= 511)
 							user.client.vars["fps"] = clientfps
 				if("ui")
-					var/pickedui = input(user, "Choose your UI style.", "Character Preference")  as null|anything in list("Fallout New", "Fallout", "Midnight", "Plasmafire", "Retro", "Slimecore", "Operative", "Clockwork")
+					var/pickedui = input(user, "Choose your UI style.", "Character Preference")  as null|anything in list("Fallout New", "Fallout Vegas", "Vault-Tec", "Fallout", "Midnight", "Plasmafire", "Retro", "Slimecore", "Operative", "Clockwork")
 					if(pickedui)
 						UI_style = pickedui
 
